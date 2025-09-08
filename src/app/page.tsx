@@ -46,7 +46,7 @@ export default function Home() {
             fontWeight: '500',
             cursor: 'pointer'
           }}>
-            Festival d'Art Sacré
+            Festival d&apos;Art Sacré
           </button>
         </div>
       </nav>
@@ -83,7 +83,7 @@ export default function Home() {
             lineHeight: '1.1',
             color: 'white'
           }}>
-            Voix d'exception
+            Voix d&apos;exception
             <br />
             <span style={{ color: '#f59e0b' }}>au cœur de la</span>
             <br />
@@ -97,8 +97,8 @@ export default function Home() {
             margin: '0 auto 2.5rem auto',
             lineHeight: '1.7'
           }}>
-            La Maîtrise de la Cathédrale de Sion, c'est bien plus qu'un chœur : 
-            c'est une aventure humaine, artistique et spirituelle. 
+            La Maîtrise de la Cathédrale de Sion, c&apos;est bien plus qu&apos;un chœur : 
+            c&apos;est une aventure humaine, artistique et spirituelle. 
             De jeunes chanteurs passionnés, formés dès le plus jeune âge, 
             unissent leurs voix pour faire vibrer la cathédrale au rythme du 
             chant sacré.
@@ -131,7 +131,7 @@ export default function Home() {
               fontWeight: '500',
               cursor: 'pointer'
             }}>
-              Voir l'agenda
+              Voir l&apos;agenda
             </button>
           </div>
         </div>
