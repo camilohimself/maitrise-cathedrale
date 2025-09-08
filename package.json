@@ -9,7 +9,10 @@
     "lint": "eslint"
   },
   "overrides": {
-    "debug": "^4.3.7"
+    "debug": "^4.3.7",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "is-arrayish": "^0.3.2"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.7",

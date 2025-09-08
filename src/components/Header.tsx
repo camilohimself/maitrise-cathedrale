@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
@@ -74,24 +75,27 @@ const Header = () => {
           <Link href="/" style={{
             display: 'flex',
             alignItems: 'center',
-            textDecoration: 'none'
-          }}>
-            <div style={{
-              width: '40px',
-              height: '40px',
-              backgroundColor: '#E33241',
-              borderRadius: '50%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '24px',
-              fontWeight: '800',
-              color: '#fff',
-              fontFamily: 'var(--font-family)',
-              letterSpacing: '-1px'
-            }}>
-              M
-            </div>
+            textDecoration: 'none',
+            transition: 'transform 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'scale(1.05)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'scale(1)';
+          }}
+          >
+            <Image
+              src="/images/logo.jpg"
+              alt="Maîtrise Cathédrale de Sion"
+              width={160}
+              height={50}
+              style={{
+                height: 'auto',
+                objectFit: 'contain'
+              }}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
