@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Maîtrise de la Cathédrale de Sion - Site Web
 
-## Getting Started
+Site web officiel de la Maîtrise de la Cathédrale de Sion développé par OSOM.
 
-First, run the development server:
+## 🎵 À propos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+La Maîtrise de la Cathédrale de Sion est une institution musicale d'excellence qui perpétue la tradition du chant sacré au cœur du Valais. Ce site web présente les activités, concerts, formations et l'histoire de cette prestigieuse maîtrise.
+
+## 🚀 Technologies
+
+- **Next.js 15** - Framework React avec App Router
+- **TypeScript** - Langage typé
+- **Tailwind CSS 4** - Framework CSS utilitaire
+- **Headless UI** - Composants accessibles
+- **Heroicons** - Icônes
+- **Police Outfit** - Typography moderne et élégante
+
+## 📁 Structure du projet
+
+```
+src/
+├── app/                    # Pages Next.js (App Router)
+│   ├── agenda/            # Page agenda avec filtres
+│   ├── la-maitrise/       # Pages de présentation
+│   ├── media/             # Section multimédia
+│   ├── festival-art-sacre/# Festival d'Art Sacré
+│   └── nous-soutenir/     # Pages de contact et soutien
+├── components/
+│   ├── layout/            # Header, Footer
+│   ├── sections/          # Composants de sections
+│   └── ui/                # Composants UI réutilisables
+├── data/                  # Données statiques
+└── types/                 # Types TypeScript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Couleurs
+- **Primary**: #D2AB5F (Doré cathédrale - inspiré du site WordPress existant)
+- **Background**: #f8f9fa (Gris clair)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Typographie
+- **Toute la typographie**: Outfit (Google Fonts)
+- Poids disponibles: 300, 400, 500, 600, 700, 800
 
-## Learn More
+## 🔧 Installation et développement
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Installation des dépendances
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Serveur de développement
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Build de production
+npm run build
 
-## Deploy on Vercel
+# Démarrage du serveur de production
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 État du projet après nettoyage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### ✅ NETTOYAGE COMPLET EFFECTUÉ (7 septembre 2024)
+- [x] **Cache Next.js** - Supprimé complètement (.next/)
+- [x] **Framer Motion** - Supprimé du projet (optimisation performances)
+- [x] **CSS** - Consolidé et unifié (police Outfit, couleurs cohérentes)
+- [x] **Pages simplifiées** - Versions épurées sans animations complexes
+- [x] **Build** - Compile sans erreurs
+- [x] **Dev Server** - Un seul serveur sur localhost:3000
+
+### ✅ Hero Section optimisée
+- Style inspiré du site WordPress existant (maitrise.sandboxdelta.com)
+- Police Outfit 800 pour les titres
+- Couleur or #D2AB5F cohérente
+- Overlay sombre sur image de fond
+- Bouton CTA stylisé
+
+### ✅ Pages fonctionnelles
+1. **Accueil** (`/`) - Hero section + EventsSection
+2. **Agenda** (`/agenda`) - Événements avec système de filtres
+3. **La Maîtrise** (`/la-maitrise`) - Page de présentation simplifiée
+4. **Média** (`/media`) - Page multimédia simplifiée
+5. **Festival d'Art Sacré** (`/festival-art-sacre`) - Page festival simplifiée
+6. **Contact** (`/nous-soutenir/contact`) - Formulaire de contact
+
+## 🏃‍♂️ Instructions pour reprendre demain
+
+### 1. Démarrage rapide
+```bash
+# Vérifier le serveur (doit déjà tourner)
+npm run dev
+# → Site accessible sur http://localhost:3000
+```
+
+### 2. Architecture propre et optimisée
+- **Performances** : Pas de framer-motion = bundle plus léger
+- **Styles** : CSS cohérent avec Outfit et couleur #D2AB5F
+- **Structure** : Code simplifié et maintenable
+- **Build** : Compilation sans erreurs ni warnings
+
+### 3. Développement recommandé pour la suite
+1. **Contenu** : Remplacer le Lorem Ipsum par du vrai contenu
+2. **Images** : Ajouter les vraies images dans `/public/images/`
+3. **Fonctionnalités** : 
+   - Connexion formulaire de contact
+   - Intégration YouTube/SoundCloud réelle
+   - Système de billetterie
+4. **SEO** : Meta descriptions, structured data
+5. **Performance** : Optimisation des images
+
+### 4. Tests à faire demain
+- [x] Homepage Hero fonctionne ✅
+- [x] Navigation fonctionne ✅  
+- [x] Pages se chargent rapidement ✅
+- [x] Design responsive ✅
+- [ ] Contenu à finaliser
+- [ ] Images à remplacer
+- [ ] Intégrations externes
+
+## 🔗 Références de style
+- **Site WordPress existant** : maitrise.sandboxdelta.com
+- **Couleur principale** : #D2AB5F (respectée dans tout le site)
+- **Typography** : Outfit (moderne et lisible)
+
+## 👥 Développé par
+
+**OSOM** - Agence digitale
+- Site web: [osom.ch](https://osom.ch)
+- Email: contact@osom.ch
+
+---
+
+**ÉTAT ACTUEL : PROJET PROPRE ET PRÊT POUR LE DÉVELOPPEMENT** ✅
+
+© 2025 Maîtrise de la Cathédrale de Sion. Tous droits réservés.
