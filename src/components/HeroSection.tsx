@@ -5,24 +5,9 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <section style={{
-      position: 'relative',
-      minHeight: '100vh',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      overflow: 'hidden',
-      backgroundColor: '#000'
-    }}>
+    <section className="hero-section">
       {/* Background Image avec Overlay */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 1
-      }}>
+      <div className="hero-background">
         <Image
           src="/images/hero-bg.jpg"
           alt="Cathédrale de Sion"
@@ -34,31 +19,16 @@ const HeroSection = () => {
           priority
         />
         {/* Gradient Overlay */}
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 100%)'
-        }}></div>
+        <div className="hero-overlay"></div>
       </div>
 
       {/* Content */}
-      <div style={{
-        position: 'relative',
-        zIndex: 2,
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 20px',
-        textAlign: 'center',
-        color: '#fff'
-      }}>
+      <div className="hero-content">
         {/* Subtitle */}
         <p style={{
           fontSize: '18px',
-          fontWeight: '500',
-          color: '#D2AB5F',
+          fontWeight: 'var(--font-medium)',
+          color: 'var(--gold-primary)',
           marginBottom: '20px',
           letterSpacing: '2px',
           textTransform: 'uppercase',
@@ -71,7 +41,7 @@ const HeroSection = () => {
         {/* Main Title */}
         <h1 style={{
           fontSize: 'clamp(36px, 5vw, 56px)',
-          fontWeight: '800',
+          fontWeight: 'var(--font-extrabold)',
           lineHeight: '1.2',
           marginBottom: '30px',
           fontFamily: 'var(--font-family)',
@@ -83,8 +53,8 @@ const HeroSection = () => {
 
         {/* Description */}
         <p style={{
-          fontSize: '20px',
-          fontWeight: '400',
+          fontSize: 'var(--text-large)',
+          fontWeight: 'var(--font-regular)',
           lineHeight: '1.6',
           maxWidth: '700px',
           margin: '0 auto 40px',
@@ -108,19 +78,19 @@ const HeroSection = () => {
             href="#agenda"
             style={{
               padding: '14px 32px',
-              backgroundColor: '#D2AB5F',
-              color: '#fff',
+              backgroundColor: 'var(--gold-primary)',
+              color: 'var(--white)',
               textDecoration: 'none',
-              borderRadius: '4px',
-              fontSize: '16px',
-              fontWeight: '600',
-              transition: 'all 0.3s ease',
+              borderRadius: 'var(--radius-small)',
+              fontSize: 'var(--text-base)',
+              fontWeight: 'var(--font-semibold)',
+              transition: 'all var(--transition-fast)',
               display: 'inline-block',
               fontFamily: 'var(--font-family)'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 6px 20px rgba(210, 171, 95, 0.4)';
+              e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0)';
@@ -134,25 +104,25 @@ const HeroSection = () => {
             href="#maitrise"
             style={{
               padding: '14px 32px',
-              backgroundColor: 'transparent',
-              border: '2px solid #fff',
-              color: '#fff',
+              backgroundColor: 'var(--bg-transparent)',
+              border: '2px solid var(--white)',
+              color: 'var(--white)',
               textDecoration: 'none',
-              borderRadius: '4px',
-              fontSize: '16px',
-              fontWeight: '600',
-              transition: 'all 0.3s ease',
+              borderRadius: 'var(--radius-small)',
+              fontSize: 'var(--text-base)',
+              fontWeight: 'var(--font-semibold)',
+              transition: 'all var(--transition-fast)',
               display: 'inline-block',
               fontFamily: 'var(--font-family)'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#fff';
-              e.currentTarget.style.color = '#000';
+              e.currentTarget.style.backgroundColor = 'var(--white)';
+              e.currentTarget.style.color = 'var(--black)';
               e.currentTarget.style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '#fff';
+              e.currentTarget.style.backgroundColor = 'var(--bg-transparent)';
+              e.currentTarget.style.color = 'var(--white)';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
@@ -178,8 +148,8 @@ const HeroSection = () => {
           style={{ cursor: 'pointer' }}
           onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
         >
-          <rect x="1" y="1" width="28" height="48" rx="14" stroke="#D2AB5F" strokeWidth="2"/>
-          <circle cx="15" cy="15" r="4" fill="#D2AB5F" style={{
+          <rect x="1" y="1" width="28" height="48" rx="14" stroke="var(--gold-primary)" strokeWidth="2"/>
+          <circle cx="15" cy="15" r="4" fill="var(--gold-primary)" style={{
             animation: 'scrollDown 2s infinite'
           }}/>
         </svg>

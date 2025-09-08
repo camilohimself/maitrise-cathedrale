@@ -42,11 +42,11 @@ export default function MaitrisePage() {
   ];
 
   return (
-    <div style={{ backgroundColor: '#fafafa' }}>
+    <div style={{ backgroundColor: 'var(--bg-light)' }}>
       {/* Hero Section */}
       <div style={{
-        background: 'linear-gradient(135deg, #E33241 0%, #D2AB5F 50%, #2c3e50 100%)',
-        color: 'white',
+        background: 'var(--bg-hero)',
+        color: 'var(--white)',
         padding: '60px 20px 60px',
         textAlign: 'center'
       }}>
@@ -136,81 +136,30 @@ export default function MaitrisePage() {
             Explorez les différents aspects de notre Fondation et de la Maîtrise de la Cathédrale
           </p>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-            gap: '30px',
-            marginTop: '40px'
-          }}>
+          <div className="cards-grid">
             {sections.map((section) => (
               <Link 
                 key={section.href} 
                 href={section.href}
                 style={{ textDecoration: 'none' }}
               >
-                <div style={{
-                  backgroundColor: '#fff',
-                  borderRadius: '16px',
-                  padding: '32px',
-                  boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                  border: '1px solid #f0f0f0',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column'
-                }}>
+                <div className="card">
                 
-                  <div style={{
-                    display: 'inline-block',
-                    backgroundColor: '#E33241',
-                    color: 'white',
-                    padding: '6px 16px',
-                    borderRadius: '20px',
-                    fontSize: '12px',
-                    fontWeight: '600',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.5px',
-                    alignSelf: 'flex-start',
-                    marginBottom: '20px'
-                  }}>
+                  <div className="card-badge">
                     {section.highlight}
                   </div>
 
-                  <h3 style={{
-                    fontSize: '1.5rem',
-                    fontWeight: '700',
-                    color: '#2c3e50',
-                    marginBottom: '16px',
-                    margin: '0 0 16px 0'
-                  }}>
+                  <h3 className="card-title">
                     {section.title}
                   </h3>
                   
-                  <p style={{
-                    color: '#666',
-                    fontSize: '1rem',
-                    lineHeight: '1.6',
-                    margin: 0,
-                    flexGrow: 1
-                  }}>
+                  <p className="card-description">
                     {section.description}
                   </p>
 
-                  <div style={{
-                    marginTop: '24px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    color: '#E33241',
-                    fontWeight: '600',
-                    fontSize: '14px'
-                  }}>
+                  <div className="card-action">
                     <span>En savoir plus</span>
-                    <span style={{ 
-                      marginLeft: '8px', 
-                      transition: 'transform 0.3s ease',
-                      display: 'inline-block'
-                    }}>→</span>
+                    <span className="card-arrow">→</span>
                   </div>
                 </div>
               </Link>
