@@ -92,8 +92,8 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
         if (currentPath === sectionPath) {
           label = sectionData.title;
           found = true;
-        } else if (sectionData.children && sectionData.children[currentPath]) {
-          label = sectionData.children[currentPath].title;
+        } else if ('children' in sectionData && sectionData.children && (sectionData.children as any)[currentPath]) {
+          label = (sectionData.children as any)[currentPath].title;
           found = true;
         }
       });
@@ -140,11 +140,11 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
           icon: sectionData.icon,
           subtitle: `Section principale`
         };
-      } else if (sectionData.children && sectionData.children[currentPath]) {
+      } else if ('children' in sectionData && sectionData.children && (sectionData.children as any)[currentPath]) {
         return {
-          title: sectionData.children[currentPath].title,
+          title: (sectionData.children as any)[currentPath].title,
           icon: sectionData.icon,
-          subtitle: sectionData.children[currentPath].subtitle,
+          subtitle: (sectionData.children as any)[currentPath].subtitle,
           parentTitle: sectionData.title
         };
       }

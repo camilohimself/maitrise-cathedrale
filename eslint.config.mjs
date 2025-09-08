@@ -20,6 +20,37 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+    rules: {
+      // React rules
+      "react/no-unescaped-entities": "off",
+      "react/display-name": "off",
+      "react/jsx-key": "error",
+      "react/jsx-no-duplicate-props": "error",
+      "react/jsx-no-undef": "error",
+      "react/no-children-prop": "error",
+      
+      // TypeScript rules
+      "@typescript-eslint/no-unused-vars": ["warn", { 
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_"
+      }],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-inferrable-types": "off",
+      
+      // General code quality
+      "prefer-const": "error",
+      "no-var": "error",
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+      "no-debugger": "error",
+      "no-duplicate-imports": "error",
+      "no-unreachable": "error",
+      
+      // Next.js specific
+      "@next/next/no-img-element": "off", // We'll use next/image when we add real images
+      "@next/next/no-html-link-for-pages": "error",
+    },
+  },
 ];
 
 export default eslintConfig;

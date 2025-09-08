@@ -142,7 +142,7 @@ export default function MaitrisePage() {
             gap: '30px',
             marginTop: '40px'
           }}>
-            {sections.map((section, index) => (
+            {sections.map((section) => (
               <Link 
                 key={section.href} 
                 href={section.href}
