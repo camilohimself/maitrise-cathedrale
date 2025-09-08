@@ -42,12 +42,12 @@ export default function MaitrisePage() {
   ];
 
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#fafafa' }}>
+    <div style={{ backgroundColor: '#fafafa' }}>
       {/* Hero Section */}
       <div style={{
         background: 'linear-gradient(135deg, #E33241 0%, #D2AB5F 50%, #2c3e50 100%)',
         color: 'white',
-        padding: '80px 20px 60px',
+        padding: '60px 20px 60px',
         textAlign: 'center'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -258,6 +258,6 @@ export default function MaitrisePage() {
           </p>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

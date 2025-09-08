@@ -2,10 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,11 +17,32 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
   const navigationLinks = [
-    { label: 'Agenda & Billetterie', href: '/agenda-billetterie' },
-    { label: 'La Maîtrise', href: '/maitrise' },
-    { label: 'Écouter & voir', href: '/media' },
-    { label: 'Nous soutenir', href: '/soutenir' }
+    { 
+      label: 'Agenda & Billetterie', 
+      href: '/agenda-billetterie',
+      isActive: pathname?.startsWith('/agenda-billetterie')
+    },
+    { 
+      label: 'La Maîtrise', 
+      href: '/maitrise',
+      isActive: pathname?.startsWith('/maitrise')
+    },
+    { 
+      label: 'Écouter & voir', 
+      href: '/media',
+      isActive: pathname?.startsWith('/media')
+    },
+    { 
+      label: 'Nous soutenir', 
+      href: '/soutenir',
+      isActive: pathname?.startsWith('/soutenir')
+    }
   ];
 
   return (
@@ -75,27 +98,52 @@ const Header = () => {
           <ul style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '40px',
+            gap: '32px',
             listStyle: 'none',
             margin: 0,
             padding: 0
           }} className="hidden md:flex">
             {navigationLinks.map((link) => (
-              <li key={link.href}>
+              <li key={link.href} style={{ position: 'relative' }}>
                 <Link 
                   href={link.href}
                   style={{
-                    color: '#000',
+                    color: link.isActive ? '#E33241' : '#000',
                     textDecoration: 'none',
                     fontSize: '16px',
-                    fontWeight: '500',
-                    transition: 'color 0.3s ease',
-                    fontFamily: 'var(--font-family)'
+                    fontWeight: link.isActive ? '600' : '500',
+                    transition: 'all 0.3s ease',
+                    fontFamily: 'var(--font-family)',
+                    position: 'relative',
+                    padding: '8px 0',
+                    display: 'block'
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#D2AB5F'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = '#000'}
+                  onMouseEnter={(e) => {
+                    if (!link.isActive) {
+                      e.currentTarget.style.color = '#D2AB5F';
+                      e.currentTarget.style.transform = 'translateY(-1px)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!link.isActive) {
+                      e.currentTarget.style.color = '#000';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }
+                  }}
                 >
                   {link.label}
+                  {link.isActive && (
+                    <span style={{
+                      position: 'absolute',
+                      bottom: '-2px',
+                      left: 0,
+                      right: 0,
+                      height: '3px',
+                      backgroundColor: '#E33241',
+                      borderRadius: '2px',
+                      animation: 'slideIn 0.3s ease-out'
+                    }} />
+                  )}
                 </Link>
               </li>
             ))}
@@ -104,25 +152,34 @@ const Header = () => {
                 href="/fas"
                 style={{
                   padding: '10px 24px',
-                  backgroundColor: '#D2AB5F',
+                  backgroundColor: pathname?.startsWith('/fas') ? '#E33241' : '#D2AB5F',
                   color: '#fff',
                   textDecoration: 'none',
-                  borderRadius: '4px',
+                  borderRadius: '6px',
                   fontSize: '15px',
                   fontWeight: '600',
                   transition: 'all 0.3s ease',
-                  display: 'inline-block',
-                  fontFamily: 'var(--font-family)'
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  fontFamily: 'var(--font-family)',
+                  position: 'relative',
+                  overflow: 'hidden'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(210, 171, 95, 0.3)';
+                  e.currentTarget.style.boxShadow = pathname?.startsWith('/fas') 
+                    ? '0 6px 20px rgba(227, 50, 65, 0.4)' 
+                    : '0 6px 20px rgba(210, 171, 95, 0.4)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                </svg>
                 Festival d&apos;Art Sacré
               </Link>
             </li>
@@ -169,14 +226,15 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div style={{
+          <div className="mobile-menu" style={{
             position: 'absolute',
             top: '80px',
             left: 0,
             right: 0,
             backgroundColor: '#fff',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-            padding: '20px'
+            padding: '20px',
+            borderTop: '3px solid #E33241'
           }}>
             <ul style={{
               listStyle: 'none',
@@ -191,14 +249,28 @@ const Header = () => {
                   <Link 
                     href={link.href}
                     style={{
-                      color: '#000',
+                      color: link.isActive ? '#E33241' : '#000',
                       textDecoration: 'none',
                       fontSize: '18px',
-                      fontWeight: '500',
-                      fontFamily: 'var(--font-family)'
+                      fontWeight: link.isActive ? '600' : '500',
+                      fontFamily: 'var(--font-family)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      padding: '12px 0',
+                      borderBottom: link.isActive ? '2px solid #E33241' : '2px solid transparent',
+                      transition: 'all 0.3s ease'
                     }}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
+                    {link.isActive && (
+                      <span style={{
+                        width: '6px',
+                        height: '6px',
+                        backgroundColor: '#E33241',
+                        borderRadius: '50%',
+                        marginRight: '12px'
+                      }} />
+                    )}
                     {link.label}
                   </Link>
                 </li>
@@ -229,11 +301,43 @@ const Header = () => {
         )}
       </div>
 
-      {/* Mobile menu button styles for responsive */}
+      {/* Responsive and animation styles */}
       <style jsx>{`
+        @keyframes slideIn {
+          from {
+            width: 0;
+            opacity: 0;
+          }
+          to {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+        
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         @media (max-width: 768px) {
           button[aria-label="Menu"] {
             display: flex !important;
+          }
+          
+          .mobile-menu {
+            animation: fadeIn 0.3s ease-out;
+          }
+        }
+        
+        @media (min-width: 769px) {
+          .mobile-menu {
+            display: none !important;
           }
         }
       `}</style>
