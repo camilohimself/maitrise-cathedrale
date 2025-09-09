@@ -288,7 +288,7 @@ const EventCard: React.FC<EventCardProps> = ({
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              🎫 Billetterie
+              Billetterie
             </button>
           )}
           
@@ -319,7 +319,7 @@ const EventCard: React.FC<EventCardProps> = ({
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
-            📅 Calendrier
+            Calendrier
           </button>
           
           {/* CTA Partage */}
@@ -349,7 +349,7 @@ const EventCard: React.FC<EventCardProps> = ({
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
-            🔗 Partager
+            Partager
           </button>
         </div>
       </div>
