@@ -14,25 +14,25 @@ const MaitriseAboutSection = () => {
 
   const highlights = [
     {
-      icon: '🎓',
+      iconType: 'education',
       title: 'École Maîtrisienne',
       description: 'Formation d\'excellence pour jeunes talents de 8 à 18 ans dans la tradition des maîtrises cathédrales.',
       link: '/maitrise/ecole-maitrisienne'
     },
     {
-      icon: '🎼',
+      iconType: 'music',
       title: 'Ensemble Vocal',
       description: 'Chœur professionnel dirigé par Jean-Claude Kolly, spécialisé dans le répertoire sacré et baroque.',
       link: '/maitrise/ensemble-vocal'
     },
     {
-      icon: '⛪',
+      iconType: 'cathedral',
       title: 'Liturgie Cathédrale',
       description: 'Animation des offices liturgiques dans le cadre unique de la Cathédrale Notre-Dame de Sion.',
       link: '/maitrise/chapelle-musicale'
     },
     {
-      icon: '🎭',
+      iconType: 'festival',
       title: 'Festival d\'Art Sacré',
       description: '20 éditions d\'excellence artistique réunissant les plus grands interprètes internationaux.',
       link: '/fas'
@@ -349,10 +349,46 @@ const MaitriseAboutSection = () => {
               }}
             >
               <div style={{
-                fontSize: '3rem',
+                width: '80px',
+                height: '80px',
                 marginBottom: '1rem',
+                margin: '0 auto 1rem auto',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: 'rgba(139, 0, 0, 0.1)',
+                borderRadius: '20px',
+                transition: 'all 0.3s ease',
               }}>
-                {highlight.icon}
+                {highlight.iconType === 'education' && (
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+                {highlight.iconType === 'music' && (
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18V5l12-2v13" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="6" cy="18" r="3" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="18" cy="16" r="3" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+                {highlight.iconType === 'cathedral' && (
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M8 21l0-12 2-2h4l2 2v12" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 3V1" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M10 21h4" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 7v4" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 21v-6l2-2" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M18 21v-6l-2-2" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+                {highlight.iconType === 'festival' && (
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
               </div>
               
               <h3 style={{

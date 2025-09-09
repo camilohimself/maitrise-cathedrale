@@ -1,74 +1,103 @@
 'use client';
 
-import React, { useState, useMemo, memo, useCallback } from 'react';
+import React, { useState, useMemo, memo } from 'react';
 import Link from 'next/link';
+import MediaPlayer from '@/components/MediaPlayer';
 import { MEDIA_TAB_CONFIG } from '@/data/uiConstants';
 
 interface MediaItem {
-  id: number;
+  id: string;
   title: string;
   type: 'youtube' | 'soundcloud' | 'gallery';
   description: string;
-  embedUrl?: string;
-  thumbnailUrl?: string;
-  duration?: string;
+  embedId: string;
+  thumbnailUrl: string;
+  duration: string;
   category: string;
+  date: string;
 }
 
-// Performance Dr Claude: Données externalisées
+// Données média avec embeds intégrés
 const MEDIA_ITEMS: MediaItem[] = [
     {
-      id: 1,
-      title: "Concert de Noël 2023",
+      id: 'yt-1',
+      title: "Concert de Noël 2023 - Ensemble Vocal",
       type: 'youtube',
-      description: "L'Ensemble Vocal de la Maîtrise interprète un programme de chants de Noël traditionnels",
-      embedUrl: "", // Tu ajouteras l'URL YouTube
+      description: "L'Ensemble Vocal de la Maîtrise interprète un programme de chants de Noël traditionnels dans le cadre magnifique de la Cathédrale Notre-Dame de Sion. Moment d'exception pour célébrer la Nativité.",
+      embedId: "", // Ajouter l'ID YouTube (ex: 'dQw4w9WgXcQ')
       thumbnailUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=225&fit=crop",
       duration: "8:32",
-      category: "Concert"
+      category: "Concert",
+      date: "15 déc 2023"
     },
     {
-      id: 2,
-      title: "Cantate BWV 147 - Bach",
+      id: 'yt-2',
+      title: "Cantate BWV 147 - Bach \"Herz und Mund\"",
       type: 'youtube', 
-      description: "Interprétation de la célèbre cantate 'Herz und Mund und Tat und Leben'",
-      embedUrl: "", // Tu ajouteras l'URL YouTube
+      description: "Interprétation de la célèbre cantate de Jean-Sébastien Bach avec l'orchestre baroque et les solistes. Un moment d'exception dans l'acoustique unique de notre cathédrale.",
+      embedId: "", // Ajouter l'ID YouTube
       thumbnailUrl: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=225&fit=crop",
       duration: "12:45",
-      category: "Cantate"
+      category: "Cantate",
+      date: "3 oct 2023"
     },
     {
-      id: 3,
+      id: 'sc-1',
       title: "Ave Maria - Schubert",
       type: 'soundcloud',
-      description: "Enregistrement studio de l'Ensemble Vocal dirigé par Jean-Claude Kolly",
-      embedUrl: "", // Tu ajouteras l'URL SoundCloud
+      description: "Enregistrement studio de l'Ensemble Vocal dirigé par Jean-Claude Kolly. Une interprétation sensible et recueillie de ce chef-d'œuvre de Franz Schubert.",
+      embedId: "", // Ajouter l'ID SoundCloud (numéro de track)
       thumbnailUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=225&fit=crop",
       duration: "4:18",
-      category: "Musique sacrée"
+      category: "Musique sacrée",
+      date: "22 nov 2023"
     },
     {
-      id: 4,
+      id: 'sc-2',
       title: "Répétition École Maîtrisienne",
       type: 'soundcloud',
-      description: "Les jeunes talents en préparation pour le prochain concert",
-      embedUrl: "", // Tu ajouteras l'URL SoundCloud  
+      description: "Découvrez le travail des jeunes talents de l'École Maîtrisienne lors d'une répétition. Formation d'excellence pour les 8-18 ans dans la tradition des maîtrises cathédrales.",
+      embedId: "", // Ajouter l'ID SoundCloud
       thumbnailUrl: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=225&fit=crop",
       duration: "6:22",
-      category: "Formation"
+      category: "Formation",
+      date: "5 oct 2023"
+    },
+    {
+      id: 'yt-3',
+      title: "Festival d'Art Sacré 2023 - Stile Antico",
+      type: 'youtube',
+      description: "Moment d'exception avec l'ensemble britannique Stile Antico dans un programme consacré à Palestrina. 19ème édition du Festival d'Art Sacré de Sion.",
+      embedId: "", // Ajouter l'ID YouTube
+      thumbnailUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=225&fit=crop",
+      duration: "25:30",
+      category: "Festival",
+      date: "7 jan 2023"
+    },
+    {
+      id: 'sc-3',
+      title: "Vêpres Polyphoniques - Renaissance",
+      type: 'soundcloud',
+      description: "Office liturgique en polyphonie Renaissance avec les œuvres de Palestrina, Victoria et Lassus. Une immersion spirituelle et musicale unique.",
+      embedId: "", // Ajouter l'ID SoundCloud
+      thumbnailUrl: "https://images.unsplash.com/photo-1445985543470-41fba5c3144a?w=400&h=225&fit=crop",
+      duration: "18:15",
+      category: "Liturgie",
+      date: "28 mai 2023"
     }
   ] as const;
 
 const MediaDiscoverSection = memo(() => {
   const [activeTab, setActiveTab] = useState<'youtube' | 'soundcloud' | 'gallery'>('youtube');
+  const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
 
-  // Performance Dr Claude: Memoization du filtrage
+  // Performance : Memoization du filtrage
   const filteredItems = useMemo(() => 
     MEDIA_ITEMS.filter(item => item.type === activeTab),
     [activeTab]
   );
 
-  // Performance Dr Claude: Configuration externalisée
+  // Configuration externalisée
   const tabConfig = MEDIA_TAB_CONFIG;
 
   return (
@@ -188,7 +217,32 @@ const MediaDiscoverSection = memo(() => {
                 }
               }}
             >
-              <span style={{ fontSize: '1.2rem' }}>{config.icon}</span>
+              <div style={{
+                width: '24px',
+                height: '24px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                {key === 'youtube' && (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23 12s0-3.85-.55-5.7c-.32-1.12-1.27-2.01-2.4-2.26C18.25 4 12 4 12 4s-6.25 0-8.05.04c-1.13.25-2.08 1.14-2.4 2.26C1 8.15 1 12 1 12s0 3.85.55 5.7c.32 1.12 1.27 2.01 2.4 2.26C5.75 20 12 20 12 20s6.25 0 8.05-.04c1.13-.25 2.08-1.14 2.4-2.26C23 15.85 23 12 23 12z"/>
+                    <polygon points="10,15 15,12 10,9" fill={activeTab === key ? '#8B0000' : 'rgba(255,255,255,0.7)'}/>
+                  </svg>
+                )}
+                {key === 'soundcloud' && (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-.36-.24-.48-.66-.24-1.021C17.34 15.46 18 13.8 18 12s-.66-3.46-1.74-4.559c-.24-.359-.12-.781.24-1.021.36-.24.78-.12 1.021.24C18.9 8.28 19.8 10.08 19.8 12s-.9 3.72-2.279 5.34zm-2.581-2.581c-.24.359-.66.48-1.021.24-.36-.24-.48-.66-.24-1.021.48-.719.8-1.56.8-2.478s-.32-1.759-.8-2.478c-.24-.359-.12-.781.24-1.021.36-.24.78-.12 1.021.24.719 1.08 1.16 2.34 1.16 3.759s-.441 2.679-1.16 3.759z"/>
+                  </svg>
+                )}
+                {key === 'gallery' && (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21,15 16,10 5,21"/>
+                  </svg>
+                )}
+              </div>
               <span>{config.label}</span>
             </button>
           ))}
@@ -230,6 +284,7 @@ const MediaDiscoverSection = memo(() => {
                   backdropFilter: 'blur(10px)',
                   cursor: 'pointer',
                 }}
+                onClick={() => setSelectedMedia(item)}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
                   e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
@@ -241,7 +296,7 @@ const MediaDiscoverSection = memo(() => {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                 }}
               >
-                {/* Thumbnail placeholder */}
+                {/* Thumbnail */}
                 <div style={{
                   position: 'relative',
                   height: '200px',
@@ -253,7 +308,7 @@ const MediaDiscoverSection = memo(() => {
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}>
-                  {!item.embedUrl && (
+                  {!item.embedId && (
                     <div style={{
                       backgroundColor: 'rgba(0, 0, 0, 0.7)',
                       color: '#FFFFFF',
@@ -263,7 +318,7 @@ const MediaDiscoverSection = memo(() => {
                       fontSize: '0.9rem',
                       fontWeight: '500',
                     }}>
-                      {activeTab === 'youtube' ? 'Vidéo à ajouter' : 'Audio à ajouter'}
+                      {item.type === 'youtube' ? 'Vidéo à ajouter' : 'Audio à ajouter'}
                     </div>
                   )}
 
@@ -284,7 +339,7 @@ const MediaDiscoverSection = memo(() => {
                     <div style={{
                       width: '60px',
                       height: '60px',
-                      backgroundColor: 'rgba(139, 0, 0, 0.9)',
+                      backgroundColor: item.type === 'youtube' ? 'rgba(255, 0, 0, 0.9)' : 'rgba(255, 119, 0, 0.9)',
                       borderRadius: '50%',
                       display: 'flex',
                       alignItems: 'center',
@@ -336,6 +391,13 @@ const MediaDiscoverSection = memo(() => {
                     }}>
                       {item.category}
                     </span>
+                    <span style={{
+                      fontFamily: 'var(--font-outfit)',
+                      fontSize: '0.8rem',
+                      color: 'rgba(255, 255, 255, 0.5)',
+                    }}>
+                      {item.date}
+                    </span>
                   </div>
 
                   <h3 style={{
@@ -355,7 +417,10 @@ const MediaDiscoverSection = memo(() => {
                     color: 'rgba(255, 255, 255, 0.7)',
                     lineHeight: 1.5,
                   }}>
-                    {item.description}
+                    {item.description.length > 100 
+                      ? `${item.description.substring(0, 100)}...`
+                      : item.description
+                    }
                   </p>
                 </div>
               </div>
@@ -371,10 +436,20 @@ const MediaDiscoverSection = memo(() => {
             marginBottom: '4rem',
           }}>
             <div style={{
-              fontSize: '4rem',
-              marginBottom: '1rem',
+              width: '80px',
+              height: '80px',
+              margin: '0 auto 1rem auto',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(184, 134, 11, 0.1)',
+              borderRadius: '20px',
             }}>
-              📸
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#B8860B" strokeWidth="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21,15 16,10 5,21"/>
+              </svg>
             </div>
             <h3 style={{
               fontFamily: 'var(--font-spectral)',
@@ -443,9 +518,17 @@ const MediaDiscoverSection = memo(() => {
             color: 'rgba(255, 255, 255, 0.5)',
             fontStyle: 'italic',
           }}>
-            Page YouTube et SoundCloud dédiées bientôt disponibles
+            Lecteurs YouTube et SoundCloud intégrés • Cliquez sur un média pour l'écouter
           </p>
         </div>
+
+        {/* Media Player Modal */}
+        {selectedMedia && (
+          <MediaPlayer
+            item={selectedMedia}
+            onClose={() => setSelectedMedia(null)}
+          />
+        )}
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ import Link from 'next/link';
 const SupportSection = () => {
   const supportOptions = [
     {
-      icon: '🤝',
+      iconType: 'community',
       title: 'Association des Amis',
       subtitle: 'Rejoignez notre communauté',
       description: 'Devenez membre de l\'Association des Amis de la Maîtrise et soutenez directement nos activités musicales et pédagogiques.',
@@ -16,7 +16,7 @@ const SupportSection = () => {
       color: '#B8860B'
     },
     {
-      icon: '💎',
+      iconType: 'partnership',
       title: 'Mécénat & Partenariat',
       subtitle: 'Excellence partagée',
       description: 'Associez votre entreprise ou votre nom à l\'excellence artistique de la Maîtrise par le mécénat culturel.',
@@ -26,7 +26,7 @@ const SupportSection = () => {
       color: '#8B0000'
     },
     {
-      icon: '🎁',
+      iconType: 'donation',
       title: 'Faire un Don',
       subtitle: 'Soutien ponctuel',
       description: 'Votre générosité permet de financer les projets artistiques, les instruments et la formation des jeunes.',
@@ -38,10 +38,10 @@ const SupportSection = () => {
   ];
 
   const partners = [
-    { name: 'Canton du Valais', logo: '🏔️' },
-    { name: 'Ville de Sion', logo: '🏛️' },
-    { name: 'Fondation Suisse', logo: '🇨🇭' },
-    { name: 'Mécènes Privés', logo: '💼' },
+    { name: 'Canton du Valais', iconType: 'mountains' },
+    { name: 'Ville de Sion', iconType: 'city' },
+    { name: 'Fondation Suisse', iconType: 'foundation' },
+    { name: 'Mécènes Privés', iconType: 'business' },
   ];
 
   return (
@@ -136,11 +136,36 @@ const SupportSection = () => {
             >
               {/* Icon */}
               <div style={{
-                fontSize: '3.5rem',
+                width: '90px',
+                height: '90px',
                 marginBottom: '1.5rem',
-                textAlign: 'center',
+                margin: '0 auto 1.5rem auto',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: `${option.color}15`,
+                borderRadius: '25px',
+                border: `2px solid ${option.color}30`,
               }}>
-                {option.icon}
+                {option.iconType === 'community' && (
+                  <svg width="45" height="45" viewBox="0 0 24 24" fill="none">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke={option.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="9" cy="7" r="4" stroke={option.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke={option.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke={option.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+                {option.iconType === 'partnership' && (
+                  <svg width="45" height="45" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke={option.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="12" cy="12" r="3" stroke={option.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
+                {option.iconType === 'donation' && (
+                  <svg width="45" height="45" viewBox="0 0 24 24" fill="none">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke={option.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                )}
               </div>
 
               {/* Content */}
@@ -304,10 +329,48 @@ const SupportSection = () => {
                 }}
               >
                 <div style={{
-                  fontSize: '2.5rem',
+                  width: '60px',
+                  height: '60px',
                   marginBottom: '0.5rem',
+                  margin: '0 auto 0.5rem auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: 'rgba(139, 0, 0, 0.05)',
+                  borderRadius: '15px',
                 }}>
-                  {partner.logo}
+                  {partner.iconType === 'mountains' && (
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+                      <path d="M8 21l5.5-11L18 21" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 21l5-9 5 9" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 21l5-9 5 9" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
+                  {partner.iconType === 'city' && (
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+                      <path d="M3 21h18" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 21V7l8-4v18" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M19 21V9l-6-4" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 9v.01" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 12v.01" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 15v.01" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
+                  {partner.iconType === 'foundation' && (
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+                      <path d="M3 21h18" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M6 21V9a9 9 0 0 1 18 0v12" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 3v6" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="12" cy="12" r="2" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
+                  {partner.iconType === 'business' && (
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
+                      <path d="M20 7h-9" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M14 17H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M16 21V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v16" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
                 </div>
                 <p style={{
                   fontFamily: 'var(--font-outfit)',
