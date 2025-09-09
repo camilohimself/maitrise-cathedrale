@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: false,
   },
   images: {
+    qualities: [75, 80, 85, 90, 95], // Fix quality warning Dr Claude
     remotePatterns: [
       {
         protocol: 'https',
@@ -16,6 +17,10 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  // Optimisations performance Dr Claude  
+  experimental: {
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP'],
   },
 };
 
