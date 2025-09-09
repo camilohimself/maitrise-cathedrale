@@ -1,183 +1,349 @@
 'use client';
 
-import Link from 'next/link';
+import React, { useState, useMemo } from 'react';
+import EventCard from '@/components/EventCard';
+import Newsletter from '@/components/Newsletter';
+import { events, getEventsByCategory, getEventsByMonth, getEventsByPrice } from '@/data/eventsData';
 
 export default function AgendaBilletterie() {
-  return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#fafafa' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '60px 20px' }}>
-        {/* Hero Section */}
-        <div style={{
-          textAlign: 'center',
-          marginBottom: '60px'
-        }}>
-          <h1 style={{
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-            fontWeight: '800',
-            color: '#E33241',
-            marginBottom: '24px'
-          }}>
-            Agenda & Billetterie
-          </h1>
-          <p style={{
-            fontSize: '1.4rem',
-            color: '#666',
-            maxWidth: '800px',
-            margin: '0 auto',
-            lineHeight: '1.6'
-          }}>
-            Découvrez nos prochains concerts et événements. Réservez vos places pour vivre des moments musicaux d'exception.
-          </p>
-        </div>
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedMonth, setSelectedMonth] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('');
 
-        {/* Coming Soon Section */}
+  // Filtrage des événements
+  const filteredEvents = useMemo(() => {
+    let filtered = [...events];
+
+    // Filtre par recherche
+    if (searchTerm) {
+      filtered = filtered.filter(event =>
+        event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        event.location.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    // Filtre par mois
+    if (selectedMonth) {
+      filtered = filtered.filter(event => event.date.month === selectedMonth);
+    }
+
+    // Filtre par catégorie
+    if (selectedCategory) {
+      filtered = filtered.filter(event => event.category === selectedCategory);
+    }
+
+    // Filtre par prix
+    if (selectedPriceRange) {
+      filtered = getEventsByPrice(selectedPriceRange).filter(event => 
+        filtered.some(f => f.id === event.id)
+      );
+    }
+
+    return filtered;
+  }, [searchTerm, selectedMonth, selectedCategory, selectedPriceRange]);
+
+  return (
+    <main style={{
+      backgroundColor: 'var(--color-white)',
+      minHeight: '100vh',
+    }}>
+      {/* Section principale */}
+      <section style={{
+        backgroundColor: 'var(--color-cream)',
+        padding: 'var(--spacing-3xl) 0 var(--spacing-2xl)',
+      }}>
         <div style={{
-          backgroundColor: '#fff',
-          borderRadius: '16px',
-          padding: '60px 40px',
-          textAlign: 'center',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-          border: '1px solid #f0f0f0'
+          maxWidth: 'var(--container-max)',
+          margin: '0 auto',
+          padding: '0 var(--spacing-lg)',
         }}>
+          {/* Titre principal */}
           <div style={{
-            fontSize: '64px',
-            marginBottom: '24px'
+            textAlign: 'center',
+            marginBottom: 'var(--spacing-2xl)',
           }}>
-            🎭
+            <h1 style={{
+              fontFamily: 'var(--font-spectral)',
+              fontSize: 'var(--text-hero)',
+              fontWeight: 'var(--font-extrabold)',
+              color: 'var(--color-gold)',
+              marginBottom: 'var(--spacing-md)',
+              letterSpacing: '-2px',
+            }}>
+              Agenda et billetterie
+            </h1>
           </div>
-          <h2 style={{
-            fontSize: '2rem',
-            fontWeight: '700',
-            color: '#2c3e50',
-            marginBottom: '20px'
-          }}>
-            Programmation en cours
-          </h2>
-          <p style={{
-            fontSize: '1.2rem',
-            color: '#666',
-            marginBottom: '40px',
-            lineHeight: '1.6'
-          }}>
-            Notre programme de concerts et d'événements est actuellement en préparation. 
-            Restez connectés pour découvrir nos prochaines dates.
-          </p>
-          
-          {/* Contact CTA */}
+
+          {/* Barre de recherche */}
           <div style={{
             display: 'flex',
-            gap: '20px',
             justifyContent: 'center',
-            flexWrap: 'wrap'
+            marginBottom: 'var(--spacing-xl)',
           }}>
-            <Link
-              href="/soutenir/contact"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                padding: '16px 32px',
-                backgroundColor: '#E33241',
-                color: '#fff',
-                textDecoration: 'none',
-                borderRadius: '8px',
-                fontSize: '16px',
-                fontWeight: '600',
-                transition: 'all 0.3s ease',
-                gap: '8px'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 8px 25px rgba(227, 50, 65, 0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              Nous contacter
-            </Link>
-            
-            <Link
-              href="/media"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                padding: '16px 32px',
-                backgroundColor: 'transparent',
-                color: '#D2AB5F',
-                textDecoration: 'none',
-                borderRadius: '8px',
-                fontSize: '16px',
-                fontWeight: '600',
-                transition: 'all 0.3s ease',
-                border: '2px solid #D2AB5F',
-                gap: '8px'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#D2AB5F';
-                e.currentTarget.style.color = '#ffffff';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 8px 25px rgba(210, 171, 95, 0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = '#D2AB5F';
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
-              </svg>
-              Écouter nos enregistrements
-            </Link>
+            <div style={{
+              position: 'relative',
+              maxWidth: '500px',
+              width: '100%',
+            }}>
+              <input
+                type="text"
+                placeholder="RECHERCHER :"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '14px 50px 14px 20px',
+                  backgroundColor: 'var(--color-white)',
+                  border: '1px solid rgba(26, 19, 64, 0.1)',
+                  borderRadius: '25px',
+                  fontFamily: 'var(--font-outfit)',
+                  fontSize: 'var(--text-base)',
+                  color: 'var(--color-navy)',
+                  outline: 'none',
+                  transition: 'all var(--transition-base)',
+                }}
+                onFocus={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-gold)';
+                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(212, 165, 116, 0.1)';
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.1)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              />
+              {/* Icône de recherche */}
+              <div style={{
+                position: 'absolute',
+                right: '20px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                color: 'var(--color-gold)',
+              }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="m21 21-4.35-4.35"/>
+                </svg>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Newsletter Signup */}
-        <div style={{
-          marginTop: '60px',
-          backgroundColor: '#f8f9fa',
-          borderRadius: '16px',
-          padding: '40px',
-          textAlign: 'center',
-          border: '1px solid #e9ecef'
-        }}>
-          <h3 style={{
-            fontSize: '1.5rem',
-            fontWeight: '700',
-            color: '#2c3e50',
-            marginBottom: '16px'
-          }}>
-            Restez informés
-          </h3>
-          <p style={{
-            color: '#666',
-            fontSize: '1rem',
-            marginBottom: '24px',
-            maxWidth: '600px',
-            margin: '0 auto 24px auto'
-          }}>
-            Inscrivez-vous à notre newsletter pour être les premiers informés de nos concerts et événements.
-          </p>
+          {/* Filtres */}
           <div style={{
-            display: 'inline-block',
-            padding: '8px 20px',
-            backgroundColor: '#D2AB5F',
-            color: '#fff',
-            borderRadius: '20px',
-            fontSize: '14px',
-            fontWeight: '600'
+            display: 'flex',
+            justifyContent: 'center',
+            gap: 'var(--spacing-md)',
+            marginBottom: 'var(--spacing-2xl)',
+            flexWrap: 'wrap',
           }}>
-            Newsletter à venir
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 'var(--spacing-xs)',
+            }}>
+              <label style={{
+                fontFamily: 'var(--font-outfit)',
+                fontSize: 'var(--text-small)',
+                color: 'var(--color-navy)',
+                opacity: 0.7,
+                fontWeight: 'var(--font-medium)',
+              }}>
+                FILTRER :
+              </label>
+              
+              {/* Filtre Mois */}
+              <select 
+                value={selectedMonth}
+                onChange={(e) => setSelectedMonth(e.target.value)}
+                style={{
+                  padding: '8px 16px',
+                  border: '1px solid rgba(26, 19, 64, 0.1)',
+                  borderRadius: 'var(--radius-sm)',
+                  backgroundColor: 'var(--color-white)',
+                  fontFamily: 'var(--font-outfit)',
+                  fontSize: 'var(--text-small)',
+                  color: 'var(--color-navy)',
+                  cursor: 'pointer',
+                  outline: 'none',
+                }}
+              >
+                <option value="">MOIS</option>
+                <option value="AOÛT">Août</option>
+                <option value="SEPT">Septembre</option>
+                <option value="OCT">Octobre</option>
+                <option value="NOV">Novembre</option>
+                <option value="DÉC">Décembre</option>
+              </select>
+
+              {/* Filtre Type */}
+              <select 
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                style={{
+                  padding: '8px 16px',
+                  border: '1px solid rgba(26, 19, 64, 0.1)',
+                  borderRadius: 'var(--radius-sm)',
+                  backgroundColor: 'var(--color-white)',
+                  fontFamily: 'var(--font-outfit)',
+                  fontSize: 'var(--text-small)',
+                  color: 'var(--color-navy)',
+                  cursor: 'pointer',
+                  outline: 'none',
+                }}
+              >
+                <option value="">TYPE D&apos;EVENT</option>
+                <option value="Concert">Concert</option>
+                <option value="Festival">Festival</option>
+                <option value="Cantate">Cantate</option>
+                <option value="Formation">Formation</option>
+                <option value="Famille">Famille</option>
+                <option value="Spectacle">Spectacle</option>
+              </select>
+
+              {/* Filtre Budget */}
+              <select 
+                value={selectedPriceRange}
+                onChange={(e) => setSelectedPriceRange(e.target.value)}
+                style={{
+                  padding: '8px 16px',
+                  border: '1px solid rgba(26, 19, 64, 0.1)',
+                  borderRadius: 'var(--radius-sm)',
+                  backgroundColor: 'var(--color-white)',
+                  fontFamily: 'var(--font-outfit)',
+                  fontSize: 'var(--text-small)',
+                  color: 'var(--color-navy)',
+                  cursor: 'pointer',
+                  outline: 'none',
+                }}
+              >
+                <option value="">BUDGET</option>
+                <option value="free">Gratuit</option>
+                <option value="low">0-25 CHF</option>
+                <option value="medium">25-40 CHF</option>
+                <option value="high">40+ CHF</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Section Événements */}
+      <section style={{
+        backgroundColor: 'var(--color-white)',
+        padding: 'var(--spacing-2xl) 0',
+      }}>
+        <div style={{
+          maxWidth: 'var(--container-max)',
+          margin: '0 auto',
+          padding: '0 var(--spacing-lg)',
+        }}>
+          {/* Compteur de résultats */}
+          <div style={{
+            marginBottom: 'var(--spacing-xl)',
+            textAlign: 'center',
+          }}>
+            <p style={{
+              fontFamily: 'var(--font-outfit)',
+              fontSize: 'var(--text-base)',
+              color: 'var(--color-navy)',
+              opacity: 0.7,
+            }}>
+              {filteredEvents.length} événement{filteredEvents.length !== 1 ? 's' : ''} trouvé{filteredEvents.length !== 1 ? 's' : ''}
+            </p>
+          </div>
+
+          {/* Grille d'événements */}
+          {filteredEvents.length > 0 ? (
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+              gap: 'var(--spacing-lg)',
+              marginBottom: 'var(--spacing-3xl)',
+            }}>
+              {filteredEvents.map((event) => (
+                <EventCard 
+                  key={event.id}
+                  date={{ day: event.date.day, month: event.date.month }}
+                  time={event.time}
+                  title={event.title}
+                  category={event.category}
+                  description={event.description}
+                  image={event.image}
+                  ctaText="Réserver"
+                  featured={event.featured}
+                />
+              ))}
+            </div>
+          ) : (
+            /* Message aucun résultat */
+            <div style={{
+              textAlign: 'center',
+              padding: 'var(--spacing-3xl) var(--spacing-lg)',
+            }}>
+              <div style={{
+                fontSize: '64px',
+                marginBottom: 'var(--spacing-lg)',
+                opacity: 0.3,
+              }}>
+                🎭
+              </div>
+              <h3 style={{
+                fontFamily: 'var(--font-spectral)',
+                fontSize: 'var(--text-h3)',
+                fontWeight: 'var(--font-bold)',
+                color: 'var(--color-navy)',
+                marginBottom: 'var(--spacing-sm)',
+              }}>
+                Aucun événement trouvé
+              </h3>
+              <p style={{
+                fontFamily: 'var(--font-outfit)',
+                fontSize: 'var(--text-base)',
+                color: 'var(--color-navy)',
+                opacity: 0.7,
+                maxWidth: '500px',
+                margin: '0 auto',
+              }}>
+                Essayez de modifier vos critères de recherche ou consultez tous nos événements.
+              </p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedMonth('');
+                  setSelectedCategory('');
+                  setSelectedPriceRange('');
+                }}
+                style={{
+                  marginTop: 'var(--spacing-lg)',
+                  padding: '12px 24px',
+                  backgroundColor: 'var(--color-gold)',
+                  color: 'var(--color-white)',
+                  border: 'none',
+                  borderRadius: 'var(--radius-sm)',
+                  fontFamily: 'var(--font-outfit)',
+                  fontWeight: 'var(--font-medium)',
+                  cursor: 'pointer',
+                  transition: 'all var(--transition-base)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = 'var(--shadow-gold)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                Voir tous les événements
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <Newsletter />
     </main>
   );
 }
