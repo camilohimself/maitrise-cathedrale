@@ -8,21 +8,6 @@ export default function ButsObjectifsPage() {
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#fafafa' }}>
-      {/* Breadcrumb */}
-      <div style={{ 
-        backgroundColor: '#fff', 
-        padding: '16px 20px',
-        borderBottom: '1px solid #e0e0e0',
-        fontSize: '14px'
-      }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <Link href="/maitrise" style={{ color: '#E33241', textDecoration: 'none' }}>
-            La Maîtrise
-          </Link>
-          <span style={{ margin: '0 8px', color: '#999' }}>→</span>
-          <span style={{ color: '#666' }}>Buts & Objectifs</span>
-        </div>
-      </div>
 
       {/* Hero Section */}
       <div style={{

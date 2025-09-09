@@ -92,7 +92,11 @@ const Header = () => {
               height={50}
               style={{
                 height: 'auto',
-                objectFit: 'contain'
+                maxHeight: '45px',
+                width: 'auto',
+                maxWidth: 'clamp(140px, 20vw, 180px)',
+                objectFit: 'contain',
+                objectPosition: 'center'
               }}
               priority
             />
