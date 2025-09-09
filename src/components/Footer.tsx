@@ -78,11 +78,11 @@ const Footer = () => {
 
   return (
     <footer style={{
-      background: 'linear-gradient(135deg, var(--color-navy) 0%, #2c3e50 50%, #34495e 100%)',
+      background: '#040A23', // Couleur officielle de la palette
       color: '#ffffff',
       paddingTop: '60px',
       paddingBottom: '40px',
-      marginTop: '60px' // Réduit de 80px à 60px pour optimiser l'espacement
+      marginTop: '60px'
     }}>
       <div style={{
         maxWidth: '1200px',
@@ -111,13 +111,13 @@ const Footer = () => {
               <Image
                 src="/images/logo-mc-contrast.svg"
                 alt="Maîtrise Cathédrale de Sion - Logo"
-                width={60}
-                height={60}
+                width={80}
+                height={80}
                 style={{
                   height: 'auto',
-                  maxHeight: '60px',
+                  maxHeight: '80px',
                   width: 'auto',
-                  maxWidth: '60px',
+                  maxWidth: '80px',
                   objectFit: 'contain'
                 }}
               />
