@@ -49,19 +49,19 @@ export default function FAS() {
       id: 1,
       title: "Découvrez nos concerts avec les chroniques de Rhône FM",
       link: "#",
-      color: "#D2374C"
+      color: "#E33241"
     },
     {
       id: 2,
       title: "Le Sion Festival 2025",
       link: "#",
-      color: "#D2374C"
+      color: "#E33241"
     },
     {
       id: 3,
       title: "Les Concerts à ne pas manquer cette année",
       link: "#",
-      color: "#D2374C"
+      color: "#E33241"
     }
   ];
 
@@ -111,7 +111,7 @@ export default function FAS() {
   return (
     <main style={{
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #040A23 0%, #1a1a2e 50%, #16213e 100%)',
+      background: '#1a1340',
       position: 'relative'
     }}>
       {/* Hero Section */}
@@ -119,14 +119,14 @@ export default function FAS() {
         position: 'relative',
         padding: '80px 20px 60px',
         textAlign: 'center',
-        background: 'linear-gradient(135deg, #D2374C 0%, #FF6B9D 100%)',
+        background: '#E33241',
         color: 'white'
       }}>
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <div style={{
             display: 'inline-block',
-            background: 'linear-gradient(45deg, #D4AF37 0%, #F4D03F 100%)',
-            color: '#1B1B2F',
+            background: '#D4A574',
+            color: '#1a1340',
             fontSize: '1rem',
             fontWeight: '700',
             letterSpacing: '0.1em',
@@ -180,7 +180,7 @@ export default function FAS() {
           <h2 style={{
             fontSize: '2.5rem',
             fontWeight: '700',
-            color: '#D2374C',
+            color: '#E33241',
             marginBottom: '40px',
             textAlign: 'center'
           }}>
@@ -214,7 +214,7 @@ export default function FAS() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
-                  e.currentTarget.style.boxShadow = '0 15px 40px rgba(210, 55, 76, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 15px 40px rgba(227, 50, 65, 0.3)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
@@ -238,13 +238,13 @@ export default function FAS() {
       {/* Section Artistes */}
       <section style={{ 
         padding: '60px 20px',
-        background: '#f8f9fa'
+        background: '#F5F0E8'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{
             fontSize: '2.5rem',
             fontWeight: '700',
-            color: '#D2374C',
+            color: '#E33241',
             marginBottom: '40px',
             textAlign: 'center'
           }}>
@@ -300,7 +300,7 @@ export default function FAS() {
                     <h3 style={{
                       fontSize: '1.2rem',
                       fontWeight: '700',
-                      color: '#1B1B2F',
+                      color: '#1a1340',
                       marginBottom: '8px'
                     }}>
                       {artiste.name}
@@ -323,13 +323,13 @@ export default function FAS() {
       {/* Section Programmation (anciennement dans /programmation) */}
       <section style={{ 
         padding: '60px 20px',
-        background: 'linear-gradient(135deg, #040A23 0%, #1a1a2e 50%, #16213e 100%)'
+        background: '#1a1340'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <h2 style={{
             fontSize: '2.5rem',
             fontWeight: '700',
-            color: '#D4AF37',
+            color: '#D4A574',
             marginBottom: '40px',
             textAlign: 'center'
           }}>
@@ -342,7 +342,7 @@ export default function FAS() {
               display: 'block',
               fontSize: '0.9rem',
               fontWeight: '600',
-              color: '#D4AF37',
+              color: '#D4A574',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
               marginBottom: '1.5rem'
@@ -360,10 +360,10 @@ export default function FAS() {
                 onClick={() => setSelectedCategory('all')}
                 style={{
                   padding: '12px 24px',
-                  border: selectedCategory === 'all' ? '2px solid #D2374C' : '2px solid #333',
+                  border: selectedCategory === 'all' ? '2px solid #E33241' : '2px solid #333',
                   borderRadius: '50px',
-                  background: selectedCategory === 'all' ? '#D2374C' : 'transparent',
-                  color: selectedCategory === 'all' ? 'white' : '#D4AF37',
+                  background: selectedCategory === 'all' ? '#E33241' : 'transparent',
+                  color: selectedCategory === 'all' ? 'white' : '#D4A574',
                   fontWeight: '500',
                   fontSize: '0.9rem',
                   letterSpacing: '0.05em',
@@ -382,7 +382,7 @@ export default function FAS() {
                     border: selectedCategory === category.id ? `2px solid ${category.color}` : '2px solid #333',
                     borderRadius: '50px',
                     background: selectedCategory === category.id ? category.color : 'transparent',
-                    color: selectedCategory === category.id ? 'white' : '#D4AF37',
+                    color: selectedCategory === category.id ? 'white' : '#D4A574',
                     fontWeight: '500',
                     fontSize: '0.9rem',
                     letterSpacing: '0.05em',
@@ -411,7 +411,7 @@ export default function FAS() {
                   overflow: 'hidden',
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
                   transition: 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
-                  border: event.featured ? '2px solid #D2374C' : event.prestige ? '2px solid #D4AF37' : '2px solid transparent',
+                  border: event.featured ? '2px solid #E33241' : event.prestige ? '2px solid #D4A574' : '2px solid transparent',
                   position: 'relative'
                 }}
                 onMouseEnter={(e) => {
@@ -431,7 +431,7 @@ export default function FAS() {
                     left: 0,
                     right: 0,
                     height: '4px',
-                    background: 'linear-gradient(135deg, #D2374C 0%, #FF6B9D 100%)',
+                    background: '#E33241',
                     zIndex: 1
                   }} />
                 )}
@@ -442,7 +442,7 @@ export default function FAS() {
                     left: 0,
                     right: 0,
                     height: '4px',
-                    background: 'linear-gradient(45deg, #D4AF37 0%, #F4D03F 100%)',
+                    background: '#D4A574',
                     zIndex: 1
                   }} />
                 )}
@@ -467,7 +467,7 @@ export default function FAS() {
                     position: 'absolute',
                     top: '1rem',
                     left: '1rem',
-                    background: 'rgba(27, 27, 47, 0.9)',
+                    background: 'rgba(26, 19, 64, 0.9)',
                     color: 'white',
                     padding: '12px 16px',
                     borderRadius: '12px',
@@ -489,7 +489,7 @@ export default function FAS() {
                     <div style={{
                       fontSize: '1rem',
                       fontWeight: '700',
-                      color: '#F4D03F'
+                      color: '#D4A574'
                     }}>
                       {event.time}
                     </div>
@@ -501,8 +501,8 @@ export default function FAS() {
                       position: 'absolute',
                       top: '1rem',
                       right: '1rem',
-                      background: 'linear-gradient(45deg, #D4AF37 0%, #F4D03F 100%)',
-                      color: '#1B1B2F',
+                      background: '#D4A574',
+                      color: '#1a1340',
                       padding: '6px 12px',
                       borderRadius: '20px',
                       fontSize: '0.7rem',
@@ -519,13 +519,13 @@ export default function FAS() {
                       position: 'absolute',
                       bottom: '1rem',
                       right: '1rem',
-                      background: '#D2374C',
+                      background: '#E33241',
                       color: 'white',
                       padding: '8px 16px',
                       borderRadius: '50px',
                       fontSize: '0.9rem',
                       fontWeight: '700',
-                      boxShadow: '0 4px 20px rgba(210, 55, 76, 0.3)'
+                      boxShadow: '0 4px 20px rgba(227, 50, 65, 0.3)'
                     }}>
                       20ème
                     </div>
@@ -568,7 +568,7 @@ export default function FAS() {
                   <h3 style={{
                     fontSize: '1.5rem',
                     fontWeight: '700',
-                    color: '#1B1B2F',
+                    color: '#1a1340',
                     marginBottom: '0.5rem',
                     lineHeight: '1.2'
                   }}>
@@ -578,7 +578,7 @@ export default function FAS() {
                   {event.subtitle && (
                     <p style={{
                       fontSize: '1rem',
-                      color: '#D2374C',
+                      color: '#E33241',
                       fontWeight: '500',
                       marginBottom: '1rem',
                       lineHeight: '1.3'
@@ -597,8 +597,8 @@ export default function FAS() {
                       <span
                         key={index}
                         style={{
-                          background: '#F8F9FA',
-                          color: '#1B1B2F',
+                          background: '#F5F0E8',
+                          color: '#1a1340',
                           padding: '6px 12px',
                           borderRadius: '16px',
                           fontSize: '0.8rem',
@@ -612,11 +612,11 @@ export default function FAS() {
 
                   {event.conference && (
                     <div style={{
-                      background: '#FAF9F6',
+                      background: '#F5F0E8',
                       padding: '12px 16px',
                       borderRadius: '12px',
                       marginBottom: '1rem',
-                      borderLeft: '4px solid #D4AF37'
+                      borderLeft: '4px solid #D4A574'
                     }}>
                       <span style={{
                         display: 'block',
@@ -629,7 +629,7 @@ export default function FAS() {
                       </span>
                       <span style={{
                         fontWeight: '600',
-                        color: '#1B1B2F'
+                        color: '#1a1340'
                       }}>
                         {event.conference.speaker}
                       </span>
@@ -638,15 +638,15 @@ export default function FAS() {
 
                   {event.special && (
                     <div style={{
-                      background: '#FAF9F6',
+                      background: '#F5F0E8',
                       padding: '12px 16px',
                       borderRadius: '12px',
                       marginBottom: '1rem',
-                      borderLeft: '4px solid #D4AF37'
+                      borderLeft: '4px solid #D4A574'
                     }}>
                       <span style={{
                         fontStyle: 'italic',
-                        color: '#D2374C',
+                        color: '#E33241',
                         fontWeight: '500'
                       }}>
                         {event.special}
@@ -679,19 +679,19 @@ export default function FAS() {
                       transition: 'all 0.3s ease',
                       cursor: 'pointer',
                       border: 'none',
-                      background: '#D2374C',
+                      background: '#E33241',
                       color: 'white',
-                      boxShadow: '0 4px 20px rgba(210, 55, 76, 0.2)'
+                      boxShadow: '0 4px 20px rgba(227, 50, 65, 0.2)'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#B32843';
+                      e.currentTarget.style.background = '#C42E3C';
                       e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 8px 30px rgba(210, 55, 76, 0.3)';
+                      e.currentTarget.style.boxShadow = '0 8px 30px rgba(227, 50, 65, 0.3)';
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = '#D2374C';
+                      e.currentTarget.style.background = '#E33241';
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 4px 20px rgba(210, 55, 76, 0.2)';
+                      e.currentTarget.style.boxShadow = '0 4px 20px rgba(227, 50, 65, 0.2)';
                     }}>
                       Réserver
                     </button>
@@ -703,17 +703,17 @@ export default function FAS() {
                       transition: 'all 0.3s ease',
                       cursor: 'pointer',
                       background: 'transparent',
-                      color: '#1B1B2F',
-                      border: '2px solid #1B1B2F'
+                      color: '#1a1340',
+                      border: '2px solid #1a1340'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#1B1B2F';
+                      e.currentTarget.style.background = '#1a1340';
                       e.currentTarget.style.color = 'white';
                       e.currentTarget.style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.background = 'transparent';
-                      e.currentTarget.style.color = '#1B1B2F';
+                      e.currentTarget.style.color = '#1a1340';
                       e.currentTarget.style.transform = 'translateY(0)';
                     }}>
                       En savoir plus
