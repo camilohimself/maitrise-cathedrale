@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import fondationContent from '@/data/fondationContent';
+import NavigationFooter from '@/components/NavigationFooter';
 
 export default function OrganisationPage() {
   const { organisation } = fondationContent;
@@ -366,49 +367,22 @@ export default function OrganisationPage() {
         </div>
       </div>
 
-      {/* Navigation Footer */}
-      <div style={{
-        backgroundColor: '#f8f9fa',
-        padding: '40px 20px',
-        borderTop: '1px solid #e0e0e0',
-        textAlign: 'center'
-      }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h3 style={{ fontSize: '1.4rem', marginBottom: '20px', color: '#2c3e50' }}>
-            Continuez votre découverte
-          </h3>
-          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link 
-              href="/maitrise/prof-chant" 
-              style={{
-                backgroundColor: '#E33241',
-                color: 'white',
-                padding: '12px 24px',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                fontSize: '16px',
-                fontWeight: '600'
-              }}
-            >
-              Buts & Objectifs →
-            </Link>
-            <Link 
-              href="/maitrise/histoire" 
-              style={{
-                backgroundColor: 'transparent',
-                color: '#2c3e50',
-                padding: '12px 24px',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                fontSize: '16px',
-                border: '2px solid #e0e0e0'
-              }}
-            >
-              ← Histoire
-            </Link>
-          </div>
-        </div>
-      </div>
+      {/* Navigation Footer - Composant optimisé */}
+      <NavigationFooter
+        title="Continuez votre découverte"
+        links={[
+          {
+            href: '/maitrise/histoire',
+            label: 'Histoire',
+            direction: 'prev'
+          },
+          {
+            href: '/maitrise/prof-chant',
+            label: 'Buts & Objectifs',
+            direction: 'next'
+          }
+        ]}
+      />
 
       {/* Responsive CSS */}
       <style jsx>{`

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import fondationContent from '@/data/fondationContent';
 
 const Footer = () => {
@@ -81,7 +82,7 @@ const Footer = () => {
       color: '#ffffff',
       paddingTop: '60px',
       paddingBottom: '40px',
-      marginTop: '80px'
+      marginTop: '60px' // Réduit de 80px à 60px pour optimiser l'espacement
     }}>
       <div style={{
         maxWidth: '1200px',
@@ -102,21 +103,24 @@ const Footer = () => {
             marginBottom: '24px'
           }}>
             <div style={{
-              width: '60px',
-              height: '60px',
-              backgroundColor: 'var(--color-red)',
-              borderRadius: '50%',
+              marginRight: '16px',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '32px',
-              fontWeight: '800',
-              color: '#fff',
-              fontFamily: 'var(--font-family)',
-              letterSpacing: '-1px',
-              marginRight: '16px'
+              justifyContent: 'center'
             }}>
-              M
+              <Image
+                src="/images/logo-mc-contrast.svg"
+                alt="Maîtrise Cathédrale de Sion - Logo"
+                width={60}
+                height={60}
+                style={{
+                  height: 'auto',
+                  maxHeight: '60px',
+                  width: 'auto',
+                  maxWidth: '60px',
+                  objectFit: 'contain'
+                }}
+              />
             </div>
             <div>
               <h2 style={{
