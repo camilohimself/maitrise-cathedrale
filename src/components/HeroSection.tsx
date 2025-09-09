@@ -5,157 +5,138 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
-      {/* Background Image avec Overlay */}
-      <div className="hero-background">
+    <section style={{
+      position: 'relative',
+      minHeight: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+      backgroundColor: 'var(--color-black)',
+    }}>
+      {/* Background Image avec Overlay sombre comme maquette */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        zIndex: 1,
+      }}>
         <Image
-          src="/images/hero-bg.jpg"
-          alt="Cathédrale de Sion"
+          src="/images/hero-choir.jpg"
+          alt="Chœur de la Maîtrise en performance"
           fill
           style={{
             objectFit: 'cover',
-            objectPosition: 'center'
+            objectPosition: 'center',
           }}
           priority
+          quality={90}
         />
-        {/* Gradient Overlay */}
-        <div className="hero-overlay"></div>
+        {/* Overlay gradient sombre pour lisibilité */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(180deg, rgba(4, 10, 35, 0.4) 0%, rgba(4, 10, 35, 0.6) 50%, rgba(4, 10, 35, 0.8) 100%)',
+        }} />
       </div>
 
-      {/* Content */}
-      <div className="hero-content">
-        {/* Subtitle */}
-        <p style={{
-          fontSize: '18px',
-          fontWeight: 'var(--font-medium)',
-          color: 'var(--gold-primary)',
-          marginBottom: '20px',
-          letterSpacing: '2px',
-          textTransform: 'uppercase',
-          fontFamily: 'var(--font-family)',
-          animation: 'fadeInUp 0.8s ease-out'
-        }}>
-          La Maîtrise de la Cathédrale de Sion
-        </p>
-
-        {/* Main Title */}
+      {/* Contenu Hero */}
+      <div style={{
+        position: 'relative',
+        zIndex: 2,
+        textAlign: 'center',
+        maxWidth: 'var(--container-max)',
+        padding: '0 var(--spacing-lg)',
+        width: '100%',
+      }}>
+        {/* Titre principal XXL comme maquette */}
         <h1 style={{
-          fontSize: 'clamp(36px, 5vw, 56px)',
+          fontFamily: 'var(--font-spectral)',
+          fontSize: 'var(--text-hero)',
           fontWeight: 'var(--font-extrabold)',
-          lineHeight: '1.2',
-          marginBottom: '30px',
-          fontFamily: 'var(--font-family)',
-          animation: 'fadeInUp 0.8s ease-out 0.2s both'
+          color: 'var(--color-white)',
+          marginBottom: 'var(--spacing-lg)',
+          lineHeight: 1.1,
+          letterSpacing: '-2px',
+          animation: 'fadeInUp 0.8s ease-out',
         }}>
-          Voix d&apos;exception<br />
-          au cœur de la Cathédrale
+          Festival<br />
+          d&apos;Art Sacré
         </h1>
 
-        {/* Description */}
+        {/* Sous-titre */}
         <p style={{
+          fontFamily: 'var(--font-outfit)',
           fontSize: 'var(--text-large)',
-          fontWeight: 'var(--font-regular)',
-          lineHeight: '1.6',
-          maxWidth: '700px',
-          margin: '0 auto 40px',
-          color: 'rgba(255, 255, 255, 0.9)',
-          fontFamily: 'var(--font-family)',
-          animation: 'fadeInUp 0.8s ease-out 0.4s both'
+          fontWeight: 'var(--font-light)',
+          color: 'var(--color-white)',
+          opacity: 0.9,
+          maxWidth: '600px',
+          margin: '0 auto var(--spacing-xl)',
+          lineHeight: 1.6,
+          animation: 'fadeInUp 0.8s ease-out 0.2s both',
         }}>
-          De jeunes chanteurs passionnés, formés dès le plus jeune âge, 
-          unissent leurs voix pour faire vibrer la cathédrale au rythme du chant sacré.
+          De novembre à janvier, laissez-vous porter<br />
+          par l&apos;émotion des concerts sacrées
         </p>
 
-        {/* CTA Buttons */}
-        <div style={{
-          display: 'flex',
-          gap: '20px',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          animation: 'fadeInUp 0.8s ease-out 0.6s both'
-        }}>
-          <a 
-            href="#agenda"
-            style={{
-              padding: '14px 32px',
-              backgroundColor: 'var(--gold-primary)',
-              color: 'var(--white)',
-              textDecoration: 'none',
-              borderRadius: 'var(--radius-small)',
-              fontSize: 'var(--text-base)',
-              fontWeight: 'var(--font-semibold)',
-              transition: 'all var(--transition-fast)',
-              display: 'inline-block',
-              fontFamily: 'var(--font-family)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}
-          >
-            Découvrir nos concerts
-          </a>
-          
-          <a 
-            href="#maitrise"
-            style={{
-              padding: '14px 32px',
-              backgroundColor: 'var(--bg-transparent)',
-              border: '2px solid var(--white)',
-              color: 'var(--white)',
-              textDecoration: 'none',
-              borderRadius: 'var(--radius-small)',
-              fontSize: 'var(--text-base)',
-              fontWeight: 'var(--font-semibold)',
-              transition: 'all var(--transition-fast)',
-              display: 'inline-block',
-              fontFamily: 'var(--font-family)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = 'var(--white)';
-              e.currentTarget.style.color = 'var(--black)';
-              e.currentTarget.style.transform = 'translateY(-2px)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'var(--bg-transparent)';
-              e.currentTarget.style.color = 'var(--white)';
-              e.currentTarget.style.transform = 'translateY(0)';
-            }}
-          >
-            En savoir plus
-          </a>
-        </div>
+        {/* Bouton CTA principal */}
+        <a 
+          href="/fas/programmation"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '16px 48px',
+            backgroundColor: 'var(--color-gold)',
+            color: 'var(--color-white)',
+            border: 'none',
+            borderRadius: 'var(--radius-sm)',
+            fontFamily: 'var(--font-outfit)',
+            fontWeight: 'var(--font-semibold)',
+            fontSize: 'var(--text-base)',
+            textDecoration: 'none',
+            cursor: 'pointer',
+            transition: 'all var(--transition-base)',
+            animation: 'fadeInUp 0.8s ease-out 0.4s both',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+            e.currentTarget.style.boxShadow = 'var(--shadow-gold)';
+            e.currentTarget.style.filter = 'brightness(1.1)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0) scale(1)';
+            e.currentTarget.style.boxShadow = 'none';
+            e.currentTarget.style.filter = 'brightness(1)';
+          }}
+        >
+          Découvrir le programme
+        </a>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Indicateur scroll (optionnel) */}
       <div style={{
         position: 'absolute',
-        bottom: '30px',
+        bottom: '40px',
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 2,
-        animation: 'bounce 2s infinite'
+        animation: 'bounce 2s infinite',
       }}>
         <svg 
-          width="30" 
-          height="50" 
-          viewBox="0 0 30 50" 
+          width="24" 
+          height="40" 
+          viewBox="0 0 24 40" 
           fill="none"
-          style={{ cursor: 'pointer' }}
-          onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}
+          style={{ opacity: 0.6 }}
         >
-          <rect x="1" y="1" width="28" height="48" rx="14" stroke="var(--gold-primary)" strokeWidth="2"/>
-          <circle cx="15" cy="15" r="4" fill="var(--gold-primary)" style={{
-            animation: 'scrollDown 2s infinite'
-          }}/>
+          <rect x="1" y="1" width="22" height="38" rx="11" stroke="var(--color-white)" strokeWidth="2"/>
+          <circle cx="12" cy="10" r="3" fill="var(--color-white)">
+            <animate attributeName="cy" values="10;20;10" dur="1.5s" repeatCount="indefinite" />
+          </circle>
         </svg>
       </div>
 
-      {/* Animations */}
       <style jsx>{`
         @keyframes fadeInUp {
           from {
@@ -167,31 +148,13 @@ const HeroSection = () => {
             transform: translateY(0);
           }
         }
-
+        
         @keyframes bounce {
-          0%, 20%, 50%, 80%, 100% {
+          0%, 100% {
             transform: translateX(-50%) translateY(0);
           }
-          40% {
-            transform: translateX(-50%) translateY(-10px);
-          }
-          60% {
-            transform: translateX(-50%) translateY(-5px);
-          }
-        }
-
-        @keyframes scrollDown {
-          0% {
-            transform: translateY(0);
-            opacity: 1;
-          }
           50% {
-            transform: translateY(20px);
-            opacity: 0.5;
-          }
-          100% {
-            transform: translateY(0);
-            opacity: 1;
+            transform: translateX(-50%) translateY(10px);
           }
         }
       `}</style>

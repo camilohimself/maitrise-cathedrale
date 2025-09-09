@@ -116,7 +116,7 @@ const Header = () => {
                 <Link 
                   href={link.href}
                   style={{
-                    color: link.isActive ? '#E33241' : '#000',
+                    color: link.isActive ? 'var(--color-red)' : '#000',
                     textDecoration: 'none',
                     fontSize: '16px',
                     fontWeight: link.isActive ? '600' : '500',
@@ -128,7 +128,7 @@ const Header = () => {
                   }}
                   onMouseEnter={(e) => {
                     if (!link.isActive) {
-                      e.currentTarget.style.color = '#D2AB5F';
+                      e.currentTarget.style.color = 'var(--color-gold)';
                       e.currentTarget.style.transform = 'translateY(-1px)';
                     }
                   }}
@@ -147,7 +147,7 @@ const Header = () => {
                       left: 0,
                       right: 0,
                       height: '3px',
-                      backgroundColor: '#E33241',
+                      backgroundColor: 'var(--color-red)',
                       borderRadius: '2px',
                       animation: 'slideIn 0.3s ease-out'
                     }} />
@@ -160,7 +160,7 @@ const Header = () => {
                 href="/fas"
                 style={{
                   padding: '10px 24px',
-                  backgroundColor: pathname?.startsWith('/fas') ? '#E33241' : '#D2AB5F',
+                  backgroundColor: pathname?.startsWith('/fas') ? 'var(--color-red)' : 'var(--color-gold)',
                   color: '#fff',
                   textDecoration: 'none',
                   borderRadius: '6px',
@@ -242,7 +242,7 @@ const Header = () => {
             backgroundColor: '#fff',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
             padding: '20px',
-            borderTop: '3px solid #E33241'
+            borderTop: '3px solid var(--color-red)'
           }}>
             <ul style={{
               listStyle: 'none',
@@ -257,7 +257,7 @@ const Header = () => {
                   <Link 
                     href={link.href}
                     style={{
-                      color: link.isActive ? '#E33241' : '#000',
+                      color: link.isActive ? 'var(--color-red)' : '#000',
                       textDecoration: 'none',
                       fontSize: '18px',
                       fontWeight: link.isActive ? '600' : '500',
@@ -265,7 +265,7 @@ const Header = () => {
                       display: 'flex',
                       alignItems: 'center',
                       padding: '12px 0',
-                      borderBottom: link.isActive ? '2px solid #E33241' : '2px solid transparent',
+                      borderBottom: link.isActive ? '2px solid var(--color-red)' : '2px solid transparent',
                       transition: 'all 0.3s ease'
                     }}
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -274,7 +274,7 @@ const Header = () => {
                       <span style={{
                         width: '6px',
                         height: '6px',
-                        backgroundColor: '#E33241',
+                        backgroundColor: 'var(--color-red)',
                         borderRadius: '50%',
                         marginRight: '12px'
                       }} />
@@ -288,7 +288,7 @@ const Header = () => {
                   href="/fas"
                   style={{
                     padding: '12px 24px',
-                    backgroundColor: '#D2AB5F',
+                    backgroundColor: 'var(--color-gold)',
                     color: '#fff',
                     textDecoration: 'none',
                     borderRadius: '4px',

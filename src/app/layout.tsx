@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Outfit, Spectral } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,16 +7,20 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import StructuredData from "@/components/StructuredData";
 import SkipLink from "@/components/SkipLink";
 
-const playfair = Playfair_Display({ 
+// OUTFIT pour UI/Navigation (remplace Inter)
+const outfit = Outfit({ 
   subsets: ["latin"],
-  variable: '--font-playfair',
+  variable: '--font-outfit',
   display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
 });
 
-const inter = Inter({ 
+// SPECTRAL pour titres/contenu (remplace Playfair)
+const spectral = Spectral({ 
   subsets: ["latin"],
-  variable: '--font-inter',
+  variable: '--font-spectral',
   display: 'swap',
+  weight: ['300', '400', '500', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
@@ -79,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="fr" className={`${outfit.variable} ${spectral.variable}`}>
       <body className="font-sans antialiased">
         <SkipLink />
         

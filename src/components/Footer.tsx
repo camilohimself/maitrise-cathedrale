@@ -77,7 +77,7 @@ const Footer = () => {
 
   return (
     <footer style={{
-      background: 'linear-gradient(135deg, #040A23 0%, #2c3e50 50%, #34495e 100%)',
+      background: 'linear-gradient(135deg, var(--color-navy) 0%, #2c3e50 50%, #34495e 100%)',
       color: '#ffffff',
       paddingTop: '60px',
       paddingBottom: '40px',
@@ -104,7 +104,7 @@ const Footer = () => {
             <div style={{
               width: '60px',
               height: '60px',
-              backgroundColor: '#E33241',
+              backgroundColor: 'var(--color-red)',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
@@ -130,7 +130,7 @@ const Footer = () => {
               </h2>
               <p style={{
                 fontSize: '14px',
-                color: '#D2AB5F',
+                color: 'var(--color-gold)',
                 margin: 0,
                 fontWeight: '500'
               }}>
@@ -163,7 +163,7 @@ const Footer = () => {
               <h3 style={{
                 fontSize: '18px',
                 fontWeight: '700',
-                color: '#D2AB5F',
+                color: 'var(--color-gold)',
                 marginBottom: '20px',
                 fontFamily: 'var(--font-family)',
                 textTransform: 'uppercase',
@@ -193,7 +193,7 @@ const Footer = () => {
                         padding: '4px 0'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.color = '#D2AB5F';
+                        e.currentTarget.style.color = 'var(--color-gold)';
                         e.currentTarget.style.paddingLeft = '8px';
                       }}
                       onMouseLeave={(e) => {
@@ -214,7 +214,7 @@ const Footer = () => {
             <h3 style={{
               fontSize: '18px',
               fontWeight: '700',
-              color: '#D2AB5F',
+              color: 'var(--color-gold)',
               marginBottom: '20px',
               fontFamily: 'var(--font-family)',
               textTransform: 'uppercase',
@@ -259,7 +259,7 @@ const Footer = () => {
                     alignItems: 'center',
                     gap: '8px'
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#D2AB5F'}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
                   onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -281,7 +281,7 @@ const Footer = () => {
                     gap: '8px',
                     wordBreak: 'break-all'
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#D2AB5F'}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
                   onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -330,7 +330,7 @@ const Footer = () => {
                   border: '1px solid rgba(255, 255, 255, 0.1)'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#D2AB5F';
+                  e.currentTarget.style.backgroundColor = 'var(--color-gold)';
                   e.currentTarget.style.color = '#ffffff';
                   e.currentTarget.style.transform = 'translateY(-2px)';
                   e.currentTarget.style.boxShadow = '0 8px 25px rgba(210, 171, 95, 0.3)';
@@ -361,7 +361,7 @@ const Footer = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 padding: '12px 24px',
-                backgroundColor: '#E33241',
+                backgroundColor: 'var(--color-red)',
                 color: '#ffffff',
                 textDecoration: 'none',
                 borderRadius: '6px',
@@ -393,25 +393,25 @@ const Footer = () => {
                 alignItems: 'center',
                 padding: '12px 24px',
                 backgroundColor: 'transparent',
-                color: '#D2AB5F',
+                color: 'var(--color-gold)',
                 textDecoration: 'none',
                 borderRadius: '6px',
                 fontSize: '15px',
                 fontWeight: '600',
                 fontFamily: 'var(--font-family)',
                 transition: 'all 0.3s ease',
-                border: '2px solid #D2AB5F',
+                border: '2px solid var(--color-gold)',
                 gap: '8px'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#D2AB5F';
+                e.currentTarget.style.backgroundColor = 'var(--color-gold)';
                 e.currentTarget.style.color = '#ffffff';
                 e.currentTarget.style.transform = 'translateY(-2px)';
                 e.currentTarget.style.boxShadow = '0 8px 25px rgba(210, 171, 95, 0.3)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = '#D2AB5F';
+                e.currentTarget.style.color = 'var(--color-gold)';
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
@@ -450,7 +450,7 @@ const Footer = () => {
                 fontFamily: 'var(--font-family)',
                 transition: 'color 0.3s ease'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#D2AB5F'}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
             >
               Mentions légales
@@ -465,7 +465,7 @@ const Footer = () => {
                 fontFamily: 'var(--font-family)',
                 transition: 'color 0.3s ease'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#D2AB5F'}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
               onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)'}
             >
               Politique de confidentialité

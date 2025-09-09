@@ -1,250 +1,208 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
-
-interface Event {
-  id: number;
-  title: string;
-  date: string;
-  time: string;
-  location: string;
-  description: string;
-  image: string;
-  price?: string;
-}
+import EventCard from './EventCard';
 
 const EventsSection = () => {
-  const events: Event[] = [
+  const events = [
     {
       id: 1,
-      title: "La Prochaine Cantate de Bach",
-      date: "Jeudi 15 Août",
+      date: { day: "15", month: "AOÛT" },
       time: "19h30",
-      location: "Cathédrale de Sion",
-      description: "Une interprétation exceptionnelle de la cantate BWV 147 de Jean-Sébastien Bach.",
+      title: "Chapelle musicale",
+      category: "Music",
+      description: "Nobis sunt autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
       image: "/images/event1.jpg",
-      price: "Entrée libre - collecte"
+      ctaText: "Réserver",
+      featured: true
     },
     {
       id: 2,
-      title: "Ensemble vocal et instrumental",
-      date: "Dimanche 30 Novembre",
-      time: "17h00",
-      location: "Cathédrale de Sion",
-      description: "Concert avec orchestre baroque et solistes internationaux.",
+      date: { day: "18", month: "AOÛT" },
+      time: "10h30",
+      title: "Chantre",
+      category: "Music",
+      description: "Nobis sunt autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
       image: "/images/event2.jpg",
-      price: "CHF 25.- / 15.-"
+      ctaText: "Réserver"
     },
     {
       id: 3,
-      title: "Festival d'Art Sacré",
-      date: "Dimanche 30 Novembre",
-      time: "20h00",
-      location: "Cathédrale de Sion",
-      description: "Trois jours de concerts exceptionnels dédiés à la musique sacrée.",
+      date: { day: "25", month: "AOÛT" },
+      time: "19h30",
+      title: "Chœur Cath'voix",
+      category: "Music",
+      description: "Nobis sunt autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
       image: "/images/event3.jpg",
-      price: "CHF 35.- / 20.-"
+      ctaText: "Réserver"
+    },
+    {
+      id: 4,
+      date: { day: "28", month: "AOÛT" },
+      time: "19h30",
+      title: "Sion Festival",
+      category: "Concert",
+      description: "Nobis sunt autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
+      image: "/images/event4.jpg",
+      ctaText: "Réserver"
     }
   ];
 
   return (
     <section 
       id="agenda"
+      className="section-white"
       style={{
-        backgroundColor: '#fff',
-        padding: '80px 0'
+        backgroundColor: 'var(--color-white)',
+        padding: 'var(--spacing-3xl) 0',
       }}
     >
       <div style={{
-        maxWidth: '1200px',
+        maxWidth: 'var(--container-max)',
         margin: '0 auto',
-        padding: '0 20px'
+        padding: '0 var(--spacing-lg)',
       }}>
-        {/* Section Title */}
+        {/* Header de section */}
         <div style={{
           textAlign: 'center',
-          marginBottom: '60px'
+          marginBottom: 'var(--spacing-2xl)',
         }}>
           <h2 style={{
-            fontSize: '42px',
-            fontWeight: '800',
-            color: '#D2AB5F',
-            marginBottom: '20px',
-            fontFamily: 'var(--font-family)'
+            fontFamily: 'var(--font-spectral)',
+            fontSize: 'var(--text-h1)',
+            fontWeight: 'var(--font-extrabold)',
+            color: 'var(--color-gold)',
+            marginBottom: 'var(--spacing-md)',
+            letterSpacing: '-1px',
           }}>
-            Événements
+            Agenda et billetterie
           </h2>
-          <p style={{
-            fontSize: '18px',
-            color: '#666',
-            maxWidth: '600px',
-            margin: '0 auto',
-            fontFamily: 'var(--font-family)'
+          
+          {/* Filtres */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: 'var(--spacing-md)',
+            marginTop: 'var(--spacing-xl)',
+            flexWrap: 'wrap',
           }}>
-            Découvrez nos prochains concerts et événements musicaux
-          </p>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 'var(--spacing-xs)',
+            }}>
+              <label style={{
+                fontFamily: 'var(--font-outfit)',
+                fontSize: 'var(--text-small)',
+                color: 'var(--color-navy)',
+                opacity: 0.7,
+              }}>
+                FILTRER :
+              </label>
+              <select style={{
+                padding: '8px 16px',
+                border: '1px solid rgba(26, 19, 64, 0.1)',
+                borderRadius: 'var(--radius-sm)',
+                backgroundColor: 'var(--color-white)',
+                fontFamily: 'var(--font-outfit)',
+                fontSize: 'var(--text-small)',
+                color: 'var(--color-navy)',
+                cursor: 'pointer',
+                outline: 'none',
+              }}>
+                <option>MOIS</option>
+                <option>Août</option>
+                <option>Septembre</option>
+                <option>Octobre</option>
+              </select>
+              <select style={{
+                padding: '8px 16px',
+                border: '1px solid rgba(26, 19, 64, 0.1)',
+                borderRadius: 'var(--radius-sm)',
+                backgroundColor: 'var(--color-white)',
+                fontFamily: 'var(--font-outfit)',
+                fontSize: 'var(--text-small)',
+                color: 'var(--color-navy)',
+                cursor: 'pointer',
+                outline: 'none',
+              }}>
+                <option>TYPE D&apos;EVENT</option>
+                <option>Concert</option>
+                <option>Festival</option>
+                <option>Cantate</option>
+              </select>
+              <select style={{
+                padding: '8px 16px',
+                border: '1px solid rgba(26, 19, 64, 0.1)',
+                borderRadius: 'var(--radius-sm)',
+                backgroundColor: 'var(--color-white)',
+                fontFamily: 'var(--font-outfit)',
+                fontSize: 'var(--text-small)',
+                color: 'var(--color-navy)',
+                cursor: 'pointer',
+                outline: 'none',
+              }}>
+                <option>BUDGET</option>
+                <option>Gratuit</option>
+                <option>0-20 CHF</option>
+                <option>20-50 CHF</option>
+              </select>
+            </div>
+          </div>
         </div>
 
-        {/* Events Grid */}
+        {/* Grille d'événements - Layout asymétrique comme maquette */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '30px',
-          marginBottom: '50px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+          gap: 'var(--spacing-lg)',
+          marginBottom: 'var(--spacing-2xl)',
         }}>
-          {events.map((event) => (
-            <article 
+          {events.map((event, index) => (
+            <div 
               key={event.id}
               style={{
-                backgroundColor: '#fff',
-                borderRadius: '8px',
-                overflow: 'hidden',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
-                transition: 'all 0.3s ease',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.12)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+                gridColumn: index === 0 ? 'span 1' : 'span 1', // Simple grid pour éviter SSR issues
               }}
             >
-              {/* Event Image */}
-              <div style={{
-                position: 'relative',
-                height: '200px',
-                backgroundColor: '#f0f0f0',
-                overflow: 'hidden'
-              }}>
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  fill
-                  style={{
-                    objectFit: 'cover'
-                  }}
-                />
-                {/* Date Badge */}
-                <div style={{
-                  position: 'absolute',
-                  top: '20px',
-                  left: '20px',
-                  backgroundColor: '#D2AB5F',
-                  color: '#fff',
-                  padding: '8px 16px',
-                  borderRadius: '4px',
-                  fontSize: '14px',
-                  fontWeight: '600',
-                  fontFamily: 'var(--font-family)'
-                }}>
-                  {event.date}
-                </div>
-              </div>
-
-              {/* Event Content */}
-              <div style={{
-                padding: '25px'
-              }}>
-                <h3 style={{
-                  fontSize: '22px',
-                  fontWeight: '700',
-                  color: '#000',
-                  marginBottom: '10px',
-                  fontFamily: 'var(--font-family)'
-                }}>
-                  {event.title}
-                </h3>
-                
-                <div style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '8px',
-                  marginBottom: '15px'
-                }}>
-                  <p style={{
-                    fontSize: '15px',
-                    color: '#666',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    fontFamily: 'var(--font-family)'
-                  }}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D2AB5F" strokeWidth="2">
-                      <circle cx="12" cy="12" r="10"/>
-                      <polyline points="12 6 12 12 16 14"/>
-                    </svg>
-                    {event.time}
-                  </p>
-                  <p style={{
-                    fontSize: '15px',
-                    color: '#666',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '8px',
-                    fontFamily: 'var(--font-family)'
-                  }}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D2AB5F" strokeWidth="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                      <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                    {event.location}
-                  </p>
-                </div>
-
-                <p style={{
-                  fontSize: '15px',
-                  color: '#666',
-                  lineHeight: '1.6',
-                  marginBottom: '20px',
-                  fontFamily: 'var(--font-family)'
-                }}>
-                  {event.description}
-                </p>
-
-                {event.price && (
-                  <p style={{
-                    fontSize: '14px',
-                    color: '#D2AB5F',
-                    fontWeight: '600',
-                    fontFamily: 'var(--font-family)'
-                  }}>
-                    {event.price}
-                  </p>
-                )}
-              </div>
-            </article>
+              <EventCard {...event} featured={index === 0} />
+            </div>
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* Bouton voir plus */}
         <div style={{
-          textAlign: 'center'
+          textAlign: 'center',
+          marginTop: 'var(--spacing-2xl)',
         }}>
           <a 
-            href="#billetterie"
+            href="/agenda-billetterie"
+            className="btn-outline"
             style={{
-              display: 'inline-block',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
               padding: '14px 40px',
-              backgroundColor: '#D2AB5F',
-              color: '#fff',
+              backgroundColor: 'transparent',
+              color: 'var(--color-gold)',
+              border: '2px solid var(--color-gold)',
+              borderRadius: 'var(--radius-sm)',
+              fontFamily: 'var(--font-outfit)',
+              fontWeight: 'var(--font-medium)',
+              fontSize: 'var(--text-base)',
               textDecoration: 'none',
-              borderRadius: '4px',
-              fontSize: '16px',
-              fontWeight: '600',
-              transition: 'all 0.3s ease',
-              fontFamily: 'var(--font-family)'
+              cursor: 'pointer',
+              transition: 'all var(--transition-base)',
             }}
             onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'var(--color-gold)';
+              e.currentTarget.style.color = 'var(--color-white)';
               e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 6px 20px rgba(210, 171, 95, 0.3)';
             }}
             onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.color = 'var(--color-gold)';
               e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = 'none';
             }}
           >
             Voir tous les événements
