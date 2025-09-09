@@ -89,70 +89,105 @@ const Footer = () => {
         margin: '0 auto',
         padding: '0 20px'
       }}>
-        {/* Header Section */}
+        {/* Section Logo Large */}
         <div style={{
+          background: 'linear-gradient(135deg, #040A23 0%, #1a1a2e 100%)',
+          padding: '50px 20px',
           textAlign: 'center',
-          marginBottom: '50px',
-          paddingBottom: '40px',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+          borderBottom: '3px solid #D2AB5F',
+          marginBottom: '50px'
         }}>
-          <Link href="/" style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            textDecoration: 'none',
-            marginBottom: '24px'
-          }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div style={{
-              marginRight: '16px',
-              display: 'flex',
+              width: '180px',
+              height: '180px',
+              background: 'linear-gradient(45deg, #D2AB5F, #E6C068)',
+              borderRadius: '50%',
+              display: 'inline-flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              boxShadow: '0 8px 30px rgba(210, 171, 95, 0.3)',
+              marginBottom: '30px'
             }}>
               <Image
                 src="/images/logo-mc-contrast.svg"
                 alt="Maîtrise Cathédrale de Sion - Logo"
-                width={80}
-                height={80}
+                width={120}
+                height={120}
                 style={{
-                  height: 'auto',
-                  maxHeight: '80px',
+                  height: '120px',
                   width: 'auto',
-                  maxWidth: '80px',
                   objectFit: 'contain'
                 }}
               />
             </div>
-            <div>
-              <h2 style={{
-                fontSize: '24px',
-                fontWeight: '700',
-                color: '#ffffff',
-                margin: 0,
-                fontFamily: 'var(--font-family)'
-              }}>
-                Maîtrise Cathédrale de Sion
-              </h2>
-              <p style={{
-                fontSize: '14px',
-                color: 'var(--color-gold)',
-                margin: 0,
-                fontWeight: '500'
-              }}>
-                Voix d'exception au cœur de la Cathédrale
-              </p>
+            <h2 style={{
+              fontSize: '32px',
+              fontWeight: '700',
+              marginBottom: '15px',
+              color: '#ffffff',
+              fontFamily: 'var(--font-family)'
+            }}>
+              Maîtrise Cathédrale de Sion
+            </h2>
+            <p style={{
+              fontSize: '18px',
+              color: '#D2AB5F',
+              marginBottom: '30px',
+              lineHeight: 1.6,
+              fontFamily: 'var(--font-family)'
+            }}>
+              Voix d'exception au cœur de la Cathédrale
+            </p>
+
+            {/* CTA Buttons */}
+            <div style={{
+              display: 'flex',
+              gap: '20px',
+              justifyContent: 'center',
+              flexWrap: 'wrap'
+            }}>
+              <Link
+                href="/soutenir/amis-maitrise"
+                style={{
+                  background: '#E33241',
+                  color: 'white',
+                  padding: '15px 30px',
+                  borderRadius: '8px',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  boxShadow: '0 4px 15px rgba(227, 50, 65, 0.3)',
+                  fontFamily: 'var(--font-family)',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                ❤️ Devenir Ami
+              </Link>
+              
+              <Link
+                href="/fas"
+                style={{
+                  background: 'transparent',
+                  color: '#D2AB5F',
+                  padding: '15px 30px',
+                  border: '2px solid #D2AB5F',
+                  borderRadius: '8px',
+                  textDecoration: 'none',
+                  fontWeight: '600',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '10px',
+                  fontFamily: 'var(--font-family)',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                ⚡ Festival d'Art Sacré
+              </Link>
             </div>
-          </Link>
-          
-          <p style={{
-            fontSize: '16px',
-            lineHeight: '1.6',
-            color: 'rgba(255, 255, 255, 0.8)',
-            maxWidth: '600px',
-            margin: '0 auto',
-            fontFamily: 'var(--font-family)'
-          }}>
-            {fondationContent.introduction.shortDescription}
-          </p>
+          </div>
         </div>
 
         {/* Navigation Links */}

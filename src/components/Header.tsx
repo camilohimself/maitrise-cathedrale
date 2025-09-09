@@ -89,12 +89,10 @@ const Header = () => {
               src="/images/logo-mc.svg"
               alt="Maîtrise Cathédrale de Sion"
               width={200}
-              height={70}
+              height={96}
               style={{
-                height: 'auto',
-                maxHeight: '65px',
+                height: '96px',
                 width: 'auto',
-                maxWidth: 'clamp(180px, 25vw, 220px)',
                 objectFit: 'contain',
                 objectPosition: 'center'
               }}
