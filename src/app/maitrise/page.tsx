@@ -1,3 +1,5 @@
+'use client';
+
 import fondationContent from '@/data/fondationContent';
 
 export default function MaitrisePage() {
@@ -265,7 +267,7 @@ export default function MaitrisePage() {
                 marginBottom: '20px'
               }}>
                 <div style={{ textAlign: 'center', opacity: 0.7 }}>
-                  <div style={{ fontSize: '48px', marginBottom: '15px' }}>🎼</div>
+                  <div style={{ marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8B0000" strokeWidth="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
                   <p style={{ margin: 0, fontSize: '16px', fontWeight: '600' }}>École maîtrisienne</p>
                   <p style={{ margin: '5px 0 0 0', fontSize: '14px' }}>Formation musicale</p>
                 </div>
@@ -482,7 +484,7 @@ export default function MaitrisePage() {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text'
-                  }}>🎼</div>
+                  }}><svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
                   <p style={{ 
                     margin: 0, 
                     fontSize: '20px', 
@@ -980,7 +982,7 @@ export default function MaitrisePage() {
                       fontSize: '70px', 
                       marginBottom: '15px',
                       filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))'
-                    }}>🎹</div>
+                    }}><svg width="40" height="40" viewBox="0 0 24 24" fill="#D2AB5F"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M6 8h4"/><path d="M14 8h4"/></svg></div>
                     <p style={{ 
                       margin: 0, 
                       fontSize: '18px', 
@@ -1090,7 +1092,7 @@ export default function MaitrisePage() {
                   }} />
                   
                   <div style={{ textAlign: 'center', position: 'relative', zIndex: 2 }}>
-                    <div style={{ fontSize: '60px', marginBottom: '12px' }}>🎼</div>
+                    <div style={{ marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#D2AB5F" strokeWidth="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
                     <p style={{ 
                       margin: 0, 
                       fontSize: '16px', 
@@ -1198,7 +1200,7 @@ export default function MaitrisePage() {
                   padding: '20px',
                   textAlign: 'center'
                 }}>
-                  <div style={{ fontSize: '24px', marginBottom: '10px' }}>🔔</div>
+                  <div style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B0000" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
                   <div style={{
                     fontSize: '1rem',
                     fontWeight: '600',
@@ -1215,6 +1217,440 @@ export default function MaitrisePage() {
                     Fait résonner chaque année le carillon de la cathédrale St-Pierre de Genève 
                     lors des concerts estivaux
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Section Ensemble Vocal et Instrumental - Design Magazine Spectaculaire */}
+      <div style={{ padding: '100px 20px', background: '#ffffff' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+          
+          {/* Titre section avec ornement instrumental */}
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+            <div style={{
+              display: 'inline-block',
+              background: '#D2AB5F',
+              width: '60px',
+              height: '4px',
+              borderRadius: '2px',
+              marginBottom: '20px'
+            }} />
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: '800',
+              color: '#2c3e50',
+              marginBottom: '15px',
+              letterSpacing: '-1px'
+            }}>
+              L'Ensemble Vocal et Instrumental
+            </h2>
+            <p style={{
+              fontSize: '1.3rem',
+              color: '#E33241',
+              fontStyle: 'italic',
+              maxWidth: '600px',
+              margin: '0 auto',
+              fontWeight: '500'
+            }}>
+              Fer de lance des ensembles de la Maîtrise • Créé en 2001
+            </p>
+          </div>
+
+          {/* Hero Statement - Bach Unique au Monde */}
+          <div style={{
+            background: 'linear-gradient(135deg, #040A23 0%, #1a1a2e 50%, #2c3e50 100%)',
+            color: '#ffffff',
+            padding: '60px',
+            borderRadius: '25px',
+            marginBottom: '60px',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            
+            {/* Pattern décoratif musique */}
+            <div style={{
+              position: 'absolute',
+              top: '20px',
+              right: '40px',
+              fontSize: '120px',
+              opacity: '0.1',
+              color: '#D2AB5F',
+              transform: 'rotate(15deg)'
+            }}>
+            </div>
+            
+            <div style={{ position: 'relative', zIndex: 2 }}>
+              <div style={{
+                background: 'linear-gradient(45deg, #D2AB5F, #E6C068)',
+                color: '#040A23',
+                display: 'inline-block',
+                padding: '12px 25px',
+                borderRadius: '25px',
+                fontSize: '14px',
+                fontWeight: '700',
+                textTransform: 'uppercase',
+                letterSpacing: '1px',
+                marginBottom: '25px'
+              }}>
+                UNIQUE AU MONDE
+              </div>
+              
+              <h3 style={{
+                fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+                fontWeight: '800',
+                marginBottom: '25px',
+                lineHeight: '1.2',
+                color: '#ffffff'
+              }}>
+                Intégrale Bach dans le Culte
+              </h3>
+              
+              <p style={{
+                fontSize: '1.4rem',
+                lineHeight: '1.7',
+                opacity: '0.95',
+                maxWidth: '900px',
+                margin: 0,
+                fontWeight: '300'
+              }}>
+                Depuis 2003, l'EVI interprète les cantates de Bach dans leur cadre liturgique 
+                d'origine : la messe cathédrale de 10h. Cette approche, probablement unique au monde, 
+                restitue l'intention spirituelle originelle des chefs-d'œuvre du Cantor de Leipzig.
+              </p>
+            </div>
+          </div>
+
+          {/* Statistiques & Évolution - Layout Triple */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            gap: '40px',
+            marginBottom: '60px'
+          }}>
+            
+            {/* Évolution historique */}
+            <div style={{
+              background: 'rgba(210,171,95,0.05)',
+              border: '2px solid rgba(210,171,95,0.2)',
+              borderRadius: '20px',
+              padding: '35px',
+              textAlign: 'center',
+              position: 'relative'
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '-15px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#D2AB5F',
+                color: '#040A23',
+                padding: '8px 15px',
+                borderRadius: '15px',
+                fontSize: '12px',
+                fontWeight: '700'
+              }}>
+                ÉVOLUTION
+              </div>
+              
+              <div style={{ marginBottom: '15px', marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#D2AB5F" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+              <div style={{ fontSize: '2rem', fontWeight: '800', color: '#E33241', marginBottom: '8px' }}>
+                2001 → 2025
+              </div>
+              <div style={{ fontSize: '1rem', color: '#666', lineHeight: '1.5' }}>
+                <strong>2001 :</strong> "Ensemble Vocal à 8"<br/>
+                <strong>2003 :</strong> Début intégrale Bach<br/>
+                <strong>Aujourd'hui :</strong> EVI complet
+              </div>
+            </div>
+
+            {/* Statistiques Cantates */}
+            <div style={{
+              background: 'rgba(227,50,65,0.05)',
+              border: '2px solid rgba(227,50,65,0.2)',
+              borderRadius: '20px',
+              padding: '35px',
+              textAlign: 'center',
+              position: 'relative'
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '-15px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#E33241',
+                color: '#ffffff',
+                padding: '8px 15px',
+                borderRadius: '15px',
+                fontSize: '12px',
+                fontWeight: '700'
+              }}>
+                RÉPERTOIRE
+              </div>
+              
+              <div style={{ marginBottom: '15px', marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#B8860B" strokeWidth="2"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></div>
+              <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#D2AB5F', marginBottom: '8px' }}>
+                140/200
+              </div>
+              <div style={{ fontSize: '1rem', color: '#666', lineHeight: '1.5' }}>
+                Cantates de J.S. Bach<br/>
+                interprétées à ce jour<br/>
+                <strong>70% de l'œuvre complète</strong>
+              </div>
+            </div>
+
+            {/* Spécificité liturgique */}
+            <div style={{
+              background: 'rgba(4,10,35,0.05)',
+              border: '2px solid rgba(4,10,35,0.2)',
+              borderRadius: '20px',
+              padding: '35px',
+              textAlign: 'center',
+              position: 'relative'
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '-15px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#040A23',
+                color: '#D2AB5F',
+                padding: '8px 15px',
+                borderRadius: '15px',
+                fontSize: '12px',
+                fontWeight: '700'
+              }}>
+                CONTEXTE
+              </div>
+              
+              <div style={{ marginBottom: '15px', marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#040A23" strokeWidth="2"><path d="M8 21l0-12 2-2h4l2 2v12"/><path d="M12 3V1"/><path d="M10 21h4"/></svg></div>
+              <div style={{ fontSize: '1.8rem', fontWeight: '800', color: '#040A23', marginBottom: '8px' }}>
+                Messe 10h
+              </div>
+              <div style={{ fontSize: '1rem', color: '#666', lineHeight: '1.5' }}>
+                Culte et non concert<br/>
+                Cadre liturgique d'origine<br/>
+                <strong>Intention spirituelle préservée</strong>
+              </div>
+            </div>
+          </div>
+
+          {/* Formation & Instrumentarium - Layout Magazine Sophistiqué */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '2fr 1fr',
+            gap: 'clamp(50px, 8vw, 80px)',
+            alignItems: 'start',
+            marginBottom: '60px'
+          }}>
+            
+            {/* Description & Capacités - Colonne principale */}
+            <div>
+              
+              <h3 style={{
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
+                fontWeight: '700',
+                color: '#040A23',
+                marginBottom: '25px',
+                borderLeft: '5px solid #E33241',
+                paddingLeft: '20px',
+                lineHeight: '1.2'
+              }}>
+                Formation & Polyvalence
+              </h3>
+
+              {/* Composition ensemble */}
+              <div style={{
+                background: 'linear-gradient(135deg, #f8f9fa, #ffffff)',
+                border: '2px solid rgba(210,171,95,0.3)',
+                borderRadius: '15px',
+                padding: '30px',
+                marginBottom: '30px'
+              }}>
+                <h4 style={{
+                  fontSize: '1.4rem',
+                  fontWeight: '600',
+                  color: '#E33241',
+                  marginBottom: '15px'
+                }}>
+                  Musiciens & Élèves Professionnels
+                </h4>
+                <p style={{
+                  fontSize: '1.1rem',
+                  lineHeight: '1.6',
+                  color: '#2c3e50',
+                  margin: 0
+                }}>
+                  L'EVI réunit une formation mixte unique : musiciens confirmés et élèves 
+                  professionnels travaillent ensemble dans une démarche d'excellence et de transmission.
+                </p>
+              </div>
+
+              {/* Noyau instrumental */}
+              <div style={{
+                fontSize: '1.1rem',
+                lineHeight: '1.7',
+                color: '#2c3e50',
+                marginBottom: '30px'
+              }}>
+                <h4 style={{
+                  fontSize: '1.3rem',
+                  fontWeight: '600',
+                  color: '#040A23',
+                  marginBottom: '15px'
+                }}>
+                  Noyau Instrumental Permanent
+                </h4>
+                <p style={{ marginBottom: '20px' }}>
+                  <strong>Formation de base :</strong> Cordes complètes, deux hautbois et orgue constituent 
+                  l'effectif permanent, permettant une cohésion artistique et une familiarité 
+                  avec le répertoire baroque.
+                </p>
+                
+                <p style={{ marginBottom: '0' }}>
+                  <strong>Renforts selon les œuvres :</strong> Cuivres et timbales, souvent 
+                  sollicités par Bach, complètent la formation selon les exigences spécifiques 
+                  de chaque cantate.
+                </p>
+              </div>
+
+              {/* Polyvalence répertoire */}
+              <div style={{
+                background: 'linear-gradient(135deg, #E33241, #c0392b)',
+                color: '#ffffff',
+                padding: '30px',
+                borderRadius: '15px'
+              }}>
+                <h4 style={{
+                  fontSize: '1.4rem',
+                  fontWeight: '700',
+                  marginBottom: '15px'
+                }}>
+                  Répertoire Moderne & Polyvalence Vocale
+                </h4>
+                <p style={{
+                  fontSize: '1.1rem',
+                  lineHeight: '1.6',
+                  margin: 0,
+                  opacity: '0.95'
+                }}>
+                  L'ensemble n'abandonne pas le répertoire contemporain. Ses chanteurs maîtrisent 
+                  autant les parties chorales que solistiques, offrant une flexibilité artistique 
+                  exceptionnelle.
+                </p>
+              </div>
+            </div>
+
+            {/* Visuels & Instrumentarium - Colonne droite */}
+            <div>
+              
+              {/* Photo ensemble en situation */}
+              <div style={{
+                width: '100%',
+                height: '320px',
+                background: 'linear-gradient(135deg, #040A23 0%, #E33241 50%, #D2AB5F 100%)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '25px',
+                border: '3px solid rgba(210,171,95,0.2)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'radial-gradient(circle at 70% 30%, rgba(255,255,255,0.1) 0%, transparent 60%)'
+                }} />
+                
+                <div style={{ textAlign: 'center', position: 'relative', zIndex: 2 }}>
+                  <div style={{ 
+                    fontSize: '80px', 
+                    marginBottom: '15px',
+                    filter: 'drop-shadow(2px 2px 6px rgba(0,0,0,0.3))'
+                  }}><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                  <p style={{ 
+                    margin: 0, 
+                    fontSize: '18px', 
+                    fontWeight: '700', 
+                    color: '#ffffff',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                  }}>
+                    Ensemble en Action
+                  </p>
+                  <p style={{ 
+                    margin: '5px 0 0 0', 
+                    fontSize: '13px', 
+                    color: 'rgba(255,255,255,0.8)'
+                  }}>
+                    Photo groupe & instruments
+                  </p>
+                </div>
+              </div>
+
+              {/* Instrumentarium showcase */}
+              <div style={{
+                background: '#ffffff',
+                border: '2px solid rgba(4,10,35,0.1)',
+                borderRadius: '15px',
+                padding: '25px',
+                marginBottom: '20px'
+              }}>
+                <h5 style={{
+                  fontSize: '1.2rem',
+                  fontWeight: '600',
+                  color: '#040A23',
+                  textAlign: 'center',
+                  marginBottom: '20px'
+                }}>
+                  Instrumentarium
+                </h5>
+                
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '15px',
+                  fontSize: '0.9rem',
+                  color: '#666'
+                }}>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ marginBottom: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="#E33241"><path d="M3 5h6v14H3z"/><path d="M21 5h-6v14h6z"/><line x1="12" y1="5" x2="12" y2="19"/></svg></div>
+                    <div style={{ fontWeight: '600', color: '#E33241' }}>Cordes</div>
+                  </div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ marginBottom: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="#D2AB5F"><path d="M21 12h-6V8l-4 4 4 4v-4z"/><path d="M3 12h12"/><circle cx="3" cy="12" r="2"/></svg></div>
+                    <div style={{ fontWeight: '600', color: '#D2AB5F' }}>Hautbois</div>
+                  </div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ marginBottom: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="#040A23"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M6 8h4"/><path d="M14 8h4"/></svg></div>
+                    <div style={{ fontWeight: '600', color: '#040A23' }}>Orgue</div>
+                  </div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ marginBottom: '5px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="24" height="24" viewBox="0 0 24 24" fill="#666"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
+                    <div style={{ fontWeight: '600', color: '#666' }}>Variables</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Badge performance liturgique */}
+              <div style={{
+                background: 'linear-gradient(135deg, #D2AB5F, #E6C068)',
+                color: '#040A23',
+                padding: '20px',
+                borderRadius: '15px',
+                textAlign: 'center',
+                transform: 'rotate(-1deg)',
+                boxShadow: '0 15px 40px rgba(210,171,95,0.3)'
+              }}>
+                <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="#040A23"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+                <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '5px' }}>
+                  PERFORMANCE LITURGIQUE
+                </div>
+                <div style={{ fontSize: '12px', fontWeight: '500', opacity: '0.8' }}>
+                  Bach dans son contexte spirituel
                 </div>
               </div>
             </div>
@@ -1242,7 +1678,7 @@ export default function MaitrisePage() {
             textTransform: 'uppercase',
             letterSpacing: '1px'
           }}>
-            ✨ 20 ans de la Fondation
+            20 ans de la Fondation
           </div>
           
           <h3 style={{

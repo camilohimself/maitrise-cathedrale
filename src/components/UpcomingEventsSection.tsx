@@ -3,7 +3,7 @@
 import React, { memo, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import { events } from '@/data/eventsData';
-import { EVENT_TYPE_ICONS } from '@/data/uiConstants';
+import { EVENT_TYPE_CONFIG } from '@/data/uiConstants';
 
 const UpcomingEventsSection = memo(() => {
   // Performance Dr Claude: Memoization des événements
@@ -15,8 +15,26 @@ const UpcomingEventsSection = memo(() => {
   );
 
   // Performance Dr Claude: Fonction externalisée
-  const getEventTypeIcon = useCallback((category: string) => {
-    return EVENT_TYPE_ICONS[category] || EVENT_TYPE_ICONS.Concert;
+  const getEventIcon = useCallback((category: string) => {
+    const config = EVENT_TYPE_CONFIG[category] || EVENT_TYPE_CONFIG.Concert;
+    const iconType = config.icon;
+    const color = config.color;
+    
+    // Retourner un SVG selon le type
+    switch (iconType) {
+      case 'star':
+        return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>;
+      case 'music':
+        return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>;
+      case 'note':
+        return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>;
+      case 'education':
+        return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>;
+      case 'community':
+        return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>;
+      default:
+        return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2"><path d="M8 5v14l11-7z"/></svg>;
+    }
   }, []);
 
   const getPriceColor = (price: string) => {
@@ -178,7 +196,7 @@ const UpcomingEventsSection = memo(() => {
                     marginBottom: '0.5rem',
                   }}>
                     <span style={{ fontSize: '1.2rem' }}>
-                      {getEventTypeIcon(event.category)}
+                      {getEventIcon(event.category)}
                     </span>
                     <span style={{
                       fontFamily: 'var(--font-outfit)',
