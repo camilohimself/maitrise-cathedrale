@@ -3,7 +3,6 @@ import { Outfit, Spectral } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import StructuredData from "@/components/StructuredData";
 import SkipLink from "@/components/SkipLink";
 
@@ -91,7 +90,6 @@ export default function RootLayout({
         <StructuredData type="musicGroup" />
         
         <Header />
-        <Breadcrumbs />
         
         <main 
           id="main-content" 
