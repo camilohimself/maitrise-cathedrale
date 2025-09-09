@@ -114,121 +114,357 @@ export default function FAS() {
       background: '#1a1340',
       position: 'relative'
     }}>
-      {/* Hero Section */}
+      {/* Hero Section Premium - Inspiration Royal Opera House */}
       <section style={{
         position: 'relative',
-        padding: '80px 20px 60px',
-        textAlign: 'center',
-        background: '#E33241',
-        color: 'white'
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        background: 'linear-gradient(135deg, #8B0000 0%, #A0002A 100%)',
+        color: 'white',
+        overflow: 'hidden'
       }}>
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+        {/* Background overlay pour sophistication */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(45deg, rgba(26, 26, 26, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%)',
+          zIndex: 1
+        }} />
+        
+        {/* Hero Content */}
+        <div style={{ 
+          position: 'relative',
+          zIndex: 2,
+          maxWidth: '1200px', 
+          margin: '0 auto',
+          padding: '0 40px',
+          textAlign: 'center'
+        }}>
+          {/* Badge Edition Premium */}
           <div style={{
-            display: 'inline-block',
-            background: '#D4A574',
-            color: '#1a1340',
-            fontSize: '1rem',
-            fontWeight: '700',
-            letterSpacing: '0.1em',
-            padding: '8px 24px',
+            display: 'inline-flex',
+            alignItems: 'center',
+            background: 'rgba(184, 134, 11, 0.9)',
+            color: '#1A1A1A',
+            fontSize: '0.9rem',
+            fontWeight: '600',
+            letterSpacing: '0.15em',
+            padding: '12px 32px',
             borderRadius: '50px',
-            marginBottom: '2rem',
-            textTransform: 'uppercase'
+            marginBottom: '3rem',
+            textTransform: 'uppercase',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(184, 134, 11, 0.3)',
+            boxShadow: '0 8px 32px rgba(184, 134, 11, 0.2)'
           }}>
+            <span style={{
+              width: '8px',
+              height: '8px',
+              background: '#1A1A1A',
+              borderRadius: '50%',
+              marginRight: '12px'
+            }}></span>
             {festival.edition}
           </div>
           
+          {/* Main Title - Typography premium */}
           <h1 style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-            fontWeight: '900',
-            letterSpacing: '-0.02em',
-            lineHeight: '0.9',
-            marginBottom: '1.5rem',
-            textShadow: '0 4px 20px rgba(0, 0, 0, 0.3)'
+            fontSize: 'clamp(3.5rem, 8vw, 6rem)',
+            fontWeight: '300',
+            letterSpacing: '-0.03em',
+            lineHeight: '0.95',
+            marginBottom: '2rem',
+            fontFamily: 'var(--font-spectral), Georgia, serif',
+            textShadow: '0 6px 40px rgba(0, 0, 0, 0.5)'
           }}>
-            Festival d'Art Sacré
+            Festival d'Art
+            <span style={{
+              display: 'block',
+              fontWeight: '700',
+              background: 'linear-gradient(45deg, #B8860B, #DAA520)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Sacré
+            </span>
           </h1>
           
-          <p style={{
-            fontSize: '1.2rem',
-            fontWeight: '300',
-            opacity: '0.9',
-            marginBottom: '2rem',
-            letterSpacing: '0.05em'
+          {/* Subtitle élégant */}
+          <div style={{
+            maxWidth: '700px',
+            margin: '0 auto 3rem'
           }}>
-            {festival.period}
-          </p>
-          
-          <p style={{
-            fontSize: '1rem',
-            lineHeight: '1.6',
-            opacity: '0.85',
-            maxWidth: '600px',
-            margin: '0 auto'
+            <p style={{
+              fontSize: '1.4rem',
+              fontWeight: '300',
+              opacity: '0.95',
+              marginBottom: '1.5rem',
+              letterSpacing: '0.02em',
+              lineHeight: '1.4'
+            }}>
+              {festival.period}
+            </p>
+            
+            <div style={{
+              width: '80px',
+              height: '2px',
+              background: 'linear-gradient(90deg, #B8860B, rgba(184, 134, 11, 0.3))',
+              margin: '0 auto 2rem'
+            }}></div>
+            
+            <p style={{
+              fontSize: '1.1rem',
+              lineHeight: '1.6',
+              opacity: '0.9',
+              fontWeight: '400',
+              letterSpacing: '0.01em'
+            }}>
+              Vingt années d'excellence musicale au cœur de la Cathédrale de Sion
+            </p>
+          </div>
+
+          {/* CTA Buttons Premium */}
+          <div style={{
+            display: 'flex',
+            gap: '1.5rem',
+            justifyContent: 'center',
+            flexWrap: 'wrap'
           }}>
-            Une programmation d'exception pour célébrer 20 ans d'art sacré
-          </p>
+            <button style={{
+              padding: '16px 40px',
+              background: 'linear-gradient(45deg, #B8860B, #DAA520)',
+              color: '#1A1A1A',
+              border: 'none',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              fontWeight: '600',
+              letterSpacing: '0.05em',
+              cursor: 'pointer',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              boxShadow: '0 8px 32px rgba(184, 134, 11, 0.3)',
+              textTransform: 'uppercase'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+              e.currentTarget.style.boxShadow = '0 16px 48px rgba(184, 134, 11, 0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0) scale(1)';
+              e.currentTarget.style.boxShadow = '0 8px 32px rgba(184, 134, 11, 0.3)';
+            }}>
+              Programme Complet
+            </button>
+            
+            <button style={{
+              padding: '16px 40px',
+              background: 'transparent',
+              color: 'white',
+              border: '2px solid rgba(255, 255, 255, 0.6)',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              fontWeight: '500',
+              letterSpacing: '0.05em',
+              cursor: 'pointer',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              textTransform: 'uppercase'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+              e.currentTarget.style.borderColor = 'white';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'transparent';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}>
+              Billetterie
+            </button>
+          </div>
+        </div>
+
+        {/* Scroll indicator subtil */}
+        <div style={{
+          position: 'absolute',
+          bottom: '40px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 2
+        }}>
+          <div style={{
+            width: '1px',
+            height: '60px',
+            background: 'linear-gradient(to bottom, rgba(255,255,255,0.8), transparent)',
+            margin: '0 auto',
+            animation: 'pulse 2s ease-in-out infinite'
+          }}></div>
         </div>
       </section>
 
-      {/* Section Actualités */}
+      {/* Section Actualités Premium */}
       <section style={{ 
-        padding: '60px 20px',
-        background: 'white'
+        padding: '100px 40px',
+        background: '#F5F5F5',
+        position: 'relative'
       }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-            color: '#E33241',
-            marginBottom: '40px',
-            textAlign: 'center'
-          }}>
-            Actualités
-          </h2>
+        {/* Background pattern subtil */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(139, 0, 0, 0.05) 1px, transparent 0)',
+          backgroundSize: '40px 40px',
+          opacity: 0.3
+        }}></div>
+
+        <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+          {/* Header section sophistiqué */}
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+            <div style={{
+              display: 'inline-block',
+              padding: '8px 24px',
+              background: 'rgba(139, 0, 0, 0.1)',
+              border: '1px solid rgba(139, 0, 0, 0.2)',
+              borderRadius: '50px',
+              marginBottom: '24px'
+            }}>
+              <span style={{
+                fontSize: '0.9rem',
+                fontWeight: '600',
+                color: '#8B0000',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase'
+              }}>
+                À la Une
+              </span>
+            </div>
+            
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+              fontWeight: '300',
+              color: '#1A1A1A',
+              marginBottom: '24px',
+              fontFamily: 'var(--font-spectral), Georgia, serif'
+            }}>
+              Actualités du
+              <span style={{
+                display: 'block',
+                fontWeight: '700',
+                color: '#8B0000'
+              }}>Festival</span>
+            </h2>
+            
+            <div style={{
+              width: '60px',
+              height: '2px',
+              background: 'linear-gradient(90deg, #B8860B, rgba(184, 134, 11, 0.3))',
+              margin: '0 auto'
+            }}></div>
+          </div>
           
+          {/* Grid actualités premium */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-            gap: '2rem'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))',
+            gap: '2.5rem'
           }}>
-            {actualites.map((actu) => (
+            {actualites.map((actu, index) => (
               <Link 
                 key={actu.id} 
                 href={actu.link}
                 style={{ textDecoration: 'none' }}
               >
-                <div style={{
-                  background: actu.color,
-                  color: 'white',
-                  padding: '40px 30px',
-                  borderRadius: '20px',
-                  minHeight: '180px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  textAlign: 'center',
-                  transition: 'all 0.3s ease',
+                <article style={{
+                  background: 'white',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                   cursor: 'pointer',
-                  boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)'
+                  boxShadow: '0 8px 40px rgba(0, 0, 0, 0.08)',
+                  border: '1px solid rgba(0, 0, 0, 0.06)',
+                  position: 'relative'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-8px)';
-                  e.currentTarget.style.boxShadow = '0 15px 40px rgba(227, 50, 65, 0.3)';
+                  e.currentTarget.style.transform = 'translateY(-12px)';
+                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(139, 0, 0, 0.15)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.12)';
+                  e.currentTarget.style.boxShadow = '0 8px 40px rgba(0, 0, 0, 0.08)';
                 }}>
-                  <h3 style={{
-                    fontSize: '1.4rem',
-                    fontWeight: '700',
-                    lineHeight: '1.4',
-                    margin: 0
+                  {/* Barre de couleur premium */}
+                  <div style={{
+                    height: '4px',
+                    background: `linear-gradient(90deg, #8B0000, ${index % 2 === 0 ? '#B8860B' : '#A0002A'})`,
+                    borderRadius: '2px 2px 0 0'
+                  }}></div>
+                  
+                  {/* Contenu premium */}
+                  <div style={{
+                    padding: '40px 32px',
+                    minHeight: '200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between'
                   }}>
-                    {actu.title}
-                  </h3>
-                </div>
+                    {/* Badge numéro */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '20px',
+                      right: '20px',
+                      width: '32px',
+                      height: '32px',
+                      background: 'rgba(139, 0, 0, 0.1)',
+                      border: '1px solid rgba(139, 0, 0, 0.2)',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '0.8rem',
+                      fontWeight: '600',
+                      color: '#8B0000'
+                    }}>
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    
+                    <div>
+                      <h3 style={{
+                        fontSize: '1.3rem',
+                        fontWeight: '600',
+                        lineHeight: '1.4',
+                        color: '#1A1A1A',
+                        marginBottom: '16px',
+                        fontFamily: 'var(--font-spectral), Georgia, serif'
+                      }}>
+                        {actu.title}
+                      </h3>
+                    </div>
+                    
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '12px',
+                      marginTop: '24px'
+                    }}>
+                      <span style={{
+                        fontSize: '0.9rem',
+                        fontWeight: '600',
+                        color: '#8B0000',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em'
+                      }}>
+                        En savoir plus
+                      </span>
+                      <span style={{
+                        fontSize: '1.2rem',
+                        color: '#B8860B'
+                      }}>
+                        →
+                      </span>
+                    </div>
+                  </div>
+                </article>
               </Link>
             ))}
           </div>
@@ -237,19 +473,48 @@ export default function FAS() {
 
       {/* Section Artistes */}
       <section style={{ 
-        padding: '60px 20px',
-        background: '#F5F0E8'
+        padding: '100px 40px',
+        background: 'white'
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-            color: '#E33241',
-            marginBottom: '40px',
-            textAlign: 'center'
-          }}>
-            Artistes
-          </h2>
+          {/* Header artistes premium */}
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+            <div style={{
+              display: 'inline-block',
+              padding: '8px 24px',
+              background: 'rgba(139, 0, 0, 0.1)',
+              border: '1px solid rgba(139, 0, 0, 0.2)',
+              borderRadius: '50px',
+              marginBottom: '24px'
+            }}>
+              <span style={{
+                fontSize: '0.9rem',
+                fontWeight: '600',
+                color: '#8B0000',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase'
+              }}>
+                Découvrez
+              </span>
+            </div>
+            
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+              fontWeight: '700',
+              color: '#1A1A1A',
+              marginBottom: '24px',
+              fontFamily: 'var(--font-spectral), Georgia, serif'
+            }}>
+              Nos Artistes
+            </h2>
+            
+            <div style={{
+              width: '60px',
+              height: '2px',
+              background: 'linear-gradient(90deg, #B8860B, rgba(184, 134, 11, 0.3))',
+              margin: '0 auto'
+            }}></div>
+          </div>
           
           <div style={{
             display: 'grid',
@@ -320,409 +585,247 @@ export default function FAS() {
         </div>
       </section>
 
-      {/* Section Programmation (anciennement dans /programmation) */}
+      {/* Section Événement du Moment - Premium */}
       <section style={{ 
-        padding: '60px 20px',
-        background: '#1a1340'
+        padding: '100px 40px',
+        background: '#1a1340',
+        position: 'relative'
       }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2 style={{
-            fontSize: '2.5rem',
-            fontWeight: '700',
-            color: '#D4A574',
-            marginBottom: '40px',
-            textAlign: 'center'
-          }}>
-            Programmation Complète
-          </h2>
+        {/* Background pattern élégant */}
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'linear-gradient(30deg, rgba(184, 134, 11, 0.05) 25%, transparent 25%)',
+          backgroundSize: '60px 60px'
+        }}></div>
 
-          {/* Filtres */}
-          <div style={{ marginBottom: '40px', textAlign: 'center' }}>
-            <label style={{
-              display: 'block',
-              fontSize: '0.9rem',
-              fontWeight: '600',
-              color: '#D4A574',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              marginBottom: '1.5rem'
-            }}>
-              RECHERCHER PAR CATÉGORIE:
-            </label>
-            
+        <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+          {/* Header section */}
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
             <div style={{
-              display: 'flex',
-              gap: '1rem',
-              flexWrap: 'wrap',
-              justifyContent: 'center'
+              display: 'inline-block',
+              padding: '10px 28px',
+              background: 'rgba(184, 134, 11, 0.15)',
+              border: '1px solid rgba(184, 134, 11, 0.3)',
+              borderRadius: '50px',
+              marginBottom: '32px',
+              backdropFilter: 'blur(10px)'
             }}>
-              <button
-                onClick={() => setSelectedCategory('all')}
-                style={{
-                  padding: '12px 24px',
-                  border: selectedCategory === 'all' ? '2px solid #E33241' : '2px solid #333',
-                  borderRadius: '50px',
-                  background: selectedCategory === 'all' ? '#E33241' : 'transparent',
-                  color: selectedCategory === 'all' ? 'white' : '#D4A574',
-                  fontWeight: '500',
-                  fontSize: '0.9rem',
-                  letterSpacing: '0.05em',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer'
-                }}
-              >
-                TOUS
-              </button>
-              {categories.map(category => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  style={{
-                    padding: '12px 24px',
-                    border: selectedCategory === category.id ? `2px solid ${category.color}` : '2px solid #333',
-                    borderRadius: '50px',
-                    background: selectedCategory === category.id ? category.color : 'transparent',
-                    color: selectedCategory === category.id ? 'white' : '#D4A574',
-                    fontWeight: '500',
-                    fontSize: '0.9rem',
-                    letterSpacing: '0.05em',
-                    transition: 'all 0.3s ease',
-                    cursor: 'pointer'
-                  }}
-                >
-                  {category.name.toUpperCase()}
-                </button>
-              ))}
+              <span style={{
+                fontSize: '0.9rem',
+                fontWeight: '600',
+                color: '#B8860B',
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase'
+              }}>
+                Ne manquez pas
+              </span>
             </div>
+            
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+              fontWeight: '300',
+              color: 'white',
+              marginBottom: '24px',
+              fontFamily: 'var(--font-spectral), Georgia, serif'
+            }}>
+              L'événement du
+              <span style={{
+                display: 'block',
+                fontWeight: '700',
+                background: 'linear-gradient(45deg, #B8860B, #DAA520)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>Moment</span>
+            </h2>
           </div>
 
-          {/* Grille d'événements */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-            gap: '2rem'
-          }}>
-            {filteredEvents.map((event) => (
-              <article
-                key={event.id}
-                style={{
-                  background: 'white',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-                  transition: 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
-                  border: event.featured ? '2px solid #E33241' : event.prestige ? '2px solid #D4A574' : '2px solid transparent',
-                  position: 'relative'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-8px)';
-                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.25)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
-                }}
-              >
-                {/* Barre de couleur en haut */}
-                {event.featured && (
-                  <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    height: '4px',
-                    background: '#E33241',
-                    zIndex: 1
-                  }} />
-                )}
-                {event.prestige && (
-                  <div style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    height: '4px',
-                    background: '#D4A574',
-                    zIndex: 1
-                  }} />
-                )}
+          {/* Événement featured */}
+          {events.length > 0 && (
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))',
+              gap: '60px',
+              alignItems: 'center'
+            }}>
+              {/* Image côté gauche */}
+              <div style={{
+                position: 'relative',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                boxShadow: '0 20px 60px rgba(0, 0, 0, 0.4)',
+                transform: 'perspective(1000px) rotateY(-5deg)',
+                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+              }}>
+                <Image
+                  src={events[0].image}
+                  alt={events[0].title}
+                  width={600}
+                  height={400}
+                  style={{
+                    width: '100%',
+                    height: '400px',
+                    objectFit: 'cover'
+                  }}
+                />
+                
+                {/* Badge prestige premium */}
+                <div style={{
+                  position: 'absolute',
+                  top: '20px',
+                  right: '20px',
+                  background: 'linear-gradient(45deg, #8B0000, #A0002A)',
+                  color: 'white',
+                  padding: '12px 24px',
+                  borderRadius: '50px',
+                  fontSize: '0.9rem',
+                  fontWeight: '700',
+                  letterSpacing: '0.05em',
+                  textTransform: 'uppercase',
+                  boxShadow: '0 8px 32px rgba(139, 0, 0, 0.4)'
+                }}>
+                  ⭐ À ne pas manquer
+                </div>
+              </div>
 
-                {/* Image de l'événement */}
-                <div style={{ position: 'relative', height: '250px', overflow: 'hidden' }}>
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    width={370}
-                    height={250}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      transition: 'transform 0.4s ease'
-                    }}
-                  />
-                  
-                  {/* Overlay date/heure */}
-                  <div style={{
-                    position: 'absolute',
-                    top: '1rem',
-                    left: '1rem',
-                    background: 'rgba(26, 19, 64, 0.9)',
-                    color: 'white',
-                    padding: '12px 16px',
-                    borderRadius: '12px',
-                    backdropFilter: 'blur(10px)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    minWidth: '80px'
-                  }}>
-                    <div style={{
-                      fontSize: '0.8rem',
-                      fontWeight: '600',
-                      letterSpacing: '0.05em',
-                      marginBottom: '4px',
-                      opacity: '0.8'
-                    }}>
-                      {event.day}
-                    </div>
-                    <div style={{
-                      fontSize: '1rem',
-                      fontWeight: '700',
-                      color: '#D4A574'
-                    }}>
-                      {event.time}
-                    </div>
-                  </div>
-
-                  {/* Badge prestigieux */}
-                  {event.prestige && (
-                    <div style={{
-                      position: 'absolute',
-                      top: '1rem',
-                      right: '1rem',
-                      background: '#D4A574',
-                      color: '#1a1340',
-                      padding: '6px 12px',
-                      borderRadius: '20px',
-                      fontSize: '0.7rem',
-                      fontWeight: '700',
-                      letterSpacing: '0.1em'
-                    }}>
-                      ⭐ PRESTIGE
-                    </div>
-                  )}
-
-                  {/* Badge 20ème édition */}
-                  {event.featured && (
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '1rem',
-                      right: '1rem',
-                      background: '#E33241',
-                      color: 'white',
-                      padding: '8px 16px',
-                      borderRadius: '50px',
-                      fontSize: '0.9rem',
-                      fontWeight: '700',
-                      boxShadow: '0 4px 20px rgba(227, 50, 65, 0.3)'
-                    }}>
-                      20ème
-                    </div>
-                  )}
+              {/* Contenu côté droit */}
+              <div>
+                <div style={{
+                  display: 'inline-block',
+                  background: 'rgba(139, 0, 0, 0.2)',
+                  color: '#8B0000',
+                  padding: '8px 20px',
+                  borderRadius: '50px',
+                  fontSize: '0.9rem',
+                  fontWeight: '600',
+                  marginBottom: '24px',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em'
+                }}>
+                  {events[0].day} • {events[0].time}
                 </div>
 
-                {/* Contenu de l'événement */}
-                <div style={{ padding: '2rem' }}>
-                  <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    marginBottom: '1rem'
-                  }}>
-                    <span style={{
-                      display: 'inline-block',
-                      background: categories.find(cat => cat.id === event.category)?.color || '#8B7BB8',
-                      color: 'white',
-                      padding: '4px 12px',
-                      borderRadius: '20px',
-                      fontSize: '0.8rem',
-                      fontWeight: '600',
-                      letterSpacing: '0.05em',
-                      textTransform: 'uppercase'
-                    }}>
-                      {categories.find(cat => cat.id === event.category)?.name}
-                    </span>
-                    
-                    {event.date && (
-                      <time style={{
-                        fontSize: '0.9rem',
-                        color: '#666',
-                        fontWeight: '500'
-                      }}>
-                        {formatDate(event.date)}
-                      </time>
-                    )}
-                  </div>
+                <h3 style={{
+                  fontSize: 'clamp(2rem, 4vw, 2.8rem)',
+                  fontWeight: '700',
+                  color: 'white',
+                  lineHeight: '1.2',
+                  marginBottom: '20px',
+                  fontFamily: 'var(--font-spectral), Georgia, serif'
+                }}>
+                  {events[0].title}
+                </h3>
 
-                  <h3 style={{
-                    fontSize: '1.5rem',
-                    fontWeight: '700',
-                    color: '#1a1340',
-                    marginBottom: '0.5rem',
-                    lineHeight: '1.2'
-                  }}>
-                    {event.title}
-                  </h3>
-                  
-                  {event.subtitle && (
-                    <p style={{
-                      fontSize: '1rem',
-                      color: '#E33241',
-                      fontWeight: '500',
-                      marginBottom: '1rem',
-                      lineHeight: '1.3'
-                    }}>
-                      {event.subtitle}
-                    </p>
-                  )}
-
-                  <div style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '0.5rem',
-                    marginBottom: '1rem'
-                  }}>
-                    {event.artists.map((artist, index) => (
-                      <span
-                        key={index}
-                        style={{
-                          background: '#F5F0E8',
-                          color: '#1a1340',
-                          padding: '6px 12px',
-                          borderRadius: '16px',
-                          fontSize: '0.8rem',
-                          fontWeight: '500'
-                        }}
-                      >
-                        {artist}
-                      </span>
-                    ))}
-                  </div>
-
-                  {event.conference && (
-                    <div style={{
-                      background: '#F5F0E8',
-                      padding: '12px 16px',
-                      borderRadius: '12px',
-                      marginBottom: '1rem',
-                      borderLeft: '4px solid #D4A574'
-                    }}>
-                      <span style={{
-                        display: 'block',
-                        fontSize: '0.8rem',
-                        color: '#666',
-                        fontWeight: '500',
-                        marginBottom: '4px'
-                      }}>
-                        Conférence précédente:
-                      </span>
-                      <span style={{
-                        fontWeight: '600',
-                        color: '#1a1340'
-                      }}>
-                        {event.conference.speaker}
-                      </span>
-                    </div>
-                  )}
-
-                  {event.special && (
-                    <div style={{
-                      background: '#F5F0E8',
-                      padding: '12px 16px',
-                      borderRadius: '12px',
-                      marginBottom: '1rem',
-                      borderLeft: '4px solid #D4A574'
-                    }}>
-                      <span style={{
-                        fontStyle: 'italic',
-                        color: '#E33241',
-                        fontWeight: '500'
-                      }}>
-                        {event.special}
-                      </span>
-                    </div>
-                  )}
-
+                {events[0].subtitle && (
                   <p style={{
-                    color: '#666',
-                    lineHeight: '1.6',
-                    marginBottom: '1.5rem'
+                    fontSize: '1.2rem',
+                    color: '#B8860B',
+                    fontWeight: '500',
+                    marginBottom: '24px',
+                    lineHeight: '1.4'
                   }}>
-                    {event.description.length > 120 
-                      ? event.description.substring(0, 120) + '...'
-                      : event.description
-                    }
+                    {events[0].subtitle}
                   </p>
+                )}
 
-                  {/* Actions */}
-                  <div style={{
-                    display: 'flex',
-                    gap: '12px',
-                    alignItems: 'center'
+                <p style={{
+                  fontSize: '1rem',
+                  color: 'rgba(255, 255, 255, 0.8)',
+                  lineHeight: '1.6',
+                  marginBottom: '32px'
+                }}>
+                  {events[0].description.substring(0, 200)}...
+                </p>
+
+                {/* Artists tags */}
+                <div style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '12px',
+                  marginBottom: '40px'
+                }}>
+                  {events[0].artists.slice(0, 3).map((artist, index) => (
+                    <span
+                      key={index}
+                      style={{
+                        background: 'rgba(184, 134, 11, 0.2)',
+                        color: '#B8860B',
+                        padding: '8px 16px',
+                        borderRadius: '20px',
+                        fontSize: '0.9rem',
+                        fontWeight: '500',
+                        border: '1px solid rgba(184, 134, 11, 0.3)'
+                      }}
+                    >
+                      {artist}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div style={{
+                  display: 'flex',
+                  gap: '16px',
+                  flexWrap: 'wrap'
+                }}>
+                  <button style={{
+                    padding: '16px 32px',
+                    background: 'linear-gradient(45deg, #8B0000, #A0002A)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '8px',
+                    fontSize: '1rem',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    boxShadow: '0 8px 32px rgba(139, 0, 0, 0.3)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 16px 48px rgba(139, 0, 0, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(139, 0, 0, 0.3)';
                   }}>
-                    <button style={{
-                      padding: '12px 20px',
-                      borderRadius: '12px',
-                      fontWeight: '600',
-                      fontSize: '0.9rem',
-                      transition: 'all 0.3s ease',
-                      cursor: 'pointer',
-                      border: 'none',
-                      background: '#E33241',
-                      color: 'white',
-                      boxShadow: '0 4px 20px rgba(227, 50, 65, 0.2)'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#C42E3C';
-                      e.currentTarget.style.transform = 'translateY(-2px)';
-                      e.currentTarget.style.boxShadow = '0 8px 30px rgba(227, 50, 65, 0.3)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = '#E33241';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = '0 4px 20px rgba(227, 50, 65, 0.2)';
-                    }}>
-                      Réserver
-                    </button>
-                    <button style={{
-                      padding: '12px 20px',
-                      borderRadius: '12px',
-                      fontWeight: '600',
-                      fontSize: '0.9rem',
-                      transition: 'all 0.3s ease',
-                      cursor: 'pointer',
+                    Réserver maintenant
+                  </button>
+
+                  <Link 
+                    href="/agenda-billetterie"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      padding: '16px 32px',
                       background: 'transparent',
-                      color: '#1a1340',
-                      border: '2px solid #1a1340'
+                      color: '#B8860B',
+                      border: '2px solid #B8860B',
+                      borderRadius: '8px',
+                      fontSize: '1rem',
+                      fontWeight: '500',
+                      textDecoration: 'none',
+                      transition: 'all 0.3s ease',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em'
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#1a1340';
-                      e.currentTarget.style.color = 'white';
+                      e.currentTarget.style.background = 'rgba(184, 134, 11, 0.1)';
                       e.currentTarget.style.transform = 'translateY(-2px)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.background = 'transparent';
-                      e.currentTarget.style.color = '#1a1340';
                       e.currentTarget.style.transform = 'translateY(0)';
-                    }}>
-                      En savoir plus
-                    </button>
-                  </div>
+                    }}
+                  >
+                    Voir tout l'agenda
+                  </Link>
                 </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </main>
