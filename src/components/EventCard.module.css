@@ -1,0 +1,42 @@
+/* Styles pour EventCard - reproduction exacte de la maquette */
+
+.eventCard {
+  /* Responsive pour mobile */
+  @media (max-width: 768px) {
+    flex-direction: column !important;
+    height: auto !important;
+    border-radius: 20px !important;
+  }
+}
+
+.dateSection {
+  @media (max-width: 768px) {
+    width: 100% !important;
+    padding: 16px !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(26, 19, 64, 0.1) !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+  }
+}
+
+.contentSection {
+  @media (max-width: 768px) {
+    padding: 16px !important;
+  }
+}
+
+.imageSection {
+  @media (max-width: 768px) {
+    width: 100% !important;
+    height: 200px !important;
+    border-radius: 0 0 17px 17px !important;
+  }
+}
+
+/* Styles pour la taille du jour sur mobile */
+@media (max-width: 768px) {
+  .dayNumber {
+    font-size: 48px !important;
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "festival": {
+    "name": "Festival d'Art Sacré",
+    "edition": "20ème édition",
+    "year": "2025-2026",
+    "period": "Du 30 novembre 2025 au 4 janvier 2026",
+    "location": "Cathédrale de Sion",
+    "description": "Depuis deux décennies, le Festival d'Art Sacré de la Cathédrale de Sion s'est imposé comme un rendez-vous incontournable du paysage culturel valaisan, alliant exigence artistique et profondeur spirituelle dans un cadre patrimonial unique."
+  },
+  "events": [
+    {
+      "id": 1,
+      "title": "Ouverture du FAS",
+      "subtitle": "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
+      "type": "concert_ouverture",
+      "date": "2025-11-30",
+      "day": "Dimanche",
+      "time": "17:00",
+      "duration": 90,
+      "composer": "Chiara Margarita Cozzolani",
+      "description": "Concert d'ouverture avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique, dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue qui a écrit une musique brillante à une époque où l'on recherchait la sobriété, musique rebelle et magnifique.",
+      "artists": ["Ensemble Vocal de la Maîtrise", "Ensemble Barberine"],
+      "featured": true,
+      "category": "baroque",
+      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop"
+    },
+    {
+      "id": 2,
+      "title": "Chœur Novantiqua",
+      "subtitle": "Programme a cappella",
+      "type": "concert",
+      "date": "2025-12-07",
+      "day": "Dimanche", 
+      "time": "17:00",
+      "duration": 90,
+      "composers": ["Gesualdo", "Bruckner", "Poulenc"],
+      "description": "Le chœur Novantiqua proposera un programme a cappella raffiné autour de Gesualdo, Bruckner et Poulenc. Afin que le public puisse goûter pleinement à la richesse de ces œuvres, ce concert sera précédé d'une conférence de Marie Favre musicologue et docteur en musicologie.",
+      "artists": ["Chœur Novantiqua"],
+      "conference": {
+        "speaker": "Marie Favre",
+        "title": "Musicologue et docteur en musicologie",
+        "time": "16:00"
+      },
+      "featured": false,
+      "category": "vocal",
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop"
+    },
+    {
+      "id": 3,
+      "title": "Concert de la Jeunesse",
+      "subtitle": "École Maîtrisienne & Chœur des Collèges",
+      "type": "concert_jeunesse",
+      "date": "2025-12-21",
+      "day": "Dimanche",
+      "time": "17:00", 
+      "duration": 75,
+      "description": "Nous aurons le plaisir de mettre à l'honneur la jeunesse avec un concert réunissant l'École Maîtrisienne et le Chœur des Collèges de Sion.",
+      "artists": ["École Maîtrisienne", "Chœur des Collèges de Sion"],
+      "featured": false,
+      "category": "jeunesse",
+      "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=250&fit=crop"
+    },
+    {
+      "id": 4,
+      "title": "Vivaldi - Gloria et Magnificat",
+      "subtitle": "Ensemble Ad Astra & Collectif baroque 7 Sed Unum",
+      "type": "concert",
+      "date": "2025-12-26",
+      "day": "Vendredi",
+      "time": "17:00",
+      "duration": 90,
+      "composer": "Antonio Vivaldi",
+      "works": ["Gloria", "Magnificat"],
+      "description": "L'Ensemble Ad Astra, dirigé par Jean-David Waeber et le Collectif baroque 7 Sed Unum dont la direction artistique est assurée par Daniela Numico professeure de Clavecin au conservatoire et à la haute école de musique, interpréteront les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales pour voix de femmes.",
+      "artists": ["Ensemble Ad Astra", "Collectif baroque 7 Sed Unum"],
+      "directors": ["Jean-David Waeber", "Daniela Numico"],
+      "featured": true,
+      "category": "baroque",
+      "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop"
+    },
+    {
+      "id": 5,
+      "title": "Stile Antico - Palestrina",
+      "subtitle": "Le Prince de la Musique",
+      "type": "concert_prestige",
+      "date": "2026-01-04",
+      "day": "Dimanche",
+      "time": "17:00",
+      "duration": 90,
+      "composer": "Giovanni Pierluigi da Palestrina",
+      "description": "Nous aurons l'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Palestrina. Il s'agit d'un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance. Ce concert sera également précédé d'une conférence de Marie Favre.",
+      "artists": ["Stile Antico"],
+      "conference": {
+        "speaker": "Marie Favre",
+        "title": "Musicologue et docteur en musicologie", 
+        "time": "16:00"
+      },
+      "featured": true,
+      "category": "renaissance",
+      "prestige": true,
+      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop"
+    },
+    {
+      "id": 6,
+      "title": "Messes du Rorate",
+      "subtitle": "École Maîtrisienne",
+      "type": "messe",
+      "dates": ["2025-12-01", "2025-12-08", "2025-12-15", "2025-12-22"],
+      "day": "Dimanches de l'Avent",
+      "time": "07:00",
+      "duration": 45,
+      "description": "Des messes du Rorate, messes célébrées pendant l'Avent, généralement à l'aube, dans la seule lumière des bougies, permettront à nos jeunes de l'École Maîtrisienne de s'exercer à l'art du quatuor. Ce sont en effet nos jeunes qui chanteront ces messes.",
+      "artists": ["École Maîtrisienne"],
+      "featured": false,
+      "category": "liturgie",
+      "special": "À la lumière des bougies",
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop"
+    },
+    {
+      "id": 7,
+      "title": "Vespérales d'orgue",
+      "subtitle": "Organistes de la Cathédrale",
+      "type": "vesperale",
+      "dates": ["2025-12-03", "2025-12-10", "2025-12-17"],
+      "day": "Mardis",
+      "time": "18:00",
+      "duration": 30,
+      "description": "Trois vespérales d'orgue, assurées par les organistes de la Cathédrale, ponctueront également le Festival, offrant des moments de recueillement et de beauté.",
+      "artists": ["Organistes de la Cathédrale"],
+      "featured": false,
+      "category": "orgue",
+      "image": "https://images.unsplash.com/photo-1445985543470-41fba5c3144a?w=400&h=250&fit=crop"
+    }
+  ],
+  "artists": [
+    {
+      "id": "stile-antico",
+      "name": "Stile Antico",
+      "type": "Ensemble vocal britannique",
+      "description": "Un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance",
+      "specialty": "Musique Renaissance",
+      "prestige": true,
+      "image": "/images/artists/stile-antico-group.jpg",
+      "events": [5]
+    },
+    {
+      "id": "ensemble-barberine",
+      "name": "Ensemble Barberine",
+      "type": "Ensemble spécialisé",
+      "description": "Un des meilleurs ensembles actuels pour la musique baroque",
+      "specialty": "Musique Baroque",
+      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop",
+      "events": [1]
+    },
+    {
+      "id": "novantiqua",
+      "name": "Chœur Novantiqua", 
+      "type": "Chœur",
+      "description": "Chœur spécialisé dans les programmes a cappella raffinés",
+      "specialty": "Musique a cappella",
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=300&fit=crop",
+      "events": [2]
+    },
+    {
+      "id": "ecole-maitrisienne",
+      "name": "École Maîtrisienne",
+      "type": "École de musique",
+      "description": "Les jeunes talents de la Maîtrise de la Cathédrale de Sion",
+      "specialty": "Formation musicale",
+      "local": true,
+      "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop",
+      "events": [1, 3, 6]
+    }
+  ],
+  "categories": [
+    {
+      "id": "baroque",
+      "name": "Musique Baroque",
+      "color": "#D2374C",
+      "description": "Œuvres des maîtres baroques"
+    },
+    {
+      "id": "renaissance", 
+      "name": "Renaissance",
+      "color": "#D4AF37",
+      "description": "Polyphonie de la Renaissance"
+    },
+    {
+      "id": "vocal",
+      "name": "Musique Vocale",
+      "color": "#8B7BB8",
+      "description": "Chœurs et ensembles vocaux"
+    },
+    {
+      "id": "jeunesse",
+      "name": "Jeunes Talents",
+      "color": "#FF6B9D",
+      "description": "Concerts des jeunes artistes"
+    },
+    {
+      "id": "liturgie",
+      "name": "Liturgie",
+      "color": "#1B1B2F",
+      "description": "Célébrations liturgiques"
+    },
+    {
+      "id": "orgue",
+      "name": "Orgue",
+      "color": "#B8860B",
+      "description": "Récitals d'orgue"
+    }
+  ]
+}

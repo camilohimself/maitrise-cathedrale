@@ -253,13 +253,15 @@ export default function AgendaBilletterie() {
             </p>
           </div>
 
-          {/* Grille d'événements */}
+          {/* Liste d'événements - Layout vertical pour cards horizontales */}
           {filteredEvents.length > 0 ? (
             <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-              gap: 'var(--spacing-lg)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0px', // Pas de gap car les cards ont déjà leur marginBottom
               marginBottom: 'var(--spacing-3xl)',
+              maxWidth: '900px', // Largeur maximale pour les cards horizontales
+              margin: '0 auto var(--spacing-3xl) auto',
             }}>
               {filteredEvents.map((event) => (
                 <EventCard 
