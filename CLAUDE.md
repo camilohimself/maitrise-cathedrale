@@ -629,6 +629,36 @@ vercel                  # CLI deployment
 
 **⚠️ IMPORTANT**: Toujours travailler dans `/maitrise-cathedrale/maitrise-cathedrale/` uniquement !
 
+### 🎯 GUIDE UTILISATEUR - DÉMARRER UNE SESSION
+
+**1. RÉPERTOIRE DE TRAVAIL OBLIGATOIRE :**
+```bash
+cd /Users/camilorivera/WORKSPACE-OSOM/CLIENTS-ACTIFS/MAITRISE-CATHEDRALE/maitrise-cathedrale
+```
+
+**2. VÉRIFICATION (tu dois voir) :**
+- ✅ package.json, src/, public/, CLAUDE.md
+- ✅ npm run dev fonctionne sur port 3003
+
+**3. AJOUT ASSETS WEB :**
+```bash
+# Images événements
+cp "source.jpg" "public/images/events/"
+
+# Documents PDF  
+cp "doc.pdf" "public/documents/"
+
+# Données JSON
+nano "src/data/monFichier.json"
+```
+
+**4. ASSETS SOURCE (référence seulement) :**
+- 🎨 Charte graphique → `../Charte graphique MC/`
+- 📋 Documents → `../FAS - docs/` ou `../Contenu MC/`
+- 🖼️ Maquettes → `../FIGMA/`
+
+**RÈGLE D'OR :** Ne jamais créer de fichiers en dehors de `/maitrise-cathedrale/` !
+
 ---
 
 **Dernière mise à jour:** 9 septembre 2025 - Festival d'Art Sacré page livrée ✅
