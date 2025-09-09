@@ -13,6 +13,8 @@ const EventsSection = () => {
       category: "Music",
       description: "Nobis sunt autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
       image: "/images/event1.jpg",
+      price: "Entrée libre - Collecte",
+      location: "Cathédrale Notre-Dame de Sion",
       ctaText: "Réserver",
       featured: true
     },
@@ -24,6 +26,8 @@ const EventsSection = () => {
       category: "Music",
       description: "Nobis sunt autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
       image: "/images/event2.jpg",
+      price: "CHF 20.- / 15.- (AVS/Étudiants)",
+      location: "Cathédrale Notre-Dame de Sion",
       ctaText: "Réserver"
     },
     {
@@ -34,6 +38,8 @@ const EventsSection = () => {
       category: "Music",
       description: "Nobis sunt autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
       image: "/images/event3.jpg",
+      price: "CHF 25.- / 15.- (Enfants)",
+      location: "Cathédrale Notre-Dame de Sion",
       ctaText: "Réserver"
     },
     {
@@ -42,8 +48,10 @@ const EventsSection = () => {
       time: "19h30",
       title: "Sion Festival",
       category: "Concert",
-      description: "Nobis sunt autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
+      description: "Nobis sont autem laboriosam, rem sint et ad hic sint quos exercitationem nisi corrupti earum totam ipsum aliquid et.",
       image: "/images/event4.jpg",
+      price: "CHF 45.- / 35.- / 25.-",
+      location: "Cathédrale Notre-Dame de Sion",
       ctaText: "Réserver"
     }
   ];

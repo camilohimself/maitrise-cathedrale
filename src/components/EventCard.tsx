@@ -14,6 +14,8 @@ interface EventCardProps {
   category: string;
   description: string;
   image: string;
+  price: string;
+  location: string;
   ctaText?: string;
   featured?: boolean;
 }
@@ -25,6 +27,8 @@ const EventCard: React.FC<EventCardProps> = ({
   category,
   description,
   image,
+  price,
+  location,
   ctaText = 'Réserver',
   featured = false
 }) => {
@@ -39,13 +43,86 @@ const EventCard: React.FC<EventCardProps> = ({
     };
     return dayMap[date.day] || 'Jeudi'; // Fallback
   };
+
+  // Vérifier si l'événement est payant
+  const isPaidEvent = () => {
+    return !price.toLowerCase().includes('gratuit') && 
+           !price.toLowerCase().includes('libre') && 
+           !price.toLowerCase().includes('collecte');
+  };
+
+  // Générer le fichier .ics pour l'ajout au calendrier
+  const generateICS = () => {
+    const startDate = new Date(`2024-${getMonthNumber(date.month)}-${date.day.padStart(2, '0')}T${convertTo24h(time)}`);
+    const endDate = new Date(startDate.getTime() + 90 * 60000); // +90 minutes par défaut
+    
+    const formatDate = (date: Date) => {
+      return date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+    };
+
+    const icsContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//Maîtrise Cathédrale Sion//Event//FR',
+      'BEGIN:VEVENT',
+      `UID:${Date.now()}@maitrise-cathedrale.ch`,
+      `DTSTART:${formatDate(startDate)}`,
+      `DTEND:${formatDate(endDate)}`,
+      `SUMMARY:${title}`,
+      `DESCRIPTION:${description}`,
+      `LOCATION:${location}`,
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${title.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.ics`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // Convertir le mois en numéro
+  const getMonthNumber = (month: string) => {
+    const monthMap: { [key: string]: string } = {
+      'AOÛT': '08',
+      'SEPT': '09', 
+      'OCT': '10',
+      'NOV': '11',
+      'DÉC': '12'
+    };
+    return monthMap[month] || '08';
+  };
+
+  // Convertir l'heure en format 24h
+  const convertTo24h = (time: string) => {
+    return time.replace('h', ':').padEnd(5, '0');
+  };
+
+  // Partager sur les réseaux sociaux
+  const shareEvent = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: title,
+        text: description,
+        url: window.location.href
+      });
+    } else {
+      // Fallback - copier dans le presse-papier
+      const shareText = `${title} - ${date.day} ${date.month} à ${time}\n${description}\n${window.location.href}`;
+      navigator.clipboard.writeText(shareText);
+      alert('Lien copié dans le presse-papier!');
+    }
+  };
   return (
     <div 
       className={`event-card ${styles.eventCard}`}
       style={{
         position: 'relative',
         backgroundColor: '#FFFFFF',
-        border: '3px solid #1A1340', // Bordure noire épaisse comme dans la maquette
+        border: '3px solid #8B0000', // Royal Sophistication - Bordeaux
         borderRadius: '0 50px 50px 0', // Forme arrondie uniquement à droite
         overflow: 'hidden',
         transition: 'all 0.3s ease',
@@ -57,7 +134,7 @@ const EventCard: React.FC<EventCardProps> = ({
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = 'translateY(-4px)';
-        e.currentTarget.style.boxShadow = '0 8px 32px rgba(26, 19, 64, 0.15)';
+        e.currentTarget.style.boxShadow = '0 8px 32px rgba(139, 0, 0, 0.15)';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';
@@ -73,14 +150,14 @@ const EventCard: React.FC<EventCardProps> = ({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#FFFFFF',
-        borderRight: '1px solid rgba(26, 19, 64, 0.1)',
+        borderRight: '1px solid rgba(139, 0, 0, 0.1)',
       }}>
         {/* Jour de la semaine */}
         <div style={{
           fontFamily: 'var(--font-outfit)',
           fontSize: '14px',
           fontWeight: '600',
-          color: '#1A1340',
+          color: '#8B0000',
           textTransform: 'capitalize',
           marginBottom: '8px',
           textAlign: 'center',
@@ -93,7 +170,7 @@ const EventCard: React.FC<EventCardProps> = ({
           fontFamily: 'var(--font-spectral)',
           fontSize: '72px', // Taille massive comme dans la maquette
           fontWeight: '700',
-          color: '#1A1340',
+          color: '#8B0000',
           lineHeight: 0.8,
           textAlign: 'center',
         }}>
@@ -105,7 +182,7 @@ const EventCard: React.FC<EventCardProps> = ({
           fontFamily: 'var(--font-outfit)',
           fontSize: '16px',
           fontWeight: '600',
-          color: '#1A1340',
+          color: '#8B0000',
           textTransform: 'uppercase',
           marginTop: '4px',
           textAlign: 'center',
@@ -118,7 +195,7 @@ const EventCard: React.FC<EventCardProps> = ({
           fontFamily: 'var(--font-outfit)',
           fontSize: '12px',
           fontWeight: '500',
-          color: '#D4A574',
+          color: '#B8860B',
           marginTop: '12px',
           textAlign: 'center',
         }}>
@@ -134,10 +211,10 @@ const EventCard: React.FC<EventCardProps> = ({
         flexDirection: 'column',
         justifyContent: 'center',
       }}>
-        {/* Badge catégorie - Style exact de la maquette */}
+        {/* Badge catégorie - Royal Sophistication */}
         <div style={{
           display: 'inline-block',
-          backgroundColor: '#D4A574',
+          backgroundColor: '#B8860B',
           color: '#FFFFFF',
           padding: '4px 12px',
           borderRadius: '4px',
@@ -157,7 +234,7 @@ const EventCard: React.FC<EventCardProps> = ({
           fontFamily: 'var(--font-spectral)',
           fontSize: '28px',
           fontWeight: '700',
-          color: '#1A1340',
+          color: '#8B0000',
           marginBottom: '8px',
           lineHeight: 1.2,
           margin: '0 0 8px 0',
@@ -178,35 +255,103 @@ const EventCard: React.FC<EventCardProps> = ({
           {description}
         </p>
 
-        {/* Bouton CTA - Style exact de la maquette */}
-        <button 
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '10px 24px',
-            backgroundColor: '#D4A574',
-            color: '#FFFFFF',
-            border: 'none',
-            borderRadius: '20px', // Plus arrondi comme dans la maquette
-            fontFamily: 'var(--font-outfit)',
-            fontWeight: '600',
-            fontSize: '14px',
-            cursor: 'pointer',
-            transition: 'all 0.3s ease',
-            alignSelf: 'flex-start',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#C19660';
-            e.currentTarget.style.transform = 'translateY(-1px)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '#D4A574';
-            e.currentTarget.style.transform = 'translateY(0)';
-          }}
-        >
-          {ctaText}
-        </button>
+        {/* CTAs - Design minimaliste avec Royal Sophistication */}
+        <div style={{
+          display: 'flex',
+          gap: '8px',
+          marginTop: '16px',
+        }}>
+          {/* CTA Billetterie - Seulement si payant */}
+          {isPaidEvent() && (
+            <button 
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '8px 16px',
+                backgroundColor: '#8B0000',
+                color: '#FFFFFF',
+                border: 'none',
+                borderRadius: '16px',
+                fontFamily: 'var(--font-outfit)',
+                fontWeight: '600',
+                fontSize: '12px',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#A52A2A';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#8B0000';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              🎫 Billetterie
+            </button>
+          )}
+          
+          {/* CTA Calendrier */}
+          <button 
+            onClick={generateICS}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '8px 16px',
+              backgroundColor: '#B8860B',
+              color: '#FFFFFF',
+              border: 'none',
+              borderRadius: '16px',
+              fontFamily: 'var(--font-outfit)',
+              fontWeight: '600',
+              fontSize: '12px',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#DAA520';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#B8860B';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            📅 Calendrier
+          </button>
+          
+          {/* CTA Partage */}
+          <button 
+            onClick={shareEvent}
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '8px 16px',
+              backgroundColor: 'rgba(139, 0, 0, 0.1)',
+              color: '#8B0000',
+              border: '1px solid rgba(139, 0, 0, 0.3)',
+              borderRadius: '16px',
+              fontFamily: 'var(--font-outfit)',
+              fontWeight: '600',
+              fontSize: '12px',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(139, 0, 0, 0.2)';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = 'rgba(139, 0, 0, 0.1)';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            🔗 Partager
+          </button>
+        </div>
       </div>
 
       {/* Section Image - Côté droit avec forme arrondie */}

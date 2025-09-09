@@ -68,7 +68,7 @@ export default function AgendaBilletterie() {
               fontFamily: 'var(--font-spectral)',
               fontSize: 'var(--text-hero)',
               fontWeight: 'var(--font-extrabold)',
-              color: 'var(--color-gold)',
+              color: '#B8860B',
               marginBottom: 'var(--spacing-md)',
               letterSpacing: '-2px',
             }}>
@@ -105,8 +105,8 @@ export default function AgendaBilletterie() {
                   transition: 'all var(--transition-base)',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--color-gold)';
-                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(212, 165, 116, 0.1)';
+                  e.currentTarget.style.borderColor = '#B8860B';
+                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(184, 134, 11, 0.1)';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.1)';
@@ -119,7 +119,7 @@ export default function AgendaBilletterie() {
                 right: '20px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                color: 'var(--color-gold)',
+                color: '#B8860B',
               }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"/>
@@ -272,6 +272,8 @@ export default function AgendaBilletterie() {
                   category={event.category}
                   description={event.description}
                   image={event.image}
+                  price={event.price}
+                  location={event.location}
                   ctaText="Réserver"
                   featured={event.featured}
                 />
@@ -319,7 +321,7 @@ export default function AgendaBilletterie() {
                 style={{
                   marginTop: 'var(--spacing-lg)',
                   padding: '12px 24px',
-                  backgroundColor: 'var(--color-gold)',
+                  backgroundColor: '#8B0000',
                   color: 'var(--color-white)',
                   border: 'none',
                   borderRadius: 'var(--radius-sm)',
@@ -330,7 +332,7 @@ export default function AgendaBilletterie() {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = 'var(--shadow-gold)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(139, 0, 0, 0.25)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
