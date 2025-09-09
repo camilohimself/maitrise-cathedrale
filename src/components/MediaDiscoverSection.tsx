@@ -4,18 +4,7 @@ import React, { useState, useMemo, memo } from 'react';
 import Link from 'next/link';
 import MediaPlayer from '@/components/MediaPlayer';
 import { MEDIA_TAB_CONFIG } from '@/data/uiConstants';
-
-interface MediaItem {
-  id: string;
-  title: string;
-  type: 'youtube' | 'soundcloud' | 'gallery';
-  description: string;
-  embedId: string;
-  thumbnailUrl: string;
-  duration: string;
-  category: string;
-  date: string;
-}
+import type { MediaItem } from '@/types/media';
 
 // Données média avec embeds intégrés
 const MEDIA_ITEMS: MediaItem[] = [

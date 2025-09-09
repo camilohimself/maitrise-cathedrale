@@ -1,18 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-
-interface MediaItem {
-  id: string;
-  title: string;
-  description: string;
-  type: 'youtube' | 'soundcloud' | 'gallery';
-  embedId: string;
-  thumbnailUrl: string;
-  duration: string;
-  category: string;
-  date: string;
-}
+import type { MediaItem } from '@/types/media';
 
 interface MediaPlayerProps {
   item: MediaItem;

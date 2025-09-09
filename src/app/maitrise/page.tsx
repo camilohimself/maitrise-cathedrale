@@ -1658,6 +1658,565 @@ export default function MaitrisePage() {
         </div>
       </div>
 
+      {/* Section École Maîtrisienne - Design Magazine Jeunesse & Excellence */}
+      <div style={{ padding: '100px 20px', background: '#f8f9fa' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+          
+          {/* Titre section avec ornement jeunesse */}
+          <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+            <div style={{
+              display: 'inline-block',
+              background: '#E33241',
+              width: '60px',
+              height: '4px',
+              borderRadius: '2px',
+              marginBottom: '20px'
+            }} />
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: '800',
+              color: '#2c3e50',
+              marginBottom: '15px',
+              letterSpacing: '-1px'
+            }}>
+              L'École Maîtrisienne
+            </h2>
+            <p style={{
+              fontSize: '1.3rem',
+              color: '#D2AB5F',
+              fontStyle: 'italic',
+              maxWidth: '600px',
+              margin: '0 auto',
+              fontWeight: '500'
+            }}>
+              Formation d'excellence pour les 15-25 ans • Créée en 2002
+            </p>
+          </div>
+
+          {/* Histoire & Mission - Hero Card */}
+          <div style={{
+            background: '#ffffff',
+            borderRadius: '25px',
+            padding: '60px',
+            marginBottom: '60px',
+            boxShadow: '0 25px 70px rgba(0,0,0,0.08)',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            
+            {/* Pattern décoratif jeunes talents */}
+            <div style={{
+              position: 'absolute',
+              top: '-50px',
+              right: '-50px',
+              width: '200px',
+              height: '200px',
+              background: 'radial-gradient(circle, rgba(227,50,65,0.08) 0%, transparent 70%)',
+              borderRadius: '50%'
+            }} />
+
+            {/* Badge année création */}
+            <div style={{
+              position: 'absolute',
+              top: '30px',
+              right: '30px',
+              background: 'linear-gradient(135deg, #E33241, #c0392b)',
+              color: '#ffffff',
+              padding: '12px 20px',
+              borderRadius: '20px',
+              fontSize: '14px',
+              fontWeight: '700',
+              textTransform: 'uppercase',
+              letterSpacing: '1px'
+            }}>
+              Depuis 2002
+            </div>
+
+            <div style={{ position: 'relative', zIndex: 2 }}>
+              <h3 style={{
+                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontWeight: '800',
+                color: '#040A23',
+                marginBottom: '25px',
+                lineHeight: '1.1'
+              }}>
+                Naissance & Évolution
+              </h3>
+
+              <div style={{
+                fontSize: '1.2rem',
+                lineHeight: '1.7',
+                color: '#2c3e50',
+                marginBottom: '30px'
+              }}>
+                <p style={{
+                  fontSize: '1.4rem',
+                  fontWeight: '600',
+                  color: '#E33241',
+                  marginBottom: '20px',
+                  borderLeft: '4px solid #D2AB5F',
+                  paddingLeft: '20px'
+                }}>
+                  En 2002, un chœur de jeunes chanteurs âgés de moins de vingt-cinq ans est créé, 
+                  reprenant le répertoire originel de l'Ensemble Vocal et Instrumental.
+                </p>
+                
+                <p style={{ marginBottom: '20px' }}>
+                  Cette évolution permet à l'EVI de se consacrer désormais exclusivement à Bach, 
+                  while l'École Maîtrisienne développe sa propre identité artistique centrée 
+                  sur la formation des jeunes talents.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Formation & Spécialités - Layout Triple Créatif */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr 1fr',
+            gap: '40px',
+            marginBottom: '60px'
+          }}>
+            
+            {/* Effectifs */}
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '20px',
+              padding: '35px',
+              textAlign: 'center',
+              boxShadow: '0 15px 40px rgba(0,0,0,0.05)',
+              border: '2px solid rgba(210,171,95,0.2)',
+              position: 'relative'
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '-15px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#D2AB5F',
+                color: '#040A23',
+                padding: '8px 15px',
+                borderRadius: '15px',
+                fontSize: '12px',
+                fontWeight: '700'
+              }}>
+                EFFECTIF
+              </div>
+              
+              <div style={{ marginBottom: '15px', marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#D2AB5F" strokeWidth="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#E33241', marginBottom: '8px' }}>
+                ~25
+              </div>
+              <div style={{ fontSize: '1rem', color: '#666', lineHeight: '1.5' }}>
+                Jeunes chanteurs<br/>
+                et instrumentistes<br/>
+                <strong>15-25 ans</strong>
+              </div>
+            </div>
+
+            {/* Spécialisation */}
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '20px',
+              padding: '35px',
+              textAlign: 'center',
+              boxShadow: '0 15px 40px rgba(0,0,0,0.05)',
+              border: '2px solid rgba(227,50,65,0.2)',
+              position: 'relative'
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '-15px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#E33241',
+                color: '#ffffff',
+                padding: '8px 15px',
+                borderRadius: '15px',
+                fontSize: '12px',
+                fontWeight: '700'
+              }}>
+                SPÉCIALITÉ
+              </div>
+              
+              <div style={{ marginBottom: '15px', marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#E33241" strokeWidth="2">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+              </div>
+              <div style={{ fontSize: '1.8rem', fontWeight: '800', color: '#D2AB5F', marginBottom: '8px' }}>
+                Baroque
+              </div>
+              <div style={{ fontSize: '1rem', color: '#666', lineHeight: '1.5' }}>
+                Messes Rathgeber (XVIIIe)<br/>
+                Motets Schütz (XVIIe)<br/>
+                <strong>+ Compositions modernes</strong>
+              </div>
+            </div>
+
+            {/* Performances */}
+            <div style={{
+              background: '#ffffff',
+              borderRadius: '20px',
+              padding: '35px',
+              textAlign: 'center',
+              boxShadow: '0 15px 40px rgba(0,0,0,0.05)',
+              border: '2px solid rgba(4,10,35,0.2)',
+              position: 'relative'
+            }}>
+              <div style={{
+                position: 'absolute',
+                top: '-15px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                background: '#040A23',
+                color: '#D2AB5F',
+                padding: '8px 15px',
+                borderRadius: '15px',
+                fontSize: '12px',
+                fontWeight: '700'
+              }}>
+                CONCERTS
+              </div>
+              
+              <div style={{ marginBottom: '15px', marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#040A23" strokeWidth="2">
+                  <path d="M8 21l0-12 2-2h4l2 2v12"/>
+                  <path d="M12 3V1"/>
+                  <path d="M10 21h4"/>
+                </svg>
+              </div>
+              <div style={{ fontSize: '1.6rem', fontWeight: '800', color: '#040A23', marginBottom: '8px' }}>
+                1er Dimanche
+              </div>
+              <div style={{ fontSize: '1rem', color: '#666', lineHeight: '1.5' }}>
+                Grand-messe 10h<br/>
+                Cathédrale de Sion<br/>
+                <strong>Programmation mensuelle</strong>
+              </div>
+            </div>
+          </div>
+
+          {/* Partenariat Conservatoire 2024 - Innovation */}
+          <div style={{
+            background: 'linear-gradient(135deg, #040A23 0%, #1a1a2e 50%, #2c3e50 100%)',
+            color: '#ffffff',
+            padding: '50px',
+            borderRadius: '25px',
+            marginBottom: '60px',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            
+            {/* Pattern innovation */}
+            <div style={{
+              position: 'absolute',
+              top: '15px',
+              left: '30px',
+              fontSize: '80px',
+              opacity: '0.1',
+              color: '#D2AB5F',
+              transform: 'rotate(-10deg)'
+            }}>
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M5 4v3h5.5v12h3V7H19V4z"/>
+              </svg>
+            </div>
+            
+            <div style={{ position: 'relative', zIndex: 2 }}>
+              <div style={{
+                background: 'linear-gradient(45deg, #D2AB5F, #E6C068)',
+                color: '#040A23',
+                display: 'inline-block',
+                padding: '12px 25px',
+                borderRadius: '25px',
+                fontSize: '14px',
+                fontWeight: '700',
+                textTransform: 'uppercase',
+                letterSpacing: '1px',
+                marginBottom: '25px'
+              }}>
+                INNOVATION 2024
+              </div>
+              
+              <h3 style={{
+                fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
+                fontWeight: '800',
+                marginBottom: '25px',
+                lineHeight: '1.2'
+              }}>
+                Partenariat Conservatoire Cantonal
+              </h3>
+              
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gap: '25px',
+                marginTop: '30px'
+              }}>
+                <div style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  padding: '25px',
+                  borderRadius: '15px',
+                  backdropFilter: 'blur(10px)'
+                }}>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', marginBottom: '10px', color: '#D2AB5F' }}>
+                    Formation Vocale Professionnelle
+                  </div>
+                  <div style={{ fontSize: '1rem', opacity: '0.9', lineHeight: '1.5' }}>
+                    Cours dispensés par notre professeure de chant dans le cadre du conservatoire
+                  </div>
+                </div>
+                
+                <div style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  padding: '25px',
+                  borderRadius: '15px',
+                  backdropFilter: 'blur(10px)'
+                }}>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', marginBottom: '10px', color: '#D2AB5F' }}>
+                    Programme Élargi
+                  </div>
+                  <div style={{ fontSize: '1rem', opacity: '0.9', lineHeight: '1.5' }}>
+                    Solfège, classes ouvertes, formation musicale complète
+                  </div>
+                </div>
+                
+                <div style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  padding: '25px',
+                  borderRadius: '15px',
+                  backdropFilter: 'blur(10px)'
+                }}>
+                  <div style={{ fontSize: '1.3rem', fontWeight: '700', marginBottom: '10px', color: '#D2AB5F' }}>
+                    Subventions Fondation
+                  </div>
+                  <div style={{ fontSize: '1rem', opacity: '0.9', lineHeight: '1.5' }}>
+                    Soutien financier aux jeunes élèves de l'École maîtrisienne
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Concert Souvigny - Highlight Hildegarde */}
+          <div style={{
+            background: '#ffffff',
+            borderRadius: '25px',
+            padding: '50px',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.06)',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            
+            {/* Layout asymétrique créatif pour concert */}
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: '2fr 1fr',
+              gap: 'clamp(40px, 8vw, 70px)',
+              alignItems: 'start'
+            }}>
+              
+              {/* Description concert - Colonne principale */}
+              <div>
+                
+                <div style={{
+                  background: 'linear-gradient(135deg, rgba(210,171,95,0.1), rgba(210,171,95,0.05))',
+                  border: '2px solid rgba(210,171,95,0.3)',
+                  borderRadius: '15px',
+                  padding: '20px',
+                  marginBottom: '25px',
+                  display: 'inline-block'
+                }}>
+                  <div style={{
+                    fontSize: '14px',
+                    fontWeight: '700',
+                    color: '#040A23',
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px'
+                  }}>
+                    Concert Spirituel • Août 2024
+                  </div>
+                </div>
+
+                <h3 style={{
+                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
+                  fontWeight: '800',
+                  color: '#E33241',
+                  marginBottom: '20px',
+                  lineHeight: '1.2'
+                }}>
+                  Souvigny • Sainte Hildegarde de Bingen
+                </h3>
+
+                <div style={{
+                  fontSize: '1.1rem',
+                  lineHeight: '1.7',
+                  color: '#2c3e50',
+                  marginBottom: '25px'
+                }}>
+                  <p style={{
+                    fontSize: '1.3rem',
+                    fontWeight: '600',
+                    color: '#D2AB5F',
+                    marginBottom: '15px'
+                  }}>
+                    Direction : Jean-David Waeber
+                  </p>
+                  
+                  <p style={{ marginBottom: '20px' }}>
+                    Concert spirituel présenté dans le charmant village médiéval de Souvigny, 
+                    mettant à l'honneur la musique et la spiritualité de <strong>Sainte Hildegarde de Bingen</strong>.
+                  </p>
+                  
+                  <p style={{ marginBottom: '20px' }}>
+                    Ce projet naît dans le sillage de la parution d'un ouvrage de <strong>Bernard Héritier</strong> 
+                    sur la Sainte, créant un pont unique entre recherche historique et performance musicale.
+                  </p>
+                </div>
+
+                {/* Programme thématique */}
+                <div style={{
+                  background: 'rgba(4,10,35,0.05)',
+                  padding: '25px',
+                  borderRadius: '15px',
+                  borderLeft: '5px solid #E33241'
+                }}>
+                  <h4 style={{
+                    fontSize: '1.3rem',
+                    fontWeight: '600',
+                    color: '#040A23',
+                    marginBottom: '15px'
+                  }}>
+                    Programme Thématique Spirituel
+                  </h4>
+                  <div style={{
+                    fontSize: '1rem',
+                    lineHeight: '1.6',
+                    color: '#666'
+                  }}>
+                    • Musiques originales d'Hildegarde de Bingen<br/>
+                    • Chant grégorien authentique<br/>
+                    • Polyphonies de la fin du Moyen Âge<br/>
+                    • Compositions liturgiques modernes<br/>
+                    <strong style={{ color: '#E33241' }}>→ Grands thèmes de la spiritualité d'Hildegarde</strong>
+                  </div>
+                </div>
+              </div>
+
+              {/* Visuel concert & lieu - Colonne droite */}
+              <div>
+                
+                {/* Photo Souvigny médiéval */}
+                <div style={{
+                  width: '100%',
+                  height: '280px',
+                  background: 'linear-gradient(135deg, #8B4513 0%, #D2691E 30%, #DEB887 70%, #F5DEB3 100%)',
+                  borderRadius: '20px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '20px',
+                  border: '3px solid rgba(139,69,19,0.3)',
+                  position: 'relative',
+                  overflow: 'hidden'
+                }}>
+                  <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'radial-gradient(circle at 30% 70%, rgba(245,222,179,0.3) 0%, transparent 60%)'
+                  }} />
+                  
+                  <div style={{ textAlign: 'center', position: 'relative', zIndex: 2 }}>
+                    <div style={{ 
+                      fontSize: '70px', 
+                      marginBottom: '12px',
+                      filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.3))'
+                    }}>
+                      <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#8B4513" strokeWidth="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9,22 9,12 15,12 15,22"/>
+                      </svg>
+                    </div>
+                    <p style={{ 
+                      margin: 0, 
+                      fontSize: '16px', 
+                      fontWeight: '700', 
+                      color: '#8B4513',
+                      textShadow: '1px 1px 2px rgba(245,222,179,0.8)'
+                    }}>
+                      Village de Souvigny
+                    </p>
+                    <p style={{ 
+                      margin: '4px 0 0 0', 
+                      fontSize: '12px', 
+                      color: 'rgba(139,69,19,0.8)'
+                    }}>
+                      Cadre médiéval authentique
+                    </p>
+                  </div>
+                </div>
+
+                {/* Badge Hildegarde */}
+                <div style={{
+                  background: 'linear-gradient(135deg, #8B008B, #9932CC)',
+                  color: '#ffffff',
+                  padding: '20px',
+                  borderRadius: '15px',
+                  textAlign: 'center',
+                  marginBottom: '15px'
+                }}>
+                  <div style={{ marginBottom: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M5 16L3 14l5.5-5.5L12 12l3.5-3.5L21 14l-2 2-5.5-5.5L12 13l-1.5-1.5z"/>
+                    </svg>
+                  </div>
+                  <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '5px' }}>
+                    SAINTE HILDEGARDE
+                  </div>
+                  <div style={{ fontSize: '12px', opacity: '0.9' }}>
+                    de Bingen (1098-1179)
+                  </div>
+                </div>
+
+                {/* Mini showcase école en concert */}
+                <div style={{
+                  background: 'linear-gradient(135deg, #f8f9fa, #ffffff)',
+                  border: '2px dashed #D2AB5F',
+                  borderRadius: '15px',
+                  padding: '20px',
+                  textAlign: 'center'
+                }}>
+                  <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#D2AB5F" strokeWidth="2">
+                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                      <circle cx="9" cy="7" r="4"/>
+                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                  </div>
+                  <div style={{ fontSize: '13px', fontWeight: '600', color: '#040A23', marginBottom: '5px' }}>
+                    École en Concert
+                  </div>
+                  <div style={{ fontSize: '11px', color: '#666' }}>
+                    Photo performance Souvigny
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Section 20 ans - Highlight final */}
       <div style={{
         background: 'linear-gradient(135deg, #040A23 0%, #1a1a2e 100%)',
