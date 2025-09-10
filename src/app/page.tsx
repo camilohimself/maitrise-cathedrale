@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <>
       <HeroSectionV1 />
-      <FASHighlightSection />
-      <UpcomingEventsSection />
       <MaitriseAboutSection />
+      <FASHighlightSection />
       <MediaDiscoverSection />
-      <SupportSection />
+      <UpcomingEventsSection />
       <Newsletter />
+      <SupportSection />
     </>
   );
 }
