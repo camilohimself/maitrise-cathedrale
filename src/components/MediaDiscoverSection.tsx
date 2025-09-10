@@ -512,9 +512,9 @@ const MediaDiscoverSection = memo(() => {
         </div>
 
         {/* Media Player Modal */}
-        {selectedMedia && (
+        {selectedMedia && selectedMedia.type !== 'gallery' && (
           <MediaPlayer
-            item={selectedMedia}
+            item={selectedMedia as MediaItem & { type: 'youtube' | 'soundcloud' }}
             onClose={() => setSelectedMedia(null)}
           />
         )}

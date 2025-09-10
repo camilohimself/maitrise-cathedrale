@@ -37,3 +37,6 @@ export const ANIMATION_CONFIGS = {
 
 export type MediaTabType = keyof typeof MEDIA_TAB_CONFIG;
 export type EventCategory = keyof typeof EVENT_TYPE_CONFIG;
+
+// Export alias pour compatibilité
+export const EVENT_TYPE_ICONS = EVENT_TYPE_CONFIG;

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import type { MediaItem } from '@/types/media';
 
 interface MediaPlayerProps {
-  item: MediaItem;
+  item: Omit<MediaItem, 'type'> & { type: 'youtube' | 'soundcloud' };
   onClose: () => void;
 }
 
