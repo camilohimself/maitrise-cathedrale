@@ -1,0 +1,85 @@
+// Données complètes pour la page Maîtrise
+export const maitriseContent = {
+  // Conseil de Fondation
+  conseilFondation: [
+    { poste: "Président", nom: "M. Pierre-Christian von Roten" },
+    { poste: "Vice-président", nom: "M. Johan Beltramini" },
+    { poste: "Directeur artistique", nom: "M. Jean-David Waeber" },
+    { poste: "Représentant de l'évêché", nom: "Mgr Pierre-Yves Maillard" },
+    { poste: "Représentant du Chapitre cathédral", nom: "Mgr Pierre-Yves Maillard" },
+    { poste: "Représentant de la Paroisse de la Cathédrale", nom: "Abbé François Roten" },
+    { poste: "Représentant de la municipalité de Sion", nom: "Mme Carole Schmid" },
+    { poste: "Représentante de la Bourgeoisie de Sion", nom: "Mme Elisabeth Bourban Carthobiaz" },
+    { poste: "Représentant du Conservatoire cantonal", nom: "M. Thierry Debons" },
+    { poste: "Représentante de l'Association des Amis", nom: "Pierre-Alain Héritier" }
+  ],
+
+  // Histoire et fondation
+  histoire: {
+    titre: "Histoire & Fondation",
+    sousTitre: "Depuis 2004",
+    description: "La Maîtrise de la Cathédrale de Sion a été créée en juin 2004 pour redonner vie à une tradition séculaire de musique sacrée au cœur du Valais.",
+    stats: {
+      annee: "2004",
+      jeunes: "~25",
+      concerts: "20+",
+      repertoire: "500 ans"
+    }
+  },
+
+  // Direction musicale
+  direction: {
+    nom: "Jean-David Waeber",
+    titre: "Directeur artistique et musical",
+    bio: {
+      formation: "Diplômé en direction chorale et orchestrale du Conservatoire de Genève",
+      experience: "Plus de 20 ans d'expérience dans la direction de chœurs professionnels",
+      specialites: ["Musique baroque", "Musique sacrée", "Création contemporaine"]
+    }
+  },
+
+  // Organistes
+  organistes: {
+    titulaire: {
+      nom: "Edmond Voeffray",
+      titre: "Organiste titulaire",
+      bio: "Organiste titulaire de la Cathédrale de Sion depuis 1995, concertiste international"
+    },
+    adjointe: {
+      nom: "Catherine Gremaud-Babel",
+      titre: "Organiste adjointe",
+      bio: "Professeure au Conservatoire cantonal, spécialiste du répertoire baroque"
+    }
+  },
+
+  // Ensemble Vocal et Instrumental
+  evi: {
+    titre: "Ensemble Vocal & Instrumental (EVI)",
+    description: "Formation professionnelle unique en Suisse romande",
+    projet: "Intégrale des Cantates de Bach - Un projet monumental unique au monde",
+    stats: {
+      cantates: "140/200",
+      musiciens: "12-20",
+      concerts: "6-8/an"
+    }
+  },
+
+  // École Maîtrisienne
+  ecole: {
+    titre: "École Maîtrisienne",
+    description: "Formation vocale d'excellence pour jeunes de 15 à 25 ans",
+    partenariat: {
+      annee: "2024",
+      institution: "Conservatoire cantonal",
+      type: "Nouveau partenariat stratégique"
+    },
+    programme: [
+      "Technique vocale individuelle",
+      "Formation musicale approfondie",
+      "Pratique chorale hebdomadaire",
+      "Concerts et tournées"
+    ]
+  }
+};
+
+export default maitriseContent;
