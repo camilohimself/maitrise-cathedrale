@@ -110,9 +110,9 @@ const Footer = () => {
               marginBottom: '30px'
             }}>
               <Image
-                src="/images/logo-mc-contrast.svg"
+                src="/images/logo-mc-final.png"
                 alt="Maîtrise Cathédrale de Sion - Logo"
-                width={120}
+                width={250}
                 height={120}
                 style={{
                   height: '120px',
