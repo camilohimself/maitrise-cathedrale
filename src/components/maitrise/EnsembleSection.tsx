@@ -13,7 +13,7 @@ export default function EnsembleSection() {
     }}>
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{
-          background: 'linear-gradient(135deg, #8B0000 0%, #CD5C5C 100%)',
+          background: 'linear-gradient(135deg, #E33241 0%, #ff6b7a 100%)',
           borderRadius: '32px',
           padding: '64px',
           color: '#ffffff',

@@ -12,7 +12,7 @@ export default function MaitriseHeroSection() {
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <div className="badge-gold" style={{
             display: 'inline-block',
-            background: 'linear-gradient(45deg, #D2AB5F, #E6C068)',
+            background: 'linear-gradient(45deg, #D4A574, #E6C068)',
             padding: '8px 24px',
             borderRadius: '30px',
             fontSize: '14px',
@@ -66,7 +66,7 @@ export default function MaitriseHeroSection() {
               <div style={{
                 fontSize: '36px',
                 fontWeight: '700',
-                color: '#D2AB5F',
+                color: '#D4A574',
                 marginBottom: '8px'
               }}>
                 {value}
@@ -96,7 +96,7 @@ export default function MaitriseHeroSection() {
             fontWeight: '300',
             marginBottom: '32px',
             textAlign: 'center',
-            color: '#D2AB5F'
+            color: '#D4A574'
           }}>
             Conseil de Fondation
           </h2>
@@ -112,8 +112,8 @@ export default function MaitriseHeroSection() {
                 justifyContent: 'space-between',
                 padding: '12px 16px',
                 borderRadius: '8px',
-                background: idx === 0 ? 'rgba(210, 171, 95, 0.1)' : 'transparent',
-                borderLeft: idx === 0 ? '3px solid #D2AB5F' : 'none'
+                background: idx === 0 ? 'rgba(212, 165, 116, 0.1)' : 'transparent',
+                borderLeft: idx === 0 ? '3px solid #D4A574' : 'none'
               }}>
                 <span style={{ color: '#D2AB5F', fontSize: '14px' }}>{membre.poste}</span>
                 <span style={{ color: '#ffffff', fontSize: '14px', fontWeight: '500' }}>{membre.nom}</span>

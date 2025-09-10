@@ -8,7 +8,7 @@ export default function EcoleSection() {
 
   return (
     <div style={{
-      background: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #3b82f6 100%)',
+      background: 'linear-gradient(135deg, #1a1340 0%, #2a2350 50%, #3a3360 100%)',
       padding: '100px 20px',
       color: '#ffffff'
     }}>

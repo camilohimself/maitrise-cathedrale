@@ -22,7 +22,7 @@ export default function DirectionSection() {
           <div style={{
             position: 'relative',
             height: '500px',
-            background: 'linear-gradient(135deg, #D2AB5F 0%, #E6C068 100%)',
+            background: 'linear-gradient(135deg, #D4A574 0%, #E6C068 100%)',
             borderRadius: '24px',
             overflow: 'hidden'
           }}>
@@ -55,7 +55,7 @@ export default function DirectionSection() {
             <h3 style={{
               fontSize: '32px',
               fontWeight: '700',
-              color: '#D2AB5F',
+              color: '#D4A574',
               marginBottom: '8px'
             }}>
               {direction.nom}
@@ -123,7 +123,7 @@ export default function DirectionSection() {
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 {direction.bio.specialites.map((spec, idx) => (
                   <span key={idx} style={{
-                    background: 'linear-gradient(45deg, #D2AB5F, #E6C068)',
+                    background: 'linear-gradient(45deg, #D4A574, #E6C068)',
                     color: '#ffffff',
                     padding: '8px 20px',
                     borderRadius: '24px',
