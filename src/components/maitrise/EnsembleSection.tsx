@@ -8,12 +8,13 @@ export default function EnsembleSection() {
 
   return (
     <div style={{
-      background: 'linear-gradient(180deg, #f8f8f8 0%, #ffffff 100%)',
+      background: '#FAFAF9',
       padding: '100px 20px'
     }}>
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{
-          background: 'linear-gradient(135deg, #E33241 0%, #ff6b7a 100%)',
+          background: 'linear-gradient(135deg, #E33241 0%, #f8f0f0 95%)',
+          boxShadow: '0 30px 60px rgba(227, 50, 65, 0.15)',
           borderRadius: '32px',
           padding: '64px',
           color: '#ffffff',
@@ -51,7 +52,7 @@ export default function EnsembleSection() {
             </p>
 
             <div style={{
-              background: 'rgba(255, 255, 255, 0.1)',
+              background: 'rgba(255, 255, 255, 0.9)',
               borderRadius: '16px',
               padding: '32px',
               marginBottom: '48px',
@@ -61,13 +62,13 @@ export default function EnsembleSection() {
                 fontSize: '24px',
                 fontWeight: '700',
                 marginBottom: '16px',
-                color: '#FFD700'
+                color: '#E33241'
               }}>
                 {evi.projet}
               </h3>
               <div style={{
                 fontSize: '18px',
-                opacity: '0.9',
+                color: '#2c2c2c',
                 lineHeight: '1.6'
               }}>
                 Un défi artistique et spirituel monumental, entrepris avec passion et rigueur.
@@ -84,15 +85,15 @@ export default function EnsembleSection() {
                 <div key={key} style={{
                   textAlign: 'center',
                   padding: '24px',
-                  background: 'rgba(255, 255, 255, 0.05)',
+                  background: 'rgba(255, 255, 255, 0.6)',
                   borderRadius: '12px',
-                  border: '1px solid rgba(255, 255, 255, 0.2)'
+                  border: '1px solid rgba(227, 50, 65, 0.2)'
                 }}>
                   <div style={{
                     fontSize: '32px',
                     fontWeight: '700',
                     marginBottom: '8px',
-                    color: '#FFD700'
+                    color: '#E33241'
                   }}>
                     {value}
                   </div>
@@ -100,7 +101,7 @@ export default function EnsembleSection() {
                     fontSize: '14px',
                     textTransform: 'uppercase',
                     letterSpacing: '0.1em',
-                    opacity: '0.8'
+                    color: '#666'
                   }}>
                     {key === 'cantates' ? 'Cantates jouées' : 
                      key === 'musiciens' ? 'Musiciens' : 

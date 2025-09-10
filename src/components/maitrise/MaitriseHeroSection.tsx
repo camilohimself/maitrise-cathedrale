@@ -7,18 +7,24 @@ export default function MaitriseHeroSection() {
   const { histoire, conseilFondation } = maitriseContent;
 
   return (
-    <div className="hero-section" style={{ background: 'linear-gradient(135deg, #040A23 0%, #1a1a2e 30%, #2c3e50 70%, #34495e 100%)' }}>
+    <div className="hero-section" style={{ 
+      background: 'linear-gradient(135deg, #1a1340 0%, #2a2350 100%)', 
+      position: 'relative',
+      overflow: 'hidden'
+    }}>
       <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', padding: '80px 20px 100px' }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <div className="badge-gold" style={{
             display: 'inline-block',
-            background: 'linear-gradient(45deg, #D4A574, #E6C068)',
+            background: 'rgba(212, 165, 116, 0.15)',
+            border: '1px solid rgba(212, 165, 116, 0.3)',
             padding: '8px 24px',
             borderRadius: '30px',
             fontSize: '14px',
             fontWeight: '700',
-            color: '#040A23',
-            marginBottom: '24px'
+            color: '#D4A574',
+            marginBottom: '24px',
+            backdropFilter: 'blur(10px)'
           }}>
             {histoire.sousTitre}
           </div>
@@ -55,9 +61,9 @@ export default function MaitriseHeroSection() {
         }}>
           {Object.entries(histoire.stats).map(([key, value]) => (
             <div key={key} className="stat-card" style={{
-              background: 'rgba(255, 255, 255, 0.05)',
+              background: 'rgba(212, 165, 116, 0.08)',
               backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(212, 165, 116, 0.2)',
               borderRadius: '16px',
               padding: '32px',
               textAlign: 'center',
@@ -86,10 +92,11 @@ export default function MaitriseHeroSection() {
 
         {/* Conseil de Fondation */}
         <div style={{
-          background: 'rgba(255, 255, 255, 0.03)',
+          background: 'rgba(212, 165, 116, 0.05)',
           borderRadius: '24px',
           padding: '48px',
-          backdropFilter: 'blur(10px)'
+          backdropFilter: 'blur(10px)',
+          border: '1px solid rgba(212, 165, 116, 0.15)'
         }}>
           <h2 style={{
             fontSize: '32px',

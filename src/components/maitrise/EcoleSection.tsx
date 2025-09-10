@@ -8,7 +8,8 @@ export default function EcoleSection() {
 
   return (
     <div style={{
-      background: 'linear-gradient(135deg, #1a1340 0%, #2a2350 50%, #3a3360 100%)',
+      background: 'linear-gradient(135deg, #1a1340 0%, #252454 100%)',
+      position: 'relative',
       padding: '100px 20px',
       color: '#ffffff'
     }}>
@@ -23,8 +24,10 @@ export default function EcoleSection() {
           <div>
             <div style={{
               display: 'inline-block',
-              background: 'linear-gradient(45deg, #FFD700, #FFA500)',
-              color: '#040A23',
+              background: 'rgba(212, 165, 116, 0.2)',
+              border: '1px solid rgba(212, 165, 116, 0.3)',
+              color: '#D4A574',
+              backdropFilter: 'blur(10px)',
               padding: '8px 20px',
               borderRadius: '24px',
               fontSize: '14px',
@@ -52,7 +55,8 @@ export default function EcoleSection() {
             </p>
 
             <div style={{
-              background: 'rgba(255, 255, 255, 0.1)',
+              background: 'rgba(212, 165, 116, 0.1)',
+              border: '1px solid rgba(212, 165, 116, 0.2)',
               borderRadius: '16px',
               padding: '24px',
               marginBottom: '40px',
@@ -62,7 +66,7 @@ export default function EcoleSection() {
                 fontSize: '18px',
                 fontWeight: '700',
                 marginBottom: '8px',
-                color: '#FFD700'
+                color: '#D4A574'
               }}>
                 Partenariat avec le {ecole.partenariat.institution}
               </h3>
@@ -108,7 +112,7 @@ export default function EcoleSection() {
 
           {/* Visual Element */}
           <div style={{
-            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
+            background: 'rgba(212, 165, 116, 0.08)',
             borderRadius: '24px',
             padding: '48px',
             backdropFilter: 'blur(10px)',

@@ -8,7 +8,8 @@ export default function OrganistesSection() {
 
   return (
     <div style={{
-      background: 'linear-gradient(135deg, #040A23 0%, #1a1a2e 100%)',
+      background: 'linear-gradient(135deg, #1a1340 0%, #252454 100%)',
+      position: 'relative',
       padding: '100px 20px',
       color: '#ffffff'
     }}>
@@ -30,9 +31,9 @@ export default function OrganistesSection() {
         }}>
           {/* Organiste Titulaire */}
           <div className="card" style={{
-            background: 'rgba(255, 255, 255, 0.05)',
+            background: 'rgba(212, 165, 116, 0.08)',
             backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            border: '1px solid rgba(212, 165, 116, 0.2)',
             borderRadius: '24px',
             padding: '48px',
             transition: 'all 0.3s ease',
@@ -85,9 +86,9 @@ export default function OrganistesSection() {
 
           {/* Organiste Adjointe */}
           <div className="card" style={{
-            background: 'rgba(255, 255, 255, 0.05)',
+            background: 'rgba(212, 165, 116, 0.08)',
             backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            border: '1px solid rgba(212, 165, 116, 0.2)',
             borderRadius: '24px',
             padding: '48px',
             transition: 'all 0.3s ease',

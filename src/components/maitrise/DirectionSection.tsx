@@ -8,8 +8,9 @@ export default function DirectionSection() {
 
   return (
     <div className="section-gradient" style={{
-      background: 'linear-gradient(180deg, #ffffff 0%, #f8f8f8 100%)',
-      padding: '100px 20px'
+      background: '#FAFAF9',
+      padding: '100px 20px',
+      position: 'relative'
     }}>
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{
@@ -22,7 +23,8 @@ export default function DirectionSection() {
           <div style={{
             position: 'relative',
             height: '500px',
-            background: 'linear-gradient(135deg, #D4A574 0%, #E6C068 100%)',
+            background: 'linear-gradient(135deg, #D4A574 0%, #e8d5b7 100%)',
+            boxShadow: '0 20px 40px rgba(212, 165, 116, 0.15)',
             borderRadius: '24px',
             overflow: 'hidden'
           }}>
@@ -47,7 +49,7 @@ export default function DirectionSection() {
               fontSize: '48px',
               fontWeight: '300',
               marginBottom: '16px',
-              color: '#040A23'
+              color: '#2c2c2c'
             }}>
               Direction Musicale
             </h2>
@@ -75,7 +77,7 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#040A23',
+                color: '#2c2c2c',
                 marginBottom: '16px'
               }}>
                 Formation
@@ -95,7 +97,7 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#040A23',
+                color: '#2c2c2c',
                 marginBottom: '16px'
               }}>
                 Expérience
@@ -115,7 +117,7 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#040A23',
+                color: '#2c2c2c',
                 marginBottom: '16px'
               }}>
                 Spécialités
