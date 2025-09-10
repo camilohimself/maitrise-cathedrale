@@ -22,7 +22,7 @@ const MaitriseAboutSection = () => {
     {
       iconType: 'music',
       title: 'Ensemble Vocal',
-      description: 'Chœur professionnel dirigé par Jean-Claude Kolly, spécialisé dans le répertoire sacré et baroque.',
+      description: 'Chœur professionnel spécialisé dans le répertoire sacré et baroque sous la direction musicale experte.',
       link: '/maitrise/ensemble-vocal'
     },
     {
@@ -159,47 +159,6 @@ const MaitriseAboutSection = () => {
               }} />
             </div>
 
-            {/* Badge flottant */}
-            <div style={{
-              position: 'absolute',
-              bottom: '-20px',
-              right: '20px',
-              backgroundColor: '#8B0000',
-              color: '#FFFFFF',
-              padding: '20px',
-              borderRadius: '20px',
-              textAlign: 'center',
-              boxShadow: '0 10px 30px rgba(139, 0, 0, 0.3)',
-            }}>
-              <div style={{
-                fontFamily: 'var(--font-spectral)',
-                fontSize: '2rem',
-                fontWeight: '700',
-                lineHeight: 1,
-              }}>
-                Jean-Claude
-              </div>
-              <div style={{
-                fontFamily: 'var(--font-outfit)',
-                fontSize: '0.9rem',
-                fontWeight: '500',
-                opacity: 0.9,
-                marginTop: '4px',
-              }}>
-                KOLLY
-              </div>
-              <div style={{
-                fontFamily: 'var(--font-outfit)',
-                fontSize: '0.7rem',
-                fontWeight: '400',
-                opacity: 0.8,
-                marginTop: '2px',
-                letterSpacing: '1px',
-                textTransform: 'uppercase',
-              }}>
-                Direction Musicale
-              </div>
-            </div>
           </div>
 
           {/* Content side */}
