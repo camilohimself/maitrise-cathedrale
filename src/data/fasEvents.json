@@ -98,7 +98,7 @@
       "featured": true,
       "category": "renaissance",
       "prestige": true,
-      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop"
+      "image": "/images/artistes/stile-antico-1-hero.webp"
     },
     {
       "id": 6,
@@ -140,7 +140,7 @@
       "description": "Un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance",
       "specialty": "Musique Renaissance",
       "prestige": true,
-      "image": "/images/artists/stile-antico-group.jpg",
+      "image": "/images/artistes/stile-antico-2-card.webp",
       "events": [5]
     },
     {

@@ -24,8 +24,15 @@ export const fasArtistes = [
   {
     id: "stile-antico",
     name: "Stile Antico",
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400",
-    description: "Ensemble vocal britannique"
+    image: "/images/artistes/stile-antico-2-card.webp",
+    heroImage: "/images/artistes/stile-antico-1-hero.webp",
+    gallery: [
+      "/images/artistes/stile-antico-1-hero.webp",
+      "/images/artistes/stile-antico-2-hero.webp",
+      "/images/artistes/stile-antico-3-hero.webp",
+      "/images/artistes/stile-antico-4-hero.webp"
+    ],
+    description: "Ensemble vocal britannique de renommée mondiale"
   },
   {
     id: "choeur-novantiqua",
