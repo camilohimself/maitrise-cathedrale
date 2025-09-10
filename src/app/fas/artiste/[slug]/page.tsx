@@ -9,13 +9,28 @@ const artistesData: Record<string, any> = {
   'stile-antico': {
     id: 'stile-antico',
     name: 'Stile Antico',
-    concert: 'Concert Stile Antico',
-    date: 'jeudi 4 décembre',
+    concert: 'Stile Antico - Palestrina',
+    subtitle: 'Le Prince de la Musique',
+    date: 'Dimanche 4 janvier 2026',
     time: '17H00',
-    altDate: '15 décembre',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800',
-    thumbnail: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400',
-    description: `Dans le Londres élisabéthain florissant à l'époque de William Shakespeare, une remarquable école de compositeurs s'est épanouie, créant certaines des plus belles musiques chorales jamais écrites. Les maîtres de la polyphonie Peter Philips et Richard Dering sont morts en exil religieux aux Pays-Bas catholiques ; leurs œuvres, ainsi que celles de compositeurs tels que Robert White et John Dowland, figurent dans ce programme atmosphérique. Les Lamentations poignantes de White côtoient le sublime Ave verum corpus et l'Ave Maria de William Byrd, tandis que Philips se souvient de son Angleterre natale dans son élégie Cantantibus organis. La musique anglaise renaît comme le phénix de ses cendres, ou comme la colombe de Shakespeare, « assis seul, chantant une douce complainte ».`
+    conference: {
+      speaker: 'Marie Favre',
+      title: 'Musicologue et docteur en musicologie',
+      time: '16H00'
+    },
+    image: '/images/artistes/stile-antico-1-hero.webp',
+    thumbnail: '/images/artistes/stile-antico-2-card.webp',
+    gallery: [
+      '/images/artistes/stile-antico-1-hero.webp',
+      '/images/artistes/stile-antico-2-hero.webp',
+      '/images/artistes/stile-antico-3-hero.webp',
+      '/images/artistes/stile-antico-4-hero.webp'
+    ],
+    description: `Nous aurons l'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Palestrina, "Le Prince de la Musique". Il s'agit d'un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance.
+
+Cette soirée exceptionnelle sera également précédée d'une conférence de Marie Favre, musicologue et docteur en musicologie, qui nous éclairera sur l'œuvre de Giovanni Pierluigi da Palestrina à 16h00.
+
+Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyphonie Renaissance, où chaque voix s'entrelace dans une architecture sonore d'une beauté transcendante. Un concert prestigieux qui marquera l'apothéose de notre 20ème Festival d'Art Sacré.`
   },
   'choeur-novantiqua': {
     id: 'choeur-novantiqua',
@@ -151,11 +166,22 @@ export default function ArtistePage() {
               fontSize: 'clamp(2.5rem, 5vw, 4rem)',
               fontWeight: '900',
               letterSpacing: '-0.02em',
-              marginBottom: '1rem',
+              marginBottom: '0.5rem',
               textShadow: '0 4px 20px rgba(0, 0, 0, 0.8)'
             }}>
               {artiste.concert}
             </h1>
+            {artiste.subtitle && (
+              <p style={{
+                fontSize: '1.5rem',
+                color: '#D4A574',
+                fontWeight: '500',
+                marginBottom: '1.5rem',
+                fontStyle: 'italic'
+              }}>
+                {artiste.subtitle}
+              </p>
+            )}
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -330,7 +356,7 @@ export default function ArtistePage() {
               {artiste.name}
             </h4>
             
-            {artiste.altDate && (
+            {artiste.conference && (
               <div style={{
                 padding: '12px',
                 background: 'rgba(212, 175, 55, 0.1)',
@@ -342,15 +368,78 @@ export default function ArtistePage() {
                   color: '#D4A574',
                   fontWeight: '500'
                 }}>
-                  Autre date :
+                  Conférence préparatoire :
                 </span>
                 <p style={{
-                  margin: '8px 0 0',
+                  margin: '8px 0 4px',
                   fontSize: '1rem',
                   fontWeight: '600'
                 }}>
-                  {artiste.altDate}
+                  {artiste.conference.time}
                 </p>
+                <p style={{
+                  margin: '0',
+                  fontSize: '0.9rem',
+                  opacity: 0.8
+                }}>
+                  {artiste.conference.speaker} - {artiste.conference.title}
+                </p>
+              </div>
+            )}
+
+            {/* Galerie Photos Premium */}
+            {artiste.gallery && (
+              <div style={{ marginTop: '2rem' }}>
+                <h4 style={{
+                  fontSize: '1.1rem',
+                  fontWeight: '600',
+                  marginBottom: '1rem',
+                  color: '#D4A574'
+                }}>
+                  Galerie Photos
+                </h4>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '8px',
+                  borderRadius: '12px',
+                  overflow: 'hidden'
+                }}>
+                  {artiste.gallery.slice(0, 4).map((photo: string, index: number) => (
+                    <div
+                      key={index}
+                      style={{
+                        aspectRatio: '1',
+                        borderRadius: index === 0 ? '12px 0 0 0' : 
+                                     index === 1 ? '0 12px 0 0' :
+                                     index === 2 ? '0 0 0 12px' : '0 0 12px 0',
+                        overflow: 'hidden',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'scale(1.05)';
+                        e.currentTarget.style.zIndex = '10';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'scale(1)';
+                        e.currentTarget.style.zIndex = '1';
+                      }}
+                    >
+                      <Image
+                        src={photo}
+                        alt={`${artiste.name} - Photo ${index + 1}`}
+                        width={150}
+                        height={150}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover'
+                        }}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
