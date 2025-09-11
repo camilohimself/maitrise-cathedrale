@@ -13,7 +13,21 @@ export default function AgendaBilletterie() {
 
   // Filtrage des événements
   const filteredEvents = useMemo(() => {
-    let filtered = [...maitriseEvents];
+    // Filtrer d'abord les événements à venir (11 septembre 2025 et après)
+    const today = new Date();
+    const upcomingEvents = maitriseEvents.filter(event => {
+      // Si nous sommes en septembre, ne garder que les événements du 11 et après
+      if (today.getMonth() === 8) { // Septembre = mois 8 (0-indexed)
+        if (event.date.month === 'SEPT') {
+          return parseInt(event.date.day) >= 11;
+        }
+        // Garder tous les événements des mois suivants
+        return !['AOÛT'].includes(event.date.month);
+      }
+      return true;
+    });
+    
+    let filtered = [...upcomingEvents];
 
     // Filtre par recherche
     if (searchTerm) {

@@ -950,6 +950,43 @@ export const getFeaturedEvents = () => {
 };
 
 export const getUpcomingEvents = (limit = 10) => {
-  // Pour cette démo, on retourne les premiers événements
-  return maitriseEvents.slice(0, limit);
+  const today = new Date();
+  const currentDate = `${today.getDate().toString().padStart(2, '0')}-${today.getMonth() + 1}`;
+  
+  // Filtre les événements à venir (11 septembre 2025 et après)
+  return maitriseEvents
+    .filter(event => {
+      // Convertir la date de l'événement pour comparaison
+      const eventDateStr = `${event.date.day.padStart(2, '0')}-${getMonthNumber(event.date.month)}`;
+      
+      // Si nous sommes en septembre, ne garder que les événements du 11 et après
+      if (today.getMonth() === 8) { // Septembre = mois 8
+        if (event.date.month === 'SEPT') {
+          return parseInt(event.date.day) >= 11;
+        }
+        // Garder tous les événements des mois suivants
+        return !['AOÛT'].includes(event.date.month);
+      }
+      
+      return true; // Pour les autres mois (au cas où)
+    })
+    .slice(0, limit);
+};
+
+// Fonction helper pour convertir le mois en numéro
+const getMonthNumber = (month) => {
+  const monthMap = {
+    'AOÛT': 8,
+    'SEPT': 9,
+    'OCT': 10,
+    'NOV': 11,
+    'DÉC': 12,
+    'JAN': 1,
+    'FÉV': 2,
+    'MAR': 3,
+    'AVR': 4,
+    'MAI': 5,
+    'JUIN': 6
+  };
+  return monthMap[month] || 1;
 };
