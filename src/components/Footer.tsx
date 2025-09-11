@@ -29,7 +29,7 @@ const Footer = () => {
           border: '1px solid rgba(212, 165, 116, 0.1)'
         }}>
           <Image
-            src="/images/logo-mc-negatif.png"
+            src="/images/logo-mc-footer.png"
             alt="Maîtrise Cathédrale de Sion"
             width={450}
             height={140}
