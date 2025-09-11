@@ -22,6 +22,8 @@ interface Event {
   category: string;
   image: string;
   prestige?: boolean;
+  composer?: string;
+  composers?: string[];
   conference?: {
     speaker: string;
     title: string;
