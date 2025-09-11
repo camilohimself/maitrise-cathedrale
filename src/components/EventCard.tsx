@@ -32,6 +32,28 @@ const EventCard: React.FC<EventCardProps> = ({
   ctaText = 'Réserver',
   featured = false
 }) => {
+  // Configuration des couleurs par type d'événement
+  const getEventColors = () => {
+    if (category.toLowerCase().includes('messe') || category.toLowerCase().includes('célébration')) {
+      return {
+        borderColor: '#D4A574', // Doré pour messes
+        badgeColor: '#D4A574'
+      };
+    }
+    if (category.toLowerCase().includes('festival') || category.toLowerCase().includes('fas')) {
+      return {
+        borderColor: '#4A1B87', // Violet profond pour FAS
+        badgeColor: '#4A1B87'
+      };
+    }
+    // Concert par défaut
+    return {
+      borderColor: '#8B0000', // Rouge bordeaux pour concerts
+      badgeColor: '#8B0000'
+    };
+  };
+  
+  const eventColors = getEventColors();
   // Fonction pour obtenir le jour de la semaine depuis la maquette
   const getDayOfWeek = () => {
     // Pour respecter exactement la maquette, on utilise les jours affichés
@@ -122,7 +144,7 @@ const EventCard: React.FC<EventCardProps> = ({
       style={{
         position: 'relative',
         backgroundColor: '#FFFFFF',
-        border: '3px solid #8B0000', // Royal Sophistication - Bordeaux
+        border: `3px solid ${eventColors.borderColor}`, // Couleur selon type événement
         borderRadius: '0 50px 50px 0', // Forme arrondie uniquement à droite
         overflow: 'hidden',
         transition: 'all 0.3s ease',
@@ -150,14 +172,14 @@ const EventCard: React.FC<EventCardProps> = ({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#FFFFFF',
-        borderRight: '1px solid rgba(139, 0, 0, 0.1)',
+        borderRight: `1px solid ${eventColors.borderColor}40`,
       }}>
         {/* Jour de la semaine */}
         <div style={{
           fontFamily: 'var(--font-outfit)',
           fontSize: '14px',
           fontWeight: '600',
-          color: '#8B0000',
+          color: eventColors.borderColor,
           textTransform: 'capitalize',
           marginBottom: '8px',
           textAlign: 'center',
@@ -170,7 +192,7 @@ const EventCard: React.FC<EventCardProps> = ({
           fontFamily: 'var(--font-spectral)',
           fontSize: '72px', // Taille massive comme dans la maquette
           fontWeight: '700',
-          color: '#8B0000',
+          color: eventColors.borderColor,
           lineHeight: 0.8,
           textAlign: 'center',
         }}>
@@ -182,7 +204,7 @@ const EventCard: React.FC<EventCardProps> = ({
           fontFamily: 'var(--font-outfit)',
           fontSize: '16px',
           fontWeight: '600',
-          color: '#8B0000',
+          color: eventColors.borderColor,
           textTransform: 'uppercase',
           marginTop: '4px',
           textAlign: 'center',
@@ -206,60 +228,71 @@ const EventCard: React.FC<EventCardProps> = ({
       {/* Section Contenu - Centre */}
       <div className={styles.contentSection} style={{
         flex: 1,
-        padding: '24px 20px',
+        padding: '20px 20px 16px 20px', // Moins de padding vertical
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
+        justifyContent: 'space-between', // Espacement optimal entre éléments
+        height: '100%',
+        overflow: 'hidden'
       }}>
-        {/* Badge catégorie - Royal Sophistication */}
-        <div style={{
-          display: 'inline-block',
-          backgroundColor: '#B8860B',
-          color: '#FFFFFF',
-          padding: '4px 12px',
-          borderRadius: '4px',
-          fontFamily: 'var(--font-outfit)',
-          fontSize: '11px',
-          fontWeight: '600',
-          textTransform: 'uppercase',
-          letterSpacing: '0.5px',
-          marginBottom: '12px',
-          alignSelf: 'flex-start',
-        }}>
-          {category}
+        {/* Contenu principal - Groupé */}
+        <div style={{ flex: 1 }}>
+          {/* Badge catégorie */}
+          <div style={{
+            display: 'inline-block',
+            backgroundColor: eventColors.badgeColor,
+            color: '#FFFFFF',
+            padding: '4px 12px',
+            borderRadius: '4px',
+            fontFamily: 'var(--font-outfit)',
+            fontSize: '11px',
+            fontWeight: '600',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px',
+            marginBottom: '8px',
+            alignSelf: 'flex-start',
+          }}>
+            {category}
+          </div>
+
+          {/* Titre - Taille réduite pour éviter débordement */}
+          <h3 style={{
+            fontFamily: 'var(--font-spectral)',
+            fontSize: '24px', // Réduit de 28px à 24px
+            fontWeight: '700',
+            color: eventColors.borderColor,
+            marginBottom: '6px',
+            lineHeight: 1.1, // Plus serré
+            margin: '0 0 6px 0',
+          }}>
+            {title}
+          </h3>
+
+          {/* Description - Limitée à 2 lignes max */}
+          <p style={{
+            fontFamily: 'var(--font-outfit)',
+            fontSize: '12px', // Réduit de 13px à 12px
+            fontWeight: '400',
+            color: '#666666',
+            lineHeight: 1.3,
+            margin: '0',
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis'
+          }}>
+            {description}
+          </p>
         </div>
 
-        {/* Titre - Police et taille exactes */}
-        <h3 style={{
-          fontFamily: 'var(--font-spectral)',
-          fontSize: '28px',
-          fontWeight: '700',
-          color: '#8B0000',
-          marginBottom: '8px',
-          lineHeight: 1.2,
-          margin: '0 0 8px 0',
-        }}>
-          {title}
-        </h3>
-
-        {/* Description - Petite taille comme dans maquette */}
-        <p style={{
-          fontFamily: 'var(--font-outfit)',
-          fontSize: '13px',
-          fontWeight: '400',
-          color: '#666666',
-          lineHeight: 1.4,
-          marginBottom: '16px',
-          margin: '0 0 16px 0',
-        }}>
-          {description}
-        </p>
-
-        {/* CTAs - Design minimaliste avec Royal Sophistication */}
+        {/* CTAs - Fixés en bas avec espacement contrôlé */}
         <div style={{
           display: 'flex',
-          gap: '8px',
-          marginTop: '16px',
+          gap: '6px', // Gap réduit
+          marginTop: '12px', // Margin réduit
+          flexShrink: 0, // Empêche la compression des CTAs
+          alignItems: 'flex-end'
         }}>
           {/* CTA Billetterie - Seulement si payant */}
           {isPaidEvent() && (
@@ -268,16 +301,17 @@ const EventCard: React.FC<EventCardProps> = ({
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: '8px 16px',
+                padding: '6px 12px',
                 backgroundColor: '#8B0000',
                 color: '#FFFFFF',
                 border: 'none',
-                borderRadius: '16px',
+                borderRadius: '12px',
                 fontFamily: 'var(--font-outfit)',
                 fontWeight: '600',
-                fontSize: '12px',
+                fontSize: '11px',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
+                whiteSpace: 'nowrap'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = '#A52A2A';
@@ -330,9 +364,9 @@ const EventCard: React.FC<EventCardProps> = ({
               alignItems: 'center',
               justifyContent: 'center',
               padding: '8px 16px',
-              backgroundColor: 'rgba(139, 0, 0, 0.1)',
-              color: '#8B0000',
-              border: '1px solid rgba(139, 0, 0, 0.3)',
+              backgroundColor: `${eventColors.borderColor}20`,
+              color: eventColors.borderColor,
+              border: `1px solid ${eventColors.borderColor}60`,
               borderRadius: '16px',
               fontFamily: 'var(--font-outfit)',
               fontWeight: '600',
@@ -341,11 +375,11 @@ const EventCard: React.FC<EventCardProps> = ({
               transition: 'all 0.3s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = 'rgba(139, 0, 0, 0.2)';
+              e.currentTarget.style.backgroundColor = `${eventColors.borderColor}40`;
               e.currentTarget.style.transform = 'translateY(-1px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'rgba(139, 0, 0, 0.1)';
+              e.currentTarget.style.backgroundColor = `${eventColors.borderColor}20`;
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >

@@ -3,24 +3,25 @@
 import React, { useState, useMemo } from 'react';
 import EventCard from '@/components/EventCard';
 import Newsletter from '@/components/Newsletter';
-import { events, getEventsByCategory, getEventsByMonth, getEventsByPrice } from '@/data/eventsData';
+import { maitriseEvents, getEventsByType, getEventsByMonth, getFeaturedEvents } from '@/data/maitriseEvents';
 
 export default function AgendaBilletterie() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedMonth, setSelectedMonth] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedType, setSelectedType] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('');
 
   // Filtrage des événements
   const filteredEvents = useMemo(() => {
-    let filtered = [...events];
+    let filtered = [...maitriseEvents];
 
     // Filtre par recherche
     if (searchTerm) {
       filtered = filtered.filter(event =>
         event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        event.location.toLowerCase().includes(searchTerm.toLowerCase())
+        event.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        event.ensemble.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
@@ -29,20 +30,28 @@ export default function AgendaBilletterie() {
       filtered = filtered.filter(event => event.date.month === selectedMonth);
     }
 
-    // Filtre par catégorie
-    if (selectedCategory) {
-      filtered = filtered.filter(event => event.category === selectedCategory);
+    // Filtre par type d'événement (messe, concert, fas)
+    if (selectedType) {
+      filtered = filtered.filter(event => event.type === selectedType);
     }
 
     // Filtre par prix
     if (selectedPriceRange) {
-      filtered = getEventsByPrice(selectedPriceRange).filter(event => 
-        filtered.some(f => f.id === event.id)
-      );
+      if (selectedPriceRange === 'free') {
+        filtered = filtered.filter(event => 
+          event.price.toLowerCase().includes('libre') || 
+          event.price.toLowerCase().includes('gratuit')
+        );
+      } else if (selectedPriceRange === 'paid') {
+        filtered = filtered.filter(event => 
+          !event.price.toLowerCase().includes('libre') && 
+          !event.price.toLowerCase().includes('gratuit')
+        );
+      }
     }
 
     return filtered;
-  }, [searchTerm, selectedMonth, selectedCategory, selectedPriceRange]);
+  }, [searchTerm, selectedMonth, selectedType, selectedPriceRange]);
 
   return (
     <main style={{
@@ -174,12 +183,18 @@ export default function AgendaBilletterie() {
                 <option value="OCT">Octobre</option>
                 <option value="NOV">Novembre</option>
                 <option value="DÉC">Décembre</option>
+                <option value="JAN">Janvier</option>
+                <option value="FÉV">Février</option>
+                <option value="MAR">Mars</option>
+                <option value="AVR">Avril</option>
+                <option value="MAI">Mai</option>
+                <option value="JUIN">Juin</option>
               </select>
 
               {/* Filtre Type */}
               <select 
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+                value={selectedType}
+                onChange={(e) => setSelectedType(e.target.value)}
                 style={{
                   padding: '8px 16px',
                   border: '1px solid rgba(26, 19, 64, 0.1)',
@@ -192,13 +207,10 @@ export default function AgendaBilletterie() {
                   outline: 'none',
                 }}
               >
-                <option value="">TYPE D&apos;EVENT</option>
-                <option value="Concert">Concert</option>
-                <option value="Festival">Festival</option>
-                <option value="Cantate">Cantate</option>
-                <option value="Formation">Formation</option>
-                <option value="Famille">Famille</option>
-                <option value="Spectacle">Spectacle</option>
+                <option value="">TYPE D&apos;ÉVÉNEMENT</option>
+                <option value="messe">Messe</option>
+                <option value="concert">Concert</option>
+                <option value="fas">Festival d&apos;Art Sacré</option>
               </select>
 
               {/* Filtre Budget */}
@@ -218,10 +230,8 @@ export default function AgendaBilletterie() {
                 }}
               >
                 <option value="">BUDGET</option>
-                <option value="free">Gratuit</option>
-                <option value="low">0-25 CHF</option>
-                <option value="medium">25-40 CHF</option>
-                <option value="high">40+ CHF</option>
+                <option value="free">Entrée libre</option>
+                <option value="paid">Payant</option>
               </select>
             </div>
           </div>
@@ -315,7 +325,7 @@ export default function AgendaBilletterie() {
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedMonth('');
-                  setSelectedCategory('');
+                  setSelectedType('');
                   setSelectedPriceRange('');
                 }}
                 style={{
