@@ -1,0 +1,130 @@
+{
+  "composers": [
+    {
+      "id": "cozzolani",
+      "name": "Chiara Margarita Cozzolani",
+      "period": "1602-1678",
+      "era": "Baroque",
+      "nationality": "Italienne",
+      "title": "La Compositrice Rebelle",
+      "description": "Compositrice baroque injustement méconnue qui a écrit une musique brillante à une époque où l'on recherchait la sobriété, musique rebelle et magnifique.",
+      "biography": "Religieuse bénédictine milanaise, Chiara Margarita Cozzolani fut l'une des compositrices les plus prolifiques du XVIIe siècle. Ses œuvres, d'une virtuosité remarquable, contrastent avec la sobriété de son époque par leur caractère expressif et dramatique.",
+      "works": ["Motets sacrés", "Cantates spirituelles", "Psaumes polyphoniques"],
+      "style": "Baroque expressif et dramatique",
+      "featured_work": "Motets pour voix de femmes",
+      "quote": "Une voix féminine unique dans l'univers baroque masculin",
+      "color": "#D2374C",
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop"
+    },
+    {
+      "id": "gesualdo",
+      "name": "Carlo Gesualdo",
+      "period": "1566-1613",
+      "era": "Renaissance tardive",
+      "nationality": "Italien",
+      "title": "Le Prince des Harmonies Audacieuses",
+      "description": "Compositeur révolutionnaire, précurseur des harmonies modernes avec des chromatismes d'une audace inouïe.",
+      "biography": "Prince de Venosa, Gesualdo révolutionna la musique de la Renaissance tardive par ses harmonies chromatiques d'une modernité saisissante, trois siècles avant leur temps.",
+      "works": ["6 livres de madrigaux", "Répons pour la Semaine Sainte"],
+      "style": "Chromatisme révolutionnaire",
+      "featured_work": "Madrigaux du 6ème livre",
+      "quote": "L'audace harmonique qui défie les siècles",
+      "color": "#8B7BB8",
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop"
+    },
+    {
+      "id": "bruckner",
+      "name": "Anton Bruckner",
+      "period": "1824-1896",
+      "era": "Romantique",
+      "nationality": "Autrichien",
+      "title": "Le Mystique de la Symphonie",
+      "description": "Maître de la polyphonie romantique, ses œuvres chorales allient spiritualité profonde et architecture grandiose.",
+      "biography": "Organiste et compositeur autrichien, Bruckner développa un style unique mêlant tradition polyphonique et romantisme. Ses motets sacrés comptent parmi les chefs-d'œuvre du répertoire choral.",
+      "works": ["9 Symphonies", "Motets sacrés", "3 Messes"],
+      "style": "Polyphonie romantique monumentale",
+      "featured_work": "Ave Maria, Locus iste",
+      "quote": "Architecture sonore et spiritualité mystique",
+      "color": "#B8860B",
+      "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop"
+    },
+    {
+      "id": "poulenc",
+      "name": "Francis Poulenc",
+      "period": "1899-1963",
+      "era": "Moderne",
+      "nationality": "Français",
+      "title": "L'Élégance Française Moderne",
+      "description": "Maître de la mélodie française, ses œuvres sacrées allient modernité et tradition avec une élégance intemporelle.",
+      "biography": "Membre du Groupe des Six, Poulenc sut concilier tradition française et modernité. Ses œuvres sacrées, d'une beauté saisissante, révèlent un compositeur profondément spirituel.",
+      "works": ["Gloria", "Stabat Mater", "Litanies à la Vierge Noire"],
+      "style": "Modernité française élégante",
+      "featured_work": "Gloria pour soprano, chœur et orchestre",
+      "quote": "L'art de la mélodie française sublimée",
+      "color": "#FF6B9D",
+      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop"
+    },
+    {
+      "id": "palestrina",
+      "name": "Giovanni Pierluigi da Palestrina",
+      "period": "1525-1594",
+      "era": "Renaissance",
+      "nationality": "Italien",
+      "title": "Le Prince de la Musique",
+      "description": "Maître incontesté de la polyphonie Renaissance, ses œuvres incarnent la perfection de l'art vocal sacré.",
+      "biography": "Compositeur italien de la Renaissance, Palestrina développa un style polyphonique d'une pureté exceptionnelle. Ses œuvres, modèles d'équilibre et de spiritualité, influencèrent des siècles de musique sacrée.",
+      "works": ["104 Messes", "Motets", "Madrigaux spirituels"],
+      "style": "Polyphonie Renaissance pure",
+      "featured_work": "Missa Papae Marcelli",
+      "quote": "La perfection absolue de l'art vocal sacré",
+      "color": "#D4AF37",
+      "image": "/images/artistes/stile-antico-2-card.webp"
+    },
+    {
+      "id": "vivaldi",
+      "name": "Antonio Vivaldi",
+      "period": "1678-1741",
+      "era": "Baroque",
+      "nationality": "Italien",
+      "title": "Le Prêtre Roux de Venise",
+      "description": "Génie du baroque vénitien, ses Gloria et Magnificat rayonnent d'une virtuosité et d'une spiritualité éblouissantes.",
+      "biography": "Prêtre et compositeur vénitien, Vivaldi révolutionna la musique baroque par sa virtuosité et son expressivité. Ses œuvres sacrées, d'une beauté solaire, incarnent l'art baroque à son apogée.",
+      "works": ["Gloria RV 589", "Magnificat", "Les Quatre Saisons"],
+      "style": "Baroque vénitien virtuose",
+      "featured_work": "Gloria et Magnificat pour voix de femmes",
+      "quote": "L'éclat du baroque vénitien dans sa splendeur",
+      "color": "#D2374C",
+      "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop"
+    }
+  ],
+  "eras": [
+    {
+      "name": "Renaissance",
+      "period": "1525-1600",
+      "characteristics": "Polyphonie pure, équilibre parfait",
+      "color": "#D4AF37",
+      "composers": ["palestrina"]
+    },
+    {
+      "name": "Baroque",
+      "period": "1600-1750", 
+      "characteristics": "Expression dramatique, virtuosité",
+      "color": "#D2374C",
+      "composers": ["cozzolani", "vivaldi"]
+    },
+    {
+      "name": "Romantique",
+      "period": "1800-1900",
+      "characteristics": "Architecture grandiose, spiritualité mystique",
+      "color": "#B8860B", 
+      "composers": ["bruckner"]
+    },
+    {
+      "name": "Moderne",
+      "period": "1900-1970",
+      "characteristics": "Synthèse tradition-modernité",
+      "color": "#FF6B9D",
+      "composers": ["poulenc"]
+    }
+  ]
+}

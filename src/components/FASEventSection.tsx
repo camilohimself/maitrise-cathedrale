@@ -31,12 +31,108 @@ interface Event {
 const FASEventSection = () => {
   const events: Event[] = fasEvents.events as Event[];
 
+  // Styles CSS pour animations
+  const animationStyles = `
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+  `;
+
+  // Fonction pour générer les badges prestige selon l'événement
+  const generateEventBadges = (event: Event) => {
+    const badges = [];
+    
+    // Badge 20ème édition (pour tous)
+    badges.push({
+      text: "20ème Édition",
+      style: {
+        background: 'linear-gradient(45deg, #D4AF37, #FFD700)',
+        color: '#1a1340',
+        fontWeight: '700',
+        letterSpacing: '0.05em'
+      }
+    });
+
+    // Badge Prestige pour Stile Antico
+    if (event.prestige) {
+      badges.push({
+        text: "✨ PRESTIGE",
+        style: {
+          background: 'linear-gradient(45deg, #8B0000, #DC143C)',
+          color: 'white',
+          fontWeight: '700',
+          boxShadow: '0 8px 32px rgba(139, 0, 0, 0.4)'
+        }
+      });
+    }
+
+    // Badge Conférence
+    if (event.conference) {
+      badges.push({
+        text: "🎓 Conférence Incluse",
+        style: {
+          background: 'linear-gradient(45deg, #4C1D95, #7C3AED)',
+          color: 'white',
+          fontWeight: '600'
+        }
+      });
+    }
+
+    // Badge spécial Messes Rorate
+    if (event.special) {
+      badges.push({
+        text: "🕯️ " + event.special,
+        style: {
+          background: 'linear-gradient(45deg, #1B1B2F, #2D2D44)',
+          color: '#D4AF37',
+          fontWeight: '600',
+          border: '1px solid rgba(212, 175, 55, 0.3)'
+        }
+      });
+    }
+
+    // Badge Première pour Cozzolani (compositrice méconnue)
+    if (event.composer === "Chiara Margarita Cozzolani") {
+      badges.push({
+        text: "🌟 Compositrice Redécouverte",
+        style: {
+          background: 'linear-gradient(45deg, #FF6B9D, #FF8CC8)',
+          color: 'white',
+          fontWeight: '600'
+        }
+      });
+    }
+
+    // Badge Jeunesse
+    if (event.category === "jeunesse") {
+      badges.push({
+        text: "🎼 Jeunes Talents",
+        style: {
+          background: 'linear-gradient(45deg, #FF6B9D, #FFB3BA)',
+          color: '#1a1340',
+          fontWeight: '600'
+        }
+      });
+    }
+
+    return badges;
+  };
+
   return (
-    <section style={{ 
-      padding: '100px 40px',
-      background: '#1a1340',
-      position: 'relative'
-    }}>
+    <>
+      <style dangerouslySetInnerHTML={{ __html: animationStyles }} />
+      <section style={{ 
+        padding: '100px 40px',
+        background: '#1a1340',
+        position: 'relative'
+      }}>
       {/* Background pattern élégant */}
       <div style={{
         position: 'absolute',
@@ -116,22 +212,33 @@ const FASEventSection = () => {
                 }}
               />
               
-              {/* Badge prestige premium */}
+              {/* Badges prestige multiples */}
               <div style={{
                 position: 'absolute',
                 top: '20px',
                 right: '20px',
-                background: 'linear-gradient(45deg, #6B46C1, #8B5CF6)',
-                color: 'white',
-                padding: '12px 24px',
-                borderRadius: '50px',
-                fontSize: '0.9rem',
-                fontWeight: '700',
-                letterSpacing: '0.05em',
-                textTransform: 'uppercase',
-                boxShadow: '0 8px 32px rgba(107, 70, 193, 0.4)'
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '8px',
+                alignItems: 'flex-end'
               }}>
-                ⭐ À ne pas manquer
+                {generateEventBadges(events[0]).map((badge, index) => (
+                  <div 
+                    key={index}
+                    style={{
+                      ...badge.style,
+                      padding: '8px 16px',
+                      borderRadius: '25px',
+                      fontSize: '0.8rem',
+                      textTransform: 'uppercase',
+                      whiteSpace: 'nowrap',
+                      backdropFilter: 'blur(10px)',
+                      animation: `fadeInScale 0.6s ease-out ${index * 0.1}s both`
+                    }}
+                  >
+                    {badge.text}
+                  </div>
+                ))}
               </div>
             </div>
 
