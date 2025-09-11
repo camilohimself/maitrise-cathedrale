@@ -143,7 +143,8 @@ export default function ChapelleMusicaleSection() {
             <h3 style={{
               fontSize: '20px',
               fontWeight: '700',
-              marginBottom: '24px'
+              marginBottom: '24px',
+              color: '#ffffff'
             }}>
               Caractéristiques musicales
             </h3>
@@ -203,7 +204,8 @@ export default function ChapelleMusicaleSection() {
             <h3 style={{
               fontSize: '24px',
               fontWeight: '700',
-              marginBottom: '16px'
+              marginBottom: '16px',
+              color: '#ffffff'
             }}>
               Renaissance a cappella
             </h3>
