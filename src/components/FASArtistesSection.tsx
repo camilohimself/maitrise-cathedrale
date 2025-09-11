@@ -16,15 +16,15 @@ const FASArtistesSection = () => {
           <div style={{
             display: 'inline-block',
             padding: '8px 24px',
-            background: 'rgba(139, 0, 0, 0.1)',
-            border: '1px solid rgba(139, 0, 0, 0.2)',
+            background: 'rgba(107, 70, 193, 0.1)',
+            border: '1px solid rgba(107, 70, 193, 0.2)',
             borderRadius: '50px',
             marginBottom: '24px'
           }}>
             <span style={{
               fontSize: '0.9rem',
               fontWeight: '600',
-              color: '#8B0000',
+              color: '#6B46C1',
               letterSpacing: '0.1em',
               textTransform: 'uppercase'
             }}>
@@ -45,7 +45,7 @@ const FASArtistesSection = () => {
           <div style={{
             width: '60px',
             height: '2px',
-            background: 'linear-gradient(90deg, #B8860B, rgba(184, 134, 11, 0.3))',
+            background: 'linear-gradient(90deg, #A78BFA, rgba(167, 139, 250, 0.3))',
             margin: '0 auto'
           }}></div>
         </div>
@@ -99,7 +99,7 @@ const FASArtistesSection = () => {
                   <h3 style={{
                     fontSize: '1.2rem',
                     fontWeight: '700',
-                    color: '#1a1340',
+                    color: '#6B46C1',
                     marginBottom: '8px'
                   }}>
                     {artiste.name}

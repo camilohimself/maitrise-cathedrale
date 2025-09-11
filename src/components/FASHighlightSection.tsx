@@ -64,10 +64,10 @@ const FASHighlightSection = () => {
           <div style={{
             display: 'inline-block',
             padding: '12px 32px',
-            backgroundColor: 'rgba(139, 0, 0, 0.1)',
-            border: '2px solid rgba(139, 0, 0, 0.3)',
+            backgroundColor: 'rgba(107, 70, 193, 0.1)',
+            border: '2px solid rgba(107, 70, 193, 0.3)',
             borderRadius: '50px',
-            color: 'var(--color-red)',
+            color: 'var(--color-purple)',
             fontFamily: 'var(--font-outfit)',
             fontSize: '14px',
             fontWeight: '700',
@@ -91,7 +91,7 @@ const FASHighlightSection = () => {
             fontFamily: 'var(--font-spectral)',
             fontSize: 'clamp(2.5rem, 5vw, 4rem)',
             fontWeight: '700',
-            color: 'var(--color-red)',
+            color: 'var(--color-purple)',
             marginBottom: '1.5rem',
             lineHeight: 1.1,
           }}>
@@ -129,20 +129,20 @@ const FASHighlightSection = () => {
                 backgroundColor: 'var(--color-white)',
                 borderRadius: '20px',
                 overflow: 'hidden',
-                border: '2px solid rgba(139, 0, 0, 0.1)',
+                border: '2px solid rgba(107, 70, 193, 0.1)',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 position: 'relative',
                 cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 20px 40px rgba(139, 0, 0, 0.15)';
-                e.currentTarget.style.borderColor = 'rgba(139, 0, 0, 0.3)';
+                e.currentTarget.style.boxShadow = '0 20px 40px rgba(107, 70, 193, 0.15)';
+                e.currentTarget.style.borderColor = 'rgba(107, 70, 193, 0.3)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 20px rgba(139, 0, 0, 0.08)';
-                e.currentTarget.style.borderColor = 'rgba(139, 0, 0, 0.1)';
+                e.currentTarget.style.boxShadow = '0 4px 20px rgba(107, 70, 193, 0.08)';
+                e.currentTarget.style.borderColor = 'rgba(107, 70, 193, 0.1)';
               }}
             >
               {/* Badge prestige */}
@@ -207,8 +207,8 @@ const FASHighlightSection = () => {
                     {event.date} • {event.time}
                   </span>
                   <span style={{
-                    backgroundColor: 'rgba(139, 0, 0, 0.1)',
-                    color: 'var(--color-red)',
+                    backgroundColor: 'rgba(107, 70, 193, 0.1)',
+                    color: 'var(--color-purple)',
                     padding: '2px 8px',
                     borderRadius: '8px',
                     fontFamily: 'var(--font-outfit)',
@@ -226,7 +226,7 @@ const FASHighlightSection = () => {
                   fontFamily: 'var(--font-spectral)',
                   fontSize: '1.5rem',
                   fontWeight: '700',
-                  color: 'var(--color-red)',
+                  color: 'var(--color-purple)',
                   marginBottom: '0.5rem',
                   lineHeight: 1.3,
                 }}>
@@ -260,7 +260,7 @@ const FASHighlightSection = () => {
                 <div style={{
                   display: 'flex',
                   alignItems: 'center',
-                  color: 'var(--color-red)',
+                  color: 'var(--color-purple)',
                   fontFamily: 'var(--font-outfit)',
                   fontWeight: '600',
                   fontSize: '0.9rem',
@@ -287,7 +287,7 @@ const FASHighlightSection = () => {
               alignItems: 'center',
               justifyContent: 'center',
               padding: '18px 40px',
-              backgroundColor: 'var(--color-red)',
+              backgroundColor: 'var(--color-purple)',
               color: 'var(--color-white)',
               borderRadius: '50px',
               fontFamily: 'var(--font-outfit)',
@@ -300,11 +300,11 @@ const FASHighlightSection = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
-              e.currentTarget.style.boxShadow = '0 20px 40px rgba(139, 0, 0, 0.3)';
+              e.currentTarget.style.boxShadow = '0 20px 40px rgba(107, 70, 193, 0.3)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0) scale(1)';
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(139, 0, 0, 0.2)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(107, 70, 193, 0.2)';
             }}
           >
             <span>Voir tout le programme</span>

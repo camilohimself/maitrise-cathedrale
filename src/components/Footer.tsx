@@ -99,26 +99,16 @@ const Footer = () => {
         }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div style={{
-              width: '180px',
-              height: '180px',
-              background: 'linear-gradient(135deg, #D4A574 0%, #E6C068 100%)',
-              borderRadius: '50%',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              boxShadow: '0 12px 40px rgba(212, 165, 116, 0.4), 0 4px 15px rgba(212, 165, 116, 0.2)',
-              marginBottom: '30px',
-              border: '3px solid rgba(255, 255, 255, 0.1)',
-              position: 'relative',
-              overflow: 'hidden'
+              display: 'inline-block',
+              marginBottom: '30px'
             }}>
               <Image
-                src="/images/logo-mc-contrast.png"
+                src="/images/logo-mc-negatif.png"
                 alt="Maîtrise Cathédrale de Sion - Logo"
-                width={250}
-                height={120}
+                width={350}
+                height={100}
                 style={{
-                  height: '120px',
+                  height: '80px',
                   width: 'auto',
                   objectFit: 'contain'
                 }}

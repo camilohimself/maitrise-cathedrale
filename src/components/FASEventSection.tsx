@@ -41,7 +41,7 @@ const FASEventSection = () => {
       <div style={{
         position: 'absolute',
         inset: 0,
-        backgroundImage: 'linear-gradient(30deg, rgba(184, 134, 11, 0.05) 25%, transparent 25%)',
+        backgroundImage: 'linear-gradient(30deg, rgba(167, 139, 250, 0.05) 25%, transparent 25%)',
         backgroundSize: '60px 60px'
       }}></div>
 
@@ -51,8 +51,8 @@ const FASEventSection = () => {
           <div style={{
             display: 'inline-block',
             padding: '10px 28px',
-            background: 'rgba(184, 134, 11, 0.15)',
-            border: '1px solid rgba(184, 134, 11, 0.3)',
+            background: 'rgba(167, 139, 250, 0.15)',
+            border: '1px solid rgba(167, 139, 250, 0.3)',
             borderRadius: '50px',
             marginBottom: '32px',
             backdropFilter: 'blur(10px)'
@@ -60,7 +60,7 @@ const FASEventSection = () => {
             <span style={{
               fontSize: '0.9rem',
               fontWeight: '600',
-              color: '#B8860B',
+              color: '#A78BFA',
               letterSpacing: '0.1em',
               textTransform: 'uppercase'
             }}>
@@ -79,7 +79,7 @@ const FASEventSection = () => {
             <span style={{
               display: 'block',
               fontWeight: '700',
-              background: 'linear-gradient(45deg, #B8860B, #DAA520)',
+              background: 'linear-gradient(45deg, #A78BFA, #C4B5FD)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -121,7 +121,7 @@ const FASEventSection = () => {
                 position: 'absolute',
                 top: '20px',
                 right: '20px',
-                background: 'linear-gradient(45deg, #8B0000, #A0002A)',
+                background: 'linear-gradient(45deg, #6B46C1, #8B5CF6)',
                 color: 'white',
                 padding: '12px 24px',
                 borderRadius: '50px',
@@ -129,7 +129,7 @@ const FASEventSection = () => {
                 fontWeight: '700',
                 letterSpacing: '0.05em',
                 textTransform: 'uppercase',
-                boxShadow: '0 8px 32px rgba(139, 0, 0, 0.4)'
+                boxShadow: '0 8px 32px rgba(107, 70, 193, 0.4)'
               }}>
                 ⭐ À ne pas manquer
               </div>
@@ -139,8 +139,8 @@ const FASEventSection = () => {
             <div>
               <div style={{
                 display: 'inline-block',
-                background: 'rgba(139, 0, 0, 0.2)',
-                color: '#8B0000',
+                background: 'rgba(107, 70, 193, 0.2)',
+                color: '#6B46C1',
                 padding: '8px 20px',
                 borderRadius: '50px',
                 fontSize: '0.9rem',
@@ -166,7 +166,7 @@ const FASEventSection = () => {
               {events[0].subtitle && (
                 <p style={{
                   fontSize: '1.2rem',
-                  color: '#B8860B',
+                  color: '#D4AF37',
                   fontWeight: '500',
                   marginBottom: '24px',
                   lineHeight: '1.4'
@@ -195,13 +195,13 @@ const FASEventSection = () => {
                   <span
                     key={index}
                     style={{
-                      background: 'rgba(184, 134, 11, 0.2)',
-                      color: '#B8860B',
+                      background: 'rgba(167, 139, 250, 0.2)',
+                      color: '#A78BFA',
                       padding: '8px 16px',
                       borderRadius: '20px',
                       fontSize: '0.9rem',
                       fontWeight: '500',
-                      border: '1px solid rgba(184, 134, 11, 0.3)'
+                      border: '1px solid rgba(167, 139, 250, 0.3)'
                     }}
                   >
                     {artist}
@@ -217,7 +217,7 @@ const FASEventSection = () => {
               }}>
                 <button className="btn-gold" style={{
                   padding: '16px 32px',
-                  background: 'linear-gradient(45deg, #8B0000, #A0002A)',
+                  background: 'linear-gradient(45deg, #5B21B6, #6B46C1)',
                   color: 'white',
                   border: 'none',
                   borderRadius: '8px',
@@ -227,15 +227,15 @@ const FASEventSection = () => {
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em',
-                  boxShadow: '0 8px 32px rgba(139, 0, 0, 0.3)'
+                  boxShadow: '0 8px 32px rgba(107, 70, 193, 0.3)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
-                  e.currentTarget.style.boxShadow = '0 16px 48px rgba(139, 0, 0, 0.4)';
+                  e.currentTarget.style.boxShadow = '0 16px 48px rgba(107, 70, 193, 0.4)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(139, 0, 0, 0.3)';
+                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(107, 70, 193, 0.3)';
                 }}>
                   Réserver maintenant
                 </button>
@@ -247,8 +247,8 @@ const FASEventSection = () => {
                     alignItems: 'center',
                     padding: '16px 32px',
                     background: 'transparent',
-                    color: '#B8860B',
-                    border: '2px solid #B8860B',
+                    color: '#A78BFA',
+                    border: '2px solid #A78BFA',
                     borderRadius: '8px',
                     fontSize: '1rem',
                     fontWeight: '500',
@@ -258,7 +258,7 @@ const FASEventSection = () => {
                     letterSpacing: '0.05em'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'rgba(184, 134, 11, 0.1)';
+                    e.currentTarget.style.background = 'rgba(167, 139, 250, 0.1)';
                     e.currentTarget.style.transform = 'translateY(-2px)';
                   }}
                   onMouseLeave={(e) => {

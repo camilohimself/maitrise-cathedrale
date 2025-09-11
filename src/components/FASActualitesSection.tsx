@@ -14,7 +14,7 @@ const FASActualitesSection = () => {
       <div style={{
         position: 'absolute',
         inset: 0,
-        backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(139, 0, 0, 0.05) 1px, transparent 0)',
+        backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(107, 70, 193, 0.05) 1px, transparent 0)',
         backgroundSize: '40px 40px',
         opacity: 0.3
       }}></div>
@@ -25,15 +25,15 @@ const FASActualitesSection = () => {
           <div style={{
             display: 'inline-block',
             padding: '8px 24px',
-            background: 'rgba(139, 0, 0, 0.1)',
-            border: '1px solid rgba(139, 0, 0, 0.2)',
+            background: 'rgba(107, 70, 193, 0.1)',
+            border: '1px solid rgba(107, 70, 193, 0.2)',
             borderRadius: '50px',
             marginBottom: '24px'
           }}>
             <span style={{
               fontSize: '0.9rem',
               fontWeight: '600',
-              color: '#8B0000',
+              color: '#6B46C1',
               letterSpacing: '0.1em',
               textTransform: 'uppercase'
             }}>
@@ -52,14 +52,14 @@ const FASActualitesSection = () => {
             <span style={{
               display: 'block',
               fontWeight: '700',
-              color: '#8B0000'
+              color: '#6B46C1'
             }}>Festival</span>
           </h2>
           
           <div style={{
             width: '60px',
             height: '2px',
-            background: 'linear-gradient(90deg, #B8860B, rgba(184, 134, 11, 0.3))',
+            background: 'linear-gradient(90deg, #A78BFA, rgba(167, 139, 250, 0.3))',
             margin: '0 auto'
           }}></div>
         </div>
@@ -88,7 +88,7 @@ const FASActualitesSection = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-12px)';
-                e.currentTarget.style.boxShadow = '0 20px 60px rgba(139, 0, 0, 0.15)';
+                e.currentTarget.style.boxShadow = '0 20px 60px rgba(107, 70, 193, 0.15)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
@@ -97,7 +97,7 @@ const FASActualitesSection = () => {
                 {/* Barre de couleur premium */}
                 <div style={{
                   height: '4px',
-                  background: `linear-gradient(90deg, #8B0000, ${index % 2 === 0 ? '#B8860B' : '#A0002A'})`,
+                  background: `linear-gradient(90deg, #6B46C1, ${index % 2 === 0 ? '#A78BFA' : '#8B5CF6'})`,
                   borderRadius: '2px 2px 0 0'
                 }}></div>
                 
@@ -116,15 +116,15 @@ const FASActualitesSection = () => {
                     right: '20px',
                     width: '32px',
                     height: '32px',
-                    background: 'rgba(139, 0, 0, 0.1)',
-                    border: '1px solid rgba(139, 0, 0, 0.2)',
+                    background: 'rgba(107, 70, 193, 0.1)',
+                    border: '1px solid rgba(107, 70, 193, 0.2)',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     fontSize: '0.8rem',
                     fontWeight: '600',
-                    color: '#8B0000'
+                    color: '#6B46C1'
                   }}>
                     {String(index + 1).padStart(2, '0')}
                   </div>
@@ -151,7 +151,7 @@ const FASActualitesSection = () => {
                     <span style={{
                       fontSize: '0.9rem',
                       fontWeight: '600',
-                      color: '#8B0000',
+                      color: '#6B46C1',
                       textTransform: 'uppercase',
                       letterSpacing: '0.05em'
                     }}>
@@ -159,7 +159,7 @@ const FASActualitesSection = () => {
                     </span>
                     <span style={{
                       fontSize: '1.2rem',
-                      color: '#B8860B'
+                      color: '#A78BFA'
                     }}>
                       →
                     </span>

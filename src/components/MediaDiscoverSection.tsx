@@ -184,7 +184,7 @@ const MediaDiscoverSection = memo(() => {
                 padding: '16px 24px',
                 backgroundColor: activeTab === key ? 'var(--color-red)' : 'rgba(255, 255, 255, 0.1)',
                 color: activeTab === key ? 'var(--color-white)' : 'rgba(255, 255, 255, 0.7)',
-                border: activeTab === key ? '2px solid var(--color-red)' : '2px solid rgba(255, 255, 255, 0.2)';
+                border: activeTab === key ? '2px solid var(--color-red)' : '2px solid rgba(255, 255, 255, 0.2)',
                 borderRadius: '50px',
                 fontFamily: 'var(--font-outfit)',
                 fontWeight: '600',

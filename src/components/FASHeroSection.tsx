@@ -11,7 +11,7 @@ const FASHeroSection = () => {
       minHeight: '100vh',
       display: 'flex',
       alignItems: 'center',
-      background: 'linear-gradient(135deg, #8B0000 0%, #A0002A 100%)',
+      background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)',
       color: 'white',
       overflow: 'hidden'
     }}>
@@ -36,7 +36,7 @@ const FASHeroSection = () => {
         <div style={{
           display: 'inline-flex',
           alignItems: 'center',
-          background: 'rgba(184, 134, 11, 0.9)',
+          background: 'rgba(167, 139, 250, 0.9)',
           color: '#1A1A1A',
           fontSize: '0.9rem',
           fontWeight: '600',
@@ -46,8 +46,8 @@ const FASHeroSection = () => {
           marginBottom: '3rem',
           textTransform: 'uppercase',
           backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(184, 134, 11, 0.3)',
-          boxShadow: '0 8px 32px rgba(184, 134, 11, 0.2)'
+          border: '1px solid rgba(167, 139, 250, 0.3)',
+          boxShadow: '0 8px 32px rgba(167, 139, 250, 0.2)'
         }}>
           <span style={{
             width: '8px',
@@ -73,7 +73,7 @@ const FASHeroSection = () => {
           <span style={{
             display: 'block',
             fontWeight: '700',
-            background: 'linear-gradient(45deg, #B8860B, #DAA520)',
+            background: 'linear-gradient(45deg, #A78BFA, #C4B5FD)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
@@ -101,7 +101,7 @@ const FASHeroSection = () => {
           <div style={{
             width: '80px',
             height: '2px',
-            background: 'linear-gradient(90deg, #B8860B, rgba(184, 134, 11, 0.3))',
+            background: 'linear-gradient(90deg, #A78BFA, rgba(167, 139, 250, 0.3))',
             margin: '0 auto 2rem'
           }}></div>
           
@@ -125,8 +125,8 @@ const FASHeroSection = () => {
         }}>
           <button className="btn-gold" style={{
             padding: '16px 40px',
-            background: 'linear-gradient(45deg, #B8860B, #DAA520)',
-            color: '#1A1A1A',
+            background: 'linear-gradient(45deg, #5B21B6, #6B46C1)',
+            color: 'white',
             border: 'none',
             borderRadius: '8px',
             fontSize: '1rem',
@@ -134,16 +134,16 @@ const FASHeroSection = () => {
             letterSpacing: '0.05em',
             cursor: 'pointer',
             transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-            boxShadow: '0 8px 32px rgba(184, 134, 11, 0.3)',
+            boxShadow: '0 8px 32px rgba(107, 70, 193, 0.3)',
             textTransform: 'uppercase'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
-            e.currentTarget.style.boxShadow = '0 16px 48px rgba(184, 134, 11, 0.4)';
+            e.currentTarget.style.boxShadow = '0 16px 48px rgba(107, 70, 193, 0.4)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'translateY(0) scale(1)';
-            e.currentTarget.style.boxShadow = '0 8px 32px rgba(184, 134, 11, 0.3)';
+            e.currentTarget.style.boxShadow = '0 8px 32px rgba(107, 70, 193, 0.3)';
           }}>
             Programme Complet
           </button>
@@ -152,7 +152,7 @@ const FASHeroSection = () => {
             padding: '16px 40px',
             background: 'transparent',
             color: 'white',
-            border: '2px solid rgba(255, 255, 255, 0.6)',
+            border: '2px solid rgba(167, 139, 250, 0.6)',
             borderRadius: '8px',
             fontSize: '1rem',
             fontWeight: '500',
@@ -162,13 +162,13 @@ const FASHeroSection = () => {
             textTransform: 'uppercase'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
-            e.currentTarget.style.borderColor = 'white';
+            e.currentTarget.style.background = 'rgba(167, 139, 250, 0.1)';
+            e.currentTarget.style.borderColor = '#A78BFA';
             e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.background = 'transparent';
-            e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+            e.currentTarget.style.borderColor = 'rgba(167, 139, 250, 0.6)';
             e.currentTarget.style.transform = 'translateY(0)';
           }}>
             Billetterie

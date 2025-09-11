@@ -10,7 +10,9 @@
   --color-gold: #D4A574;      /* Or/Doré - Boutons CTA, accents */
   --color-navy: #1a1340;      /* Navy foncé - Backgrounds sombres */
   --color-red: #8B0000;       /* Rouge bordeaux - Couleur principale rouge */
-  --color-purple: #4A1B87;    /* Violet profond - Festival d'Art Sacré */
+  --color-purple: #6B46C1;    /* Violet principal - Festival d'Art Sacré */
+  --color-purple-light: #A78BFA;  /* Violet clair - Accents FAS */
+  --color-purple-dark: #5B21B6;   /* Violet foncé - CTAs FAS */
   --color-cream: #F5F0E8;     /* Crème/Beige - Sections backgrounds */
   --color-black: #000000;     /* Noir pur */
   --color-white: #FFFFFF;     /* Blanc pur */

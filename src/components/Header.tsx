@@ -86,12 +86,12 @@ const Header = () => {
           }}
           >
             <Image
-              src="/images/logo-mc-final.png"
+              src="/images/logo-mc-couleur.png"
               alt="Maîtrise Cathédrale de Sion"
-              width={250}
-              height={60}
+              width={300}
+              height={80}
               style={{
-                height: '60px',
+                height: '50px',
                 width: 'auto',
                 objectFit: 'contain',
                 objectPosition: 'center'
