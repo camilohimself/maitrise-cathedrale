@@ -2,10 +2,15 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
+import fasComposers from '@/data/fasComposers.json';
 
 const FASHeroCarouselFinal = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [selectedEra, setSelectedEra] = useState('');
+
+  // Récupérer les époques musicales
+  const eras = fasComposers.eras;
 
   // 10 photos optimisées pour le carousel épique
   const carouselImages = [
@@ -396,6 +401,179 @@ const FASHeroCarouselFinal = () => {
       >
         {isPlaying ? '⏸' : '▶'}
       </button>
+
+      {/* Timeline Interactive Renaissance → Moderne */}
+      <div style={{
+        position: 'absolute',
+        bottom: '0',
+        left: '0',
+        right: '0',
+        background: 'linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%)',
+        padding: '40px 0 20px 0',
+        zIndex: 4,
+        backdropFilter: 'blur(20px)'
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 40px'
+        }}>
+          {/* Titre timeline */}
+          <div style={{
+            textAlign: 'center',
+            marginBottom: '30px'
+          }}>
+            <h3 style={{
+              fontSize: '1.2rem',
+              fontWeight: '600',
+              color: 'white',
+              marginBottom: '8px',
+              fontFamily: 'var(--font-spectral), Georgia, serif'
+            }}>
+              Voyage Musical à Travers les Siècles
+            </h3>
+            <p style={{
+              fontSize: '0.9rem',
+              color: 'rgba(255, 255, 255, 0.7)',
+              fontStyle: 'italic'
+            }}>
+              De la Renaissance à l'époque moderne
+            </p>
+          </div>
+
+          {/* Timeline interactive */}
+          <div style={{
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            marginBottom: '20px'
+          }}>
+            {/* Ligne de connexion */}
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '0',
+              right: '0',
+              height: '2px',
+              background: 'linear-gradient(90deg, #D4AF37 0%, #D2374C 35%, #B8860B 65%, #FF6B9D 100%)',
+              transform: 'translateY(-50%)',
+              zIndex: 1
+            }} />
+
+            {/* Points d'époque */}
+            {eras.map((era, index) => (
+              <div
+                key={era.name}
+                style={{
+                  position: 'relative',
+                  zIndex: 2,
+                  cursor: 'pointer',
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}
+                onClick={() => setSelectedEra(selectedEra === era.name ? '' : era.name)}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.1) translateY(-5px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1) translateY(0)';
+                }}
+              >
+                {/* Point d'époque */}
+                <div style={{
+                  width: selectedEra === era.name ? '20px' : '16px',
+                  height: selectedEra === era.name ? '20px' : '16px',
+                  background: `linear-gradient(45deg, ${era.color}, ${era.color}dd)`,
+                  borderRadius: '50%',
+                  border: `3px solid ${selectedEra === era.name ? 'white' : 'rgba(255, 255, 255, 0.5)'}`,
+                  boxShadow: `0 0 ${selectedEra === era.name ? '20px' : '10px'} ${era.color}60`,
+                  transition: 'all 0.3s ease',
+                  margin: '0 auto 12px auto'
+                }} />
+
+                {/* Label époque */}
+                <div style={{
+                  textAlign: 'center',
+                  minWidth: '120px'
+                }}>
+                  <div style={{
+                    fontSize: '0.9rem',
+                    fontWeight: '600',
+                    color: selectedEra === era.name ? era.color : 'white',
+                    marginBottom: '4px',
+                    transition: 'color 0.3s ease'
+                  }}>
+                    {era.name}
+                  </div>
+                  <div style={{
+                    fontSize: '0.7rem',
+                    color: 'rgba(255, 255, 255, 0.6)',
+                    fontStyle: 'italic'
+                  }}>
+                    {era.period}
+                  </div>
+                </div>
+
+                {/* Info détaillée (apparaît au clic) */}
+                {selectedEra === era.name && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '-80px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    background: `linear-gradient(135deg, ${era.color}20, ${era.color}10)`,
+                    border: `1px solid ${era.color}40`,
+                    borderRadius: '12px',
+                    padding: '12px 16px',
+                    minWidth: '200px',
+                    textAlign: 'center',
+                    backdropFilter: 'blur(15px)',
+                    animation: 'fadeInScale 0.4s ease-out'
+                  }}>
+                    <div style={{
+                      fontSize: '0.8rem',
+                      color: era.color,
+                      fontWeight: '600',
+                      marginBottom: '6px'
+                    }}>
+                      {era.characteristics}
+                    </div>
+                    <div style={{
+                      fontSize: '0.7rem',
+                      color: 'rgba(255, 255, 255, 0.8)'
+                    }}>
+                      Compositeurs: {era.composers.length} représenté{era.composers.length > 1 ? 's' : ''}
+                    </div>
+                    
+                    {/* Flèche */}
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '-6px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      width: 0,
+                      height: 0,
+                      borderLeft: '6px solid transparent',
+                      borderRight: '6px solid transparent',
+                      borderTop: `6px solid ${era.color}40`
+                    }} />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Message guide */}
+          <div style={{
+            textAlign: 'center',
+            fontSize: '0.8rem',
+            color: 'rgba(255, 255, 255, 0.6)',
+            fontStyle: 'italic'
+          }}>
+            Cliquez sur une époque pour découvrir ses caractéristiques
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

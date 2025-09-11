@@ -1,8 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import fasEvents from '@/data/fasEvents.json';
+import FASComposerModal from '@/components/FASComposerModal';
 
 interface Event {
   id: number;
@@ -30,6 +32,74 @@ interface Event {
 
 const FASEventSection = () => {
   const events: Event[] = fasEvents.events as Event[];
+  const [selectedComposer, setSelectedComposer] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Mapping compositeurs vers IDs
+  const composerIds: Record<string, string> = {
+    "Chiara Margarita Cozzolani": "cozzolani",
+    "Giovanni Pierluigi da Palestrina": "palestrina",
+    "Antonio Vivaldi": "vivaldi"
+  };
+
+  const openComposerModal = (composerName: string) => {
+    const composerId = composerIds[composerName];
+    if (composerId) {
+      setSelectedComposer(composerId);
+      setIsModalOpen(true);
+    }
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedComposer(null), 300);
+  };
+
+  // Fonction pour rendre les noms de compositeurs cliquables
+  const renderInteractiveDescription = (description: string, event: Event) => {
+    let processedDescription = description;
+    
+    // Liste des compositeurs à rendre cliquables
+    const composerNames = Object.keys(composerIds);
+    
+    // Remplacer chaque nom de compositeur par un lien cliquable
+    composerNames.forEach(name => {
+      if (processedDescription.includes(name)) {
+        const parts = processedDescription.split(name);
+        return (
+          <span>
+            {parts[0]}
+            <button
+              onClick={() => openComposerModal(name)}
+              style={{
+                color: '#D4AF37',
+                background: 'none',
+                border: 'none',
+                textDecoration: 'underline',
+                cursor: 'pointer',
+                fontSize: 'inherit',
+                fontWeight: '600',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = '#FFD700';
+                e.currentTarget.style.textShadow = '0 0 10px rgba(255, 215, 0, 0.5)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = '#D4AF37';
+                e.currentTarget.style.textShadow = 'none';
+              }}
+            >
+              {name}
+            </button>
+            {parts[1]}
+          </span>
+        );
+      }
+    });
+    
+    return processedDescription;
+  };
 
   // Styles CSS pour animations
   const animationStyles = `
@@ -286,10 +356,49 @@ const FASEventSection = () => {
                 fontSize: '1rem',
                 color: 'rgba(255, 255, 255, 0.8)',
                 lineHeight: '1.6',
-                marginBottom: '32px'
+                marginBottom: '16px'
               }}>
                 {events[0].description.substring(0, 200)}...
               </p>
+
+              {/* Compositeur cliquable */}
+              {(events[0] as any).composer && composerIds[(events[0] as any).composer] && (
+                <div style={{ marginBottom: '24px' }}>
+                  <span style={{
+                    color: 'rgba(255, 255, 255, 0.7)',
+                    fontSize: '0.9rem',
+                    marginRight: '8px'
+                  }}>
+                    Compositeur :
+                  </span>
+                  <button
+                    onClick={() => openComposerModal((events[0] as any).composer)}
+                    style={{
+                      background: 'linear-gradient(45deg, #D4AF37, #FFD700)',
+                      color: '#1a1340',
+                      border: 'none',
+                      padding: '6px 16px',
+                      borderRadius: '20px',
+                      fontSize: '0.9rem',
+                      fontWeight: '600',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px) scale(1.05)';
+                      e.currentTarget.style.boxShadow = '0 8px 20px rgba(212, 175, 55, 0.4)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  >
+                    🎼 {(events[0] as any).composer}
+                  </button>
+                </div>
+              )}
 
               {/* Artists tags */}
               <div style={{
@@ -379,8 +488,220 @@ const FASEventSection = () => {
             </div>
           </div>
         )}
+
+        {/* Grille événements secondaires avec badges */}
+        {events.length > 1 && (
+          <div style={{ marginTop: '120px' }}>
+            <h3 style={{
+              fontSize: 'clamp(2rem, 4vw, 2.5rem)',
+              fontWeight: '300',
+              color: 'white',
+              textAlign: 'center',
+              marginBottom: '60px',
+              fontFamily: 'var(--font-spectral), Georgia, serif'
+            }}>
+              Découvrez aussi
+            </h3>
+
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+              gap: '30px'
+            }}>
+              {events.slice(1, 4).map((event, index) => (
+                <div 
+                  key={event.id}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    borderRadius: '20px',
+                    overflow: 'hidden',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    backdropFilter: 'blur(10px)',
+                    position: 'relative'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-8px)';
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
+                    e.currentTarget.style.borderColor = 'rgba(167, 139, 250, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                  }}
+                >
+                  {/* Image de l'événement */}
+                  <div style={{
+                    position: 'relative',
+                    height: '200px',
+                    backgroundColor: 'rgba(167, 139, 250, 0.2)'
+                  }}>
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      width={400}
+                      height={200}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover'
+                      }}
+                    />
+
+                    {/* Badges pour chaque événement */}
+                    <div style={{
+                      position: 'absolute',
+                      top: '12px',
+                      right: '12px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '6px',
+                      alignItems: 'flex-end'
+                    }}>
+                      {generateEventBadges(event).slice(0, 2).map((badge, badgeIndex) => (
+                        <div 
+                          key={badgeIndex}
+                          style={{
+                            ...badge.style,
+                            padding: '6px 12px',
+                            borderRadius: '20px',
+                            fontSize: '0.75rem',
+                            textTransform: 'uppercase',
+                            whiteSpace: 'nowrap',
+                            animation: `fadeInScale 0.6s ease-out ${(index * 0.2) + (badgeIndex * 0.1)}s both`
+                          }}
+                        >
+                          {badge.text}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Contenu carte */}
+                  <div style={{ padding: '24px' }}>
+                    <div style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      marginBottom: '12px'
+                    }}>
+                      <span style={{
+                        backgroundColor: `${fasEvents.categories.find(cat => cat.id === event.category)?.color}20`,
+                        color: fasEvents.categories.find(cat => cat.id === event.category)?.color,
+                        padding: '4px 12px',
+                        borderRadius: '12px',
+                        fontSize: '0.8rem',
+                        fontWeight: '600',
+                        textTransform: 'uppercase'
+                      }}>
+                        {fasEvents.categories.find(cat => cat.id === event.category)?.name}
+                      </span>
+                      <span style={{
+                        fontSize: '0.9rem',
+                        color: 'rgba(255, 255, 255, 0.6)',
+                        fontWeight: '500'
+                      }}>
+                        {event.day} • {event.time}
+                      </span>
+                    </div>
+
+                    <h4 style={{
+                      fontSize: '1.3rem',
+                      fontWeight: '600',
+                      color: 'white',
+                      marginBottom: '8px',
+                      lineHeight: '1.3',
+                      fontFamily: 'var(--font-spectral), Georgia, serif'
+                    }}>
+                      {event.title}
+                    </h4>
+
+                    {event.subtitle && (
+                      <p style={{
+                        fontSize: '1rem',
+                        color: '#D4AF37',
+                        marginBottom: '12px',
+                        fontWeight: '500'
+                      }}>
+                        {event.subtitle}
+                      </p>
+                    )}
+
+                    <p style={{
+                      fontSize: '0.9rem',
+                      color: 'rgba(255, 255, 255, 0.7)',
+                      lineHeight: '1.5',
+                      marginBottom: '16px'
+                    }}>
+                      {event.description.substring(0, 120)}...
+                    </p>
+
+                    {/* Artistes tags */}
+                    <div style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      gap: '8px',
+                      marginBottom: '20px'
+                    }}>
+                      {event.artists.slice(0, 2).map((artist, artistIndex) => (
+                        <span
+                          key={artistIndex}
+                          style={{
+                            background: 'rgba(167, 139, 250, 0.15)',
+                            color: '#A78BFA',
+                            padding: '4px 10px',
+                            borderRadius: '12px',
+                            fontSize: '0.8rem',
+                            fontWeight: '500'
+                          }}
+                        >
+                          {artist}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTA Button */}
+                    <button style={{
+                      width: '100%',
+                      padding: '12px',
+                      background: 'linear-gradient(45deg, #4C1D95, #6B46C1)',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '10px',
+                      fontSize: '0.9rem',
+                      fontWeight: '600',
+                      cursor: 'pointer',
+                      transition: 'all 0.3s ease',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.boxShadow = '0 8px 20px rgba(76, 29, 149, 0.4)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}>
+                      En savoir plus
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
+
+      {/* Modal Compositeur */}
+      <FASComposerModal 
+        composerId={selectedComposer}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </section>
+    </>
   );
 };
 

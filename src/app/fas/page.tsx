@@ -2,6 +2,7 @@ import FASHeroCarouselFinal from '@/components/FASHeroCarouselFinal';
 import FASActualitesSection from '@/components/FASActualitesSection';
 import FASArtistesSection from '@/components/FASArtistesSection';
 import FASEventSection from '@/components/FASEventSection';
+import FASRorateSection from '@/components/FASRorateSection';
 
 export default function FAS() {
   return (
@@ -14,6 +15,7 @@ export default function FAS() {
       <FASActualitesSection />
       <FASArtistesSection />
       <FASEventSection />
+      <FASRorateSection />
     </main>
   );
 }
