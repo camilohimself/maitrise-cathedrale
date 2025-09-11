@@ -39,8 +39,14 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
     date: 'samedi 13 décembre',
     time: '20H00',
     altDate: '14 décembre à 17H00',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800',
-    thumbnail: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
+    image: '/images/artistes/choeur-novantica/novantica-1-hero.jpg',
+    thumbnail: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
+    gallery: [
+      '/images/artistes/choeur-novantica/novantica-1-hero.jpg',
+      '/images/artistes/choeur-novantica/novantica-2-hero.jpg',
+      '/images/artistes/choeur-novantica/novantica-3-hero.jpg',
+      '/images/artistes/choeur-novantica/novantica-4-hero.jpg'
+    ],
     description: `Sous la direction de Bernard Héritier, le Chœur Novantiqua présente un programme exceptionnel mêlant œuvres sacrées et profanes de la Renaissance. Fort de ses 30 années d'expérience, l'ensemble explore les richesses de la polyphonie franco-flamande avec une attention particulière portée aux compositeurs de l'école de Notre-Dame. Ce concert mettra en lumière des pièces rares de Josquin des Prés, Johannes Ockeghem et Pierre de la Rue, interprétées avec la finesse et la précision qui font la renommée internationale de Novantiqua. Un voyage musical au cœur de l'âge d'or de la polyphonie européenne.`
   },
   'ensemble-vocal': {
@@ -50,8 +56,12 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
     date: 'dimanche 21 décembre',
     time: '16H00',
     altDate: null,
-    image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800',
-    thumbnail: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-hero.jpg',
+    thumbnail: '/images/artistes/ecole-maitrisienne/ecole-1-card.jpg',
+    gallery: [
+      '/images/artistes/ecole-maitrisienne/ecole-1-hero.jpg',
+      '/images/artistes/ecole-maitrisienne/ecole-2-hero.jpg'
+    ],
     description: `L'Ensemble Vocal de la Maîtrise de la Cathédrale de Sion présente les somptueuses Vêpres de la Vierge de Claudio Monteverdi. Cette œuvre monumentale, composée en 1610, marque un tournant dans l'histoire de la musique sacrée, alliant avec génie la tradition polyphonique de la Renaissance et les innovations harmoniques du baroque naissant. Sous la direction artistique passionnée de notre chef, les jeunes chanteurs de la Maîtrise donnent vie à cette fresque musicale d'une beauté transcendante, où dialoguent solistes, chœurs et instruments dans une architecture sonore d'une richesse incomparable.`
   },
   'solistes': {
@@ -61,8 +71,14 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
     date: 'mercredi 10 décembre',
     time: '19H30',
     altDate: null,
-    image: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800',
-    thumbnail: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400',
+    image: '/images/artistes/stile-antico/stile-antico-5-hero.webp',
+    thumbnail: '/images/artistes/stile-antico/stile-antico-5-card.webp',
+    gallery: [
+      '/images/artistes/stile-antico/stile-antico-5-hero.webp',
+      '/images/artistes/stile-antico/stile-antico-6-hero.webp',
+      '/images/artistes/choeur-novantica/novantica-3-hero.jpg',
+      '/images/artistes/choeur-novantica/novantica-4-hero.jpg'
+    ],
     description: `Pour cette édition spéciale du Festival d'Art Sacré, nous avons le privilège d'accueillir des solistes de renommée internationale. Au programme : un florilège d'arias et de cantates baroques célébrant l'Avent et la Nativité. Les voix exceptionnelles de nos invités feront résonner les œuvres de Bach, Haendel, Vivaldi et Pergolèse dans l'acoustique unique de notre cathédrale. Un moment de grâce où la virtuosité vocale se met au service de la spiritualité, offrant au public une expérience musicale intense et méditative à l'approche des fêtes de Noël.`
   }
 };

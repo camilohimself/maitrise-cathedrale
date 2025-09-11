@@ -61,7 +61,14 @@ export const fasArtistes = [
   {
     id: "solistes",
     name: "Solistes",
-    image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400",
-    description: "Artistes invités"
+    image: "/images/artistes/stile-antico/stile-antico-3-card.webp",
+    heroImage: "/images/artistes/stile-antico/stile-antico-3-hero.webp",
+    gallery: [
+      "/images/artistes/stile-antico/stile-antico-5-hero.webp",
+      "/images/artistes/stile-antico/stile-antico-6-hero.webp",
+      "/images/artistes/choeur-novantica/novantica-1-hero.jpg",
+      "/images/artistes/choeur-novantica/novantica-2-hero.jpg"
+    ],
+    description: "Artistes invités de renommée internationale"
   }
 ];

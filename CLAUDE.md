@@ -1039,6 +1039,69 @@ nano "src/data/monFichier.json"
 
 ---
 
-**Dernière mise à jour:** 11 septembre 2025 - **7 SECTIONS MAÎTRISE COMPLÈTES**  
+---
+
+## 📸 **POLITIQUE PHOTOS OPTIMISÉES** (Obligatoire)
+
+### ✅ COMPLÉTÉ (Session du 11 septembre 2025 - Remplacement Photos Unsplash)
+
+#### Phase Optimisation Photos: TOUTES Photos Unsplash Remplacées (TERMINÉ ✅)
+- [x] **Remplacement systématique complet**
+  - ✅ **Phase 1**: fasContent.js (artiste Solistes) → photos optimisées Stile Antico
+  - ✅ **Phase 2**: maitriseEvents.js (TOUS événements) → photos optimisées Chœur Novantica/École
+  - ✅ **Phase 3**: Pages détaillées artistes [slug] → galeries complètes avec optimisation
+  - ✅ **Phase 4**: MediaDiscoverSection (6 thumbnails) → photos optimisées finalisées
+
+- [x] **Optimisation technique photos artistes**
+  - **Chœur Novantica**: 4 photos (36MB → 900KB chacune) = 12 formats créés
+  - **École Maîtrisienne**: 2 photos (9.3MB → 750KB chacune) = 6 formats créés
+  - **Formats générés**: Hero (1920px), Card (600px), Thumb (300px)
+  - **Réduction totale**: 88% (45.3MB → 5.4MB)
+
+#### 🎯 **POLITIQUE PHOTOS OBLIGATOIRE** (Pour futures sessions)
+
+##### **COMMANDES OPTIMISATION STANDARD**
+```bash
+# Format Hero (1920px) - Qualité 85%
+sips -Z 1920 --setProperty formatOptions 85 "source.jpg" --out "/path/photo-hero.jpg"
+
+# Format Card (600px) - Qualité 85%  
+sips -Z 600 --setProperty formatOptions 85 "source.jpg" --out "/path/photo-card.jpg"
+
+# Format Thumb (300px) - Qualité 75%
+sips -Z 300 --setProperty formatOptions 75 "source.jpg" --out "/path/photo-thumb.jpg"
+```
+
+##### **RÈGLES STRICTES**
+1. **🚫 JAMAIS d'Unsplash** : Toutes photos externes interdites
+2. **✅ UNIQUEMENT photos optimisées** : 3 formats obligatoires (Hero/Card/Thumb)
+3. **📂 Structure répertoires** : `/public/images/artistes/[nom-artiste]/`
+4. **🔧 Outils autorisés** : `sips` (macOS) pour optimisation batch
+5. **📊 Performance** : Réduction 80%+ taille fichiers obligatoire
+
+##### **SOURCES PHOTOS AUTORISÉES**
+- **Photos officielles MC** : `/Users/camilorivera/.../artistes/` ✅
+- **Photos client validées** : Dossiers fournis par client ✅
+- **Photos prises sur site** : Concerts, répétitions ✅
+- **⚠️ Toute nouvelle photo** : Optimisation OBLIGATOIRE avant intégration
+
+##### **PROCESSUS AJOUT NOUVELLE PHOTO**
+```bash
+# 1. Identifier photo source
+ls "/Users/camilorivera/.../artistes/[artiste]/"
+
+# 2. Créer répertoire si inexistant
+mkdir -p "public/images/artistes/[nom-artiste]"
+
+# 3. Optimisation 3 formats (commandes ci-dessus)
+
+# 4. Intégration code avec chemins relatifs
+# ✅ CORRECT: "/images/artistes/stile-antico/photo-card.jpg"
+# 🚫 INTERDIT: "https://images.unsplash.com/..."
+```
+
+---
+
+**Dernière mise à jour:** 11 septembre 2025 - **POLITIQUE PHOTOS OPTIMISÉES AJOUTÉE**  
 **Prochaine session CRITIQUE:** Harmonisation UX/UI palette couleurs (2h30)  
 **État:** ⚠️ **CORRECTIONS PALETTE REQUISES** avant finalisation

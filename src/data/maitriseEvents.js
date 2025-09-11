@@ -15,7 +15,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de l\'Assomption de la Vierge Marie',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -29,7 +29,7 @@ export const maitriseEvents = [
     description: 'Concert exceptionnel dans le cadre du Sion Festival',
     location: 'Cathédrale de Sion',
     price: '25 CHF',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=280&h=200&fit=crop',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.jpg',
     featured: true
   },
   {
@@ -43,7 +43,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec accompagnement du chantre',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -57,7 +57,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec accompagnement du chantre',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -71,7 +71,7 @@ export const maitriseEvents = [
     description: 'Performance musicale exceptionnelle en soirée',
     location: 'Cathédrale de Sion',
     price: '30 CHF',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=280&h=200&fit=crop',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.jpg',
     featured: true
   },
   {
@@ -85,7 +85,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec accompagnement du chantre',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
 
@@ -101,7 +101,7 @@ export const maitriseEvents = [
     description: 'Messe avec ensemble vocal dans le cadre de la Schubertiade d\'Espace 2',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -115,7 +115,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre', 
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -129,7 +129,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec l\'École maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -143,7 +143,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
 
@@ -159,7 +159,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec l\'École maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -173,7 +173,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de la Dédicace de la cathédrale',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -187,7 +187,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec ensemble vocal et instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -201,7 +201,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
 
@@ -217,7 +217,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de la Toussaint',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -231,7 +231,7 @@ export const maitriseEvents = [
     description: 'Messe de commémoration des fidèles défunts',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -245,7 +245,7 @@ export const maitriseEvents = [
     description: 'Messe commémorative pour les évêques et prêtres défunts',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -259,7 +259,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion', 
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -273,7 +273,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec ensemble vocal et instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -287,7 +287,7 @@ export const maitriseEvents = [
     description: 'Messe en l\'honneur des servants de messe',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -301,7 +301,7 @@ export const maitriseEvents = [
     description: 'Ouverture du temps de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -331,7 +331,7 @@ export const maitriseEvents = [
     description: 'Messe du 2ème dimanche de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -359,7 +359,7 @@ export const maitriseEvents = [
     description: 'Célébration de l\'Immaculée Conception de la Vierge Marie',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -373,7 +373,7 @@ export const maitriseEvents = [
     description: 'Messe du 3ème dimanche de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -387,7 +387,7 @@ export const maitriseEvents = [
     description: 'Messe du 4ème dimanche de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -415,7 +415,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de la naissance du Christ',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -429,7 +429,7 @@ export const maitriseEvents = [
     description: 'Célébration joyeuse du jour de Noël',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -457,7 +457,7 @@ export const maitriseEvents = [
     description: 'Messe dans l\'octave de Noël',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
 
@@ -473,7 +473,7 @@ export const maitriseEvents = [
     description: 'Célébration du Nouvel An liturgique',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -487,7 +487,7 @@ export const maitriseEvents = [
     description: 'Célébration de clôture de l\'Année sainte',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -515,7 +515,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -529,7 +529,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec ensemble vocal et instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -543,7 +543,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
 
@@ -559,7 +559,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec l\'École maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -573,7 +573,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -587,7 +587,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec ensemble vocal et instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -601,7 +601,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
 
@@ -617,7 +617,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec l\'École maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -631,7 +631,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -645,7 +645,7 @@ export const maitriseEvents = [
     description: 'Messe du 4ème dimanche de Carême - Dimanche de Laetare',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -659,7 +659,7 @@ export const maitriseEvents = [
     description: 'Célébration de la solennité de saint Joseph',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -673,7 +673,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -687,7 +687,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle du dimanche des Rameaux',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -701,7 +701,7 @@ export const maitriseEvents = [
     description: 'Concert de musique sacrée pour les Rameaux',
     location: 'Cathédrale de Sion',
     price: '25 CHF',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=280&h=200&fit=crop',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.jpg',
     featured: true
   },
 
@@ -717,7 +717,7 @@ export const maitriseEvents = [
     description: 'Célébration du Chemin de Croix du Vendredi Saint',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -731,7 +731,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de Pâques',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -745,7 +745,7 @@ export const maitriseEvents = [
     description: 'Messe du dimanche in Albis',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -759,7 +759,7 @@ export const maitriseEvents = [
     description: 'Concert de musique sacrée de printemps',
     location: 'Cathédrale de Sion',
     price: '20 CHF',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=280&h=200&fit=crop',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.jpg',
     featured: true
   },
   {
@@ -773,7 +773,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
 
@@ -789,7 +789,7 @@ export const maitriseEvents = [
     description: 'Célébration des premières communions',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -803,7 +803,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -817,7 +817,7 @@ export const maitriseEvents = [
     description: 'Célébration de l\'Ascension du Seigneur',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -831,7 +831,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec ensemble vocal et instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -845,7 +845,7 @@ export const maitriseEvents = [
     description: 'Célébration du sacrement de confirmation',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -859,7 +859,7 @@ export const maitriseEvents = [
     description: 'Célébration de la Sainte Trinité',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
 
@@ -875,7 +875,7 @@ export const maitriseEvents = [
     description: 'Célébration du Saint-Sacrement (Fête-Dieu)',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: true
   },
   {
@@ -889,7 +889,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec l\'École maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -903,7 +903,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -917,7 +917,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec ensemble vocal et instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   },
   {
@@ -931,7 +931,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=200&fit=crop',
+    image: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
     featured: false
   }
 ];
