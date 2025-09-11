@@ -37,14 +37,26 @@ export const fasArtistes = [
   {
     id: "choeur-novantiqua",
     name: "Chœur Novantiqua", 
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400",
+    image: "/images/artistes/choeur-novantica/novantica-1-card.jpg",
+    heroImage: "/images/artistes/choeur-novantica/novantica-1-hero.jpg",
+    gallery: [
+      "/images/artistes/choeur-novantica/novantica-1-hero.jpg",
+      "/images/artistes/choeur-novantica/novantica-2-hero.jpg",
+      "/images/artistes/choeur-novantica/novantica-3-hero.jpg",
+      "/images/artistes/choeur-novantica/novantica-4-hero.jpg"
+    ],
     description: "Direction Bernard Héritier"
   },
   {
     id: "ensemble-vocal",
     name: "Ensemble Vocal",
-    image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400",
-    description: "Maîtrise de la Cathédrale"
+    image: "/images/artistes/ecole-maitrisienne/ecole-1-card.jpg",
+    heroImage: "/images/artistes/ecole-maitrisienne/ecole-1-hero.jpg",
+    gallery: [
+      "/images/artistes/ecole-maitrisienne/ecole-1-hero.jpg",
+      "/images/artistes/ecole-maitrisienne/ecole-2-hero.jpg"
+    ],
+    description: "École Maîtrisienne - Formation d'excellence"
   },
   {
     id: "solistes",
