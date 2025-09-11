@@ -1,11 +1,8 @@
 'use client';
 
 import React from 'react';
-import { maitriseContent } from '@/data/maitriseContent';
 
-export default function EnsembleSection() {
-  const { evi } = maitriseContent;
-
+export default function ChoeurGregorienSection() {
   return (
     <div style={{
       background: 'linear-gradient(135deg, #FAFAF9 0%, #F0F0F0 100%)',
@@ -22,24 +19,23 @@ export default function EnsembleSection() {
         }}>
           {/* Visual Element */}
           <div style={{
-            background: 'linear-gradient(135deg, rgba(227, 50, 65, 0.08) 0%, rgba(212, 165, 116, 0.05) 100%)',
+            background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(227, 50, 65, 0.05) 100%)',
             borderRadius: '24px',
             padding: '48px',
             backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(227, 50, 65, 0.15)',
-            borderLeft: '4px solid #E33241',
+            border: '1px solid rgba(212, 165, 116, 0.2)',
             textAlign: 'center',
             position: 'relative'
           }}>
             <div style={{
               fontSize: '120px',
               marginBottom: '24px',
-              background: 'linear-gradient(45deg, #E33241, #D4A574)',
+              background: 'linear-gradient(45deg, #D4A574, #E33241)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
             }}>
-              ♪
+              ✠
             </div>
             <h3 style={{
               fontSize: '24px',
@@ -47,7 +43,7 @@ export default function EnsembleSection() {
               marginBottom: '16px',
               color: '#1a1340'
             }}>
-              Intégrale Bach
+              Tradition Séculaire
             </h3>
             <p style={{
               fontSize: '16px',
@@ -55,16 +51,16 @@ export default function EnsembleSection() {
               lineHeight: '1.6',
               color: '#1a1340'
             }}>
-              Un projet artistique unique au monde : l'interprétation complète 
-              des cantates de Jean-Sébastien Bach avec instruments d'époque.
+              Le chant grégorien, héritage musical millénaire de l'Église,
+              trouve sa voix authentique dans notre ensemble de voix masculines.
             </p>
-
-            {/* Badge projet */}
+            
+            {/* Badge messe mensuelle */}
             <div style={{
               position: 'absolute',
               top: '20px',
               right: '20px',
-              background: 'rgba(227, 50, 65, 0.15)',
+              background: 'rgba(227, 50, 65, 0.1)',
               border: '1px solid rgba(227, 50, 65, 0.3)',
               color: '#E33241',
               padding: '6px 16px',
@@ -72,7 +68,7 @@ export default function EnsembleSection() {
               fontSize: '12px',
               fontWeight: '700'
             }}>
-              Projet unique
+              4ème dimanche
             </div>
           </div>
 
@@ -80,9 +76,9 @@ export default function EnsembleSection() {
           <div>
             <div style={{
               display: 'inline-block',
-              background: 'rgba(227, 50, 65, 0.1)',
-              border: '1px solid rgba(227, 50, 65, 0.3)',
-              color: '#E33241',
+              background: 'rgba(212, 165, 116, 0.15)',
+              border: '1px solid rgba(212, 165, 116, 0.4)',
+              color: '#D4A574',
               backdropFilter: 'blur(10px)',
               padding: '8px 20px',
               borderRadius: '24px',
@@ -90,7 +86,7 @@ export default function EnsembleSection() {
               fontWeight: '700',
               marginBottom: '24px'
             }}>
-              Ensemble Vocal & Instrumental
+              Chant Sacré
             </div>
 
             <h2 style={{
@@ -99,7 +95,7 @@ export default function EnsembleSection() {
               marginBottom: '24px',
               color: '#1a1340'
             }}>
-              {evi.titre}
+              Le Chœur Grégorien
             </h2>
 
             <p style={{
@@ -109,14 +105,15 @@ export default function EnsembleSection() {
               opacity: '0.9',
               color: '#1a1340'
             }}>
-              {evi.description}
+              Le Chœur Grégorien de la Maîtrise de la Cathédrale est un ensemble de voix masculines 
+              qui interprète le grand trésor du chant grégorien. Son répertoire est essentiellement 
+              axé sur le plain chant, mais aussi sur le chant a capella du Moyen-Âge.
             </p>
 
-            {/* Projet highlight */}
+            {/* Horaire de messe */}
             <div style={{
-              background: 'rgba(227, 50, 65, 0.05)',
-              border: '1px solid rgba(227, 50, 65, 0.15)',
-              borderLeft: '4px solid #E33241',
+              background: 'rgba(227, 50, 65, 0.08)',
+              border: '1px solid rgba(227, 50, 65, 0.2)',
               borderRadius: '16px',
               padding: '24px',
               marginBottom: '40px',
@@ -128,16 +125,28 @@ export default function EnsembleSection() {
                 marginBottom: '8px',
                 color: '#E33241'
               }}>
-                {evi.projet}
+                Animation liturgique
               </h3>
               <p style={{ 
                 opacity: '0.9', 
                 color: '#1a1340',
-                lineHeight: '1.6'
+                marginBottom: '12px'
               }}>
-                Un défi artistique et spirituel monumental, entrepris avec passion et rigueur 
-                pour faire découvrir l'intégralité de l'œuvre sacrée du Cantor de Leipzig.
+                Le Chœur grégorien anime la messe de dix heures le quatrième dimanche du mois.
               </p>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontSize: '14px',
+                color: '#D4A574',
+                fontWeight: '600'
+              }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A574">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Cathédrale de Sion • 10h00
+              </div>
             </div>
 
             <h3 style={{
@@ -146,44 +155,40 @@ export default function EnsembleSection() {
               marginBottom: '24px',
               color: '#1a1340'
             }}>
-              Statistiques du projet
+              Répertoire traditionnel
             </h3>
 
-            {/* Stats */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '16px'
-            }}>
-              {Object.entries(evi.stats).map(([key, value]) => (
-                <div key={key} style={{
-                  textAlign: 'center',
-                  padding: '20px',
-                  background: 'rgba(227, 50, 65, 0.05)',
-                  borderRadius: '12px',
-                  border: '1px solid rgba(227, 50, 65, 0.1)',
-                  borderTop: '3px solid #E33241'
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {[
+                "Plain-chant authentique",
+                "Chant a capella du Moyen-Âge",
+                "Répertoire liturgique traditionnel",
+                "Interprétation selon les manuscrits anciens"
+              ].map((item, idx) => (
+                <div key={idx} style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '16px'
                 }}>
                   <div style={{
-                    fontSize: '32px',
-                    fontWeight: '700',
-                    marginBottom: '8px',
-                    color: '#E33241'
+                    width: '32px',
+                    height: '32px',
+                    background: 'linear-gradient(45deg, #D4A574, #E33241)',
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: '0'
                   }}>
-                    {value}
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                    </svg>
                   </div>
-                  <div style={{
-                    fontSize: '14px',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.1em',
-                    color: '#1a1340',
-                    opacity: '0.7',
-                    fontWeight: '600'
-                  }}>
-                    {key === 'cantates' ? 'Cantates jouées' : 
-                     key === 'musiciens' ? 'Musiciens' : 
-                     'Concerts/an'}
-                  </div>
+                  <span style={{ 
+                    fontSize: '16px', 
+                    opacity: '0.9',
+                    color: '#1a1340'
+                  }}>{item}</span>
                 </div>
               ))}
             </div>

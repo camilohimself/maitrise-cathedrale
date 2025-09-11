@@ -1,4 +1,4 @@
-import FASHeroSection from '@/components/FASHeroSection';
+import FASHeroCarouselFinal from '@/components/FASHeroCarouselFinal';
 import FASActualitesSection from '@/components/FASActualitesSection';
 import FASArtistesSection from '@/components/FASArtistesSection';
 import FASEventSection from '@/components/FASEventSection';
@@ -10,7 +10,7 @@ export default function FAS() {
       background: '#1a1340',
       position: 'relative'
     }}>
-      <FASHeroSection />
+      <FASHeroCarouselFinal />
       <FASActualitesSection />
       <FASArtistesSection />
       <FASEventSection />
