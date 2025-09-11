@@ -4,19 +4,19 @@ export const fasActualites = [
     id: 1,
     title: "Découvrez nos concerts avec les chroniques de Rhône FM",
     link: "#",
-    color: "#E33241"
+    color: "var(--color-red)"
   },
   {
     id: 2,
     title: "Le Sion Festival 2025",
     link: "#",
-    color: "#E33241"
+    color: "var(--color-red)"
   },
   {
     id: 3,
     title: "Les Concerts à ne pas manquer cette année",
     link: "#",
-    color: "#E33241"
+    color: "var(--color-red)"
   }
 ];
 

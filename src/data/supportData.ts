@@ -9,7 +9,7 @@ export const SUPPORT_OPTIONS = [
     benefits: ['Accès privilégié aux concerts', 'Newsletter exclusive', 'Rencontres avec les artistes'],
     cta: 'Devenir Ami',
     link: '/soutenir/amis-maitrise',
-    color: '#B8860B'
+    color: 'var(--color-gold)'
   },
   {
     icon: '💎',
@@ -19,7 +19,7 @@ export const SUPPORT_OPTIONS = [
     benefits: ['Visibilité lors des concerts', 'Déductions fiscales', 'Événements privés'],
     cta: 'Nous contacter',
     link: '/soutenir/partenaires',
-    color: '#8B0000'
+    color: 'var(--color-red)'
   },
   {
     icon: '🎁',
@@ -29,7 +29,7 @@ export const SUPPORT_OPTIONS = [
     benefits: ['Don déductible fiscalement', 'Reçu officiel', 'Impact direct sur la formation'],
     cta: 'Faire un don',
     link: '/soutenir/contact',
-    color: '#B8860B'
+    color: 'var(--color-gold)'
   }
 ] as const;
 

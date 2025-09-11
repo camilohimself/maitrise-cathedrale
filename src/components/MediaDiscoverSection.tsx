@@ -91,7 +91,7 @@ const MediaDiscoverSection = memo(() => {
 
   return (
     <section style={{
-      backgroundColor: '#040A23',
+      backgroundColor: 'var(--color-navy)',
       padding: '120px 0',
       position: 'relative',
       overflow: 'hidden',
@@ -129,7 +129,7 @@ const MediaDiscoverSection = memo(() => {
             backgroundColor: 'rgba(184, 134, 11, 0.2)',
             border: '1px solid rgba(184, 134, 11, 0.3)',
             borderRadius: '30px',
-            color: '#B8860B',
+            color: 'var(--color-gold)',
             fontFamily: 'var(--font-outfit)',
             fontSize: '0.9rem',
             fontWeight: '600',
@@ -144,7 +144,7 @@ const MediaDiscoverSection = memo(() => {
             fontFamily: 'var(--font-spectral)',
             fontSize: 'clamp(2.5rem, 5vw, 4rem)',
             fontWeight: '700',
-            color: '#FFFFFF',
+            color: 'var(--color-white)',
             marginBottom: '1.5rem',
             lineHeight: 1.1,
           }}>
@@ -182,9 +182,9 @@ const MediaDiscoverSection = memo(() => {
                 alignItems: 'center',
                 gap: '10px',
                 padding: '16px 24px',
-                backgroundColor: activeTab === key ? '#8B0000' : 'rgba(255, 255, 255, 0.1)',
-                color: activeTab === key ? '#FFFFFF' : 'rgba(255, 255, 255, 0.7)',
-                border: activeTab === key ? '2px solid #8B0000' : '2px solid rgba(255, 255, 255, 0.2)',
+                backgroundColor: activeTab === key ? 'var(--color-red)' : 'rgba(255, 255, 255, 0.1)',
+                color: activeTab === key ? 'var(--color-white)' : 'rgba(255, 255, 255, 0.7)',
+                border: activeTab === key ? '2px solid var(--color-red)' : '2px solid rgba(255, 255, 255, 0.2)';
                 borderRadius: '50px',
                 fontFamily: 'var(--font-outfit)',
                 fontWeight: '600',
@@ -216,7 +216,7 @@ const MediaDiscoverSection = memo(() => {
                 {key === 'youtube' && (
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M23 12s0-3.85-.55-5.7c-.32-1.12-1.27-2.01-2.4-2.26C18.25 4 12 4 12 4s-6.25 0-8.05.04c-1.13.25-2.08 1.14-2.4 2.26C1 8.15 1 12 1 12s0 3.85.55 5.7c.32 1.12 1.27 2.01 2.4 2.26C5.75 20 12 20 12 20s6.25 0 8.05-.04c1.13-.25 2.08-1.14 2.4-2.26C23 15.85 23 12 23 12z"/>
-                    <polygon points="10,15 15,12 10,9" fill={activeTab === key ? '#8B0000' : 'rgba(255,255,255,0.7)'}/>
+                    <polygon points="10,15 15,12 10,9" fill={activeTab === key ? 'var(--color-red)' : 'rgba(255,255,255,0.7)'}/>
                   </svg>
                 )}
                 {key === 'soundcloud' && (
@@ -300,7 +300,7 @@ const MediaDiscoverSection = memo(() => {
                   {!item.embedId && (
                     <div style={{
                       backgroundColor: 'rgba(0, 0, 0, 0.7)',
-                      color: '#FFFFFF',
+                      color: 'var(--color-white)',
                       padding: '12px 20px',
                       borderRadius: '25px',
                       fontFamily: 'var(--font-outfit)',
@@ -335,7 +335,7 @@ const MediaDiscoverSection = memo(() => {
                       justifyContent: 'center',
                       cursor: 'pointer',
                     }}>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M8 5v14l11-7z"/>
                       </svg>
                     </div>
@@ -348,7 +348,7 @@ const MediaDiscoverSection = memo(() => {
                       bottom: '10px',
                       right: '10px',
                       backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                      color: '#FFFFFF',
+                      color: 'var(--color-white)',
                       padding: '4px 8px',
                       borderRadius: '4px',
                       fontFamily: 'var(--font-outfit)',
@@ -370,7 +370,7 @@ const MediaDiscoverSection = memo(() => {
                   }}>
                     <span style={{
                       backgroundColor: 'rgba(184, 134, 11, 0.2)',
-                      color: '#B8860B',
+                      color: 'var(--color-gold)',
                       padding: '2px 8px',
                       borderRadius: '8px',
                       fontFamily: 'var(--font-outfit)',
@@ -393,7 +393,7 @@ const MediaDiscoverSection = memo(() => {
                     fontFamily: 'var(--font-spectral)',
                     fontSize: '1.3rem',
                     fontWeight: '600',
-                    color: '#FFFFFF',
+                    color: 'var(--color-white)',
                     marginBottom: '0.5rem',
                     lineHeight: 1.3,
                   }}>
@@ -434,7 +434,7 @@ const MediaDiscoverSection = memo(() => {
               backgroundColor: 'rgba(184, 134, 11, 0.1)',
               borderRadius: '20px',
             }}>
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#B8860B" strokeWidth="2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" strokeWidth="2">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                 <circle cx="8.5" cy="8.5" r="1.5"/>
                 <polyline points="21,15 16,10 5,21"/>
@@ -443,7 +443,7 @@ const MediaDiscoverSection = memo(() => {
             <h3 style={{
               fontFamily: 'var(--font-spectral)',
               fontSize: '1.5rem',
-              color: '#FFFFFF',
+              color: 'var(--color-white)',
               marginBottom: '1rem',
             }}>
               Galerie Photos
@@ -473,8 +473,8 @@ const MediaDiscoverSection = memo(() => {
                 justifyContent: 'center',
                 padding: '18px 40px',
                 backgroundColor: 'transparent',
-                color: '#B8860B',
-                border: '2px solid #B8860B',
+                color: 'var(--color-gold)',
+                border: '2px solid var(--color-gold)',
                 borderRadius: '50px',
                 fontFamily: 'var(--font-outfit)',
                 fontWeight: '600',
@@ -484,13 +484,13 @@ const MediaDiscoverSection = memo(() => {
                 backdropFilter: 'blur(10px)',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#B8860B';
-                e.currentTarget.style.color = '#040A23';
+                e.currentTarget.style.backgroundColor = 'var(--color-gold)';
+                e.currentTarget.style.color = 'var(--color-navy)';
                 e.currentTarget.style.transform = 'translateY(-3px)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = '#B8860B';
+                e.currentTarget.style.color = 'var(--color-gold)';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >

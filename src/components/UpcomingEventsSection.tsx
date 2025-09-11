@@ -39,14 +39,14 @@ const UpcomingEventsSection = memo(() => {
 
   const getPriceColor = (price: string) => {
     if (price.toLowerCase().includes('gratuit') || price.toLowerCase().includes('libre')) {
-      return '#28A745';
+      return 'var(--color-success, #28A745)';
     }
-    return '#B8860B';
+    return 'var(--color-gold)';
   };
 
   return (
     <section style={{
-      backgroundColor: '#FFFFFF',
+      backgroundColor: 'var(--color-white)',
       padding: '120px 0',
       position: 'relative',
     }}>
@@ -64,8 +64,8 @@ const UpcomingEventsSection = memo(() => {
           <div style={{
             display: 'inline-block',
             padding: '8px 20px',
-            backgroundColor: 'rgba(184, 134, 11, 0.1)',
-            color: '#B8860B',
+            backgroundColor: 'var(--color-gold-transparent)',
+            color: 'var(--color-gold)',
             borderRadius: '25px',
             fontFamily: 'var(--font-outfit)',
             fontSize: '0.9rem',
@@ -81,7 +81,7 @@ const UpcomingEventsSection = memo(() => {
             fontFamily: 'var(--font-spectral)',
             fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
             fontWeight: '700',
-            color: '#8B0000',
+            color: 'var(--color-red)',
             marginBottom: '1rem',
             lineHeight: 1.2,
           }}>
@@ -92,7 +92,7 @@ const UpcomingEventsSection = memo(() => {
             fontFamily: 'var(--font-outfit)',
             fontSize: '1.2rem',
             fontWeight: '300',
-            color: '#666',
+            color: 'var(--color-navy)',
             maxWidth: '600px',
             margin: '0 auto',
             lineHeight: 1.6,
@@ -112,7 +112,7 @@ const UpcomingEventsSection = memo(() => {
             <div
               key={event.id}
               style={{
-                backgroundColor: '#FAFAFA',
+                backgroundColor: 'var(--color-cream)',
                 borderRadius: '20px',
                 padding: '2rem',
                 border: '2px solid transparent',
@@ -123,13 +123,13 @@ const UpcomingEventsSection = memo(() => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.backgroundColor = '#FFFFFF';
+                e.currentTarget.style.backgroundColor = 'var(--color-white)';
                 e.currentTarget.style.borderColor = 'rgba(139, 0, 0, 0.2)';
                 e.currentTarget.style.boxShadow = '0 15px 35px rgba(139, 0, 0, 0.12)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.backgroundColor = '#FAFAFA';
+                e.currentTarget.style.backgroundColor = 'var(--color-cream)';
                 e.currentTarget.style.borderColor = 'transparent';
                 e.currentTarget.style.boxShadow = 'none';
               }}
@@ -142,7 +142,7 @@ const UpcomingEventsSection = memo(() => {
                   right: '1rem',
                   width: '12px',
                   height: '12px',
-                  backgroundColor: '#8B0000',
+                  backgroundColor: 'var(--color-red)',
                   borderRadius: '50%',
                   boxShadow: '0 0 0 3px rgba(139, 0, 0, 0.2)',
                 }} />
@@ -162,9 +162,9 @@ const UpcomingEventsSection = memo(() => {
                   justifyContent: 'center',
                   width: '80px',
                   height: '80px',
-                  backgroundColor: '#8B0000',
+                  backgroundColor: 'var(--color-red)',
                   borderRadius: '50%',
-                  color: '#FFFFFF',
+                  color: 'var(--color-white)',
                   flexShrink: 0,
                 }}>
                   <span style={{
@@ -202,7 +202,7 @@ const UpcomingEventsSection = memo(() => {
                       fontFamily: 'var(--font-outfit)',
                       fontSize: '0.8rem',
                       fontWeight: '600',
-                      color: '#B8860B',
+                      color: 'var(--color-gold)',
                       textTransform: 'uppercase',
                       letterSpacing: '1px',
                     }}>
@@ -215,7 +215,7 @@ const UpcomingEventsSection = memo(() => {
                     fontFamily: 'var(--font-spectral)',
                     fontSize: '1.4rem',
                     fontWeight: '700',
-                    color: '#8B0000',
+                    color: 'var(--color-red)',
                     marginBottom: '0.5rem',
                     lineHeight: 1.3,
                   }}>
@@ -226,7 +226,7 @@ const UpcomingEventsSection = memo(() => {
                   <div style={{
                     fontFamily: 'var(--font-outfit)',
                     fontSize: '0.9rem',
-                    color: '#666',
+                    color: 'var(--color-navy)',
                     marginBottom: '1rem',
                   }}>
                     <div>{event.time} • {event.location}</div>
@@ -238,7 +238,7 @@ const UpcomingEventsSection = memo(() => {
               <p style={{
                 fontFamily: 'var(--font-outfit)',
                 fontSize: '0.9rem',
-                color: '#666',
+                color: 'var(--color-navy)',
                 lineHeight: 1.5,
                 marginBottom: '1.5rem',
               }}>
@@ -266,7 +266,7 @@ const UpcomingEventsSection = memo(() => {
                 <div style={{
                   display: 'flex',
                   alignItems: 'center',
-                  color: '#8B0000',
+                  color: 'var(--color-red)',
                   fontFamily: 'var(--font-outfit)',
                   fontWeight: '600',
                   fontSize: '0.9rem',
@@ -294,8 +294,8 @@ const UpcomingEventsSection = memo(() => {
               justifyContent: 'center',
               padding: '16px 36px',
               backgroundColor: 'transparent',
-              color: '#8B0000',
-              border: '2px solid #8B0000',
+              color: 'var(--color-red)',
+              border: '2px solid var(--color-red)',
               borderRadius: '50px',
               fontFamily: 'var(--font-outfit)',
               fontWeight: '600',
@@ -306,13 +306,13 @@ const UpcomingEventsSection = memo(() => {
               overflow: 'hidden',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#8B0000';
-              e.currentTarget.style.color = '#FFFFFF';
+              e.currentTarget.style.backgroundColor = 'var(--color-red)';
+              e.currentTarget.style.color = 'var(--color-white)';
               e.currentTarget.style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '#8B0000';
+              e.currentTarget.style.color = 'var(--color-red)';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >

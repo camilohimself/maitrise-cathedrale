@@ -1,12 +1,12 @@
 // Constantes UI externalisées - Performance Dr Claude
 
 export const EVENT_TYPE_CONFIG: Record<string, { icon: string; color: string }> = {
-  'Festival': { icon: 'star', color: '#8B0000' },
-  'Concert': { icon: 'music', color: '#B8860B' },
-  'Cantate': { icon: 'note', color: '#8B0000' },
-  'Formation': { icon: 'education', color: '#B8860B' },
-  'Famille': { icon: 'community', color: '#8B0000' },
-  'Spectacle': { icon: 'performance', color: '#B8860B' },
+  'Festival': { icon: 'star', color: 'var(--color-red)' },
+  'Concert': { icon: 'music', color: 'var(--color-gold)' },
+  'Cantate': { icon: 'note', color: 'var(--color-red)' },
+  'Formation': { icon: 'education', color: 'var(--color-gold)' },
+  'Famille': { icon: 'community', color: 'var(--color-red)' },
+  'Spectacle': { icon: 'performance', color: 'var(--color-gold)' },
 } as const;
 
 export const MEDIA_TAB_CONFIG = {

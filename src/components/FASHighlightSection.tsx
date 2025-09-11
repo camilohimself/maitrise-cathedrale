@@ -43,7 +43,7 @@ const FASHighlightSection = () => {
 
   return (
     <section style={{
-      backgroundColor: '#FAFAFA',
+      backgroundColor: 'var(--color-cream)',
       padding: '120px 0',
       position: 'relative',
     }}>
@@ -67,7 +67,7 @@ const FASHighlightSection = () => {
             backgroundColor: 'rgba(139, 0, 0, 0.1)',
             border: '2px solid rgba(139, 0, 0, 0.3)',
             borderRadius: '50px',
-            color: '#8B0000',
+            color: 'var(--color-red)',
             fontFamily: 'var(--font-outfit)',
             fontSize: '14px',
             fontWeight: '700',
@@ -80,7 +80,7 @@ const FASHighlightSection = () => {
             <div style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(135deg, rgba(184, 134, 11, 0.1), transparent)',
+              background: 'linear-gradient(135deg, var(--color-gold-transparent), transparent)',
             }} />
             <span style={{ position: 'relative', zIndex: 1 }}>
               20ème Édition • 2025-2026
@@ -91,7 +91,7 @@ const FASHighlightSection = () => {
             fontFamily: 'var(--font-spectral)',
             fontSize: 'clamp(2.5rem, 5vw, 4rem)',
             fontWeight: '700',
-            color: '#8B0000',
+            color: 'var(--color-red)',
             marginBottom: '1.5rem',
             lineHeight: 1.1,
           }}>
@@ -102,14 +102,14 @@ const FASHighlightSection = () => {
             fontFamily: 'var(--font-outfit)',
             fontSize: '1.3rem',
             fontWeight: '300',
-            color: '#666',
+            color: 'var(--color-navy)',
             maxWidth: '700px',
             margin: '0 auto',
             lineHeight: 1.6,
           }}>
             Du 30 novembre 2025 au 4 janvier 2026
             <br />
-            <span style={{ color: '#B8860B', fontWeight: '500' }}>
+            <span style={{ color: 'var(--color-gold)', fontWeight: '500' }}>
               Deux décennies d'excellence artistique et spirituelle
             </span>
           </p>
@@ -126,7 +126,7 @@ const FASHighlightSection = () => {
             <div
               key={event.id}
               style={{
-                backgroundColor: '#FFFFFF',
+                backgroundColor: 'var(--color-white)',
                 borderRadius: '20px',
                 overflow: 'hidden',
                 border: '2px solid rgba(139, 0, 0, 0.1)',
@@ -152,8 +152,8 @@ const FASHighlightSection = () => {
                   top: '1rem',
                   right: '1rem',
                   zIndex: 2,
-                  backgroundColor: '#B8860B',
-                  color: '#FFFFFF',
+                  backgroundColor: 'var(--color-gold)',
+                  color: 'var(--color-white)',
                   padding: '4px 12px',
                   borderRadius: '12px',
                   fontFamily: 'var(--font-outfit)',
@@ -184,7 +184,7 @@ const FASHighlightSection = () => {
                 <div style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%)',
+                  background: 'linear-gradient(180deg, transparent 0%, var(--color-dark-overlay) 100%)',
                 }} />
               </div>
 
@@ -202,13 +202,13 @@ const FASHighlightSection = () => {
                     fontFamily: 'var(--font-outfit)',
                     fontSize: '0.9rem',
                     fontWeight: '600',
-                    color: '#B8860B',
+                    color: 'var(--color-gold)',
                   }}>
                     {event.date} • {event.time}
                   </span>
                   <span style={{
                     backgroundColor: 'rgba(139, 0, 0, 0.1)',
-                    color: '#8B0000',
+                    color: 'var(--color-red)',
                     padding: '2px 8px',
                     borderRadius: '8px',
                     fontFamily: 'var(--font-outfit)',
@@ -226,7 +226,7 @@ const FASHighlightSection = () => {
                   fontFamily: 'var(--font-spectral)',
                   fontSize: '1.5rem',
                   fontWeight: '700',
-                  color: '#8B0000',
+                  color: 'var(--color-red)',
                   marginBottom: '0.5rem',
                   lineHeight: 1.3,
                 }}>
@@ -238,7 +238,7 @@ const FASHighlightSection = () => {
                   fontFamily: 'var(--font-outfit)',
                   fontSize: '0.9rem',
                   fontWeight: '500',
-                  color: '#B8860B',
+                  color: 'var(--color-gold)',
                   marginBottom: '1rem',
                   lineHeight: 1.4,
                 }}>
@@ -249,7 +249,7 @@ const FASHighlightSection = () => {
                 <p style={{
                   fontFamily: 'var(--font-outfit)',
                   fontSize: '0.9rem',
-                  color: '#666',
+                  color: 'var(--color-navy)',
                   lineHeight: 1.5,
                   marginBottom: '1.5rem',
                 }}>
@@ -260,7 +260,7 @@ const FASHighlightSection = () => {
                 <div style={{
                   display: 'flex',
                   alignItems: 'center',
-                  color: '#8B0000',
+                  color: 'var(--color-red)',
                   fontFamily: 'var(--font-outfit)',
                   fontWeight: '600',
                   fontSize: '0.9rem',
@@ -287,8 +287,8 @@ const FASHighlightSection = () => {
               alignItems: 'center',
               justifyContent: 'center',
               padding: '18px 40px',
-              backgroundColor: '#8B0000',
-              color: '#FFFFFF',
+              backgroundColor: 'var(--color-red)',
+              color: 'var(--color-white)',
               borderRadius: '50px',
               fontFamily: 'var(--font-outfit)',
               fontWeight: '600',

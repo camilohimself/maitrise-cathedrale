@@ -37,7 +37,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
     >
       <div
         style={{
-          backgroundColor: '#FFFFFF',
+          backgroundColor: 'var(--color-white)',
           borderRadius: '20px',
           maxWidth: item.type === 'youtube' ? '1200px' : '800px',
           width: '100%',
@@ -55,7 +55,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
           justifyContent: 'space-between',
           padding: '1.5rem 2rem',
           borderBottom: '1px solid rgba(139, 0, 0, 0.1)',
-          backgroundColor: '#F8F9FA',
+          backgroundColor: 'var(--color-cream)',
         }}>
           <div style={{
             display: 'flex',
@@ -74,7 +74,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
               {item.type === 'youtube' ? (
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
                   <path d="M23 12s0-3.85-.55-5.7c-.32-1.12-1.27-2.01-2.4-2.26C18.25 4 12 4 12 4s-6.25 0-8.05.04c-1.13.25-2.08 1.14-2.4 2.26C1 8.15 1 12 1 12s0 3.85.55 5.7c.32 1.12 1.27 2.01 2.4 2.26C5.75 20 12 20 12 20s6.25 0 8.05-.04c1.13-.25 2.08-1.14 2.4-2.26C23 15.85 23 12 23 12z"/>
-                  <polygon points="10,15 15,12 10,9" fill="#FF0000"/>
+                  <polygon points="10,15 15,12 10,9" fill="currentColor"/>
                 </svg>
               ) : (
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
@@ -88,7 +88,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
                 fontFamily: 'var(--font-spectral)',
                 fontSize: '1.1rem',
                 fontWeight: '600',
-                color: '#8B0000',
+                color: 'var(--color-red)',
                 margin: 0,
                 lineHeight: 1.2,
               }}>
@@ -97,7 +97,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
               <p style={{
                 fontFamily: 'var(--font-outfit)',
                 fontSize: '0.8rem',
-                color: '#666',
+                color: 'var(--color-navy)',
                 margin: 0,
                 textTransform: 'uppercase',
                 fontWeight: '500',
@@ -123,13 +123,13 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
               transition: 'all 0.3s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#8B0000';
-              e.currentTarget.style.color = '#FFFFFF';
+              e.currentTarget.style.backgroundColor = 'var(--color-red)';
+              e.currentTarget.style.color = 'var(--color-white)';
               e.currentTarget.style.transform = 'scale(1.1)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'rgba(139, 0, 0, 0.1)';
-              e.currentTarget.style.color = '#8B0000';
+              e.currentTarget.style.color = 'var(--color-red)';
               e.currentTarget.style.transform = 'scale(1)';
             }}
           >
@@ -144,7 +144,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
         <div style={{
           position: 'relative',
           aspectRatio: item.type === 'youtube' ? '16/9' : '16/9',
-          backgroundColor: '#000',
+          backgroundColor: 'var(--color-black)',
         }}>
           {item.embedId ? (
             <iframe
@@ -167,7 +167,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
               alignItems: 'center',
               justifyContent: 'center',
               height: '100%',
-              backgroundColor: '#040A23',
+              backgroundColor: 'var(--color-navy)',
               color: '#FFFFFF',
               backgroundImage: `url(${item.thumbnailUrl})`,
               backgroundSize: 'cover',
@@ -190,7 +190,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
                   fontFamily: 'var(--font-spectral)',
                   fontSize: '1.3rem',
                   marginBottom: '0.5rem',
-                  color: '#FFFFFF',
+                  color: 'var(--color-white)',
                 }}>
                   {item.type === 'youtube' ? 'Vidéo YouTube' : 'Audio SoundCloud'}
                 </h4>
@@ -211,7 +211,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
             <div style={{
               position: 'absolute',
               inset: 0,
-              backgroundColor: '#040A23',
+              backgroundColor: 'var(--color-navy)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -220,7 +220,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
                 width: '50px',
                 height: '50px',
                 border: '3px solid rgba(184, 134, 11, 0.3)',
-                borderTop: '3px solid #B8860B',
+                borderTop: '3px solid var(--color-gold)',
                 borderRadius: '50%',
                 animation: 'spin 1s linear infinite',
               }} />
@@ -237,7 +237,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
         {/* Content info */}
         <div style={{
           padding: '2rem',
-          backgroundColor: '#FFFFFF',
+          backgroundColor: 'var(--color-white)',
         }}>
           <div style={{
             display: 'flex',
@@ -259,7 +259,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
               {item.category}
             </span>
             <span style={{
-              color: '#999',
+              color: 'var(--color-navy)',
               fontSize: '0.9rem',
               fontFamily: 'var(--font-outfit)',
             }}>

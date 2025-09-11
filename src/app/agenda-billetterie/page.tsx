@@ -129,7 +129,7 @@ export default function AgendaBilletterie() {
                 }}
                 onFocus={(e) => {
                   e.currentTarget.style.borderColor = 'var(--color-gold)';
-                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(212, 165, 116, 0.1)';
+                  e.currentTarget.style.boxShadow = '0 0 0 3px var(--color-gold-transparent)';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.1)';
@@ -345,7 +345,7 @@ export default function AgendaBilletterie() {
                 style={{
                   marginTop: 'var(--spacing-lg)',
                   padding: '12px 24px',
-                  backgroundColor: '#8B0000',
+                  backgroundColor: 'var(--color-red)',
                   color: 'var(--color-white)',
                   border: 'none',
                   borderRadius: 'var(--radius-sm)',
