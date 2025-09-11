@@ -2,16 +2,16 @@
 
 import React, { memo, useMemo, useCallback } from 'react';
 import Link from 'next/link';
-import { events } from '@/data/eventsData';
+import { maitriseEvents, getFeaturedEvents } from '@/data/maitriseEvents';
 import { EVENT_TYPE_CONFIG } from '@/data/uiConstants';
 
 const UpcomingEventsSection = memo(() => {
   // Performance Dr Claude: Memoization des événements
   const upcomingEvents = useMemo(() => 
-    events
-      .filter(event => event.featured || event.category === 'Concert' || event.category === 'Festival')
+    maitriseEvents
+      .filter(event => event.featured)
       .slice(0, 4),
-    [events]
+    []
   );
 
   // Performance Dr Claude: Fonction externalisée

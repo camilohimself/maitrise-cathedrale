@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import EventCard from '@/components/EventCard';
 import Newsletter from '@/components/Newsletter';
-import { maitriseEvents, getEventsByType, getEventsByMonth, getFeaturedEvents } from '@/data/maitriseEvents';
+import { maitriseEvents } from '@/data/maitriseEvents';
 
 export default function AgendaBilletterie() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -77,7 +77,7 @@ export default function AgendaBilletterie() {
               fontFamily: 'var(--font-spectral)',
               fontSize: 'var(--text-hero)',
               fontWeight: 'var(--font-extrabold)',
-              color: '#B8860B',
+              color: 'var(--color-gold)',
               marginBottom: 'var(--spacing-md)',
               letterSpacing: '-2px',
             }}>
@@ -114,8 +114,8 @@ export default function AgendaBilletterie() {
                   transition: 'all var(--transition-base)',
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = '#B8860B';
-                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(184, 134, 11, 0.1)';
+                  e.currentTarget.style.borderColor = 'var(--color-gold)';
+                  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(212, 165, 116, 0.1)';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.1)';
@@ -128,7 +128,7 @@ export default function AgendaBilletterie() {
                 right: '20px',
                 top: '50%',
                 transform: 'translateY(-50%)',
-                color: '#B8860B',
+                color: 'var(--color-gold)',
               }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"/>
