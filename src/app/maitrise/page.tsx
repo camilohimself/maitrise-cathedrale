@@ -13,8 +13,8 @@ export default function MaitrisePage() {
     <div style={{ backgroundColor: '#fafafa', minHeight: '100vh' }}>
       <MaitriseHeroSection />
       <DirectionSection />
-      <OrganistesSection />
       <EnsembleSection />
+      <OrganistesSection />
       <EcoleSection />
       <ChoeurGregorienSection />
       <ChapelleMusicaleSection />

@@ -156,10 +156,7 @@ const FASHeroCarouselFinal = () => {
       }}>
         <div style={{
           textAlign: 'center',
-          maxWidth: '800px',
-          transform: `translateY(${currentSlide % 2 === 0 ? '0' : '-20px'})`,
-          transition: 'all 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
-          opacity: 1
+          maxWidth: '800px'
         }}>
           
           {/* Badge Festival */}

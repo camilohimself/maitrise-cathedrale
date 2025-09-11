@@ -49,7 +49,7 @@ export default function DirectionSection() {
               fontSize: '48px',
               fontWeight: '300',
               marginBottom: '16px',
-              color: '#2c2c2c'
+              color: '#1a1340'
             }}>
               Direction Musicale
             </h2>
@@ -65,7 +65,8 @@ export default function DirectionSection() {
             
             <p style={{
               fontSize: '18px',
-              color: '#666',
+              color: '#1a1340',
+              opacity: '0.7',
               marginBottom: '32px'
             }}>
               {direction.titre}
@@ -77,7 +78,7 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#2c2c2c',
+                color: '#1a1340',
                 marginBottom: '16px'
               }}>
                 Formation
@@ -85,7 +86,8 @@ export default function DirectionSection() {
               <p style={{
                 fontSize: '16px',
                 lineHeight: '1.8',
-                color: '#666'
+                color: '#1a1340',
+              opacity: '0.7'
               }}>
                 {direction.bio.formation}
               </p>
@@ -97,7 +99,7 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#2c2c2c',
+                color: '#1a1340',
                 marginBottom: '16px'
               }}>
                 Expérience
@@ -105,7 +107,8 @@ export default function DirectionSection() {
               <p style={{
                 fontSize: '16px',
                 lineHeight: '1.8',
-                color: '#666'
+                color: '#1a1340',
+              opacity: '0.7'
               }}>
                 {direction.bio.experience}
               </p>
@@ -117,7 +120,7 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#2c2c2c',
+                color: '#1a1340',
                 marginBottom: '16px'
               }}>
                 Spécialités
@@ -125,7 +128,7 @@ export default function DirectionSection() {
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 {direction.bio.specialites.map((spec, idx) => (
                   <span key={idx} style={{
-                    background: 'linear-gradient(45deg, #D4A574, #E6C068)',
+                    background: '#D4A574',
                     color: '#ffffff',
                     padding: '8px 20px',
                     borderRadius: '24px',

@@ -93,7 +93,7 @@ export default function EcoleSection() {
                   <div style={{
                     width: '32px',
                     height: '32px',
-                    background: 'linear-gradient(45deg, #FFD700, #FFA500)',
+                    background: '#D4A574',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -122,7 +122,7 @@ export default function EcoleSection() {
             <div style={{
               fontSize: '120px',
               marginBottom: '24px',
-              background: 'linear-gradient(45deg, #FFD700, #FFA500)',
+              background: 'linear-gradient(45deg, #D4A574, #D4A574)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
