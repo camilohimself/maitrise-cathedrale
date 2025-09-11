@@ -44,7 +44,8 @@ export default function ChapelleMusicaleSection() {
             <h2 style={{
               fontSize: '48px',
               fontWeight: '300',
-              marginBottom: '24px'
+              marginBottom: '24px',
+              color: '#ffffff'
             }}>
               La Chapelle Musicale
             </h2>

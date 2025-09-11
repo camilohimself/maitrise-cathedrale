@@ -14,8 +14,8 @@ export default function MaitrisePage() {
       <MaitriseHeroSection />
       <DirectionSection />
       <EnsembleSection />
-      <OrganistesSection />
       <EcoleSection />
+      <OrganistesSection />
       <ChoeurGregorienSection />
       <ChapelleMusicaleSection />
     </div>

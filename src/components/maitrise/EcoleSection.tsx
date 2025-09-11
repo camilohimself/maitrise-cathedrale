@@ -40,7 +40,8 @@ export default function EcoleSection() {
             <h2 style={{
               fontSize: '48px',
               fontWeight: '300',
-              marginBottom: '24px'
+              marginBottom: '24px',
+              color: '#ffffff'
             }}>
               {ecole.titre}
             </h2>
