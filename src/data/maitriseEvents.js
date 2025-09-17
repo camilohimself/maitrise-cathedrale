@@ -501,7 +501,7 @@ export const maitriseEvents = [
     description: 'Concert exceptionnel du prestigieux ensemble britannique dans le cadre du 20ème Festival d\'Art Sacré',
     location: 'Cathédrale de Sion',
     price: '45 CHF',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=280&h=200&fit=crop',
+    image: '/images/artistes/stile-antico/stile-antico-4-card.jpg',
     featured: true
   },
   {

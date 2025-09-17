@@ -24,13 +24,13 @@ export const fasArtistes = [
   {
     id: "stile-antico",
     name: "Stile Antico",
-    image: "/images/artistes/stile-antico-2-card.webp",
-    heroImage: "/images/artistes/stile-antico-1-hero.webp",
+    image: "/images/artistes/stile-antico/stile-antico-2-card.jpg",
+    heroImage: "/images/artistes/stile-antico/stile-antico-1-hero.jpg",
     gallery: [
-      "/images/artistes/stile-antico-1-hero.webp",
-      "/images/artistes/stile-antico-2-hero.webp",
-      "/images/artistes/stile-antico-3-hero.webp",
-      "/images/artistes/stile-antico-4-hero.webp"
+      "/images/artistes/stile-antico/stile-antico-1-hero.jpg",
+      "/images/artistes/stile-antico/stile-antico-2-hero.jpg",
+      "/images/artistes/stile-antico/stile-antico-3-hero.jpg",
+      "/images/artistes/stile-antico/stile-antico-4-hero.jpg"
     ],
     description: "Ensemble vocal britannique de renommée mondiale"
   },
@@ -61,11 +61,11 @@ export const fasArtistes = [
   {
     id: "solistes",
     name: "Solistes",
-    image: "/images/artistes/stile-antico/stile-antico-3-card.webp",
-    heroImage: "/images/artistes/stile-antico/stile-antico-3-hero.webp",
+    image: "/images/artistes/stile-antico/stile-antico-3-card.jpg",
+    heroImage: "/images/artistes/stile-antico/stile-antico-3-hero.jpg",
     gallery: [
-      "/images/artistes/stile-antico/stile-antico-5-hero.webp",
-      "/images/artistes/stile-antico/stile-antico-6-hero.webp",
+      "/images/artistes/stile-antico/stile-antico-5-hero.jpg",
+      "/images/artistes/stile-antico/stile-antico-6-hero.jpg",
       "/images/artistes/choeur-novantica/novantica-1-hero.jpg",
       "/images/artistes/choeur-novantica/novantica-2-hero.jpg"
     ],
