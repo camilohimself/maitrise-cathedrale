@@ -7,12 +7,8 @@ export default function DirectionSection() {
   const { direction } = maitriseContent;
 
   return (
-    <div className="section-gradient" style={{
-      background: '#FAFAF9',
-      padding: '100px 20px',
-      position: 'relative'
-    }}>
-      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+    <div className="section-white">
+      <div className="container">
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 2fr',
@@ -23,8 +19,8 @@ export default function DirectionSection() {
           <div style={{
             position: 'relative',
             height: '500px',
-            background: 'linear-gradient(135deg, #D4A574 0%, #e8d5b7 100%)',
-            boxShadow: '0 20px 40px rgba(212, 165, 116, 0.15)',
+            background: 'linear-gradient(135deg, var(--color-gold) 0%, rgba(212, 165, 116, 0.3) 100%)',
+            boxShadow: 'var(--shadow-gold)',
             borderRadius: '24px',
             overflow: 'hidden'
           }}>
@@ -57,7 +53,7 @@ export default function DirectionSection() {
             <h3 style={{
               fontSize: '32px',
               fontWeight: '700',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               marginBottom: '8px'
             }}>
               {direction.nom}
@@ -65,7 +61,7 @@ export default function DirectionSection() {
             
             <p style={{
               fontSize: '18px',
-              color: '#1a1340',
+              color: 'var(--color-navy)',
               opacity: '0.7',
               marginBottom: '32px'
             }}>
@@ -78,7 +74,7 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#1a1340',
+                color: 'var(--color-navy)',
                 marginBottom: '16px'
               }}>
                 Formation
@@ -86,7 +82,7 @@ export default function DirectionSection() {
               <p style={{
                 fontSize: '16px',
                 lineHeight: '1.8',
-                color: '#1a1340',
+                color: 'var(--color-navy)',
               opacity: '0.7'
               }}>
                 {direction.bio.formation}
@@ -99,7 +95,7 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#1a1340',
+                color: 'var(--color-navy)',
                 marginBottom: '16px'
               }}>
                 Expérience
@@ -107,7 +103,7 @@ export default function DirectionSection() {
               <p style={{
                 fontSize: '16px',
                 lineHeight: '1.8',
-                color: '#1a1340',
+                color: 'var(--color-navy)',
               opacity: '0.7'
               }}>
                 {direction.bio.experience}
@@ -120,21 +116,14 @@ export default function DirectionSection() {
                 fontWeight: '700',
                 textTransform: 'uppercase',
                 letterSpacing: '0.1em',
-                color: '#1a1340',
+                color: 'var(--color-navy)',
                 marginBottom: '16px'
               }}>
                 Spécialités
               </h4>
               <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 {direction.bio.specialites.map((spec, idx) => (
-                  <span key={idx} style={{
-                    background: '#D4A574',
-                    color: '#ffffff',
-                    padding: '8px 20px',
-                    borderRadius: '24px',
-                    fontSize: '14px',
-                    fontWeight: '600'
-                  }}>
+                  <span key={idx} className="tag-gold">
                     {spec}
                   </span>
                 ))}

@@ -7,13 +7,8 @@ export default function EnsembleSection() {
   const { evi } = maitriseContent;
 
   return (
-    <div style={{
-      background: 'linear-gradient(135deg, #FAFAF9 0%, #F0F0F0 100%)',
-      position: 'relative',
-      padding: '100px 20px',
-      color: '#1a1340'
-    }}>
-      <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+    <div className="section-cream" style={{ position: 'relative' }}>
+      <div className="container">
         <div style={{
           display: 'grid',
           gridTemplateColumns: '2fr 3fr',
@@ -21,23 +16,15 @@ export default function EnsembleSection() {
           alignItems: 'center'
         }}>
           {/* Visual Element */}
-          <div style={{
-            background: 'linear-gradient(135deg, rgba(227, 50, 65, 0.08) 0%, rgba(212, 165, 116, 0.05) 100%)',
-            borderRadius: '24px',
-            padding: '48px',
-            backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(227, 50, 65, 0.15)',
-            borderLeft: '4px solid #E33241',
+          <div className="card-glass" style={{
             textAlign: 'center',
-            position: 'relative'
+            position: 'relative',
+            padding: '48px'
           }}>
             <div style={{
               fontSize: '120px',
               marginBottom: '24px',
-              background: 'linear-gradient(45deg, #E33241, #D4A574)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              color: 'var(--color-gold)'
             }}>
               ♪
             </div>
@@ -60,17 +47,10 @@ export default function EnsembleSection() {
             </p>
 
             {/* Badge projet */}
-            <div style={{
+            <div className="tag-gold" style={{
               position: 'absolute',
               top: '20px',
-              right: '20px',
-              background: 'rgba(227, 50, 65, 0.15)',
-              border: '1px solid rgba(227, 50, 65, 0.3)',
-              color: '#E33241',
-              padding: '6px 16px',
-              borderRadius: '20px',
-              fontSize: '12px',
-              fontWeight: '700'
+              right: '20px'
             }}>
               Projet unique
             </div>
@@ -78,18 +58,7 @@ export default function EnsembleSection() {
 
           {/* Content */}
           <div>
-            <div style={{
-              display: 'inline-block',
-              background: 'rgba(227, 50, 65, 0.1)',
-              border: '1px solid rgba(227, 50, 65, 0.3)',
-              color: '#E33241',
-              backdropFilter: 'blur(10px)',
-              padding: '8px 20px',
-              borderRadius: '24px',
-              fontSize: '14px',
-              fontWeight: '700',
-              marginBottom: '24px'
-            }}>
+            <div className="badge-gold" style={{ marginBottom: '24px' }}>
               Ensemble Vocal & Instrumental
             </div>
 
@@ -113,20 +82,12 @@ export default function EnsembleSection() {
             </p>
 
             {/* Projet highlight */}
-            <div style={{
-              background: 'rgba(227, 50, 65, 0.05)',
-              border: '1px solid rgba(227, 50, 65, 0.15)',
-              borderLeft: '4px solid #E33241',
-              borderRadius: '16px',
-              padding: '24px',
-              marginBottom: '40px',
-              backdropFilter: 'blur(10px)'
-            }}>
+            <div className="highlight-box" style={{ marginBottom: '40px' }}>
               <h3 style={{
                 fontSize: '18px',
                 fontWeight: '700',
                 marginBottom: '8px',
-                color: '#E33241'
+                color: 'var(--color-gold)'
               }}>
                 {evi.projet}
               </h3>
@@ -156,19 +117,12 @@ export default function EnsembleSection() {
               gap: '16px'
             }}>
               {Object.entries(evi.stats).map(([key, value]) => (
-                <div key={key} style={{
-                  textAlign: 'center',
-                  padding: '20px',
-                  background: 'rgba(227, 50, 65, 0.05)',
-                  borderRadius: '12px',
-                  border: '1px solid rgba(227, 50, 65, 0.1)',
-                  borderTop: '3px solid #E33241'
-                }}>
+                <div key={key} className="stat-card">
                   <div style={{
                     fontSize: '32px',
                     fontWeight: '700',
                     marginBottom: '8px',
-                    color: '#E33241'
+                    color: 'var(--color-gold)'
                   }}>
                     {value}
                   </div>
