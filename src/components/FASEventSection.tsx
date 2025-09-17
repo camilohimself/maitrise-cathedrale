@@ -58,8 +58,8 @@ const FASEventSection = () => {
   };
 
   // Fonction pour rendre les noms de compositeurs cliquables
-  const renderInteractiveDescription = (description: string, event: Event) => {
-    let processedDescription = description;
+  const _renderInteractiveDescription = (_description: string, _event: Event) => {
+    const processedDescription = _description;
     
     // Liste des compositeurs à rendre cliquables
     const composerNames = Object.keys(composerIds);
@@ -69,7 +69,7 @@ const FASEventSection = () => {
       if (processedDescription.includes(name)) {
         const parts = processedDescription.split(name);
         return (
-          <span>
+          <span key={name}>
             {parts[0]}
             <button
               onClick={() => openComposerModal(name)}

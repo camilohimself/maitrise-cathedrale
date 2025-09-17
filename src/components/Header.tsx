@@ -158,8 +158,9 @@ const Header = () => {
                 href="/fas"
                 style={{
                   padding: '10px 24px',
-                  backgroundColor: pathname?.startsWith('/fas') ? 'var(--color-red)' : 'var(--color-gold)',
+                  backgroundColor: pathname?.startsWith('/fas') ? 'var(--color-purple)' : 'var(--color-purple)',
                   color: '#fff',
+                  border: pathname?.startsWith('/fas') ? '2px solid var(--color-purple)' : '2px solid var(--color-purple)',
                   textDecoration: 'none',
                   borderRadius: '6px',
                   fontSize: '15px',
@@ -174,9 +175,7 @@ const Header = () => {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = pathname?.startsWith('/fas') 
-                    ? '0 6px 20px rgba(227, 50, 65, 0.4)' 
-                    : '0 6px 20px rgba(210, 171, 95, 0.4)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(107, 70, 193, 0.4)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
@@ -286,7 +285,7 @@ const Header = () => {
                   href="/fas"
                   style={{
                     padding: '12px 24px',
-                    backgroundColor: 'var(--color-gold)',
+                    backgroundColor: 'var(--color-purple)',
                     color: '#fff',
                     textDecoration: 'none',
                     borderRadius: '4px',

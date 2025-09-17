@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+// Link import removed as it's not used
 import fondationContent from '@/data/fondationContent';
 import NavigationFooter from '@/components/NavigationFooter';
 

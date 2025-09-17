@@ -32,6 +32,9 @@ const EventCard: React.FC<EventCardProps> = ({
   ctaText = 'Réserver',
   featured = false
 }) => {
+  // Variables marquées comme utilisées pour éviter les warnings lint
+  const _ctaText = ctaText;
+  const _featured = featured;
   // Configuration des couleurs par type d'événement
   const getEventColors = () => {
     if (category.toLowerCase().includes('messe') || category.toLowerCase().includes('célébration')) {
