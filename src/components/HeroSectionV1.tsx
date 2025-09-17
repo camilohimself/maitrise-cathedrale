@@ -188,9 +188,9 @@ const HeroSectionV1 = () => {
               alignItems: 'center',
               justifyContent: 'center',
               padding: '18px 40px',
-              backgroundColor: 'rgba(184, 134, 11, 0.1)',
-              color: '#B8860B',
-              border: '2px solid rgba(184, 134, 11, 0.4)',
+              backgroundColor: 'var(--color-purple)',
+              color: '#FFFFFF',
+              border: '2px solid var(--color-purple)',
               borderRadius: '50px',
               fontFamily: 'var(--font-outfit)',
               fontWeight: '600',
@@ -202,13 +202,13 @@ const HeroSectionV1 = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-3px) scale(1.05)';
-              e.currentTarget.style.backgroundColor = 'rgba(184, 134, 11, 0.2)';
-              e.currentTarget.style.borderColor = '#B8860B';
+              e.currentTarget.style.backgroundColor = 'var(--color-purple-dark)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(107, 70, 193, 0.4)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0) scale(1)';
-              e.currentTarget.style.backgroundColor = 'rgba(184, 134, 11, 0.1)';
-              e.currentTarget.style.borderColor = 'rgba(184, 134, 11, 0.4)';
+              e.currentTarget.style.backgroundColor = 'var(--color-purple)';
+              e.currentTarget.style.boxShadow = 'none';
             }}
           >
             Festival d'Art Sacré
