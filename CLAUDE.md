@@ -115,5 +115,17 @@ sips -Z 300 --setProperty formatOptions 75 "source.jpg" --out "thumb.jpg"
 
 ---
 
+---
+
+## 📁 ARCHIVE PAGES SUPPRIMÉES
+
+### Page /soutenir/partenaires (supprimée le 17/12/2024)
+- **Raison:** Intégrée en section logos dans /soutenir
+- **Contenu archivé:** Page basique avec placeholder
+- **Logos partenaires:** 27 fichiers optimisés (3 formats) dans `/public/images/partenaires/`
+- **Logos manuels requis:** 5 fichiers vectoriels (.ai/.eps): BCVS, CMYK, LoRo, Minkoff, Sion
+
+---
+
 **Dernière mise à jour:** 17 décembre 2024
-**Session critique:** Harmonisation UX/UI palette couleurs
+**Session critique:** Harmonisation UX/UI palette couleurs + Refonte pages soutenir

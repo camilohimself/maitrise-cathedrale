@@ -4,7 +4,7 @@ import React from 'react';
 import { maitriseContent } from '@/data/maitriseContent';
 
 export default function MaitriseHeroSection() {
-  const { histoire, conseilFondation } = maitriseContent;
+  const { histoire } = maitriseContent;
 
   return (
     <div className="hero-section" style={{ 
@@ -90,44 +90,6 @@ export default function MaitriseHeroSection() {
           ))}
         </div>
 
-        {/* Conseil de Fondation */}
-        <div style={{
-          background: 'rgba(212, 165, 116, 0.05)',
-          borderRadius: '24px',
-          padding: '48px',
-          backdropFilter: 'blur(10px)',
-          border: '1px solid rgba(212, 165, 116, 0.15)'
-        }}>
-          <h2 style={{
-            fontSize: '32px',
-            fontWeight: '300',
-            marginBottom: '32px',
-            textAlign: 'center',
-            color: '#D4A574'
-          }}>
-            Conseil de Fondation
-          </h2>
-          
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '16px'
-          }}>
-            {conseilFondation.map((membre, idx) => (
-              <div key={idx} style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                padding: '12px 16px',
-                borderRadius: '8px',
-                background: idx === 0 ? 'rgba(212, 165, 116, 0.1)' : 'transparent',
-                borderLeft: idx === 0 ? '3px solid #D4A574' : 'none'
-              }}>
-                <span style={{ color: '#D2AB5F', fontSize: '14px' }}>{membre.poste}</span>
-                <span style={{ color: '#ffffff', fontSize: '14px', fontWeight: '500' }}>{membre.nom}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );
