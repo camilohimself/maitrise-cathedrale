@@ -26,7 +26,7 @@ export default function EcoleSection() {
               display: 'inline-block',
               background: 'rgba(212, 165, 116, 0.2)',
               border: '1px solid rgba(212, 165, 116, 0.3)',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               backdropFilter: 'blur(10px)',
               padding: '8px 20px',
               borderRadius: '24px',
@@ -67,7 +67,7 @@ export default function EcoleSection() {
                 fontSize: '18px',
                 fontWeight: '700',
                 marginBottom: '8px',
-                color: '#D4A574'
+                color: 'var(--color-gold)'
               }}>
                 Partenariat avec le {ecole.partenariat.institution}
               </h3>
@@ -95,7 +95,7 @@ export default function EcoleSection() {
                   <div style={{
                     width: '32px',
                     height: '32px',
-                    background: '#D4A574',
+                    background: 'var(--color-gold)',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -124,7 +124,7 @@ export default function EcoleSection() {
             <div style={{
               fontSize: '120px',
               marginBottom: '24px',
-              background: 'linear-gradient(45deg, #D4A574, #D4A574)',
+              background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'

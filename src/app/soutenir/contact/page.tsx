@@ -52,7 +52,7 @@ export default function Contact() {
           <div style={{
             width: '80px',
             height: '3px',
-            backgroundColor: '#D4A574',
+            backgroundColor: 'var(--color-gold)',
             margin: '0 auto'
           }}></div>
           <p style={{
@@ -187,7 +187,7 @@ export default function Contact() {
               </h3>
 
               <form onSubmit={handleSubmit}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '20px' }}>
                   <div>
                     <label style={{
                       display: 'block',
@@ -212,7 +212,7 @@ export default function Contact() {
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease'
                       }}
-                      onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                       onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                     />
                   </div>
@@ -240,7 +240,7 @@ export default function Contact() {
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease'
                       }}
-                      onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                       onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                     />
                   </div>
@@ -270,7 +270,7 @@ export default function Contact() {
                       fontSize: '1rem',
                       transition: 'border-color 0.3s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                   />
                 </div>
@@ -298,7 +298,7 @@ export default function Contact() {
                       fontSize: '1rem',
                       transition: 'border-color 0.3s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                   />
                 </div>
@@ -327,7 +327,7 @@ export default function Contact() {
                       backgroundColor: '#fff',
                       transition: 'border-color 0.3s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                   >
                     <option value="">Sélectionnez un sujet</option>
@@ -366,7 +366,7 @@ export default function Contact() {
                       fontFamily: 'inherit',
                       transition: 'border-color 0.3s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                     placeholder="Votre message..."
                   />
@@ -377,7 +377,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   style={{
                     width: '100%',
-                    backgroundColor: isSubmitting ? '#9ca3af' : '#D4A574',
+                    backgroundColor: isSubmitting ? '#9ca3af' : 'var(--color-gold)',
                     color: '#fff',
                     padding: '16px 32px',
                     border: 'none',
@@ -395,7 +395,7 @@ export default function Contact() {
                   }}
                   onMouseLeave={(e) => {
                     if (!isSubmitting) {
-                      e.currentTarget.style.backgroundColor = '#D4A574';
+                      e.currentTarget.style.backgroundColor = 'var(--color-gold)';
                       e.currentTarget.style.transform = 'translateY(0)';
                     }
                   }}

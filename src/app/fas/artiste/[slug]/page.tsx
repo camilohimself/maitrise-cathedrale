@@ -101,7 +101,7 @@ export default function ArtistePage() {
         <div style={{ textAlign: 'center' }}>
           <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Artiste non trouvé</h1>
           <Link href="/fas" style={{
-            color: '#D4A574',
+            color: 'var(--color-gold)',
             textDecoration: 'none',
             fontSize: '1.1rem'
           }}>
@@ -124,7 +124,7 @@ export default function ArtistePage() {
         borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
       }}>
         <Link href="/fas" style={{
-          color: '#D4A574',
+          color: 'var(--color-gold)',
           textDecoration: 'none',
           fontSize: '1rem',
           display: 'inline-flex',
@@ -190,7 +190,7 @@ export default function ArtistePage() {
             {artiste.subtitle && (
               <p style={{
                 fontSize: '1.5rem',
-                color: '#D4A574',
+                color: 'var(--color-gold)',
                 fontWeight: '500',
                 marginBottom: '1.5rem',
                 fontStyle: 'italic'
@@ -206,14 +206,14 @@ export default function ArtistePage() {
             }}>
               <span style={{
                 fontSize: '1.3rem',
-                color: '#D4A574',
+                color: 'var(--color-gold)',
                 fontWeight: '600'
               }}>
                 {artiste.date} • {artiste.time}
               </span>
               <button style={{
                 padding: '14px 32px',
-                background: '#D4A574',
+                background: 'var(--color-gold)',
                 color: '#1a1340',
                 border: 'none',
                 borderRadius: '50px',
@@ -286,7 +286,7 @@ export default function ArtistePage() {
               fontSize: '1.5rem',
               fontWeight: '600',
               marginBottom: '1.5rem',
-              color: '#D4A574'
+              color: 'var(--color-gold)'
             }}>
               Informations pratiques
             </h3>
@@ -381,7 +381,7 @@ export default function ArtistePage() {
               }}>
                 <span style={{
                   fontSize: '0.9rem',
-                  color: '#D4A574',
+                  color: 'var(--color-gold)',
                   fontWeight: '500'
                 }}>
                   Conférence préparatoire :
@@ -410,7 +410,7 @@ export default function ArtistePage() {
                   fontSize: '1.1rem',
                   fontWeight: '600',
                   marginBottom: '1rem',
-                  color: '#D4A574'
+                  color: 'var(--color-gold)'
                 }}>
                   Galerie Photos
                 </h4>
@@ -519,7 +519,7 @@ export default function ArtistePage() {
           fontSize: '2rem',
           fontWeight: '700',
           marginBottom: '2rem',
-          color: '#D4A574',
+          color: 'var(--color-gold)',
           textAlign: 'center'
         }}>
           Autres concerts du festival
@@ -582,7 +582,7 @@ export default function ArtistePage() {
                     </h4>
                     <p style={{
                       fontSize: '0.9rem',
-                      color: '#D4A574'
+                      color: 'var(--color-gold)'
                     }}>
                       {otherArtiste.date} • {otherArtiste.time}
                     </p>

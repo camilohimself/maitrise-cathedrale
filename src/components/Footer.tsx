@@ -54,7 +54,7 @@ const Footer = () => {
           
           <p style={{
             fontSize: '22px',
-            color: '#D4A574',
+            color: 'var(--color-gold)',
             fontWeight: '300',
             marginBottom: '40px'
           }}>
@@ -92,23 +92,23 @@ const Footer = () => {
             
             <Link href="/fas" style={{
               background: 'transparent',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               padding: '16px 32px',
               borderRadius: '6px',
               textDecoration: 'none',
               fontWeight: '500',
               fontSize: '16px',
-              border: '2px solid #D4A574',
+              border: '2px solid var(--color-gold)',
               transition: 'all 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#D4A574';
+              e.currentTarget.style.background = 'var(--color-gold)';
               e.currentTarget.style.color = '#040A23';
               e.currentTarget.style.transform = 'translateY(-3px)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = 'transparent';
-              e.currentTarget.style.color = '#D4A574';
+              e.currentTarget.style.color = 'var(--color-gold)';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
             >
@@ -129,7 +129,7 @@ const Footer = () => {
             <h3 style={{
               fontSize: '18px',
               fontWeight: '600',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               marginBottom: '24px',
               textTransform: 'uppercase',
               letterSpacing: '0.5px'
@@ -168,7 +168,7 @@ const Footer = () => {
             <h3 style={{
               fontSize: '18px',
               fontWeight: '600',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               marginBottom: '24px',
               textTransform: 'uppercase',
               letterSpacing: '0.5px'
@@ -223,7 +223,7 @@ const Footer = () => {
             <h3 style={{
               fontSize: '18px',
               fontWeight: '600',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               marginBottom: '24px',
               textTransform: 'uppercase',
               letterSpacing: '0.5px'

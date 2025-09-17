@@ -39,20 +39,20 @@ const EventCard: React.FC<EventCardProps> = ({
   const getEventColors = () => {
     if (category.toLowerCase().includes('messe') || category.toLowerCase().includes('célébration')) {
       return {
-        borderColor: '#D4A574', // Doré pour messes
-        badgeColor: '#D4A574'
+        borderColor: 'var(--color-gold)', // Doré pour messes
+        badgeColor: 'var(--color-gold)'
       };
     }
     if (category.toLowerCase().includes('festival') || category.toLowerCase().includes('fas')) {
       return {
-        borderColor: '#4A1B87', // Violet profond pour FAS
-        badgeColor: '#4A1B87'
+        borderColor: 'var(--color-purple-dark)', // Violet profond pour FAS
+        badgeColor: 'var(--color-purple-dark)'
       };
     }
     // Concert par défaut
     return {
-      borderColor: '#8B0000', // Rouge bordeaux pour concerts
-      badgeColor: '#8B0000'
+      borderColor: 'var(--color-red)', // Rouge bordeaux pour concerts
+      badgeColor: 'var(--color-red)'
     };
   };
   
@@ -146,7 +146,7 @@ const EventCard: React.FC<EventCardProps> = ({
       className={`event-card ${styles.eventCard}`}
       style={{
         position: 'relative',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'var(--color-white)',
         border: `3px solid ${eventColors.borderColor}`, // Couleur selon type événement
         borderRadius: '0 50px 50px 0', // Forme arrondie uniquement à droite
         overflow: 'hidden',
@@ -174,7 +174,7 @@ const EventCard: React.FC<EventCardProps> = ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: 'var(--color-white)',
         borderRight: `1px solid ${eventColors.borderColor}40`,
       }}>
         {/* Jour de la semaine */}
@@ -220,7 +220,7 @@ const EventCard: React.FC<EventCardProps> = ({
           fontFamily: 'var(--font-outfit)',
           fontSize: '12px',
           fontWeight: '500',
-          color: '#B8860B',
+          color: 'var(--color-gold)',
           marginTop: '12px',
           textAlign: 'center',
         }}>
@@ -244,7 +244,7 @@ const EventCard: React.FC<EventCardProps> = ({
           <div style={{
             display: 'inline-block',
             backgroundColor: eventColors.badgeColor,
-            color: '#FFFFFF',
+            color: 'var(--color-white)',
             padding: '4px 12px',
             borderRadius: '4px',
             fontFamily: 'var(--font-outfit)',
@@ -276,7 +276,7 @@ const EventCard: React.FC<EventCardProps> = ({
             fontFamily: 'var(--font-outfit)',
             fontSize: '12px', // Réduit de 13px à 12px
             fontWeight: '400',
-            color: '#666666',
+            color: 'var(--color-gray)',
             lineHeight: 1.3,
             margin: '0',
             display: '-webkit-box',
@@ -305,8 +305,8 @@ const EventCard: React.FC<EventCardProps> = ({
                 alignItems: 'center',
                 justifyContent: 'center',
                 padding: '6px 12px',
-                backgroundColor: '#8B0000',
-                color: '#FFFFFF',
+                backgroundColor: 'var(--color-red)',
+                color: 'var(--color-white)',
                 border: 'none',
                 borderRadius: '12px',
                 fontFamily: 'var(--font-outfit)',
@@ -317,11 +317,11 @@ const EventCard: React.FC<EventCardProps> = ({
                 whiteSpace: 'nowrap'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#A52A2A';
+                e.currentTarget.style.backgroundColor = 'var(--color-red-hover)';
                 e.currentTarget.style.transform = 'translateY(-1px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#8B0000';
+                e.currentTarget.style.backgroundColor = 'var(--color-red)';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
@@ -337,8 +337,8 @@ const EventCard: React.FC<EventCardProps> = ({
               alignItems: 'center',
               justifyContent: 'center',
               padding: '8px 16px',
-              backgroundColor: '#B8860B',
-              color: '#FFFFFF',
+              backgroundColor: 'var(--color-gold)',
+              color: 'var(--color-white)',
               border: 'none',
               borderRadius: '16px',
               fontFamily: 'var(--font-outfit)',
@@ -348,11 +348,11 @@ const EventCard: React.FC<EventCardProps> = ({
               transition: 'all 0.3s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#DAA520';
+              e.currentTarget.style.backgroundColor = 'var(--color-gold-hover)';
               e.currentTarget.style.transform = 'translateY(-1px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#B8860B';
+              e.currentTarget.style.backgroundColor = 'var(--color-gold)';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >

@@ -44,7 +44,7 @@ export default function AmisMaitrise() {
           <div style={{
             width: '80px',
             height: '3px',
-            backgroundColor: '#D4A574',
+            backgroundColor: 'var(--color-gold)',
             margin: '0 auto'
           }}></div>
         </div>
@@ -132,7 +132,7 @@ export default function AmisMaitrise() {
                     <span style={{
                       width: '8px',
                       height: '8px',
-                      backgroundColor: '#D4A574',
+                      backgroundColor: 'var(--color-gold)',
                       borderRadius: '50%',
                       marginRight: '16px',
                       flexShrink: 0
@@ -189,7 +189,7 @@ export default function AmisMaitrise() {
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease'
                       }}
-                      onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                       onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                     />
                   </div>
@@ -217,7 +217,7 @@ export default function AmisMaitrise() {
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease'
                       }}
-                      onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                       onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                     />
                   </div>
@@ -247,7 +247,7 @@ export default function AmisMaitrise() {
                       fontSize: '1rem',
                       transition: 'border-color 0.3s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                   />
                 </div>
@@ -275,7 +275,7 @@ export default function AmisMaitrise() {
                       fontSize: '1rem',
                       transition: 'border-color 0.3s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                   />
                 </div>
@@ -303,7 +303,7 @@ export default function AmisMaitrise() {
                       fontSize: '1rem',
                       transition: 'border-color 0.3s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                   />
                 </div>
@@ -332,7 +332,7 @@ export default function AmisMaitrise() {
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease'
                       }}
-                      onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                       onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                     />
                   </div>
@@ -359,7 +359,7 @@ export default function AmisMaitrise() {
                         fontSize: '1rem',
                         transition: 'border-color 0.3s ease'
                       }}
-                      onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                       onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                     />
                   </div>
@@ -388,7 +388,7 @@ export default function AmisMaitrise() {
                       backgroundColor: '#fff',
                       transition: 'border-color 0.3s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = '#D4A574'}
+                    onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                   >
                     <option value="individuelle">Cotisation individuelle</option>
@@ -402,7 +402,7 @@ export default function AmisMaitrise() {
                   type="submit"
                   style={{
                     width: '100%',
-                    backgroundColor: '#D4A574',
+                    backgroundColor: 'var(--color-gold)',
                     color: '#fff',
                     padding: '16px 32px',
                     border: 'none',
@@ -417,7 +417,7 @@ export default function AmisMaitrise() {
                     e.currentTarget.style.transform = 'translateY(-2px)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = '#D4A574';
+                    e.currentTarget.style.backgroundColor = 'var(--color-gold)';
                     e.currentTarget.style.transform = 'translateY(0)';
                   }}
                 >

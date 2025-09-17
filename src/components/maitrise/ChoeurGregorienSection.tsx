@@ -30,7 +30,7 @@ export default function ChoeurGregorienSection() {
             <div style={{
               fontSize: '120px',
               marginBottom: '24px',
-              background: 'linear-gradient(45deg, #D4A574, #E33241)',
+              background: 'linear-gradient(45deg, var(--color-gold), #E33241)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -78,7 +78,7 @@ export default function ChoeurGregorienSection() {
               display: 'inline-block',
               background: 'rgba(212, 165, 116, 0.15)',
               border: '1px solid rgba(212, 165, 116, 0.4)',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               backdropFilter: 'blur(10px)',
               padding: '8px 20px',
               borderRadius: '24px',
@@ -139,10 +139,10 @@ export default function ChoeurGregorienSection() {
                 alignItems: 'center',
                 gap: '8px',
                 fontSize: '14px',
-                color: '#D4A574',
+                color: 'var(--color-gold)',
                 fontWeight: '600'
               }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4A574">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-gold)">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
                 Cathédrale de Sion • 10h00
@@ -173,7 +173,7 @@ export default function ChoeurGregorienSection() {
                   <div style={{
                     width: '32px',
                     height: '32px',
-                    background: 'linear-gradient(45deg, #D4A574, #E33241)',
+                    background: 'linear-gradient(45deg, var(--color-gold), #E33241)',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',

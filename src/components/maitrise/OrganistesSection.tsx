@@ -19,7 +19,7 @@ export default function OrganistesSection() {
           fontWeight: '300',
           textAlign: 'center',
           marginBottom: '64px',
-          color: '#D4A574'
+          color: 'var(--color-gold)'
         }}>
           Les Organistes
         </h2>
@@ -42,7 +42,7 @@ export default function OrganistesSection() {
             <div style={{
               width: '100px',
               height: '100px',
-              background: 'linear-gradient(45deg, #D4A574, #E6C068)',
+              background: 'linear-gradient(45deg, var(--color-gold), #E6C068)',
               borderRadius: '50%',
               margin: '0 auto 24px',
               display: 'flex',
@@ -59,7 +59,7 @@ export default function OrganistesSection() {
               fontWeight: '700',
               textAlign: 'center',
               marginBottom: '8px',
-              color: '#D4A574'
+              color: 'var(--color-gold)'
             }}>
               {organistes.titulaire.nom}
             </h3>
@@ -114,7 +114,7 @@ export default function OrganistesSection() {
               fontWeight: '700',
               textAlign: 'center',
               marginBottom: '8px',
-              color: '#D4A574'
+              color: 'var(--color-gold)'
             }}>
               {organistes.adjointe.nom}
             </h3>

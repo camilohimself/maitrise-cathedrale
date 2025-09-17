@@ -103,7 +103,7 @@ export default function Soutenir() {
             <div style={{
               width: '60px',
               height: '3px',
-              backgroundColor: '#D4A574',
+              backgroundColor: 'var(--color-gold)',
               margin: '0 auto'
             }}></div>
             <p style={{
@@ -172,7 +172,7 @@ export default function Soutenir() {
             padding: '32px',
             backgroundColor: '#FAFAF9',
             borderRadius: '12px',
-            border: '2px dashed #D4A574'
+            border: '2px dashed var(--color-gold)'
           }}>
             <h3 style={{
               fontSize: '1.3rem',
@@ -191,7 +191,7 @@ export default function Soutenir() {
             </p>
             <Link href="/soutenir/contact" style={{ textDecoration: 'none' }}>
               <button style={{
-                backgroundColor: '#D4A574',
+                backgroundColor: 'var(--color-gold)',
                 color: '#fff',
                 padding: '12px 24px',
                 border: 'none',
@@ -206,7 +206,7 @@ export default function Soutenir() {
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#D4A574';
+                e.currentTarget.style.backgroundColor = 'var(--color-gold)';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}>
                 Devenir partenaire

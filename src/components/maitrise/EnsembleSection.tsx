@@ -11,8 +11,8 @@ export default function EnsembleSection() {
       <div className="container">
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '2fr 3fr',
-          gap: '80px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: 'clamp(40px, 8vw, 80px)',
           alignItems: 'center'
         }}>
           {/* Visual Element */}

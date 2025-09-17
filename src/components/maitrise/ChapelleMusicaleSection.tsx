@@ -30,7 +30,7 @@ export default function ChapelleMusicaleSection() {
               display: 'inline-block',
               background: 'rgba(212, 165, 116, 0.2)',
               border: '1px solid rgba(212, 165, 116, 0.3)',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               backdropFilter: 'blur(10px)',
               padding: '8px 20px',
               borderRadius: '24px',
@@ -111,14 +111,14 @@ export default function ChapelleMusicaleSection() {
                       <div style={{
                         fontSize: '14px',
                         fontWeight: '600',
-                        color: fete.special ? '#D4A574' : '#ffffff'
+                        color: fete.special ? 'var(--color-gold)' : '#ffffff'
                       }}>
                         {fete.nom}
                       </div>
                       <div style={{
                         fontSize: '12px',
                         opacity: '0.8',
-                        color: fete.special ? '#D4A574' : '#ffffff'
+                        color: fete.special ? 'var(--color-gold)' : '#ffffff'
                       }}>
                         {fete.date}
                       </div>
@@ -129,7 +129,7 @@ export default function ChapelleMusicaleSection() {
                         top: '4px',
                         right: '4px',
                         fontSize: '10px',
-                        color: '#D4A574',
+                        color: 'var(--color-gold)',
                         fontWeight: '700'
                       }}>
                         Patronale
@@ -164,7 +164,7 @@ export default function ChapelleMusicaleSection() {
                   <div style={{
                     width: '32px',
                     height: '32px',
-                    background: 'linear-gradient(45deg, #D4A574, #E33241)',
+                    background: 'linear-gradient(45deg, var(--color-gold), #E33241)',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -194,7 +194,7 @@ export default function ChapelleMusicaleSection() {
             <div style={{
               fontSize: '120px',
               marginBottom: '24px',
-              background: 'linear-gradient(45deg, #D4A574, #E33241)',
+              background: 'linear-gradient(45deg, var(--color-gold), #E33241)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -226,7 +226,7 @@ export default function ChapelleMusicaleSection() {
               right: '20px',
               background: 'rgba(212, 165, 116, 0.2)',
               border: '1px solid rgba(212, 165, 116, 0.4)',
-              color: '#D4A574',
+              color: 'var(--color-gold)',
               padding: '6px 16px',
               borderRadius: '20px',
               fontSize: '12px',

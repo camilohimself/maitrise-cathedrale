@@ -17,7 +17,7 @@ const FASConcertsSection = () => {
 
   return (
     <section style={{
-      background: 'linear-gradient(135deg, #1a1340 0%, #2d1b69 50%, #1a1340 100%)',
+      background: 'linear-gradient(135deg, var(--color-navy) 0%, var(--color-purple-dark) 50%, var(--color-navy) 100%)',
       padding: '120px 0',
       position: 'relative',
       overflow: 'hidden'
@@ -67,7 +67,7 @@ const FASConcertsSection = () => {
           <h2 style={{
             fontSize: 'clamp(36px, 5vw, 56px)',
             fontWeight: '800',
-            color: '#ffffff',
+            color: 'var(--color-white)',
             marginBottom: '20px',
             lineHeight: '1.1',
             fontFamily: 'var(--font-spectral)'
@@ -162,7 +162,7 @@ const FASConcertsSection = () => {
                 {/* Contenu */}
                 <div style={{ marginBottom: '24px' }}>
                   <h3 style={{
-                    color: '#ffffff',
+                    color: 'var(--color-white)',
                     fontSize: '24px',
                     fontWeight: '700',
                     marginBottom: '8px',
@@ -246,8 +246,8 @@ const FASConcertsSection = () => {
                     position: 'absolute',
                     top: '-1px',
                     left: '24px',
-                    background: 'linear-gradient(135deg, #FFD700, #FFA500)',
-                    color: '#1a1340',
+                    background: 'linear-gradient(135deg, var(--color-gold), var(--color-gold-hover))',
+                    color: 'var(--color-navy)',
                     padding: '6px 16px',
                     borderRadius: '0 0 12px 12px',
                     fontSize: '12px',

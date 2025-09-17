@@ -16,6 +16,11 @@
   --color-cream: #F5F0E8;     /* Crème/Beige - Sections backgrounds */
   --color-black: #000000;     /* Noir pur */
   --color-white: #FFFFFF;     /* Blanc pur */
+  --color-gray: #666666;      /* Gris texte */
+
+  /* Hover variations */
+  --color-gold-hover: #FFA500;
+  --color-red-hover: #A52A2A;
   
   /* Overlays et transparences */
   --color-dark-overlay: rgba(4, 10, 35, 0.8);

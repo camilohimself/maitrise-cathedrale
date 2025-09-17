@@ -22,7 +22,7 @@ export default function MaitriseHeroSection() {
             borderRadius: '30px',
             fontSize: '14px',
             fontWeight: '700',
-            color: '#D4A574',
+            color: 'var(--color-gold)',
             marginBottom: '24px',
             backdropFilter: 'blur(10px)'
           }}>
@@ -72,7 +72,7 @@ export default function MaitriseHeroSection() {
               <div style={{
                 fontSize: '36px',
                 fontWeight: '700',
-                color: '#D4A574',
+                color: 'var(--color-gold)',
                 marginBottom: '8px'
               }}>
                 {value}
