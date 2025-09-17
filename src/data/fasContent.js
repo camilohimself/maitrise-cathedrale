@@ -37,13 +37,13 @@ export const fasArtistes = [
   {
     id: "choeur-novantiqua",
     name: "Chœur Novantiqua", 
-    image: "/images/artistes/choeur-novantiqua/novantica-1-card.jpg",
-    heroImage: "/images/artistes/choeur-novantiqua/novantica-1-hero.jpg",
+    image: "/images/artistes/choeur-novantiqua/novantiqua-1-card.jpg",
+    heroImage: "/images/artistes/choeur-novantiqua/novantiqua-1-hero.jpg",
     gallery: [
-      "/images/artistes/choeur-novantiqua/novantica-1-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantica-2-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantica-3-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantica-4-hero.jpg"
+      "/images/artistes/choeur-novantiqua/novantiqua-1-hero.jpg",
+      "/images/artistes/choeur-novantiqua/novantiqua-2-hero.jpg",
+      "/images/artistes/choeur-novantiqua/novantiqua-3-hero.jpg",
+      "/images/artistes/choeur-novantiqua/novantiqua-4-hero.jpg"
     ],
     description: "Direction Bernard Héritier"
   },
@@ -66,8 +66,8 @@ export const fasArtistes = [
     gallery: [
       "/images/artistes/stile-antico/stile-antico-5-hero.jpg",
       "/images/artistes/stile-antico/stile-antico-6-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantica-1-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantica-2-hero.jpg"
+      "/images/artistes/choeur-novantiqua/novantiqua-1-hero.jpg",
+      "/images/artistes/choeur-novantiqua/novantiqua-2-hero.jpg"
     ],
     description: "Artistes invités de renommée internationale"
   }
