@@ -1,5 +1,5 @@
 import FASHeroCarouselFinal from '@/components/FASHeroCarouselFinal';
-import FASActualitesSection from '@/components/FASActualitesSection';
+import FASConcertsSection from '@/components/FASConcertsSection';
 import FASArtistesSection from '@/components/FASArtistesSection';
 import FASEventSection from '@/components/FASEventSection';
 import FASRorateSection from '@/components/FASRorateSection';
@@ -12,7 +12,7 @@ export default function FAS() {
       position: 'relative'
     }}>
       <FASHeroCarouselFinal />
-      <FASActualitesSection />
+      <FASConcertsSection />
       <FASArtistesSection />
       <FASEventSection />
       <FASRorateSection />
