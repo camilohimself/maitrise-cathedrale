@@ -14,7 +14,7 @@
       "featured_work": "Motets pour voix de femmes",
       "quote": "Une voix féminine unique dans l'univers baroque masculin",
       "color": "#D2374C",
-      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=400&fit=crop"
+      "image": "/images/artistes/stile-antico/stile-antico-3-card.webp"
     },
     {
       "id": "gesualdo",
@@ -30,7 +30,7 @@
       "featured_work": "Madrigaux du 6ème livre",
       "quote": "L'audace harmonique qui défie les siècles",
       "color": "#8B7BB8",
-      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop"
+      "image": "/images/artistes/stile-antico/stile-antico-3-card.webp"
     },
     {
       "id": "bruckner",
@@ -46,7 +46,7 @@
       "featured_work": "Ave Maria, Locus iste",
       "quote": "Architecture sonore et spiritualité mystique",
       "color": "#B8860B",
-      "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop"
+      "image": "/images/artistes/stile-antico/stile-antico-3-card.webp"
     },
     {
       "id": "poulenc",
@@ -62,7 +62,7 @@
       "featured_work": "Gloria pour soprano, chœur et orchestre",
       "quote": "L'art de la mélodie française sublimée",
       "color": "#FF6B9D",
-      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop"
+      "image": "/images/artistes/stile-antico/stile-antico-3-card.webp"
     },
     {
       "id": "palestrina",
@@ -94,7 +94,7 @@
       "featured_work": "Gloria et Magnificat pour voix de femmes",
       "quote": "L'éclat du baroque vénitien dans sa splendeur",
       "color": "#D2374C",
-      "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop"
+      "image": "/images/artistes/stile-antico/stile-antico-3-card.webp"
     }
   ],
   "eras": [

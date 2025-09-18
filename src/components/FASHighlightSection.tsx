@@ -14,7 +14,7 @@ const FASHighlightSection = () => {
       time: "17h00",
       category: "PRESTIGE",
       description: "L'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Palestrina. Un des meilleurs ensembles vocaux au monde.",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
+      image: "/images/artistes/stile-antico/stile-antico-1-card.webp",
       prestige: true
     },
     {
@@ -25,7 +25,7 @@ const FASHighlightSection = () => {
       time: "17h00",
       category: "OUVERTURE",
       description: "Concert d'ouverture avec l'Ensemble Barberine dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue.",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
+      image: "/images/artistes/ecole-maitrisienne/ecole-1-card.webp",
       featured: true
     },
     {
@@ -36,7 +36,7 @@ const FASHighlightSection = () => {
       time: "17h00",
       category: "BAROQUE",
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales pour voix de femmes avec Jean-David Waeber et Daniela Numico.",
-      image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=300&fit=crop",
+      image: "/images/artistes/ecole-maitrisienne/ecole-2-card.webp",
       featured: true
     }
   ];

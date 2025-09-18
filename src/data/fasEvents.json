@@ -22,7 +22,7 @@
       "artists": ["Ensemble Vocal de la Maîtrise", "Ensemble Barberine"],
       "featured": true,
       "category": "baroque",
-      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop"
+      "image": "/images/artistes/ecole-maitrisienne/ecole-1-card.webp"
     },
     {
       "id": 2,
@@ -58,7 +58,7 @@
       "artists": ["École Maîtrisienne", "Chœur des Collèges de Sion"],
       "featured": false,
       "category": "jeunesse",
-      "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=250&fit=crop"
+      "image": "/images/artistes/ecole-maitrisienne/ecole-2-card.webp"
     },
     {
       "id": 4,
@@ -76,7 +76,7 @@
       "directors": ["Jean-David Waeber", "Daniela Numico"],
       "featured": true,
       "category": "baroque",
-      "image": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=250&fit=crop"
+      "image": "/images/artistes/ecole-maitrisienne/ecole-1-card.webp"
     },
     {
       "id": 5,
@@ -114,7 +114,7 @@
       "featured": false,
       "category": "liturgie",
       "special": "À la lumière des bougies",
-      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop"
+      "image": "/images/artistes/choeur-novantiqua/novantiqua-1-card.webp"
     },
     {
       "id": 7,
@@ -129,7 +129,7 @@
       "artists": ["Organistes de la Cathédrale"],
       "featured": false,
       "category": "orgue",
-      "image": "https://images.unsplash.com/photo-1445985543470-41fba5c3144a?w=400&h=250&fit=crop"
+      "image": "/images/artistes/stile-antico/stile-antico-2-card.webp"
     }
   ],
   "artists": [
@@ -149,7 +149,7 @@
       "type": "Ensemble spécialisé",
       "description": "Un des meilleurs ensembles actuels pour la musique baroque",
       "specialty": "Musique Baroque",
-      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop",
+      "image": "/images/artistes/ecole-maitrisienne/ecole-1-card.webp",
       "events": [1]
     },
     {
@@ -158,7 +158,7 @@
       "type": "Chœur",
       "description": "Chœur spécialisé dans les programmes a cappella raffinés",
       "specialty": "Musique a cappella",
-      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=300&fit=crop",
+      "image": "/images/artistes/choeur-novantiqua/novantiqua-2-card.webp",
       "events": [2]
     },
     {
@@ -168,7 +168,7 @@
       "description": "Les jeunes talents de la Maîtrise de la Cathédrale de Sion",
       "specialty": "Formation musicale",
       "local": true,
-      "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop",
+      "image": "/images/artistes/ecole-maitrisienne/ecole-2-card.webp",
       "events": [1, 3, 6]
     }
   ],
