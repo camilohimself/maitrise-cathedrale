@@ -24,50 +24,56 @@ export const fasArtistes = [
   {
     id: "stile-antico",
     name: "Stile Antico",
-    image: "/images/artistes/stile-antico/stile-antico-2-card.jpg",
-    heroImage: "/images/artistes/stile-antico/stile-antico-1-hero.jpg",
+    concert: "Stile Antico",
+    subtitle: "Palestrina, prince de la musique",
+    image: "/images/artistes/stile-antico/stile-antico-2-card.webp",
+    heroImage: "/images/artistes/stile-antico/stile-antico-1-hero.webp",
     gallery: [
-      "/images/artistes/stile-antico/stile-antico-1-hero.jpg",
-      "/images/artistes/stile-antico/stile-antico-2-hero.jpg",
-      "/images/artistes/stile-antico/stile-antico-3-hero.jpg",
-      "/images/artistes/stile-antico/stile-antico-4-hero.jpg"
+      "/images/artistes/stile-antico/stile-antico-1-hero.webp",
+      "/images/artistes/stile-antico/stile-antico-2-hero.webp",
+      "/images/artistes/stile-antico/stile-antico-3-hero.webp",
+      "/images/artistes/stile-antico/stile-antico-4-hero.webp"
     ],
-    description: "Ensemble vocal britannique de renommée mondiale"
+    description: "Ensemble vocal britannique de renommée mondiale, réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance"
   },
   {
     id: "choeur-novantiqua",
-    name: "Chœur Novantiqua", 
-    image: "/images/artistes/choeur-novantiqua/novantiqua-1-card.jpg",
-    heroImage: "/images/artistes/choeur-novantiqua/novantiqua-1-hero.jpg",
+    name: "Chœur Novantiqua",
+    concert: "Chœur Novantiqua",
+    subtitle: "Ex tenebris lux : Gesualdo, Bruckner, Poulenc",
+    image: "/images/artistes/choeur-novantiqua/novantiqua-1-card.webp",
+    heroImage: "/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp",
     gallery: [
-      "/images/artistes/choeur-novantiqua/novantiqua-1-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantiqua-2-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantiqua-3-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantiqua-4-hero.jpg"
+      "/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp",
+      "/images/artistes/choeur-novantiqua/novantiqua-2-hero.webp",
+      "/images/artistes/choeur-novantiqua/novantiqua-3-hero.webp",
+      "/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp"
     ],
-    description: "Direction Bernard Héritier"
+    description: "Direction Bernard Héritier - Programme a cappella raffiné"
   },
   {
     id: "ensemble-vocal",
     name: "Ensemble Vocal",
-    image: "/images/artistes/ecole-maitrisienne/ecole-1-card.jpg",
-    heroImage: "/images/artistes/ecole-maitrisienne/ecole-1-hero.jpg",
+    concert: "Ensemble vocal de la Maîtrise & Ensemble Barberine",
+    subtitle: "Le baroque au féminin : Chiara Margarita Cozzolani",
+    image: "/images/artistes/ecole-maitrisienne/ecole-1-card.webp",
+    heroImage: "/images/artistes/ecole-maitrisienne/ecole-1-hero.webp",
     gallery: [
-      "/images/artistes/ecole-maitrisienne/ecole-1-hero.jpg",
-      "/images/artistes/ecole-maitrisienne/ecole-2-hero.jpg"
+      "/images/artistes/ecole-maitrisienne/ecole-1-hero.webp",
+      "/images/artistes/ecole-maitrisienne/ecole-2-hero.webp"
     ],
-    description: "École Maîtrisienne - Formation d'excellence"
+    description: "Formation d'excellence avec l'Ensemble Barberine"
   },
   {
     id: "solistes",
     name: "Solistes",
-    image: "/images/artistes/stile-antico/stile-antico-3-card.jpg",
-    heroImage: "/images/artistes/stile-antico/stile-antico-3-hero.jpg",
+    image: "/images/artistes/stile-antico/stile-antico-3-card.webp",
+    heroImage: "/images/artistes/stile-antico/stile-antico-3-hero.webp",
     gallery: [
-      "/images/artistes/stile-antico/stile-antico-5-hero.jpg",
-      "/images/artistes/stile-antico/stile-antico-6-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantiqua-1-hero.jpg",
-      "/images/artistes/choeur-novantiqua/novantiqua-2-hero.jpg"
+      "/images/artistes/stile-antico/stile-antico-5-hero.webp",
+      "/images/artistes/stile-antico/stile-antico-6-hero.webp",
+      "/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp",
+      "/images/artistes/choeur-novantiqua/novantiqua-2-hero.webp"
     ],
     description: "Artistes invités de renommée internationale"
   }

@@ -1,24 +1,24 @@
 {
   "festival": {
-    "name": "Festival d'Art Sacré",
+    "name": "Festival d'art sacré",
     "edition": "20ème édition",
     "year": "2025-2026",
     "period": "Du 30 novembre 2025 au 4 janvier 2026",
     "location": "Cathédrale de Sion",
-    "description": "Depuis deux décennies, le Festival d'Art Sacré de la Cathédrale de Sion s'est imposé comme un rendez-vous incontournable du paysage culturel valaisan, alliant exigence artistique et profondeur spirituelle dans un cadre patrimonial unique."
+    "description": "Depuis deux décennies, le Festival d'art sacré de la Cathédrale de Sion s'est imposé comme un rendez-vous incontournable du paysage culturel valaisan, alliant exigence artistique et profondeur spirituelle dans un cadre patrimonial unique."
   },
   "events": [
     {
       "id": 1,
-      "title": "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
-      "subtitle": "Chiara Margarita Cozzolani - Concert d'ouverture",
+      "title": "Ensemble vocal de la Maîtrise & Ensemble Barberine",
+      "subtitle": "Le baroque au féminin : Chiara Margarita Cozzolani",
       "type": "concert_ouverture",
       "date": "2025-11-30",
       "day": "Dimanche",
       "time": "17:00",
       "duration": 90,
       "composer": "Chiara Margarita Cozzolani",
-      "description": "Concert d'ouverture avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique, dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue qui a écrit une musique brillante à une époque où l'on recherchait la sobriété, musique rebelle et magnifique.",
+      "description": "Concert d'ouverture avec l'ensemble vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique, dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue qui a écrit une musique brillante à une époque où l'on recherchait la sobriété, musique rebelle et magnifique.",
       "artists": ["Ensemble Vocal de la Maîtrise", "Ensemble Barberine"],
       "featured": true,
       "category": "baroque",
@@ -27,7 +27,7 @@
     {
       "id": 2,
       "title": "Chœur Novantiqua",
-      "subtitle": "Gesualdo, Bruckner, Poulenc - Programme a cappella",
+      "subtitle": "Ex tenebris lux : Gesualdo, Bruckner, Poulenc",
       "type": "concert",
       "date": "2025-12-07",
       "day": "Dimanche", 
@@ -47,8 +47,8 @@
     },
     {
       "id": 3,
-      "title": "École Maîtrisienne & Chœur des Collèges",
-      "subtitle": "Concert de la Jeunesse - Programme de Noël",
+      "title": "École maîtrisienne & Chœur des collèges de Sion",
+      "subtitle": "Au ciel et sur la terre : les voix de la jeunesse",
       "type": "concert_jeunesse",
       "date": "2025-12-21",
       "day": "Dimanche",
@@ -62,8 +62,8 @@
     },
     {
       "id": 4,
-      "title": "Ensemble Ad Astra & Collectif baroque 7 Sed Unum",
-      "subtitle": "Vivaldi: Gloria et Magnificat",
+      "title": "Ensemble Ad Astra & Collectif 7 Sed Unum",
+      "subtitle": "Vivaldi ou Noël à Venise",
       "type": "concert",
       "date": "2025-12-26",
       "day": "Vendredi",
@@ -81,7 +81,7 @@
     {
       "id": 5,
       "title": "Stile Antico",
-      "subtitle": "Palestrina: Le Prince de la Musique",
+      "subtitle": "Palestrina, prince de la musique",
       "type": "concert_prestige",
       "date": "2026-01-04",
       "day": "Dimanche",

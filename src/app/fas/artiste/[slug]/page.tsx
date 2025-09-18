@@ -9,8 +9,8 @@ const artistesData: Record<string, any> = {
   'stile-antico': {
     id: 'stile-antico',
     name: 'Stile Antico',
-    concert: 'Stile Antico - Palestrina',
-    subtitle: 'Le Prince de la Musique',
+    concert: 'Stile Antico',
+    subtitle: 'Palestrina: Le Prince de la Musique',
     date: 'Dimanche 4 janvier 2026',
     time: '17H00',
     conference: {
@@ -18,13 +18,13 @@ const artistesData: Record<string, any> = {
       title: 'Musicologue et docteur en musicologie',
       time: '16H00'
     },
-    image: '/images/artistes/stile-antico-1-hero.webp',
-    thumbnail: '/images/artistes/stile-antico-2-card.webp',
+    image: '/images/artistes/stile-antico/stile-antico-1-hero.webp',
+    thumbnail: '/images/artistes/stile-antico/stile-antico-2-card.webp',
     gallery: [
-      '/images/artistes/stile-antico-1-hero.webp',
-      '/images/artistes/stile-antico-2-hero.webp',
-      '/images/artistes/stile-antico-3-hero.webp',
-      '/images/artistes/stile-antico-4-hero.webp'
+      '/images/artistes/stile-antico/stile-antico-1-hero.webp',
+      '/images/artistes/stile-antico/stile-antico-2-hero.webp',
+      '/images/artistes/stile-antico/stile-antico-3-hero.webp',
+      '/images/artistes/stile-antico/stile-antico-4-hero.webp'
     ],
     description: `Nous aurons l'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Palestrina, "Le Prince de la Musique". Il s'agit d'un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance.
 
@@ -35,32 +35,34 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
   'choeur-novantiqua': {
     id: 'choeur-novantiqua',
     name: 'Chœur Novantiqua',
-    concert: 'Concert de Noël',
-    date: 'samedi 13 décembre',
-    time: '20H00',
-    altDate: '14 décembre à 17H00',
-    image: '/images/artistes/choeur-novantica/novantica-1-hero.jpg',
-    thumbnail: '/images/artistes/choeur-novantica/novantica-1-card.jpg',
+    concert: 'Chœur Novantiqua',
+    subtitle: 'Gesualdo, Bruckner, Poulenc - Programme a cappella',
+    date: 'Dimanche 7 décembre 2025',
+    time: '17H00',
+    altDate: null,
+    image: '/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp',
+    thumbnail: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
     gallery: [
-      '/images/artistes/choeur-novantica/novantica-1-hero.jpg',
-      '/images/artistes/choeur-novantica/novantica-2-hero.jpg',
-      '/images/artistes/choeur-novantica/novantica-3-hero.jpg',
-      '/images/artistes/choeur-novantica/novantica-4-hero.jpg'
+      '/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp',
+      '/images/artistes/choeur-novantiqua/novantiqua-2-hero.webp',
+      '/images/artistes/choeur-novantiqua/novantiqua-3-hero.webp',
+      '/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp'
     ],
     description: `Sous la direction de Bernard Héritier, le Chœur Novantiqua présente un programme exceptionnel mêlant œuvres sacrées et profanes de la Renaissance. Fort de ses 30 années d'expérience, l'ensemble explore les richesses de la polyphonie franco-flamande avec une attention particulière portée aux compositeurs de l'école de Notre-Dame. Ce concert mettra en lumière des pièces rares de Josquin des Prés, Johannes Ockeghem et Pierre de la Rue, interprétées avec la finesse et la précision qui font la renommée internationale de Novantiqua. Un voyage musical au cœur de l'âge d'or de la polyphonie européenne.`
   },
   'ensemble-vocal': {
     id: 'ensemble-vocal',
-    name: 'Ensemble Vocal',
-    concert: 'Vêpres de la Vierge',
-    date: 'dimanche 21 décembre',
+    name: 'Ensemble Vocal de la Maîtrise',
+    concert: 'Ensemble Vocal & Ensemble Barberine',
+    subtitle: 'Chiara Margarita Cozzolani - Concert d\'ouverture',
+    date: 'Dimanche 30 novembre 2025',
     time: '16H00',
     altDate: null,
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-hero.jpg',
-    thumbnail: '/images/artistes/ecole-maitrisienne/ecole-1-card.jpg',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-hero.webp',
+    thumbnail: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     gallery: [
-      '/images/artistes/ecole-maitrisienne/ecole-1-hero.jpg',
-      '/images/artistes/ecole-maitrisienne/ecole-2-hero.jpg'
+      '/images/artistes/ecole-maitrisienne/ecole-1-hero.webp',
+      '/images/artistes/ecole-maitrisienne/ecole-2-hero.webp'
     ],
     description: `L'Ensemble Vocal de la Maîtrise de la Cathédrale de Sion présente les somptueuses Vêpres de la Vierge de Claudio Monteverdi. Cette œuvre monumentale, composée en 1610, marque un tournant dans l'histoire de la musique sacrée, alliant avec génie la tradition polyphonique de la Renaissance et les innovations harmoniques du baroque naissant. Sous la direction artistique passionnée de notre chef, les jeunes chanteurs de la Maîtrise donnent vie à cette fresque musicale d'une beauté transcendante, où dialoguent solistes, chœurs et instruments dans une architecture sonore d'une richesse incomparable.`
   },
@@ -76,8 +78,8 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
     gallery: [
       '/images/artistes/stile-antico/stile-antico-5-hero.webp',
       '/images/artistes/stile-antico/stile-antico-6-hero.webp',
-      '/images/artistes/choeur-novantica/novantica-3-hero.jpg',
-      '/images/artistes/choeur-novantica/novantica-4-hero.jpg'
+      '/images/artistes/choeur-novantiqua/novantiqua-3-hero.webp',
+      '/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp'
     ],
     description: `Pour cette édition spéciale du Festival d'Art Sacré, nous avons le privilège d'accueillir des solistes de renommée internationale. Au programme : un florilège d'arias et de cantates baroques célébrant l'Avent et la Nativité. Les voix exceptionnelles de nos invités feront résonner les œuvres de Bach, Haendel, Vivaldi et Pergolèse dans l'acoustique unique de notre cathédrale. Un moment de grâce où la virtuosité vocale se met au service de la spiritualité, offrant au public une expérience musicale intense et méditative à l'approche des fêtes de Noël.`
   }
@@ -183,6 +185,7 @@ export default function ArtistePage() {
               fontWeight: '900',
               letterSpacing: '-0.02em',
               marginBottom: '0.5rem',
+              color: 'white',
               textShadow: '0 4px 20px rgba(0, 0, 0, 0.8)'
             }}>
               {artiste.concert}

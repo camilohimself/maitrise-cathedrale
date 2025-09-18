@@ -37,8 +37,8 @@ const fondationContent = {
       
       mission: {
         title: "Mission principale",
-        content: `La première tâche de la Fondation a été de bâtir formellement la Maîtrise de la Cathédrale. Cette Maîtrise est conçue comme une structure permettant de réunir les différentes forces musicales et religieuses qui se partagent l'animation musicale des offices célébrés à la Cathédrale de Sion.`,
-        focus: "Animation musicale des offices"
+        content: `La première tâche de la Fondation a été de bâtir formellement la Maîtrise de la Cathédrale. Cette Maîtrise est conçue comme une structure permettant de réunir les différentes forces musicales et religieuses qui assurent le chant liturgique des offices célébrés à la Cathédrale de Sion.`,
+        focus: "Chant liturgique des offices"
       },
       
       formation: {
@@ -87,7 +87,7 @@ const fondationContent = {
       {
         id: "principal",
         title: "But principal",
-        content: "Soutenir et gérer les ensembles vocaux et instrumentaux assumant l'animation musicale de la Cathédrale au sens large (i.e. offices religieux et concerts), pour y favoriser l'émergence d'un pôle d'excellence et favoriser un rayonnement en matière de musique sacrée."
+        content: "Soutenir et gérer les ensembles vocaux et instrumentaux assurant le chant liturgique de la Cathédrale au sens large (i.e. offices religieux et concerts), pour y favoriser l'émergence d'un pôle d'excellence et favoriser un rayonnement en matière de musique sacrée."
       },
       {
         id: "culturel",

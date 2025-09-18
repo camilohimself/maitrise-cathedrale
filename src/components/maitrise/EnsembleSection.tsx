@@ -42,8 +42,8 @@ export default function EnsembleSection() {
               lineHeight: '1.6',
               color: '#1a1340'
             }}>
-              Un projet artistique unique au monde : l'interprétation complète 
-              des cantates de Jean-Sébastien Bach avec instruments d'époque.
+              Un projet artistique unique au monde : l'interprétation complète
+              des cantates de Jean-Sébastien Bach dans la liturgie catholique.
             </p>
 
             {/* Badge projet */}

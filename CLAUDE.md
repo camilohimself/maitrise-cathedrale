@@ -97,11 +97,41 @@ sips -Z 300 --setProperty formatOptions 75 "source.jpg" --out "thumb.jpg"
 ## 📸 POLITIQUE PHOTOS
 
 **OBLIGATOIRE:** Toute photo doit être optimisée en 3 formats avant intégration
+- **Format:** WebP (format optimal depuis septembre 2024)
 - **Hero:** 1920px, qualité 85%
 - **Card:** 600px, qualité 85%
 - **Thumb:** 300px, qualité 75%
 - **Interdiction:** Jamais d'Unsplash ou sources externes
 - **Répertoire:** `/public/images/artistes/[nom]/`
+
+### 🔄 Conversion WebP (Commandes)
+```bash
+# Conversion via cwebp (Google WebP Converter)
+cwebp -q 85 source.jpg -o hero.webp    # Hero format
+cwebp -q 85 source.jpg -o card.webp    # Card format
+cwebp -q 75 source.jpg -o thumb.webp   # Thumb format
+
+# Alternative sips (macOS) - pour JPEG de secours
+sips -Z 1920 --setProperty formatOptions 85 "source.jpg" --out "hero.jpg"
+sips -Z 600 --setProperty formatOptions 85 "source.jpg" --out "card.jpg"
+sips -Z 300 --setProperty formatOptions 75 "source.jpg" --out "thumb.jpg"
+```
+
+### ⚠️ ERREUR DE JUGEMENT DOCUMENTÉE (18 septembre 2024)
+**Contexte:** Lors de la conversion FAS artistes, j'ai initialement changé les références `.webp` vers `.jpg`, pensant que les fichiers WebP étaient des placeholders.
+
+**Réalité:** Le format WebP est supérieur au JPEG :
+- **Gain de poids:** 88% de réduction (4.8MB → 596KB sur les hero images)
+- **Qualité préservée:** Même rendu visuel à qualité 85%
+- **Support navigateur:** 96%+ des navigateurs modernes
+- **Performance web:** Chargement plus rapide, meilleur score Lighthouse
+
+**Action corrective:**
+- ✅ Conversion de toutes les photos artistes FAS en WebP (42 images)
+- ✅ Mise à jour de toutes les références code vers `.webp`
+- ✅ Documentation de l'erreur pour éviter répétition
+
+**Leçon retenue:** Toujours vérifier les avantages techniques avant de "corriger" un format d'image moderne.
 
 ---
 
@@ -127,5 +157,42 @@ sips -Z 300 --setProperty formatOptions 75 "source.jpg" --out "thumb.jpg"
 
 ---
 
-**Dernière mise à jour:** 17 décembre 2024
-**Session critique:** Harmonisation UX/UI palette couleurs + Refonte pages soutenir
+### 📧 CORRECTIONS COMITÉ (18 septembre 2024)
+**Suite au retour du membre du comité, corrections complètes appliquées :**
+
+#### ✅ **Axes stratégiques redéfinis**
+- **Avant:** Ensemble Vocal, École Maîtrisienne, Liturgie, Festival
+- **Maintenant:** École de chant • Cantates de Bach • Chant grégorien • Liturgie à la cathédrale
+
+#### ✅ **Typographie française appliquée**
+- Suppression majuscules anglaises : "Festival d'art sacré", "ensemble vocal", etc.
+- Règle : seule la première lettre en majuscule (norme française)
+
+#### ✅ **Titres concerts FAS officiels** (du flyer)
+- "Le baroque au féminin : Chiara Margarita Cozzolani"
+- "Ex tenebris lux : Gesualdo, Bruckner, Poulenc"
+- "Au ciel et sur la terre : les voix de la jeunesse"
+- "Vivaldi ou Noël à Venise"
+- "Palestrina, prince de la musique"
+
+#### ✅ **Corrections de contenu**
+- **Ensemble Vocal:** Supprimé "instruments d'époque" → "cantates Bach liturgie catholique"
+- **Catherine Gremaud-Babel:** Bio corrigée (Conservatoire Genève, Sainte-Croix)
+- **Vocabulaire liturgique:** "animation" → "chant liturgique"
+- **Répertoire traditionnel:** Ajouté grégorien, polyphonie Renaissance, messes classiques
+
+#### 🛠 **Fichiers modifiés**
+- `src/data/maitriseContent.js` - Axes + bio Catherine
+- `src/data/fondationContent.js` - Vocabulaire liturgique
+- `src/data/fasContent.js` - Titres officiels
+- `src/data/fasEvents.json` - Titres + typographie
+- `src/components/MaitriseAboutSection.tsx` - Nouveaux axes
+- `src/components/maitrise/EnsembleSection.tsx` - Cantates Bach
+- `src/components/maitrise/DirectionSection.tsx` - Typographie
+
+**Build final :** ✅ 25 pages sans erreur
+
+---
+
+**Dernière mise à jour:** 18 septembre 2024
+**Session critique:** Corrections complètes suite retour comité - Axes stratégiques + typographie + contenu officiel

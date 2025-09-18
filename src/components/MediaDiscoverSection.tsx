@@ -14,7 +14,7 @@ const MEDIA_ITEMS: MediaItem[] = [
       type: 'youtube',
       description: "L'Ensemble Vocal de la Maîtrise interprète un programme de chants de Noël traditionnels dans le cadre magnifique de la Cathédrale Notre-Dame de Sion. Moment d'exception pour célébrer la Nativité.",
       embedId: "", // Ajouter l'ID YouTube (ex: 'dQw4w9WgXcQ')
-      thumbnailUrl: "/images/artistes/choeur-novantica/novantica-1-card.jpg",
+      thumbnailUrl: "/images/artistes/choeur-novantiqua/novantiqua-1-card.webp",
       duration: "8:32",
       category: "Concert",
       date: "15 déc 2023"
@@ -25,7 +25,7 @@ const MEDIA_ITEMS: MediaItem[] = [
       type: 'youtube', 
       description: "Interprétation de la célèbre cantate de Jean-Sébastien Bach avec l'orchestre baroque et les solistes. Un moment d'exception dans l'acoustique unique de notre cathédrale.",
       embedId: "", // Ajouter l'ID YouTube
-      thumbnailUrl: "/images/artistes/choeur-novantica/novantica-2-card.jpg",
+      thumbnailUrl: "/images/artistes/choeur-novantiqua/novantiqua-2-card.webp",
       duration: "12:45",
       category: "Cantate",
       date: "3 oct 2023"
@@ -36,7 +36,7 @@ const MEDIA_ITEMS: MediaItem[] = [
       type: 'soundcloud',
       description: "Enregistrement studio de l'Ensemble Vocal dirigé par Jean-Claude Kolly. Une interprétation sensible et recueillie de ce chef-d'œuvre de Franz Schubert.",
       embedId: "", // Ajouter l'ID SoundCloud (numéro de track)
-      thumbnailUrl: "/images/artistes/choeur-novantica/novantica-3-card.jpg",
+      thumbnailUrl: "/images/artistes/choeur-novantiqua/novantiqua-3-card.webp",
       duration: "4:18",
       category: "Musique sacrée",
       date: "22 nov 2023"
@@ -47,7 +47,7 @@ const MEDIA_ITEMS: MediaItem[] = [
       type: 'soundcloud',
       description: "Découvrez le travail des jeunes talents de l'École Maîtrisienne lors d'une répétition. Formation d'excellence pour les 8-18 ans dans la tradition des maîtrises cathédrales.",
       embedId: "", // Ajouter l'ID SoundCloud
-      thumbnailUrl: "/images/artistes/ecole-maitrisienne/ecole-1-card.jpg",
+      thumbnailUrl: "/images/artistes/ecole-maitrisienne/ecole-1-card.webp",
       duration: "6:22",
       category: "Formation",
       date: "5 oct 2023"
@@ -58,7 +58,7 @@ const MEDIA_ITEMS: MediaItem[] = [
       type: 'youtube',
       description: "Moment d'exception avec l'ensemble britannique Stile Antico dans un programme consacré à Palestrina. 19ème édition du Festival d'Art Sacré de Sion.",
       embedId: "", // Ajouter l'ID YouTube
-      thumbnailUrl: "/images/artistes/choeur-novantica/novantica-4-card.jpg",
+      thumbnailUrl: "/images/artistes/choeur-novantiqua/novantiqua-4-card.webp",
       duration: "25:30",
       category: "Festival",
       date: "7 jan 2023"
@@ -69,7 +69,7 @@ const MEDIA_ITEMS: MediaItem[] = [
       type: 'soundcloud',
       description: "Office liturgique en polyphonie Renaissance avec les œuvres de Palestrina, Victoria et Lassus. Une immersion spirituelle et musicale unique.",
       embedId: "", // Ajouter l'ID SoundCloud
-      thumbnailUrl: "/images/artistes/ecole-maitrisienne/ecole-2-card.jpg",
+      thumbnailUrl: "/images/artistes/ecole-maitrisienne/ecole-2-card.webp",
       duration: "18:15",
       category: "Liturgie",
       date: "28 mai 2023"

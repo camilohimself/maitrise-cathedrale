@@ -47,7 +47,7 @@ export default function DirectionSection() {
               marginBottom: '16px',
               color: '#1a1340'
             }}>
-              Direction Musicale
+              Direction musicale
             </h2>
             
             <h3 style={{

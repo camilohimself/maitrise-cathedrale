@@ -48,15 +48,15 @@ export const maitriseContent = {
     adjointe: {
       nom: "Catherine Gremaud-Babel",
       titre: "Organiste adjointe",
-      bio: "Professeure au Conservatoire cantonal, spécialiste du répertoire baroque"
+      bio: "Diplômée du Conservatoire de Genève (orgue avec Lionel Rogg), perfectionnement avec Guy Bovet et André Isoir. Organiste titulaire de Sainte-Croix de Carouge"
     }
   },
 
   // Ensemble Vocal et Instrumental
   evi: {
-    titre: "Ensemble Vocal & Instrumental (EVI)",
-    description: "Formation professionnelle unique en Suisse romande",
-    projet: "Intégrale des Cantates de Bach - Un projet monumental unique au monde",
+    titre: "Ensemble vocal et instrumental (EVI)",
+    description: "Formation professionnelle unique en Suisse romande spécialisée dans les cantates de Bach en liturgie catholique",
+    projet: "Intégrale des cantates de Bach dans la liturgie catholique - Projet unique au monde",
     stats: {
       cantates: "140/200",
       musiciens: "12-20",
@@ -66,7 +66,7 @@ export const maitriseContent = {
 
   // École Maîtrisienne
   ecole: {
-    titre: "École Maîtrisienne",
+    titre: "École maîtrisienne",
     description: "Formation vocale d'excellence pour jeunes de 15 à 25 ans",
     partenariat: {
       annee: "2024",

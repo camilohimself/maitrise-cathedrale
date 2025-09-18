@@ -15,26 +15,26 @@ const MaitriseAboutSection = () => {
   const highlights = [
     {
       iconType: 'education',
-      title: 'École Maîtrisienne',
-      description: 'Formation d\'excellence pour jeunes talents de 8 à 18 ans dans la tradition des maîtrises cathédrales.',
+      title: 'École de chant',
+      description: 'Formation d\'excellence pour jeunes talents de 8 à 18 ans. Répertoire traditionnel : chant grégorien, polyphonie de la Renaissance, messes classiques.',
       link: '/maitrise/ecole-maitrisienne'
     },
     {
       iconType: 'music',
-      title: 'Ensemble Vocal',
-      description: 'Chœur professionnel spécialisé dans le répertoire sacré et baroque sous la direction musicale experte.',
+      title: 'Cantates de Bach',
+      description: 'Projet unique au monde : intégrale des cantates de Jean-Sébastien Bach dans la liturgie catholique.',
       link: '/maitrise/ensemble-vocal'
     },
     {
       iconType: 'cathedral',
-      title: 'Liturgie Cathédrale',
-      description: 'Animation des offices liturgiques dans le cadre unique de la Cathédrale Notre-Dame de Sion.',
+      title: 'Chant grégorien',
+      description: 'Chant liturgique des offices dans la tradition grégorienne au cœur de la Cathédrale Notre-Dame de Sion.',
       link: '/maitrise/chapelle-musicale'
     },
     {
       iconType: 'festival',
-      title: 'Festival d\'Art Sacré',
-      description: '20 éditions d\'excellence artistique réunissant les plus grands interprètes internationaux.',
+      title: 'Liturgie à la cathédrale',
+      description: 'Chant liturgique quotidien et célébrations solennelles dans la tradition cathédrale.',
       link: '/fas'
     }
   ];
