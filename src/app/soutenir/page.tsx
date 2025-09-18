@@ -9,15 +9,17 @@ export default function Soutenir() {
   ];
 
   const partenaires = [
-    { name: 'Bourgeoisie de Sion', image: '/images/partenaires/bourgeoisie-sion-card.jpg' },
-    { name: 'Chapitre de la Cathédrale', image: '/images/partenaires/chapitre-cathedrale-card.jpg' },
-    { name: 'Conférence des Présidents', image: '/images/partenaires/conference-presidents-card.jpg' },
-    { name: 'Espace2', image: '/images/partenaires/espace2-card.jpg' },
-    { name: 'Fondation Blondin', image: '/images/partenaires/fondation-blondin-card.jpg' },
-    { name: 'Fondation Sandoz', image: '/images/partenaires/fondation-sandoz-card.jpg' },
-    { name: 'Généreux Donateur', image: '/images/partenaires/genereux-donateur-card.jpg' },
-    { name: 'Lietti', image: '/images/partenaires/lietti-card.jpg' },
-    { name: 'Le Nouvelliste', image: '/images/partenaires/nouvelliste-card.jpg' }
+    { name: 'Bourgeoisie de Sion', image: '/images/partenaires-new/bourgeoisie-sion-card.jpg' },
+    { name: 'Chapitre de la Cathédrale', image: '/images/partenaires-new/chapitre-cathedrale-card.jpg' },
+    { name: 'Évêché de Sion', image: '/images/partenaires-new/eveche-sion-card.jpg' },
+    { name: 'Office du Tourisme Sion', image: '/images/partenaires-new/office-tourisme-sion-card.jpg' },
+    { name: 'Ville de Sion', image: '/images/partenaires-new/ville-sion-card.jpg' },
+    { name: 'AG Culturel', image: '/images/partenaires-new/ag-culturel-card.jpg' },
+    { name: 'Fondation LG', image: '/images/partenaires-new/fondation-lg-card.jpg' },
+    { name: 'Canton du Valais', image: '/images/partenaires-new/canton-valais-card.jpg' },
+    { name: 'RIDAG', image: '/images/partenaires-new/ridag-card.jpg' },
+    { name: 'Loterie Romande', image: '/images/partenaires-new/loterie-romande-card.jpg' },
+    { name: 'BCVS', image: '/images/partenaires-new/bcvs-card.jpg' }
   ];
 
   return (
