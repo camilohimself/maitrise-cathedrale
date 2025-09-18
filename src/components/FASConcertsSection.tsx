@@ -163,10 +163,10 @@ const FASConcertsSection = () => {
                 <div style={{ marginBottom: '24px' }}>
                   <h3 style={{
                     color: 'var(--color-white)',
-                    fontSize: '24px',
+                    fontSize: '22px',
                     fontWeight: '700',
-                    marginBottom: '8px',
-                    lineHeight: '1.3',
+                    marginBottom: '10px',
+                    lineHeight: '1.2',
                     paddingRight: '100px'
                   }}>
                     {concert.title}
@@ -175,9 +175,11 @@ const FASConcertsSection = () => {
                   {concert.subtitle && (
                     <p style={{
                       color: 'var(--color-purple-light)',
-                      fontSize: '16px',
+                      fontSize: '15px',
                       fontWeight: '600',
-                      marginBottom: '12px'
+                      marginBottom: '12px',
+                      fontStyle: 'italic',
+                      opacity: 0.95
                     }}>
                       {concert.subtitle}
                     </p>

@@ -10,8 +10,8 @@
   "events": [
     {
       "id": 1,
-      "title": "Ouverture du FAS",
-      "subtitle": "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
+      "title": "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
+      "subtitle": "Chiara Margarita Cozzolani - Concert d'ouverture",
       "type": "concert_ouverture",
       "date": "2025-11-30",
       "day": "Dimanche",
@@ -27,7 +27,7 @@
     {
       "id": 2,
       "title": "Chœur Novantiqua",
-      "subtitle": "Programme a cappella",
+      "subtitle": "Gesualdo, Bruckner, Poulenc - Programme a cappella",
       "type": "concert",
       "date": "2025-12-07",
       "day": "Dimanche", 
@@ -47,8 +47,8 @@
     },
     {
       "id": 3,
-      "title": "Concert de la Jeunesse",
-      "subtitle": "École Maîtrisienne & Chœur des Collèges",
+      "title": "École Maîtrisienne & Chœur des Collèges",
+      "subtitle": "Concert de la Jeunesse - Programme de Noël",
       "type": "concert_jeunesse",
       "date": "2025-12-21",
       "day": "Dimanche",
@@ -62,8 +62,8 @@
     },
     {
       "id": 4,
-      "title": "Vivaldi - Gloria et Magnificat",
-      "subtitle": "Ensemble Ad Astra & Collectif baroque 7 Sed Unum",
+      "title": "Ensemble Ad Astra & Collectif baroque 7 Sed Unum",
+      "subtitle": "Vivaldi: Gloria et Magnificat",
       "type": "concert",
       "date": "2025-12-26",
       "day": "Vendredi",
@@ -80,8 +80,8 @@
     },
     {
       "id": 5,
-      "title": "Stile Antico - Palestrina",
-      "subtitle": "Le Prince de la Musique",
+      "title": "Stile Antico",
+      "subtitle": "Palestrina: Le Prince de la Musique",
       "type": "concert_prestige",
       "date": "2026-01-04",
       "day": "Dimanche",
