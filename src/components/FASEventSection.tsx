@@ -74,7 +74,7 @@ const FASEventSection = () => {
             <button
               onClick={() => openComposerModal(name)}
               style={{
-                color: '#D4AF37',
+                color: 'var(--color-gold)',
                 background: 'none',
                 border: 'none',
                 textDecoration: 'underline',
@@ -84,11 +84,11 @@ const FASEventSection = () => {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.color = '#FFD700';
+                e.currentTarget.style.color = 'var(--color-gold)';
                 e.currentTarget.style.textShadow = '0 0 10px rgba(255, 215, 0, 0.5)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#D4AF37';
+                e.currentTarget.style.color = 'var(--color-gold)';
                 e.currentTarget.style.textShadow = 'none';
               }}
             >
@@ -125,7 +125,7 @@ const FASEventSection = () => {
     badges.push({
       text: "20ème Édition",
       style: {
-        background: 'linear-gradient(45deg, #D4AF37, #FFD700)',
+        background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
         color: '#1a1340',
         fontWeight: '700',
         letterSpacing: '0.05em'
@@ -163,7 +163,7 @@ const FASEventSection = () => {
         text: "🕯️ " + event.special,
         style: {
           background: 'linear-gradient(45deg, #1B1B2F, #2D2D44)',
-          color: '#D4AF37',
+          color: 'var(--color-gold)',
           fontWeight: '600',
           border: '1px solid rgba(212, 175, 55, 0.3)'
         }
@@ -345,7 +345,7 @@ const FASEventSection = () => {
               {events[0].subtitle && (
                 <p style={{
                   fontSize: '1.2rem',
-                  color: '#D4AF37',
+                  color: 'var(--color-gold)',
                   fontWeight: '500',
                   marginBottom: '24px',
                   lineHeight: '1.4'
@@ -376,7 +376,7 @@ const FASEventSection = () => {
                   <button
                     onClick={() => openComposerModal((events[0] as any).composer)}
                     style={{
-                      background: 'linear-gradient(45deg, #D4AF37, #FFD700)',
+                      background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
                       color: '#1a1340',
                       border: 'none',
                       padding: '6px 16px',
@@ -459,7 +459,7 @@ const FASEventSection = () => {
                 </button>
 
                 <Link 
-                  href="/agenda-billetterie"
+                  href="https://billetterie-externe.com/maitrise-cathedrale"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -622,7 +622,7 @@ const FASEventSection = () => {
                     {event.subtitle && (
                       <p style={{
                         fontSize: '1rem',
-                        color: '#D4AF37',
+                        color: 'var(--color-gold)',
                         marginBottom: '12px',
                         fontWeight: '500'
                       }}>

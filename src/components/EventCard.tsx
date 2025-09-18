@@ -299,7 +299,10 @@ const EventCard: React.FC<EventCardProps> = ({
         }}>
           {/* CTA Billetterie - Seulement si payant */}
           {isPaidEvent() && (
-            <button 
+            <a
+              href="https://billetterie-externe.com/maitrise-cathedrale"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -314,7 +317,8 @@ const EventCard: React.FC<EventCardProps> = ({
                 fontSize: '11px',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
-                whiteSpace: 'nowrap'
+                whiteSpace: 'nowrap',
+                textDecoration: 'none'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = 'var(--color-red-hover)';
@@ -326,7 +330,7 @@ const EventCard: React.FC<EventCardProps> = ({
               }}
             >
               Billetterie
-            </button>
+            </a>
           )}
           
           {/* CTA Calendrier */}

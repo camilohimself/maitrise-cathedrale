@@ -13,7 +13,7 @@ const SupportSection = () => {
       benefits: ['Accès privilégié aux concerts', 'Newsletter exclusive', 'Rencontres avec les artistes'],
       cta: 'Devenir Ami',
       link: '/soutenir/amis-maitrise',
-      color: '#B8860B'
+      color: 'var(--color-gold)'
     },
     {
       iconType: 'partnership',
@@ -33,7 +33,7 @@ const SupportSection = () => {
       benefits: ['Don déductible fiscalement', 'Reçu officiel', 'Impact direct sur la formation'],
       cta: 'Faire un don',
       link: '/soutenir/contact',
-      color: '#B8860B'
+      color: 'var(--color-gold)'
     }
   ];
 
@@ -393,8 +393,8 @@ const SupportSection = () => {
               alignItems: 'center',
               padding: '12px 24px',
               backgroundColor: 'transparent',
-              color: '#B8860B',
-              border: '2px solid #B8860B',
+              color: 'var(--color-gold)',
+              border: '2px solid var(--color-gold)',
               borderRadius: '25px',
               fontFamily: 'var(--font-outfit)',
               fontWeight: '600',
@@ -403,12 +403,12 @@ const SupportSection = () => {
               transition: 'all 0.3s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#B8860B';
+              e.currentTarget.style.backgroundColor = 'var(--color-gold)';
               e.currentTarget.style.color = '#FFFFFF';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '#B8860B';
+              e.currentTarget.style.color = 'var(--color-gold)';
             }}
           >
             <span>Devenir partenaire</span>

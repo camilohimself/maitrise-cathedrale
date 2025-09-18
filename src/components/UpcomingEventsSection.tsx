@@ -287,7 +287,7 @@ const UpcomingEventsSection = memo(() => {
           textAlign: 'center',
         }}>
           <Link 
-            href="/agenda-billetterie"
+            href="https://billetterie-externe.com/maitrise-cathedrale"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

@@ -258,7 +258,7 @@ export default function ArtistePage() {
             fontSize: '2rem',
             fontWeight: '700',
             marginBottom: '2rem',
-            color: '#D4AF37'
+            color: 'var(--color-gold)'
           }}>
             À propos du concert
           </h2>

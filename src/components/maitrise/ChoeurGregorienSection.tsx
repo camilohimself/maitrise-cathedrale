@@ -19,7 +19,7 @@ export default function ChoeurGregorienSection() {
         }}>
           {/* Visual Element */}
           <div style={{
-            background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(227, 50, 65, 0.05) 100%)',
+            background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(212, 165, 116, 0.05) 100%)',
             borderRadius: '24px',
             padding: '48px',
             backdropFilter: 'blur(10px)',
@@ -30,7 +30,7 @@ export default function ChoeurGregorienSection() {
             <div style={{
               fontSize: '120px',
               marginBottom: '24px',
-              background: 'linear-gradient(45deg, var(--color-gold), #E33241)',
+              background: 'linear-gradient(45deg, var(--color-gold), #E6C068)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -173,7 +173,7 @@ export default function ChoeurGregorienSection() {
                   <div style={{
                     width: '32px',
                     height: '32px',
-                    background: 'linear-gradient(45deg, var(--color-gold), #E33241)',
+                    background: 'linear-gradient(45deg, var(--color-gold), #E6C068)',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',

@@ -140,7 +140,7 @@ const HeroSectionV2 = () => {
                 <div style={{
                   fontFamily: 'var(--font-outfit)',
                   fontSize: '0.9rem',
-                  color: '#B8860B',
+                  color: 'var(--color-gold)',
                   fontWeight: '500',
                   textTransform: 'uppercase',
                   letterSpacing: '1px',
@@ -158,7 +158,7 @@ const HeroSectionV2 = () => {
             animation: 'slideInUp 1s ease-out 0.8s forwards',
           }}>
             <a 
-              href="/agenda-billetterie"
+              href="https://billetterie-externe.com/maitrise-cathedrale"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -272,7 +272,7 @@ const HeroSectionV2 = () => {
         left: '10%',
         width: '100px',
         height: '1px',
-        background: 'linear-gradient(90deg, transparent, #B8860B, transparent)',
+        background: 'linear-gradient(90deg, transparent, var(--color-gold), transparent)',
         opacity: 0.5,
       }} />
 

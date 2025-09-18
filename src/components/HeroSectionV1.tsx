@@ -83,7 +83,7 @@ const HeroSectionV1 = () => {
           backgroundColor: 'rgba(184, 134, 11, 0.2)',
           border: '1px solid rgba(184, 134, 11, 0.4)',
           borderRadius: '50px',
-          color: '#B8860B',
+          color: 'var(--color-gold)',
           fontFamily: 'var(--font-outfit)',
           fontSize: '14px',
           fontWeight: '600',
@@ -110,7 +110,7 @@ const HeroSectionV1 = () => {
           Bienvenue à la Maîtrise
           <br />
           <span style={{
-            background: 'linear-gradient(135deg, #B8860B 0%, #DAA520 100%)',
+            background: 'linear-gradient(135deg, var(--color-gold) 0%, #DAA520 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -133,7 +133,7 @@ const HeroSectionV1 = () => {
         }}>
           Voix d'exception au cœur du Valais
           <br />
-          <span style={{ color: '#B8860B', fontWeight: '400' }}>
+          <span style={{ color: 'var(--color-gold)', fontWeight: '400' }}>
             École de chant • Ensemble vocal • Art sacré
           </span>
         </p>
@@ -147,7 +147,7 @@ const HeroSectionV1 = () => {
           animation: 'fadeInUp 1s ease-out 0.6s both',
         }}>
           <a 
-            href="/agenda-billetterie"
+            href="https://billetterie-externe.com/maitrise-cathedrale"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

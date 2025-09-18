@@ -9,7 +9,10 @@ export default function Contact() {
     email: '',
     telephone: '',
     sujet: '',
-    message: ''
+    message: '',
+    montant: '',
+    typeDon: 'ponctuel',
+    communicationIban: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -273,6 +276,143 @@ export default function Contact() {
                     onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
                     onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
                   />
+                </div>
+
+                {/* Section Don */}
+                <div style={{
+                  marginBottom: '30px',
+                  padding: '24px',
+                  backgroundColor: 'rgba(212, 165, 116, 0.05)',
+                  borderRadius: '12px',
+                  border: '1px solid rgba(212, 165, 116, 0.2)'
+                }}>
+                  <h3 style={{
+                    fontSize: '1.2rem',
+                    fontWeight: '600',
+                    color: 'var(--color-gold)',
+                    marginBottom: '20px'
+                  }}>
+                    💝 Informations de don (optionnel)
+                  </h3>
+
+                  <div style={{ marginBottom: '20px' }}>
+                    <label style={{
+                      display: 'block',
+                      fontSize: '0.9rem',
+                      fontWeight: '500',
+                      color: '#1a1340',
+                      marginBottom: '8px'
+                    }}>
+                      Type de don
+                    </label>
+                    <select
+                      name="typeDon"
+                      value={formData.typeDon}
+                      onChange={handleChange}
+                      style={{
+                        width: '100%',
+                        padding: '12px 16px',
+                        border: '2px solid #e2e8f0',
+                        borderRadius: '8px',
+                        fontSize: '1rem',
+                        backgroundColor: 'white',
+                        transition: 'border-color 0.3s ease'
+                      }}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
+                      onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
+                    >
+                      <option value="ponctuel">Don ponctuel</option>
+                      <option value="mensuel">Don mensuel</option>
+                      <option value="annuel">Don annuel</option>
+                    </select>
+                  </div>
+
+                  <div style={{ marginBottom: '20px' }}>
+                    <label style={{
+                      display: 'block',
+                      fontSize: '0.9rem',
+                      fontWeight: '500',
+                      color: '#1a1340',
+                      marginBottom: '8px'
+                    }}>
+                      Montant souhaité (CHF)
+                    </label>
+                    <input
+                      type="number"
+                      name="montant"
+                      value={formData.montant}
+                      onChange={handleChange}
+                      placeholder="ex: 50"
+                      min="1"
+                      style={{
+                        width: '100%',
+                        padding: '12px 16px',
+                        border: '2px solid #e2e8f0',
+                        borderRadius: '8px',
+                        fontSize: '1rem',
+                        transition: 'border-color 0.3s ease'
+                      }}
+                      onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
+                      onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
+                    />
+                  </div>
+
+                  {/* IBAN Info Box */}
+                  <div style={{
+                    padding: '16px',
+                    backgroundColor: 'rgba(26, 19, 64, 0.05)',
+                    borderRadius: '8px',
+                    border: '1px solid rgba(26, 19, 64, 0.1)',
+                    marginBottom: '20px'
+                  }}>
+                    <h4 style={{
+                      fontSize: '0.95rem',
+                      fontWeight: '600',
+                      color: 'var(--color-navy)',
+                      marginBottom: '8px'
+                    }}>
+                      🏦 Coordonnées bancaires
+                    </h4>
+                    <p style={{
+                      fontSize: '0.9rem',
+                      color: 'var(--color-navy)',
+                      marginBottom: '12px',
+                      lineHeight: 1.5
+                    }}>
+                      <strong>IBAN :</strong> CH94 0900 0000 1234 5678 9<br/>
+                      <strong>Bénéficiaire :</strong> Fondation Maîtrise Cathédrale Sion<br/>
+                      <strong>Banque :</strong> PostFinance SA
+                    </p>
+
+                    <div style={{ marginTop: '12px' }}>
+                      <label style={{
+                        display: 'block',
+                        fontSize: '0.85rem',
+                        fontWeight: '500',
+                        color: '#1a1340',
+                        marginBottom: '6px'
+                      }}>
+                        Communication IBAN (optionnel)
+                      </label>
+                      <input
+                        type="text"
+                        name="communicationIban"
+                        value={formData.communicationIban}
+                        onChange={handleChange}
+                        placeholder="Don pour cantates Bach 2025"
+                        style={{
+                          width: '100%',
+                          padding: '10px 12px',
+                          border: '2px solid #e2e8f0',
+                          borderRadius: '6px',
+                          fontSize: '0.9rem',
+                          transition: 'border-color 0.3s ease'
+                        }}
+                        onFocus={(e) => e.target.style.borderColor = 'var(--color-gold)'}
+                        onBlur={(e) => e.target.style.borderColor = '#e2e8f0'}
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 <div style={{ marginBottom: '20px' }}>

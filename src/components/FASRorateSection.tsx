@@ -120,7 +120,7 @@ const FASRorateSection = () => {
               <span style={{
                 display: 'block',
                 fontWeight: '700',
-                background: 'linear-gradient(45deg, #FFC107, #FFD700)',
+                background: 'linear-gradient(45deg, #FFC107, var(--color-gold))',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
@@ -186,7 +186,7 @@ const FASRorateSection = () => {
                         transform: 'translateX(-50%)',
                         width: '8px',
                         height: '12px',
-                        background: 'radial-gradient(ellipse, #FFD700 0%, #FFA500 50%, #FF4500 100%)',
+                        background: 'radial-gradient(ellipse, var(--color-gold) 0%, #FFA500 50%, #FF4500 100%)',
                         borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%',
                         animation: `candleGlow ${3 + index * 0.5}s ease-in-out infinite`,
                         opacity: candleFlicker
@@ -426,7 +426,7 @@ const FASRorateSection = () => {
                   letterSpacing: '0.05em'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'linear-gradient(45deg, #FFC107, #FFD700)';
+                  e.currentTarget.style.background = 'linear-gradient(45deg, #FFC107, var(--color-gold))';
                   e.currentTarget.style.color = '#1B1B2F';
                   e.currentTarget.style.transform = 'translateY(-3px)';
                   e.currentTarget.style.boxShadow = '0 15px 40px rgba(255, 193, 7, 0.4)';

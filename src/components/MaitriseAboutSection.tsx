@@ -170,7 +170,7 @@ const MaitriseAboutSection = () => {
               padding: '2rem',
               borderRadius: '20px',
               marginBottom: '2rem',
-              borderLeft: '4px solid #B8860B',
+              borderLeft: '4px solid var(--color-gold)',
             }}>
               <blockquote style={{
                 fontFamily: 'var(--font-spectral)',
@@ -225,7 +225,7 @@ const MaitriseAboutSection = () => {
                     fontFamily: 'var(--font-outfit)',
                     fontSize: '1rem',
                     fontWeight: '600',
-                    color: '#B8860B',
+                    color: 'var(--color-gold)',
                     marginBottom: '0.3rem',
                   }}>
                     {stat.label}
@@ -374,7 +374,7 @@ const MaitriseAboutSection = () => {
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
-                color: '#B8860B',
+                color: 'var(--color-gold)',
                 fontFamily: 'var(--font-outfit)',
                 fontWeight: '600',
                 fontSize: '0.9rem',

@@ -150,7 +150,7 @@ const HeroSectionV3 = () => {
           <div style={{
             width: '60px',
             height: '60px',
-            background: 'linear-gradient(45deg, #B8860B, #8B0000)',
+            background: 'linear-gradient(45deg, var(--color-gold), #8B0000)',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
@@ -190,7 +190,7 @@ const HeroSectionV3 = () => {
           <br />
           <span style={{
             fontSize: '0.7em',
-            color: '#B8860B',
+            color: 'var(--color-gold)',
             fontWeight: '300',
             letterSpacing: '3px',
           }}>
@@ -224,7 +224,7 @@ const HeroSectionV3 = () => {
                 fontFamily: 'var(--font-spectral)',
                 fontSize: '1.8rem',
                 fontWeight: '600',
-                color: '#B8860B',
+                color: 'var(--color-gold)',
                 marginBottom: '0.5rem',
                 textAlign: 'center',
               }}>
@@ -262,7 +262,7 @@ const HeroSectionV3 = () => {
                 height: '12px',
                 borderRadius: '50%',
                 border: '2px solid rgba(184, 134, 11, 0.4)',
-                background: currentSection === index ? '#B8860B' : 'transparent',
+                background: currentSection === index ? 'var(--color-gold)' : 'transparent',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
               }}
@@ -285,8 +285,8 @@ const HeroSectionV3 = () => {
               display: 'inline-block',
               padding: '16px 32px',
               backgroundColor: 'transparent',
-              color: '#B8860B',
-              border: '2px solid #B8860B',
+              color: 'var(--color-gold)',
+              border: '2px solid var(--color-gold)',
               fontFamily: 'var(--font-outfit)',
               fontWeight: '500',
               fontSize: '0.95rem',
@@ -298,13 +298,13 @@ const HeroSectionV3 = () => {
               transition: 'all 0.4s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#B8860B';
+              e.currentTarget.style.backgroundColor = 'var(--color-gold)';
               e.currentTarget.style.color = '#FFFFFF';
               e.currentTarget.style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '#B8860B';
+              e.currentTarget.style.color = 'var(--color-gold)';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
@@ -312,7 +312,7 @@ const HeroSectionV3 = () => {
           </a>
 
           <a 
-            href="/agenda-billetterie"
+            href="https://billetterie-externe.com/maitrise-cathedrale"
             style={{
               display: 'inline-block',
               padding: '16px 32px',
@@ -351,7 +351,7 @@ const HeroSectionV3 = () => {
         left: '5%',
         width: '4px',
         height: '60px',
-        background: 'linear-gradient(180deg, transparent, #B8860B, transparent)',
+        background: 'linear-gradient(180deg, transparent, var(--color-gold), transparent)',
         transform: `translateY(${Math.sin(Date.now() * 0.001) * 10}px)`,
         opacity: 0.4,
       }} />

@@ -271,7 +271,7 @@ const FASConcertsSection = () => {
           marginTop: '60px'
         }}>
           <a
-            href="/agenda-billetterie"
+            href="https://billetterie-externe.com/maitrise-cathedrale"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

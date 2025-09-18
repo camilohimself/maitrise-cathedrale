@@ -184,7 +184,7 @@ const EventsSection = () => {
           marginTop: 'var(--spacing-2xl)',
         }}>
           <a 
-            href="/agenda-billetterie"
+            href="https://billetterie-externe.com/maitrise-cathedrale"
             className="btn-outline"
             style={{
               display: 'inline-flex',

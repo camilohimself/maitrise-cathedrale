@@ -23,42 +23,22 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://maitrise-cathedrale.ch'),
+  metadataBase: new URL('https://maitrise-cathedrale.vercel.app'),
   title: {
-    default: 'Maîtrise de la Cathédrale de Sion',
-    template: '%s | Maîtrise de la Cathédrale de Sion'
+    default: 'Maîtrise de la Cathédrale de Sion - École de chant et musique sacrée',
+    template: '%s | Maîtrise Cathédrale Sion'
   },
-  description: 'La Maîtrise de la Cathédrale de Sion - École de chant et ensemble vocal d\'exception au cœur du Valais. Formation musicale et spirituelle depuis 2004.',
-  keywords: ['Maîtrise', 'Cathédrale', 'Sion', 'Valais', 'Chant', 'École musicale', 'Ensemble vocal', 'Musique sacrée', 'Formation musicale', 'Fondation'],
-  authors: [{ name: 'Fondation de la Maîtrise de la Cathédrale de Sion' }],
-  creator: 'Fondation de la Maîtrise de la Cathédrale de Sion',
-  publisher: 'Fondation de la Maîtrise de la Cathédrale de Sion',
+  description: 'École de chant d\'excellence au cœur du Valais. Formation musicale, ensemble vocal et chant grégorien dans la tradition de la Cathédrale Notre-Dame de Sion. Cantates de Bach, Festival d\'art sacré.',
+  keywords: ['maîtrise', 'cathédrale', 'sion', 'chant', 'musique sacrée', 'école', 'formation', 'bach', 'grégorien', 'valais', 'suisse', 'festival art sacré', 'ensemble vocal'],
+  authors: [{ name: 'Maîtrise de la Cathédrale de Sion' }],
+  creator: 'Maîtrise de la Cathédrale de Sion',
+  publisher: 'Fondation Maîtrise Cathédrale Sion',
+  category: 'education',
+  classification: 'Music Education, Sacred Music, Cultural Institution',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'fr_CH',
-    url: 'https://maitrise-cathedrale.ch',
-    siteName: 'Maîtrise de la Cathédrale de Sion',
-    title: 'Maîtrise de la Cathédrale de Sion',
-    description: 'École de chant et ensemble vocal d\'exception au cœur du Valais. Formation musicale et spirituelle depuis 2004.',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Maîtrise de la Cathédrale de Sion',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Maîtrise de la Cathédrale de Sion',
-    description: 'École de chant et ensemble vocal d\'exception au cœur du Valais.',
-    images: ['/images/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -71,8 +51,58 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  openGraph: {
+    type: 'website',
+    locale: 'fr_CH',
+    url: 'https://maitrise-cathedrale.vercel.app',
+    siteName: 'Maîtrise de la Cathédrale de Sion',
+    title: 'Maîtrise de la Cathédrale de Sion - École de chant et musique sacrée',
+    description: 'École de chant d\'excellence au cœur du Valais. Formation musicale, ensemble vocal et chant grégorien dans la tradition de la Cathédrale Notre-Dame de Sion.',
+    images: [
+      {
+        url: '/images/hero-photo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Chœur de la Maîtrise de la Cathédrale de Sion en répétition',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/images/logo-maitrise.png',
+        width: 400,
+        height: 400,
+        alt: 'Logo Maîtrise Cathédrale Sion',
+        type: 'image/png',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@maitrisesion',
+    creator: '@maitrisesion',
+    title: 'Maîtrise de la Cathédrale de Sion',
+    description: 'École de chant d\'excellence au cœur du Valais. Formation musicale et chant grégorien.',
+    images: ['/images/hero-photo.jpg'],
+  },
+  alternates: {
+    languages: {
+      'fr-CH': 'https://maitrise-cathedrale.vercel.app',
+    },
+  },
   verification: {
-    google: 'google-verification-code',
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    other: {
+      'msvalidate.01': 'your-bing-verification-code',
+    },
+  },
+  applicationName: 'Maîtrise Cathédrale Sion',
+  referrer: 'origin-when-cross-origin',
+  bookmarks: ['https://maitrise-cathedrale.vercel.app/maitrise', 'https://maitrise-cathedrale.vercel.app/fas'],
+  appLinks: {
+    web: {
+      url: 'https://maitrise-cathedrale.vercel.app',
+      should_fallback: true,
+    },
   },
 };
 
