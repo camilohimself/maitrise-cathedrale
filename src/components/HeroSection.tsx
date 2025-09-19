@@ -21,7 +21,7 @@ const HeroSection = () => {
         zIndex: 1,
       }}>
         <Image
-          src="/images/hero-choir.jpg"
+          src="/images/hero-choir.webp"
           alt="Chœur de la Maîtrise en performance"
           fill
           style={{
