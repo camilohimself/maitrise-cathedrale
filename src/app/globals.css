@@ -9,7 +9,7 @@
   /* Couleurs principales */
   --color-gold: #D4A574;      /* Or/Doré - Boutons CTA, accents */
   --color-navy: #1a1340;      /* Navy foncé - Backgrounds sombres */
-  --color-red: #E33241;       /* Rouge officiel - Accent subtil */
+  --color-red: #8B0000;       /* Rouge bordeaux - Couleur principale rouge */
   --color-purple: #6B46C1;    /* Violet principal - Festival d'Art Sacré */
   --color-purple-light: #A78BFA;  /* Violet clair - Accents FAS */
   --color-purple-dark: #5B21B6;   /* Violet foncé - CTAs FAS */
@@ -20,7 +20,7 @@
 
   /* Hover variations */
   --color-gold-hover: #FFA500;
-  --color-red-hover: #C22939;
+  --color-red-hover: #A52A2A;
   
   /* Overlays et transparences */
   --color-dark-overlay: rgba(4, 10, 35, 0.8);

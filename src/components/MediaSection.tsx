@@ -1,43 +1,45 @@
 'use client';
 
 import React, { useState } from 'react';
+import { soundcloudTracks, trackCategories, getTracksByCategory } from '../data/soundcloudTracks';
 
 interface Track {
-  id: number;
+  id: string;
   title: string;
-  composer: string;
+  subtitle: string;
+  soundcloudUrl: string;
   duration: string;
-  audioUrl: string;
+  description: string;
+  composer: string;
+  category: string;
+  opus: string;
 }
 
 const MediaSection = () => {
-  const [currentTrack, setCurrentTrack] = useState<number | null>(null);
+  const [currentTrack, setCurrentTrack] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string>('bach');
 
-  const tracks: Track[] = [
-    {
-      id: 1,
-      title: "Herr, wenn ich nur dir",
-      composer: "J.S. Bach",
-      duration: "4:32",
-      audioUrl: "/audio/track1.mp3"
-    },
-    {
-      id: 2,
-      title: "Ave Maria",
-      composer: "Franz Schubert",
-      duration: "3:45",
-      audioUrl: "/audio/track2.mp3"
-    }
-  ];
+  const tracks = getTracksByCategory(activeCategory);
 
-  const handlePlayPause = (trackId: number) => {
+  const handlePlayPause = (trackId: string) => {
     if (currentTrack === trackId) {
       setIsPlaying(!isPlaying);
     } else {
       setCurrentTrack(trackId);
       setIsPlaying(true);
+      // Ouvrir SoundCloud dans un nouvel onglet
+      const track = soundcloudTracks.find(t => t.id === trackId);
+      if (track) {
+        window.open(track.soundcloudUrl, '_blank');
+      }
     }
+  };
+
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category);
+    setCurrentTrack(null);
+    setIsPlaying(false);
   };
 
   return (
@@ -109,12 +111,51 @@ const MediaSection = () => {
             <h3 style={{
               fontSize: '24px',
               fontWeight: '700',
-              color: '#D2AB5F',
+              color: '#D4A574',
               marginBottom: '30px',
               fontFamily: 'var(--font-family)'
             }}>
               Nos enregistrements
             </h3>
+
+            {/* Category Tabs */}
+            <div style={{
+              display: 'flex',
+              gap: '15px',
+              marginBottom: '30px',
+              flexWrap: 'wrap'
+            }}>
+              {Object.entries(trackCategories).map(([key, category]) => (
+                <button
+                  key={key}
+                  onClick={() => handleCategoryChange(key)}
+                  style={{
+                    padding: '10px 20px',
+                    borderRadius: '20px',
+                    border: `2px solid ${category.color}`,
+                    backgroundColor: activeCategory === key ? category.color : 'transparent',
+                    color: activeCategory === key ? '#fff' : category.color,
+                    fontSize: '14px',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    fontFamily: 'var(--font-family)'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (activeCategory !== key) {
+                      e.currentTarget.style.backgroundColor = `${category.color}20`;
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (activeCategory !== key) {
+                      e.currentTarget.style.backgroundColor = 'transparent';
+                    }
+                  }}
+                >
+                  {category.label} ({category.count})
+                </button>
+              ))}
+            </div>
 
             {/* Track List */}
             <div style={{
@@ -123,33 +164,36 @@ const MediaSection = () => {
               gap: '15px'
             }}>
               {tracks.map((track) => (
-                <div 
+                <div
                   key={track.id}
                   style={{
                     backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                    borderRadius: '8px',
+                    borderRadius: '12px',
                     padding: '20px',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '20px',
                     transition: 'all 0.3s ease',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    border: `1px solid ${trackCategories[track.category as keyof typeof trackCategories].color}20`
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.15)';
+                    e.currentTarget.style.borderColor = `${trackCategories[track.category as keyof typeof trackCategories].color}40`;
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                    e.currentTarget.style.borderColor = `${trackCategories[track.category as keyof typeof trackCategories].color}20`;
                   }}
                 >
-                  {/* Play/Pause Button */}
+                  {/* Play Button */}
                   <button
                     onClick={() => handlePlayPause(track.id)}
                     style={{
                       width: '50px',
                       height: '50px',
                       borderRadius: '50%',
-                      backgroundColor: '#D2AB5F',
+                      backgroundColor: trackCategories[track.category as keyof typeof trackCategories].color,
                       border: 'none',
                       display: 'flex',
                       alignItems: 'center',
@@ -164,16 +208,9 @@ const MediaSection = () => {
                       e.currentTarget.style.transform = 'scale(1)';
                     }}
                   >
-                    {currentTrack === track.id && isPlaying ? (
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
-                        <rect x="6" y="4" width="4" height="16"/>
-                        <rect x="14" y="4" width="4" height="16"/>
-                      </svg>
-                    ) : (
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
-                        <polygon points="5 3 19 12 5 21 5 3"/>
-                      </svg>
-                    )}
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
+                      <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
                   </button>
 
                   {/* Track Info */}
@@ -182,28 +219,45 @@ const MediaSection = () => {
                       fontSize: '18px',
                       fontWeight: '600',
                       color: '#fff',
-                      marginBottom: '5px',
+                      marginBottom: '3px',
                       fontFamily: 'var(--font-family)'
                     }}>
                       {track.title}
                     </h4>
                     <p style={{
-                      fontSize: '14px',
-                      color: 'rgba(255, 255, 255, 0.7)',
+                      fontSize: '15px',
+                      color: trackCategories[track.category as keyof typeof trackCategories].color,
+                      marginBottom: '5px',
                       fontFamily: 'var(--font-family)'
                     }}>
-                      {track.composer}
+                      {track.subtitle}
+                    </p>
+                    <p style={{
+                      fontSize: '13px',
+                      color: 'rgba(255, 255, 255, 0.6)',
+                      fontFamily: 'var(--font-family)'
+                    }}>
+                      {track.description}
                     </p>
                   </div>
 
-                  {/* Duration */}
-                  <span style={{
-                    fontSize: '14px',
-                    color: 'rgba(255, 255, 255, 0.7)',
-                    fontFamily: 'var(--font-family)'
+                  {/* SoundCloud Link */}
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '10px'
                   }}>
-                    {track.duration}
-                  </span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#ff5500">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span style={{
+                      fontSize: '12px',
+                      color: 'rgba(255, 255, 255, 0.5)',
+                      fontFamily: 'var(--font-family)'
+                    }}>
+                      SoundCloud
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>

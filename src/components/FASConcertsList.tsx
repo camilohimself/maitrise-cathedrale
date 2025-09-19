@@ -79,12 +79,37 @@ const FASConcertsList = () => {
   ];
 
   return (
-    <section style={{
-      background: 'linear-gradient(180deg, #FAFAF9 0%, #F5F0E8 100%)',
-      padding: '5rem 0',
-      position: 'relative'
-    }}>
-      {/* Background effects - tons dorés subtils */}
+    <>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .concert-card {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+            gap: 1.5rem !important;
+            padding: 1.5rem !important;
+          }
+          .concert-card .concert-image {
+            order: 1;
+          }
+          .concert-card .concert-content {
+            order: 2;
+          }
+          div[style*="gridTemplateColumns"] {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+          }
+          div[style*="order"] {
+            order: unset !important;
+          }
+        }
+      `}</style>
+
+      <section style={{
+        background: 'linear-gradient(180deg, #FAFAF9 0%, #F5F0E8 100%)',
+        padding: '5rem 0',
+        position: 'relative'
+      }}>
+        {/* Background effects - tons dorés subtils */}
       <div style={{
         position: 'absolute',
         inset: 0,
@@ -178,17 +203,14 @@ Cinq rendez-vous d'exception
                 transform: hoveredConcert === concert.id ? 'translateY(-8px)' : 'translateY(0)',
                 boxShadow: hoveredConcert === concert.id
                   ? '0 20px 40px rgba(0, 0, 0, 0.2)'
-                  : '0 8px 25px rgba(0, 0, 0, 0.1)',
-                '@media (max-width: 768px)': {
-                  gridTemplateColumns: '1fr',
-                  textAlign: 'center'
-                }
+                  : '0 8px 25px rgba(0, 0, 0, 0.1)'
               }}
+              className="concert-card"
               onMouseEnter={() => setHoveredConcert(concert.id)}
               onMouseLeave={() => setHoveredConcert(null)}
             >
               {/* Image */}
-              <div style={{
+              <div className="concert-image" style={{
                 order: index % 2 === 0 ? 1 : 2,
                 position: 'relative'
               }}>
@@ -238,7 +260,7 @@ Cinq rendez-vous d'exception
               </div>
 
               {/* Contenu */}
-              <div style={{
+              <div className="concert-content" style={{
                 order: index % 2 === 0 ? 2 : 1,
                 color: 'var(--color-navy)'
               }}>
@@ -345,19 +367,8 @@ Cinq rendez-vous d'exception
 
       </div>
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          div[style*="gridTemplateColumns"] {
-            grid-template-columns: 1fr !important;
-            text-align: center;
-          }
-
-          div[style*="order"] {
-            order: unset !important;
-          }
-        }
-      `}</style>
-    </section>
+      </section>
+    </>
   );
 };
 
