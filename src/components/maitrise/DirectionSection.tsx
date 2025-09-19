@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { maitriseContent } from '@/data/maitriseContent';
 
 export default function DirectionSection() {
@@ -15,28 +16,32 @@ export default function DirectionSection() {
           gap: '80px',
           alignItems: 'center'
         }}>
-          {/* Photo placeholder */}
+          {/* Photo du directeur */}
           <div style={{
             position: 'relative',
             height: '500px',
-            background: 'linear-gradient(135deg, var(--color-gold) 0%, rgba(212, 165, 116, 0.3) 100%)',
-            boxShadow: 'var(--shadow-gold)',
             borderRadius: '24px',
-            overflow: 'hidden'
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(26, 19, 64, 0.15)'
           }}>
+            <Image
+              src="/images/direction/jean-david-waeber-card.webp"
+              alt="Jean-David Waeber, Directeur artistique et musical"
+              fill
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center 20%'
+              }}
+              sizes="(max-width: 768px) 100vw, 40vw"
+              priority
+            />
+
+            {/* Overlay subtil */}
             <div style={{
               position: 'absolute',
-              inset: '0',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '120px',
-              color: 'rgba(255, 255, 255, 0.3)'
-            }}>
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
-              </svg>
-            </div>
+              inset: 0,
+              background: 'linear-gradient(180deg, transparent 0%, rgba(26, 19, 64, 0.05) 100%)'
+            }} />
           </div>
 
           {/* Content */}

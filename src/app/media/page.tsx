@@ -67,7 +67,7 @@ export default function Media() {
           id: 'bach-bwv4-choeur',
           title: 'Christ lag in Todes Banden BWV 4',
           subtitle: 'V. Verset 4 - Chœur',
-          soundcloudUrl: 'https://soundcloud.com/maitrise-cathedrale-sion/js-bach-christ-lag-in-todes-banden-bwv-4-v-verset-4-choeur',
+          soundcloudUrl: 'https://soundcloud.com/maitrise-cathedrale-sion/js-bach-christ-lag-in-todes-banden-bwv-4-v-verset-4-chur',
           duration: '3:30',
           description: 'Polyphonie magistrale du maître de Leipzig'
         },
@@ -83,7 +83,7 @@ export default function Media() {
           id: 'bach-bwv80',
           title: 'Ein feste Burg ist unser Gott BWV 80',
           subtitle: 'Chœur d\'entrée',
-          soundcloudUrl: 'https://soundcloud.com/maitrise-cathedrale-sion/js-bach-ein-feste-burg-ist-unser-gott-bwv-80-choeur-entree',
+          soundcloudUrl: 'https://soundcloud.com/maitrise-cathedrale-sion/js-bach-ein-feste-burg-ist-unser-gott-bwv-80-chur-dentree',
           duration: '5:10',
           description: 'Cantate de la Réformation, puissance et foi'
         },
@@ -91,7 +91,7 @@ export default function Media() {
           id: 'bach-bwv140',
           title: 'Wachet auf, ruft uns die Stimme BWV 140',
           subtitle: 'Choral',
-          soundcloudUrl: 'https://soundcloud.com/maitrise-cathedrale-sion/js-bach-wachet-auf-ruft-uns-die-stimme-bwv-140-choral',
+          soundcloudUrl: 'https://soundcloud.com/maitrise-cathedrale-sion/js-bach-wachet-auf-ruft-uns-die-stimme-bwv-140-choral-tenor',
           duration: '3:55',
           description: 'L\'un des plus beaux chorals de Bach'
         }
@@ -428,11 +428,11 @@ export default function Media() {
                 }}>
                   <iframe
                     width="100%"
-                    height="120"
+                    height="166"
                     scrolling="no"
                     frameBorder="no"
                     allow="autoplay"
-                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.soundcloudUrl)}&color=${soundcloudCollections[activeTab as keyof typeof soundcloudCollections].color.replace('#', '')}&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false`}
+                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.soundcloudUrl)}&color=${soundcloudCollections[activeTab as keyof typeof soundcloudCollections].color.replace('#', '')}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true`}
                     style={{
                       borderRadius: 'var(--radius-sm)',
                       border: 'none'

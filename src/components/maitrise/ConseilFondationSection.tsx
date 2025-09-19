@@ -17,7 +17,7 @@ export default function ConseilFondationSection() {
             padding: '12px 24px',
             marginBottom: '24px'
           }}>
-            GOUVERNANCE
+            ORGANISATION
           </div>
           <h2 style={{
             fontSize: '48px',
