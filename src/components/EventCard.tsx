@@ -159,7 +159,7 @@ const EventCard: React.FC<EventCardProps> = ({
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = 'translateY(-4px)';
-        e.currentTarget.style.boxShadow = '0 8px 32px rgba(139, 0, 0, 0.15)';
+        e.currentTarget.style.boxShadow = '0 8px 32px rgba(227, 50, 65, 0.15)';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';

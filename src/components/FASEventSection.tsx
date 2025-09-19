@@ -137,10 +137,10 @@ const FASEventSection = () => {
       badges.push({
         text: "✨ PRESTIGE",
         style: {
-          background: 'linear-gradient(45deg, #8B0000, #DC143C)',
+          background: 'linear-gradient(45deg, var(--color-red), var(--color-red))',
           color: 'white',
           fontWeight: '700',
-          boxShadow: '0 8px 32px rgba(139, 0, 0, 0.4)'
+          boxShadow: '0 8px 32px rgba(227, 50, 65, 0.4)'
         }
       });
     }

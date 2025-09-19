@@ -105,8 +105,8 @@ const MediaDiscoverSection = memo(() => {
         right: 0,
         bottom: 0,
         background: `
-          radial-gradient(circle at 20% 80%, rgba(184, 134, 11, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(139, 0, 0, 0.1) 0%, transparent 50%)
+          radial-gradient(circle at 20% 80%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(227, 50, 65, 0.1) 0%, transparent 50%)
         `,
       }} />
 
@@ -126,8 +126,8 @@ const MediaDiscoverSection = memo(() => {
           <div style={{
             display: 'inline-block',
             padding: '10px 24px',
-            backgroundColor: 'rgba(184, 134, 11, 0.2)',
-            border: '1px solid rgba(184, 134, 11, 0.3)',
+            backgroundColor: 'rgba(212, 165, 116, 0.2)',
+            border: '1px solid rgba(212, 165, 116, 0.3)',
             borderRadius: '30px',
             color: 'var(--color-gold)',
             fontFamily: 'var(--font-outfit)',
@@ -277,7 +277,7 @@ const MediaDiscoverSection = memo(() => {
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
                   e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.08)';
-                  e.currentTarget.style.borderColor = 'rgba(184, 134, 11, 0.3)';
+                  e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.3)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
@@ -289,7 +289,7 @@ const MediaDiscoverSection = memo(() => {
                 <div style={{
                   position: 'relative',
                   height: '200px',
-                  backgroundColor: 'rgba(139, 0, 0, 0.2)',
+                  backgroundColor: 'rgba(227, 50, 65, 0.2)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -369,7 +369,7 @@ const MediaDiscoverSection = memo(() => {
                     marginBottom: '0.5rem',
                   }}>
                     <span style={{
-                      backgroundColor: 'rgba(184, 134, 11, 0.2)',
+                      backgroundColor: 'rgba(212, 165, 116, 0.2)',
                       color: 'var(--color-gold)',
                       padding: '2px 8px',
                       borderRadius: '8px',
@@ -431,7 +431,7 @@ const MediaDiscoverSection = memo(() => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              backgroundColor: 'rgba(184, 134, 11, 0.1)',
+              backgroundColor: 'rgba(212, 165, 116, 0.1)',
               borderRadius: '20px',
             }}>
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" strokeWidth="2">

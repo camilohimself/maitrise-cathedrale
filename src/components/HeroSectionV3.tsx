@@ -64,7 +64,7 @@ const HeroSectionV3 = () => {
           top: 0,
           bottom: 0,
           width: '2px',
-          background: 'linear-gradient(180deg, transparent 0%, rgba(184, 134, 11, 0.3) 20%, rgba(184, 134, 11, 0.6) 50%, rgba(184, 134, 11, 0.3) 80%, transparent 100%)',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(212, 165, 116, 0.3) 20%, rgba(212, 165, 116, 0.6) 50%, rgba(212, 165, 116, 0.3) 80%, transparent 100%)',
           transform: `translateY(${scrollY * 0.3}px)`,
         }} />
         
@@ -74,7 +74,7 @@ const HeroSectionV3 = () => {
           top: 0,
           bottom: 0,
           width: '2px',
-          background: 'linear-gradient(180deg, transparent 0%, rgba(139, 0, 0, 0.3) 20%, rgba(139, 0, 0, 0.6) 50%, rgba(139, 0, 0, 0.3) 80%, transparent 100%)',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(227, 50, 65, 0.3) 20%, rgba(227, 50, 65, 0.6) 50%, rgba(227, 50, 65, 0.3) 80%, transparent 100%)',
           transform: `translateY(${scrollY * -0.2}px)`,
         }} />
 
@@ -86,7 +86,7 @@ const HeroSectionV3 = () => {
           transform: 'translateX(-50%)',
           width: '300px',
           height: '300px',
-          border: '1px solid rgba(184, 134, 11, 0.2)',
+          border: '1px solid rgba(212, 165, 116, 0.2)',
           borderRadius: '150px 150px 0 0',
           opacity: 0.6,
         }} />
@@ -118,7 +118,7 @@ const HeroSectionV3 = () => {
           inset: 0,
           background: `
             radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 70%),
-            linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, transparent 50%, rgba(184, 134, 11, 0.1) 100%)
+            linear-gradient(135deg, rgba(227, 50, 65, 0.1) 0%, transparent 50%, rgba(212, 165, 116, 0.1) 100%)
           `,
         }} />
       </div>
@@ -139,8 +139,8 @@ const HeroSectionV3 = () => {
           height: '120px',
           margin: '0 auto 3rem',
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, rgba(184, 134, 11, 0.2) 0%, rgba(139, 0, 0, 0.2) 100%)',
-          border: '2px solid rgba(184, 134, 11, 0.4)',
+          background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.2) 0%, rgba(227, 50, 65, 0.2) 100%)',
+          border: '2px solid rgba(212, 165, 116, 0.4)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -150,7 +150,7 @@ const HeroSectionV3 = () => {
           <div style={{
             width: '60px',
             height: '60px',
-            background: 'linear-gradient(45deg, var(--color-gold), #8B0000)',
+            background: 'linear-gradient(45deg, var(--color-gold), var(--color-red))',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
@@ -167,7 +167,7 @@ const HeroSectionV3 = () => {
           <div style={{
             position: 'absolute',
             inset: '-10px',
-            border: '1px solid rgba(184, 134, 11, 0.3)',
+            border: '1px solid rgba(212, 165, 116, 0.3)',
             borderRadius: '50%',
             animation: 'rotate 20s linear infinite',
           }} />
@@ -261,7 +261,7 @@ const HeroSectionV3 = () => {
                 width: '12px',
                 height: '12px',
                 borderRadius: '50%',
-                border: '2px solid rgba(184, 134, 11, 0.4)',
+                border: '2px solid rgba(212, 165, 116, 0.4)',
                 background: currentSection === index ? 'var(--color-gold)' : 'transparent',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
@@ -316,9 +316,9 @@ const HeroSectionV3 = () => {
             style={{
               display: 'inline-block',
               padding: '16px 32px',
-              backgroundColor: '#8B0000',
+              backgroundColor: 'var(--color-red)',
               color: '#FFFFFF',
-              border: '2px solid #8B0000',
+              border: '2px solid var(--color-red)',
               fontFamily: 'var(--font-outfit)',
               fontWeight: '500',
               fontSize: '0.95rem',
@@ -330,11 +330,11 @@ const HeroSectionV3 = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '#8B0000';
+              e.currentTarget.style.color = 'var(--color-red)';
               e.currentTarget.style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#8B0000';
+              e.currentTarget.style.backgroundColor = 'var(--color-red)';
               e.currentTarget.style.color = '#FFFFFF';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
@@ -362,7 +362,7 @@ const HeroSectionV3 = () => {
         right: '8%',
         width: '30px',
         height: '30px',
-        border: '1px solid rgba(139, 0, 0, 0.3)',
+        border: '1px solid rgba(227, 50, 65, 0.3)',
         transform: `rotate(${scrollY * 0.1}deg)`,
         opacity: 0.5,
       }} />
@@ -379,8 +379,8 @@ const HeroSectionV3 = () => {
         }
         
         @keyframes pulse {
-          0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(184, 134, 11, 0.3); }
-          50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(184, 134, 11, 0.5); }
+          0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(212, 165, 116, 0.3); }
+          50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(212, 165, 116, 0.5); }
         }
         
         @keyframes rotate {

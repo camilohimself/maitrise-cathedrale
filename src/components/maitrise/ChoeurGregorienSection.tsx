@@ -30,7 +30,7 @@ export default function ChoeurGregorienSection() {
             <div style={{
               fontSize: '120px',
               marginBottom: '24px',
-              background: 'linear-gradient(45deg, var(--color-gold), #E6C068)',
+              background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -173,7 +173,7 @@ export default function ChoeurGregorienSection() {
                   <div style={{
                     width: '32px',
                     height: '32px',
-                    background: 'linear-gradient(45deg, var(--color-gold), #E6C068)',
+                    background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',

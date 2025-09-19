@@ -55,7 +55,7 @@ const MaitriseAboutSection = () => {
         width: '200px',
         height: '200px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(184, 134, 11, 0.05) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(212, 165, 116, 0.05) 0%, transparent 70%)',
       }} />
       
       <div style={{
@@ -65,7 +65,7 @@ const MaitriseAboutSection = () => {
         width: '300px',
         height: '300px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(139, 0, 0, 0.05) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(227, 50, 65, 0.05) 0%, transparent 70%)',
       }} />
 
       <div style={{
@@ -82,8 +82,8 @@ const MaitriseAboutSection = () => {
           <div style={{
             display: 'inline-block',
             padding: '10px 24px',
-            backgroundColor: 'rgba(139, 0, 0, 0.1)',
-            color: '#8B0000',
+            backgroundColor: 'rgba(227, 50, 65, 0.1)',
+            color: 'var(--color-red)',
             borderRadius: '30px',
             fontFamily: 'var(--font-outfit)',
             fontSize: '0.9rem',
@@ -99,7 +99,7 @@ const MaitriseAboutSection = () => {
             fontFamily: 'var(--font-spectral)',
             fontSize: 'clamp(2.5rem, 5vw, 4rem)',
             fontWeight: '700',
-            color: '#8B0000',
+            color: 'var(--color-red)',
             marginBottom: '1.5rem',
             lineHeight: 1.1,
           }}>
@@ -138,7 +138,7 @@ const MaitriseAboutSection = () => {
               height: '500px',
               borderRadius: '30px',
               overflow: 'hidden',
-              border: '3px solid rgba(139, 0, 0, 0.1)',
+              border: '3px solid rgba(227, 50, 65, 0.1)',
             }}>
               <Image
                 src="/images/hero-photo.jpg"
@@ -155,7 +155,7 @@ const MaitriseAboutSection = () => {
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, transparent 100%)',
+                background: 'linear-gradient(135deg, rgba(227, 50, 65, 0.1) 0%, transparent 100%)',
               }} />
             </div>
 
@@ -166,7 +166,7 @@ const MaitriseAboutSection = () => {
             
             {/* Mission statement */}
             <div style={{
-              backgroundColor: 'rgba(184, 134, 11, 0.05)',
+              backgroundColor: 'rgba(212, 165, 116, 0.05)',
               padding: '2rem',
               borderRadius: '20px',
               marginBottom: '2rem',
@@ -176,7 +176,7 @@ const MaitriseAboutSection = () => {
                 fontFamily: 'var(--font-spectral)',
                 fontSize: '1.2rem',
                 fontStyle: 'italic',
-                color: '#8B0000',
+                color: 'var(--color-red)',
                 lineHeight: 1.6,
                 margin: 0,
               }}>
@@ -201,7 +201,7 @@ const MaitriseAboutSection = () => {
                     padding: '1.5rem',
                     backgroundColor: '#FFFFFF',
                     borderRadius: '15px',
-                    border: '1px solid rgba(139, 0, 0, 0.1)',
+                    border: '1px solid rgba(227, 50, 65, 0.1)',
                     transition: 'transform 0.3s ease',
                   }}
                   onMouseEnter={(e) => {
@@ -215,7 +215,7 @@ const MaitriseAboutSection = () => {
                     fontFamily: 'var(--font-spectral)',
                     fontSize: '2.5rem',
                     fontWeight: '700',
-                    color: '#8B0000',
+                    color: 'var(--color-red)',
                     lineHeight: 1,
                     marginBottom: '0.5rem',
                   }}>
@@ -249,7 +249,7 @@ const MaitriseAboutSection = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 padding: '16px 32px',
-                backgroundColor: '#8B0000',
+                backgroundColor: 'var(--color-red)',
                 color: '#FFFFFF',
                 borderRadius: '50px',
                 fontFamily: 'var(--font-outfit)',
@@ -260,7 +260,7 @@ const MaitriseAboutSection = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)';
-                e.currentTarget.style.boxShadow = '0 12px 25px rgba(139, 0, 0, 0.3)';
+                e.currentTarget.style.boxShadow = '0 12px 25px rgba(227, 50, 65, 0.3)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0) scale(1)';
@@ -298,8 +298,8 @@ const MaitriseAboutSection = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'rgba(139, 0, 0, 0.2)';
-                e.currentTarget.style.boxShadow = '0 15px 35px rgba(139, 0, 0, 0.15)';
+                e.currentTarget.style.borderColor = 'rgba(227, 50, 65, 0.2)';
+                e.currentTarget.style.boxShadow = '0 15px 35px rgba(227, 50, 65, 0.15)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
@@ -315,37 +315,37 @@ const MaitriseAboutSection = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: 'rgba(139, 0, 0, 0.1)',
+                backgroundColor: 'rgba(227, 50, 65, 0.1)',
                 borderRadius: '20px',
                 transition: 'all 0.3s ease',
               }}>
                 {highlight.iconType === 'education' && (
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 )}
                 {highlight.iconType === 'music' && (
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 18V5l12-2v13" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <circle cx="6" cy="18" r="3" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <circle cx="18" cy="16" r="3" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M9 18V5l12-2v13" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="6" cy="18" r="3" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="18" cy="16" r="3" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 )}
                 {highlight.iconType === 'cathedral' && (
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path d="M8 21l0-12 2-2h4l2 2v12" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 3V1" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M10 21h4" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 7v4" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M6 21v-6l2-2" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M18 21v-6l-2-2" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M8 21l0-12 2-2h4l2 2v12" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 3V1" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M10 21h4" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 7v4" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M6 21v-6l2-2" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M18 21v-6l-2-2" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 )}
                 {highlight.iconType === 'festival' && (
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 )}
               </div>
@@ -354,7 +354,7 @@ const MaitriseAboutSection = () => {
                 fontFamily: 'var(--font-spectral)',
                 fontSize: '1.4rem',
                 fontWeight: '600',
-                color: '#8B0000',
+                color: 'var(--color-red)',
                 marginBottom: '1rem',
                 lineHeight: 1.3,
               }}>

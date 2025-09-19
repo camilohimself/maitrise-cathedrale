@@ -23,7 +23,7 @@ const SupportSection = () => {
       benefits: ['Visibilité lors des concerts', 'Déductions fiscales', 'Événements privés'],
       cta: 'Nous contacter',
       link: '/soutenir/partenaires',
-      color: '#8B0000'
+      color: 'var(--color-red)'
     },
     {
       iconType: 'donation',
@@ -64,8 +64,8 @@ const SupportSection = () => {
           <div style={{
             display: 'inline-block',
             padding: '10px 24px',
-            backgroundColor: 'rgba(139, 0, 0, 0.1)',
-            color: '#8B0000',
+            backgroundColor: 'rgba(227, 50, 65, 0.1)',
+            color: 'var(--color-red)',
             borderRadius: '30px',
             fontFamily: 'var(--font-outfit)',
             fontSize: '0.9rem',
@@ -81,7 +81,7 @@ const SupportSection = () => {
             fontFamily: 'var(--font-spectral)',
             fontSize: 'clamp(2.5rem, 5vw, 4rem)',
             fontWeight: '700',
-            color: '#8B0000',
+            color: 'var(--color-red)',
             marginBottom: '1.5rem',
             lineHeight: 1.1,
           }}>
@@ -177,7 +177,7 @@ const SupportSection = () => {
                   fontFamily: 'var(--font-spectral)',
                   fontSize: '1.6rem',
                   fontWeight: '700',
-                  color: '#8B0000',
+                  color: 'var(--color-red)',
                   marginBottom: '0.5rem',
                   lineHeight: 1.3,
                 }}>
@@ -282,7 +282,7 @@ const SupportSection = () => {
             fontFamily: 'var(--font-spectral)',
             fontSize: '2rem',
             fontWeight: '600',
-            color: '#8B0000',
+            color: 'var(--color-red)',
             marginBottom: '1rem',
           }}>
             Nos Partenaires
@@ -315,13 +315,13 @@ const SupportSection = () => {
                   backgroundColor: '#FFFFFF',
                   padding: '1.5rem',
                   borderRadius: '15px',
-                  border: '1px solid rgba(139, 0, 0, 0.1)',
+                  border: '1px solid rgba(227, 50, 65, 0.1)',
                   transition: 'all 0.3s ease',
                   cursor: 'pointer',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-3px)';
-                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(139, 0, 0, 0.1)';
+                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(227, 50, 65, 0.1)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
@@ -336,39 +336,39 @@ const SupportSection = () => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  backgroundColor: 'rgba(139, 0, 0, 0.05)',
+                  backgroundColor: 'rgba(227, 50, 65, 0.05)',
                   borderRadius: '15px',
                 }}>
                   {partner.iconType === 'mountains' && (
                     <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
-                      <path d="M8 21l5.5-11L18 21" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M2 21l5-9 5 9" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 21l5-9 5 9" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M8 21l5.5-11L18 21" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 21l5-9 5 9" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 21l5-9 5 9" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   )}
                   {partner.iconType === 'city' && (
                     <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
-                      <path d="M3 21h18" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M5 21V7l8-4v18" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M19 21V9l-6-4" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M9 9v.01" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M9 12v.01" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M9 15v.01" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3 21h18" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 21V7l8-4v18" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M19 21V9l-6-4" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 9v.01" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 12v.01" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M9 15v.01" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   )}
                   {partner.iconType === 'foundation' && (
                     <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
-                      <path d="M3 21h18" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M6 21V9a9 9 0 0 1 18 0v12" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M12 3v6" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <circle cx="12" cy="12" r="2" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M3 21h18" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M6 21V9a9 9 0 0 1 18 0v12" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M12 3v6" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <circle cx="12" cy="12" r="2" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   )}
                   {partner.iconType === 'business' && (
                     <svg width="35" height="35" viewBox="0 0 24 24" fill="none">
-                      <path d="M20 7h-9" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M14 17H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2z" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M16 21V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v16" stroke="#8B0000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M20 7h-9" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M14 17H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2z" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M16 21V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v16" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   )}
                 </div>
@@ -376,7 +376,7 @@ const SupportSection = () => {
                   fontFamily: 'var(--font-outfit)',
                   fontSize: '0.9rem',
                   fontWeight: '600',
-                  color: '#8B0000',
+                  color: 'var(--color-red)',
                   margin: 0,
                 }}>
                   {partner.name}

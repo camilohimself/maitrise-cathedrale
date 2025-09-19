@@ -54,7 +54,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: '1.5rem 2rem',
-          borderBottom: '1px solid rgba(139, 0, 0, 0.1)',
+          borderBottom: '1px solid rgba(227, 50, 65, 0.1)',
           backgroundColor: 'var(--color-cream)',
         }}>
           <div style={{
@@ -114,8 +114,8 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
               height: '44px',
               borderRadius: '50%',
               border: 'none',
-              backgroundColor: 'rgba(139, 0, 0, 0.1)',
-              color: '#8B0000',
+              backgroundColor: 'rgba(227, 50, 65, 0.1)',
+              color: 'var(--color-red)',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
@@ -128,7 +128,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
               e.currentTarget.style.transform = 'scale(1.1)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'rgba(139, 0, 0, 0.1)';
+              e.currentTarget.style.backgroundColor = 'rgba(227, 50, 65, 0.1)';
               e.currentTarget.style.color = 'var(--color-red)';
               e.currentTarget.style.transform = 'scale(1)';
             }}
@@ -219,7 +219,7 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
               <div style={{
                 width: '50px',
                 height: '50px',
-                border: '3px solid rgba(184, 134, 11, 0.3)',
+                border: '3px solid rgba(212, 165, 116, 0.3)',
                 borderTop: '3px solid var(--color-gold)',
                 borderRadius: '50%',
                 animation: 'spin 1s linear infinite',
@@ -247,8 +247,8 @@ const MediaPlayer: React.FC<MediaPlayerProps> = ({ item, onClose }) => {
             flexWrap: 'wrap',
           }}>
             <span style={{
-              backgroundColor: 'rgba(139, 0, 0, 0.1)',
-              color: '#8B0000',
+              backgroundColor: 'rgba(227, 50, 65, 0.1)',
+              color: 'var(--color-red)',
               padding: '4px 12px',
               borderRadius: '20px',
               fontSize: '0.8rem',

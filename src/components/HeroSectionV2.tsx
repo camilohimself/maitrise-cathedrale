@@ -55,7 +55,7 @@ const HeroSectionV2 = () => {
             fontFamily: 'var(--font-spectral)',
             fontSize: '8rem',
             fontWeight: '200',
-            color: 'rgba(139, 0, 0, 0.1)',
+            color: 'rgba(227, 50, 65, 0.1)',
             lineHeight: 1,
             userSelect: 'none',
             zIndex: -1,
@@ -67,8 +67,8 @@ const HeroSectionV2 = () => {
           <div style={{
             display: 'inline-block',
             padding: '4px 16px',
-            backgroundColor: 'rgba(184, 134, 11, 0.1)',
-            color: '#8B0000',
+            backgroundColor: 'rgba(212, 165, 116, 0.1)',
+            color: 'var(--color-red)',
             fontFamily: 'var(--font-outfit)',
             fontSize: '12px',
             fontWeight: '600',
@@ -86,7 +86,7 @@ const HeroSectionV2 = () => {
             fontFamily: 'var(--font-spectral)',
             fontSize: 'clamp(3.5rem, 6vw, 5.5rem)',
             fontWeight: '300',
-            color: '#8B0000',
+            color: 'var(--color-red)',
             marginBottom: '1.5rem',
             lineHeight: 1.1,
             letterSpacing: '-2px',
@@ -132,7 +132,7 @@ const HeroSectionV2 = () => {
                   fontFamily: 'var(--font-spectral)',
                   fontSize: '2rem',
                   fontWeight: '600',
-                  color: '#8B0000',
+                  color: 'var(--color-red)',
                   lineHeight: 1,
                 }}>
                   {stat.number}
@@ -163,7 +163,7 @@ const HeroSectionV2 = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 padding: '16px 0',
-                color: '#8B0000',
+                color: 'var(--color-red)',
                 textDecoration: 'none',
                 fontFamily: 'var(--font-outfit)',
                 fontWeight: '500',
@@ -173,7 +173,7 @@ const HeroSectionV2 = () => {
                 transform: `translate(${mousePosition.x * 0.1}px, ${mousePosition.y * 0.1}px)`,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderBottomColor = '#8B0000';
+                e.currentTarget.style.borderBottomColor = 'var(--color-red)';
                 e.currentTarget.style.paddingLeft = '20px';
               }}
               onMouseLeave={(e) => {
@@ -204,7 +204,7 @@ const HeroSectionV2 = () => {
             left: '-20px',
             right: '20px',
             bottom: '20px',
-            border: '1px solid rgba(184, 134, 11, 0.3)',
+            border: '1px solid rgba(212, 165, 116, 0.3)',
             zIndex: 1,
           }} />
 
@@ -233,7 +233,7 @@ const HeroSectionV2 = () => {
             <div style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(135deg, rgba(139, 0, 0, 0.1) 0%, transparent 100%)',
+              background: 'linear-gradient(135deg, rgba(227, 50, 65, 0.1) 0%, transparent 100%)',
             }} />
           </div>
 
@@ -244,7 +244,7 @@ const HeroSectionV2 = () => {
             right: '-1rem',
             width: '120px',
             height: '120px',
-            background: 'linear-gradient(135deg, rgba(184, 134, 11, 0.8) 0%, rgba(139, 0, 0, 0.8) 100%)',
+            background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.8) 0%, rgba(227, 50, 65, 0.8) 100%)',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
@@ -282,7 +282,7 @@ const HeroSectionV2 = () => {
         right: '10%',
         width: '80px',
         height: '1px',
-        background: 'linear-gradient(90deg, transparent, #8B0000, transparent)',
+        background: 'linear-gradient(90deg, transparent, var(--color-red), transparent)',
         opacity: 0.3,
       }} />
 

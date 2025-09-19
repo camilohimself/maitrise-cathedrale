@@ -47,9 +47,9 @@ const HeroSectionV1 = () => {
           inset: 0,
           background: `
             linear-gradient(135deg, 
-              rgba(139, 0, 0, 0.6) 0%,
+              rgba(227, 50, 65, 0.6) 0%,
               rgba(0, 0, 0, 0.8) 40%,
-              rgba(139, 0, 0, 0.4) 70%,
+              rgba(227, 50, 65, 0.4) 70%,
               rgba(0, 0, 0, 0.9) 100%
             )
           `,
@@ -60,8 +60,8 @@ const HeroSectionV1 = () => {
           position: 'absolute',
           inset: 0,
           background: `
-            radial-gradient(circle at 30% 70%, rgba(184, 134, 11, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 30%, rgba(139, 0, 0, 0.1) 0%, transparent 50%)
+            radial-gradient(circle at 30% 70%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 30%, rgba(227, 50, 65, 0.1) 0%, transparent 50%)
           `,
         }} />
       </div>
@@ -80,8 +80,8 @@ const HeroSectionV1 = () => {
         <div style={{
           display: 'inline-block',
           padding: '8px 24px',
-          backgroundColor: 'rgba(184, 134, 11, 0.2)',
-          border: '1px solid rgba(184, 134, 11, 0.4)',
+          backgroundColor: 'rgba(212, 165, 116, 0.2)',
+          border: '1px solid rgba(212, 165, 116, 0.4)',
           borderRadius: '50px',
           color: 'var(--color-gold)',
           fontFamily: 'var(--font-outfit)',
@@ -153,7 +153,7 @@ const HeroSectionV1 = () => {
               alignItems: 'center',
               justifyContent: 'center',
               padding: '18px 40px',
-              backgroundColor: '#8B0000',
+              backgroundColor: 'var(--color-red)',
               color: '#FFFFFF',
               border: 'none',
               borderRadius: '50px',
@@ -168,11 +168,11 @@ const HeroSectionV1 = () => {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'translateY(-3px) scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 20px 40px rgba(139, 0, 0, 0.4)';
+              e.currentTarget.style.boxShadow = '0 20px 40px rgba(227, 50, 65, 0.4)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0) scale(1)';
-              e.currentTarget.style.boxShadow = '0 10px 20px rgba(139, 0, 0, 0.2)';
+              e.currentTarget.style.boxShadow = '0 10px 20px rgba(227, 50, 65, 0.2)';
             }}
           >
             <span>Découvrir nos concerts</span>
@@ -249,8 +249,8 @@ const HeroSectionV1 = () => {
         }
         
         @keyframes glow {
-          from { box-shadow: 0 0 20px rgba(184, 134, 11, 0.3); }
-          to { box-shadow: 0 0 30px rgba(184, 134, 11, 0.5); }
+          from { box-shadow: 0 0 20px rgba(212, 165, 116, 0.3); }
+          to { box-shadow: 0 0 30px rgba(212, 165, 116, 0.5); }
         }
         
         @keyframes bounce {

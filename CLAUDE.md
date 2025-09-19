@@ -42,6 +42,15 @@
   - Migrer inline vers classes centralisées
   - Créer .badge-gold, .tag-gold, .card-glass
 
+### Phase MAQUETTE CONCERTS FAS (À REPRENDRE)
+- [ ] **Choisir version définitive section concerts**
+  - 3 versions OSOM créées et testées (/fas-test-all)
+  - V1_Cinematic : Timeline + Hero rotatif (problème technique)
+  - V2_Masonry : Grille Pinterest avec cartes flottantes
+  - V3_Mobile_Cards : Carrousel 3D tactile optimisé mobile
+  - **ACTION:** Sélectionner et intégrer la version préférée dans /fas
+  - **PRIORITÉ:** Remplacer FASConcertsSection actuelle
+
 ### Phase CONTENU À COMPLÉTER
 - [ ] **Agenda & Billetterie** - Événements avec vraies données
 - [ ] **Média** - YouTube/SoundCloud embeds complets
@@ -142,6 +151,29 @@ sips -Z 300 --setProperty formatOptions 75 "source.jpg" --out "thumb.jpg"
 3. **Sections modulaires** (/maitrise refactorisé en 7 composants)
 4. **Palette stricte** Navy/Or/Rouge (éviter couleurs hors charte)
 5. **Build stable** maintenir 0 erreur TypeScript/ESLint
+
+## 🐛 BUGS CONNUS
+
+### **Boutons React non-cliquables (septembre 2024)**
+**Symptôme:** Boutons avec onClick ne réagissent pas aux clics dans certains composants
+
+**Contexte:** Rencontré lors du développement de la page de test FAS (/fas-test)
+- Les boutons semblent normaux visuellement
+- Hover fonctionne, mais onClick ne se déclenche pas
+- Console.log dans onClick ne s'affiche pas
+- Problème persiste même avec zIndex élevé et pointerEvents: 'auto'
+
+**Solutions tentées:**
+- ✅ Augmenté zIndex: 9999/10001
+- ✅ Ajouté pointerEvents: 'auto'
+- ✅ Simplifié logique onClick
+- ✅ Ajouté console.log pour debug
+- ❌ Problème persiste
+
+**Workaround appliqué:**
+Créer page `/fas-test-all` avec toutes les versions affichées simultanément (sans boutons) pour éviter le problème.
+
+**Note:** Bug spécifique à certains patterns React/Next.js - à investiguer plus tard si temps disponible.
 
 ---
 

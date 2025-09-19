@@ -42,7 +42,7 @@ export default function OrganistesSection() {
             <div style={{
               width: '100px',
               height: '100px',
-              background: 'linear-gradient(45deg, var(--color-gold), #E6C068)',
+              background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
               borderRadius: '50%',
               margin: '0 auto 24px',
               display: 'flex',
@@ -97,7 +97,7 @@ export default function OrganistesSection() {
             <div style={{
               width: '100px',
               height: '100px',
-              background: 'linear-gradient(45deg, #E6C068, #F0D074)',
+              background: 'linear-gradient(45deg, var(--color-gold), #F0D074)',
               borderRadius: '50%',
               margin: '0 auto 24px',
               display: 'flex',

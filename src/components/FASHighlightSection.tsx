@@ -7,20 +7,9 @@ import Link from 'next/link';
 const FASHighlightSection = () => {
   const highlightEvents = [
     {
-      id: 5,
-      title: "Stile Antico",
-      subtitle: "Le Prince de la Musique - Palestrina",
-      date: "4 janvier 2026",
-      time: "17h00",
-      category: "PRESTIGE",
-      description: "L'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Palestrina. Un des meilleurs ensembles vocaux au monde.",
-      image: "/images/artistes/stile-antico/stile-antico-1-card.webp",
-      prestige: true
-    },
-    {
       id: 1,
       title: "Ouverture du FAS",
-      subtitle: "Ensemble Vocal & Ensemble Barberine", 
+      subtitle: "Ensemble Vocal & Ensemble Barberine",
       date: "30 novembre 2025",
       time: "17h00",
       category: "OUVERTURE",
@@ -32,12 +21,23 @@ const FASHighlightSection = () => {
       id: 4,
       title: "Vivaldi - Gloria et Magnificat",
       subtitle: "Ensemble Ad Astra & Collectif baroque 7 Sed Unum",
-      date: "26 décembre 2025", 
+      date: "26 décembre 2025",
       time: "17h00",
       category: "BAROQUE",
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales pour voix de femmes avec Jean-David Waeber et Daniela Numico.",
       image: "/images/artistes/ecole-maitrisienne/ecole-2-card.webp",
       featured: true
+    },
+    {
+      id: 5,
+      title: "Stile Antico",
+      subtitle: "Le Prince de la Musique - Palestrina",
+      date: "4 janvier 2026",
+      time: "17h00",
+      category: "PRESTIGE",
+      description: "L'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Palestrina. Un des meilleurs ensembles vocaux au monde.",
+      image: "/images/artistes/stile-antico/stile-antico-1-card.webp",
+      prestige: true
     }
   ];
 

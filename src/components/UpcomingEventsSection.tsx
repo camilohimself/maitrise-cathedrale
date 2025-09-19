@@ -124,8 +124,8 @@ const UpcomingEventsSection = memo(() => {
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px)';
                 e.currentTarget.style.backgroundColor = 'var(--color-white)';
-                e.currentTarget.style.borderColor = 'rgba(139, 0, 0, 0.2)';
-                e.currentTarget.style.boxShadow = '0 15px 35px rgba(139, 0, 0, 0.12)';
+                e.currentTarget.style.borderColor = 'rgba(227, 50, 65, 0.2)';
+                e.currentTarget.style.boxShadow = '0 15px 35px rgba(227, 50, 65, 0.12)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
@@ -144,7 +144,7 @@ const UpcomingEventsSection = memo(() => {
                   height: '12px',
                   backgroundColor: 'var(--color-red)',
                   borderRadius: '50%',
-                  boxShadow: '0 0 0 3px rgba(139, 0, 0, 0.2)',
+                  boxShadow: '0 0 0 3px rgba(227, 50, 65, 0.2)',
                 }} />
               )}
 
