@@ -428,7 +428,7 @@ export default function Media() {
                 }}>
                   <iframe
                     width="100%"
-                    height="166"
+                    height="300"
                     scrolling="no"
                     frameBorder="no"
                     allow="autoplay"

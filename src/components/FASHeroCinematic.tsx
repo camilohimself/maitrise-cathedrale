@@ -24,7 +24,7 @@ const FASHeroCinematic = () => {
   const concerts = [
     {
       id: 1,
-      title: "Concert de Gala",
+      title: "Stile Antico",
       subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
       date: "4 janvier 2026",
       time: "17:00",
