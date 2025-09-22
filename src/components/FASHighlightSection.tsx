@@ -30,12 +30,12 @@ const FASHighlightSection = () => {
     },
     {
       id: 5,
-      title: "Stile Antico",
-      subtitle: "Le Prince de la Musique - Palestrina",
+      title: "Concert de Gala",
+      subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
       date: "4 janvier 2026",
       time: "17h00",
       category: "PRESTIGE",
-      description: "L'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Palestrina. Un des meilleurs ensembles vocaux au monde.",
+      description: "L'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Giovanni Pierluigi da Palestrina. Un des meilleurs ensembles vocaux au monde.",
       image: "/images/artistes/stile-antico/stile-antico-1-card.webp",
       prestige: true
     }

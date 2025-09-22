@@ -9,8 +9,8 @@ const artistesData: Record<string, any> = {
   'stile-antico': {
     id: 'stile-antico',
     name: 'Stile Antico',
-    concert: 'Stile Antico',
-    subtitle: 'Palestrina: Le Prince de la Musique',
+    concert: 'Concert de Gala',
+    subtitle: '« The Golden Renaissance – Le Prince de la Musique »',
     date: 'Dimanche 4 janvier 2026',
     time: '17H00',
     conference: {
@@ -26,7 +26,7 @@ const artistesData: Record<string, any> = {
       '/images/artistes/stile-antico/stile-antico-3-hero.webp',
       '/images/artistes/stile-antico/stile-antico-4-hero.webp'
     ],
-    description: `Nous aurons l'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Palestrina, "Le Prince de la Musique". Il s'agit d'un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance.
+    description: `Nous aurons l'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Giovanni Pierluigi da Palestrina, "Le Prince de la Musique". Il s'agit d'un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance.
 
 Cette soirée exceptionnelle sera également précédée d'une conférence de Marie Favre, musicologue et docteur en musicologie, qui nous éclairera sur l'œuvre de Giovanni Pierluigi da Palestrina à 16h00.
 
@@ -341,7 +341,7 @@ export default function ArtistePage() {
             <h3 style={{
               fontSize: '1.2rem',
               fontWeight: '700',
-              color: '#E33241',
+              color: 'var(--color-gold)',
               marginBottom: '1.5rem'
             }}>
               Artiste

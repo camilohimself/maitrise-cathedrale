@@ -24,8 +24,8 @@ export const fasArtistes = [
   {
     id: "stile-antico",
     name: "Stile Antico",
-    concert: "Stile Antico",
-    subtitle: "Palestrina, prince de la musique",
+    concert: "Concert de Gala",
+    subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
     image: "/images/artistes/stile-antico/stile-antico-2-card.webp",
     heroImage: "/images/artistes/stile-antico/stile-antico-1-hero.webp",
     gallery: [

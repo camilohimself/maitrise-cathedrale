@@ -209,11 +209,11 @@ const fondationContent = {
   contact: {
     nom: "Fondation Musique sacrée et Maîtrise de la Cathédrale de Sion",
     adresse: {
-      ligne1: "Case postale 2223",
-      ligne2: "1950 Sion 2 Nord"
+      ligne1: "Rue de la Cathédrale 13",
+      ligne2: "1950 Sion"
     },
     telephone: "079 616 90 94",
-    email: "musiquesacree@cath-vs.ch",
+    email: "info@maitrise-cathedrale.ch",
     secretariat: {
       responsable: "Mme Sylvie Bernhard",
       telephone: "079 616 90 94"

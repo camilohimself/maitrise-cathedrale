@@ -54,9 +54,9 @@ const MEDIA_ITEMS: MediaItem[] = [
     },
     {
       id: 'yt-3',
-      title: "Festival d'Art Sacré 2023 - Stile Antico",
+      title: "Festival d'Art Sacré 2023 - Concert de Gala",
       type: 'youtube',
-      description: "Moment d'exception avec l'ensemble britannique Stile Antico dans un programme consacré à Palestrina. 19ème édition du Festival d'Art Sacré de Sion.",
+      description: "Moment d'exception avec l'ensemble britannique Stile Antico dans un programme consacré à Giovanni Pierluigi da Palestrina. 19ème édition du Festival d'Art Sacré de Sion.",
       embedId: "", // Ajouter l'ID YouTube
       thumbnailUrl: "/images/artistes/choeur-novantiqua/novantiqua-4-card.webp",
       duration: "25:30",

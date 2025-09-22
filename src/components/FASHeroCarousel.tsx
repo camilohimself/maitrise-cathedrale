@@ -66,8 +66,8 @@ const FASHeroCarousel = () => {
     },
     {
       src: '/images/carousel/carousel-10.jpg',
-      alt: 'Stile Antico',
-      title: 'Stile Antico',
+      alt: 'Concert de Gala',
+      title: 'Concert de Gala',
       description: 'L\'excellence internationale au FAS'
     }
   ];

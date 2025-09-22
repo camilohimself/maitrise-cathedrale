@@ -20,12 +20,12 @@ export default function FASHeroElegant() {
   const concerts: Concert[] = [
     {
       id: 1,
-      title: "Stile Antico",
-      subtitle: "Palestrina, prince de la musique",
+      title: "Concert de Gala",
+      subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
       date: "4 janvier 2026",
       time: "17:00",
       image: "/images/artistes/stile-antico/stile-antico-1-hero.webp",
-      description: "Concert exceptionnel du prestigieux ensemble britannique dans un programme consacré à Palestrina.",
+      description: "Concert exceptionnel du prestigieux ensemble britannique dans un programme consacré à Giovanni Pierluigi da Palestrina.",
       prestige: true
     },
     {
