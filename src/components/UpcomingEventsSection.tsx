@@ -6,13 +6,23 @@ import { maitriseEvents, getFeaturedEvents } from '@/data/maitriseEvents';
 import { EVENT_TYPE_CONFIG } from '@/data/uiConstants';
 
 const UpcomingEventsSection = memo(() => {
-  // Performance Dr Claude: Memoization des événements
-  const upcomingEvents = useMemo(() => 
-    maitriseEvents
+  // Performance Dr Claude: Memoization des événements - UNIQUEMENT concerts et FAS à venir
+  const upcomingEvents = useMemo(() => {
+    // Filtrer les événements à venir (après le 22 décembre 2024)
+    return maitriseEvents
+      .filter(event => {
+        // Garder seulement les événements de 2025 et après
+        // Pour décembre, garder uniquement les événements après le 22
+        if (event.date.month === 'DÉC') {
+          return parseInt(event.date.day) > 22;
+        }
+        // Exclure tous les mois avant décembre
+        return !['AOÛT', 'SEPT', 'OCT', 'NOV'].includes(event.date.month);
+      })
+      .filter(event => event.type === 'concert' || event.type === 'fas')
       .filter(event => event.featured)
-      .slice(0, 4),
-    []
-  );
+      .slice(0, 4);
+  }, []);
 
   // Performance Dr Claude: Fonction externalisée
   const getEventIcon = useCallback((category: string) => {

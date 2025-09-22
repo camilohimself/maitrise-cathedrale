@@ -13,18 +13,16 @@ export default function AgendaBilletterie() {
 
   // Filtrage des événements
   const filteredEvents = useMemo(() => {
-    // Filtrer d'abord les événements à venir (11 septembre 2025 et après)
-    const today = new Date();
+    // Filtrer les événements à venir (après le 22 décembre 2024)
+    const today = new Date(2024, 11, 22); // 22 décembre 2024
     const upcomingEvents = maitriseEvents.filter(event => {
-      // Si nous sommes en septembre, ne garder que les événements du 11 et après
-      if (today.getMonth() === 8) { // Septembre = mois 8 (0-indexed)
-        if (event.date.month === 'SEPT') {
-          return parseInt(event.date.day) >= 11;
-        }
-        // Garder tous les événements des mois suivants
-        return !['AOÛT'].includes(event.date.month);
+      // Garder seulement les événements de 2025 et après
+      // Pour décembre, garder uniquement les événements après le 22
+      if (event.date.month === 'DÉC') {
+        return parseInt(event.date.day) > 22;
       }
-      return true;
+      // Exclure tous les mois avant décembre
+      return !['AOÛT', 'SEPT', 'OCT', 'NOV'].includes(event.date.month);
     });
     
     let filtered = [...upcomingEvents];
