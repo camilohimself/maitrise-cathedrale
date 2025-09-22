@@ -28,7 +28,7 @@ export default function Soutenir() {
         <h1 style={{
           fontSize: '2.5rem',
           fontWeight: '700',
-          color: '#E33241',
+          color: 'var(--color-red)',
           marginBottom: '48px',
           textAlign: 'center'
         }}>
@@ -66,7 +66,7 @@ export default function Soutenir() {
                 <h3 style={{
                   fontSize: '1.25rem',
                   fontWeight: '600',
-                  color: '#E33241',
+                  color: 'var(--color-red)',
                   marginBottom: '12px'
                 }}>
                   {section.title}
