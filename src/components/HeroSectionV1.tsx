@@ -146,16 +146,16 @@ const HeroSectionV1 = () => {
           flexWrap: 'wrap',
           animation: 'fadeInUp 1s ease-out 0.6s both',
         }}>
-          <a 
+          <a
             href="https://billetterie-externe.com/maitrise-cathedrale"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               padding: '18px 40px',
-              backgroundColor: 'var(--color-red)',
-              color: '#FFFFFF',
-              border: 'none',
+              backgroundColor: '#FFFFFF',
+              color: 'var(--color-red)',
+              border: '2px solid var(--color-red)',
               borderRadius: '50px',
               fontFamily: 'var(--font-outfit)',
               fontWeight: '600',

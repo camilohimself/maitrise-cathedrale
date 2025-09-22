@@ -74,7 +74,7 @@ const UpcomingEventsSection = memo(() => {
             textTransform: 'uppercase',
             marginBottom: '1.5rem',
           }}>
-            Saison 2024-2025
+            Saison 2025-2026
           </div>
 
           <h2 style={{

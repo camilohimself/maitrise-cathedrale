@@ -177,11 +177,11 @@ const MaitriseAboutSection = () => {
                 fontSize: '1.2rem',
                 fontStyle: 'italic',
                 color: 'var(--color-red)',
-                lineHeight: 1.6,
+                lineHeight: 1.3,
                 margin: 0,
               }}>
-                "Former les jeunes à l'art du chant dans un esprit d'excellence 
-                et de tradition, tout en participant activement à la vie liturgique 
+                "Former les jeunes à l'art du chant dans un esprit d'excellence
+                et de tradition, tout en participant activement à la vie liturgique
                 et culturelle de notre région."
               </blockquote>
             </div>

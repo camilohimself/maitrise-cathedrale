@@ -187,42 +187,17 @@ const FASHeroCinematic = () => {
           opacity: isLoaded ? 1 : 0,
           transition: 'all 1s ease 0.5s'
         }}>
-          {/* Badge catégorie avec effet */}
-          <div style={{
-            display: 'inline-block',
-            marginBottom: '2rem',
-            padding: '0.75rem 2rem',
-            background: currentConcert.prestige
-              ? 'linear-gradient(45deg, var(--color-gold), #E6C068)'
-              : 'rgba(255, 255, 255, 0.15)',
-            color: currentConcert.prestige ? 'var(--color-purple-dark)' : 'white',
-            borderRadius: '30px',
-            fontSize: '0.9rem',
-            fontWeight: '700',
-            textTransform: 'uppercase',
-            letterSpacing: '0.1em',
-            backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            boxShadow: currentConcert.prestige
-              ? '0 8px 25px rgba(212, 165, 116, 0.4)'
-              : '0 8px 25px rgba(255, 255, 255, 0.1)',
-            transform: 'translateY(0)',
-            animation: 'fadeInUp 1s ease 0.8s both'
-          }}>
-{currentConcert.prestige ? '⭐ Événement exceptionnel' : `🎭 ${getCategoryLabel(currentConcert.category)}`}
-          </div>
-
           {/* Titre principal avec contraste renforcé */}
           <h1 style={{
             fontSize: 'clamp(2.5rem, 8vw, 5rem)',
             fontWeight: '300',
-            marginBottom: '1.5rem',
+            marginBottom: '1rem',
             fontFamily: 'var(--font-spectral)',
             lineHeight: '1.1',
             color: 'white',
             textShadow: '0 6px 25px rgba(0, 0, 0, 0.8), 0 2px 8px rgba(0, 0, 0, 0.9)',
             transform: 'translateY(0)',
-            animation: 'fadeInUp 1s ease 1s both'
+            animation: 'fadeInUp 1s ease 0.8s both'
           }}>
             {currentConcert.title}
           </h1>
@@ -231,22 +206,22 @@ const FASHeroCinematic = () => {
           <h2 style={{
             fontSize: 'clamp(1.2rem, 3vw, 2rem)',
             fontWeight: '400',
-            marginBottom: '2.5rem',
+            marginBottom: '1.8rem',
             color: 'var(--color-gold)',
             fontStyle: 'italic',
             opacity: 0.95,
             transform: 'translateY(0)',
-            animation: 'fadeInUp 1s ease 1.2s both'
+            animation: 'fadeInUp 1s ease 1s both'
           }}>
             {currentConcert.subtitle}
           </h2>
 
-          {/* Informations sans pastilles - typographie claire */}
+          {/* Date et heure en premier */}
           <div style={{
             textAlign: 'center',
-            marginBottom: '2.5rem',
+            marginBottom: '1.2rem',
             transform: 'translateY(0)',
-            animation: 'fadeInUp 1s ease 1.4s both'
+            animation: 'fadeInUp 1s ease 1.2s both'
           }}>
             <div style={{
               fontSize: '1.4rem',
@@ -260,17 +235,17 @@ const FASHeroCinematic = () => {
             </div>
           </div>
 
-          {/* Description */}
+          {/* Description après la date */}
           <p style={{
             fontSize: '1.25rem',
-            lineHeight: '1.7',
-            marginBottom: '3rem',
+            lineHeight: '1.5',
+            marginBottom: '2.5rem',
             opacity: 0.92,
             maxWidth: '650px',
-            margin: '0 auto 3rem',
+            margin: '0 auto 2.5rem',
             textShadow: '0 2px 10px rgba(0, 0, 0, 0.2)',
             transform: 'translateY(0)',
-            animation: 'fadeInUp 1s ease 1.6s both'
+            animation: 'fadeInUp 1s ease 1.4s both'
           }}>
             {currentConcert.description}
           </p>
@@ -288,7 +263,7 @@ const FASHeroCinematic = () => {
             transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
             boxShadow: '0 10px 30px rgba(212, 165, 116, 0.4)',
             transform: 'translateY(0)',
-            animation: 'fadeInUp 1s ease 1.8s both'
+            animation: 'fadeInUp 1s ease 1.6s both'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';

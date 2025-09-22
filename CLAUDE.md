@@ -4,16 +4,16 @@
 
 ### ✅ **SITE PRODUCTION-READY + PAGE FAS FINALISÉE**
 - **URL Live:** https://maitrise-cathedrale.vercel.app
-- **Architecture:** Modulaire, 27 pages fonctionnelles
+- **Architecture:** Modulaire, 15 pages fonctionnelles
 - **Design:** Palette harmonisée (Navy #1a1340, Or #D4A574, Rouge #E33241)
 - **Performance:** Images optimisées, CSS-in-JS inline
 - **GitHub:** https://github.com/camilohimself/maitrise-cathedrale.git
 
 ### 📊 **PROGRESSION**
-- Pages créées: 27/27 (100%)
-- Contenu intégré: ~60% (Maîtrise complète, **FAS finalisé**)
+- Pages créées: 15 pages fonctionnelles (architecture optimisée)
+- Contenu intégré: ~70% (Maîtrise complète, **FAS finalisé**)
 - Photos réelles: Remplacées (Hero MC + artistes optimisés)
-- Build: Stable sans erreurs
+- Build: Stable sans erreurs TypeScript/ESLint
 
 ---
 
@@ -47,11 +47,16 @@
   - Suppression couleurs non-conformes (#8B0000, etc.)
   - CSS classes dupliquées nettoyées
 
+### ✅ **Phase ARCHITECTURE CORRIGÉE (19 septembre 2024)**
+- ✅ **SoundCloud intégration** - 10 tracks fonctionnels avec waveforms (8 Bach + 2 Schütz)
+- ✅ **Nettoyage arborescence** - Suppression sous-pages /maitrise incorrectes
+- ✅ **Sitemap.ts corrigé** - Suppression 8 URLs inexistantes
+- ✅ **Optimisation images** - WebP conversion (hero-choir: -96%, hero-photo: -79%)
+
 ### Phase CONTENU À COMPLÉTER
 - [ ] **Agenda & Billetterie** - Événements avec vraies données
-- [ ] **Média** - YouTube/SoundCloud embeds complets
-- [ ] **Nous Soutenir** - Formulaires dons/partenaires
-- [ ] **Newsletter** - Backend fonctionnel
+- [ ] **Formulaires** - Backend Newsletter/Contact/Amis-Maîtrise
+- [ ] **YouTube placeholders** - Remplacer 3 vidéos par vrais contenus
 
 ### Phase OPTIMISATION FINALE
 - [ ] **SEO** - Métadonnées OpenGraph complètes
@@ -87,15 +92,28 @@ sips -Z 300 --setProperty formatOptions 75 "source.jpg" --out "thumb.jpg"
 /MAITRISE-CATHEDRALE/
 ├── maitrise-cathedrale/    # 🎯 PROJET (toujours travailler ici)
 │   ├── src/
-│   │   ├── app/           # Pages Next.js
+│   │   ├── app/           # Pages Next.js (27 pages)
+│   │   │   ├── page.tsx                    # Accueil
+│   │   │   ├── maitrise/page.tsx          # Page unique avec 8 sections
+│   │   │   ├── media/page.tsx             # SoundCloud + playlists
+│   │   │   ├── fas/page.tsx               # Festival d'Art Sacré
+│   │   │   └── soutenir/page.tsx          # Dons et partenaires
 │   │   ├── components/    # Composants réutilisables
+│   │   │   ├── maitrise/  # 8 sections modulaires /maitrise
+│   │   │   └── fas/       # Composants Festival
 │   │   └── data/          # JSON content (maitriseContent.js, fasEvents.json)
 │   └── public/
-│       └── images/        # Photos optimisées
+│       └── images/        # Photos optimisées WebP
 ├── Charte graphique MC/   # Assets source
 ├── FAS - docs/           # Documents festival
 └── FIGMA/                # Maquettes
 ```
+
+### ⚠️ **ARCHITECTURE CORRIGÉE (19 septembre 2024)**
+**IMPORTANT:** `/maitrise` est une page unique avec sections, PAS de sous-pages
+- ✅ Suppression répertoires `/maitrise/ecole/`, `/maitrise/ensemble/`, etc.
+- ✅ Sitemap.ts nettoyé (8 URLs incorrectes supprimées)
+- ✅ Architecture modulaire: 8 composants dans `/components/maitrise/`
 
 ---
 
