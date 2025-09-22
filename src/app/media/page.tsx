@@ -428,11 +428,11 @@ export default function Media() {
                 }}>
                   <iframe
                     width="100%"
-                    height="300"
+                    height="166"
                     scrolling="no"
                     frameBorder="no"
                     allow="autoplay"
-                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.soundcloudUrl)}&color=${soundcloudCollections[activeTab as keyof typeof soundcloudCollections].color.replace('#', '')}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true`}
+                    src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(track.soundcloudUrl)}&color=${soundcloudCollections[activeTab as keyof typeof soundcloudCollections].color.replace('#', '')}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false`}
                     style={{
                       borderRadius: 'var(--radius-sm)',
                       border: 'none'
