@@ -10,6 +10,7 @@ const artistesData: Record<string, any> = {
     id: 'stile-antico',
     name: 'Stile Antico',
     concert: 'Concert de Gala',
+    collaboration: 'En collaboration avec les Riches Heures de Valère',
     subtitle: '« The Golden Renaissance – Le Prince de la Musique »',
     date: 'Dimanche 4 janvier 2026',
     time: '17H00',
@@ -190,6 +191,18 @@ export default function ArtistePage() {
             }}>
               {artiste.concert}
             </h1>
+            {artiste.collaboration && (
+              <p style={{
+                fontSize: '1rem',
+                color: 'rgba(255, 255, 255, 0.8)',
+                fontWeight: '400',
+                fontStyle: 'italic',
+                marginBottom: '0.5rem',
+                letterSpacing: '0.02em'
+              }}>
+                {artiste.collaboration}
+              </p>
+            )}
             {artiste.subtitle && (
               <p style={{
                 fontSize: '1.5rem',

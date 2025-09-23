@@ -232,6 +232,20 @@ const UpcomingEventsSection = memo(() => {
                     {event.title}
                   </h3>
 
+                  {/* Collaboration */}
+                  {event.collaboration && (
+                    <div style={{
+                      fontFamily: 'var(--font-outfit)',
+                      fontSize: '0.85rem',
+                      fontStyle: 'italic',
+                      color: 'var(--color-navy)',
+                      opacity: 0.8,
+                      marginBottom: '0.3rem',
+                    }}>
+                      {event.collaboration}
+                    </div>
+                  )}
+
                   {/* Heure et lieu */}
                   <div style={{
                     fontFamily: 'var(--font-outfit)',

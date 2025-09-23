@@ -25,6 +25,7 @@ const FASHeroCinematic = () => {
     {
       id: 1,
       title: "Stile Antico",
+      collaboration: "En collaboration avec les Riches Heures de Valère",
       subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
       date: "4 janvier 2026",
       time: "17:00",
@@ -202,6 +203,22 @@ const FASHeroCinematic = () => {
             {currentConcert.title}
           </h1>
 
+          {/* Collaboration - style générique de film */}
+          {currentConcert.collaboration && (
+            <p style={{
+              fontSize: '1rem',
+              fontWeight: '400',
+              marginBottom: '0.8rem',
+              color: 'rgba(255, 255, 255, 0.85)',
+              fontStyle: 'italic',
+              letterSpacing: '0.03em',
+              transform: 'translateY(0)',
+              animation: 'fadeInUp 1s ease 1s both'
+            }}>
+              {currentConcert.collaboration}
+            </p>
+          )}
+
           {/* Sous-titre élégant */}
           <h2 style={{
             fontSize: 'clamp(1.2rem, 3vw, 2rem)',
@@ -211,7 +228,7 @@ const FASHeroCinematic = () => {
             fontStyle: 'italic',
             opacity: 0.95,
             transform: 'translateY(0)',
-            animation: 'fadeInUp 1s ease 1s both'
+            animation: 'fadeInUp 1s ease 1.1s both'
           }}>
             {currentConcert.subtitle}
           </h2>

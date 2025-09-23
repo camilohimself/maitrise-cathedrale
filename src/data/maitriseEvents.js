@@ -501,6 +501,7 @@ export const maitriseEvents = [
     time: '17h00',
     title: 'Concert de Gala',
     subtitle: '« The Golden Renaissance – Le Prince de la Musique »',
+    collaboration: 'En collaboration avec les Riches Heures de Valère',
     category: 'Festival d\'art sacré',
     ensemble: 'Stile Antico',
     description: 'Concert exceptionnel du prestigieux ensemble britannique dans un programme consacré à Giovanni Pierluigi da Palestrina, précédé d\'une conférence de Marie Favre',

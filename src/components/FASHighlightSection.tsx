@@ -31,6 +31,7 @@ const FASHighlightSection = () => {
     {
       id: 5,
       title: "Concert de Gala",
+      collaboration: "En collaboration avec les Riches Heures de Valère",
       subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
       date: "4 janvier 2026",
       time: "17h00",
@@ -232,6 +233,21 @@ const FASHighlightSection = () => {
                 }}>
                   {event.title}
                 </h3>
+
+                {/* Collaboration */}
+                {event.collaboration && (
+                  <p style={{
+                    fontFamily: 'var(--font-outfit)',
+                    fontSize: '0.85rem',
+                    fontWeight: '400',
+                    fontStyle: 'italic',
+                    color: 'var(--color-navy)',
+                    marginBottom: '0.5rem',
+                    opacity: 0.8,
+                  }}>
+                    {event.collaboration}
+                  </p>
+                )}
 
                 {/* Sous-titre */}
                 <p style={{

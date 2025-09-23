@@ -25,6 +25,7 @@ export const fasArtistes = [
     id: "stile-antico",
     name: "Stile Antico",
     concert: "Concert de Gala",
+    collaboration: "En collaboration avec les Riches Heures de Valère",
     subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
     image: "/images/artistes/stile-antico/stile-antico-2-card.webp",
     heroImage: "/images/artistes/stile-antico/stile-antico-1-hero.webp",
