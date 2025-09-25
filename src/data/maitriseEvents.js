@@ -188,6 +188,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    programme: 'Bach, Wohl dem, der sich auf seinen Gott BWV 139',
     featured: false
   },
   {
@@ -274,6 +275,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    programme: 'Bach, Allein zu dir, Herr Jesu Christ BWV 33',
     featured: false
   },
   {
@@ -390,6 +392,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    programme: 'Bach, Schwingt freudig euch empor BWV 36',
     featured: false
   },
   {
@@ -536,6 +539,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    programme: 'Bach, Christ unser Herr zum Jordan kam BWV 7',
     featured: false
   },
   {
@@ -594,6 +598,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    programme: 'Bach, Alles nur nach Gottes Willen BWV 72',
     featured: false
   },
   {
@@ -652,6 +657,8 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    programme: 'Bach, Jesu, meine Freude BWV 227',
+    technicalInfo: 'Continuo: 19.15',
     featured: true
   },
   {
@@ -766,6 +773,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: '20 CHF',
     image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
+    programme: 'Bach, Erfreut euch, ihr Herzen BWV 66',
     featured: true
   },
   {
@@ -838,6 +846,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    programme: 'Bach, Auf Christi Himmelfahrt allein BWV 128',
     featured: false
   },
   {
@@ -924,6 +933,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    programme: 'Bach, Man singet mit Freuden vom Sieg BWV 149',
     featured: false
   },
   {

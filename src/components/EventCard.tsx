@@ -18,6 +18,8 @@ interface EventCardProps {
   location: string;
   ctaText?: string;
   featured?: boolean;
+  programme?: string;
+  technicalInfo?: string;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -30,7 +32,9 @@ const EventCard: React.FC<EventCardProps> = ({
   price,
   location,
   ctaText = 'Réserver',
-  featured = false
+  featured = false,
+  programme,
+  technicalInfo
 }) => {
   // Variables marquées comme utilisées pour éviter les warnings lint
   const _ctaText = ctaText;
@@ -287,6 +291,50 @@ const EventCard: React.FC<EventCardProps> = ({
           }}>
             {description}
           </p>
+
+          {/* Programme musical - Affichage conditionnel et discret */}
+          {programme && (
+            <div style={{
+              marginTop: '8px',
+              padding: '6px 8px',
+              backgroundColor: 'var(--color-cream)',
+              borderRadius: '4px',
+              border: `1px solid ${eventColors.borderColor}20`,
+            }}>
+              <div style={{
+                fontFamily: 'var(--font-outfit)',
+                fontSize: 'clamp(9px, 2.5vw, 10px)', // Responsive font size
+                fontWeight: '600',
+                color: eventColors.borderColor,
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px',
+                marginBottom: '2px',
+              }}>
+                Programme
+              </div>
+              <div style={{
+                fontFamily: 'var(--font-spectral)',
+                fontSize: 'clamp(10px, 2.8vw, 11px)', // Responsive font size
+                fontWeight: '500',
+                color: 'var(--color-navy)',
+                lineHeight: 1.2,
+                fontStyle: 'italic',
+                wordBreak: 'break-word', // Mobile-friendly text wrapping
+              }}>
+                {programme}
+              </div>
+              {technicalInfo && (
+                <div style={{
+                  fontFamily: 'var(--font-outfit)',
+                  fontSize: 'clamp(8px, 2.2vw, 9px)', // Responsive font size
+                  color: 'var(--color-gray)',
+                  marginTop: '2px',
+                }}>
+                  {technicalInfo}
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* CTAs - Fixés en bas avec espacement contrôlé */}

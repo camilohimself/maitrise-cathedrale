@@ -295,7 +295,7 @@ export default function AgendaBilletterie() {
               margin: '0 auto var(--spacing-3xl) auto',
             }}>
               {filteredEvents.map((event) => (
-                <EventCard 
+                <EventCard
                   key={event.id}
                   date={{ day: event.date.day, month: event.date.month }}
                   time={event.time}
@@ -307,6 +307,8 @@ export default function AgendaBilletterie() {
                   location={event.location}
                   ctaText="Réserver"
                   featured={event.featured}
+                  programme={event.programme}
+                  technicalInfo={event.technicalInfo}
                 />
               ))}
             </div>
