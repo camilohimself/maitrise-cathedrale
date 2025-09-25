@@ -13,16 +13,11 @@ export default function AgendaBilletterie() {
 
   // Filtrage des événements
   const filteredEvents = useMemo(() => {
-    // Filtrer les événements à venir (après le 22 décembre 2024)
-    const today = new Date(2024, 11, 22); // 22 décembre 2024
+    // Filtrer les événements à venir (depuis septembre 2025)
     const upcomingEvents = maitriseEvents.filter(event => {
-      // Garder seulement les événements de 2025 et après
-      // Pour décembre, garder uniquement les événements après le 22
-      if (event.date.month === 'DÉC') {
-        return parseInt(event.date.day) > 22;
-      }
-      // Exclure tous les mois avant décembre
-      return !['AOÛT', 'SEPT', 'OCT', 'NOV'].includes(event.date.month);
+      // Exclure les événements passés (août et septembre 2025)
+      const pastMonths = ['AOÛT', 'SEPT'];
+      return !pastMonths.includes(event.date.month);
     });
     
     let filtered = [...upcomingEvents];
@@ -62,7 +57,21 @@ export default function AgendaBilletterie() {
       }
     }
 
-    return filtered;
+    // Tri chronologique des événements
+    const sortedEvents = filtered.sort((a, b) => {
+      const monthOrder: { [key: string]: number } = {
+        'AOÛT': 8, 'SEPT': 9, 'OCT': 10, 'NOV': 11, 'DÉC': 12,
+        'JAN': 13, 'FÉV': 14, 'MAR': 15, 'AVR': 16, 'MAI': 17, 'JUIN': 18
+      };
+
+      const monthA = monthOrder[a.date.month] || 99;
+      const monthB = monthOrder[b.date.month] || 99;
+
+      if (monthA !== monthB) return monthA - monthB;
+      return parseInt(a.date.day) - parseInt(b.date.day);
+    });
+
+    return sortedEvents;
   }, [searchTerm, selectedMonth, selectedType, selectedPriceRange]);
 
   return (

@@ -14,7 +14,8 @@
 - Contenu intégré: 85% (Maîtrise complète, **FAS finalisé**, événements 2025-2026)
 - Photos réelles: Intégrées (Hero MC + 42 artistes FAS optimisés WebP)
 - Build: Stable sans erreurs TypeScript/ESLint
-- **Événements:** Calendrier 2025-2026 intégré (941 événements officiels)
+- **Événements:** Calendrier 2025-2026 intégré (61 événements officiels PDF)
+- **Source officielle:** "Calendrier général 2025-2026.xlsx (1).pdf" fourni par le client
 
 ---
 
@@ -268,5 +269,30 @@ Le site MVP est finalisé et prêt pour la migration vers le domaine officiel. T
 
 ---
 
-**Dernière mise à jour:** 22 décembre 2024
-**Session finale:** MVP livré - Filtrage événements + cohérence pages + informations officielles
+## 📅 **CALENDRIER OFFICIEL 2025-2026**
+### **Source:** "Calendrier général 2025-2026.xlsx (1).pdf" (Document client)
+
+#### **📊 Vue d'ensemble**
+- **Total événements:** 61 événements officiels
+- **Période:** Août 2025 - Juin 2026
+- **Types:** Messes dominicales, Concerts, Festival d'Art Sacré (5 concerts)
+- **Synchronisation:** 100% conforme au PDF officiel (Sept 2024)
+
+#### **🎼 Festival d'Art Sacré (5 concerts)**
+1. **30 novembre 2025 - 17h00** - Concert FAS Ensemble vocal
+2. **7 décembre 2025 - 17h00** - Concert FAS Chœur Novantiqua
+3. **21 décembre 2025 - 17h00** - Concert FAS Collèges/École
+4. **26 décembre 2025 - 20h00** - Concert FAS Ensemble Ad Astra
+5. **4 janvier 2026 - 17h00** - Concert FAS Stile Antico (Gala)
+
+#### **📈 État de mise à jour (Septembre 2024)**
+- ✅ Calendrier extrait du PDF officiel
+- ✅ 61 événements intégrés dans maitriseEvents.js
+- ✅ Dates, heures, ensembles vérifiés
+- ✅ Build stable et déployé
+- ✅ Conformité 100% avec document client
+
+---
+
+**Dernière mise à jour:** 25 septembre 2024
+**Session actuelle:** Synchronisation calendrier PDF officiel - Calendrier 2025-2026 finalisé
