@@ -155,7 +155,7 @@ const EventCard: React.FC<EventCardProps> = ({
         borderRadius: '0 50px 50px 0', // Forme arrondie uniquement à droite
         overflow: 'hidden',
         transition: 'all 0.3s ease',
-        height: '200px', // Hauteur fixe pour layout horizontal
+        minHeight: '200px', // Hauteur minimale, s'adapte au contenu
         cursor: 'pointer',
         display: 'flex', // Layout horizontal
         flexDirection: 'row',
