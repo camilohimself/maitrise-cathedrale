@@ -8,7 +8,7 @@ const MaitriseAboutSection = () => {
   const stats = [
     { number: '2004', label: 'Fondation', description: 'Création officielle juin' },
     { number: '150+', label: 'Concerts', description: 'Depuis la création' },
-    { number: '3', label: 'Ensembles', description: 'École • Vocal • Cathvoix' },
+    { number: '4', label: 'Ensembles', description: 'Vocal/instrumental • École • Grégorien • Chapelle' },
     { number: '20', label: 'Années FAS', description: 'Festival Art Sacré' },
   ];
 
@@ -16,7 +16,7 @@ const MaitriseAboutSection = () => {
     {
       iconType: 'education',
       title: 'École de chant',
-      description: 'Formation d\'excellence pour jeunes talents de 8 à 18 ans. Répertoire traditionnel : chant grégorien, polyphonie de la Renaissance, messes classiques.',
+      description: 'Formation d\'excellence pour jeunes talents de 15 à 25 ans. Répertoire traditionnel : chant grégorien, polyphonie de la Renaissance, messes classiques.',
       link: '/maitrise/ecole-maitrisienne'
     },
     {
@@ -34,7 +34,7 @@ const MaitriseAboutSection = () => {
     {
       iconType: 'festival',
       title: 'Liturgie à la cathédrale',
-      description: 'Chant liturgique quotidien et célébrations solennelles dans la tradition cathédrale.',
+      description: 'Chant liturgique et célébrations solennelles dans la tradition cathédrale.',
       link: '/fas'
     }
   ];
@@ -92,7 +92,7 @@ const MaitriseAboutSection = () => {
             textTransform: 'uppercase',
             marginBottom: '2rem',
           }}>
-            Excellence Musicale & Spirituelle
+            Excellence Musicale
           </div>
 
           <h2 style={{
@@ -115,8 +115,8 @@ const MaitriseAboutSection = () => {
             margin: '0 auto',
             lineHeight: 1.6,
           }}>
-            Depuis 2004, la Fondation de la Maîtrise de la Cathédrale de Sion œuvre pour l'excellence 
-            de la formation musicale et spirituelle au cœur du Valais.
+            Depuis 2004, la Fondation de la Maîtrise de la Cathédrale de Sion œuvre pour l'excellence
+            de la formation musicale au cœur du Valais.
           </p>
         </div>
 

@@ -762,16 +762,16 @@ export const maitriseEvents = [
     featured: false
   },
   {
-    id: 'avr-19-concert-ensemble',
-    type: 'concert',
+    id: 'avr-19-messe-ensemble',
+    type: 'messe',
     date: { day: '19', month: 'AVR' },
     time: '10h00',
-    title: 'Concert Ensemble vocal et instrumental',
-    category: 'Concert',
+    title: 'Messe Ensemble vocal et instrumental',
+    category: 'Messe',
     ensemble: 'Ensemble vocal et instrumental',
-    description: 'Concert de musique sacrée de printemps',
+    description: 'Messe dominicale avec musique sacrée de printemps',
     location: 'Cathédrale de Sion',
-    price: '20 CHF',
+    price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     programme: 'Bach, Erfreut euch, ihr Herzen BWV 66',
     featured: true

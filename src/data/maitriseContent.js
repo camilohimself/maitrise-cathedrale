@@ -30,11 +30,11 @@ export const maitriseContent = {
   // Direction musicale
   direction: {
     nom: "Jean-David Waeber",
-    titre: "Directeur artistique et musical",
+    titre: "Maître de chapelle",
     bio: {
-      formation: "Diplômé en direction chorale et orchestrale du Conservatoire de Genève",
-      experience: "Plus de 20 ans d'expérience dans la direction de chœurs professionnels",
-      specialites: ["Musique baroque", "Musique sacrée", "Création contemporaine"]
+      formation: "Diplômé en orgue et direction chorale",
+      experience: "Plus de 20 ans d'expérience dans la direction chorale",
+      specialites: ["Musique baroque", "Musique sacrée", "Musique d'orgue"]
     }
   },
 
@@ -55,12 +55,12 @@ export const maitriseContent = {
   // Ensemble Vocal et Instrumental
   evi: {
     titre: "Ensemble vocal et instrumental (EVI)",
-    description: "Formation professionnelle unique en Suisse romande spécialisée dans les cantates de Bach en liturgie catholique",
-    projet: "Intégrale des cantates de Bach dans la liturgie catholique - Projet unique au monde",
+    description: "Formation spécialisée dans les cantates de Bach en liturgie catholique",
+    projet: "Intégrale des cantates de Bach dans la liturgie catholique",
     stats: {
-      cantates: "140/200",
-      musiciens: "12-20",
-      concerts: "6-8/an"
+      productions: "10/année",
+      choristes: "18",
+      instrumentistes: "10"
     }
   },
 

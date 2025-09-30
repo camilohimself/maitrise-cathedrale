@@ -107,7 +107,7 @@ const HeroSectionV1 = () => {
           textShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
           animation: 'fadeInScale 1.2s ease-out',
         }}>
-          Bienvenue à la Maîtrise
+          Maîtrise
           <br />
           <span style={{
             background: 'linear-gradient(135deg, var(--color-gold) 0%, #DAA520 100%)',

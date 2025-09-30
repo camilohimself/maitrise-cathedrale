@@ -7,19 +7,21 @@ import StructuredData from "@/components/StructuredData";
 import SkipLink from "@/components/SkipLink";
 
 // OUTFIT pour UI/Navigation (remplace Inter)
-const outfit = Outfit({ 
+const outfit = Outfit({
   subsets: ["latin"],
   variable: '--font-outfit',
   display: 'swap',
   weight: ['300', '400', '500', '600', '700'],
+  fallback: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Arial', 'sans-serif'],
 });
 
 // SPECTRAL pour titres/contenu (remplace Playfair)
-const spectral = Spectral({ 
+const spectral = Spectral({
   subsets: ["latin"],
   variable: '--font-spectral',
   display: 'swap',
   weight: ['300', '400', '500', '600', '700', '800'],
+  fallback: ['Georgia', 'Times New Roman', 'serif'],
 });
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 // Données de l'organigramme du Conseil de Fondation 2025
 export const organigrammeContent = {
-  direction: [
+  bureau: [
     {
       nom: "Pierre-Christian von Roten",
       poste: "Président",
@@ -9,28 +9,34 @@ export const organigrammeContent = {
     },
     {
       nom: "Johan Beltramini",
-      poste: "Vice-président",
+      poste: "Vice-Président",
       type: "vice-president",
       initiales: "JB"
     },
     {
       nom: "Jean-David Waeber",
-      poste: "Directeur créatif",
+      poste: "Maître de Chapelle",
       type: "directeur",
       initiales: "JDW"
-    }
-  ],
-  representants: [
-    {
-      nom: "Mgr Pierre-Yves Maillard",
-      poste: "Représentant de l'évêché",
-      type: "eveche",
-      initiales: "PYM"
     },
     {
-      nom: "Mgr Pierre-Yves Maillard",
-      poste: "Représentant du Chapitre cathédral",
-      type: "chapitre",
+      nom: "Sylvie Bernhard",
+      poste: "Secrétaire administrative",
+      type: "secretaire",
+      initiales: "SB"
+    },
+    {
+      nom: "Jean-Hugues Seppey",
+      poste: "Régisseur",
+      type: "regisseur",
+      initiales: "JHS"
+    }
+  ],
+  membres: [
+    {
+      nom: "Chanoine Pierre-Yves Maillard",
+      poste: "Représentant de l'Evêché et du Chapitre cathédral",
+      type: "eveche",
       initiales: "PYM"
     },
     {
@@ -38,9 +44,7 @@ export const organigrammeContent = {
       poste: "Représentant de la Paroisse de la Cathédrale",
       type: "paroisse",
       initiales: "FR"
-    }
-  ],
-  organismes: [
+    },
     {
       nom: "Elisabeth Bourban Carthoblaz",
       poste: "Représentante de la Bourgeoisie de Sion",
@@ -49,13 +53,13 @@ export const organigrammeContent = {
     },
     {
       nom: "Thierry Debons",
-      poste: "Représentant du Conservatoire cantonal",
+      poste: "Représentant du conservatoire cantonal",
       type: "conservatoire",
       initiales: "TD"
     },
     {
       nom: "Pierre-Alain Héritier",
-      poste: "Représentant de l'Association des Amis",
+      poste: "Président de l'Association des Amis",
       type: "amis",
       initiales: "PAH"
     },

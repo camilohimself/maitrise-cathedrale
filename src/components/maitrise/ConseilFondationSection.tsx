@@ -4,7 +4,7 @@ import React from 'react';
 import { organigrammeContent } from '@/data/organigrammeContent';
 
 export default function ConseilFondationSection() {
-  const { direction, representants, organismes } = organigrammeContent;
+  const { bureau, membres } = organigrammeContent;
 
   return (
     <div className="section-cream" style={{ position: 'relative' }}>
@@ -39,7 +39,7 @@ export default function ConseilFondationSection() {
           </p>
         </div>
 
-        {/* Direction */}
+        {/* Bureau */}
         <div style={{ marginBottom: '60px' }}>
           <div style={{
             textAlign: 'center',
@@ -52,7 +52,7 @@ export default function ConseilFondationSection() {
               textTransform: 'uppercase',
               letterSpacing: '0.1em'
             }}>
-              Direction
+              Bureau
             </h3>
           </div>
 
@@ -62,7 +62,7 @@ export default function ConseilFondationSection() {
             gap: '24px',
             flexWrap: 'wrap'
           }}>
-            {direction.map((membre, idx) => (
+            {bureau.map((membre, idx) => (
               <div key={idx} style={{
                 background: membre.type === 'president' ? 'var(--color-gold)' : 'var(--color-navy)',
                 color: 'white',
@@ -141,29 +141,26 @@ export default function ConseilFondationSection() {
           }}></div>
         </div>
 
-        {/* Représentants et Organismes */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-          gap: '60px'
-        }}>
+        {/* Membres */}
+        <div>
+          <h4 style={{
+            textAlign: 'center',
+            color: 'var(--color-navy)',
+            fontSize: '20px',
+            fontWeight: '600',
+            marginBottom: '32px',
+            textTransform: 'uppercase',
+            letterSpacing: '0.05em'
+          }}>
+            Membres
+          </h4>
 
-          {/* Représentants Institutionnels */}
-          <div>
-            <h4 style={{
-              textAlign: 'center',
-              color: 'var(--color-navy)',
-              fontSize: '20px',
-              fontWeight: '600',
-              marginBottom: '32px',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em'
-            }}>
-              Représentants Institutionnels
-            </h4>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              {representants.map((membre, idx) => (
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '16px'
+          }}>
+            {membres.map((membre, idx) => (
                 <div key={idx} style={{
                   background: 'white',
                   border: '2px solid var(--color-navy)',
@@ -219,79 +216,6 @@ export default function ConseilFondationSection() {
               ))}
             </div>
           </div>
-
-          {/* Représentants Organismes */}
-          <div>
-            <h4 style={{
-              textAlign: 'center',
-              color: 'var(--color-gold)',
-              fontSize: '20px',
-              fontWeight: '600',
-              marginBottom: '32px',
-              textTransform: 'uppercase',
-              letterSpacing: '0.05em'
-            }}>
-              Représentants Organismes
-            </h4>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              {organismes.map((membre, idx) => (
-                <div key={idx} style={{
-                  background: 'rgba(212, 165, 116, 0.08)',
-                  border: '2px solid var(--color-gold)',
-                  borderRadius: '12px',
-                  padding: '20px',
-                  transition: 'all 0.3s ease',
-                  boxShadow: 'var(--shadow-sm)'
-                }}>
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '16px'
-                  }}>
-                    {/* Avatar avec initiales */}
-                    <div style={{
-                      width: '50px',
-                      height: '50px',
-                      borderRadius: '50%',
-                      background: 'var(--color-gold)',
-                      color: 'white',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '16px',
-                      fontWeight: '700',
-                      flexShrink: 0
-                    }}>
-                      {membre.initiales}
-                    </div>
-
-                    {/* Infos */}
-                    <div style={{ flex: 1 }}>
-                      <div style={{
-                        fontWeight: '600',
-                        color: 'var(--color-navy)',
-                        fontSize: '16px',
-                        lineHeight: '1.3',
-                        marginBottom: '4px'
-                      }}>
-                        {membre.nom}
-                      </div>
-                      <div style={{
-                        fontSize: '14px',
-                        color: 'var(--color-gold)',
-                        fontWeight: '600',
-                        lineHeight: '1.4'
-                      }}>
-                        {membre.poste}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Note informative */}
         <div className="highlight-box" style={{

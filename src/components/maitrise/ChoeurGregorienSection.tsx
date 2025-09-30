@@ -105,9 +105,9 @@ export default function ChoeurGregorienSection() {
               opacity: '0.9',
               color: '#1a1340'
             }}>
-              Le Chœur Grégorien de la Maîtrise de la Cathédrale est un ensemble de voix masculines 
-              qui interprète le grand trésor du chant grégorien. Son répertoire est essentiellement 
-              axé sur le plain chant, mais aussi sur le chant a capella du Moyen-Âge.
+              Le Chœur Grégorien de la Maîtrise de la Cathédrale est un ensemble de voix masculines
+              qui interprète le grand trésor du chant grégorien. Son répertoire est essentiellement
+              axé sur le plain chant.
             </p>
 
             {/* Horaire de messe */}
@@ -161,7 +161,6 @@ export default function ChoeurGregorienSection() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
                 "Plain-chant authentique",
-                "Chant a capella du Moyen-Âge",
                 "Répertoire liturgique traditionnel",
                 "Interprétation selon les manuscrits anciens"
               ].map((item, idx) => (
