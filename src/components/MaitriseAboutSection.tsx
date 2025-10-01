@@ -352,19 +352,9 @@ const MaitriseAboutSection = () => {
                 )}
                 {highlight.iconType === 'festival' && (
                   <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
-                    {/* Croix catholique avec base ornementale */}
-                    <path d="M24 10v28" stroke="var(--color-red)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M14 20h20" stroke="var(--color-red)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                    {/* Barre horizontale supérieure (caractéristique croix catholique) */}
-                    <path d="M20 12h8" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round"/>
-                    {/* Ornements extrémités */}
-                    <circle cx="24" cy="10" r="2" fill="var(--color-red)"/>
-                    <circle cx="14" cy="20" r="2" fill="var(--color-red)"/>
-                    <circle cx="34" cy="20" r="2" fill="var(--color-red)"/>
-                    {/* Base triangulaire */}
-                    <path d="M24 38l-4 4h8l-4-4z" fill="var(--color-red)" stroke="var(--color-red)" strokeWidth="1"/>
-                    {/* Rayons de lumière subtils */}
-                    <path d="M24 14l-1-3 M24 14l1-3 M18 20l-3-1 M18 20l-3 1 M30 20l3-1 M30 20l3 1" stroke="var(--color-red)" strokeWidth="1" opacity="0.3" strokeLinecap="round"/>
+                    {/* Croix catholique simple et épaisse */}
+                    <path d="M24 8v32" stroke="var(--color-red)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M12 24h24" stroke="var(--color-red)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 )}
               </div>
