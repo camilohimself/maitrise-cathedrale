@@ -6,36 +6,36 @@ import Link from 'next/link';
 
 const MaitriseAboutSection = () => {
   const stats = [
-    { number: '2004', label: 'Fondation', description: 'Création officielle juin' },
+    { number: '2004', label: 'Fondation', description: 'Par Constitution officielle' },
     { number: '150+', label: 'Concerts', description: 'Depuis la création' },
-    { number: '4', label: 'Ensembles', description: 'Vocal/instrumental • École • Grégorien • Chapelle' },
-    { number: '20', label: 'Années FAS', description: 'Festival Art Sacré' },
+    { number: '4', label: 'Formations chorales', description: 'Ensemble Vocal et Instrumental, Ecole Maîtrisienne, Choeur Grégorien, Chapelle Musicale' },
+    { number: '20', label: 'Années FAS', description: 'Festival d\'Art Sacré' },
   ];
 
   const highlights = [
     {
       iconType: 'education',
       title: 'École de chant',
-      description: 'Formation d\'excellence pour jeunes talents de 15 à 25 ans. Répertoire traditionnel : chant grégorien, polyphonie de la Renaissance, messes classiques.',
-      link: '/maitrise/ecole-maitrisienne'
+      description: 'Formation d\'excellence pour jeunes talents de 15 à 25 ans. Musique liturgique et messes de l\'époque classique.',
+      link: '/maitrise'
     },
     {
       iconType: 'music',
       title: 'Cantates de Bach',
       description: 'Projet unique au monde : intégrale des cantates de Jean-Sébastien Bach dans la liturgie catholique.',
-      link: '/maitrise/ensemble-vocal'
+      link: '/maitrise'
     },
     {
       iconType: 'cathedral',
       title: 'Chant grégorien',
-      description: 'Chant liturgique des offices dans la tradition grégorienne au cœur de la Cathédrale Notre-Dame de Sion.',
-      link: '/maitrise/chapelle-musicale'
+      description: 'Chant liturgique dans la tradition grégorienne au cœur de la Cathédrale Notre-Dame de Sion.',
+      link: '/maitrise'
     },
     {
       iconType: 'festival',
       title: 'Liturgie à la cathédrale',
       description: 'Chant liturgique et célébrations solennelles dans la tradition cathédrale.',
-      link: '/fas'
+      link: '/agenda-billetterie'
     }
   ];
 
@@ -172,7 +172,7 @@ const MaitriseAboutSection = () => {
               marginBottom: '2rem',
               borderLeft: '4px solid var(--color-gold)',
             }}>
-              <blockquote style={{
+              <p style={{
                 fontFamily: 'var(--font-spectral)',
                 fontSize: '1.2rem',
                 fontStyle: 'italic',
@@ -180,10 +180,10 @@ const MaitriseAboutSection = () => {
                 lineHeight: 1.3,
                 margin: 0,
               }}>
-                "Former les jeunes à l'art du chant dans un esprit d'excellence
+                Former les jeunes à l'art du chant dans un esprit d'excellence
                 et de tradition, tout en participant activement à la vie liturgique
-                et culturelle de notre région."
-              </blockquote>
+                et culturelle de notre région.
+              </p>
             </div>
 
             {/* Stats grid */}
@@ -334,18 +334,37 @@ const MaitriseAboutSection = () => {
                   </svg>
                 )}
                 {highlight.iconType === 'cathedral' && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path d="M8 21l0-12 2-2h4l2 2v12" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 3V1" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M10 21h4" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 7v4" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M6 21v-6l2-2" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M18 21v-6l-2-2" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+                    {/* Lettrine "D" stylisée */}
+                    <path d="M10 8h8c6 0 10 4 10 10s-4 10-10 10h-8V8z" stroke="var(--color-red)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                    {/* Neumes grégoriens (notation musicale ancienne) */}
+                    <circle cx="14" cy="32" r="1.5" fill="var(--color-red)"/>
+                    <circle cx="18" cy="30" r="1.5" fill="var(--color-red)"/>
+                    <circle cx="22" cy="32" r="1.5" fill="var(--color-red)"/>
+                    <path d="M14 32v-4 M18 30v-4 M22 32v-4" stroke="var(--color-red)" strokeWidth="1" strokeLinecap="round"/>
+                    {/* Portée simplifiée */}
+                    <path d="M10 36h24 M10 40h24" stroke="var(--color-red)" strokeWidth="0.5" opacity="0.4"/>
+                    {/* Second groupe de neumes */}
+                    <circle cx="28" cy="34" r="1.5" fill="var(--color-red)"/>
+                    <circle cx="32" cy="36" r="1.5" fill="var(--color-red)"/>
+                    <path d="M28 34v-4 M32 36v-4" stroke="var(--color-red)" strokeWidth="1" strokeLinecap="round"/>
                   </svg>
                 )}
                 {highlight.iconType === 'festival' && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
+                    {/* Croix catholique avec base ornementale */}
+                    <path d="M24 10v28" stroke="var(--color-red)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M14 20h20" stroke="var(--color-red)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    {/* Barre horizontale supérieure (caractéristique croix catholique) */}
+                    <path d="M20 12h8" stroke="var(--color-red)" strokeWidth="2" strokeLinecap="round"/>
+                    {/* Ornements extrémités */}
+                    <circle cx="24" cy="10" r="2" fill="var(--color-red)"/>
+                    <circle cx="14" cy="20" r="2" fill="var(--color-red)"/>
+                    <circle cx="34" cy="20" r="2" fill="var(--color-red)"/>
+                    {/* Base triangulaire */}
+                    <path d="M24 38l-4 4h8l-4-4z" fill="var(--color-red)" stroke="var(--color-red)" strokeWidth="1"/>
+                    {/* Rayons de lumière subtils */}
+                    <path d="M24 14l-1-3 M24 14l1-3 M18 20l-3-1 M18 20l-3 1 M30 20l3-1 M30 20l3 1" stroke="var(--color-red)" strokeWidth="1" opacity="0.3" strokeLinecap="round"/>
                   </svg>
                 )}
               </div>

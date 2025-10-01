@@ -76,24 +76,6 @@ const HeroSectionV1 = () => {
         width: '100%',
       }}>
         
-        {/* Badge premium */}
-        <div style={{
-          display: 'inline-block',
-          padding: '8px 24px',
-          backgroundColor: 'rgba(212, 165, 116, 0.2)',
-          border: '1px solid rgba(212, 165, 116, 0.4)',
-          borderRadius: '50px',
-          color: 'var(--color-gold)',
-          fontFamily: 'var(--font-outfit)',
-          fontSize: '14px',
-          fontWeight: '600',
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-          marginBottom: '2rem',
-          animation: 'glow 2s ease-in-out infinite alternate',
-        }}>
-          Bienvenue
-        </div>
 
         {/* Titre monumentale */}
         <h1 style={{
@@ -132,10 +114,6 @@ const HeroSectionV1 = () => {
           animation: 'fadeInUp 1s ease-out 0.3s both',
         }}>
           Voix d'exception au cœur du Valais
-          <br />
-          <span style={{ color: 'var(--color-gold)', fontWeight: '400' }}>
-            École de chant • Ensemble vocal • Art sacré
-          </span>
         </p>
 
         {/* CTAs premium */}
@@ -147,7 +125,7 @@ const HeroSectionV1 = () => {
           animation: 'fadeInUp 1s ease-out 0.6s both',
         }}>
           <a
-            href="https://billetterie-externe.com/maitrise-cathedrale"
+            href="/agenda-billetterie"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -175,7 +153,7 @@ const HeroSectionV1 = () => {
               e.currentTarget.style.boxShadow = '0 10px 20px rgba(227, 50, 65, 0.2)';
             }}
           >
-            <span>Découvrir nos concerts</span>
+            <span>Liturgie</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style={{ marginLeft: '8px' }}>
               <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
