@@ -352,9 +352,9 @@ const MaitriseAboutSection = () => {
                 )}
                 {highlight.iconType === 'festival' && (
                   <svg width="40" height="40" viewBox="0 0 48 48" fill="none">
-                    {/* Croix catholique simple et épaisse */}
-                    <path d="M24 8v32" stroke="var(--color-red)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 24h24" stroke="var(--color-red)" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round"/>
+                    {/* Croix catholique style traditionnel - barre verticale plus longue */}
+                    <rect x="20" y="6" width="8" height="36" fill="var(--color-red)" rx="1"/>
+                    <rect x="10" y="18" width="28" height="8" fill="var(--color-red)" rx="1"/>
                   </svg>
                 )}
               </div>
