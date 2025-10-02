@@ -56,7 +56,7 @@ export const maitriseContent = {
   evi: {
     titre: "Ensemble vocal et instrumental (EVI)",
     description: "Formation spécialisée dans les cantates de Bach",
-    projet: "Intégrale des cantates de Bach dans la liturgie catholique",
+    projet: "Intégrale des cantates de Bach",
     stats: {
       productions: "10/année",
       choristes: "18",
