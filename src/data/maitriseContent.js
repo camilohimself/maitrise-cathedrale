@@ -66,12 +66,11 @@ export const maitriseContent = {
 
   // École Maîtrisienne
   ecole: {
-    titre: "École maîtrisienne",
+    titre: "École Maîtrisienne",
     description: "Formation vocale d'excellence pour jeunes de 15 à 25 ans",
     partenariat: {
-      annee: "2024",
-      institution: "Conservatoire cantonal",
-      type: "Nouveau partenariat stratégique"
+      institution: "Conservatoire Cantonal",
+      description: "En 2024 la Maîtrise de la Cathédrale a conclu un partenariat avec le Conservatoire Cantonal pour la formation vocale des jeunes. Notre professeure de chant dispensera les cours à nos élèves dans le cadre du conservatoire. Des bases de solfège sont désormais aussi dispensées et des classes ouvertes sont également organisées. La Fondation Musique Sacrée et Maîtrise de la Cathédrale de Sion offre une subvention aux jeunes élèves de l'École Maîtrisienne."
     },
     programme: [
       "Technique vocale individuelle",

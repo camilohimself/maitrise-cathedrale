@@ -22,21 +22,6 @@ export default function EcoleSection() {
         }}>
           {/* Content */}
           <div>
-            <div style={{
-              display: 'inline-block',
-              background: 'rgba(212, 165, 116, 0.2)',
-              border: '1px solid rgba(212, 165, 116, 0.3)',
-              color: 'var(--color-gold)',
-              backdropFilter: 'blur(10px)',
-              padding: '8px 20px',
-              borderRadius: '24px',
-              fontSize: '14px',
-              fontWeight: '700',
-              marginBottom: '24px'
-            }}>
-              Nouveau {ecole.partenariat.annee}
-            </div>
-
             <h2 style={{
               fontSize: '48px',
               fontWeight: '300',
@@ -66,13 +51,13 @@ export default function EcoleSection() {
               <h3 style={{
                 fontSize: '18px',
                 fontWeight: '700',
-                marginBottom: '8px',
+                marginBottom: '12px',
                 color: 'var(--color-gold)'
               }}>
                 Partenariat avec le {ecole.partenariat.institution}
               </h3>
-              <p style={{ opacity: '0.9' }}>
-                {ecole.partenariat.type} pour enrichir la formation vocale d excellence.
+              <p style={{ opacity: '0.9', lineHeight: '1.7' }}>
+                {ecole.partenariat.description}
               </p>
             </div>
 
