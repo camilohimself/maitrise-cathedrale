@@ -128,7 +128,7 @@ export default function Media() {
     <main style={{
       minHeight: '100vh',
       backgroundColor: 'var(--color-cream)',
-      paddingTop: '120px',
+      paddingTop: '140px',
       paddingBottom: '80px'
     }}>
       <div className="container">

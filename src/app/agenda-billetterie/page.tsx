@@ -82,7 +82,7 @@ export default function AgendaBilletterie() {
       {/* Section principale */}
       <section style={{
         backgroundColor: 'var(--color-cream)',
-        padding: 'var(--spacing-3xl) 0 var(--spacing-2xl)',
+        padding: '140px 0 var(--spacing-2xl)',
       }}>
         <div style={{
           maxWidth: 'var(--container-max)',

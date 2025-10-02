@@ -24,7 +24,7 @@ export default function Soutenir() {
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#fafafa' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '120px 20px 60px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 20px 60px' }}>
         <h1 style={{
           fontSize: '2.5rem',
           fontWeight: '700',

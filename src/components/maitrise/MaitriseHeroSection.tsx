@@ -12,7 +12,7 @@ export default function MaitriseHeroSection() {
       position: 'relative',
       overflow: 'hidden'
     }}>
-      <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', padding: '80px 20px 100px' }}>
+      <div className="container" style={{ maxWidth: '1400px', margin: '0 auto', padding: '140px 20px 100px' }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <div className="badge-gold" style={{
             display: 'inline-block',
