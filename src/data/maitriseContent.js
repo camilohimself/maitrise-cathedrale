@@ -10,7 +10,7 @@ export const maitriseContent = {
     { poste: "Représentant de la Paroisse de la Cathédrale", nom: "Abbé François Roten" },
     { poste: "Représentant de la municipalité de Sion", nom: "Mme Carole Schmid" },
     { poste: "Représentante de la Bourgeoisie de Sion", nom: "Mme Elisabeth Bourban Carthobiaz" },
-    { poste: "Représentant du Conservatoire cantonal", nom: "M. Thierry Debons" },
+    { poste: "Représentant du Conservatoire Cantonal", nom: "M. Thierry Debons" },
     { poste: "Représentante de l'Association des Amis", nom: "Pierre-Alain Héritier" }
   ],
 
