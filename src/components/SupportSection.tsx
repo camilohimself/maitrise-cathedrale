@@ -85,7 +85,7 @@ const SupportSection = () => {
             marginBottom: '1.5rem',
             lineHeight: 1.1,
           }}>
-            Nous Soutenir
+            Nous soutenir
           </h2>
 
           <p style={{
@@ -97,8 +97,9 @@ const SupportSection = () => {
             margin: '0 auto',
             lineHeight: 1.6,
           }}>
-            La Maîtrise de la Cathédrale de Sion existe grâce à la générosité et à l'engagement 
-            de ses soutiens. Rejoignez-nous dans cette belle aventure musicale et spirituelle.
+            La Maîtrise de la Cathédrale de Sion existe grâce à la générosité et à l'engagement de ses soutiens.
+            <br />
+            Rejoignez-nous dans cette belle aventure musicale et spirituelle.
           </p>
         </div>
 
