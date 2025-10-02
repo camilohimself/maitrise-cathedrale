@@ -40,6 +40,44 @@ export default function EcoleSection() {
               {ecole.description}
             </p>
 
+            {/* Liturgie box */}
+            <div style={{
+              background: 'rgba(227, 50, 65, 0.15)',
+              border: '1px solid rgba(227, 50, 65, 0.3)',
+              borderRadius: '16px',
+              padding: '24px',
+              marginBottom: '40px',
+              backdropFilter: 'blur(10px)'
+            }}>
+              <h3 style={{
+                fontSize: '18px',
+                fontWeight: '700',
+                marginBottom: '8px',
+                color: '#E33241'
+              }}>
+                Liturgie
+              </h3>
+              <p style={{
+                opacity: '0.9',
+                marginBottom: '12px'
+              }}>
+                L'École Maîtrisienne chante la messe de dix heures le premier dimanche du mois.
+              </p>
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '8px',
+                fontSize: '14px',
+                color: 'var(--color-gold)',
+                fontWeight: '600'
+              }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-gold)">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                Cathédrale de Sion • 10h00
+              </div>
+            </div>
+
             <div style={{
               background: 'rgba(212, 165, 116, 0.1)',
               border: '1px solid rgba(212, 165, 116, 0.2)',
