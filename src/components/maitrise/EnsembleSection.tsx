@@ -101,46 +101,6 @@ export default function EnsembleSection() {
               </p>
             </div>
 
-            <h3 style={{
-              fontSize: '20px',
-              fontWeight: '700',
-              marginBottom: '24px',
-              color: '#1a1340'
-            }}>
-              Statistiques du projet
-            </h3>
-
-            {/* Stats */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '16px'
-            }}>
-              {Object.entries(evi.stats).map(([key, value]) => (
-                <div key={key} className="stat-card">
-                  <div style={{
-                    fontSize: '32px',
-                    fontWeight: '700',
-                    marginBottom: '8px',
-                    color: 'var(--color-gold)'
-                  }}>
-                    {value}
-                  </div>
-                  <div style={{
-                    fontSize: '14px',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.1em',
-                    color: '#1a1340',
-                    opacity: '0.7',
-                    fontWeight: '600'
-                  }}>
-                    {key === 'cantates' ? 'Cantates jouées' : 
-                     key === 'musiciens' ? 'Musiciens' : 
-                     'Concerts/an'}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
