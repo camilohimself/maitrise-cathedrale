@@ -24,23 +24,28 @@ const Header = () => {
   }, [pathname]);
 
   const navigationLinks = [
-    { 
-      label: 'Agenda & Billetterie', 
+    {
+      label: 'Accueil',
+      href: '/',
+      isActive: pathname === '/'
+    },
+    {
+      label: 'Agenda & Billetterie',
       href: '/agenda-billetterie',
       isActive: pathname?.startsWith('/agenda-billetterie')
     },
-    { 
-      label: 'La Maîtrise', 
+    {
+      label: 'La Maîtrise',
       href: '/maitrise',
       isActive: pathname?.startsWith('/maitrise')
     },
-    { 
-      label: 'Écouter & voir', 
+    {
+      label: 'Écouter & voir',
       href: '/media',
       isActive: pathname?.startsWith('/media')
     },
-    { 
-      label: 'Nous soutenir', 
+    {
+      label: 'Nous soutenir',
       href: '/soutenir',
       isActive: pathname?.startsWith('/soutenir')
     }
