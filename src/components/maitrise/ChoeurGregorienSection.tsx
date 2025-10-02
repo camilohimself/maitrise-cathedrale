@@ -11,69 +11,8 @@ export default function ChoeurGregorienSection() {
       color: '#1a1340'
     }}>
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '2fr 3fr',
-          gap: '80px',
-          alignItems: 'center'
-        }}>
-          {/* Visual Element */}
-          <div style={{
-            background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.1) 0%, rgba(212, 165, 116, 0.05) 100%)',
-            borderRadius: '24px',
-            padding: '48px',
-            backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(212, 165, 116, 0.2)',
-            textAlign: 'center',
-            position: 'relative'
-          }}>
-            <div style={{
-              fontSize: '120px',
-              marginBottom: '24px',
-              background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>
-              ✠
-            </div>
-            <h3 style={{
-              fontSize: '24px',
-              fontWeight: '700',
-              marginBottom: '16px',
-              color: '#1a1340'
-            }}>
-              Tradition Séculaire
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              opacity: '0.8',
-              lineHeight: '1.6',
-              color: '#1a1340'
-            }}>
-              Le chant grégorien, héritage musical millénaire de l'Église,
-              trouve sa voix authentique dans notre ensemble de voix masculines.
-            </p>
-            
-            {/* Badge messe mensuelle */}
-            <div style={{
-              position: 'absolute',
-              top: '20px',
-              right: '20px',
-              background: 'rgba(227, 50, 65, 0.1)',
-              border: '1px solid rgba(227, 50, 65, 0.3)',
-              color: '#E33241',
-              padding: '6px 16px',
-              borderRadius: '20px',
-              fontSize: '12px',
-              fontWeight: '700'
-            }}>
-              4ème dimanche
-            </div>
-          </div>
-
-          {/* Content */}
-          <div>
+        {/* Content */}
+        <div>
             <div style={{
               display: 'inline-block',
               background: 'rgba(212, 165, 116, 0.15)',
@@ -125,14 +64,14 @@ export default function ChoeurGregorienSection() {
                 marginBottom: '8px',
                 color: '#E33241'
               }}>
-                Animation liturgique
+                Liturgie
               </h3>
-              <p style={{ 
-                opacity: '0.9', 
+              <p style={{
+                opacity: '0.9',
                 color: '#1a1340',
                 marginBottom: '12px'
               }}>
-                Le Chœur grégorien anime la messe de dix heures le quatrième dimanche du mois.
+                Le Chœur grégorien chante la messe de dix heures le quatrième dimanche du mois.
               </p>
               <div style={{
                 display: 'flex',
@@ -192,7 +131,6 @@ export default function ChoeurGregorienSection() {
               ))}
             </div>
           </div>
-        </div>
       </div>
     </div>
   );
