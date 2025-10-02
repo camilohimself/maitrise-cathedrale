@@ -34,7 +34,7 @@ export default function EnsembleSection() {
               marginBottom: '16px',
               color: '#1a1340'
             }}>
-              Intégrale Bach
+              Intégrale des Cantates de Bach
             </h3>
             <p style={{
               fontSize: '16px',
