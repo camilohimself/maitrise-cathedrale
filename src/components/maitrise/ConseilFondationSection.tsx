@@ -27,16 +27,6 @@ export default function ConseilFondationSection() {
           }}>
             Conseil de Fondation
           </h2>
-          <p style={{
-            fontSize: '18px',
-            color: 'var(--color-navy)',
-            opacity: '0.7',
-            maxWidth: '600px',
-            margin: '0 auto'
-          }}>
-            L'organe de gouvernance de la Maîtrise Cathédrale de Sion,
-            composé de représentants des institutions partenaires
-          </p>
         </div>
 
         {/* Bureau */}
@@ -229,8 +219,7 @@ export default function ConseilFondationSection() {
             lineHeight: '1.6',
             margin: 0
           }}>
-            Le Conseil de Fondation se réunit régulièrement pour définir les orientations artistiques
-            et assurer la pérennité de la Maîtrise Cathédrale de Sion.
+            Le Conseil de Fondation se réunit une fois par année pour définir les orientations de la Maîtrise de la Cathédrale de Sion.
           </p>
         </div>
 

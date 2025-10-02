@@ -22,7 +22,7 @@ export const maitriseContent = {
     stats: {
       annee: "2004",
       jeunes: "~25",
-      concerts: "20+",
+      concerts: "150+",
       repertoire: "500 ans"
     }
   },
