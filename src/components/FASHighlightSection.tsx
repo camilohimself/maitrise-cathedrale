@@ -30,9 +30,9 @@ const FASHighlightSection = () => {
     },
     {
       id: 5,
-      title: "Concert de Gala",
+      title: "Stile Antico",
       collaboration: "En collaboration avec les Riches Heures de Valère",
-      subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
+      subtitle: "Palestrina - Le Prince de la Musique",
       date: "4 janvier 2026",
       time: "17h00",
       category: "PRESTIGE",
@@ -111,7 +111,7 @@ const FASHighlightSection = () => {
             Du 30 novembre 2025 au 4 janvier 2026
             <br />
             <span style={{ color: 'var(--color-gold)', fontWeight: '500' }}>
-              Deux décennies d'excellence artistique et spirituelle
+              Deux décennies d'excellence artistique et de beauté
             </span>
           </p>
         </div>
