@@ -22,9 +22,9 @@ const FASHighlightSection = () => {
       title: "Vivaldi - Gloria et Magnificat",
       subtitle: "Ensemble Ad Astra & Collectif baroque 7 Sed Unum",
       date: "26 décembre 2025",
-      time: "17h00",
+      time: "20h00",
       category: "BAROQUE",
-      description: "Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales pour voix de femmes avec Jean-David Waeber et Daniela Numico.",
+      description: "Les célèbres Gloria et Magnificat de Vivaldi dans leur version originale pour voix de femmes avec Jean-David Waeber et Daniela Numico.",
       image: "/images/artistes/ecole-maitrisienne/ecole-2-card.webp",
       featured: true
     },

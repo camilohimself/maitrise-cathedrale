@@ -711,7 +711,7 @@ export const maitriseEvents = [
     title: 'Concert Chœur Novantiqua',
     category: 'Concert',
     ensemble: 'Chœur Novantiqua',
-    description: 'Concert de musique sacrée pour les Rameaux',
+    description: 'Concert de musique sacrée pour le Dimanche des Rameaux.',
     location: 'Cathédrale de Sion',
     price: '25 CHF',
     image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',

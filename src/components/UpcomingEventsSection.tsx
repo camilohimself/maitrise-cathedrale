@@ -95,7 +95,7 @@ const UpcomingEventsSection = memo(() => {
             marginBottom: '1rem',
             lineHeight: 1.2,
           }}>
-            Prochains Concerts
+            Prochains concerts
           </h2>
 
           <p style={{
