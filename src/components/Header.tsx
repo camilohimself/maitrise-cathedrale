@@ -88,10 +88,10 @@ const Header = () => {
             <Image
               src="/images/logo-mc-couleur.png"
               alt="Maîtrise Cathédrale de Sion"
-              width={300}
-              height={80}
+              width={345}
+              height={92}
               style={{
-                height: '76px',
+                height: '87px',
                 width: 'auto',
                 objectFit: 'contain',
                 objectPosition: 'center'
@@ -111,12 +111,12 @@ const Header = () => {
           }} className="hidden md:flex">
             {navigationLinks.map((link) => (
               <li key={link.href} style={{ position: 'relative' }}>
-                <Link 
+                <Link
                   href={link.href}
                   style={{
                     color: link.isActive ? 'var(--color-red)' : '#000',
                     textDecoration: 'none',
-                    fontSize: '16px',
+                    fontSize: '18.4px',
                     fontWeight: link.isActive ? '600' : '500',
                     transition: 'all 0.3s ease',
                     fontFamily: 'var(--font-family)',
