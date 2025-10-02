@@ -17,9 +17,9 @@ export default function MaitrisePage() {
       <DirectionSection />
       <EnsembleSection />
       <EcoleSection />
-      <OrganistesSection />
       <ChoeurGregorienSection />
       <ChapelleMusicaleSection />
+      <OrganistesSection />
     </div>
   );
 }
