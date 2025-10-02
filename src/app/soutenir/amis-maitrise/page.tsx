@@ -29,7 +29,7 @@ export default function AmisMaitrise() {
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#FAFAF9' }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '60px 20px' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '140px 20px 60px 20px' }}>
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>

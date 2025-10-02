@@ -120,10 +120,10 @@ export default function Contact() {
                 }}>
                   Téléphone
                 </h4>
-                <p style={{ color: '#4a5568', fontSize: '1.1rem' }}>+41 27 322 85 96</p>
+                <p style={{ color: '#4a5568', fontSize: '1.1rem' }}>+41 79 616 90 94</p>
               </div>
 
-              <div>
+              <div style={{ marginBottom: '32px' }}>
                 <h4 style={{
                   fontSize: '1.1rem',
                   fontWeight: '600',
@@ -134,38 +134,21 @@ export default function Contact() {
                 </h4>
                 <p style={{ color: '#4a5568', fontSize: '1.1rem' }}>info@maitrise-cathedrale.ch</p>
               </div>
-            </div>
 
-            {/* Horaires */}
-            <div style={{
-              backgroundColor: '#fff',
-              borderRadius: '16px',
-              padding: '32px',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-              border: '1px solid #f0f0f0'
-            }}>
-              <h3 style={{
-                fontSize: '1.3rem',
-                fontWeight: '600',
-                color: '#1a1340',
-                marginBottom: '24px'
-              }}>
-                Horaires d'ouverture
-              </h3>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontWeight: '500', color: '#1a1340' }}>Lundi - Vendredi</span>
-                  <span style={{ color: '#4a5568' }}>9h00 - 17h00</span>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontWeight: '500', color: '#1a1340' }}>Samedi</span>
-                  <span style={{ color: '#4a5568' }}>9h00 - 12h00</span>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span style={{ fontWeight: '500', color: '#1a1340' }}>Dimanche</span>
-                  <span style={{ color: '#4a5568' }}>Fermé</span>
-                </div>
+              <div>
+                <h4 style={{
+                  fontSize: '1.1rem',
+                  fontWeight: '600',
+                  color: '#1a1340',
+                  marginBottom: '12px'
+                }}>
+                  IBAN
+                </h4>
+                <p style={{ color: '#4a5568', fontSize: '0.95rem', lineHeight: '1.8' }}>
+                  Fondation Musique Sacrée et Maitrise de la Cathédrale de Sion
+                  <br />
+                  CH90 8080 8004 7602 6591 8
+                </p>
               </div>
             </div>
           </div>
