@@ -24,9 +24,9 @@ export const fasArtistes = [
   {
     id: "stile-antico",
     name: "Stile Antico",
-    concert: "Concert de Gala",
+    concert: "Stile Antico",
     collaboration: "En collaboration avec les Riches Heures de Valère",
-    subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
+    subtitle: "Palestrina - Le Prince de la Musique",
     image: "/images/artistes/stile-antico/stile-antico-2-card.webp",
     heroImage: "/images/artistes/stile-antico/stile-antico-1-hero.webp",
     gallery: [
@@ -35,7 +35,7 @@ export const fasArtistes = [
       "/images/artistes/stile-antico/stile-antico-3-hero.webp",
       "/images/artistes/stile-antico/stile-antico-4-hero.webp"
     ],
-    description: "Ensemble vocal britannique de renommée mondiale, réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance"
+    description: "Ensemble vocal britannique de renommée mondiale"
   },
   {
     id: "choeur-novantiqua",
@@ -50,11 +50,11 @@ export const fasArtistes = [
       "/images/artistes/choeur-novantiqua/novantiqua-3-hero.webp",
       "/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp"
     ],
-    description: "Direction Bernard Héritier - Programme a cappella raffiné"
+    description: "Direction Bernard Héritier - Programme a cappella"
   },
   {
     id: "ensemble-vocal",
-    name: "Ensemble Vocal",
+    name: "Ensemble Vocal & Barberine",
     concert: "Ensemble vocal de la Maîtrise & Ensemble Barberine",
     subtitle: "Le baroque au féminin : Chiara Margarita Cozzolani",
     image: "/images/artistes/ecole-maitrisienne/ecole-1-card.webp",
@@ -63,11 +63,26 @@ export const fasArtistes = [
       "/images/artistes/ecole-maitrisienne/ecole-1-hero.webp",
       "/images/artistes/ecole-maitrisienne/ecole-2-hero.webp"
     ],
-    description: "Formation d'excellence avec l'Ensemble Barberine"
+    description: "Concert d'ouverture du Festival d'Art Sacré 2025"
   },
   {
-    id: "solistes",
-    name: "Solistes",
+    id: "ecole-maitrisienne",
+    name: "École Maîtrisienne",
+    concert: "École maîtrisienne & Chœur des collèges",
+    subtitle: "Au ciel et sur la terre : les voix de la jeunesse",
+    image: "/images/artistes/ecole-maitrisienne/ecole-2-card.webp",
+    heroImage: "/images/artistes/ecole-maitrisienne/ecole-2-hero.webp",
+    gallery: [
+      "/images/artistes/ecole-maitrisienne/ecole-1-hero.webp",
+      "/images/artistes/ecole-maitrisienne/ecole-2-hero.webp"
+    ],
+    description: "Concert mettant à l'honneur la jeunesse"
+  },
+  {
+    id: "ensemble-ad-astra",
+    name: "Ensemble Ad Astra",
+    concert: "Ensemble Ad Astra & Collectif 7 Sed Unum",
+    subtitle: "Vivaldi ou Noël à Venise",
     image: "/images/artistes/stile-antico/stile-antico-3-card.webp",
     heroImage: "/images/artistes/stile-antico/stile-antico-3-hero.webp",
     gallery: [
@@ -76,6 +91,6 @@ export const fasArtistes = [
       "/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp",
       "/images/artistes/choeur-novantiqua/novantiqua-2-hero.webp"
     ],
-    description: "Artistes invités de renommée internationale"
+    description: "Les célèbres Gloria et Magnificat de Vivaldi"
   }
 ];

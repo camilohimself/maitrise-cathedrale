@@ -9,9 +9,9 @@ const artistesData: Record<string, any> = {
   'stile-antico': {
     id: 'stile-antico',
     name: 'Stile Antico',
-    concert: 'Concert de Gala',
+    concert: 'Stile Antico',
     collaboration: 'En collaboration avec les Riches Heures de Valère',
-    subtitle: '« The Golden Renaissance – Le Prince de la Musique »',
+    subtitle: 'Palestrina - Le Prince de la Musique',
     date: 'Dimanche 4 janvier 2026',
     time: '17H00',
     conference: {
@@ -37,7 +37,7 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
     id: 'choeur-novantiqua',
     name: 'Chœur Novantiqua',
     concert: 'Chœur Novantiqua',
-    subtitle: 'Gesualdo, Bruckner, Poulenc - Programme a cappella',
+    subtitle: 'Ex tenebris lux : Gesualdo, Bruckner, Poulenc',
     date: 'Dimanche 7 décembre 2025',
     time: '17H00',
     altDate: null,
@@ -49,15 +49,15 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/choeur-novantiqua/novantiqua-3-hero.webp',
       '/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp'
     ],
-    description: `Sous la direction de Bernard Héritier, le Chœur Novantiqua présente un programme exceptionnel mêlant œuvres sacrées et profanes de la Renaissance. Fort de ses 30 années d'expérience, l'ensemble explore les richesses de la polyphonie franco-flamande avec une attention particulière portée aux compositeurs de l'école de Notre-Dame. Ce concert mettra en lumière des pièces rares de Josquin des Prés, Johannes Ockeghem et Pierre de la Rue, interprétées avec la finesse et la précision qui font la renommée internationale de Novantiqua. Un voyage musical au cœur de l'âge d'or de la polyphonie européenne.`
+    description: `Sous la direction de Bernard Héritier, le Chœur Novantiqua présente un programme a cappella raffiné intitulé "Ex tenebris lux" (De l'ombre à la lumière). Ce concert exceptionnel explore les œuvres de trois compositeurs majeurs : Carlo Gesualdo, maître de la polyphonie expressive de la Renaissance tardive, Anton Bruckner avec ses motets sacrés d'une profondeur spirituelle intense, et Francis Poulenc dont les compositions liturgiques allient modernité et tradition. Un voyage musical captivant à travers les siècles, de la Renaissance au XXe siècle.`
   },
   'ensemble-vocal': {
     id: 'ensemble-vocal',
-    name: 'Ensemble Vocal de la Maîtrise',
-    concert: 'Ensemble Vocal & Ensemble Barberine',
-    subtitle: 'Chiara Margarita Cozzolani - Concert d\'ouverture',
+    name: 'Ensemble Vocal & Barberine',
+    concert: 'Ensemble vocal de la Maîtrise & Ensemble Barberine',
+    subtitle: 'Le baroque au féminin : Chiara Margarita Cozzolani',
     date: 'Dimanche 30 novembre 2025',
-    time: '16H00',
+    time: '17H00',
     altDate: null,
     image: '/images/artistes/ecole-maitrisienne/ecole-1-hero.webp',
     thumbnail: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
@@ -65,24 +65,41 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/ecole-maitrisienne/ecole-1-hero.webp',
       '/images/artistes/ecole-maitrisienne/ecole-2-hero.webp'
     ],
-    description: `L'Ensemble Vocal de la Maîtrise de la Cathédrale de Sion présente les somptueuses Vêpres de la Vierge de Claudio Monteverdi. Cette œuvre monumentale, composée en 1610, marque un tournant dans l'histoire de la musique sacrée, alliant avec génie la tradition polyphonique de la Renaissance et les innovations harmoniques du baroque naissant. Sous la direction artistique passionnée de notre chef, les jeunes chanteurs de la Maîtrise donnent vie à cette fresque musicale d'une beauté transcendante, où dialoguent solistes, chœurs et instruments dans une architecture sonore d'une richesse incomparable.`
+    description: `Concert d'ouverture du 20ème Festival d'Art Sacré avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine. Ce programme exceptionnel met à l'honneur Chiara Margarita Cozzolani (1602-1678), compositrice milanaise méconnue du baroque italien. Religieuse bénédictine, elle fut l'une des rares femmes compositrices de son époque à voir ses œuvres publiées. Ses motets sacrés, d'une expressivité remarquable, témoignent d'une maîtrise parfaite de l'écriture polyphonique et d'une sensibilité spirituelle profonde. Une découverte musicale fascinante au féminin.`
   },
-  'solistes': {
-    id: 'solistes',
-    name: 'Solistes Invités',
-    concert: 'Récital de l\'Avent',
-    date: 'mercredi 10 décembre',
-    time: '19H30',
+  'ecole-maitrisienne': {
+    id: 'ecole-maitrisienne',
+    name: 'École Maîtrisienne',
+    concert: 'École maîtrisienne & Chœur des collèges',
+    subtitle: 'Au ciel et sur la terre : les voix de la jeunesse',
+    date: 'Dimanche 21 décembre 2025',
+    time: '17H00',
     altDate: null,
-    image: '/images/artistes/stile-antico/stile-antico-5-hero.webp',
-    thumbnail: '/images/artistes/stile-antico/stile-antico-5-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-2-hero.webp',
+    thumbnail: '/images/artistes/ecole-maitrisienne/ecole-2-card.webp',
+    gallery: [
+      '/images/artistes/ecole-maitrisienne/ecole-1-hero.webp',
+      '/images/artistes/ecole-maitrisienne/ecole-2-hero.webp'
+    ],
+    description: `Concert mettant à l'honneur la jeunesse avec l'École Maîtrisienne et le Chœur des collèges. Ces jeunes talents interpréteront un programme varié de musique sacrée, démontrant le fruit de leur formation vocale d'excellence. Un moment émouvant qui célèbre la transmission du patrimoine musical et la passion des nouvelles générations pour le chant choral. Les voix pures et cristallines de nos jeunes chanteurs illumineront la cathédrale en cette période de l'Avent.`
+  },
+  'ensemble-ad-astra': {
+    id: 'ensemble-ad-astra',
+    name: 'Ensemble Ad Astra',
+    concert: 'Ensemble Ad Astra & Collectif 7 Sed Unum',
+    subtitle: 'Vivaldi ou Noël à Venise',
+    date: 'Jeudi 26 décembre 2025',
+    time: '20H00',
+    altDate: null,
+    image: '/images/artistes/stile-antico/stile-antico-3-hero.webp',
+    thumbnail: '/images/artistes/stile-antico/stile-antico-3-card.webp',
     gallery: [
       '/images/artistes/stile-antico/stile-antico-5-hero.webp',
       '/images/artistes/stile-antico/stile-antico-6-hero.webp',
-      '/images/artistes/choeur-novantiqua/novantiqua-3-hero.webp',
-      '/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp'
+      '/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp',
+      '/images/artistes/choeur-novantiqua/novantiqua-2-hero.webp'
     ],
-    description: `Pour cette édition spéciale du Festival d'Art Sacré, nous avons le privilège d'accueillir des solistes de renommée internationale. Au programme : un florilège d'arias et de cantates baroques célébrant l'Avent et la Nativité. Les voix exceptionnelles de nos invités feront résonner les œuvres de Bach, Haendel, Vivaldi et Pergolèse dans l'acoustique unique de notre cathédrale. Un moment de grâce où la virtuosité vocale se met au service de la spiritualité, offrant au public une expérience musicale intense et méditative à l'approche des fêtes de Noël.`
+    description: `L'Ensemble Ad Astra et le Collectif 7 Sed Unum nous transportent dans la Venise baroque avec les célèbres Gloria RV 589 et Magnificat RV 610-611 d'Antonio Vivaldi. Ces deux chefs-d'œuvre de la musique sacrée vénitienne, composés pour les jeunes filles de l'Ospedale della Pietà, rayonnent d'une joie festive et d'une virtuosité éblouissante. Le soir de la Saint-Étienne, laissez-vous emporter par les couleurs chatoyantes et l'énergie contagieuse du "Prêtre Roux" dans leurs versions originales.`
   }
 };
 
