@@ -6,18 +6,27 @@ import { maitriseEvents, getFeaturedEvents } from '@/data/maitriseEvents';
 import { EVENT_TYPE_CONFIG } from '@/data/uiConstants';
 
 const UpcomingEventsSection = memo(() => {
-  // Performance Dr Claude: Memoization des événements - UNIQUEMENT concerts et FAS à venir
+  // Filtrer les événements à venir - Utilise getUpcomingEvents() avec filtrage dynamique
   const upcomingEvents = useMemo(() => {
-    // Filtrer les événements à venir (après le 22 décembre 2024)
+    const today = new Date();
+    const currentYear = today.getFullYear();
+    const currentMonth = today.getMonth() + 1;
+    const currentDay = today.getDate();
+
     return maitriseEvents
       .filter(event => {
-        // Garder seulement les événements de 2025 et après
-        // Pour décembre, garder uniquement les événements après le 22
-        if (event.date.month === 'DÉC') {
-          return parseInt(event.date.day) > 22;
-        }
-        // Exclure tous les mois avant décembre
-        return !['AOÛT', 'SEPT', 'OCT', 'NOV'].includes(event.date.month);
+        const monthMap: { [key: string]: number } = {
+          'OCT': 10, 'NOV': 11, 'DÉC': 12,
+          'JAN': 1, 'FÉV': 2, 'MAR': 3, 'AVR': 4, 'MAI': 5, 'JUIN': 6
+        };
+        const eventMonth = monthMap[event.date.month];
+        const eventDay = parseInt(event.date.day);
+        const eventYear = eventMonth >= 10 ? 2025 : 2026;
+
+        const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+        const todayDate = new Date(currentYear, currentMonth - 1, currentDay);
+
+        return eventDate >= todayDate;
       })
       .filter(event => event.type === 'concert' || event.type === 'fas')
       .filter(event => event.featured)
@@ -46,13 +55,6 @@ const UpcomingEventsSection = memo(() => {
         return <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2"><path d="M8 5v14l11-7z"/></svg>;
     }
   }, []);
-
-  const getPriceColor = (price: string) => {
-    if (price.toLowerCase().includes('gratuit') || price.toLowerCase().includes('libre')) {
-      return 'var(--color-success, #28A745)';
-    }
-    return 'var(--color-gold)';
-  };
 
   return (
     <section style={{
@@ -272,21 +274,12 @@ const UpcomingEventsSection = memo(() => {
                 }
               </p>
 
-              {/* Footer avec prix et CTA */}
+              {/* Footer sans prix - uniquement CTA */}
               <div style={{
                 display: 'flex',
-                justifyContent: 'space-between',
+                justifyContent: 'flex-end',
                 alignItems: 'center',
               }}>
-                <div style={{
-                  fontFamily: 'var(--font-outfit)',
-                  fontSize: '0.9rem',
-                  fontWeight: '600',
-                  color: getPriceColor(event.price),
-                }}>
-                  {event.price}
-                </div>
-
                 <div style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -310,8 +303,8 @@ const UpcomingEventsSection = memo(() => {
         <div style={{
           textAlign: 'center',
         }}>
-          <Link 
-            href="https://billetterie-externe.com/maitrise-cathedrale"
+          <Link
+            href="/agenda-billetterie"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
