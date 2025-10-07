@@ -79,178 +79,237 @@ export default function AgendaBilletterie() {
       backgroundColor: 'var(--color-white)',
       minHeight: '100vh',
     }}>
-      {/* Section principale */}
+      {/* Hero prestige cathédral */}
       <section style={{
-        backgroundColor: 'var(--color-cream)',
-        padding: '140px 0 var(--spacing-2xl)',
+        background: 'linear-gradient(180deg, #fafbfc 0%, #ffffff 100%)',
+        padding: '100px 0 70px',
+        position: 'relative',
+        borderBottom: '1px solid rgba(212, 165, 116, 0.15)',
       }}>
         <div style={{
-          maxWidth: 'var(--container-max)',
+          maxWidth: '1100px',
           margin: '0 auto',
           padding: '0 var(--spacing-lg)',
         }}>
-          {/* Titre principal */}
+          {/* Ornement supérieur */}
           <div style={{
             textAlign: 'center',
-            marginBottom: 'var(--spacing-2xl)',
+            marginBottom: '24px',
+          }}>
+            <div style={{
+              display: 'inline-block',
+              width: '60px',
+              height: '1px',
+              background: 'linear-gradient(90deg, transparent, var(--color-gold), transparent)',
+              marginBottom: '24px',
+            }}></div>
+            <div style={{
+              fontFamily: 'var(--font-outfit)',
+              fontSize: '0.8rem',
+              fontWeight: '500',
+              letterSpacing: '2.5px',
+              textTransform: 'uppercase',
+              color: 'var(--color-gold)',
+              marginBottom: '8px',
+            }}>
+              Saison 2025-2026
+            </div>
+          </div>
+
+          {/* Titre majestueux */}
+          <div style={{
+            textAlign: 'center',
+            marginBottom: '50px',
           }}>
             <h1 style={{
               fontFamily: 'var(--font-spectral)',
-              fontSize: 'var(--text-hero)',
-              fontWeight: 'var(--font-extrabold)',
-              color: 'var(--color-gold)',
-              marginBottom: 'var(--spacing-md)',
-              letterSpacing: '-2px',
+              fontSize: 'clamp(2.75rem, 5vw, 3.75rem)',
+              fontWeight: '400',
+              color: 'var(--color-navy)',
+              marginBottom: '20px',
+              letterSpacing: '0.5px',
+              lineHeight: '1.25',
             }}>
               Agenda et billetterie
             </h1>
+            <div style={{
+              width: '40px',
+              height: '2px',
+              background: 'var(--color-gold)',
+              margin: '0 auto 24px',
+            }}></div>
+            <p style={{
+              fontFamily: 'var(--font-outfit)',
+              fontSize: '1.05rem',
+              fontWeight: '300',
+              color: 'var(--color-navy)',
+              opacity: 0.75,
+              lineHeight: '1.8',
+              maxWidth: '560px',
+              margin: '0 auto',
+            }}>
+              Messes solennelles · Concerts exceptionnels · Festival d'Art Sacré
+            </p>
           </div>
 
-          {/* Barre de recherche */}
+          {/* Recherche et filtres raffinés */}
           <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            marginBottom: 'var(--spacing-xl)',
+            maxWidth: '820px',
+            margin: '0 auto',
           }}>
+            {/* Barre de recherche noble */}
             <div style={{
               position: 'relative',
-              maxWidth: '500px',
-              width: '100%',
+              marginBottom: '28px',
             }}>
               <input
                 type="text"
-                placeholder="RECHERCHER :"
+                placeholder="Rechercher un événement..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 style={{
                   width: '100%',
-                  padding: '14px 50px 14px 20px',
-                  backgroundColor: 'var(--color-white)',
-                  border: '1px solid rgba(26, 19, 64, 0.1)',
-                  borderRadius: '25px',
+                  padding: '16px 55px 16px 24px',
+                  backgroundColor: '#fff',
+                  border: '1px solid rgba(26, 19, 64, 0.12)',
+                  borderRadius: '2px',
                   fontFamily: 'var(--font-outfit)',
-                  fontSize: 'var(--text-base)',
+                  fontSize: '0.95rem',
+                  fontWeight: '300',
                   color: 'var(--color-navy)',
                   outline: 'none',
-                  transition: 'all var(--transition-base)',
+                  transition: 'all 0.25s ease',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.02)',
                 }}
                 onFocus={(e) => {
                   e.currentTarget.style.borderColor = 'var(--color-gold)';
-                  e.currentTarget.style.boxShadow = '0 0 0 3px var(--color-gold-transparent)';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(212, 165, 116, 0.12)';
                 }}
                 onBlur={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.1)';
-                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.12)';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.02)';
                 }}
               />
-              {/* Icône de recherche */}
               <div style={{
                 position: 'absolute',
-                right: '20px',
+                right: '24px',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 color: 'var(--color-gold)',
+                opacity: 0.5,
               }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"/>
                   <path d="m21 21-4.35-4.35"/>
                 </svg>
               </div>
             </div>
-          </div>
 
-          {/* Filtres */}
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: 'var(--spacing-md)',
-            marginBottom: 'var(--spacing-2xl)',
-            flexWrap: 'wrap',
-          }}>
+            {/* Filtres discrets et élégants */}
             <div style={{
               display: 'flex',
+              gap: '14px',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
               alignItems: 'center',
-              gap: 'var(--spacing-xs)',
             }}>
-              <label style={{
-                fontFamily: 'var(--font-outfit)',
-                fontSize: 'var(--text-small)',
-                color: 'var(--color-navy)',
-                opacity: 0.7,
-                fontWeight: 'var(--font-medium)',
-              }}>
-                FILTRER :
-              </label>
-              
-              {/* Filtre Mois */}
-              <select 
+              <select
                 value={selectedMonth}
                 onChange={(e) => setSelectedMonth(e.target.value)}
                 style={{
-                  padding: '8px 16px',
-                  border: '1px solid rgba(26, 19, 64, 0.1)',
-                  borderRadius: 'var(--radius-sm)',
-                  backgroundColor: 'var(--color-white)',
+                  padding: '10px 18px',
+                  border: '1px solid rgba(26, 19, 64, 0.15)',
+                  borderRadius: '2px',
+                  backgroundColor: '#fff',
                   fontFamily: 'var(--font-outfit)',
-                  fontSize: 'var(--text-small)',
+                  fontSize: '0.85rem',
+                  fontWeight: '400',
                   color: 'var(--color-navy)',
                   cursor: 'pointer',
                   outline: 'none',
+                  transition: 'all 0.2s ease',
+                  minWidth: '140px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-gold)';
+                  e.currentTarget.style.backgroundColor = '#fafafa';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.15)';
+                  e.currentTarget.style.backgroundColor = '#fff';
                 }}
               >
-                <option value="">MOIS</option>
-                <option value="AOÛT">Août</option>
-                <option value="SEPT">Septembre</option>
-                <option value="OCT">Octobre</option>
-                <option value="NOV">Novembre</option>
-                <option value="DÉC">Décembre</option>
-                <option value="JAN">Janvier</option>
-                <option value="FÉV">Février</option>
-                <option value="MAR">Mars</option>
-                <option value="AVR">Avril</option>
-                <option value="MAI">Mai</option>
-                <option value="JUIN">Juin</option>
+                <option value="">Tous les mois</option>
+                <option value="OCT">Octobre 2025</option>
+                <option value="NOV">Novembre 2025</option>
+                <option value="DÉC">Décembre 2025</option>
+                <option value="JAN">Janvier 2026</option>
+                <option value="FÉV">Février 2026</option>
+                <option value="MAR">Mars 2026</option>
+                <option value="AVR">Avril 2026</option>
+                <option value="MAI">Mai 2026</option>
+                <option value="JUIN">Juin 2026</option>
               </select>
 
-              {/* Filtre Type */}
-              <select 
+              <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
                 style={{
-                  padding: '8px 16px',
-                  border: '1px solid rgba(26, 19, 64, 0.1)',
-                  borderRadius: 'var(--radius-sm)',
-                  backgroundColor: 'var(--color-white)',
+                  padding: '10px 18px',
+                  border: '1px solid rgba(26, 19, 64, 0.15)',
+                  borderRadius: '2px',
+                  backgroundColor: '#fff',
                   fontFamily: 'var(--font-outfit)',
-                  fontSize: 'var(--text-small)',
+                  fontSize: '0.85rem',
+                  fontWeight: '400',
                   color: 'var(--color-navy)',
                   cursor: 'pointer',
                   outline: 'none',
+                  transition: 'all 0.2s ease',
+                  minWidth: '160px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-gold)';
+                  e.currentTarget.style.backgroundColor = '#fafafa';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.15)';
+                  e.currentTarget.style.backgroundColor = '#fff';
                 }}
               >
-                <option value="">TYPE D&apos;ÉVÉNEMENT</option>
-                <option value="messe">Messe</option>
-                <option value="concert">Concert</option>
+                <option value="">Type d&apos;événement</option>
+                <option value="messe">Messes</option>
+                <option value="concert">Concerts</option>
                 <option value="fas">Festival d&apos;Art Sacré</option>
               </select>
 
-              {/* Filtre Budget */}
-              <select 
+              <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
                 style={{
-                  padding: '8px 16px',
-                  border: '1px solid rgba(26, 19, 64, 0.1)',
-                  borderRadius: 'var(--radius-sm)',
-                  backgroundColor: 'var(--color-white)',
+                  padding: '10px 18px',
+                  border: '1px solid rgba(26, 19, 64, 0.15)',
+                  borderRadius: '2px',
+                  backgroundColor: '#fff',
                   fontFamily: 'var(--font-outfit)',
-                  fontSize: 'var(--text-small)',
+                  fontSize: '0.85rem',
+                  fontWeight: '400',
                   color: 'var(--color-navy)',
                   cursor: 'pointer',
                   outline: 'none',
+                  transition: 'all 0.2s ease',
+                  minWidth: '130px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = 'var(--color-gold)';
+                  e.currentTarget.style.backgroundColor = '#fafafa';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = 'rgba(26, 19, 64, 0.15)';
+                  e.currentTarget.style.backgroundColor = '#fff';
                 }}
               >
-                <option value="">BUDGET</option>
+                <option value="">Tarification</option>
                 <option value="free">Entrée libre</option>
                 <option value="paid">Payant</option>
               </select>
