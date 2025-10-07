@@ -55,7 +55,7 @@ export const fasArtistes = [
   {
     id: "ensemble-vocal",
     name: "Ensemble Vocal & Barberine",
-    concert: "Ensemble vocal de la Maîtrise & Ensemble Barberine",
+    concert: "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
     subtitle: "Le baroque au féminin : Chiara Margarita Cozzolani",
     image: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
     heroImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-hero.webp",
@@ -68,7 +68,7 @@ export const fasArtistes = [
   {
     id: "ecole-maitrisienne",
     name: "École Maîtrisienne",
-    concert: "École maîtrisienne & Chœur des collèges",
+    concert: "École Maîtrisienne & Chœur des collèges",
     subtitle: "Au ciel et sur la terre : les voix de la jeunesse",
     image: "/images/artistes/ecole-maitrisienne/ecole-stamm-card.webp",
     heroImage: "/images/artistes/ecole-maitrisienne/ecole-stamm-hero.webp",

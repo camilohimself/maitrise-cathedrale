@@ -54,7 +54,7 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
   'ensemble-vocal': {
     id: 'ensemble-vocal',
     name: 'Ensemble Vocal & Barberine',
-    concert: 'Ensemble vocal de la Maîtrise & Ensemble Barberine',
+    concert: 'Ensemble Vocal de la Maîtrise & Ensemble Barberine',
     subtitle: 'Le baroque au féminin : Chiara Margarita Cozzolani',
     date: 'Dimanche 30 novembre 2025',
     time: '17H00',
@@ -70,7 +70,7 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
   'ecole-maitrisienne': {
     id: 'ecole-maitrisienne',
     name: 'École Maîtrisienne',
-    concert: 'École maîtrisienne & Chœur des collèges',
+    concert: 'École Maîtrisienne & Chœur des collèges',
     subtitle: 'Au ciel et sur la terre : les voix de la jeunesse',
     date: 'Dimanche 21 décembre 2025',
     time: '17H00',

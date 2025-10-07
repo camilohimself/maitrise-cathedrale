@@ -16,7 +16,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de la Dédicace de la cathédrale',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -26,11 +26,11 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Messe avec ensemble',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
-    description: 'Messe dominicale avec ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
+    description: 'Messe dominicale avec Ensemble Vocal et Instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -44,7 +44,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
 
@@ -60,7 +60,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de la Toussaint',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -74,7 +74,7 @@ export const maitriseEvents = [
     description: 'Messe de commémoration des fidèles défunts',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -88,7 +88,7 @@ export const maitriseEvents = [
     description: 'Messe commémorative pour les évêques et prêtres défunts',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -102,7 +102,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion', 
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -112,11 +112,11 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Messe avec ensemble',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
-    description: 'Messe dominicale avec ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
+    description: 'Messe dominicale avec Ensemble Vocal et Instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     programme: 'Bach, Allein zu dir, Herr Jesu Christ BWV 33',
     featured: false
   },
@@ -127,7 +127,7 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Fête des servants de messe',
     category: 'Messe',
-    ensemble: 'École maîtrisienne',
+    ensemble: 'École Maîtrisienne',
     description: 'Messe en l\'honneur des servants de messe',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
@@ -145,7 +145,7 @@ export const maitriseEvents = [
     description: 'Ouverture du temps de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -153,11 +153,11 @@ export const maitriseEvents = [
     type: 'fas',
     date: { day: '30', month: 'NOV' },
     time: '17h00',
-    title: 'Ensemble vocal de la Maîtrise & Ensemble Barberine',
+    title: 'Ensemble Vocal de la Maîtrise & Ensemble Barberine',
     subtitle: 'Le baroque au féminin : Chiara Margarita Cozzolani',
     category: 'Festival d\'art sacré',
-    ensemble: 'Ensemble vocal et instrumental',
-    description: 'Concert d\'ouverture avec l\'ensemble vocal de la Maîtrise et l\'Ensemble Barberine dans des œuvres de Chiara Margarita Cozzolani',
+    ensemble: 'Ensemble Vocal et Instrumental',
+    description: 'Concert d\'ouverture avec l\'Ensemble Vocal de la Maîtrise et l\'Ensemble Barberine dans des œuvres de Chiara Margarita Cozzolani',
     location: 'Cathédrale de Sion',
     price: '35 CHF',
     image: '/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp',
@@ -171,9 +171,9 @@ export const maitriseEvents = [
     type: 'messe',
     date: { day: '07', month: 'DÉC' },
     time: '10h00',
-    title: 'Messe École maîtrisienne',
+    title: 'Messe École Maîtrisienne',
     category: 'Messe',
-    ensemble: 'École maîtrisienne',
+    ensemble: 'École Maîtrisienne',
     description: 'Messe du 2ème dimanche de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
@@ -207,7 +207,7 @@ export const maitriseEvents = [
     description: 'Célébration de l\'Immaculée Conception de la Vierge Marie',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -221,7 +221,7 @@ export const maitriseEvents = [
     description: 'Messe du 3ème dimanche de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -231,11 +231,11 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Messe avec ensemble',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
     description: 'Messe du 4ème dimanche de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     programme: 'Bach, Schwingt freudig euch empor BWV 36',
     featured: false
   },
@@ -244,10 +244,10 @@ export const maitriseEvents = [
     type: 'fas',
     date: { day: '21', month: 'DÉC' },
     time: '17h00',
-    title: 'École maîtrisienne & Chœur des collèges de Sion',
+    title: 'École Maîtrisienne & Chœur des collèges de Sion',
     subtitle: 'Au ciel et sur la terre : les voix de la jeunesse',
     category: 'Festival d\'art sacré',
-    ensemble: 'École maîtrisienne et Chœur des Collèges',
+    ensemble: 'École Maîtrisienne et Chœur des Collèges',
     description: 'Concert mettant à l\'honneur la jeunesse avec l\'École Maîtrisienne et le Chœur des Collèges de Sion',
     location: 'Cathédrale de Sion',
     price: '25 CHF',
@@ -266,7 +266,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de la naissance du Christ',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -280,7 +280,7 @@ export const maitriseEvents = [
     description: 'Célébration joyeuse du jour de Noël',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -310,7 +310,7 @@ export const maitriseEvents = [
     description: 'Messe dans l\'octave de Noël',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
 
@@ -326,7 +326,7 @@ export const maitriseEvents = [
     description: 'Célébration du Nouvel An liturgique',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -336,7 +336,7 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Clôture de l\'Année sainte',
     category: 'Messe',
-    ensemble: 'École maîtrisienne',
+    ensemble: 'École Maîtrisienne',
     description: 'Célébration de clôture de l\'Année sainte',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
@@ -371,7 +371,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -381,11 +381,11 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Messe avec ensemble',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
-    description: 'Messe dominicale avec ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
+    description: 'Messe dominicale avec Ensemble Vocal et Instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     programme: 'Bach, Christ unser Herr zum Jordan kam BWV 7',
     featured: false
   },
@@ -400,7 +400,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
 
@@ -410,10 +410,10 @@ export const maitriseEvents = [
     type: 'messe',
     date: { day: '01', month: 'FÉV' },
     time: '10h00',
-    title: 'Messe École maîtrisienne',
+    title: 'Messe École Maîtrisienne',
     category: 'Messe',
-    ensemble: 'École maîtrisienne',
-    description: 'Messe dominicale avec l\'École maîtrisienne',
+    ensemble: 'École Maîtrisienne',
+    description: 'Messe dominicale avec l\'École Maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-cathedrale-card.webp',
@@ -430,7 +430,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -440,11 +440,11 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Messe avec ensemble',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
-    description: 'Messe dominicale avec ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
+    description: 'Messe dominicale avec Ensemble Vocal et Instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     programme: 'Bach, Alles nur nach Gottes Willen BWV 72',
     featured: false
   },
@@ -459,7 +459,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
 
@@ -469,10 +469,10 @@ export const maitriseEvents = [
     type: 'messe',
     date: { day: '01', month: 'MAR' },
     time: '10h00',
-    title: 'Messe École maîtrisienne',
+    title: 'Messe École Maîtrisienne',
     category: 'Messe',
-    ensemble: 'École maîtrisienne',
-    description: 'Messe dominicale avec l\'École maîtrisienne',
+    ensemble: 'École Maîtrisienne',
+    description: 'Messe dominicale avec l\'École Maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-group1-card.webp',
@@ -489,7 +489,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -499,11 +499,11 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Dimanche de Laetare',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
     description: 'Messe du 4ème dimanche de Carême - Dimanche de Laetare',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     programme: 'Bach, Jesu, meine Freude BWV 227',
     technicalInfo: 'Continuo: 19.15',
     featured: true
@@ -519,7 +519,7 @@ export const maitriseEvents = [
     description: 'Célébration de la solennité de saint Joseph',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -533,7 +533,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -547,7 +547,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle du dimanche des Rameaux',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -577,7 +577,7 @@ export const maitriseEvents = [
     description: 'Célébration du Chemin de Croix du Vendredi Saint',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -591,7 +591,7 @@ export const maitriseEvents = [
     description: 'Célébration solennelle de Pâques',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -605,7 +605,7 @@ export const maitriseEvents = [
     description: 'Messe du dimanche in Albis',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -613,9 +613,9 @@ export const maitriseEvents = [
     type: 'messe',
     date: { day: '19', month: 'AVR' },
     time: '10h00',
-    title: 'Messe Ensemble vocal et instrumental',
+    title: 'Messe Ensemble Vocal et Instrumental',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
     description: 'Messe dominicale avec musique sacrée de printemps',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
@@ -634,7 +634,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
 
@@ -650,7 +650,7 @@ export const maitriseEvents = [
     description: 'Célébration des premières communions',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -664,7 +664,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -678,7 +678,7 @@ export const maitriseEvents = [
     description: 'Célébration de l\'Ascension du Seigneur',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -688,11 +688,11 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Messe avec ensemble',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
-    description: 'Messe dominicale avec ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
+    description: 'Messe dominicale avec Ensemble Vocal et Instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     programme: 'Bach, Auf Christi Himmelfahrt allein BWV 128',
     featured: false
   },
@@ -707,7 +707,7 @@ export const maitriseEvents = [
     description: 'Célébration du sacrement de confirmation',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -721,7 +721,7 @@ export const maitriseEvents = [
     description: 'Célébration de la Sainte Trinité',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
 
@@ -737,7 +737,7 @@ export const maitriseEvents = [
     description: 'Célébration du Saint-Sacrement (Fête-Dieu)',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: true
   },
   {
@@ -745,10 +745,10 @@ export const maitriseEvents = [
     type: 'messe',
     date: { day: '07', month: 'JUIN' },
     time: '10h00',
-    title: 'Messe École maîtrisienne',
+    title: 'Messe École Maîtrisienne',
     category: 'Messe',
-    ensemble: 'École maîtrisienne',
-    description: 'Messe dominicale avec l\'École maîtrisienne',
+    ensemble: 'École Maîtrisienne',
+    description: 'Messe dominicale avec l\'École Maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-group2-card.webp',
@@ -765,7 +765,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec le chœur Oracantat',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   },
   {
@@ -775,11 +775,11 @@ export const maitriseEvents = [
     time: '10h00',
     title: 'Messe avec ensemble',
     category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
-    description: 'Messe dominicale avec ensemble vocal et instrumental',
+    ensemble: 'Ensemble Vocal et Instrumental',
+    description: 'Messe dominicale avec Ensemble Vocal et Instrumental',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     programme: 'Bach, Man singet mit Freuden vom Sieg BWV 149',
     featured: false
   },
@@ -794,7 +794,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale en chant grégorien traditionnel',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
   }
 ];

@@ -10,7 +10,7 @@
   "events": [
     {
       "id": 1,
-      "title": "Ensemble vocal de la Maîtrise & Ensemble Barberine",
+      "title": "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
       "subtitle": "Le baroque au féminin : Chiara Margarita Cozzolani",
       "type": "concert_ouverture",
       "date": "2025-11-30",
@@ -18,7 +18,7 @@
       "time": "17:00",
       "duration": 90,
       "composer": "Chiara Margarita Cozzolani",
-      "description": "Concert d'ouverture avec l'ensemble vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique, dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue qui a écrit une musique brillante à une époque où l'on recherchait la sobriété, musique rebelle et magnifique.",
+      "description": "Concert d'ouverture avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique, dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue qui a écrit une musique brillante à une époque où l'on recherchait la sobriété, musique rebelle et magnifique.",
       "artists": ["Ensemble Vocal de la Maîtrise", "Ensemble Barberine"],
       "featured": true,
       "category": "baroque",
@@ -47,7 +47,7 @@
     },
     {
       "id": 3,
-      "title": "École maîtrisienne & Chœur des collèges de Sion",
+      "title": "École Maîtrisienne & Chœur des collèges de Sion",
       "subtitle": "Au ciel et sur la terre : les voix de la jeunesse",
       "type": "concert_jeunesse",
       "date": "2025-12-21",

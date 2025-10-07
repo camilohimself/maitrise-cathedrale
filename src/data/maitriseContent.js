@@ -54,7 +54,7 @@ export const maitriseContent = {
 
   // Ensemble Vocal et Instrumental
   evi: {
-    titre: "Ensemble vocal et instrumental (EVI)",
+    titre: "Ensemble Vocal et Instrumental (EVI)",
     description: "Formation spécialisée dans les cantates de Bach",
     projet: "Intégrale des cantates de Bach",
     stats: {

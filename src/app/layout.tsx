@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     default: 'Maîtrise de la Cathédrale de Sion - École de chant et musique sacrée',
     template: '%s | Maîtrise Cathédrale Sion'
   },
-  description: 'École de chant d\'excellence au cœur du Valais. Formation musicale, ensemble vocal et chant grégorien dans la tradition de la Cathédrale Notre-Dame de Sion. Cantates de Bach, Festival d\'art sacré.',
-  keywords: ['maîtrise', 'cathédrale', 'sion', 'chant', 'musique sacrée', 'école', 'formation', 'bach', 'grégorien', 'valais', 'suisse', 'festival art sacré', 'ensemble vocal'],
+  description: 'École de chant d\'excellence au cœur du Valais. Formation musicale, Ensemble Vocal et chant grégorien dans la tradition de la Cathédrale Notre-Dame de Sion. Cantates de Bach, Festival d\'art sacré.',
+  keywords: ['maîtrise', 'cathédrale', 'sion', 'chant', 'musique sacrée', 'école', 'formation', 'bach', 'grégorien', 'valais', 'suisse', 'festival art sacré', 'Ensemble Vocal'],
   authors: [{ name: 'Maîtrise de la Cathédrale de Sion' }],
   creator: 'Maîtrise de la Cathédrale de Sion',
   publisher: 'Fondation Maîtrise Cathédrale Sion',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     url: 'https://maitrise-cathedrale.vercel.app',
     siteName: 'Maîtrise de la Cathédrale de Sion',
     title: 'Maîtrise de la Cathédrale de Sion - École de chant et musique sacrée',
-    description: 'École de chant d\'excellence au cœur du Valais. Formation musicale, ensemble vocal et chant grégorien dans la tradition de la Cathédrale Notre-Dame de Sion.',
+    description: 'École de chant d\'excellence au cœur du Valais. Formation musicale, Ensemble Vocal et chant grégorien dans la tradition de la Cathédrale Notre-Dame de Sion.',
     images: [
       {
         url: '/images/hero-photo.jpg',

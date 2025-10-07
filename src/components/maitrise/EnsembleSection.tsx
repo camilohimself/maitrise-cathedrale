@@ -32,7 +32,7 @@ export default function EnsembleSection() {
             }}>
               <Image
                 src="/images/artistes/ensemble-vocal-instrumental/evi-1-hero.webp"
-                alt="Ensemble Vocal & Instrumental de la Maîtrise"
+                alt="Ensemble Vocal et Instrumental de la Maîtrise"
                 fill
                 style={{
                   objectFit: 'cover',
@@ -92,7 +92,7 @@ export default function EnsembleSection() {
           {/* Content */}
           <div>
             <div className="badge-gold" style={{ marginBottom: '24px' }}>
-              Ensemble Vocal & Instrumental
+              Ensemble Vocal et Instrumental
             </div>
 
             <h2 style={{

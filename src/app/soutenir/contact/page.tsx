@@ -102,7 +102,7 @@ export default function Contact() {
                   color: '#1a1340',
                   marginBottom: '16px'
                 }}>
-                  Maîtrise de la Cathédrale
+                  Fondation Musique Sacrée et Maitrise de la Cathédrale de Sion
                 </h3>
                 <div style={{ lineHeight: '1.8', color: '#4a5568' }}>
                   <p>Rue de la Cathédrale 13</p>

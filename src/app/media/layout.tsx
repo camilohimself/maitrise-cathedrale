@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Écouter & Voir | Cantates de Bach et Enregistrements - Maîtrise Cathédrale Sion",
-  description: "Découvrez les cantates de Bach, enregistrements SoundCloud et vidéos de l'Ensemble vocal & instrumental de la Maîtrise de la Cathédrale de Sion. Archives musicales et concerts en Valais."
+  description: "Découvrez les cantates de Bach, enregistrements SoundCloud et vidéos de l'Ensemble Vocal et Instrumental de la Maîtrise de la Cathédrale de Sion. Archives musicales et concerts en Valais."
 };
 
 export default function MediaLayout({

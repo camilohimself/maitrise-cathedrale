@@ -21,12 +21,12 @@ const FASConcertsList = () => {
   const concerts = [
     {
       id: 1,
-      title: "Ensemble vocal de la Maîtrise & Ensemble Barberine",
+      title: "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
       subtitle: "Le baroque au féminin : Chiara Margarita Cozzolani",
       date: "30 novembre 2025",
       time: "17:00",
       category: "OUVERTURE",
-      description: "Concert d'ouverture avec l'ensemble vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique.",
+      description: "Concert d'ouverture avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique.",
       cardImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
       color: "#D2374C",
       featured: true,
@@ -46,7 +46,7 @@ const FASConcertsList = () => {
     },
     {
       id: 3,
-      title: "École maîtrisienne & Chœur des collèges",
+      title: "École Maîtrisienne & Chœur des collèges",
       subtitle: "Au ciel et sur la terre : les voix de la jeunesse",
       date: "21 décembre 2025",
       time: "17:00",

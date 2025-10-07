@@ -7,7 +7,7 @@ export default function Media() {
     {
       id: 'cantate147',
       title: 'Cantate BWV 147 - Jean-Sébastien Bach',
-      description: 'Herz und Mund und Tat und Leben - Ensemble vocal et instrumental de la Maîtrise',
+      description: 'Herz und Mund und Tat und Leben - Ensemble Vocal et Instrumental de la Maîtrise',
       youtubeId: 'dQw4w9WgXcQ', // Placeholder ID
       duration: '18:30',
       date: '2024',

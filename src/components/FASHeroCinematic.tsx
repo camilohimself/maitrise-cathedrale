@@ -37,12 +37,12 @@ const FASHeroCinematic = () => {
     },
     {
       id: 2,
-      title: "Ensemble vocal de la Maîtrise & Ensemble Barberine",
+      title: "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
       subtitle: "Le baroque au féminin : Chiara Margarita Cozzolani",
       date: "30 novembre 2025",
       time: "17:00",
       category: "OUVERTURE",
-      description: "Concert d'ouverture avec l'ensemble vocal de la Maîtrise et l'Ensemble Barberine.",
+      description: "Concert d'ouverture avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine.",
       heroImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-hero.webp",
       color: "#D2374C"
     },
@@ -59,7 +59,7 @@ const FASHeroCinematic = () => {
     },
     {
       id: 4,
-      title: "École maîtrisienne & Chœur des collèges",
+      title: "École Maîtrisienne & Chœur des collèges",
       subtitle: "Au ciel et sur la terre : les voix de la jeunesse",
       date: "21 décembre 2025",
       time: "17:00",
@@ -268,30 +268,37 @@ const FASHeroCinematic = () => {
           </p>
 
           {/* Bouton CTA avec effet hero */}
-          <button style={{
-            padding: '1.25rem 3.5rem',
-            background: 'var(--color-gold)',
-            color: 'white',
-            border: 'none',
-            borderRadius: '35px',
-            fontSize: '1.1rem',
-            fontWeight: '600',
-            cursor: 'pointer',
-            transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-            boxShadow: '0 10px 30px rgba(212, 165, 116, 0.4)',
-            transform: 'translateY(0)',
-            animation: 'fadeInUp 1s ease 1.6s both'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 20px 40px rgba(212, 165, 116, 0.5)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = 'translateY(0) scale(1)';
-            e.currentTarget.style.boxShadow = '0 10px 30px rgba(212, 165, 116, 0.4)';
-          }}>
+          <a
+            href="https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&num=6395"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              padding: '1.25rem 3.5rem',
+              background: 'var(--color-gold)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '35px',
+              fontSize: '1.1rem',
+              fontWeight: '600',
+              cursor: 'pointer',
+              transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+              boxShadow: '0 10px 30px rgba(212, 165, 116, 0.4)',
+              transform: 'translateY(0)',
+              animation: 'fadeInUp 1s ease 1.6s both',
+              textDecoration: 'none'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';
+              e.currentTarget.style.boxShadow = '0 20px 40px rgba(212, 165, 116, 0.5)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0) scale(1)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(212, 165, 116, 0.4)';
+            }}
+          >
             Réserver maintenant →
-          </button>
+          </a>
         </div>
       </div>
 
