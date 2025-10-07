@@ -160,7 +160,7 @@ export const maitriseEvents = [
     description: 'Concert d\'ouverture avec l\'ensemble vocal de la Maîtrise et l\'Ensemble Barberine dans des œuvres de Chiara Margarita Cozzolani',
     location: 'Cathédrale de Sion',
     price: '35 CHF',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
+    image: '/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp',
     ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1',
     featured: true
   },

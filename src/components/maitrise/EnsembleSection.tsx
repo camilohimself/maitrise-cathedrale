@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { maitriseContent } from '@/data/maitriseContent';
 
 export default function EnsembleSection() {
@@ -15,42 +16,74 @@ export default function EnsembleSection() {
           gap: 'clamp(40px, 8vw, 80px)',
           alignItems: 'center'
         }}>
-          {/* Visual Element */}
+          {/* Visual Element with Photo */}
           <div className="card-glass" style={{
-            textAlign: 'center',
             position: 'relative',
-            padding: '48px'
+            padding: '0',
+            overflow: 'hidden',
+            borderRadius: '24px'
           }}>
+            {/* Photo EVI */}
             <div style={{
-              fontSize: '120px',
-              marginBottom: '24px',
-              color: 'var(--color-gold)'
+              position: 'relative',
+              width: '100%',
+              height: '400px',
+              overflow: 'hidden'
             }}>
-              ♪
+              <Image
+                src="/images/artistes/ensemble-vocal-instrumental/evi-1-hero.webp"
+                alt="Ensemble Vocal & Instrumental de la Maîtrise"
+                fill
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center'
+                }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              {/* Overlay gradient pour texte lisible */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to top, rgba(26,19,64,0.9) 0%, rgba(26,19,64,0.3) 50%, transparent 100%)'
+              }} />
             </div>
-            <h3 style={{
-              fontSize: '24px',
-              fontWeight: '700',
-              marginBottom: '16px',
-              color: '#1a1340'
+
+            {/* Texte overlay */}
+            <div style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              padding: '32px',
+              color: 'white'
             }}>
-              Intégrale des Cantates de Bach
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              opacity: '0.8',
-              lineHeight: '1.6',
-              color: '#1a1340'
-            }}>
-              Un projet artistique unique au monde : l'interprétation complète
-              des cantates de Jean-Sébastien Bach dans la liturgie catholique.
-            </p>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: '700',
+                marginBottom: '12px',
+                color: 'white',
+                textShadow: '0 2px 8px rgba(0,0,0,0.3)'
+              }}>
+                Intégrale des Cantates de Bach
+              </h3>
+              <p style={{
+                fontSize: '16px',
+                lineHeight: '1.6',
+                color: 'rgba(255,255,255,0.95)',
+                textShadow: '0 1px 4px rgba(0,0,0,0.3)'
+              }}>
+                Un projet artistique unique au monde : l'interprétation complète
+                des cantates de Jean-Sébastien Bach dans la liturgie catholique.
+              </p>
+            </div>
 
             {/* Badge projet */}
             <div className="tag-gold" style={{
               position: 'absolute',
               top: '20px',
-              right: '20px'
+              right: '20px',
+              zIndex: 10
             }}>
               Projet unique
             </div>
