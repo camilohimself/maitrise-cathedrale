@@ -68,6 +68,7 @@
 - ✅ **Footer OSOM** - Signature discrète "Orchestré avec soin par OSOM"
 - ✅ **Pages mise à jour** - FAS, Accueil, Agenda cohérents
 - ✅ **Collaboration Riches Heures** - Affichée partout (règle absolue)
+- ✅ **Cookie Banner LPD** - Conforme loi suisse, design sur mesure (7 oct 2025)
 
 ### Phase POST-V1 (À planifier)
 - [ ] **Formulaires backend** - Newsletter/Contact/Amis-Maîtrise fonctionnels
@@ -441,5 +442,77 @@ Mission délicate de cohérence professionnelle sur tout le site :
 
 ---
 
-**Dernière mise à jour:** 7 octobre 2025 (Session 2)
-**Session actuelle:** Finitions qualité professionnelle - Typographie + UX
+## 🍪 **COOKIE BANNER CONFORME LPD SUISSE - TEMPLATE AGENCE**
+
+### **📋 ARCHITECTURE (Réutilisable pour tous projets OSOM)**
+
+#### **1. Hook useCookieConsent** (`/src/hooks/useCookieConsent.ts`)
+```typescript
+// Gestion centralisée des consentements cookies
+- localStorage avec versioning ('projet-cookie-consent')
+- Interface CookieConsent (essential, analytics, marketing, functional)
+- Support Google Analytics (gtag) & Facebook Pixel (fbq)
+- Méthodes: acceptAll(), acceptEssential(), resetConsent()
+```
+
+#### **2. Composant CookieBanner** (`/src/components/cookies/CookieBanner.tsx`)
+```typescript
+// Banner bottom avec 3 boutons + popup informatif
+- Design adapté charte client (CSS-in-JS inline)
+- Texte LPD: "Nous utilisons des cookies pour vous offrir..."
+- Boutons: Accepter / En savoir plus / Essentiels uniquement
+- Popup détaillé avec 4 types cookies explicités
+- Animations slideUp + fadeIn (accessibilité A11Y)
+```
+
+#### **3. Intégration Layout** (`/src/app/layout.tsx`)
+```typescript
+import CookieBanner from "@/components/cookies/CookieBanner"
+// Ajout avant </body>: <CookieBanner />
+```
+
+### **🎨 PERSONNALISATION PAR PROJET**
+
+**Variables à adapter:**
+- `COOKIE_CONSENT_KEY` : 'nom-projet-cookie-consent'
+- Palette couleurs (background, borders, buttons)
+- Emoji/icône thématique (🎼 musique, 🍪 cookies, etc.)
+- Texte popup personnalisé selon univers client
+
+**Exemple Maîtrise Cathédrale:**
+- Gradient Navy/Violet (#1a1340 → #2a2050)
+- Accents Or (#D4A574)
+- Emoji 🎼 thème musical
+- Popup avec notes ♪ au lieu de puces
+
+### **⚖️ CONFORMITÉ LPD GARANTIE**
+
+✅ Mentions légales explicites
+✅ Choix granulaire utilisateur (all/essential/custom)
+✅ Révocabilité via resetConsent()
+✅ Versioning consentements (CONSENT_VERSION)
+✅ Timestamp enregistré en ISO 8601
+✅ Respect vie privée (pas de cookies avant consentement)
+
+### **💡 AVANTAGES DIFFÉRENCIANT**
+
+- **Game changer marketing** vs banners génériques
+- **Design sur mesure** adapté à chaque client
+- **Popup créatif** (recette cookies OSOM, notes musicales Maîtrise, etc.)
+- **Léger** : 0 dépendance externe, CSS inline
+- **Performance** : localStorage, pas d'API calls
+
+### **🚀 DÉPLOIEMENT 1-CLICK**
+
+1. Copier `/src/hooks/useCookieConsent.ts`
+2. Copier `/src/components/cookies/CookieBanner.tsx`
+3. Adapter couleurs + textes + emoji
+4. Importer dans `layout.tsx`
+5. Build & push → Déployé! ✅
+
+**Template prêt pour:** Sites vitrines, e-commerce, institutionnels, artistes, etc.
+
+---
+
+**Dernière mise à jour:** 7 octobre 2025 (Session 3)
+**Session actuelle:** Cookie Banner LPD + Documentation template agence
