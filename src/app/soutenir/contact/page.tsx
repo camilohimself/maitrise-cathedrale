@@ -275,7 +275,7 @@ export default function Contact() {
                     color: 'var(--color-gold)',
                     marginBottom: '20px'
                   }}>
-                    💝 Informations de don (optionnel)
+                    Informations de don (optionnel)
                   </h3>
 
                   <div style={{ marginBottom: '20px' }}>
@@ -354,7 +354,7 @@ export default function Contact() {
                       color: 'var(--color-navy)',
                       marginBottom: '8px'
                     }}>
-                      🏦 Coordonnées bancaires
+                      Coordonnées bancaires
                     </h4>
                     <p style={{
                       fontSize: '0.9rem',
@@ -362,9 +362,8 @@ export default function Contact() {
                       marginBottom: '12px',
                       lineHeight: 1.5
                     }}>
-                      <strong>IBAN :</strong> CH94 0900 0000 1234 5678 9<br/>
-                      <strong>Bénéficiaire :</strong> Fondation Maîtrise Cathédrale Sion<br/>
-                      <strong>Banque :</strong> PostFinance SA
+                      <strong>IBAN :</strong> CH90 8080 8004 7602 6591 8<br/>
+                      <strong>Bénéficiaire :</strong> Fondation Musique Sacrée et Maitrise de la Cathédrale de Sion
                     </p>
 
                     <div style={{ marginTop: '12px' }}>

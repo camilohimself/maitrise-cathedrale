@@ -188,19 +188,8 @@ export default function ChapelleMusicaleSection() {
             padding: '48px',
             backdropFilter: 'blur(10px)',
             border: '1px solid rgba(255, 255, 255, 0.2)',
-            textAlign: 'center',
             position: 'relative'
           }}>
-            <div style={{
-              fontSize: '120px',
-              marginBottom: '24px',
-              background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>
-              🎭
-            </div>
             <h3 style={{
               fontSize: '24px',
               fontWeight: '700',
@@ -212,10 +201,10 @@ export default function ChapelleMusicaleSection() {
             <p style={{
               fontSize: '16px',
               opacity: '0.9',
-              lineHeight: '1.6'
+              lineHeight: '1.8'
             }}>
-              Un ensemble de chambre d'exception qui fait revivre 
-              les chefs-d'œuvre polyphoniques de la Renaissance 
+              Un ensemble de chambre d'exception qui fait revivre
+              les chefs-d'œuvre polyphoniques de la Renaissance
               lors des plus grandes célébrations liturgiques.
             </p>
 

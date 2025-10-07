@@ -124,8 +124,9 @@ const FASHighlightSection = () => {
           marginBottom: '4rem',
         }}>
           {highlightEvents.map((event, index) => (
-            <div
+            <Link
               key={event.id}
+              href="/fas"
               style={{
                 backgroundColor: 'var(--color-white)',
                 borderRadius: '20px',
@@ -134,6 +135,8 @@ const FASHighlightSection = () => {
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 position: 'relative',
                 cursor: 'pointer',
+                textDecoration: 'none',
+                display: 'block',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
@@ -288,7 +291,7 @@ const FASHighlightSection = () => {
                   </svg>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

@@ -8,10 +8,10 @@ export default function OrganistesSection() {
 
   return (
     <div style={{
-      background: 'linear-gradient(135deg, #1a1340 0%, #252454 100%)',
+      background: 'linear-gradient(135deg, #FAFAF9 0%, #F0F0F0 100%)',
       position: 'relative',
       padding: '100px 20px',
-      color: '#ffffff'
+      color: '#1a1340'
     }}>
       <div className="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <h2 style={{
@@ -19,7 +19,7 @@ export default function OrganistesSection() {
           fontWeight: '300',
           textAlign: 'center',
           marginBottom: '64px',
-          color: 'var(--color-gold)'
+          color: '#1a1340'
         }}>
           Les Organistes
         </h2>
@@ -31,7 +31,7 @@ export default function OrganistesSection() {
         }}>
           {/* Organiste Titulaire */}
           <div className="card" style={{
-            background: 'rgba(212, 165, 116, 0.08)',
+            background: 'rgba(255, 255, 255, 0.8)',
             backdropFilter: 'blur(10px)',
             border: '1px solid rgba(212, 165, 116, 0.2)',
             borderRadius: '24px',
@@ -86,7 +86,7 @@ export default function OrganistesSection() {
 
           {/* Organiste Adjointe */}
           <div className="card" style={{
-            background: 'rgba(212, 165, 116, 0.08)',
+            background: 'rgba(255, 255, 255, 0.8)',
             backdropFilter: 'blur(10px)',
             border: '1px solid rgba(212, 165, 116, 0.2)',
             borderRadius: '24px',

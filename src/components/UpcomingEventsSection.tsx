@@ -30,7 +30,7 @@ const UpcomingEventsSection = memo(() => {
       })
       .filter(event => event.type === 'concert' || event.type === 'fas')
       .filter(event => event.featured)
-      .slice(0, 4);
+      .slice(0, 3);
   }, []);
 
   // Performance Dr Claude: Fonction externalisée
