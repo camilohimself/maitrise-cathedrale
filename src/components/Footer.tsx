@@ -342,7 +342,31 @@ const Footer = () => {
           fontSize: '15px',
           color: 'rgba(255, 255, 255, 0.6)'
         }}>
-          © {currentYear} Fondation Maîtrise de la Cathédrale de Sion • Fondée en 2004
+          <div style={{ marginBottom: '12px' }}>
+            © {currentYear} Fondation Maîtrise de la Cathédrale de Sion • Fondée en 2004
+          </div>
+          <div style={{
+            fontSize: '13px',
+            fontStyle: 'italic',
+            color: 'rgba(255, 255, 255, 0.4)',
+            transition: 'color 0.3s ease'
+          }}>
+            Orchestré avec soin par{' '}
+            <a
+              href="https://www.osom.ch"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: 'rgba(212, 165, 116, 0.6)',
+                textDecoration: 'none',
+                transition: 'color 0.3s ease'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.color = 'rgba(212, 165, 116, 1)'}
+              onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(212, 165, 116, 0.6)'}
+            >
+              OSOM
+            </a>
+          </div>
         </div>
       </div>
 
