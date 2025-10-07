@@ -8,6 +8,8 @@ import { usePathname } from 'next/navigation';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showGoldenBorder, setShowGoldenBorder] = useState(false);
+  const [shineCount, setShineCount] = useState(0);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -21,6 +23,32 @@ const Header = () => {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Trigger golden shine effect 2x with 0.8s interval on homepage
+  useEffect(() => {
+    if (pathname === '/') {
+      setShineCount(0);
+
+      // First shine at T+2s
+      const timer1 = setTimeout(() => {
+        setShowGoldenBorder(true);
+        setShineCount(1);
+        setTimeout(() => setShowGoldenBorder(false), 1500);
+      }, 2000);
+
+      // Second shine at T+4.3s (2s + 1.5s animation + 0.8s pause)
+      const timer2 = setTimeout(() => {
+        setShowGoldenBorder(true);
+        setShineCount(2);
+        setTimeout(() => setShowGoldenBorder(false), 1500);
+      }, 4300);
+
+      return () => {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+      };
+    }
   }, [pathname]);
 
   const navigationLinks = [
@@ -159,13 +187,14 @@ const Header = () => {
               </li>
             ))}
             <li>
-              <Link 
+              <Link
                 href="/fas"
+                className={`fas-cta-button ${showGoldenBorder ? 'golden-shine-active' : ''}`}
                 style={{
                   padding: '10px 24px',
-                  backgroundColor: pathname?.startsWith('/fas') ? 'var(--color-purple)' : 'var(--color-purple)',
+                  backgroundColor: 'var(--color-purple)',
                   color: '#fff',
-                  border: pathname?.startsWith('/fas') ? '2px solid var(--color-purple)' : '2px solid var(--color-purple)',
+                  border: '2px solid var(--color-purple)',
                   textDecoration: 'none',
                   borderRadius: '6px',
                   fontSize: '15px',
@@ -187,10 +216,26 @@ const Header = () => {
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ position: 'relative', zIndex: 1 }}>
                   <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
                 </svg>
-                Festival d&apos;Art Sacré
+                <span style={{ position: 'relative', zIndex: 1 }}>Festival d&apos;Art Sacré</span>
+                {showGoldenBorder && (
+                  <span className="golden-shine-scanner" style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: '-100%',
+                    width: '50%',
+                    height: '100%',
+                    background: 'linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.4) 20%, rgba(212, 165, 116, 0.8) 50%, rgba(255, 215, 0, 0.4) 80%, transparent 100%)',
+                    transform: 'skewX(-20deg)',
+                    animation: 'goldenShineSweep 1.5s ease-in-out',
+                    pointerEvents: 'none',
+                    zIndex: 2,
+                    filter: 'blur(2px)',
+                    boxShadow: '0 0 20px rgba(212, 165, 116, 0.8)'
+                  }}></span>
+                )}
               </Link>
             </li>
           </ul>
@@ -323,7 +368,7 @@ const Header = () => {
             opacity: 1;
           }
         }
-        
+
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -335,16 +380,25 @@ const Header = () => {
           }
         }
 
+        @keyframes goldenShineSweep {
+          0% {
+            left: -100%;
+          }
+          100% {
+            left: 150%;
+          }
+        }
+
         @media (max-width: 768px) {
           button[aria-label="Menu"] {
             display: flex !important;
           }
-          
+
           .mobile-menu {
             animation: fadeIn 0.3s ease-out;
           }
         }
-        
+
         @media (min-width: 769px) {
           .mobile-menu {
             display: none !important;
