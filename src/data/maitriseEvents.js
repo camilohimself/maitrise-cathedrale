@@ -131,7 +131,7 @@ export const maitriseEvents = [
     description: 'Messe en l\'honneur des servants de messe',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-cathedrale-card.webp',
     featured: true
   },
   {
@@ -177,7 +177,7 @@ export const maitriseEvents = [
     description: 'Messe du 2ème dimanche de l\'Avent',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-group1-card.webp',
     featured: false
   },
   {
@@ -251,7 +251,7 @@ export const maitriseEvents = [
     description: 'Concert mettant à l\'honneur la jeunesse avec l\'École Maîtrisienne et le Chœur des Collèges de Sion',
     location: 'Cathédrale de Sion',
     price: '25 CHF',
-    image: '/images/artistes/ecole-maitrisienne/ecole-2-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-stamm-card.webp',
     ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f3',
     featured: true
   },
@@ -340,7 +340,7 @@ export const maitriseEvents = [
     description: 'Célébration de clôture de l\'Année sainte',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-group2-card.webp',
     featured: true
   },
   {
@@ -416,7 +416,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec l\'École maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-cathedrale-card.webp',
     featured: false
   },
   {
@@ -475,7 +475,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec l\'École maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-group1-card.webp',
     featured: false
   },
   {
@@ -751,7 +751,7 @@ export const maitriseEvents = [
     description: 'Messe dominicale avec l\'École maîtrisienne',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    image: '/images/artistes/ecole-maitrisienne/ecole-group2-card.webp',
     featured: false
   },
   {

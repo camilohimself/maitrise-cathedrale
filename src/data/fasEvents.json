@@ -52,13 +52,13 @@
       "type": "concert_jeunesse",
       "date": "2025-12-21",
       "day": "Dimanche",
-      "time": "17:00", 
+      "time": "17:00",
       "duration": 75,
       "description": "Nous aurons le plaisir de mettre à l'honneur la jeunesse avec un concert réunissant l'École Maîtrisienne et le Chœur des Collèges de Sion.",
       "artists": ["École Maîtrisienne", "Chœur des Collèges de Sion"],
       "featured": false,
       "category": "jeunesse",
-      "image": "/images/artistes/ecole-maitrisienne/ecole-2-card.webp"
+      "image": "/images/artistes/ecole-maitrisienne/ecole-stamm-card.webp"
     },
     {
       "id": 4,
