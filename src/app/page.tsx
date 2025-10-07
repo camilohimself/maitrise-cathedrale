@@ -2,7 +2,7 @@ import HeroSectionV1 from '@/components/HeroSectionV1';
 import FASHighlightSection from '@/components/FASHighlightSection';
 import UpcomingEventsSection from '@/components/UpcomingEventsSection';
 import MaitriseAboutSection from '@/components/MaitriseAboutSection';
-import SupportSection from '@/components/SupportSection';
+import SupportSectionV2Museum from '@/components/SupportSection_V2_Museum';
 import Newsletter from '@/components/Newsletter';
 
 export const metadata = {
@@ -18,7 +18,7 @@ export default function Home() {
       <FASHighlightSection />
       <UpcomingEventsSection />
       <Newsletter />
-      <SupportSection />
+      <SupportSectionV2Museum />
     </>
   );
 }
