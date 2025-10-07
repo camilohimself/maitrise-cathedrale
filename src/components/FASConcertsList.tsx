@@ -27,9 +27,10 @@ const FASConcertsList = () => {
       time: "17:00",
       category: "OUVERTURE",
       description: "Concert d'ouverture avec l'ensemble vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique.",
-      cardImage: "/images/artistes/ecole-maitrisienne/ecole-1-card.webp",
+      cardImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
       color: "#D2374C",
-      featured: true
+      featured: true,
+      ticketUrl: "https://www.booking-corner.com/19729-30-11-25-1700-concert-douverture/"
     },
     {
       id: 2,
@@ -40,7 +41,8 @@ const FASConcertsList = () => {
       category: "VOCAL",
       description: "Programme a cappella raffiné autour de Gesualdo, Bruckner et Poulenc, précédé d'une conférence de Marie Favre.",
       cardImage: "/images/artistes/choeur-novantiqua/novantiqua-1-card.webp",
-      color: "#8B7BB8"
+      color: "#8B7BB8",
+      ticketUrl: "https://www.booking-corner.com/19732-07-12-25-1700-choeur-novantiqua/"
     },
     {
       id: 3,
@@ -50,19 +52,21 @@ const FASConcertsList = () => {
       time: "17:00",
       category: "JEUNESSE",
       description: "Concert mettant à l'honneur la jeunesse avec l'École Maîtrisienne et le Chœur des Collèges de Sion.",
-      cardImage: "/images/artistes/ecole-maitrisienne/ecole-2-card.webp",
-      color: "#FF6B9D"
+      cardImage: "/images/artistes/ecole-maitrisienne/ecole-stamm-card.webp",
+      color: "#FF6B9D",
+      ticketUrl: "https://www.booking-corner.com/19735-21-12-25-1700-ecole-maitrisienne-choeur-des-colleges-de-sion/"
     },
     {
       id: 4,
       title: "Ensemble Ad Astra & Collectif 7 Sed Unum",
       subtitle: "Vivaldi ou Noël à Venise",
       date: "26 décembre 2025",
-      time: "17:00",
+      time: "20:00",
       category: "BAROQUE",
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales pour voix de femmes.",
-      cardImage: "/images/artistes/ecole-maitrisienne/ecole-1-card.webp",
-      color: "#D2374C"
+      cardImage: "/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp",
+      color: "#D2374C",
+      ticketUrl: "https://www.booking-corner.com/19738-26-12-25-2000-ensemble-ad-astra-collectif-baroque-7-sed-unum/"
     },
     {
       id: 5,
@@ -74,7 +78,8 @@ const FASConcertsList = () => {
       description: "Concert exceptionnel du prestigieux ensemble britannique dans un programme consacré à Giovanni Pierluigi da Palestrina.",
       cardImage: "/images/artistes/stile-antico/stile-antico-1-card.webp",
       color: "#D4AF37",
-      prestige: true
+      prestige: true,
+      ticketUrl: "https://www.booking-corner.com/19741-04-01-26-1700-stile-antico/"
     }
   ];
 
@@ -334,32 +339,39 @@ Cinq rendez-vous d'exception
                   {concert.description}
                 </p>
 
-                {/* Bouton - Taille optimisée 60+ */}
-                <button style={{
-                  padding: '1rem 2.5rem',
-                  background: 'transparent',
-                  color: 'var(--color-gold)',
-                  border: '2px solid var(--color-gold)',
-                  borderRadius: '25px',
-                  fontSize: '1.1rem',
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  backdropFilter: 'blur(10px)',
-                  fontFamily: 'var(--font-outfit)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'var(--color-gold)';
-                  e.currentTarget.style.color = 'var(--color-purple-dark)';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.color = 'var(--color-gold)';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}>
+                {/* Bouton billetterie - Taille optimisée 60+ */}
+                <a
+                  href={concert.ticketUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-block',
+                    padding: '1rem 2.5rem',
+                    background: 'transparent',
+                    color: 'var(--color-gold)',
+                    border: '2px solid var(--color-gold)',
+                    borderRadius: '25px',
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s ease',
+                    backdropFilter: 'blur(10px)',
+                    fontFamily: 'var(--font-outfit)',
+                    textDecoration: 'none'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'var(--color-gold)';
+                    e.currentTarget.style.color = 'var(--color-purple-dark)';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.color = 'var(--color-gold)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
                   Réserver →
-                </button>
+                </a>
               </div>
             </div>
           ))}

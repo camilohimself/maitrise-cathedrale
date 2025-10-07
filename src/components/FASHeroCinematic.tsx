@@ -43,7 +43,7 @@ const FASHeroCinematic = () => {
       time: "17:00",
       category: "OUVERTURE",
       description: "Concert d'ouverture avec l'ensemble vocal de la Maîtrise et l'Ensemble Barberine.",
-      heroImage: "/images/artistes/ecole-maitrisienne/ecole-1-hero.webp",
+      heroImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-hero.webp",
       color: "#D2374C"
     },
     {
@@ -65,7 +65,7 @@ const FASHeroCinematic = () => {
       time: "17:00",
       category: "JEUNESSE",
       description: "Concert mettant à l'honneur la jeunesse avec l'École Maîtrisienne.",
-      heroImage: "/images/artistes/ecole-maitrisienne/ecole-2-hero.webp",
+      heroImage: "/images/artistes/ecole-maitrisienne/ecole-stamm-hero.webp",
       color: "#FF6B9D"
     },
     {
@@ -73,10 +73,10 @@ const FASHeroCinematic = () => {
       title: "Ensemble Ad Astra & Collectif 7 Sed Unum",
       subtitle: "Vivaldi ou Noël à Venise",
       date: "26 décembre 2025",
-      time: "17:00",
+      time: "20:00",
       category: "BAROQUE",
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales.",
-      heroImage: "/images/artistes/ecole-maitrisienne/ecole-1-hero.webp",
+      heroImage: "/images/artistes/ensemble-ad-astra/ad-astra-1-hero.webp",
       color: "#D2374C"
     }
   ];
