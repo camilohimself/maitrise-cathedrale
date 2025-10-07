@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 import SkipLink from "@/components/SkipLink";
+import CookieBanner from "@/components/cookies/CookieBanner";
 
 // OUTFIT pour UI/Navigation (remplace Inter)
 const outfit = Outfit({
@@ -123,16 +124,17 @@ export default function RootLayout({
         
         <Header />
         
-        <main 
-          id="main-content" 
+        <main
+          id="main-content"
           role="main"
           aria-label="Contenu principal"
           style={{ minHeight: 'calc(100vh - 80px)' }}
         >
           {children}
         </main>
-        
+
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
