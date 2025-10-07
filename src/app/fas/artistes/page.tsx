@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Artistes du Festival | Stile Antico, Novantiqua et Ensembles - FAS Sion 2025-2026",
+  description: "Découvrez les artistes du Festival d'Art Sacré 2025-2026 : Stile Antico, Chœur Novantiqua, Ensemble Ad Astra et École Maîtrisienne. Programmes et biographies des ensembles."
+};
+
 export default function Artistes() {
   return (
     <main className="min-h-screen bg-gray-50">
