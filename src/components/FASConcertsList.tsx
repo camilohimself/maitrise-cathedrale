@@ -70,8 +70,9 @@ const FASConcertsList = () => {
     },
     {
       id: 5,
-      title: "Concert de Gala",
-      subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
+      title: "Stile Antico",
+      collaboration: "En collaboration avec les Riches Heures de Valère",
+      subtitle: "Palestrina - Le Prince de la Musique",
       date: "4 janvier 2026",
       time: "17:00",
       category: "PRESTIGE",
@@ -299,6 +300,21 @@ Cinq rendez-vous d'exception
                 }}>
                   {concert.title}
                 </h3>
+
+                {/* Collaboration si présente */}
+                {concert.collaboration && (
+                  <p style={{
+                    fontSize: '0.95rem',
+                    fontWeight: '400',
+                    fontStyle: 'italic',
+                    color: 'var(--color-navy)',
+                    marginBottom: '0.75rem',
+                    opacity: 0.8,
+                    fontFamily: 'var(--font-outfit)'
+                  }}>
+                    {concert.collaboration}
+                  </p>
+                )}
 
                 {/* Sous-titre - Serif + taille optimisée */}
                 <h4 style={{

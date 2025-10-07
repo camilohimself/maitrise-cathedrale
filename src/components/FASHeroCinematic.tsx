@@ -26,7 +26,7 @@ const FASHeroCinematic = () => {
       id: 1,
       title: "Stile Antico",
       collaboration: "En collaboration avec les Riches Heures de Valère",
-      subtitle: "« The Golden Renaissance – Le Prince de la Musique »",
+      subtitle: "Palestrina - Le Prince de la Musique",
       date: "4 janvier 2026",
       time: "17:00",
       category: "PRESTIGE",
