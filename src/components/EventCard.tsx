@@ -20,6 +20,7 @@ interface EventCardProps {
   featured?: boolean;
   programme?: string;
   technicalInfo?: string;
+  ticketUrl?: string;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -34,7 +35,8 @@ const EventCard: React.FC<EventCardProps> = ({
   ctaText = 'Réserver',
   featured = false,
   programme,
-  technicalInfo
+  technicalInfo,
+  ticketUrl
 }) => {
   // Variables marquées comme utilisées pour éviter les warnings lint
   const _ctaText = ctaText;
@@ -345,10 +347,10 @@ const EventCard: React.FC<EventCardProps> = ({
           flexShrink: 0, // Empêche la compression des CTAs
           alignItems: 'flex-end'
         }}>
-          {/* CTA Billetterie - Seulement si payant */}
-          {isPaidEvent() && (
+          {/* CTA Billetterie - Seulement si payant ET ticketUrl disponible */}
+          {isPaidEvent() && ticketUrl && (
             <a
-              href="https://billetterie-externe.com/maitrise-cathedrale"
+              href={ticketUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{

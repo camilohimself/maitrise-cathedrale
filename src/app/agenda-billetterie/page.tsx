@@ -309,6 +309,7 @@ export default function AgendaBilletterie() {
                   featured={event.featured}
                   programme={event.programme}
                   technicalInfo={event.technicalInfo}
+                  ticketUrl={event.ticketUrl}
                 />
               ))}
             </div>

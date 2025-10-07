@@ -1,173 +1,16 @@
 // Calendrier complet Maîtrise Cathédrale 2025-2026
-// Données extraites du PDF "Calendrier général 2025-2026.xlsx.pdf"
+// Données extraites du CSV "calendrier_maitrise_sion_2025-2026.csv"
+// Mise à jour : 7 octobre 2025
 // Classification par types : Messe, Concert, FAS
 
 export const maitriseEvents = [
-  // === AOÛT 2025 ===
-  {
-    id: 'aout-15-messe-assomption',
-    type: 'messe',
-    date: { day: '15', month: 'AOÛT' },
-    time: '10h00',
-    title: 'Messe de l\'Assomption',
-    category: 'Messe',
-    ensemble: 'Chapelle musicale',
-    description: 'Célébration solennelle de l\'Assomption de la Vierge Marie',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: false
-  },
-  {
-    id: 'aout-15-concert-florianersangerknaben',
-    type: 'concert', 
-    date: { day: '15', month: 'AOÛT' },
-    time: '17h00',
-    title: 'Concert St. Florianer Sängerknaben',
-    category: 'Concert',
-    ensemble: 'St. Florianer Sängerknaben',
-    description: 'Concert exceptionnel dans le cadre du Sion Festival',
-    location: 'Cathédrale de Sion',
-    price: '25 CHF',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
-    featured: true
-  },
-  {
-    id: 'aout-17-messe-chantre',
-    type: 'messe',
-    date: { day: '17', month: 'AOÛT' },
-    time: '10h00', 
-    title: 'Messe dominicale',
-    category: 'Messe',
-    ensemble: 'Chantre',
-    description: 'Messe dominicale avec accompagnement du chantre',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: false
-  },
-  {
-    id: 'aout-24-messe-chantre',
-    type: 'messe',
-    date: { day: '24', month: 'AOÛT' },
-    time: '10h00',
-    title: 'Messe dominicale', 
-    category: 'Messe',
-    ensemble: 'Chantre',
-    description: 'Messe dominicale avec accompagnement du chantre',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: false
-  },
-  {
-    id: 'aout-29-concert-winterfamily',
-    type: 'concert',
-    date: { day: '29', month: 'AOÛT' },
-    time: '20h00',
-    title: 'Concert Winter Family',
-    category: 'Concert',
-    ensemble: 'Winter Family',
-    description: 'Performance musicale exceptionnelle en soirée',
-    location: 'Cathédrale de Sion',
-    price: '30 CHF',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
-    featured: true
-  },
-  {
-    id: 'aout-31-messe-chantre',
-    type: 'messe',
-    date: { day: '31', month: 'AOÛT' },
-    time: '10h00',
-    title: 'Messe dominicale',
-    category: 'Messe', 
-    ensemble: 'Chantre',
-    description: 'Messe dominicale avec accompagnement du chantre',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: false
-  },
-
-  // === SEPTEMBRE 2025 ===
-  {
-    id: 'sept-07-messe-ensemble-schubertiade',
-    type: 'messe',
-    date: { day: '07', month: 'SEPT' },
-    time: '10h00',
-    title: 'Messe Schubertiade d\'Espace 2',
-    category: 'Messe',
-    ensemble: 'Ensemble vocal et instrumental',
-    description: 'Messe avec ensemble vocal dans le cadre de la Schubertiade d\'Espace 2',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: true
-  },
-  {
-    id: 'sept-14-messe-oracantat',
-    type: 'messe',
-    date: { day: '14', month: 'SEPT' },
-    time: '10h00',
-    title: 'Messe Oracantat',
-    category: 'Messe',
-    ensemble: 'Oracantat',
-    description: 'Messe dominicale avec le chœur Oracantat',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre', 
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: false
-  },
-  {
-    id: 'sept-21-messe-ecole-maitrisienne',
-    type: 'messe',
-    date: { day: '21', month: 'SEPT' },
-    time: '10h00',
-    title: 'Messe École maîtrisienne',
-    category: 'Messe',
-    ensemble: 'École maîtrisienne',
-    description: 'Messe dominicale avec l\'École maîtrisienne',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: false
-  },
-  {
-    id: 'sept-28-messe-gregorien',
-    type: 'messe',
-    date: { day: '28', month: 'SEPT' },
-    time: '10h00',
-    title: 'Messe en chant grégorien',
-    category: 'Messe',
-    ensemble: 'Chœur grégorien',
-    description: 'Messe dominicale en chant grégorien traditionnel',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: false
-  },
-
   // === OCTOBRE 2025 ===
-  {
-    id: 'oct-05-messe-ecole-maitrisienne',
-    type: 'messe',
-    date: { day: '05', month: 'OCT' },
-    time: '10h00',
-    title: 'Messe École maîtrisienne',
-    category: 'Messe',
-    ensemble: 'École maîtrisienne',
-    description: 'Messe dominicale avec l\'École maîtrisienne',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    featured: false
-  },
   {
     id: 'oct-12-messe-schola-dedicace',
     type: 'messe',
     date: { day: '12', month: 'OCT' },
     time: '10h00',
-    title: 'Messe Solennité de la Dédicace',
+    title: 'Solennité de la Dédicace',
     category: 'Messe',
     ensemble: 'Schola',
     description: 'Célébration solennelle de la Dédicace de la cathédrale',
@@ -188,12 +31,11 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
-    programme: 'Bach, Wohl dem, der sich auf seinen Gott BWV 139',
     featured: false
   },
   {
     id: 'oct-26-messe-gregorien',
-    type: 'messe', 
+    type: 'messe',
     date: { day: '26', month: 'OCT' },
     time: '10h00',
     title: 'Messe en chant grégorien',
@@ -319,6 +161,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: '35 CHF',
     image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1',
     featured: true
   },
 
@@ -350,6 +193,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: '30 CHF',
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f2',
     featured: true
   },
   {
@@ -408,6 +252,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: '25 CHF',
     image: '/images/artistes/ecole-maitrisienne/ecole-2-card.webp',
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f3',
     featured: true
   },
   {
@@ -450,7 +295,8 @@ export const maitriseEvents = [
     description: 'Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales pour voix de femmes',
     location: 'Cathédrale de Sion',
     price: '40 CHF',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
+    image: '/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp',
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f4',
     featured: true
   },
   {
@@ -511,6 +357,7 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: '45 CHF',
     image: '/images/artistes/stile-antico/stile-antico-4-card.webp',
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5',
     featured: true
   },
   {
@@ -967,24 +814,25 @@ export const getFeaturedEvents = () => {
 
 export const getUpcomingEvents = (limit = 10) => {
   const today = new Date();
-  const currentDate = `${today.getDate().toString().padStart(2, '0')}-${today.getMonth() + 1}`;
-  
-  // Filtre les événements à venir (11 septembre 2025 et après)
+  const currentYear = today.getFullYear();
+  const currentMonth = today.getMonth() + 1; // 1-12
+  const currentDay = today.getDate();
+
+  // Filtre les événements à venir (aujourd'hui et après)
   return maitriseEvents
     .filter(event => {
-      // Convertir la date de l'événement pour comparaison
-      const eventDateStr = `${event.date.day.padStart(2, '0')}-${getMonthNumber(event.date.month)}`;
-      
-      // Si nous sommes en septembre, ne garder que les événements du 11 et après
-      if (today.getMonth() === 8) { // Septembre = mois 8
-        if (event.date.month === 'SEPT') {
-          return parseInt(event.date.day) >= 11;
-        }
-        // Garder tous les événements des mois suivants
-        return !['AOÛT'].includes(event.date.month);
-      }
-      
-      return true; // Pour les autres mois (au cas où)
+      const eventMonth = getMonthNumber(event.date.month);
+      const eventDay = parseInt(event.date.day);
+
+      // Déterminer l'année de l'événement (2025 pour oct-déc, 2026 pour jan-juin)
+      const eventYear = eventMonth >= 10 ? 2025 : 2026;
+
+      // Créer des timestamps pour comparaison
+      const eventDate = new Date(eventYear, eventMonth - 1, eventDay);
+      const todayDate = new Date(currentYear, currentMonth - 1, currentDay);
+
+      // Garder uniquement les événements futurs ou d'aujourd'hui
+      return eventDate >= todayDate;
     })
     .slice(0, limit);
 };
