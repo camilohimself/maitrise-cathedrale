@@ -14,7 +14,7 @@ const FASHighlightSection = () => {
       time: "17h00",
       category: "OUVERTURE",
       description: "Concert d'ouverture avec l'Ensemble Barberine dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue.",
-      image: "/images/artistes/ecole-maitrisienne/ecole-1-card.webp",
+      image: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
       featured: true
     },
     {
@@ -25,7 +25,7 @@ const FASHighlightSection = () => {
       time: "20h00",
       category: "BAROQUE",
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leur version originale pour voix de femmes avec Jean-David Waeber et Daniela Numico.",
-      image: "/images/artistes/ecole-maitrisienne/ecole-2-card.webp",
+      image: "/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp",
       featured: true
     },
     {
