@@ -5,31 +5,22 @@ import React from 'react';
 export default function Media() {
   const videos = [
     {
-      id: 'cantate147',
-      title: 'Cantate BWV 147 - Jean-Sébastien Bach',
-      description: 'Herz und Mund und Tat und Leben - Ensemble Vocal et Instrumental de la Maîtrise',
-      youtubeId: 'dQw4w9WgXcQ', // Placeholder ID
-      duration: '18:30',
-      date: '2024',
+      id: 'tedeum',
+      title: 'Te Deum laudamus',
+      description: 'Ensemble Vocal et Instrumental de la Maîtrise de la Cathédrale de Sion',
+      youtubeId: 'PNbm9AfjBF4',
+      duration: '3:45',
+      date: '2025',
       featured: true
     },
     {
-      id: 'magnificat',
-      title: 'Magnificat en ré majeur BWV 243 - Bach',
-      description: 'Concert exceptionnel à la Cathédrale de Sion',
-      youtubeId: 'dQw4w9WgXcQ', // Placeholder ID
-      duration: '25:45',
-      date: '2023',
-      featured: false
-    },
-    {
-      id: 'gregorien',
-      title: 'Chant grégorien - Veni Creator Spiritus',
-      description: 'Chœur grégorien de la Maîtrise',
-      youtubeId: 'dQw4w9WgXcQ', // Placeholder ID
-      duration: '6:20',
-      date: '2024',
-      featured: false
+      id: 'intedomine',
+      title: 'In te, Domine, speravi bis',
+      description: 'Ensemble Vocal et Instrumental de la Maîtrise de la Cathédrale de Sion',
+      youtubeId: 'Z9n9NK2b5Ys',
+      duration: '4:20',
+      date: '2025',
+      featured: true
     }
   ];
 
@@ -482,9 +473,9 @@ export default function Media() {
           marginTop: '80px',
           textAlign: 'center',
           padding: 'var(--spacing-lg)',
-          backgroundColor: 'rgba(26, 19, 64, 0.1)',
+          backgroundColor: 'rgba(212, 165, 116, 0.08)',
           borderRadius: 'var(--radius-lg)',
-          border: '1px solid rgba(26, 19, 64, 0.2)'
+          border: '1px solid rgba(212, 165, 116, 0.2)'
         }}>
           <p style={{
             fontSize: 'var(--text-base)',
@@ -492,8 +483,8 @@ export default function Media() {
             fontStyle: 'italic',
             margin: 0
           }}>
-            🎼 <strong>Collection live :</strong> 9 enregistrements SoundCloud intégrés avec players natifs.
-            Les vidéos YouTube sont encore des placeholders en attente des vrais contenus.
+            🎼 <strong>Collection complète :</strong> 2 vidéos YouTube et 9 enregistrements SoundCloud disponibles.
+            Suivez notre <a href="https://www.youtube.com/@MaîtriseCathedraleSion" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>chaîne YouTube</a> pour ne rien manquer de nos prochaines publications.
           </p>
         </div>
       </div>
