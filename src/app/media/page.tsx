@@ -176,55 +176,35 @@ export default function Media() {
                 overflow: 'hidden',
                 position: 'relative'
               }}>
-                {/* Video Thumbnail */}
+                {/* YouTube Embed */}
                 <div style={{
                   position: 'relative',
                   width: '100%',
-                  height: '200px',
-                  backgroundColor: 'var(--color-navy)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer'
-                }}
-                onClick={() => window.open(`https://youtube.com/watch?v=${video.youtubeId}`, '_blank')}
-                >
-                  {/* Play Button */}
-                  <div style={{
-                    width: '60px',
-                    height: '60px',
-                    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    transition: 'var(--transition-base)'
-                  }}>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-navy)">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-
-                  {/* Duration Badge */}
-                  <div style={{
-                    position: 'absolute',
-                    bottom: '12px',
-                    right: '12px',
-                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                    color: 'white',
-                    padding: '4px 8px',
-                    borderRadius: 'var(--radius-sm)',
-                    fontSize: 'var(--text-xs)',
-                    fontWeight: 'var(--font-medium)'
-                  }}>
-                    {video.duration}
-                  </div>
-
+                  paddingBottom: '56.25%', // 16:9 aspect ratio
+                  height: 0,
+                  overflow: 'hidden'
+                }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                      borderRadius: 'var(--radius-lg) var(--radius-lg) 0 0'
+                    }}
+                  />
                   {video.featured && (
                     <div className="tag-gold" style={{
                       position: 'absolute',
                       top: '12px',
-                      left: '12px'
+                      left: '12px',
+                      zIndex: 10
                     }}>
                       À la une
                     </div>
@@ -252,11 +232,43 @@ export default function Media() {
                     {video.description}
                   </p>
                   <div style={{
-                    fontSize: 'var(--text-small)',
-                    color: 'var(--color-gold)',
-                    fontWeight: 'var(--font-medium)'
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
                   }}>
-                    {video.date}
+                    <div style={{
+                      fontSize: 'var(--text-small)',
+                      color: 'var(--color-gold)',
+                      fontWeight: 'var(--font-medium)'
+                    }}>
+                      {video.date}
+                    </div>
+                    <a
+                      href={`https://youtube.com/watch?v=${video.youtubeId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '6px',
+                        fontSize: 'var(--text-small)',
+                        color: 'var(--color-navy)',
+                        textDecoration: 'none',
+                        fontWeight: '500',
+                        transition: 'var(--transition-base)'
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.target as HTMLElement).style.color = 'var(--color-gold)';
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.target as HTMLElement).style.color = 'var(--color-navy)';
+                      }}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z"/>
+                      </svg>
+                      Voir sur YouTube
+                    </a>
                   </div>
                 </div>
               </div>
