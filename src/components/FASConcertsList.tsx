@@ -88,24 +88,189 @@ const FASConcertsList = () => {
     <>
       <style jsx>{`
         @media (max-width: 768px) {
+          /* Section principale - COMPACT */
+          section {
+            padding: 3rem 0 !important;
+          }
+
+          /* Background effects - HIDE sur mobile */
+          section > div:first-child,
+          section > div:nth-child(2) {
+            display: none !important;
+          }
+
+          /* Container principal */
+          section > div:last-child {
+            padding: 0 1.25rem !important;
+          }
+
+          /* Header - COMPACT */
+          section > div:last-child > div:first-child {
+            margin-bottom: 2.5rem !important;
+          }
+
+          /* Badge programme */
+          section > div:last-child > div:first-child > div:first-child {
+            padding: 0.6rem 1.5rem !important;
+            font-size: 0.75rem !important;
+            margin-bottom: 1.25rem !important;
+          }
+
+          /* Titre H2 */
+          section h2 {
+            font-size: 2rem !important;
+            margin-bottom: 1rem !important;
+            line-height: 1.15 !important;
+          }
+
+          /* Sous-titre */
+          section > div:last-child > div:first-child > p {
+            font-size: 1rem !important;
+            line-height: 1.5 !important;
+          }
+
+          /* Grid concerts */
+          section > div:last-child > div:last-child {
+            gap: 1.25rem !important;
+          }
+
+          /* Cards concerts - VERTICAL LAYOUT */
           .concert-card {
             grid-template-columns: 1fr !important;
-            text-align: center;
-            gap: 1.5rem !important;
-            padding: 1.5rem !important;
+            gap: 1rem !important;
+            padding: 1.25rem !important;
+            border-radius: 16px !important;
           }
+
+          /* Image - FIRST ORDER + SMALLER */
           .concert-card .concert-image {
-            order: 1;
+            order: 1 !important;
           }
+
+          .concert-card .concert-image > div {
+            height: 160px !important;
+            border-radius: 12px !important;
+          }
+
+          /* Contenu - SECOND ORDER */
           .concert-card .concert-content {
-            order: 2;
+            order: 2 !important;
           }
-          div[style*="gridTemplateColumns"] {
-            grid-template-columns: 1fr !important;
-            text-align: center;
+
+          /* Badge catégorie */
+          .concert-card .concert-content > div:first-child {
+            padding: 0.4rem 1rem !important;
+            font-size: 0.7rem !important;
+            margin-bottom: 1rem !important;
           }
-          div[style*="order"] {
-            order: unset !important;
+
+          /* Titre artiste - LESS IS MORE */
+          .concert-card h3 {
+            font-size: 1.2rem !important;
+            margin-bottom: 0.6rem !important;
+            line-height: 1.25 !important;
+          }
+
+          /* Collaboration - SMALLER */
+          .concert-card h3 + p {
+            font-size: 0.8rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+
+          /* Sous-titre programme */
+          .concert-card h4 {
+            font-size: 1.05rem !important;
+            margin-bottom: 1rem !important;
+            line-height: 1.3 !important;
+          }
+
+          /* Date et heure */
+          .concert-card h4 + div > div {
+            font-size: 1rem !important;
+          }
+
+          /* Description - LIMIT 2 LINES */
+          .concert-card p:last-of-type {
+            font-size: 0.95rem !important;
+            line-height: 1.5 !important;
+            margin-bottom: 1.25rem !important;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 2 !important;
+            -webkit-box-orient: vertical !important;
+            overflow: hidden !important;
+          }
+
+          /* Bouton billetterie */
+          .concert-card a {
+            padding: 0.8rem 2rem !important;
+            font-size: 0.95rem !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          /* Section ultra-compact */
+          section {
+            padding: 2rem 0 !important;
+          }
+
+          section > div:last-child {
+            padding: 0 1rem !important;
+          }
+
+          /* Header */
+          section > div:last-child > div:first-child {
+            margin-bottom: 2rem !important;
+          }
+
+          section h2 {
+            font-size: 1.75rem !important;
+          }
+
+          section > div:last-child > div:first-child > p {
+            font-size: 0.95rem !important;
+          }
+
+          /* Grid */
+          section > div:last-child > div:last-child {
+            gap: 1rem !important;
+          }
+
+          /* Cards */
+          .concert-card {
+            padding: 1rem !important;
+          }
+
+          /* Image */
+          .concert-card .concert-image > div {
+            height: 140px !important;
+          }
+
+          /* Badge prestige/exceptionnel */
+          .concert-card .concert-image > div > div:last-child {
+            font-size: 0.7rem !important;
+            padding: 0.4rem 0.8rem !important;
+          }
+
+          /* Titre */
+          .concert-card h3 {
+            font-size: 1.1rem !important;
+          }
+
+          /* Sous-titre */
+          .concert-card h4 {
+            font-size: 1rem !important;
+          }
+
+          /* Description - 1 LINE ONLY */
+          .concert-card p:last-of-type {
+            font-size: 0.9rem !important;
+            -webkit-line-clamp: 1 !important;
+          }
+
+          /* Bouton */
+          .concert-card a {
+            padding: 0.7rem 1.75rem !important;
+            font-size: 0.9rem !important;
           }
         }
       `}</style>

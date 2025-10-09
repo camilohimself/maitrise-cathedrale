@@ -480,6 +480,134 @@ export default function AgendaBilletterie() {
 
       {/* Newsletter */}
       <Newsletter />
+
+      {/* Styles responsive mobile - LESS IS MORE */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          /* Hero section - COMPACT */
+          section:first-of-type {
+            padding: 60px 0 40px !important;
+          }
+
+          /* Ornements - MASQUER */
+          section:first-of-type > div > div:first-child > div:first-child {
+            display: none !important;
+          }
+
+          /* Surtitre "Saison 2025-2026" */
+          section:first-of-type > div > div:first-child > div:nth-child(2) {
+            font-size: 0.7rem !important;
+            letter-spacing: 1.5px !important;
+            margin-bottom: 6px !important;
+          }
+
+          /* Titre principal H1 */
+          section:first-of-type h1 {
+            font-size: 2rem !important;
+            margin-bottom: 16px !important;
+          }
+
+          /* Ligne dorée sous titre */
+          section:first-of-type h1 + div {
+            width: 30px !important;
+            margin-bottom: 16px !important;
+          }
+
+          /* Sous-titre */
+          section:first-of-type p {
+            font-size: 0.95rem !important;
+            line-height: 1.6 !important;
+            max-width: 100% !important;
+          }
+
+          /* Container filtres */
+          section:first-of-type > div > div:last-child {
+            max-width: 100% !important;
+          }
+
+          /* Barre recherche */
+          section:first-of-type input {
+            padding: 12px 45px 12px 16px !important;
+            font-size: 0.9rem !important;
+          }
+
+          /* Icône recherche */
+          section:first-of-type input + div svg {
+            width: 16px !important;
+            height: 16px !important;
+          }
+
+          /* CTA Billetterie - COMPACT */
+          section:first-of-type a[href*="booking-corner"] {
+            padding: 14px 32px !important;
+            font-size: 1rem !important;
+            margin-top: 24px !important;
+            margin-bottom: 24px !important;
+          }
+
+          /* Filtres - VERTICAL STACK */
+          section:first-of-type > div > div:last-child > div:last-child {
+            flex-direction: column !important;
+            gap: 10px !important;
+            align-items: stretch !important;
+          }
+
+          /* Selects filtres */
+          section:first-of-type select {
+            min-width: 100% !important;
+            padding: 10px 14px !important;
+            font-size: 0.85rem !important;
+          }
+
+          /* Section événements */
+          section:nth-of-type(2) {
+            padding: 40px 0 !important;
+          }
+
+          /* Compteur résultats */
+          section:nth-of-type(2) > div > div:first-child p {
+            font-size: 0.9rem !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          /* Hero ultra-compact */
+          section:first-of-type {
+            padding: 40px 0 30px !important;
+          }
+
+          section:first-of-type h1 {
+            font-size: 1.75rem !important;
+          }
+
+          section:first-of-type p {
+            font-size: 0.9rem !important;
+          }
+
+          /* Barre recherche */
+          section:first-of-type input {
+            padding: 10px 40px 10px 14px !important;
+            font-size: 0.85rem !important;
+          }
+
+          /* CTA Billetterie */
+          section:first-of-type a[href*="booking-corner"] {
+            padding: 12px 28px !important;
+            font-size: 0.95rem !important;
+          }
+
+          /* Selects */
+          section:first-of-type select {
+            padding: 9px 12px !important;
+            font-size: 0.8rem !important;
+          }
+
+          /* Section événements */
+          section:nth-of-type(2) {
+            padding: 32px 0 !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }

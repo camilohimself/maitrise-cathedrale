@@ -1,21 +1,21 @@
 /*
  * Styles responsive globaux pour tous les composants FAS (Festival d'Art Sacré)
- * Appliqués automatiquement pour optimiser mobile
+ * LESS IS MORE - Optimisation mobile radicale
  */
 
-/* Tablet et mobile (768px et moins) */
+/* Tablet et mobile (768px et moins) - COMPACT */
 @media (max-width: 768px) {
-  /* Sections FAS générales */
+  /* Sections FAS générales - REDUCED */
   section[style*="background: '#1a1340'"],
   section[style*="backgroundColor: '#1a1340'"] {
-    padding: 60px 20px !important;
+    padding: 50px 16px !important;
   }
 
-  /* Grids concerts et artistes */
+  /* Grids concerts et artistes - COMPACT */
   div[style*="gridTemplateColumns"][style*="repeat"],
   div[style*="grid-template-columns"][style*="repeat"] {
     grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
+    gap: 1.25rem !important;
   }
 
   /* Cards artistes et concerts */
@@ -23,95 +23,174 @@
   div[style*="minmax(350px"],
   div[style*="minmax(400px"] {
     grid-template-columns: 1fr !important;
+    gap: 1rem !important;
   }
 
-  /* Images artistes */
+  /* Images artistes - SMALLER */
   div[style*="height"][style*="400px"],
   div[style*="height"][style*="500px"] {
-    height: 280px !important;
+    height: 240px !important;
   }
 
-  /* Titres FAS */
+  div[style*="height"][style*="300px"] {
+    height: 180px !important;
+  }
+
+  /* Titres FAS - LESS IS MORE */
   h1[style*="fontSize"][style*="3rem"],
   h1[style*="fontSize"][style*="4rem"],
-  h1[style*="fontSize"][style*="5rem"] {
-    font-size: 2rem !important;
+  h1[style*="fontSize"][style*="5rem"],
+  h1[style*="fontSize"][style*="6rem"] {
+    font-size: 1.85rem !important;
+    line-height: 1.15 !important;
   }
 
   h2[style*="fontSize"][style*="3rem"],
-  h2[style*="fontSize"][style*="2.5rem"] {
-    font-size: 1.8rem !important;
+  h2[style*="fontSize"][style*="2.5rem"],
+  h2[style*="fontSize"][style*="3.5rem"] {
+    font-size: 1.65rem !important;
+    line-height: 1.2 !important;
   }
 
-  /* Padding containers */
+  h3[style*="fontSize"][style*="2rem"],
+  h3[style*="fontSize"][style*="1.8rem"] {
+    font-size: 1.3rem !important;
+  }
+
+  /* Paragraphes FAS - REDUCED */
+  p[style*="fontSize"][style*="1.35rem"],
+  p[style*="fontSize"][style*="1.4rem"],
+  p[style*="fontSize"][style*="1.5rem"] {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Padding containers - COMPACT */
   div[style*="padding: '0 4rem'"],
-  div[style*="padding: '0 3rem'"] {
-    padding: 0 1.5rem !important;
+  div[style*="padding: '0 3rem'"],
+  div[style*="padding: '0 2rem'"] {
+    padding: 0 1.25rem !important;
   }
 
-  /* Boutons FAS */
+  /* Boutons FAS - COMPACT */
   a[style*="padding"][style*="40px"],
-  a[style*="padding"][style*="36px"] {
-    padding: 14px 28px !important;
-    font-size: 0.95rem !important;
+  a[style*="padding"][style*="36px"],
+  a[style*="padding"][style*="48px"] {
+    padding: 12px 24px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Margin bottom - REDUCED */
+  div[style*="marginBottom: '4rem'"],
+  div[style*="marginBottom: '5rem'"] {
+    margin-bottom: 2rem !important;
+  }
+
+  div[style*="marginBottom: '2rem'"],
+  div[style*="marginBottom: '3rem'"] {
+    margin-bottom: 1.25rem !important;
   }
 }
 
-/* Petits mobiles (640px et moins) */
+/* Petits mobiles (640px et moins) - ULTRA-COMPACT */
 @media (max-width: 640px) {
   /* Sections réduites */
   section[style*="background: '#1a1340'"],
   section[style*="backgroundColor: '#1a1340'"] {
-    padding: 40px 16px !important;
+    padding: 32px 12px !important;
   }
 
-  /* Images plus compactes */
+  /* Images plus compactes - SMALLER */
   div[style*="height"][style*="400px"],
   div[style*="height"][style*="500px"],
-  div[style*="height"][style*="280px"] {
-    height: 240px !important;
+  div[style*="height"][style*="280px"],
+  div[style*="height"][style*="240px"] {
+    height: 200px !important;
   }
 
-  /* Titres encore réduits */
+  div[style*="height"][style*="300px"],
+  div[style*="height"][style*="180px"] {
+    height: 150px !important;
+  }
+
+  /* Titres encore réduits - LESS IS MORE */
   h1[style*="fontSize"] {
-    font-size: 1.75rem !important;
+    font-size: 1.65rem !important;
+    line-height: 1.1 !important;
   }
 
   h2[style*="fontSize"] {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
   }
 
   h3[style*="fontSize"] {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
   }
 
-  /* Paragraphes lisibles */
+  h4[style*="fontSize"] {
+    font-size: 1.05rem !important;
+  }
+
+  /* Paragraphes lisibles - COMPACT */
   p[style*="fontSize: '1.2rem'"],
   p[style*="fontSize: '1.25rem'"],
-  p[style*="fontSize: '1.3rem'"] {
-    font-size: 1rem !important;
+  p[style*="fontSize: '1.3rem'"],
+  p[style*="fontSize: '1.35rem'"],
+  p[style*="fontSize: '1.4rem'"] {
+    font-size: 0.9rem !important;
+    line-height: 1.45 !important;
   }
 
   /* Padding compacts */
   div[style*="padding: '2rem'"],
-  div[style*="padding: '3rem'"] {
-    padding: 1.25rem !important;
+  div[style*="padding: '3rem'"],
+  div[style*="padding: '4rem'"] {
+    padding: 1rem !important;
   }
 
-  /* Border radius */
+  div[style*="padding: '0 2rem'"],
+  div[style*="padding: '0 1.5rem'"] {
+    padding: 0 0.85rem !important;
+  }
+
+  /* Border radius - REDUCED */
   div[style*="borderRadius: '24px'"],
-  div[style*="borderRadius: '30px'"] {
-    border-radius: 16px !important;
-  }
-
-  div[style*="borderRadius: '20px'"] {
+  div[style*="borderRadius: '30px'"],
+  div[style*="borderRadius: '40px'"] {
     border-radius: 14px !important;
   }
 
-  /* Gap réduits */
+  div[style*="borderRadius: '20px'"],
+  div[style*="borderRadius: '16px'"] {
+    border-radius: 10px !important;
+  }
+
+  /* Gap réduits - MINIMAL */
   div[style*="gap: '2rem'"],
   div[style*="gap: '2.5rem'"],
   div[style*="gap: '3rem'"] {
-    gap: 1.25rem !important;
+    gap: 0.85rem !important;
+  }
+
+  div[style*="gap: '1.5rem'"],
+  div[style*="gap: '1.25rem'"] {
+    gap: 0.75rem !important;
+  }
+
+  /* Margin bottom - COMPACT */
+  div[style*="marginBottom: '3rem'"],
+  div[style*="marginBottom: '4rem'"] {
+    margin-bottom: 1.25rem !important;
+  }
+
+  div[style*="marginBottom: '2rem'"] {
+    margin-bottom: 0.85rem !important;
+  }
+
+  /* Boutons - MINIMAL */
+  a[style*="padding"],
+  button[style*="padding"] {
+    padding: 10px 20px !important;
+    font-size: 0.85rem !important;
   }
 }

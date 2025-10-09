@@ -341,22 +341,178 @@ const UpcomingEventsSection = memo(() => {
         </div>
       </div>
 
-      {/* Styles mobiles responsive */}
+      {/* Styles mobiles responsive - LESS IS MORE */}
       <style jsx>{`
         @media (max-width: 768px) {
           section {
-            padding: 80px 0 !important;
+            padding: 60px 0 !important;
           }
 
+          /* Header - COMPACT */
+          section > div > div:first-child {
+            margin-bottom: 2.5rem !important;
+          }
+
+          /* Badge saison */
+          section > div > div:first-child > div:first-child {
+            padding: 6px 16px !important;
+            font-size: 0.75rem !important;
+            margin-bottom: 1rem !important;
+          }
+
+          /* Titre H2 */
+          section h2 {
+            font-size: 2rem !important;
+            margin-bottom: 0.75rem !important;
+          }
+
+          /* Sous-titre */
+          section > div > div:first-child > p {
+            font-size: 1rem !important;
+            line-height: 1.5 !important;
+          }
+
+          /* Grid événements */
           :global(.upcoming-events-grid) {
             grid-template-columns: 1fr !important;
-            gap: 1.25rem !important;
+            gap: 1rem !important;
+            margin-bottom: 2.5rem !important;
+          }
+
+          /* Cards événements - COMPACT */
+          :global(.upcoming-events-grid) > div {
+            padding: 1.25rem !important;
+            border-radius: 16px !important;
+          }
+
+          /* Badge featured */
+          :global(.upcoming-events-grid) > div > div:first-child {
+            width: 10px !important;
+            height: 10px !important;
+            top: 0.75rem !important;
+            right: 0.75rem !important;
+          }
+
+          /* Date circle - SMALLER */
+          :global(.upcoming-events-grid) > div > div:nth-child(2) > div:first-child {
+            width: 60px !important;
+            height: 60px !important;
+          }
+
+          /* Jour dans cercle */
+          :global(.upcoming-events-grid) > div > div:nth-child(2) > div:first-child > span:first-child {
+            font-size: 1.25rem !important;
+          }
+
+          /* Mois dans cercle */
+          :global(.upcoming-events-grid) > div > div:nth-child(2) > div:first-child > span:last-child {
+            font-size: 0.6rem !important;
+          }
+
+          /* Catégorie */
+          :global(.upcoming-events-grid) > div > div:nth-child(2) > div:last-child > div:first-child > span:last-child {
+            font-size: 0.7rem !important;
+          }
+
+          /* Titre événement */
+          :global(.upcoming-events-grid) h3 {
+            font-size: 1.15rem !important;
+            margin-bottom: 0.4rem !important;
+          }
+
+          /* Collaboration */
+          :global(.upcoming-events-grid) > div > div:nth-child(2) > div:last-child > div:nth-child(2) {
+            font-size: 0.8rem !important;
+            margin-bottom: 0.25rem !important;
+          }
+
+          /* Heure et lieu */
+          :global(.upcoming-events-grid) > div > div:nth-child(2) > div:last-child > div:nth-child(3) {
+            font-size: 0.85rem !important;
+            margin-bottom: 0.75rem !important;
+          }
+
+          /* Description - LIMIT 1 LINE */
+          :global(.upcoming-events-grid) > div > p {
+            font-size: 0.85rem !important;
+            line-height: 1.4 !important;
+            margin-bottom: 1rem !important;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 2 !important;
+            -webkit-box-orient: vertical !important;
+            overflow: hidden !important;
+          }
+
+          /* CTA Détails */
+          :global(.upcoming-events-grid) > div > div:last-child {
+            font-size: 0.85rem !important;
+          }
+
+          /* CTA vers agenda */
+          section > div > div:last-child a {
+            padding: 12px 28px !important;
+            font-size: 0.9rem !important;
           }
         }
 
         @media (max-width: 640px) {
           section {
-            padding: 60px 0 !important;
+            padding: 40px 0 !important;
+          }
+
+          section > div {
+            padding: 0 1rem !important;
+          }
+
+          /* Header */
+          section > div > div:first-child {
+            margin-bottom: 2rem !important;
+          }
+
+          section h2 {
+            font-size: 1.75rem !important;
+          }
+
+          section > div > div:first-child > p {
+            font-size: 0.95rem !important;
+          }
+
+          /* Grid */
+          :global(.upcoming-events-grid) {
+            gap: 0.75rem !important;
+            margin-bottom: 2rem !important;
+          }
+
+          /* Cards */
+          :global(.upcoming-events-grid) > div {
+            padding: 1rem !important;
+          }
+
+          /* Date circle */
+          :global(.upcoming-events-grid) > div > div:nth-child(2) > div:first-child {
+            width: 55px !important;
+            height: 55px !important;
+          }
+
+          :global(.upcoming-events-grid) > div > div:nth-child(2) > div:first-child > span:first-child {
+            font-size: 1.15rem !important;
+          }
+
+          /* Titre */
+          :global(.upcoming-events-grid) h3 {
+            font-size: 1.05rem !important;
+          }
+
+          /* Description - 1 LINE ONLY */
+          :global(.upcoming-events-grid) > div > p {
+            -webkit-line-clamp: 1 !important;
+            font-size: 0.8rem !important;
+          }
+
+          /* CTA */
+          section > div > div:last-child a {
+            padding: 10px 24px !important;
+            font-size: 0.85rem !important;
           }
         }
       `}</style>
