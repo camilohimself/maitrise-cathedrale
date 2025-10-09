@@ -22,7 +22,8 @@
       "artists": ["Ensemble Vocal de la Maîtrise", "Ensemble Barberine"],
       "featured": true,
       "category": "baroque",
-      "image": "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp"
+      "image": "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
+      "ticketUrl": "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1"
     },
     {
       "id": 2,
@@ -30,7 +31,7 @@
       "subtitle": "Ex tenebris lux : Gesualdo, Bruckner, Poulenc",
       "type": "concert",
       "date": "2025-12-07",
-      "day": "Dimanche", 
+      "day": "Dimanche",
       "time": "17:00",
       "duration": 90,
       "composers": ["Gesualdo", "Bruckner", "Poulenc"],
@@ -43,7 +44,8 @@
       },
       "featured": false,
       "category": "vocal",
-      "image": "/images/artistes/choeur-novantiqua/novantiqua-2-card.jpg"
+      "image": "/images/artistes/choeur-novantiqua/novantiqua-2-card.jpg",
+      "ticketUrl": "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f2"
     },
     {
       "id": 3,
@@ -58,7 +60,8 @@
       "artists": ["École Maîtrisienne", "Chœur des Collèges de Sion"],
       "featured": false,
       "category": "jeunesse",
-      "image": "/images/artistes/ecole-maitrisienne/ecole-stamm-card.webp"
+      "image": "/images/artistes/ecole-maitrisienne/ecole-stamm-card.webp",
+      "ticketUrl": "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f3"
     },
     {
       "id": 4,
@@ -76,7 +79,8 @@
       "directors": ["Jean-David Waeber", "Daniela Numico"],
       "featured": true,
       "category": "baroque",
-      "image": "/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp"
+      "image": "/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp",
+      "ticketUrl": "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f4"
     },
     {
       "id": 5,
@@ -99,7 +103,8 @@
       "featured": true,
       "category": "renaissance",
       "prestige": true,
-      "image": "/images/artistes/stile-antico/stile-antico-1-hero.jpg"
+      "image": "/images/artistes/stile-antico/stile-antico-1-hero.jpg",
+      "ticketUrl": "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5"
     }
   ],
   "artists": [

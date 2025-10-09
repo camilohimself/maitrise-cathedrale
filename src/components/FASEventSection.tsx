@@ -30,6 +30,7 @@ interface Event {
     time: string;
   };
   special?: string;
+  ticketUrl?: string;
 }
 
 const FASEventSection = () => {
@@ -243,15 +244,13 @@ const FASEventSection = () => {
             marginBottom: '24px',
             fontFamily: 'var(--font-spectral), Georgia, serif'
           }}>
-            L'événement du
-            <span style={{
-              display: 'block',
+            L'événement du <span style={{
               fontWeight: '700',
               background: 'linear-gradient(45deg, #A78BFA, #C4B5FD)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
-            }}>Moment</span>
+            }}>moment</span>
           </h2>
         </div>
 
@@ -433,33 +432,41 @@ const FASEventSection = () => {
                 gap: '16px',
                 flexWrap: 'wrap'
               }}>
-                <button className="btn-gold" style={{
-                  padding: '16px 32px',
-                  background: 'linear-gradient(45deg, #5B21B6, #6B46C1)',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '8px',
-                  fontSize: '1rem',
-                  fontWeight: '600',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                  boxShadow: '0 8px 32px rgba(107, 70, 193, 0.3)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
-                  e.currentTarget.style.boxShadow = '0 16px 48px rgba(107, 70, 193, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(107, 70, 193, 0.3)';
-                }}>
+                <a
+                  href={events[0].ticketUrl || 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&num=6395'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-gold"
+                  style={{
+                    display: 'inline-block',
+                    padding: '16px 32px',
+                    background: 'linear-gradient(45deg, #5B21B6, #6B46C1)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '8px',
+                    fontSize: '1rem',
+                    fontWeight: '600',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    boxShadow: '0 8px 32px rgba(107, 70, 193, 0.3)',
+                    textDecoration: 'none'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = '0 16px 48px rgba(107, 70, 193, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(107, 70, 193, 0.3)';
+                  }}
+                >
                   Réserver maintenant
-                </button>
+                </a>
 
-                <Link 
-                  href="https://billetterie-externe.com/maitrise-cathedrale"
+                <Link
+                  href="/agenda-billetterie"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
