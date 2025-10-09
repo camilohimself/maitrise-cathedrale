@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const FASConcertsList = () => {
   const [hoveredConcert, setHoveredConcert] = useState<number | null>(null);
@@ -30,7 +31,8 @@ const FASConcertsList = () => {
       cardImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
       color: "#D2374C",
       featured: true,
-      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1",
+      artistSlug: "ensemble-vocal"
     },
     {
       id: 2,
@@ -42,7 +44,8 @@ const FASConcertsList = () => {
       description: "Programme a cappella raffiné autour de Gesualdo, Bruckner et Poulenc, précédé d'une conférence de Marie Favre.",
       cardImage: "/images/artistes/choeur-novantiqua/novantiqua-1-card.webp",
       color: "#8B7BB8",
-      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f2"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f2",
+      artistSlug: "choeur-novantiqua"
     },
     {
       id: 3,
@@ -54,7 +57,8 @@ const FASConcertsList = () => {
       description: "Concert mettant à l'honneur la jeunesse avec l'École Maîtrisienne et le Chœur des Collèges de Sion.",
       cardImage: "/images/artistes/ecole-maitrisienne/ecole-stamm-card.webp",
       color: "#FF6B9D",
-      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f3"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f3",
+      artistSlug: "ecole-maitrisienne"
     },
     {
       id: 4,
@@ -66,7 +70,8 @@ const FASConcertsList = () => {
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales pour voix de femmes.",
       cardImage: "/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp",
       color: "#D2374C",
-      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f4"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f4",
+      artistSlug: "ensemble-ad-astra"
     },
     {
       id: 5,
@@ -80,7 +85,8 @@ const FASConcertsList = () => {
       cardImage: "/images/artistes/stile-antico/stile-antico-1-card.webp",
       color: "#D4AF37",
       prestige: true,
-      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5",
+      artistSlug: "stile-antico"
     }
   ];
 
@@ -453,17 +459,34 @@ Cinq rendez-vous d'exception
                   {getCategoryLabel(concert.category)}
                 </div>
 
-                {/* Titre - Serif uniquement + taille 60+ */}
-                <h3 style={{
-                  fontSize: 'clamp(1.5rem, 3vw, 2.1rem)',
-                  fontWeight: '600',
-                  marginBottom: '1rem',
-                  fontFamily: 'var(--font-spectral)',
-                  lineHeight: '1.3',
-                  color: 'var(--color-navy)'
-                }}>
-                  {concert.title}
-                </h3>
+                {/* Titre - Serif uniquement + taille 60+ + Cliquable */}
+                <Link
+                  href={`/fas/artiste/${concert.artistSlug}`}
+                  style={{
+                    textDecoration: 'none',
+                    color: 'inherit',
+                    display: 'block',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = 'var(--color-gold)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = 'var(--color-navy)';
+                  }}
+                >
+                  <h3 style={{
+                    fontSize: 'clamp(1.5rem, 3vw, 2.1rem)',
+                    fontWeight: '600',
+                    marginBottom: '1rem',
+                    fontFamily: 'var(--font-spectral)',
+                    lineHeight: '1.3',
+                    color: 'inherit',
+                    cursor: 'pointer'
+                  }}>
+                    {concert.title}
+                  </h3>
+                </Link>
 
                 {/* Collaboration si présente */}
                 {concert.collaboration && (
