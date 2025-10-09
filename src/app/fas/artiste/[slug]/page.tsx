@@ -512,12 +512,12 @@ export default function ArtistePage() {
                       <p style={{
                         marginTop: '1rem',
                         padding: '0.75rem',
-                        background: 'rgba(227, 50, 65, 0.1)',
-                        borderLeft: '3px solid var(--color-red)',
+                        background: 'rgba(245, 158, 11, 0.1)',
+                        borderLeft: '3px solid #F59E0B',
                         borderRadius: '4px',
                         fontSize: '0.85rem',
                         fontWeight: '600',
-                        color: 'var(--color-red)'
+                        color: '#D97706'
                       }}>
                         ⚠️ {artiste.practicalInfo.pricing.note}
                       </p>
