@@ -240,7 +240,7 @@ export default function AgendaBilletterie() {
                   e.currentTarget.style.boxShadow = '0 8px 25px rgba(212, 165, 116, 0.35)';
                 }}
               >
-                🎫 Billetterie en ligne
+                Billetterie en ligne
               </a>
             </div>
 
