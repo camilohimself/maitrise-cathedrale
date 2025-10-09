@@ -129,6 +129,7 @@ const Header = () => {
                 objectFit: 'contain',
                 objectPosition: 'center'
               }}
+              className="header-logo"
               priority
             />
           </Link>
@@ -389,6 +390,7 @@ const Header = () => {
           }
         }
 
+        /* Mobile optimizations */
         @media (max-width: 768px) {
           button[aria-label="Menu"] {
             display: flex !important;
@@ -396,6 +398,22 @@ const Header = () => {
 
           .mobile-menu {
             animation: fadeIn 0.3s ease-out;
+          }
+
+          nav {
+            height: 70px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          :global(.header-logo) {
+            height: 55px !important;
+            max-width: 90vw;
+          }
+
+          nav {
+            height: 65px !important;
+            padding: 0 1rem !important;
           }
         }
 

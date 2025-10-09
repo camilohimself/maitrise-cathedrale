@@ -1,0 +1,117 @@
+/*
+ * Styles responsive globaux pour tous les composants FAS (Festival d'Art Sacré)
+ * Appliqués automatiquement pour optimiser mobile
+ */
+
+/* Tablet et mobile (768px et moins) */
+@media (max-width: 768px) {
+  /* Sections FAS générales */
+  section[style*="background: '#1a1340'"],
+  section[style*="backgroundColor: '#1a1340'"] {
+    padding: 60px 20px !important;
+  }
+
+  /* Grids concerts et artistes */
+  div[style*="gridTemplateColumns"][style*="repeat"],
+  div[style*="grid-template-columns"][style*="repeat"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Cards artistes et concerts */
+  div[style*="minmax(300px"],
+  div[style*="minmax(350px"],
+  div[style*="minmax(400px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Images artistes */
+  div[style*="height"][style*="400px"],
+  div[style*="height"][style*="500px"] {
+    height: 280px !important;
+  }
+
+  /* Titres FAS */
+  h1[style*="fontSize"][style*="3rem"],
+  h1[style*="fontSize"][style*="4rem"],
+  h1[style*="fontSize"][style*="5rem"] {
+    font-size: 2rem !important;
+  }
+
+  h2[style*="fontSize"][style*="3rem"],
+  h2[style*="fontSize"][style*="2.5rem"] {
+    font-size: 1.8rem !important;
+  }
+
+  /* Padding containers */
+  div[style*="padding: '0 4rem'"],
+  div[style*="padding: '0 3rem'"] {
+    padding: 0 1.5rem !important;
+  }
+
+  /* Boutons FAS */
+  a[style*="padding"][style*="40px"],
+  a[style*="padding"][style*="36px"] {
+    padding: 14px 28px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Petits mobiles (640px et moins) */
+@media (max-width: 640px) {
+  /* Sections réduites */
+  section[style*="background: '#1a1340'"],
+  section[style*="backgroundColor: '#1a1340'"] {
+    padding: 40px 16px !important;
+  }
+
+  /* Images plus compactes */
+  div[style*="height"][style*="400px"],
+  div[style*="height"][style*="500px"],
+  div[style*="height"][style*="280px"] {
+    height: 240px !important;
+  }
+
+  /* Titres encore réduits */
+  h1[style*="fontSize"] {
+    font-size: 1.75rem !important;
+  }
+
+  h2[style*="fontSize"] {
+    font-size: 1.5rem !important;
+  }
+
+  h3[style*="fontSize"] {
+    font-size: 1.3rem !important;
+  }
+
+  /* Paragraphes lisibles */
+  p[style*="fontSize: '1.2rem'"],
+  p[style*="fontSize: '1.25rem'"],
+  p[style*="fontSize: '1.3rem'"] {
+    font-size: 1rem !important;
+  }
+
+  /* Padding compacts */
+  div[style*="padding: '2rem'"],
+  div[style*="padding: '3rem'"] {
+    padding: 1.25rem !important;
+  }
+
+  /* Border radius */
+  div[style*="borderRadius: '24px'"],
+  div[style*="borderRadius: '30px'"] {
+    border-radius: 16px !important;
+  }
+
+  div[style*="borderRadius: '20px'"] {
+    border-radius: 14px !important;
+  }
+
+  /* Gap réduits */
+  div[style*="gap: '2rem'"],
+  div[style*="gap: '2.5rem'"],
+  div[style*="gap: '3rem'"] {
+    gap: 1.25rem !important;
+  }
+}

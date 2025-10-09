@@ -223,6 +223,23 @@ const HeroOptionB_DegradueVitrail = () => {
         </div>
       </div>
 
+      {/* Styles mobiles responsive */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          section {
+            min-height: 80vh !important;
+            height: auto !important;
+            padding: 120px 1.5rem 80px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          section {
+            min-height: 70vh !important;
+            padding: 100px 1rem 60px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };

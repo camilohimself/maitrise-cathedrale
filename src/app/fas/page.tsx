@@ -1,3 +1,4 @@
+import '@/components/fas-responsive.css';
 import FASHeroCinematic from '@/components/FASHeroCinematic';
 import FASConcertsList from '@/components/FASConcertsList';
 import FASArtistesSection from '@/components/FASArtistesSection';

@@ -1,15 +1,23 @@
-/* Styles pour EventCard - reproduction exacte de la maquette */
+/* Styles pour EventCard - Optimisation mobile complète */
 
 .eventCard {
-  /* Responsive pour mobile */
+  /* Tablet et mobile */
   @media (max-width: 768px) {
     flex-direction: column !important;
     height: auto !important;
     border-radius: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Petits mobiles */
+  @media (max-width: 640px) {
+    border-radius: 16px !important;
+    margin-bottom: 16px !important;
   }
 }
 
 .dateSection {
+  /* Tablet et mobile */
   @media (max-width: 768px) {
     width: 100% !important;
     padding: 16px !important;
@@ -17,26 +25,51 @@
     border-bottom: 1px solid rgba(26, 19, 64, 0.1) !important;
     flex-direction: row !important;
     justify-content: space-around !important;
+    align-items: center !important;
+  }
+
+  /* Petits mobiles */
+  @media (max-width: 640px) {
+    padding: 12px !important;
+    gap: 8px !important;
   }
 }
 
 .contentSection {
+  /* Tablet et mobile */
   @media (max-width: 768px) {
     padding: 16px !important;
+  }
+
+  /* Petits mobiles */
+  @media (max-width: 640px) {
+    padding: 12px !important;
   }
 }
 
 .imageSection {
+  /* Tablet et mobile */
   @media (max-width: 768px) {
     width: 100% !important;
-    height: 200px !important;
+    height: 220px !important;
     border-radius: 0 0 17px 17px !important;
+  }
+
+  /* Petits mobiles */
+  @media (max-width: 640px) {
+    height: 180px !important;
+    border-radius: 0 0 13px 13px !important;
   }
 }
 
 /* Styles pour la taille du jour sur mobile */
-@media (max-width: 768px) {
-  .dayNumber {
+.dayNumber {
+  @media (max-width: 768px) {
+    font-size: 56px !important;
+    line-height: 1 !important;
+  }
+
+  @media (max-width: 640px) {
     font-size: 48px !important;
   }
 }

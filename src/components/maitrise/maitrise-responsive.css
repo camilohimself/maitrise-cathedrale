@@ -1,0 +1,110 @@
+/*
+ * Styles responsive globaux pour toutes les sections de la page /maitrise
+ * Appliqués automatiquement via CSS Modules
+ */
+
+/* Tablet et mobile (768px et moins) */
+@media (max-width: 768px) {
+  /* Sections générales */
+  section[class*="Section"] {
+    padding: 60px 20px !important;
+  }
+
+  /* Grids 2 colonnes → 1 colonne */
+  div[style*="gridTemplateColumns"][style*="1fr 1fr"],
+  div[style*="grid-template-columns"][style*="1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  /* Images et hauteurs fixes */
+  div[style*="height: '500px'"],
+  div[style*="height: '600px'"],
+  div[style*="height: '400px'"] {
+    height: 350px !important;
+  }
+
+  /* Padding des containers */
+  div[style*="padding: '0 2rem'"] {
+    padding: 0 1.5rem !important;
+  }
+
+  div[style*="padding: '0 4rem'"] {
+    padding: 0 1.5rem !important;
+  }
+
+  /* Titres sections */
+  h2[style*="fontSize"][style*="4rem"],
+  h2[style*="fontSize"][style*="3.5rem"],
+  h2[style*="fontSize"][style*="3rem"] {
+    font-size: 2.2rem !important;
+  }
+
+  h3[style*="fontSize"][style*="2rem"],
+  h3[style*="fontSize"][style*="1.8rem"] {
+    font-size: 1.6rem !important;
+  }
+
+  /* Cards et highlights grids */
+  div[style*="minmax(280px"],
+  div[style*="minmax(300px"],
+  div[style*="minmax(350px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Petits mobiles (640px et moins) */
+@media (max-width: 640px) {
+  /* Sections générales */
+  section[class*="Section"] {
+    padding: 40px 16px !important;
+  }
+
+  /* Images réduites */
+  div[style*="height: '500px'"],
+  div[style*="height: '600px'"],
+  div[style*="height: '400px'"],
+  div[style*="height: '350px'"] {
+    height: 280px !important;
+  }
+
+  /* Padding réduits */
+  div[style*="padding: '2rem'"] {
+    padding: 1.25rem !important;
+  }
+
+  div[style*="padding: '3rem'"] {
+    padding: 1.5rem !important;
+  }
+
+  /* Titres encore plus petits */
+  h2[style*="fontSize"] {
+    font-size: 1.8rem !important;
+  }
+
+  h3[style*="fontSize"] {
+    font-size: 1.4rem !important;
+  }
+
+  p[style*="fontSize: '1.2rem'"],
+  p[style*="fontSize: '1.3rem'"] {
+    font-size: 1.05rem !important;
+  }
+
+  /* Boutons CTA */
+  a[style*="padding: '16px"],
+  a[style*="padding: '18px"] {
+    padding: 14px 24px !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Bordures radius */
+  div[style*="borderRadius: '30px'"],
+  div[style*="borderRadius: '24px'"] {
+    border-radius: 16px !important;
+  }
+
+  div[style*="borderRadius: '20px'"] {
+    border-radius: 14px !important;
+  }
+}

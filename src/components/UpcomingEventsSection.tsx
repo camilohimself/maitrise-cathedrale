@@ -119,7 +119,7 @@ const UpcomingEventsSection = memo(() => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '1.5rem',
           marginBottom: '4rem',
-        }}>
+        }} className="upcoming-events-grid">
           {upcomingEvents.map((event, index) => (
             <div
               key={event.id}
@@ -340,6 +340,26 @@ const UpcomingEventsSection = memo(() => {
           </Link>
         </div>
       </div>
+
+      {/* Styles mobiles responsive */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          section {
+            padding: 80px 0 !important;
+          }
+
+          :global(.upcoming-events-grid) {
+            grid-template-columns: 1fr !important;
+            gap: 1.25rem !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          section {
+            padding: 60px 0 !important;
+          }
+        }
+      `}</style>
     </section>
   );
 });

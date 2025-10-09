@@ -18,7 +18,7 @@ const Footer = () => {
         maxWidth: '1400px',
         margin: '0 auto',
         padding: '100px 40px 50px'
-      }}>
+      }} className="footer-container">
         {/* Header avec logo imposant - Style Royal Opera House */}
         <div style={{
           background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.08) 0%, rgba(212, 165, 116, 0.02) 100%)',
@@ -27,7 +27,7 @@ const Footer = () => {
           marginBottom: '80px',
           textAlign: 'center',
           border: '1px solid rgba(212, 165, 116, 0.1)'
-        }}>
+        }} className="footer-header">
           <Image
             src="/images/logo-mc-footer.png"
             alt="Maîtrise Cathédrale de Sion"
@@ -40,15 +40,16 @@ const Footer = () => {
               marginBottom: '40px',
               filter: 'brightness(1.1)'
             }}
+            className="footer-logo"
           />
-          
+
           <h1 style={{
             fontSize: '48px',
             fontWeight: '400',
             marginBottom: '20px',
             color: '#ffffff',
             letterSpacing: '0.5px'
-          }}>
+          }} className="footer-title">
             Maîtrise Cathédrale de Sion
           </h1>
           
@@ -373,9 +374,44 @@ const Footer = () => {
       {/* Mobile Responsive */}
       <style jsx>{`
         @media (max-width: 768px) {
-          .footer-grid {
-            grid-template-columns: 1fr !important;
-            gap: 30px !important;
+          :global(.footer-container) {
+            padding: 60px 20px 40px !important;
+          }
+
+          :global(.footer-header) {
+            padding: 40px 20px !important;
+            margin-bottom: 50px !important;
+            border-radius: 16px !important;
+          }
+
+          :global(.footer-logo) {
+            height: 90px !important;
+            max-width: 100%;
+            margin-bottom: 30px !important;
+          }
+
+          :global(.footer-title) {
+            font-size: 28px !important;
+            margin-bottom: 15px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          :global(.footer-container) {
+            padding: 40px 16px 30px !important;
+          }
+
+          :global(.footer-header) {
+            padding: 30px 16px !important;
+            margin-bottom: 40px !important;
+          }
+
+          :global(.footer-logo) {
+            height: 70px !important;
+          }
+
+          :global(.footer-title) {
+            font-size: 24px !important;
           }
         }
       `}</style>

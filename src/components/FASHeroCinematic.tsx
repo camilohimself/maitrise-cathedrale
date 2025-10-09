@@ -446,6 +446,66 @@ const FASHeroCinematic = () => {
             transform: translateY(0);
           }
         }
+
+        /* Optimisations mobile Hero FAS */
+        @media (max-width: 768px) {
+          section {
+            min-height: 80vh !important;
+            height: auto !important;
+          }
+
+          /* Boutons navigation réduits */
+          button[style*="4rem"] {
+            width: 3rem !important;
+            height: 3rem !important;
+            font-size: 1.2rem !important;
+          }
+
+          /* Dots navigation plus petits */
+          div[style*="bottom"][style*="3rem"] {
+            bottom: 1.5rem !important;
+            gap: 0.5rem !important;
+          }
+
+          /* Flèches repositionnées */
+          button[style*="left: 3rem"] {
+            left: 1rem !important;
+          }
+
+          button[style*="right: 3rem"] {
+            right: 1rem !important;
+          }
+
+          /* Play/pause repositionné */
+          button[style*="top: 3rem"][style*="right: 3rem"] {
+            top: 1rem !important;
+            right: 1rem !important;
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          section {
+            min-height: 70vh !important;
+            padding: 100px 1rem 60px !important;
+          }
+
+          /* Boutons navigation encore plus petits */
+          button[style*="left"] {
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+            font-size: 1rem !important;
+            left: 0.5rem !important;
+          }
+
+          button[style*="right"] {
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+            font-size: 1rem !important;
+            right: 0.5rem !important;
+          }
+        }
       `}</style>
     </section>
   );

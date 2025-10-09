@@ -1,0 +1,192 @@
+/*
+ * Styles responsive globaux pour TOUTES les pages du site
+ * /media, /soutenir, /agenda-billetterie, etc.
+ */
+
+/* Tablet et mobile (768px et moins) */
+@media (max-width: 768px) {
+  /* Sections générales toutes pages */
+  section {
+    padding: 60px 20px !important;
+  }
+
+  /* Containers principaux */
+  div[style*="maxWidth: '1400px'"],
+  div[style*="maxWidth: '1200px'"],
+  div[style*="max-width: 1400px"],
+  div[style*="max-width: 1200px"] {
+    padding: 0 1.5rem !important;
+  }
+
+  /* Grids 2-3 colonnes → 1 colonne */
+  div[style*="gridTemplateColumns"][style*="1fr 1fr"],
+  div[style*="gridTemplateColumns"][style*="1fr 1fr 1fr"],
+  div[style*="grid-template-columns"][style*="repeat(2"],
+  div[style*="grid-template-columns"][style*="repeat(3"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Auto-fit grids */
+  div[style*="repeat(auto-fit"],
+  div[style*="repeat(auto-fill"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Titres pages H1 */
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Titres sections H2 */
+  h2 {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Sous-titres H3 */
+  h3 {
+    font-size: 1.4rem !important;
+  }
+
+  /* Paragraphes */
+  p[style*="fontSize: '1.2rem'"],
+  p[style*="fontSize: '1.3rem'"],
+  p[style*="fontSize: '1.4rem'"] {
+    font-size: 1.05rem !important;
+  }
+
+  /* Padding conteneurs */
+  div[style*="padding: '60px'"],
+  div[style*="padding: '80px'"] {
+    padding: 40px 20px !important;
+  }
+
+  div[style*="padding: '40px'"],
+  div[style*="padding: '50px'"] {
+    padding: 30px 20px !important;
+  }
+
+  /* Images avec hauteurs fixes */
+  div[style*="height: '500px'"],
+  div[style*="height: '600px'"] {
+    height: 300px !important;
+  }
+
+  div[style*="height: '400px'"] {
+    height: 250px !important;
+  }
+
+  /* Boutons CTA généraux */
+  a[style*="padding"][style*="16px 32px"],
+  a[style*="padding"][style*="18px 40px"],
+  button[style*="padding"][style*="16px 32px"] {
+    padding: 14px 28px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Petits mobiles (640px et moins) */
+@media (max-width: 640px) {
+  /* Sections ultra-compactes */
+  section {
+    padding: 40px 16px !important;
+  }
+
+  /* Containers réduits */
+  div[style*="maxWidth"],
+  div[style*="max-width"] {
+    padding: 0 1rem !important;
+  }
+
+  /* Titres optimisés */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Paragraphes compacts */
+  p {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Padding ultra-réduits */
+  div[style*="padding: '2rem'"],
+  div[style*="padding: '3rem'"] {
+    padding: 1.25rem !important;
+  }
+
+  div[style*="padding: '60px'"],
+  div[style*="padding: '80px'"],
+  div[style*="padding: '40px'"] {
+    padding: 24px 16px !important;
+  }
+
+  /* Images compactes */
+  div[style*="height"][style*="px"] {
+    min-height: 200px !important;
+    max-height: 280px !important;
+  }
+
+  /* Boutons tactiles */
+  a[style*="padding"],
+  button[style*="padding"] {
+    min-height: 44px !important;
+    padding: 12px 24px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Border radius réduits */
+  div[style*="borderRadius: '30px'"],
+  div[style*="borderRadius: '24px'"] {
+    border-radius: 16px !important;
+  }
+
+  div[style*="borderRadius: '20px'"] {
+    border-radius: 12px !important;
+  }
+
+  /* Gap grids */
+  div[style*="gap"][style*="rem"] {
+    gap: 1rem !important;
+  }
+
+  /* Margin bottom */
+  div[style*="marginBottom"][style*="rem"],
+  h1[style*="marginBottom"],
+  h2[style*="marginBottom"] {
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Très petits écrans (480px et moins) */
+@media (max-width: 480px) {
+  /* Ultra-compact */
+  section {
+    padding: 32px 12px !important;
+  }
+
+  h1 {
+    font-size: 1.5rem !important;
+  }
+
+  h2 {
+    font-size: 1.3rem !important;
+  }
+
+  /* Boutons full-width si nécessaire */
+  a[style*="padding"],
+  button[style*="padding"] {
+    width: 100%;
+    max-width: 100%;
+  }
+}

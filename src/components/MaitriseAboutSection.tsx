@@ -127,7 +127,7 @@ const MaitriseAboutSection = () => {
           gap: '4rem',
           alignItems: 'center',
           marginBottom: '5rem',
-        }}>
+        }} className="maitrise-about-grid">
           
           {/* Image side */}
           <div style={{
@@ -397,6 +397,30 @@ const MaitriseAboutSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Styles mobiles responsive */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          section {
+            padding: 80px 0 !important;
+          }
+
+          :global(.maitrise-about-grid) {
+            grid-template-columns: 1fr !important;
+            gap: 2.5rem !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          section {
+            padding: 60px 0 !important;
+          }
+
+          :global(.maitrise-about-grid) {
+            gap: 2rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };
