@@ -182,7 +182,7 @@ const MaitriseAboutSection = () => {
               }}>
                 Former les jeunes à l'art du chant dans un esprit d'excellence
                 et de tradition, tout en participant activement à la vie liturgique
-                et culturelle de notre région.
+                et culturelle du canton.
               </p>
             </div>
 

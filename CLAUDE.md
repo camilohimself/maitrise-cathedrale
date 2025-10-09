@@ -444,6 +444,58 @@ Mission délicate de cohérence professionnelle sur tout le site :
 
 ---
 
+## 🎨 **FOOTER LOGO XXL - REDESIGN V1 MINIMALISTE (9 OCTOBRE 2025)**
+
+### **✅ VERSION ACTUELLE EN PRODUCTION**
+**Design:** V1 Minimaliste - Logo XXL fond clair crème
+**Fichier:** `/src/components/Footer.tsx` (lignes 22-139)
+**Commit:** `f3c4f0b` - "✨ FOOTER REDESIGN: Logo XXL minimaliste"
+
+#### **Caractéristiques V1 (LIVE):**
+- **Fond:** Crème clair `#FAFAF9` (contraste avec footer foncé)
+- **Logo:** 500x500px centré avec `drop-shadow(0 20px 60px rgba(0, 0, 0, 0.08))`
+- **Typographie:**
+  - Titre: Spectral 3.5rem, Navy `#1a1340`, letterspacing `-0.02em`
+  - Baseline: Outfit 1.5rem, Or `#D4A574`, letterspacing `0.02em`
+- **CTAs:**
+  - Devenir Ami: Navy `#1a1340`, hover avec shadow
+  - Festival d'Art Sacré: Transparent, border Or, hover filled
+- **Padding:** `80px 60px` (spacieux et aéré)
+
+### **💡 VARIANTE À TESTER - V2 CINÉMATIQUE (Fond sombre)**
+**Concept:** Même structure mais avec fond dégradé sombre pour plus de prestige
+
+#### **Modifications à appliquer:**
+```typescript
+// Remplacer background dans Footer.tsx ligne 24
+background: 'linear-gradient(135deg, #0a0a1a 0%, #1a1340 50%, #2a2050 100%)',
+
+// Remplacer logo ligne 43
+src="/images/logo-mc-negatif.png"  // Logo blanc pour fond foncé
+
+// Ajuster couleurs texte
+- Titre: color: '#ffffff' (blanc au lieu de navy)
+- Baseline: conserver #D4A574 (l'or ressort bien sur fond foncé)
+
+// Optionnel: Ajouter effet glow
+filter: 'drop-shadow(0 0 80px rgba(212, 165, 116, 0.4))'
+```
+
+#### **Avantages V2 Cinématique:**
+- Plus de prestige et sophistication
+- Cohérence avec footer foncé existant
+- Effet "galerie d'art" haut de gamme
+- Glow doré du logo crée ambiance sacrée
+
+#### **Quand tester V2:**
+- Si besoin de plus de prestige/luxe
+- Pour événements spéciaux (anniversaire, gala)
+- Si retour client demande plus de "profondeur"
+
+**Note:** Les 3 versions complètes sont dans `/src/app/hero-v1-minimaliste/`, `/hero-v2-cinematique/`, `/hero-v3-prestige/` (non commités, locaux uniquement)
+
+---
+
 ## 🍪 **COOKIE BANNER CONFORME LPD SUISSE - TEMPLATE AGENCE**
 
 ### **📋 ARCHITECTURE (Réutilisable pour tous projets OSOM)**

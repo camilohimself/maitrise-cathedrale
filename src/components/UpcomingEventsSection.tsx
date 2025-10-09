@@ -6,6 +6,18 @@ import { maitriseEvents, getFeaturedEvents } from '@/data/maitriseEvents';
 import { EVENT_TYPE_CONFIG } from '@/data/uiConstants';
 
 const UpcomingEventsSection = memo(() => {
+  // Mapping événement ID -> slug artiste (pour les événements FAS)
+  const getArtistSlug = useCallback((eventId: string): string | null => {
+    const slugMap: { [key: string]: string } = {
+      'nov-30-concert-fas-ensemble': 'ensemble-vocal',
+      'dec-07-concert-fas-novantiqua': 'choeur-novantiqua',
+      'dec-21-concert-fas-colleges': 'ecole-maitrisienne',
+      'dec-26-concert-ad-astra-fas': 'ensemble-ad-astra',
+      'jan-04-concert-fas-stile-antico': 'stile-antico',
+    };
+    return slugMap[eventId] || null;
+  }, []);
+
   // Filtrer les événements à venir - Utilise getUpcomingEvents() avec filtrage dynamique
   const upcomingEvents = useMemo(() => {
     const today = new Date();
@@ -120,32 +132,40 @@ const UpcomingEventsSection = memo(() => {
           gap: '1.5rem',
           marginBottom: '4rem',
         }} className="upcoming-events-grid">
-          {upcomingEvents.map((event, index) => (
-            <div
-              key={event.id}
-              style={{
-                backgroundColor: 'var(--color-cream)',
-                borderRadius: '20px',
-                padding: '2rem',
-                border: '2px solid transparent',
-                position: 'relative',
-                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                cursor: 'pointer',
-                overflow: 'hidden',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.backgroundColor = 'var(--color-white)';
-                e.currentTarget.style.borderColor = 'rgba(227, 50, 65, 0.2)';
-                e.currentTarget.style.boxShadow = '0 15px 35px rgba(227, 50, 65, 0.12)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.backgroundColor = 'var(--color-cream)';
-                e.currentTarget.style.borderColor = 'transparent';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
+          {upcomingEvents.map((event, index) => {
+            const artistSlug = getArtistSlug(event.id);
+            const CardWrapper = artistSlug ? Link : 'div';
+            const cardProps = artistSlug ? { href: `/fas/artiste/${artistSlug}` } : {};
+
+            return (
+              <CardWrapper
+                key={event.id}
+                {...cardProps}
+                style={{
+                  display: 'block',
+                  backgroundColor: 'var(--color-cream)',
+                  borderRadius: '20px',
+                  padding: '2rem',
+                  border: '2px solid transparent',
+                  position: 'relative',
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                  cursor: 'pointer',
+                  overflow: 'hidden',
+                  textDecoration: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.backgroundColor = 'var(--color-white)';
+                  e.currentTarget.style.borderColor = 'rgba(227, 50, 65, 0.2)';
+                  e.currentTarget.style.boxShadow = '0 15px 35px rgba(227, 50, 65, 0.12)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.backgroundColor = 'var(--color-cream)';
+                  e.currentTarget.style.borderColor = 'transparent';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
               {/* Badge featured */}
               {event.featured && (
                 <div style={{
@@ -295,8 +315,9 @@ const UpcomingEventsSection = memo(() => {
                   </svg>
                 </div>
               </div>
-            </div>
-          ))}
+            </CardWrapper>
+          );
+          })}
         </div>
 
         {/* CTA vers agenda complet */}
