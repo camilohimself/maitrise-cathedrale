@@ -371,47 +371,142 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Mobile Responsive */}
+      {/* Mobile Responsive - LESS IS MORE */}
       <style jsx>{`
+        /* Tablet: Réduction modérée */
         @media (max-width: 768px) {
           :global(.footer-container) {
-            padding: 60px 20px 40px !important;
+            padding: 50px 20px 35px !important;
           }
 
           :global(.footer-header) {
-            padding: 40px 20px !important;
-            margin-bottom: 50px !important;
+            padding: 32px 20px !important;
+            margin-bottom: 40px !important;
             border-radius: 16px !important;
           }
 
           :global(.footer-logo) {
-            height: 90px !important;
+            height: 75px !important;
             max-width: 100%;
-            margin-bottom: 30px !important;
+            margin-bottom: 24px !important;
           }
 
           :global(.footer-title) {
-            font-size: 28px !important;
-            margin-bottom: 15px !important;
+            font-size: 32px !important;
+            margin-bottom: 16px !important;
+          }
+
+          footer p {
+            font-size: 18px !important;
+          }
+
+          footer a[href^="/soutenir/amis-maitrise"],
+          footer a[href^="/fas"] {
+            padding: 14px 28px !important;
+            font-size: 15px !important;
           }
         }
 
+        /* Mobile: LESS IS MORE radical */
         @media (max-width: 640px) {
           :global(.footer-container) {
             padding: 40px 16px 30px !important;
           }
 
           :global(.footer-header) {
-            padding: 30px 16px !important;
-            margin-bottom: 40px !important;
+            padding: 24px 16px !important;
+            margin-bottom: 32px !important;
+            border-radius: 12px !important;
           }
 
           :global(.footer-logo) {
-            height: 70px !important;
+            height: 60px !important;
+            margin-bottom: 20px !important;
           }
 
           :global(.footer-title) {
             font-size: 24px !important;
+            margin-bottom: 12px !important;
+            line-height: 1.3 !important;
+          }
+
+          /* Masquer tagline sur mobile */
+          footer p {
+            font-size: 16px !important;
+            display: none !important;
+          }
+
+          /* Boutons full-width */
+          footer a[href^="/soutenir/amis-maitrise"],
+          footer a[href^="/fas"] {
+            padding: 12px 24px !important;
+            font-size: 14px !important;
+            width: 100% !important;
+            display: block !important;
+            text-align: center !important;
+            box-sizing: border-box !important;
+          }
+
+          /* Grid 1 colonne forcée */
+          footer > div > div:nth-child(2) {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+          }
+
+          /* Titres sections plus petits */
+          footer h3 {
+            font-size: 16px !important;
+            margin-bottom: 16px !important;
+          }
+
+          /* Liens plus compacts */
+          footer a {
+            font-size: 14px !important;
+          }
+
+          /* Copyright compact */
+          footer > div > div:last-child {
+            padding-top: 24px !important;
+            font-size: 13px !important;
+          }
+
+          footer > div > div:last-child > div:last-child {
+            font-size: 11px !important;
+          }
+        }
+
+        /* Petits mobiles: Ultra compact */
+        @media (max-width: 480px) {
+          :global(.footer-container) {
+            padding: 32px 12px 24px !important;
+          }
+
+          :global(.footer-header) {
+            padding: 20px 12px !important;
+            margin-bottom: 24px !important;
+          }
+
+          :global(.footer-logo) {
+            height: 50px !important;
+            margin-bottom: 16px !important;
+          }
+
+          :global(.footer-title) {
+            font-size: 20px !important;
+            margin-bottom: 10px !important;
+          }
+
+          footer > div > div:nth-child(2) {
+            gap: 24px !important;
+          }
+
+          footer h3 {
+            font-size: 15px !important;
+            margin-bottom: 12px !important;
+          }
+
+          footer a {
+            font-size: 13px !important;
           }
         }
       `}</style>

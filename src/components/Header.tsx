@@ -142,7 +142,7 @@ const Header = () => {
             listStyle: 'none',
             margin: 0,
             padding: 0
-          }} className="hidden md:flex">
+          }} className="desktop-nav">
             {navigationLinks.map((link) => (
               <li key={link.href} style={{ position: 'relative' }}>
                 <Link
@@ -245,7 +245,7 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             style={{
-              display: 'none',
+              display: 'flex',
               flexDirection: 'column',
               gap: '4px',
               background: 'none',
@@ -253,7 +253,7 @@ const Header = () => {
               cursor: 'pointer',
               padding: '4px'
             }}
-            className="md:hidden"
+            className="mobile-menu-button"
             aria-label="Menu"
           >
             <span style={{
@@ -284,13 +284,15 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="mobile-menu" style={{
             position: 'absolute',
-            top: '80px',
+            top: '60px',
             left: 0,
             right: 0,
             backgroundColor: '#fff',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-            padding: '20px',
-            borderTop: '3px solid var(--color-red)'
+            padding: '16px',
+            borderTop: '2px solid var(--color-red)',
+            maxHeight: 'calc(100vh - 60px)',
+            overflowY: 'auto'
           }}>
             <ul style={{
               listStyle: 'none',
@@ -298,22 +300,22 @@ const Header = () => {
               padding: 0,
               display: 'flex',
               flexDirection: 'column',
-              gap: '20px'
+              gap: '12px'
             }}>
               {navigationLinks.map((link) => (
                 <li key={link.href}>
-                  <Link 
+                  <Link
                     href={link.href}
                     style={{
                       color: link.isActive ? 'var(--color-red)' : '#000',
                       textDecoration: 'none',
-                      fontSize: '18px',
+                      fontSize: '16px',
                       fontWeight: link.isActive ? '600' : '500',
                       fontFamily: 'var(--font-family)',
                       display: 'flex',
                       alignItems: 'center',
-                      padding: '12px 0',
-                      borderBottom: link.isActive ? '2px solid var(--color-red)' : '2px solid transparent',
+                      padding: '10px 8px',
+                      borderBottom: link.isActive ? '2px solid var(--color-red)' : '1px solid rgba(0,0,0,0.1)',
                       transition: 'all 0.3s ease'
                     }}
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -331,18 +333,18 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link 
+              <li style={{ marginTop: '8px' }}>
+                <Link
                   href="/fas"
                   style={{
-                    padding: '12px 24px',
+                    padding: '12px 20px',
                     backgroundColor: 'var(--color-purple)',
                     color: '#fff',
                     textDecoration: 'none',
-                    borderRadius: '4px',
-                    fontSize: '16px',
+                    borderRadius: '6px',
+                    fontSize: '15px',
                     fontWeight: '600',
-                    display: 'inline-block',
+                    display: 'block',
                     fontFamily: 'var(--font-family)',
                     textAlign: 'center',
                     width: '100%'
@@ -390,9 +392,28 @@ const Header = () => {
           }
         }
 
-        /* Mobile optimizations */
+        /* Desktop: Show nav, hide hamburger */
+        @media (min-width: 769px) {
+          .desktop-nav {
+            display: flex !important;
+          }
+
+          .mobile-menu-button {
+            display: none !important;
+          }
+
+          .mobile-menu {
+            display: none !important;
+          }
+        }
+
+        /* Mobile: Hide nav, show hamburger - LESS IS MORE */
         @media (max-width: 768px) {
-          button[aria-label="Menu"] {
+          .desktop-nav {
+            display: none !important;
+          }
+
+          .mobile-menu-button {
             display: flex !important;
           }
 
@@ -401,25 +422,36 @@ const Header = () => {
           }
 
           nav {
-            height: 70px !important;
+            height: 60px !important;
           }
-        }
 
-        @media (max-width: 640px) {
           :global(.header-logo) {
-            height: 55px !important;
-            max-width: 90vw;
+            height: 50px !important;
+            max-width: 65vw;
           }
 
-          nav {
-            height: 65px !important;
-            padding: 0 1rem !important;
+          header > div {
+            padding: 0 16px !important;
           }
         }
 
-        @media (min-width: 769px) {
-          .mobile-menu {
-            display: none !important;
+        /* Petits mobiles - Ultra compact */
+        @media (max-width: 480px) {
+          nav {
+            height: 55px !important;
+          }
+
+          :global(.header-logo) {
+            height: 42px !important;
+            max-width: 60vw;
+          }
+
+          header > div {
+            padding: 0 12px !important;
+          }
+
+          .mobile-menu-button {
+            padding: 8px !important;
           }
         }
       `}</style>
