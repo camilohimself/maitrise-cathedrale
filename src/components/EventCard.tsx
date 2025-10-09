@@ -63,16 +63,16 @@ const EventCard: React.FC<EventCardProps> = ({
   };
   
   const eventColors = getEventColors();
-  // Fonction pour obtenir le jour de la semaine depuis la maquette
+  // Fonction pour obtenir le jour de la semaine calculé dynamiquement
   const getDayOfWeek = () => {
-    // Pour respecter exactement la maquette, on utilise les jours affichés
-    const dayMap: { [key: string]: string } = {
-      '15': 'Jeudi',
-      '18': 'Dimanche', 
-      '25': 'Dimanche',
-      '28': 'Mercredi'
-    };
-    return dayMap[date.day] || 'Jeudi'; // Fallback
+    // Convertir le mois en numéro
+    const monthNumber = getMonthNumber(date.month);
+    // Déterminer l'année (oct-déc = 2025, jan-juin = 2026)
+    const year = parseInt(monthNumber) >= 10 ? 2025 : 2026;
+    // Créer la date et obtenir le jour de la semaine
+    const dateObj = new Date(year, parseInt(monthNumber) - 1, parseInt(date.day));
+    const daysOfWeek = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    return daysOfWeek[dateObj.getDay()];
   };
 
   // Vérifier si l'événement est payant
@@ -119,12 +119,18 @@ const EventCard: React.FC<EventCardProps> = ({
   const getMonthNumber = (month: string) => {
     const monthMap: { [key: string]: string } = {
       'AOÛT': '08',
-      'SEPT': '09', 
+      'SEPT': '09',
       'OCT': '10',
       'NOV': '11',
-      'DÉC': '12'
+      'DÉC': '12',
+      'JAN': '01',
+      'FÉV': '02',
+      'MAR': '03',
+      'AVR': '04',
+      'MAI': '05',
+      'JUIN': '06'
     };
-    return monthMap[month] || '08';
+    return monthMap[month] || '01';
   };
 
   // Convertir l'heure en format 24h
