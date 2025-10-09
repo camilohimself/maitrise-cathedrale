@@ -15,6 +15,7 @@ const FASHighlightSection = () => {
       category: "OUVERTURE",
       description: "Concert d'ouverture avec l'Ensemble Barberine dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue.",
       image: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
+      slug: "ensemble-vocal",
       featured: true
     },
     {
@@ -26,6 +27,7 @@ const FASHighlightSection = () => {
       category: "BAROQUE",
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leur version originale pour voix de femmes avec Jean-David Waeber et Daniela Numico.",
       image: "/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp",
+      slug: "ensemble-ad-astra",
       featured: true
     },
     {
@@ -38,6 +40,7 @@ const FASHighlightSection = () => {
       category: "PRESTIGE",
       description: "L'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Giovanni Pierluigi da Palestrina. Un des meilleurs ensembles vocaux au monde.",
       image: "/images/artistes/stile-antico/stile-antico-1-card.webp",
+      slug: "stile-antico",
       prestige: true
     }
   ];
@@ -126,7 +129,7 @@ const FASHighlightSection = () => {
           {highlightEvents.map((event, index) => (
             <Link
               key={event.id}
-              href="/fas"
+              href={`/fas/artiste/${event.slug}`}
               style={{
                 backgroundColor: 'var(--color-white)',
                 borderRadius: '20px',
