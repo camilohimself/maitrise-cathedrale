@@ -667,9 +667,10 @@ export default function ArtistePage() {
           <div style={{
             marginTop: '2rem',
             padding: '24px',
-            background: '#E33241',
+            background: 'linear-gradient(135deg, #C62828 0%, #E33241 100%)',
             borderRadius: '20px',
-            textAlign: 'center'
+            textAlign: 'center',
+            opacity: '0.92'
           }}>
             <h4 style={{
               fontSize: '1.2rem',
