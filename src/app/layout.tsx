@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
 import SkipLink from "@/components/SkipLink";
 import CookieBanner from "@/components/cookies/CookieBanner";
+import ScrollToTop from "@/components/ScrollToTop";
 
 // OUTFIT pour UI/Navigation (remplace Inter)
 const outfit = Outfit({
@@ -136,6 +137,7 @@ export default function RootLayout({
 
         <Footer />
         <CookieBanner />
+        <ScrollToTop />
       </body>
     </html>
   );
