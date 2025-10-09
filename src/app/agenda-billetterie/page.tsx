@@ -205,6 +205,45 @@ export default function AgendaBilletterie() {
               </div>
             </div>
 
+            {/* CTA Billetterie - Proéminent et centré */}
+            <div style={{
+              marginTop: '32px',
+              marginBottom: '32px',
+              textAlign: 'center'
+            }}>
+              <a
+                href="https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&num=6395"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  padding: '18px 48px',
+                  background: 'linear-gradient(135deg, var(--color-gold), #E6C068)',
+                  color: 'var(--color-purple-dark)',
+                  border: 'none',
+                  borderRadius: '30px',
+                  fontSize: '1.2rem',
+                  fontWeight: '700',
+                  fontFamily: 'var(--font-outfit)',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  textDecoration: 'none',
+                  boxShadow: '0 8px 25px rgba(212, 165, 116, 0.35)',
+                  letterSpacing: '0.02em'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 12px 35px rgba(212, 165, 116, 0.5)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(212, 165, 116, 0.35)';
+                }}
+              >
+                🎫 Billetterie en ligne
+              </a>
+            </div>
+
             {/* Filtres discrets et élégants */}
             <div style={{
               display: 'flex',
