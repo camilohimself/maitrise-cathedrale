@@ -5,6 +5,11 @@
 
 /* Tablet et mobile (768px et moins) */
 @media (max-width: 768px) {
+  /* Masquer l'organigramme Conseil de Fondation sur mobile */
+  .conseil-fondation-section {
+    display: none !important;
+  }
+
   /* Sections générales */
   section[class*="Section"] {
     padding: 60px 20px !important;

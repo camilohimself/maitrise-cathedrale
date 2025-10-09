@@ -394,6 +394,7 @@ const Header = () => {
         /* Mobile-first: Hamburger par défaut */
         .mobile-menu-button {
           display: flex;
+          margin-left: auto; /* Force à droite */
         }
 
         .desktop-nav {

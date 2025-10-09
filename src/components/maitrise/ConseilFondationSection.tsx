@@ -7,7 +7,7 @@ export default function ConseilFondationSection() {
   const { bureau, membres } = organigrammeContent;
 
   return (
-    <div className="section-cream" style={{ position: 'relative' }}>
+    <div className="section-cream conseil-fondation-section" style={{ position: 'relative' }}>
       <div className="container">
 
         {/* En-tête de section */}
