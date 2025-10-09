@@ -733,7 +733,7 @@ export default function ArtistePage() {
           color: 'var(--color-gold)',
           textAlign: 'center'
         }}>
-          Autres concerts du festival
+          Autres concerts du Festival d'Art Sacré 2025
         </h2>
         
         <div style={{
