@@ -1,6 +1,6 @@
 # 🎼 Site Maîtrise de la Cathédrale de Sion
 
-## 🎯 ÉTAT ACTUEL - OCTOBRE 2025 (7 OCTOBRE - SESSION 2)
+## 🎯 ÉTAT ACTUEL - OCTOBRE 2025 (9 OCTOBRE - SESSION 3)
 
 ### ✅ **SITE V1 PRODUCTION - PRÊT MISE EN LIGNE**
 - **URL Staging:** https://maitrise-cathedrale.vercel.app
@@ -641,5 +641,66 @@ onMouseEnter={() => setShowGoldenBorder(true)}
 
 ---
 
-**Dernière mise à jour:** 7 octobre 2025 (Session 4)
-**Session actuelle:** Golden Shine CTA Effect + Cookie Banner LPD
+---
+
+## 🚀 **RÉCAPITULATIF SESSION 3 - 9 OCTOBRE 2025**
+
+### **TRAVAUX EFFECTUÉS AUJOURD'HUI:**
+
+#### **1. ✅ FIX AFFICHAGE JOURS DE LA SEMAINE (Agenda)**
+**Problème:** Tous les événements affichaient "Jeudi" au lieu du vrai jour de la semaine
+
+**Solution implémentée:**
+- Remplacement du mapping statique codé en dur par calcul dynamique
+- Calcul automatique basé sur les vraies dates (oct-déc 2025, jan-juin 2026)
+- Fonction `getDayOfWeek()` utilisant l'objet `Date` JavaScript
+- Support complet des mois janvier-juin 2026
+
+**Fichiers modifiés:**
+- `src/components/EventCard.tsx` - Fonction getDayOfWeek + getMonthNumber
+
+**Résultat:**
+- ✅ Les messes du dimanche affichent "Dimanche"
+- ✅ Tous les événements affichent le bon jour de la semaine
+- ✅ Build stable sans erreurs
+
+#### **2. ✅ OPTIMISATION CTAs PAGE FAS**
+**Audit complet des boutons d'action:**
+
+**Corrections appliquées:**
+1. **Titre "L'événement du moment"** → Sur 1 seule ligne (au lieu de 2)
+2. **Bouton "Réserver maintenant"** (section FASEventSection) → Lien fonctionnel vers billetterie du 1er événement
+3. **Lien "Voir tout l'agenda"** → Redirection vers `/agenda-billetterie` (au lieu d'URL factice)
+4. **ticketUrl ajouté** pour les 5 concerts FAS dans `fasEvents.json`
+
+**Fichiers modifiés:**
+- `src/components/FASEventSection.tsx` - Interface TypeScript + CTAs fonctionnels
+- `src/data/fasEvents.json` - Ajout propriété `ticketUrl` pour 5 événements
+
+**URLs billetterie ajoutées:**
+- Concert 1 (EVI): `...FAS+2025-26%2f1`
+- Concert 2 (Novantiqua): `...FAS25-26%2f2`
+- Concert 3 (École): `...FAS25-26%2f3`
+- Concert 4 (Ad Astra): `...FAS25-26%2f4`
+- Concert 5 (Stile Antico): `...FAS25-26%2f5`
+
+**Résultat:**
+- ✅ Tous les CTAs FAS fonctionnels
+- ✅ Navigation fluide vers billetterie et agenda
+- ✅ UX optimisée pour conversion
+
+### **COMMITS EFFECTUÉS (2):**
+- `131eac4` - 🐛 FIX: Affichage correct des jours de la semaine dans l'Agenda
+- `6d437da` - ✨ FIX CTAs PAGE FAS: Tous les boutons fonctionnels
+
+### **ÉTAT FINAL:**
+- **Build:** ✅ Stable 16 pages sans erreurs
+- **Performance:** ✅ Images WebP optimisées
+- **Navigation:** ✅ Tous les CTAs fonctionnels et testés
+- **UX:** ✅ Affichage dates correct, liens billetterie actifs
+- **Prêt prod:** 🟢 **OUI - QUALITÉ PROFESSIONNELLE GARANTIE**
+
+---
+
+**Dernière mise à jour:** 9 octobre 2025 (Session 3)
+**Session actuelle:** Fix jours semaine Agenda + Optimisation CTAs FAS
