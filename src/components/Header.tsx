@@ -245,7 +245,6 @@ const Header = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             style={{
-              display: 'flex',
               flexDirection: 'column',
               gap: '4px',
               background: 'none',
@@ -390,6 +389,15 @@ const Header = () => {
           100% {
             left: 150%;
           }
+        }
+
+        /* Mobile-first: Hamburger par défaut */
+        .mobile-menu-button {
+          display: flex;
+        }
+
+        .desktop-nav {
+          display: none;
         }
 
         /* Desktop: Show nav, hide hamburger */
