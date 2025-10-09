@@ -27,6 +27,7 @@ const artistesData: Record<string, any> = {
       '/images/artistes/stile-antico/stile-antico-3-hero.webp',
       '/images/artistes/stile-antico/stile-antico-4-hero.webp'
     ],
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5',
     description: `Nous aurons l'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Giovanni Pierluigi da Palestrina, "Le Prince de la Musique". Il s'agit d'un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance.
 
 Cette soirée exceptionnelle sera également précédée d'une conférence de Marie Favre, musicologue et docteur en musicologie, qui nous éclairera sur l'œuvre de Giovanni Pierluigi da Palestrina à 16h00.
@@ -49,6 +50,7 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/choeur-novantiqua/novantiqua-3-hero.webp',
       '/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp'
     ],
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f2',
     description: `Sous la direction de Bernard Héritier, le Chœur Novantiqua présente un programme a cappella raffiné intitulé "Ex tenebris lux" (De l'ombre à la lumière). Ce concert exceptionnel explore les œuvres de trois compositeurs majeurs : Carlo Gesualdo, maître de la polyphonie expressive de la Renaissance tardive, Anton Bruckner avec ses motets sacrés d'une profondeur spirituelle intense, et Francis Poulenc dont les compositions liturgiques allient modernité et tradition. Un voyage musical captivant à travers les siècles, de la Renaissance au XXe siècle.`
   },
   'ensemble-vocal': {
@@ -65,6 +67,7 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/ecole-maitrisienne/ecole-1-hero.webp',
       '/images/artistes/ecole-maitrisienne/ecole-2-hero.webp'
     ],
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1',
     description: `Concert d'ouverture du 20ème Festival d'Art Sacré avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine. Ce programme exceptionnel met à l'honneur Chiara Margarita Cozzolani (1602-1678), compositrice milanaise méconnue du baroque italien. Religieuse bénédictine, elle fut l'une des rares femmes compositrices de son époque à voir ses œuvres publiées. Ses motets sacrés, d'une expressivité remarquable, témoignent d'une maîtrise parfaite de l'écriture polyphonique et d'une sensibilité spirituelle profonde. Une découverte musicale fascinante au féminin.`
   },
   'ecole-maitrisienne': {
@@ -81,6 +84,7 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/ecole-maitrisienne/ecole-1-hero.webp',
       '/images/artistes/ecole-maitrisienne/ecole-2-hero.webp'
     ],
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f3',
     description: `Concert mettant à l'honneur la jeunesse avec l'École Maîtrisienne et le Chœur des collèges. Ces jeunes talents interpréteront un programme varié de musique sacrée, démontrant le fruit de leur formation vocale d'excellence. Un moment émouvant qui célèbre la transmission du patrimoine musical et la passion des nouvelles générations pour le chant choral. Les voix pures et cristallines de nos jeunes chanteurs illumineront la cathédrale en cette période de l'Avent.`
   },
   'ensemble-ad-astra': {
@@ -99,6 +103,7 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp',
       '/images/artistes/choeur-novantiqua/novantiqua-2-hero.webp'
     ],
+    ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f4',
     description: `L'Ensemble Ad Astra et le Collectif 7 Sed Unum nous transportent dans la Venise baroque avec les célèbres Gloria RV 589 et Magnificat RV 610-611 d'Antonio Vivaldi. Ces deux chefs-d'œuvre de la musique sacrée vénitienne, composés pour les jeunes filles de l'Ospedale della Pietà, rayonnent d'une joie festive et d'une virtuosité éblouissante. Le soir de la Saint-Étienne, laissez-vous emporter par les couleurs chatoyantes et l'énergie contagieuse du "Prêtre Roux" dans leurs versions originales.`
   }
 };
@@ -244,29 +249,35 @@ export default function ArtistePage() {
               }}>
                 {artiste.date} • {artiste.time}
               </span>
-              <button style={{
-                padding: '14px 32px',
-                background: 'var(--color-gold)',
-                color: '#1a1340',
-                border: 'none',
-                borderRadius: '50px',
-                fontSize: '1rem',
-                fontWeight: '700',
-                letterSpacing: '0.05em',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 8px 30px rgba(212, 175, 55, 0.3)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 12px 40px rgba(212, 175, 55, 0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 8px 30px rgba(212, 175, 55, 0.3)';
-              }}>
+              <Link
+                href={artiste.ticketUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '14px 32px',
+                  background: 'var(--color-gold)',
+                  color: '#1a1340',
+                  border: 'none',
+                  borderRadius: '50px',
+                  fontSize: '1rem',
+                  fontWeight: '700',
+                  letterSpacing: '0.05em',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 8px 30px rgba(212, 175, 55, 0.3)',
+                  textDecoration: 'none',
+                  display: 'inline-block'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 12px 40px rgba(212, 175, 55, 0.4)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(212, 175, 55, 0.3)';
+                }}>
                 BILLETTERIE
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -515,28 +526,35 @@ export default function ArtistePage() {
             }}>
               Places limitées, réservez dès maintenant
             </p>
-            <button style={{
-              width: '100%',
-              padding: '14px',
-              background: 'white',
-              color: '#E33241',
-              border: 'none',
-              borderRadius: '12px',
-              fontSize: '1rem',
-              fontWeight: '700',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}>
+            <Link
+              href={artiste.ticketUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                width: '100%',
+                padding: '14px',
+                background: 'white',
+                color: '#E33241',
+                border: 'none',
+                borderRadius: '12px',
+                fontSize: '1rem',
+                fontWeight: '700',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                textDecoration: 'none',
+                display: 'block',
+                textAlign: 'center'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}>
               RÉSERVER MAINTENANT
-            </button>
+            </Link>
           </div>
         </aside>
       </section>
