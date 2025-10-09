@@ -16,19 +16,49 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    console.log('Formulaire soumis:', formData);
-    // TODO: Implement actual form submission
+      const data = await response.json();
 
-    setIsSubmitting(false);
-    // Reset form or show success message
+      if (!response.ok) {
+        throw new Error(data.error || 'Erreur lors de l\'envoi du message');
+      }
+
+      setSubmitStatus('success');
+      // Reset form
+      setFormData({
+        prenom: '',
+        nom: '',
+        email: '',
+        telephone: '',
+        sujet: '',
+        message: '',
+        montant: '',
+        typeDon: 'ponctuel',
+        communicationIban: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Erreur inconnue');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -120,7 +150,19 @@ export default function Contact() {
                 }}>
                   Téléphone
                 </h4>
-                <p style={{ color: '#4a5568', fontSize: '1.1rem' }}>+41 79 616 90 94</p>
+                <a
+                  href="tel:+41796169094"
+                  style={{
+                    color: 'var(--color-gold)',
+                    fontSize: '1.1rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#c19660'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
+                >
+                  +41 79 616 90 94
+                </a>
               </div>
 
               <div style={{ marginBottom: '32px' }}>
@@ -132,7 +174,19 @@ export default function Contact() {
                 }}>
                   Email
                 </h4>
-                <p style={{ color: '#4a5568', fontSize: '1.1rem' }}>info@maitrise-cathedrale.ch</p>
+                <a
+                  href="mailto:info@maitrise-cathedrale.ch"
+                  style={{
+                    color: 'var(--color-gold)',
+                    fontSize: '1.1rem',
+                    textDecoration: 'none',
+                    transition: 'color 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#c19660'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
+                >
+                  info@maitrise-cathedrale.ch
+                </a>
               </div>
 
               <div>
@@ -493,6 +547,35 @@ export default function Contact() {
                     placeholder="Votre message..."
                   />
                 </div>
+
+                {/* Messages de statut */}
+                {submitStatus === 'success' && (
+                  <div style={{
+                    padding: '16px',
+                    backgroundColor: '#d4edda',
+                    border: '1px solid #c3e6cb',
+                    borderRadius: '8px',
+                    color: '#155724',
+                    marginBottom: '20px',
+                    textAlign: 'center'
+                  }}>
+                    ✓ Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div style={{
+                    padding: '16px',
+                    backgroundColor: '#f8d7da',
+                    border: '1px solid #f5c6cb',
+                    borderRadius: '8px',
+                    color: '#721c24',
+                    marginBottom: '20px',
+                    textAlign: 'center'
+                  }}>
+                    ✗ {errorMessage || 'Erreur lors de l\'envoi. Veuillez réessayer.'}
+                  </div>
+                )}
 
                 <button
                   type="submit"

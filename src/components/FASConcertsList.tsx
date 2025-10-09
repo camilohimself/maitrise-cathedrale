@@ -30,7 +30,7 @@ const FASConcertsList = () => {
       cardImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
       color: "#D2374C",
       featured: true,
-      ticketUrl: "https://www.booking-corner.com/19729-30-11-25-1700-concert-douverture/"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1"
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ const FASConcertsList = () => {
       description: "Programme a cappella raffiné autour de Gesualdo, Bruckner et Poulenc, précédé d'une conférence de Marie Favre.",
       cardImage: "/images/artistes/choeur-novantiqua/novantiqua-1-card.webp",
       color: "#8B7BB8",
-      ticketUrl: "https://www.booking-corner.com/19732-07-12-25-1700-choeur-novantiqua/"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f2"
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ const FASConcertsList = () => {
       description: "Concert mettant à l'honneur la jeunesse avec l'École Maîtrisienne et le Chœur des Collèges de Sion.",
       cardImage: "/images/artistes/ecole-maitrisienne/ecole-stamm-card.webp",
       color: "#FF6B9D",
-      ticketUrl: "https://www.booking-corner.com/19735-21-12-25-1700-ecole-maitrisienne-choeur-des-colleges-de-sion/"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f3"
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ const FASConcertsList = () => {
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales pour voix de femmes.",
       cardImage: "/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp",
       color: "#D2374C",
-      ticketUrl: "https://www.booking-corner.com/19738-26-12-25-2000-ensemble-ad-astra-collectif-baroque-7-sed-unum/"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f4"
     },
     {
       id: 5,
@@ -80,7 +80,7 @@ const FASConcertsList = () => {
       cardImage: "/images/artistes/stile-antico/stile-antico-1-card.webp",
       color: "#D4AF37",
       prestige: true,
-      ticketUrl: "https://www.booking-corner.com/19741-04-01-26-1700-stile-antico/"
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5"
     }
   ];
 
@@ -204,7 +204,6 @@ Cinq rendez-vous d'exception
                 border: hoveredConcert === concert.id
                   ? '2px solid rgba(107, 70, 193, 0.3)'
                   : '1px solid rgba(212, 165, 116, 0.2)',
-                cursor: 'pointer',
                 transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
                 transform: hoveredConcert === concert.id ? 'translateY(-8px)' : 'translateY(0)',
                 boxShadow: hoveredConcert === concert.id
