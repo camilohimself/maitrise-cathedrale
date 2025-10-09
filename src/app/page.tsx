@@ -1,4 +1,4 @@
-import HeroSectionV1 from '@/components/HeroSectionV1';
+import HeroOptionB_DegradueVitrail from '@/components/HeroOptionB_DegradueVitrail';
 import FASHighlightSection from '@/components/FASHighlightSection';
 import UpcomingEventsSection from '@/components/UpcomingEventsSection';
 import MaitriseAboutSection from '@/components/MaitriseAboutSection';
@@ -13,7 +13,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <HeroSectionV1 />
+      <HeroOptionB_DegradueVitrail />
       <MaitriseAboutSection />
       <FASHighlightSection />
       <UpcomingEventsSection />
