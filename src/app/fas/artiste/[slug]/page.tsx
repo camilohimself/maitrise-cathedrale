@@ -28,6 +28,18 @@ const artistesData: Record<string, any> = {
       '/images/artistes/stile-antico/stile-antico-4-hero.webp'
     ],
     ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5',
+    practicalInfo: {
+      director: 'Direction musicale non spécifiée',
+      program: 'Palestrina, Le Prince de la Musique',
+      pricing: {
+        cat1: 'Fr. 50.-',
+        cat2: 'Fr. 40.-',
+        cat3: 'Fr. 30.- (places non numérotées)',
+        reductions: 'AVS, AI, étudiants, apprentis, Amis de la Fondation ou des RHV Fr. 20.- en 3ème catégorie',
+        free: 'Pass Bienvenue Sion ou AG culturel : place gratuite (à la caisse le soir du concert)',
+        note: 'Les places de la catégorie 3 (orange) sont à placement libre le jour du concert.'
+      }
+    },
     description: `Nous aurons l'immense honneur d'entendre le prestigieux ensemble anglais Stile Antico dans un programme consacré à Giovanni Pierluigi da Palestrina, "Le Prince de la Musique". Il s'agit d'un des meilleurs ensembles vocaux au monde réputé pour ses interprétations vibrantes et expressives de la musique de la Renaissance.
 
 Cette soirée exceptionnelle sera également précédée d'une conférence de Marie Favre, musicologue et docteur en musicologie, qui nous éclairera sur l'œuvre de Giovanni Pierluigi da Palestrina à 16h00.
@@ -51,6 +63,19 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp'
     ],
     ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f2',
+    practicalInfo: {
+      director: 'Direction : Sylvain Jaccard',
+      program: '"Ex tenebris lux, de l\'obscurité la lumière"',
+      pricing: {
+        cat1: 'Plein tarif Fr. 40.- | AVS/AI ou Amis Fr. 35.- | AVS/AI et Amis Fr. 30.- (double réduction)',
+        cat2: 'Plein tarif Fr. 30.- | AVS/AI ou Amis Fr. 25.- | AVS/AI et Amis Fr. 20.- (double réduction)',
+        cat3: 'Tarif unique Fr. 20.- (places non numérotées)',
+        students: 'Étudiants/apprentis Fr. 20.- (places non numérotées)',
+        children: 'Moins de 12 ans gratuit',
+        free: 'Pass Bienvenue Sion ou AG culturel : place gratuite (à la caisse le soir du concert)',
+        note: 'Les places de la catégorie 3 (orange) sont à placement libre le jour du concert.'
+      }
+    },
     description: `Sous la direction de Bernard Héritier, le Chœur Novantiqua présente un programme a cappella raffiné intitulé "Ex tenebris lux" (De l'ombre à la lumière). Ce concert exceptionnel explore les œuvres de trois compositeurs majeurs : Carlo Gesualdo, maître de la polyphonie expressive de la Renaissance tardive, Anton Bruckner avec ses motets sacrés d'une profondeur spirituelle intense, et Francis Poulenc dont les compositions liturgiques allient modernité et tradition. Un voyage musical captivant à travers les siècles, de la Renaissance au XXe siècle.`
   },
   'ensemble-vocal': {
@@ -68,6 +93,19 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/ecole-maitrisienne/ecole-2-hero.webp'
     ],
     ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1',
+    practicalInfo: {
+      director: 'Direction : Jean-David Waeber',
+      program: 'Œuvres de Chiara Margarita Cozzolani',
+      pricing: {
+        cat1: 'Plein tarif Fr. 40.- | AVS/AI ou Amis Fr. 35.- | AVS/AI et Amis Fr. 30.- (double réduction)',
+        cat2: 'Plein tarif Fr. 30.- | AVS/AI ou Amis Fr. 25.- | AVS/AI et Amis Fr. 20.- (double réduction)',
+        cat3: 'Tarif unique Fr. 20.- (places non numérotées)',
+        youth: 'Tarif jeunes Fr. 20.- (places non numérotées)',
+        children: 'Moins de 12 ans gratuit',
+        free: 'Pass Bienvenue Sion ou AG culturel : place gratuite (à la caisse le soir du concert)',
+        note: 'Les places de la catégorie 3 (orange) sont à placement libre le jour du concert.'
+      }
+    },
     description: `Concert d'ouverture du 20ème Festival d'Art Sacré avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine. Ce programme exceptionnel met à l'honneur Chiara Margarita Cozzolani (1602-1678), compositrice milanaise méconnue du baroque italien. Religieuse bénédictine, elle fut l'une des rares femmes compositrices de son époque à voir ses œuvres publiées. Ses motets sacrés, d'une expressivité remarquable, témoignent d'une maîtrise parfaite de l'écriture polyphonique et d'une sensibilité spirituelle profonde. Une découverte musicale fascinante au féminin.`
   },
   'ecole-maitrisienne': {
@@ -85,6 +123,19 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/ecole-maitrisienne/ecole-2-hero.webp'
     ],
     ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f3',
+    practicalInfo: {
+      director: '1ère partie : Chœur des Collèges de Sion (Direction Samuel Emery) | 2ème partie : École Maîtrisienne (Direction Jean-David Waeber)',
+      program: 'Concert de la jeunesse',
+      pricing: {
+        cat1: 'Tarif unique Fr. 25.-',
+        cat2: 'Tarif unique Fr. 20.-',
+        cat3: 'Tarif unique Fr. 15.- (places non numérotées)',
+        students: 'Étudiants/apprentis Fr. 10.- (places non numérotées en catégorie 3)',
+        children: 'Moins de 12 ans gratuit',
+        free: 'Pass Bienvenue Sion ou AG culturel : place gratuite (à la caisse le soir du concert)',
+        note: 'Les places de la catégorie 3 (orange) sont à placement libre le jour du concert.'
+      }
+    },
     description: `Concert mettant à l'honneur la jeunesse avec l'École Maîtrisienne et le Chœur des collèges. Ces jeunes talents interpréteront un programme varié de musique sacrée, démontrant le fruit de leur formation vocale d'excellence. Un moment émouvant qui célèbre la transmission du patrimoine musical et la passion des nouvelles générations pour le chant choral. Les voix pures et cristallines de nos jeunes chanteurs illumineront la cathédrale en cette période de l'Avent.`
   },
   'ensemble-ad-astra': {
@@ -104,6 +155,21 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
       '/images/artistes/choeur-novantiqua/novantiqua-2-hero.webp'
     ],
     ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f4',
+    practicalInfo: {
+      director: 'Direction : Jean-David Waeber',
+      program: '"Gloria & Magnificat" - Antonio Vivaldi',
+      pricing: {
+        cat1: 'Plein tarif Fr. 40.- | AVS/AI ou Amis Fr. 35.- | AVS/AI et Amis Fr. 30.- (double réduction)',
+        cat2: 'Plein tarif Fr. 30.- | AVS/AI ou Amis Fr. 25.- | AVS/AI et Amis Fr. 20.- (double réduction)',
+        cat3: 'Tarif unique Fr. 20.- (places non numérotées)',
+        youth: 'Tarif jeunes Fr. 20.- (places non numérotées)',
+        students: 'Apprentis/étudiants Fr. 20.- (places non numérotées)',
+        children: 'Moins de 12 ans gratuit (places non numérotées)',
+        reductions: 'Réductions AVS, AI, Amis de la Fondation Fr. 5.-',
+        free: 'Pass Bienvenue Sion ou AG culturel : place gratuite (à la caisse le soir du concert)',
+        note: 'Les places de la catégorie 3 (orange) sont à placement libre le jour du concert.'
+      }
+    },
     description: `L'Ensemble Ad Astra et le Collectif 7 Sed Unum nous transportent dans la Venise baroque avec les célèbres Gloria RV 589 et Magnificat RV 610-611 d'Antonio Vivaldi. Ces deux chefs-d'œuvre de la musique sacrée vénitienne, composés pour les jeunes filles de l'Ospedale della Pietà, rayonnent d'une joie festive et d'une virtuosité éblouissante. Le soir de la Saint-Étienne, laissez-vous emporter par les couleurs chatoyantes et l'énergie contagieuse du "Prêtre Roux" dans leurs versions originales.`
   }
 };
@@ -318,7 +384,7 @@ export default function ArtistePage() {
             ))}
           </div>
 
-          {/* Programme Section */}
+          {/* Informations pratiques Section */}
           <div style={{
             marginTop: '3rem',
             padding: '2rem',
@@ -334,39 +400,132 @@ export default function ArtistePage() {
             }}>
               Informations pratiques
             </h3>
-            <ul style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: 0
+
+            {/* Lieu et Durée */}
+            <div style={{
+              marginBottom: '2rem',
+              paddingBottom: '1.5rem',
+              borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
             }}>
-              <li style={{
-                padding: '12px 0',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                display: 'flex',
-                justifyContent: 'space-between'
-              }}>
+              <div style={{ marginBottom: '12px', display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Lieu</span>
                 <span style={{ fontWeight: '500' }}>Cathédrale de Sion</span>
-              </li>
-              <li style={{
-                padding: '12px 0',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                display: 'flex',
-                justifyContent: 'space-between'
-              }}>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Durée</span>
                 <span style={{ fontWeight: '500' }}>Environ 90 minutes</span>
-              </li>
-              <li style={{
-                padding: '12px 0',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                display: 'flex',
-                justifyContent: 'space-between'
-              }}>
-                <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>Tarifs</span>
-                <span style={{ fontWeight: '500' }}>CHF 35.- / 25.- (réduit)</span>
-              </li>
-            </ul>
+              </div>
+            </div>
+
+            {/* Direction et Programme */}
+            {artiste.practicalInfo && (
+              <>
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <h4 style={{
+                    color: 'var(--color-gold)',
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '0.75rem'
+                  }}>
+                    Direction & Programme
+                  </h4>
+                  <p style={{
+                    color: 'rgba(255, 255, 255, 0.9)',
+                    lineHeight: '1.6',
+                    marginBottom: '0.5rem',
+                    fontSize: '0.95rem'
+                  }}>
+                    {artiste.practicalInfo.director}
+                  </p>
+                  <p style={{
+                    color: 'rgba(255, 255, 255, 0.8)',
+                    fontStyle: 'italic',
+                    fontSize: '0.95rem'
+                  }}>
+                    {artiste.practicalInfo.program}
+                  </p>
+                </div>
+
+                {/* Tarifs détaillés */}
+                <div>
+                  <h4 style={{
+                    color: 'var(--color-gold)',
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '0.75rem'
+                  }}>
+                    Tarifs
+                  </h4>
+                  <div style={{
+                    fontSize: '0.9rem',
+                    lineHeight: '1.8',
+                    color: 'rgba(255, 255, 255, 0.9)'
+                  }}>
+                    {artiste.practicalInfo.pricing.cat1 && (
+                      <p style={{ marginBottom: '0.5rem' }}>
+                        <strong>Catégorie 1 :</strong> {artiste.practicalInfo.pricing.cat1}
+                      </p>
+                    )}
+                    {artiste.practicalInfo.pricing.cat2 && (
+                      <p style={{ marginBottom: '0.5rem' }}>
+                        <strong>Catégorie 2 :</strong> {artiste.practicalInfo.pricing.cat2}
+                      </p>
+                    )}
+                    {artiste.practicalInfo.pricing.cat3 && (
+                      <p style={{ marginBottom: '0.5rem' }}>
+                        <strong>Catégorie 3 :</strong> {artiste.practicalInfo.pricing.cat3}
+                      </p>
+                    )}
+                    {artiste.practicalInfo.pricing.students && (
+                      <p style={{ marginBottom: '0.5rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                        {artiste.practicalInfo.pricing.students}
+                      </p>
+                    )}
+                    {artiste.practicalInfo.pricing.youth && (
+                      <p style={{ marginBottom: '0.5rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                        {artiste.practicalInfo.pricing.youth}
+                      </p>
+                    )}
+                    {artiste.practicalInfo.pricing.children && (
+                      <p style={{ marginBottom: '0.5rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                        {artiste.practicalInfo.pricing.children}
+                      </p>
+                    )}
+                    {artiste.practicalInfo.pricing.reductions && (
+                      <p style={{ marginBottom: '0.5rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                        {artiste.practicalInfo.pricing.reductions}
+                      </p>
+                    )}
+                    {artiste.practicalInfo.pricing.free && (
+                      <p style={{
+                        marginTop: '1rem',
+                        padding: '0.75rem',
+                        background: 'rgba(212, 175, 55, 0.1)',
+                        borderRadius: '8px',
+                        fontSize: '0.85rem',
+                        color: 'rgba(255, 255, 255, 0.8)'
+                      }}>
+                        {artiste.practicalInfo.pricing.free}
+                      </p>
+                    )}
+                    {artiste.practicalInfo.pricing.note && (
+                      <p style={{
+                        marginTop: '1rem',
+                        padding: '0.75rem',
+                        background: 'rgba(227, 50, 65, 0.1)',
+                        borderLeft: '3px solid var(--color-red)',
+                        borderRadius: '4px',
+                        fontSize: '0.85rem',
+                        fontWeight: '600',
+                        color: 'var(--color-red)'
+                      }}>
+                        ⚠️ {artiste.practicalInfo.pricing.note}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
 
