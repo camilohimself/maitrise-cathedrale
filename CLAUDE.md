@@ -819,6 +819,75 @@ onMouseEnter={() => setShowGoldenBorder(true)}
 
 ---
 
-**Dernière mise à jour:** 9 octobre 2025 (Session 3 - Optimisation mobile complète)
-**Session actuelle:** Fix jours semaine + CTAs FAS + Mobile responsive intégral
+## 🚀 **RÉCAPITULATIF SESSION 4 - 9 OCTOBRE 2025 (SOIR - UX INTERACTIVITÉ)**
+
+### **TRAVAUX EFFECTUÉS:**
+
+#### **1. ✅ MODIFICATION TEXTE MISSION**
+**Fichier:** `src/components/MaitriseAboutSection.tsx` (ligne 185)
+- **Avant:** "de notre région"
+- **Maintenant:** "du canton"
+- Texte mission statement mis à jour pour précision géographique
+
+#### **2. ✅ CARDS CONCERTS CLIQUABLES (Section "Prochains concerts")**
+**Fichier:** `src/components/UpcomingEventsSection.tsx`
+
+**Implémentation:**
+- Ajout fonction `getArtistSlug()` mapping 5 événements FAS → slugs artistes
+- Wrapper conditionnel: événements FAS → `<Link>`, autres → `<div>`
+- Navigation fluide vers pages artistes `/fas/artiste/[slug]`
+
+**Mapping créé:**
+- `nov-30-concert-fas-ensemble` → `/fas/artiste/ensemble-vocal`
+- `dec-07-concert-fas-novantiqua` → `/fas/artiste/choeur-novantiqua`
+- `dec-21-concert-fas-colleges` → `/fas/artiste/ecole-maitrisienne`
+- `dec-26-concert-ad-astra-fas` → `/fas/artiste/ensemble-ad-astra`
+- `jan-04-concert-fas-stile-antico` → `/fas/artiste/stile-antico`
+
+#### **3. ✅ CARDS FAS CLIQUABLES (Section "Festival d'Art Sacré")**
+**Fichier:** `src/components/FASHighlightSection.tsx`
+
+**Implémentation:**
+- Ajout champ `slug` aux 3 événements phares
+- Modification `href="/fas"` → `href="/fas/artiste/{slug}"`
+- Navigation cohérente avec section "Prochains concerts"
+
+**Slugs ajoutés:**
+- Ensemble Vocal & Ensemble Barberine → `"ensemble-vocal"`
+- Ensemble Ad Astra → `"ensemble-ad-astra"`
+- Stile Antico → `"stile-antico"`
+
+#### **4. ✅ FIX TYPESCRIPT BUILD VERCEL**
+**Problème:** Erreur compilation TypeScript strict mode
+- Type 'undefined' is not assignable to type 'Url'
+- Wrapper polymorphique `CardWrapper` incompatible
+
+**Solution refactoring:**
+- Extraction `cardContent` (JSX réutilisable)
+- Extraction `cardStyle` + handlers (types explicites)
+- Pattern ternaire: `artistSlug ? <Link> : <div>`
+- Types explicites `React.MouseEvent<HTMLElement>`
+
+### **COMMITS EFFECTUÉS (3):**
+1. `26b98d8` - ✨ UX ACCUEIL: Texte canton + Cards concerts cliquables
+2. `87f098d` - ✨ UX FAS: Cards Festival cliquables vers pages artistes
+3. `2d4afb0` - 🐛 FIX TYPESCRIPT: Correction wrapper conditionnel Link/div
+
+### **ÉTAT FINAL SESSION 4:**
+- **Build:** ✅ Stable TypeScript strict mode (26 pages)
+- **UX Accueil:** ✅ 6 cards cliquables (3 concerts + 3 FAS)
+- **Navigation:** ✅ Redirection fluide vers pages artistes
+- **Performance:** ✅ Aucune régression
+- **Production:** 🟢 **DÉPLOYÉ sur www.maitrise-cathedrale.ch**
+
+### **IMPACT UX:**
+- ✅ Page d'accueil entièrement interactive
+- ✅ Amélioration parcours utilisateur (moins de clics)
+- ✅ Cohérence navigation entre sections
+- ✅ Expérience fluide mobile + desktop
+
+---
+
+**Dernière mise à jour:** 9 octobre 2025 (Session 4 - UX Interactivité + Fix TypeScript)
+**Session actuelle:** Cards cliquables Accueil + FAS + Correction build production
 **Statut:** ✅ SITE EN PRODUCTION - www.maitrise-cathedrale.ch
