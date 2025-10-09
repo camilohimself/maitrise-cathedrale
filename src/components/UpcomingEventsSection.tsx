@@ -134,38 +134,35 @@ const UpcomingEventsSection = memo(() => {
         }} className="upcoming-events-grid">
           {upcomingEvents.map((event, index) => {
             const artistSlug = getArtistSlug(event.id);
-            const CardWrapper = artistSlug ? Link : 'div';
-            const cardProps = artistSlug ? { href: `/fas/artiste/${artistSlug}` } : {};
+            const cardStyle = {
+              display: 'block' as const,
+              backgroundColor: 'var(--color-cream)',
+              borderRadius: '20px',
+              padding: '2rem',
+              border: '2px solid transparent',
+              position: 'relative' as const,
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              cursor: 'pointer' as const,
+              overflow: 'hidden' as const,
+              textDecoration: 'none',
+            };
 
-            return (
-              <CardWrapper
-                key={event.id}
-                {...cardProps}
-                style={{
-                  display: 'block',
-                  backgroundColor: 'var(--color-cream)',
-                  borderRadius: '20px',
-                  padding: '2rem',
-                  border: '2px solid transparent',
-                  position: 'relative',
-                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  cursor: 'pointer',
-                  overflow: 'hidden',
-                  textDecoration: 'none',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.backgroundColor = 'var(--color-white)';
-                  e.currentTarget.style.borderColor = 'rgba(227, 50, 65, 0.2)';
-                  e.currentTarget.style.boxShadow = '0 15px 35px rgba(227, 50, 65, 0.12)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.backgroundColor = 'var(--color-cream)';
-                  e.currentTarget.style.borderColor = 'transparent';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
+            const handleMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
+              e.currentTarget.style.transform = 'translateY(-5px)';
+              e.currentTarget.style.backgroundColor = 'var(--color-white)';
+              e.currentTarget.style.borderColor = 'rgba(227, 50, 65, 0.2)';
+              e.currentTarget.style.boxShadow = '0 15px 35px rgba(227, 50, 65, 0.12)';
+            };
+
+            const handleMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.backgroundColor = 'var(--color-cream)';
+              e.currentTarget.style.borderColor = 'transparent';
+              e.currentTarget.style.boxShadow = 'none';
+            };
+
+            const cardContent = (
+              <>
               {/* Badge featured */}
               {event.featured && (
                 <div style={{
@@ -315,8 +312,29 @@ const UpcomingEventsSection = memo(() => {
                   </svg>
                 </div>
               </div>
-            </CardWrapper>
-          );
+              </>
+            );
+
+            return artistSlug ? (
+              <Link
+                key={event.id}
+                href={`/fas/artiste/${artistSlug}`}
+                style={cardStyle}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                {cardContent}
+              </Link>
+            ) : (
+              <div
+                key={event.id}
+                style={cardStyle}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                {cardContent}
+              </div>
+            );
           })}
         </div>
 
