@@ -39,7 +39,7 @@ const FASArtistesSection = () => {
             marginBottom: '24px',
             fontFamily: 'var(--font-spectral), Georgia, serif'
           }}>
-            Nos Artistes
+            Les Artistes du FAS 2025
           </h2>
           
           <div style={{

@@ -349,7 +349,7 @@ Cinq rendez-vous d'exception
             color: 'var(--color-gray)',
             fontFamily: 'var(--font-outfit)'
           }}>
-            De novembre 2025 à janvier 2026, découvrez cinq rendez-vous musicaux d'exception dans la cathédrale de Sion.
+            Du 30 novembre au 4 janvier 2026, cinq concerts exceptionnels de musique sacrée à la cathédrale de Sion.
           </p>
         </div>
 
