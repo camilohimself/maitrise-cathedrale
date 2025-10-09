@@ -146,13 +146,11 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
     date: 'Jeudi 26 décembre 2025',
     time: '20H00',
     altDate: null,
-    image: '/images/artistes/stile-antico/stile-antico-3-hero.webp',
-    thumbnail: '/images/artistes/stile-antico/stile-antico-3-card.webp',
+    image: '/images/artistes/ensemble-ad-astra/ad-astra-1-hero.webp',
+    thumbnail: '/images/artistes/ensemble-ad-astra/ad-astra-1-card.webp',
     gallery: [
-      '/images/artistes/stile-antico/stile-antico-5-hero.webp',
-      '/images/artistes/stile-antico/stile-antico-6-hero.webp',
-      '/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp',
-      '/images/artistes/choeur-novantiqua/novantiqua-2-hero.webp'
+      '/images/artistes/ensemble-ad-astra/ad-astra-1-hero.webp',
+      '/images/artistes/ensemble-ad-astra/ad-astra-2-hero.webp'
     ],
     ticketUrl: 'https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f4',
     practicalInfo: {
