@@ -19,99 +19,119 @@ const Footer = () => {
         margin: '0 auto',
         padding: '100px 40px 50px'
       }} className="footer-container">
-        {/* Header avec logo imposant - Style Royal Opera House */}
+        {/* Header MINIMALISTE V1 - Logo XXL */}
         <div style={{
-          background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.08) 0%, rgba(212, 165, 116, 0.02) 100%)',
+          background: '#FAFAF9',
           borderRadius: '24px',
-          padding: '60px',
+          padding: '80px 60px',
           marginBottom: '80px',
           textAlign: 'center',
-          border: '1px solid rgba(212, 165, 116, 0.1)'
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center'
         }} className="footer-header">
-          <Image
-            src="/images/logo-mc-footer.png"
-            alt="Maîtrise Cathédrale de Sion"
-            width={450}
-            height={140}
-            style={{
-              height: '140px',
-              width: 'auto',
-              objectFit: 'contain',
-              marginBottom: '40px',
-              filter: 'brightness(1.1)'
-            }}
-            className="footer-logo"
-          />
+          {/* Logo XXL centré */}
+          <div style={{
+            position: 'relative',
+            width: '500px',
+            height: '500px',
+            marginBottom: '4rem',
+            filter: 'drop-shadow(0 20px 60px rgba(0, 0, 0, 0.08))'
+          }}>
+            <Image
+              src="/images/logo-mc-couleur.png"
+              alt="Maîtrise Cathédrale de Sion"
+              fill
+              style={{ objectFit: 'contain' }}
+              className="footer-logo"
+            />
+          </div>
 
+          {/* Titre épuré */}
           <h1 style={{
-            fontSize: '48px',
-            fontWeight: '400',
-            marginBottom: '20px',
-            color: '#ffffff',
-            letterSpacing: '0.5px'
+            fontFamily: 'var(--font-spectral)',
+            fontSize: '3.5rem',
+            fontWeight: '700',
+            color: '#1a1340',
+            textAlign: 'center',
+            marginBottom: '1.5rem',
+            letterSpacing: '-0.02em',
+            lineHeight: 1.2
           }} className="footer-title">
             Maîtrise Cathédrale de Sion
           </h1>
-          
+
+          {/* Baseline élégante */}
           <p style={{
-            fontSize: '22px',
-            color: 'var(--color-gold)',
+            fontFamily: 'var(--font-outfit)',
+            fontSize: '1.5rem',
             fontWeight: '300',
-            marginBottom: '40px'
+            color: '#D4A574',
+            textAlign: 'center',
+            marginBottom: '4rem',
+            letterSpacing: '0.02em'
           }}>
             Voix d'exception au cœur de la Cathédrale
           </p>
-          
+
+          {/* CTAs minimalistes */}
           <div style={{
             display: 'flex',
-            justifyContent: 'center',
-            gap: '24px',
-            flexWrap: 'wrap'
+            gap: '1.5rem',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            justifyContent: 'center'
           }}>
-            <Link href="/soutenir/amis-maitrise" style={{
-              background: '#E33241',
-              color: 'white',
-              padding: '16px 32px',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontWeight: '500',
-              fontSize: '16px',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 4px 20px rgba(227, 50, 65, 0.3)'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 8px 30px rgba(227, 50, 65, 0.4)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 20px rgba(227, 50, 65, 0.3)';
-            }}
+            <Link
+              href="/soutenir/amis-maitrise"
+              style={{
+                padding: '18px 40px',
+                background: '#1a1340',
+                color: 'white',
+                borderRadius: '8px',
+                fontFamily: 'var(--font-outfit)',
+                fontWeight: '600',
+                fontSize: '1.1rem',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                display: 'inline-block'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 10px 30px rgba(26, 19, 64, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
             >
               Devenir Ami
             </Link>
-            
-            <Link href="/fas" style={{
-              background: 'transparent',
-              color: 'var(--color-gold)',
-              padding: '16px 32px',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontWeight: '500',
-              fontSize: '16px',
-              border: '2px solid var(--color-gold)',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'var(--color-gold)';
-              e.currentTarget.style.color = '#040A23';
-              e.currentTarget.style.transform = 'translateY(-3px)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'transparent';
-              e.currentTarget.style.color = 'var(--color-gold)';
-              e.currentTarget.style.transform = 'translateY(0)';
-            }}
+
+            <Link
+              href="/fas"
+              style={{
+                padding: '18px 40px',
+                background: 'transparent',
+                color: '#D4A574',
+                border: '2px solid #D4A574',
+                borderRadius: '8px',
+                fontFamily: 'var(--font-outfit)',
+                fontWeight: '600',
+                fontSize: '1.1rem',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                display: 'inline-block'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#D4A574';
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#D4A574';
+              }}
             >
               Festival d'Art Sacré
             </Link>
