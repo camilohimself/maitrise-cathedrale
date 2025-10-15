@@ -76,7 +76,7 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
         note: 'Les places de la catégorie 3 (orange) sont à placement libre le jour du concert.'
       }
     },
-    description: `Sous la direction de Bernard Héritier, le Chœur Novantiqua présente un programme a cappella raffiné intitulé "Ex tenebris lux" (De l'ombre à la lumière). Ce concert exceptionnel explore les œuvres de trois compositeurs majeurs : Carlo Gesualdo, maître de la polyphonie expressive de la Renaissance tardive, Anton Bruckner avec ses motets sacrés d'une profondeur spirituelle intense, et Francis Poulenc dont les compositions liturgiques allient modernité et tradition. Un voyage musical captivant à travers les siècles, de la Renaissance au XXe siècle.`
+    description: `Sous la direction de Sylvain Jaccard, le Chœur Novantiqua présente un programme a cappella raffiné intitulé "Ex tenebris lux" (De l'ombre à la lumière). Ce concert exceptionnel explore les œuvres de trois compositeurs majeurs : Carlo Gesualdo, maître de la polyphonie expressive de la Renaissance tardive, Anton Bruckner avec ses motets sacrés d'une profondeur spirituelle intense, et Francis Poulenc dont les compositions liturgiques allient modernité et tradition. Un voyage musical captivant à travers les siècles, de la Renaissance au XXe siècle.`
   },
   'ensemble-vocal': {
     id: 'ensemble-vocal',

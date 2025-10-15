@@ -59,7 +59,7 @@ const fondationContent = {
     
     videos: [
       {
-        title: "la Maîtrise de la cathédrale, Bernard Héritier",
+        title: "la Maîtrise de la cathédrale, Sylvain Jaccard",
         url: "https://www.youtube.com/watch?v=ToSUQqEsBHw"
       },
       {

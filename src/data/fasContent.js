@@ -50,7 +50,7 @@ export const fasArtistes = [
       "/images/artistes/choeur-novantiqua/novantiqua-3-hero.webp",
       "/images/artistes/choeur-novantiqua/novantiqua-4-hero.webp"
     ],
-    description: "Direction Bernard Héritier - Programme a cappella"
+    description: "Direction Sylvain Jaccard - Programme a cappella"
   },
   {
     id: "ensemble-vocal",
