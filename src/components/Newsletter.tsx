@@ -5,12 +5,38 @@ import React, { useState } from 'react';
 const Newsletter: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isHovered, setIsHovered] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implémenter la logique d'inscription
-    console.log('Email inscrit:', email);
-    setEmail('');
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formspree.io/f/movknowj', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          _subject: 'Nouvelle inscription Newsletter - Maîtrise Cathédrale',
+          type: 'newsletter'
+        }),
+      });
+
+      if (response.ok) {
+        setMessage('Merci pour votre inscription !');
+        setEmail('');
+        setTimeout(() => setMessage(''), 5000);
+      } else {
+        setMessage('Une erreur est survenue. Veuillez réessayer.');
+      }
+    } catch (error) {
+      setMessage('Une erreur est survenue. Veuillez réessayer.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -113,28 +139,45 @@ const Newsletter: React.FC = () => {
 
           <button
             type="submit"
+            disabled={isSubmitting}
             style={{
               padding: '14px 36px',
-              backgroundColor: 'var(--color-gold)',
+              backgroundColor: isSubmitting ? '#ccc' : 'var(--color-gold)',
               color: 'var(--color-white)',
               border: 'none',
               borderRadius: 'var(--radius-sm)',
               fontFamily: 'var(--font-outfit)',
               fontWeight: 'var(--font-semibold)',
               fontSize: 'var(--text-base)',
-              cursor: 'pointer',
+              cursor: isSubmitting ? 'not-allowed' : 'pointer',
               transition: 'all var(--transition-base)',
-              transform: isHovered ? 'translateY(-2px) scale(1.02)' : 'translateY(0) scale(1)',
-              boxShadow: isHovered ? 'var(--shadow-gold)' : 'none',
-              filter: isHovered ? 'brightness(1.1)' : 'brightness(1)',
+              transform: isHovered && !isSubmitting ? 'translateY(-2px) scale(1.02)' : 'translateY(0) scale(1)',
+              boxShadow: isHovered && !isSubmitting ? 'var(--shadow-gold)' : 'none',
+              filter: isHovered && !isSubmitting ? 'brightness(1.1)' : 'brightness(1)',
               whiteSpace: 'nowrap',
             }}
-            onMouseEnter={() => setIsHovered(true)}
+            onMouseEnter={() => !isSubmitting && setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            S&apos;inscrire
+            {isSubmitting ? 'Inscription...' : "S'inscrire"}
           </button>
         </form>
+
+        {/* Message de confirmation */}
+        {message && (
+          <div style={{
+            marginTop: '20px',
+            padding: '12px 20px',
+            backgroundColor: message.includes('Merci') ? '#d4edda' : '#f8d7da',
+            color: message.includes('Merci') ? '#155724' : '#721c24',
+            borderRadius: 'var(--radius-sm)',
+            textAlign: 'center',
+            fontFamily: 'var(--font-outfit)',
+            fontSize: 'var(--text-base)',
+          }}>
+            {message}
+          </div>
+        )}
       </div>
 
       {/* Motif décoratif optionnel */}

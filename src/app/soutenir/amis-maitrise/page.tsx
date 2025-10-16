@@ -13,11 +13,47 @@ export default function AmisMaitrise() {
     ville: '',
     cotisation: 'individuelle'
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Formulaire soumis:', formData);
-    // TODO: Implement form submission
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formspree.io/f/movknowj', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: 'Nouvelle demande adhésion Amis de la Maîtrise',
+          type: 'adhesion-amis'
+        }),
+      });
+
+      if (response.ok) {
+        setMessage('Merci pour votre demande ! Nous vous contacterons très prochainement.');
+        setFormData({
+          prenom: '',
+          nom: '',
+          email: '',
+          telephone: '',
+          adresse: '',
+          codePostal: '',
+          ville: '',
+          cotisation: 'individuelle'
+        });
+        setTimeout(() => setMessage(''), 7000);
+      } else {
+        setMessage('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.');
+      }
+    } catch (error) {
+      setMessage('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -400,29 +436,50 @@ export default function AmisMaitrise() {
 
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   style={{
                     width: '100%',
-                    backgroundColor: 'var(--color-gold)',
+                    backgroundColor: isSubmitting ? '#9ca3af' : 'var(--color-gold)',
                     color: '#fff',
                     padding: '16px 32px',
                     border: 'none',
                     borderRadius: '8px',
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    cursor: 'pointer',
+                    cursor: isSubmitting ? 'not-allowed' : 'pointer',
                     transition: 'all 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#c19660';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    if (!isSubmitting) {
+                      e.currentTarget.style.backgroundColor = '#c19660';
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                    }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'var(--color-gold)';
-                    e.currentTarget.style.transform = 'translateY(0)';
+                    if (!isSubmitting) {
+                      e.currentTarget.style.backgroundColor = 'var(--color-gold)';
+                      e.currentTarget.style.transform = 'translateY(0)';
+                    }
                   }}
                 >
-                  Envoyer ma demande
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer ma demande'}
                 </button>
+
+                {/* Message de confirmation */}
+                {message && (
+                  <div style={{
+                    marginTop: '20px',
+                    padding: '16px 20px',
+                    backgroundColor: message.includes('Merci') ? '#d4edda' : '#f8d7da',
+                    color: message.includes('Merci') ? '#155724' : '#721c24',
+                    borderRadius: '8px',
+                    textAlign: 'center',
+                    fontSize: '1rem',
+                    lineHeight: '1.6'
+                  }}>
+                    {message}
+                  </div>
+                )}
               </form>
             </div>
           </div>
