@@ -283,8 +283,8 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="mobile-menu" style={{
-            position: 'absolute',
-            top: '100%',
+            position: 'fixed',
+            top: '80px',
             left: 0,
             right: 0,
             backgroundColor: '#fff',
@@ -430,6 +430,7 @@ const Header = () => {
 
           .mobile-menu {
             animation: fadeIn 0.3s ease-out;
+            top: 60px !important;
             max-height: calc(100vh - 60px) !important;
           }
 
@@ -454,6 +455,7 @@ const Header = () => {
           }
 
           .mobile-menu {
+            top: 55px !important;
             max-height: calc(100vh - 55px) !important;
           }
 
