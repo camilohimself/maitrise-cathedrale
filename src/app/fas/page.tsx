@@ -3,7 +3,7 @@ import FASHeroCinematic from '@/components/FASHeroCinematic';
 import FASConcertsList from '@/components/FASConcertsList';
 import FASArtistesSection from '@/components/FASArtistesSection';
 import FASEventSection from '@/components/FASEventSection';
-import FASRorateSection from '@/components/FASRorateSection';
+import FASComplementaryEvents from '@/components/FASComplementaryEvents';
 
 export const metadata = {
   title: "Festival d'Art Sacré 2025-2026 | 20ème édition - Cathédrale de Sion",
@@ -19,9 +19,9 @@ export default function FAS() {
     }}>
       <FASHeroCinematic />
       <FASConcertsList />
-      <FASArtistesSection />
       <FASEventSection />
-      <FASRorateSection />
+      <FASComplementaryEvents />
+      <FASArtistesSection />
     </main>
   );
 }

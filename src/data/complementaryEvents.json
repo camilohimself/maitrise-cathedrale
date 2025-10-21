@@ -1,0 +1,73 @@
+{
+  "rorate": {
+    "title": "Messes Rorate",
+    "subtitle": "Dans la seule lumière des bougies",
+    "description": "Messes célébrées pendant l'Avent dans la tradition séculaire de l'Église. Nos jeunes chanteurs s'exercent à l'art du quatuor vocal.",
+    "dates": [
+      {
+        "id": "rorate-1",
+        "date": "2025-12-03",
+        "day": "Mercredi",
+        "dayNumber": "3",
+        "month": "DÉC",
+        "time": "18h00",
+        "performers": "École Maîtrisienne"
+      },
+      {
+        "id": "rorate-2",
+        "date": "2025-12-10",
+        "day": "Mercredi",
+        "dayNumber": "10",
+        "month": "DÉC",
+        "time": "18h00",
+        "performers": "École Maîtrisienne"
+      },
+      {
+        "id": "rorate-3",
+        "date": "2025-12-17",
+        "day": "Mercredi",
+        "dayNumber": "17",
+        "month": "DÉC",
+        "time": "18h00",
+        "performers": "École Maîtrisienne"
+      }
+    ]
+  },
+  "vesperales": {
+    "title": "Vespérales d'orgue",
+    "subtitle": "Le roi des instruments",
+    "description": "Moments de méditation hors du temps autour de l'orgue historique du XVIIIe siècle. Une quarantaine de minutes pour dévoiler les couleurs sonores de cet instrument remarquable.",
+    "dates": [
+      {
+        "id": "vesperale-1",
+        "date": "2025-12-11",
+        "day": "Jeudi",
+        "dayNumber": "11",
+        "month": "DÉC",
+        "time": "19h30",
+        "organist": "Jean-David Waeber",
+        "title": "Maître de chapelle"
+      },
+      {
+        "id": "vesperale-2",
+        "date": "2025-12-18",
+        "day": "Jeudi",
+        "dayNumber": "18",
+        "month": "DÉC",
+        "time": "19h30",
+        "organist": "Edmond Voeffray",
+        "title": "Organiste de la cathédrale"
+      },
+      {
+        "id": "vesperale-3",
+        "date": "2026-01-02",
+        "day": "Vendredi",
+        "dayNumber": "2",
+        "month": "JAN",
+        "time": "19h30",
+        "organist": "Catherine Gremaud-Babel",
+        "title": "Organiste de la cathédrale"
+      }
+    ]
+  }
+}
