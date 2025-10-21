@@ -1,38 +1,10 @@
 // Calendrier complet Maîtrise Cathédrale 2025-2026
 // Données extraites du CSV "calendrier_maitrise_sion_2025-2026.csv"
-// Mise à jour : 7 octobre 2025
+// Mise à jour : 21 octobre 2025
 // Classification par types : Messe, Concert, FAS
 
 export const maitriseEvents = [
   // === OCTOBRE 2025 ===
-  {
-    id: 'oct-12-messe-schola-dedicace',
-    type: 'messe',
-    date: { day: '12', month: 'OCT' },
-    time: '10h00',
-    title: 'Solennité de la Dédicace',
-    category: 'Messe',
-    ensemble: 'Schola',
-    description: 'Célébration solennelle de la Dédicace de la cathédrale',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
-    featured: true
-  },
-  {
-    id: 'oct-19-messe-ensemble',
-    type: 'messe',
-    date: { day: '19', month: 'OCT' },
-    time: '10h00',
-    title: 'Messe avec ensemble',
-    category: 'Messe',
-    ensemble: 'Ensemble Vocal et Instrumental',
-    description: 'Messe dominicale avec Ensemble Vocal et Instrumental',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
-    featured: false
-  },
   {
     id: 'oct-26-messe-gregorien',
     type: 'messe',
