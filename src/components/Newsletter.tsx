@@ -13,20 +13,16 @@ const Newsletter: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formspree.io/f/movknowj', {
+      const response = await fetch('/api/newsletter', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          email: email,
-          _subject: 'Nouvelle inscription Newsletter - Maîtrise Cathédrale',
-          type: 'newsletter'
-        }),
+        body: JSON.stringify({ email }),
       });
 
       if (response.ok) {
-        setMessage('Merci pour votre inscription !');
+        setMessage('Merci pour votre inscription ! 🎼');
         setEmail('');
         setTimeout(() => setMessage(''), 5000);
       } else {
@@ -191,6 +187,33 @@ const Newsletter: React.FC = () => {
         backgroundColor: 'var(--color-gold)',
         opacity: 0.05,
       }} />
+
+      {/* Styles mobiles responsive */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .newsletter-section > div {
+            flex-direction: column !important;
+            gap: 1.5rem !important;
+            text-align: center !important;
+          }
+
+          .newsletter-section form {
+            flex-direction: column !important;
+            width: 100% !important;
+          }
+
+          .newsletter-section button {
+            width: 100% !important;
+            padding: 12px 28px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .newsletter-section {
+            padding: 3rem 0 !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };

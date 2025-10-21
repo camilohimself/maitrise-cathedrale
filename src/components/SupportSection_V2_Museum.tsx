@@ -53,7 +53,7 @@ const SupportSectionV2Museum = () => {
       }}>
 
         {/* Header épuré avec marge latérale */}
-        <div style={{
+        <div className="support-header-grid" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 2fr',
           gap: '60px',
@@ -204,6 +204,27 @@ const SupportSectionV2Museum = () => {
           ))}
         </div>
       </div>
+
+      {/* Styles mobiles responsive */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          :global(.support-header-grid) {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+            margin-bottom: 2.5rem !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          section {
+            padding: 60px 0 !important;
+          }
+
+          section > div {
+            padding: 0 1.5rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };

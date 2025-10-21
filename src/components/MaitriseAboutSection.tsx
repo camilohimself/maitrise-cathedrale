@@ -187,7 +187,7 @@ const MaitriseAboutSection = () => {
             </div>
 
             {/* Stats grid */}
-            <div style={{
+            <div className="stats-grid" style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '1.5rem',
@@ -418,6 +418,11 @@ const MaitriseAboutSection = () => {
 
           :global(.maitrise-about-grid) {
             gap: 2rem !important;
+          }
+
+          :global(.stats-grid) {
+            grid-template-columns: 1fr !important;
+            gap: 1rem !important;
           }
         }
       `}</style>

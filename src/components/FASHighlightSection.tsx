@@ -122,7 +122,7 @@ const FASHighlightSection = () => {
         {/* Grid événements phares */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
           gap: '2rem',
           marginBottom: '4rem',
         }}>
