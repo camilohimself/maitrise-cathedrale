@@ -96,7 +96,8 @@ const Header = () => {
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto',
-        padding: '0 20px'
+        padding: '0 20px',
+        position: 'relative'
       }}>
         <nav style={{
           display: 'flex',
@@ -283,15 +284,16 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="mobile-menu" style={{
             position: 'absolute',
-            top: '60px',
+            top: '100%',
             left: 0,
             right: 0,
             backgroundColor: '#fff',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-            padding: '16px',
+            padding: '20px 16px',
             borderTop: '2px solid var(--color-red)',
-            maxHeight: 'calc(100vh - 60px)',
-            overflowY: 'auto'
+            maxHeight: 'calc(100vh - 80px)',
+            overflowY: 'auto',
+            zIndex: 999
           }}>
             <ul style={{
               listStyle: 'none',
@@ -428,6 +430,7 @@ const Header = () => {
 
           .mobile-menu {
             animation: fadeIn 0.3s ease-out;
+            max-height: calc(100vh - 60px) !important;
           }
 
           nav {
@@ -448,6 +451,10 @@ const Header = () => {
         @media (max-width: 480px) {
           nav {
             height: 55px !important;
+          }
+
+          .mobile-menu {
+            max-height: calc(100vh - 55px) !important;
           }
 
           :global(.header-logo) {
