@@ -9,7 +9,7 @@ const FASComplementaryEvents = () => {
   return (
     <section style={{
       background: 'linear-gradient(180deg, #1a1340 0%, #0a0a1a 100%)',
-      padding: '100px 40px',
+      padding: 'clamp(40px, 10vw, 100px) clamp(16px, 5vw, 40px)',
       position: 'relative'
     }}>
       <div style={{
@@ -19,10 +19,10 @@ const FASComplementaryEvents = () => {
         {/* Header */}
         <div style={{
           textAlign: 'center',
-          marginBottom: '80px'
+          marginBottom: 'clamp(40px, 8vw, 80px)'
         }}>
           <h2 style={{
-            fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+            fontSize: 'clamp(2rem, 6vw, 3.5rem)',
             fontWeight: '300',
             color: 'white',
             marginBottom: '16px',
@@ -31,10 +31,11 @@ const FASComplementaryEvents = () => {
             Découvrez aussi
           </h2>
           <p style={{
-            fontSize: '1.2rem',
+            fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
             color: 'rgba(255, 255, 255, 0.7)',
             maxWidth: '700px',
-            margin: '0 auto'
+            margin: '0 auto',
+            padding: '0 16px'
           }}>
             Traditions et moments de grâce qui enrichissent le Festival d'Art Sacré
           </p>
@@ -43,14 +44,14 @@ const FASComplementaryEvents = () => {
         {/* Grid 2 colonnes */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))',
-          gap: '60px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 500px), 1fr))',
+          gap: 'clamp(30px, 6vw, 60px)'
         }}>
           {/* RORATE */}
           <div style={{
             background: 'rgba(255, 255, 255, 0.03)',
-            borderRadius: '24px',
-            padding: '48px',
+            borderRadius: 'clamp(16px, 3vw, 24px)',
+            padding: 'clamp(24px, 5vw, 48px)',
             border: '1px solid rgba(255, 193, 7, 0.2)',
             position: 'relative',
             overflow: 'hidden'
@@ -70,26 +71,28 @@ const FASComplementaryEvents = () => {
 
             {/* Icon */}
             <div style={{
-              marginBottom: '32px',
+              marginBottom: 'clamp(20px, 4vw, 32px)',
               display: 'flex',
               alignItems: 'center',
-              gap: '16px'
+              gap: 'clamp(12px, 2vw, 16px)',
+              flexWrap: 'wrap'
             }}>
               <div style={{
-                width: '56px',
-                height: '56px',
+                width: 'clamp(48px, 10vw, 56px)',
+                height: 'clamp(48px, 10vw, 56px)',
                 borderRadius: '16px',
                 background: 'linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 140, 0, 0.1))',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: '1px solid rgba(255, 193, 7, 0.3)'
+                border: '1px solid rgba(255, 193, 7, 0.3)',
+                flexShrink: 0
               }}>
                 <Flame size={28} color="#FFC107" strokeWidth={2} />
               </div>
-              <div>
+              <div style={{ flex: '1 1 auto', minWidth: '200px' }}>
                 <h3 style={{
-                  fontSize: '1.8rem',
+                  fontSize: 'clamp(1.4rem, 4vw, 1.8rem)',
                   fontWeight: '600',
                   color: 'white',
                   fontFamily: 'var(--font-spectral), Georgia, serif',
@@ -98,7 +101,7 @@ const FASComplementaryEvents = () => {
                   {rorate.title}
                 </h3>
                 <p style={{
-                  fontSize: '1rem',
+                  fontSize: 'clamp(0.9rem, 2vw, 1rem)',
                   color: '#FFC107',
                   fontStyle: 'italic'
                 }}>
@@ -109,10 +112,10 @@ const FASComplementaryEvents = () => {
 
             {/* Description */}
             <p style={{
-              fontSize: '1rem',
+              fontSize: 'clamp(0.95rem, 2vw, 1rem)',
               color: 'rgba(255, 255, 255, 0.8)',
               lineHeight: '1.6',
-              marginBottom: '32px'
+              marginBottom: 'clamp(20px, 4vw, 32px)'
             }}>
               {rorate.description}
             </p>
@@ -120,9 +123,9 @@ const FASComplementaryEvents = () => {
             {/* Photo bougies cathédrale */}
             <div style={{
               width: '100%',
-              height: '200px',
-              borderRadius: '16px',
-              marginBottom: '32px',
+              height: 'clamp(160px, 25vw, 200px)',
+              borderRadius: 'clamp(12px, 2vw, 16px)',
+              marginBottom: 'clamp(20px, 4vw, 32px)',
               position: 'relative',
               overflow: 'hidden',
               border: '1px solid rgba(255, 193, 7, 0.2)'
@@ -158,25 +161,27 @@ const FASComplementaryEvents = () => {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '16px',
-                    padding: '16px',
+                    gap: 'clamp(10px, 2vw, 16px)',
+                    padding: 'clamp(12px, 2.5vw, 16px)',
                     background: 'rgba(255, 193, 7, 0.08)',
-                    borderRadius: '12px',
+                    borderRadius: 'clamp(8px, 1.5vw, 12px)',
                     border: '1px solid rgba(255, 193, 7, 0.15)',
-                    transition: 'all 0.3s ease'
+                    transition: 'all 0.3s ease',
+                    flexWrap: 'wrap'
                   }}
                 >
                   {/* Date badge */}
                   <div style={{
-                    minWidth: '70px',
+                    minWidth: 'clamp(60px, 12vw, 70px)',
                     textAlign: 'center',
-                    padding: '12px',
+                    padding: 'clamp(8px, 2vw, 12px)',
                     background: 'rgba(255, 193, 7, 0.15)',
-                    borderRadius: '12px',
-                    border: '1px solid rgba(255, 193, 7, 0.3)'
+                    borderRadius: 'clamp(8px, 1.5vw, 12px)',
+                    border: '1px solid rgba(255, 193, 7, 0.3)',
+                    flexShrink: 0
                   }}>
                     <div style={{
-                      fontSize: '1.5rem',
+                      fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
                       fontWeight: '700',
                       color: '#FFC107',
                       lineHeight: '1'
@@ -184,7 +189,7 @@ const FASComplementaryEvents = () => {
                       {date.dayNumber}
                     </div>
                     <div style={{
-                      fontSize: '0.75rem',
+                      fontSize: 'clamp(0.7rem, 1.5vw, 0.75rem)',
                       color: 'rgba(255, 193, 7, 0.8)',
                       marginTop: '4px',
                       fontWeight: '600'
@@ -194,16 +199,16 @@ const FASComplementaryEvents = () => {
                   </div>
 
                   {/* Infos */}
-                  <div style={{ flex: 1 }}>
+                  <div style={{ flex: '1 1 150px' }}>
                     <div style={{
-                      fontSize: '0.9rem',
+                      fontSize: 'clamp(0.85rem, 1.8vw, 0.9rem)',
                       color: 'rgba(255, 255, 255, 0.6)',
                       marginBottom: '4px'
                     }}>
                       {date.day}
                     </div>
                     <div style={{
-                      fontSize: '1rem',
+                      fontSize: 'clamp(0.95rem, 2vw, 1rem)',
                       fontWeight: '600',
                       color: 'white'
                     }}>
@@ -213,9 +218,10 @@ const FASComplementaryEvents = () => {
 
                   {/* Heure */}
                   <div style={{
-                    fontSize: '1rem',
+                    fontSize: 'clamp(0.95rem, 2vw, 1rem)',
                     fontWeight: '600',
-                    color: '#FFC107'
+                    color: '#FFC107',
+                    flexShrink: 0
                   }}>
                     {date.time}
                   </div>
@@ -227,8 +233,8 @@ const FASComplementaryEvents = () => {
           {/* VESPÉRALES D'ORGUE */}
           <div style={{
             background: 'rgba(255, 255, 255, 0.03)',
-            borderRadius: '24px',
-            padding: '48px',
+            borderRadius: 'clamp(16px, 3vw, 24px)',
+            padding: 'clamp(24px, 5vw, 48px)',
             border: '1px solid rgba(212, 165, 116, 0.2)',
             position: 'relative',
             overflow: 'hidden'
@@ -248,26 +254,28 @@ const FASComplementaryEvents = () => {
 
             {/* Icon */}
             <div style={{
-              marginBottom: '32px',
+              marginBottom: 'clamp(20px, 4vw, 32px)',
               display: 'flex',
               alignItems: 'center',
-              gap: '16px'
+              gap: 'clamp(12px, 2vw, 16px)',
+              flexWrap: 'wrap'
             }}>
               <div style={{
-                width: '56px',
-                height: '56px',
+                width: 'clamp(48px, 10vw, 56px)',
+                height: 'clamp(48px, 10vw, 56px)',
                 borderRadius: '16px',
                 background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.2), rgba(212, 165, 116, 0.1))',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                border: '1px solid rgba(212, 165, 116, 0.3)'
+                border: '1px solid rgba(212, 165, 116, 0.3)',
+                flexShrink: 0
               }}>
                 <Music size={28} color="#D4A574" strokeWidth={2} />
               </div>
-              <div>
+              <div style={{ flex: '1 1 auto', minWidth: '200px' }}>
                 <h3 style={{
-                  fontSize: '1.8rem',
+                  fontSize: 'clamp(1.4rem, 4vw, 1.8rem)',
                   fontWeight: '600',
                   color: 'white',
                   fontFamily: 'var(--font-spectral), Georgia, serif',
@@ -276,7 +284,7 @@ const FASComplementaryEvents = () => {
                   {vesperales.title}
                 </h3>
                 <p style={{
-                  fontSize: '1rem',
+                  fontSize: 'clamp(0.9rem, 2vw, 1rem)',
                   color: '#D4A574',
                   fontStyle: 'italic'
                 }}>
@@ -287,10 +295,10 @@ const FASComplementaryEvents = () => {
 
             {/* Description */}
             <p style={{
-              fontSize: '1rem',
+              fontSize: 'clamp(0.95rem, 2vw, 1rem)',
               color: 'rgba(255, 255, 255, 0.8)',
               lineHeight: '1.6',
-              marginBottom: '32px'
+              marginBottom: 'clamp(20px, 4vw, 32px)'
             }}>
               {vesperales.description}
             </p>
@@ -298,9 +306,9 @@ const FASComplementaryEvents = () => {
             {/* Photo orgue cathédrale XVIIIe */}
             <div style={{
               width: '100%',
-              height: '200px',
-              borderRadius: '16px',
-              marginBottom: '32px',
+              height: 'clamp(160px, 25vw, 200px)',
+              borderRadius: 'clamp(12px, 2vw, 16px)',
+              marginBottom: 'clamp(20px, 4vw, 32px)',
               position: 'relative',
               overflow: 'hidden',
               border: '1px solid rgba(212, 165, 116, 0.2)'
@@ -336,25 +344,27 @@ const FASComplementaryEvents = () => {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '16px',
-                    padding: '16px',
+                    gap: 'clamp(10px, 2vw, 16px)',
+                    padding: 'clamp(12px, 2.5vw, 16px)',
                     background: 'rgba(212, 165, 116, 0.08)',
-                    borderRadius: '12px',
+                    borderRadius: 'clamp(8px, 1.5vw, 12px)',
                     border: '1px solid rgba(212, 165, 116, 0.15)',
-                    transition: 'all 0.3s ease'
+                    transition: 'all 0.3s ease',
+                    flexWrap: 'wrap'
                   }}
                 >
                   {/* Date badge */}
                   <div style={{
-                    minWidth: '70px',
+                    minWidth: 'clamp(60px, 12vw, 70px)',
                     textAlign: 'center',
-                    padding: '12px',
+                    padding: 'clamp(8px, 2vw, 12px)',
                     background: 'rgba(212, 165, 116, 0.15)',
-                    borderRadius: '12px',
-                    border: '1px solid rgba(212, 165, 116, 0.3)'
+                    borderRadius: 'clamp(8px, 1.5vw, 12px)',
+                    border: '1px solid rgba(212, 165, 116, 0.3)',
+                    flexShrink: 0
                   }}>
                     <div style={{
-                      fontSize: '1.5rem',
+                      fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
                       fontWeight: '700',
                       color: '#D4A574',
                       lineHeight: '1'
@@ -362,7 +372,7 @@ const FASComplementaryEvents = () => {
                       {date.dayNumber}
                     </div>
                     <div style={{
-                      fontSize: '0.75rem',
+                      fontSize: 'clamp(0.7rem, 1.5vw, 0.75rem)',
                       color: 'rgba(212, 165, 116, 0.8)',
                       marginTop: '4px',
                       fontWeight: '600'
@@ -372,16 +382,16 @@ const FASComplementaryEvents = () => {
                   </div>
 
                   {/* Infos */}
-                  <div style={{ flex: 1 }}>
+                  <div style={{ flex: '1 1 150px' }}>
                     <div style={{
-                      fontSize: '0.9rem',
+                      fontSize: 'clamp(0.85rem, 1.8vw, 0.9rem)',
                       color: 'rgba(255, 255, 255, 0.6)',
                       marginBottom: '4px'
                     }}>
                       {date.day}
                     </div>
                     <div style={{
-                      fontSize: '1rem',
+                      fontSize: 'clamp(0.95rem, 2vw, 1rem)',
                       fontWeight: '600',
                       color: 'white',
                       marginBottom: '2px'
@@ -389,7 +399,7 @@ const FASComplementaryEvents = () => {
                       {date.organist}
                     </div>
                     <div style={{
-                      fontSize: '0.85rem',
+                      fontSize: 'clamp(0.8rem, 1.7vw, 0.85rem)',
                       color: 'rgba(212, 165, 116, 0.8)'
                     }}>
                       {date.title}
@@ -398,9 +408,10 @@ const FASComplementaryEvents = () => {
 
                   {/* Heure */}
                   <div style={{
-                    fontSize: '1rem',
+                    fontSize: 'clamp(0.95rem, 2vw, 1rem)',
                     fontWeight: '600',
-                    color: '#D4A574'
+                    color: '#D4A574',
+                    flexShrink: 0
                   }}>
                     {date.time}
                   </div>

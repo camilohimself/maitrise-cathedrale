@@ -25,6 +25,22 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
+  // Block body scroll when mobile menu is open (iOS fix)
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const previousOverflow = document.body.style.overflow;
+      const previousPosition = document.body.style.position;
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      return () => {
+        document.body.style.overflow = previousOverflow;
+        document.body.style.position = previousPosition;
+        document.body.style.width = '';
+      };
+    }
+  }, [isMobileMenuOpen]);
+
   // Trigger golden shine effect 2x with 0.8s interval on homepage
   useEffect(() => {
     if (pathname === '/') {
@@ -287,12 +303,18 @@ const Header = () => {
             top: '80px',
             left: 0,
             right: 0,
+            bottom: 0,
             backgroundColor: '#fff',
             boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
             padding: '20px 16px',
+            paddingBottom: 'calc(20px + env(safe-area-inset-bottom))',
             borderTop: '2px solid var(--color-red)',
-            maxHeight: 'calc(100vh - 80px)',
+            height: '100dvh',
+            minHeight: '100svh',
+            maxHeight: 'calc(100dvh - 80px)',
             overflowY: 'auto',
+            overscrollBehavior: 'contain',
+            WebkitOverflowScrolling: 'touch',
             zIndex: 999
           }}>
             <ul style={{
@@ -431,7 +453,10 @@ const Header = () => {
           .mobile-menu {
             animation: fadeIn 0.3s ease-out;
             top: 60px !important;
-            max-height: calc(100vh - 60px) !important;
+            height: 100dvh !important;
+            min-height: 100svh !important;
+            max-height: calc(100dvh - 60px) !important;
+            padding-bottom: calc(20px + env(safe-area-inset-bottom)) !important;
           }
 
           nav {
@@ -456,7 +481,10 @@ const Header = () => {
 
           .mobile-menu {
             top: 55px !important;
-            max-height: calc(100vh - 55px) !important;
+            height: 100dvh !important;
+            min-height: 100svh !important;
+            max-height: calc(100dvh - 55px) !important;
+            padding-bottom: calc(20px + env(safe-area-inset-bottom)) !important;
           }
 
           :global(.header-logo) {
