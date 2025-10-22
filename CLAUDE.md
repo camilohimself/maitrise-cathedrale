@@ -5,6 +5,31 @@
 
 ---
 
+## 🚨 PROCHAINE SESSION PRIORITAIRE
+
+### ⏳ À FAIRE: Configuration Resend (15-20 min)
+
+**OBJECTIF:** Activer l'envoi d'emails pour les 3 formulaires du site
+
+**CE QUI EST PRÊT:**
+- ✅ Code API routes 100% fonctionnel (Newsletter, Contact, Amis Maîtrise)
+- ✅ Templates HTML professionnels avec branding
+- ✅ Integration Resend complète dans le code
+- ✅ Guide complet créé: `FORMULAIRES-EMAIL-SETUP.md`
+
+**CE QU'IL FAUT FAIRE (étapes détaillées dans le guide):**
+1. ⏳ Créer compte Resend (https://resend.com - gratuit 3000 emails/mois)
+2. ⏳ Vérifier domaine `maitrise-cathedrale.ch` (ajouter DNS chez hébergeur)
+3. ⏳ Copier clé API Resend
+4. ⏳ Ajouter `RESEND_API_KEY` dans Vercel → Environment Variables
+5. ⏳ Tester les 3 formulaires
+
+**GUIDE COMPLET:** Ouvrir `FORMULAIRES-EMAIL-SETUP.md` (toutes les étapes détaillées avec screenshots)
+
+**RÉSULTAT FINAL:** Tous les formulaires enverront des emails à `info@maitrise-cathedrale.ch` ✅
+
+---
+
 ## 📌 INFOS CRITIQUES (À LIRE EN PREMIER)
 
 ### 🚀 URLs & Déploiement
@@ -17,7 +42,9 @@
 - **Build:** ✅ Stable - 30 pages - 0 erreur TypeScript/ESLint
 - **Performance:** ✅ Images WebP optimisées (98.6% compression)
 - **Responsive:** ✅ 100% mobile optimisé (320px → 1920px+)
-- **SEO:** ✅ Métadonnées complètes toutes pages
+- **SEO:** ✅ Google Search Console configuré + Sitemap soumis
+- **Analytics:** ✅ GA4 installé + 13 CTA trackés (billetterie, formulaires, social)
+- **Formulaires:** ⏳ Code prêt - Configuration Resend à faire (15 min)
 - **Contenu:** ✅ 95% intégré (Maîtrise, FAS, Agenda 2025-2026)
 
 ### 🎯 Progression V1
@@ -309,7 +336,8 @@ paddingBottom: 'env(safe-area-inset-bottom)'
 │   │   │   └── complementaryEvents.json  # Rorate + Vespérales
 │   │   │
 │   │   ├── hooks/            # React hooks
-│   │   │   └── useCookieConsent.ts
+│   │   │   ├── useCookieConsent.ts   # Gestion Cookie Banner LPD
+│   │   │   └── useGATracking.ts      # Tracking GA4 événements
 │   │   │
 │   │   └── styles/           # CSS globaux
 │   │       ├── global-responsive.css
@@ -463,6 +491,27 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 - Corrections 4 grids critiques
 - Build stable 30 pages
 
+### Session 7 (21 Oct 2025 Soir) - SEO + Analytics + Formulaires
+- **SEO & Google Search Console:**
+  - URLs unifiées → www.maitrise-cathedrale.ch (7 fichiers)
+  - Sitemap.xml enrichi (20+ pages)
+  - Robots.txt optimisé
+  - Propriété GSC vérifiée + sitemap soumis
+  - Guide complet: SEO-GOOGLE-GUIDE.md
+
+- **Google Analytics 4:**
+  - GA4 installé (ID: G-K5QG81C5Y1)
+  - Hook useGATracking.ts (156 lignes)
+  - 13 CTA trackés: 5 billetterie FAS, 3 formulaires, 5 liens sociaux
+  - Respect Cookie Banner LPD
+  - Guide complet: GA4-TRACKING-GUIDE.md (500+ lignes)
+
+- **Formulaires Emails (Code prêt):**
+  - 3 API routes Resend: Newsletter, Contact, Amis Maîtrise
+  - Templates HTML professionnels branded
+  - Guide configuration: FORMULAIRES-EMAIL-SETUP.md
+  - ⏳ Configuration Resend à faire prochaine session (15 min)
+
 ---
 
 ## 📞 CONTACTS PROJET
@@ -476,14 +525,18 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 ## 🎯 PROCHAINE SESSION (À PLANIFIER)
 
-**Priorités discutées:**
-1. Formulaires backend (Newsletter/Contact fonctionnels)
-2. YouTube contenus (remplacer placeholders)
-3. Analytics intégration (Plausible ou GA)
-4. Multilingue FR/EN/DE (si client confirme besoin)
+**PRIORITÉ 1: Configuration Resend (15-20 min)**
+- ⏳ Activer l'envoi d'emails pour les 3 formulaires
+- ⏳ Suivre le guide `FORMULAIRES-EMAIL-SETUP.md` étape par étape
+- ⏳ Tester Newsletter, Contact, Amis Maîtrise
+
+**Priorités suivantes:**
+1. YouTube contenus (remplacer placeholders vidéos)
+2. Multilingue FR/EN/DE (si client confirme besoin)
+3. Optimisations GA4 avancées (scroll tracking, etc.)
 
 **Idées OSOM à explorer:**
-- Template Next.js starter kit (réutilisable projets futurs)
+- Template Next.js starter kit (hook useGATracking réutilisable)
 - Spécialisation verticale (institutions culturelles Suisse)
 - Offre multilingue systématique (différenciation)
 
