@@ -21,20 +21,16 @@ export default function AmisMaitrise() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://formspree.io/f/movknowj', {
+      const response = await fetch('/api/amis-maitrise', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          ...formData,
-          _subject: 'Nouvelle demande adhésion Amis de la Maîtrise',
-          type: 'adhesion-amis'
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setMessage('Merci pour votre demande ! Nous vous contacterons très prochainement.');
+        setMessage('Merci pour votre demande ! 🤝 Nous vous contacterons très prochainement.');
         setFormData({
           prenom: '',
           nom: '',

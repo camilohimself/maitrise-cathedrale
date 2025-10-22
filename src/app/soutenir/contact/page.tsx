@@ -164,9 +164,39 @@ export default function Contact() {
               </h3>
 
               <form
-                action="https://formspree.io/f/movknowj"
-                method="POST"
-                onSubmit={() => setIsSubmitting(true)}
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+
+                  const formData = new FormData(e.currentTarget);
+                  const data = {
+                    prenom: formData.get('prenom'),
+                    nom: formData.get('nom'),
+                    email: formData.get('_replyto'),
+                    telephone: formData.get('telephone'),
+                    sujet: formData.get('sujet'),
+                    message: formData.get('message'),
+                  };
+
+                  try {
+                    const response = await fetch('/api/contact', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify(data),
+                    });
+
+                    if (response.ok) {
+                      alert('Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+                      e.currentTarget.reset();
+                    } else {
+                      alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+                    }
+                  } catch (error) {
+                    alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+                  } finally {
+                    setIsSubmitting(false);
+                  }
+                }}
               >
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '20px' }}>
                   <div>

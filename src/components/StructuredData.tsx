@@ -14,9 +14,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
     "name": "Fondation de la Maîtrise de la Cathédrale de Sion",
     "alternateName": "Maîtrise de la Cathédrale de Sion",
     "description": "École de chant et ensemble vocal d'exception au cœur du Valais. Formation musicale et spirituelle depuis 2004.",
-    "url": "https://maitrise-cathedrale.ch",
-    "logo": "https://maitrise-cathedrale.ch/images/logo.png",
-    "image": "https://maitrise-cathedrale.ch/images/og-image.jpg",
+    "url": "https://www.maitrise-cathedrale.ch",
+    "logo": "https://www.maitrise-cathedrale.ch/images/logo.png",
+    "image": "https://www.maitrise-cathedrale.ch/images/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Place de la Cathédrale",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Outfit, Spectral } from "next/font/google";
 import "./globals.css";
 import "@/styles/global-responsive.css";
@@ -28,7 +29,7 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://maitrise-cathedrale.vercel.app'),
+  metadataBase: new URL('https://www.maitrise-cathedrale.ch'),
   title: {
     default: 'Maîtrise de la Cathédrale de Sion - École de chant et musique sacrée',
     template: '%s | Maîtrise Cathédrale Sion'
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_CH',
-    url: 'https://maitrise-cathedrale.vercel.app',
+    url: 'https://www.maitrise-cathedrale.ch',
     siteName: 'Maîtrise de la Cathédrale de Sion',
     title: 'Maîtrise de la Cathédrale de Sion - École de chant et musique sacrée',
     description: 'École de chant d\'excellence au cœur du Valais. Formation musicale, Ensemble Vocal et chant grégorien dans la tradition de la Cathédrale Notre-Dame de Sion.',
@@ -90,7 +91,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     languages: {
-      'fr-CH': 'https://maitrise-cathedrale.vercel.app',
+      'fr-CH': 'https://www.maitrise-cathedrale.ch',
     },
   },
   verification: {
@@ -102,10 +103,10 @@ export const metadata: Metadata = {
   },
   applicationName: 'Maîtrise Cathédrale Sion',
   referrer: 'origin-when-cross-origin',
-  bookmarks: ['https://maitrise-cathedrale.vercel.app/maitrise', 'https://maitrise-cathedrale.vercel.app/fas'],
+  bookmarks: ['https://www.maitrise-cathedrale.ch/maitrise', 'https://www.maitrise-cathedrale.ch/fas'],
   appLinks: {
     web: {
-      url: 'https://maitrise-cathedrale.vercel.app',
+      url: 'https://www.maitrise-cathedrale.ch',
       should_fallback: true,
     },
   },
@@ -119,8 +120,22 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${outfit.variable} ${spectral.variable}`}>
       <body className="font-sans antialiased">
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K5QG81C5Y1"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K5QG81C5Y1');
+          `}
+        </Script>
+
         <SkipLink />
-        
+
         <StructuredData type="organization" />
         <StructuredData type="musicGroup" />
         

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/', '/_next/'],
     },
-    sitemap: 'https://maitrise-cathedrale.ch/sitemap.xml',
+    sitemap: 'https://www.maitrise-cathedrale.ch/sitemap.xml',
   }
 }

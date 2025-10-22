@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://maitrise-cathedrale.ch'
+  const baseUrl = 'https://www.maitrise-cathedrale.ch'
   const lastModified = new Date()
 
   return [
@@ -76,6 +76,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/fas/artiste/stile-antico`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/fas/artiste/choeur-novantiqua`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/fas/artiste/ensemble-vocal-impressio`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/fas/artiste/ecole-maitrisienne-regensburg`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/fas/artiste/ensemble-ad-astra`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/agenda-billetterie`,
+      lastModified,
+      changeFrequency: 'daily',
+      priority: 0.9,
     },
   ]
 }
