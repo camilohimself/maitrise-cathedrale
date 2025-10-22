@@ -4,9 +4,11 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import fondationContent from '@/data/fondationContent';
+import { useGATracking } from '@/hooks/useGATracking';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { trackExternalLink } = useGATracking();
 
   return (
     <footer style={{
@@ -259,6 +261,7 @@ const Footer = () => {
               <a href="https://www.facebook.com/MaitriseSion/"
                  target="_blank"
                  rel="noopener noreferrer"
+                 onClick={() => trackExternalLink('https://www.facebook.com/MaitriseSion/', 'Facebook')}
                  style={{
                    color: 'rgba(255, 255, 255, 0.8)',
                    textDecoration: 'none',
@@ -280,6 +283,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/maitrise_cathedrale/"
                  target="_blank"
                  rel="noopener noreferrer"
+                 onClick={() => trackExternalLink('https://www.instagram.com/maitrise_cathedrale/', 'Instagram')}
                  style={{
                    color: 'rgba(255, 255, 255, 0.8)',
                    textDecoration: 'none',
@@ -301,6 +305,7 @@ const Footer = () => {
               <a href="https://soundcloud.com/maitrise-cathedrale-sion"
                  target="_blank"
                  rel="noopener noreferrer"
+                 onClick={() => trackExternalLink('https://soundcloud.com/maitrise-cathedrale-sion', 'SoundCloud')}
                  style={{
                    color: 'rgba(255, 255, 255, 0.8)',
                    textDecoration: 'none',
@@ -322,6 +327,7 @@ const Footer = () => {
               <a href="https://www.youtube.com/@maitrisecathedralesion"
                  target="_blank"
                  rel="noopener noreferrer"
+                 onClick={() => trackExternalLink('https://www.youtube.com/@maitrisecathedralesion', 'YouTube')}
                  style={{
                    color: 'rgba(255, 255, 255, 0.8)',
                    textDecoration: 'none',
@@ -377,6 +383,7 @@ const Footer = () => {
               href="https://www.osom.ch"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackExternalLink('https://www.osom.ch', 'OSOM')}
               style={{
                 color: 'rgba(212, 165, 116, 0.6)',
                 textDecoration: 'none',

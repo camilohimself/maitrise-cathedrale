@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useGATracking } from '@/hooks/useGATracking';
 
 const Newsletter: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isHovered, setIsHovered] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
+  const { trackFormSubmit, trackEvent } = useGATracking();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,11 +27,26 @@ const Newsletter: React.FC = () => {
         setMessage('Merci pour votre inscription ! 🎼');
         setEmail('');
         setTimeout(() => setMessage(''), 5000);
+
+        // Track successful form submission
+        trackFormSubmit('newsletter');
       } else {
         setMessage('Une erreur est survenue. Veuillez réessayer.');
+
+        // Track form error
+        trackEvent('form_error', {
+          form_name: 'newsletter',
+          error_message: 'API error'
+        });
       }
     } catch (error) {
       setMessage('Une erreur est survenue. Veuillez réessayer.');
+
+      // Track form error
+      trackEvent('form_error', {
+        form_name: 'newsletter',
+        error_message: 'Network error'
+      });
     } finally {
       setIsSubmitting(false);
     }

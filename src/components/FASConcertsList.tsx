@@ -3,9 +3,11 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useGATracking } from '@/hooks/useGATracking';
 
 const FASConcertsList = () => {
   const [hoveredConcert, setHoveredConcert] = useState<number | null>(null);
+  const { trackTicketClick } = useGATracking();
 
   // Labels français corrects pour les catégories
   const getCategoryLabel = (category: string) => {
@@ -547,6 +549,12 @@ Cinq rendez-vous d'exception
                   href={concert.ticketUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackTicketClick(
+                    concert.title,
+                    concert.date,
+                    undefined, // Prix non affiché dans l'interface
+                    concert.category
+                  )}
                   style={{
                     display: 'inline-block',
                     padding: '1rem 2.5rem',

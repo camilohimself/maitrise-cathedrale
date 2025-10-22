@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useGATracking } from '@/hooks/useGATracking';
 
 export default function AmisMaitrise() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ export default function AmisMaitrise() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
+  const { trackFormSubmit, trackEvent } = useGATracking();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,11 +44,29 @@ export default function AmisMaitrise() {
           cotisation: 'individuelle'
         });
         setTimeout(() => setMessage(''), 7000);
+
+        // Track successful form submission with membership type
+        trackEvent('form_submit', {
+          form_name: 'amis_maitrise',
+          concert_type: formData.cotisation // Track if individual or couple membership
+        });
       } else {
         setMessage('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.');
+
+        // Track form error
+        trackEvent('form_error', {
+          form_name: 'amis_maitrise',
+          error_message: 'API error'
+        });
       }
     } catch (error) {
       setMessage('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.');
+
+      // Track form error
+      trackEvent('form_error', {
+        form_name: 'amis_maitrise',
+        error_message: 'Network error'
+      });
     } finally {
       setIsSubmitting(false);
     }

@@ -1,9 +1,60 @@
 'use client';
 
 import { useState } from 'react';
+import { useGATracking } from '@/hooks/useGATracking';
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { trackFormSubmit, trackEvent } = useGATracking();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      prenom: formData.get('prenom'),
+      nom: formData.get('nom'),
+      email: formData.get('_replyto'),
+      telephone: formData.get('telephone'),
+      sujet: formData.get('sujet'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        alert('Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+        e.currentTarget.reset();
+
+        // Track successful form submission
+        trackFormSubmit('contact');
+      } else {
+        alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+
+        // Track form error
+        trackEvent('form_error', {
+          form_name: 'contact',
+          error_message: 'API error'
+        });
+      }
+    } catch (error) {
+      alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+
+      // Track form error
+      trackEvent('form_error', {
+        form_name: 'contact',
+        error_message: 'Network error'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: '#FAFAF9' }}>
@@ -163,41 +214,7 @@ export default function Contact() {
                 Envoyer un message
               </h3>
 
-              <form
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  setIsSubmitting(true);
-
-                  const formData = new FormData(e.currentTarget);
-                  const data = {
-                    prenom: formData.get('prenom'),
-                    nom: formData.get('nom'),
-                    email: formData.get('_replyto'),
-                    telephone: formData.get('telephone'),
-                    sujet: formData.get('sujet'),
-                    message: formData.get('message'),
-                  };
-
-                  try {
-                    const response = await fetch('/api/contact', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify(data),
-                    });
-
-                    if (response.ok) {
-                      alert('Message envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
-                      e.currentTarget.reset();
-                    } else {
-                      alert('Erreur lors de l\'envoi. Veuillez réessayer.');
-                    }
-                  } catch (error) {
-                    alert('Erreur lors de l\'envoi. Veuillez réessayer.');
-                  } finally {
-                    setIsSubmitting(false);
-                  }
-                }}
-              >
+              <form onSubmit={handleSubmit}>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '20px' }}>
                   <div>
                     <label style={{
