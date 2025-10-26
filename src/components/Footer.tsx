@@ -36,8 +36,8 @@ const Footer = () => {
           {/* Logo XXL centré */}
           <div style={{
             position: 'relative',
-            width: '500px',
-            height: '500px',
+            width: 'min(500px, 90vw)',
+            height: 'min(500px, 90vw)',
             marginBottom: '4rem',
             filter: 'drop-shadow(0 20px 60px rgba(0, 0, 0, 0.08))'
           }}>
@@ -53,13 +53,14 @@ const Footer = () => {
           {/* Titre épuré */}
           <h1 style={{
             fontFamily: 'var(--font-spectral)',
-            fontSize: '3.5rem',
+            fontSize: 'clamp(1.75rem, 6vw, 3.5rem)',
             fontWeight: '700',
             color: '#1a1340',
             textAlign: 'center',
             marginBottom: '1.5rem',
             letterSpacing: '-0.02em',
-            lineHeight: 1.2
+            lineHeight: 1.2,
+            maxWidth: '90vw'
           }} className="footer-title">
             Maîtrise Cathédrale de Sion
           </h1>
@@ -429,8 +430,9 @@ const Footer = () => {
 
           footer a[href^="/soutenir/amis-maitrise"],
           footer a[href^="/fas"] {
-            padding: 14px 28px !important;
+            padding: 16px 32px !important;
             font-size: 15px !important;
+            min-height: 48px;
           }
         }
 

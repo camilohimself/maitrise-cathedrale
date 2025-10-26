@@ -217,6 +217,133 @@ export default function Soutenir() {
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        /* Tablet responsive */
+        @media (max-width: 768px) {
+          main > div {
+            padding: 100px 16px 40px !important;
+          }
+
+          main h1 {
+            font-size: 2rem !important;
+            margin-bottom: 32px !important;
+          }
+
+          main > div > div:first-of-type {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+            margin-bottom: 48px !important;
+          }
+
+          main > div > div:last-of-type {
+            padding: 32px 24px !important;
+            border-radius: 12px !important;
+          }
+
+          main > div > div:last-of-type > div:first-of-type h2 {
+            font-size: 1.75rem !important;
+          }
+
+          main > div > div:last-of-type > div:nth-of-type(2) {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)) !important;
+            gap: 20px !important;
+          }
+
+          main > div > div:last-of-type > div:last-of-type {
+            padding: 24px !important;
+            margin-top: 32px !important;
+          }
+
+          main > div > div:last-of-type > div:last-of-type h3 {
+            font-size: 1.15rem !important;
+          }
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 640px) {
+          main > div {
+            padding: 80px 12px 32px !important;
+          }
+
+          main h1 {
+            font-size: 1.75rem !important;
+            margin-bottom: 24px !important;
+          }
+
+          main > div > div:first-of-type {
+            gap: 16px !important;
+          }
+
+          main > div > div:last-of-type {
+            padding: 24px 16px !important;
+          }
+
+          main > div > div:last-of-type > div:first-of-type {
+            margin-bottom: 32px !important;
+          }
+
+          main > div > div:last-of-type > div:first-of-type h2 {
+            font-size: 1.5rem !important;
+            margin-bottom: 12px !important;
+          }
+
+          main > div > div:last-of-type > div:first-of-type p {
+            font-size: 1rem !important;
+          }
+
+          main > div > div:last-of-type > div:nth-of-type(2) {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr)) !important;
+            gap: 16px !important;
+          }
+
+          main > div > div:last-of-type > div:nth-of-type(2) > div {
+            padding: 16px !important;
+          }
+
+          main > div > div:last-of-type > div:nth-of-type(2) > div img {
+            max-width: 120px !important;
+          }
+
+          main > div > div:last-of-type > div:nth-of-type(2) > div p {
+            font-size: 0.85rem !important;
+            margin-top: 12px !important;
+          }
+
+          main > div > div:last-of-type > div:last-of-type {
+            padding: 20px 16px !important;
+            margin-top: 24px !important;
+          }
+
+          main > div > div:last-of-type > div:last-of-type h3 {
+            font-size: 1.1rem !important;
+            margin-bottom: 8px !important;
+          }
+
+          main > div > div:last-of-type > div:last-of-type p {
+            font-size: 0.95rem !important;
+            margin-bottom: 20px !important;
+          }
+
+          main > div > div:last-of-type > div:last-of-type button {
+            padding: 14px 28px !important;
+            font-size: 0.95rem !important;
+            min-height: 48px;
+          }
+        }
+
+        /* Extra small mobile */
+        @media (max-width: 375px) {
+          main > div {
+            padding: 70px 10px 24px !important;
+          }
+
+          main > div > div:nth-of-type(2) > div:nth-of-type(2) {
+            grid-template-columns: 1fr !important;
+            gap: 12px !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }

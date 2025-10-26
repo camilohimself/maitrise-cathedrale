@@ -113,10 +113,11 @@ const HeroOptionB_DegradueVitrail = () => {
           fontWeight: '800',
           color: '#FFFFFF',
           marginBottom: '0.75rem',
-          lineHeight: 1,
+          lineHeight: 1.1,
           letterSpacing: '-0.02em',
           textShadow: '0 0 40px rgba(212, 165, 116, 0.4), 0 4px 20px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.4)',
-          whiteSpace: 'nowrap',
+          textAlign: 'center',
+          maxWidth: '90vw'
         }}>
           Maîtrise Cathédrale
         </h1>
