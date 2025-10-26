@@ -343,14 +343,111 @@ const CookieBanner = () => {
           }
         }
 
+        /* MOBILE RESPONSIVE - Banner principal */
         @media (max-width: 768px) {
-          div[style*="flex-wrap: wrap"] {
-            flex-direction: column;
-            align-items: stretch;
+          /* Banner principal - Compact */
+          div[style*="padding: 1.5rem"] {
+            padding: 1rem !important;
           }
 
-          button {
-            width: 100%;
+          div[style*="flex-wrap: wrap"] {
+            flex-direction: column !important;
+            align-items: stretch !important;
+            gap: 1rem !important;
+          }
+
+          /* Texte banner - Plus compact */
+          div[style*="flex: 1 1 300px"] p {
+            font-size: 0.85rem !important;
+            line-height: 1.5 !important;
+          }
+
+          /* Boutons banner - Stack vertical + tactiles */
+          div[style*="gap: 0.75rem"] {
+            flex-direction: column !important;
+            gap: 0.75rem !important;
+          }
+
+          div[style*="gap: 0.75rem"] button {
+            width: 100% !important;
+            padding: 0.875rem 1.5rem !important;
+            min-height: 48px;
+            font-size: 0.95rem !important;
+          }
+
+          /* POPUP INFO - Responsive critique */
+          div[style*="maxWidth: 500px"] {
+            max-width: calc(100vw - 2rem) !important;
+            padding: 1.5rem !important;
+            margin: 0 1rem;
+          }
+
+          /* Titre popup - Plus compact */
+          div[style*="maxWidth: 500px"] h2 {
+            font-size: 1.4rem !important;
+            flex-direction: column !important;
+            gap: 0.5rem !important;
+          }
+
+          div[style*="maxWidth: 500px"] h2 span {
+            font-size: 1.5rem !important;
+          }
+
+          /* Description popup - Plus compact */
+          div[style*="maxWidth: 500px"] p {
+            font-size: 0.85rem !important;
+          }
+
+          /* Section cookies - Plus compact */
+          div[style*="padding: 1rem"] {
+            padding: 0.875rem !important;
+          }
+
+          div[style*="padding: 1rem"] h3 {
+            font-size: 1rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+
+          div[style*="padding: 1rem"] ul {
+            font-size: 0.8rem !important;
+          }
+
+          div[style*="padding: 1rem"] ul li {
+            margin-bottom: 0.4rem !important;
+            padding-left: 1.25rem !important;
+          }
+
+          /* Section LPD - Plus compact */
+          div[style*="background: #f8f8f8"] {
+            padding: 0.875rem !important;
+          }
+
+          div[style*="background: #f8f8f8"] p {
+            font-size: 0.8rem !important;
+            line-height: 1.5 !important;
+          }
+
+          /* Bouton final popup - Tactile */
+          div[style*="maxWidth: 500px"] button {
+            padding: 1rem !important;
+            font-size: 0.95rem !important;
+            min-height: 48px;
+          }
+        }
+
+        /* EXTRA SMALL MOBILE */
+        @media (max-width: 375px) {
+          div[style*="padding: 1rem"] {
+            padding: 0.75rem !important;
+          }
+
+          div[style*="maxWidth: 500px"] {
+            padding: 1.25rem !important;
+            margin: 0 0.75rem;
+          }
+
+          div[style*="maxWidth: 500px"] h2 {
+            font-size: 1.25rem !important;
           }
         }
       `}</style>

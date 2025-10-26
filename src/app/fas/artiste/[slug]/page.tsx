@@ -801,6 +801,229 @@ export default function ArtistePage() {
             ))}
         </div>
       </section>
+
+      {/* MOBILE RESPONSIVE - CRITIQUE FAS */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          /* Navigation retour - Compact */
+          main > div:first-child {
+            padding: 16px 20px !important;
+          }
+
+          main > div:first-child a {
+            font-size: 0.9rem !important;
+          }
+
+          /* Hero section - Compact */
+          main > section:first-of-type {
+            margin: 20px auto !important;
+            padding: 0 20px !important;
+          }
+
+          main > section:first-of-type > div {
+            height: 350px !important;
+            border-radius: 16px !important;
+          }
+
+          main > section:first-of-type > div > div:last-child {
+            padding: 40px 20px 24px !important;
+          }
+
+          main > section:first-of-type h1 {
+            font-size: 1.75rem !important;
+            line-height: 1.2 !important;
+          }
+
+          main > section:first-of-type > div > div:last-child > p:first-of-type {
+            font-size: 0.85rem !important;
+          }
+
+          main > section:first-of-type > div > div:last-child > p:nth-of-type(2) {
+            font-size: 1.15rem !important;
+          }
+
+          main > section:first-of-type > div > div:last-child > div {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 16px !important;
+          }
+
+          main > section:first-of-type > div > div:last-child > div > span {
+            font-size: 1.1rem !important;
+          }
+
+          main > section:first-of-type > div > div:last-child > div > a {
+            width: 100% !important;
+            text-align: center !important;
+            padding: 16px 24px !important;
+            font-size: 0.95rem !important;
+          }
+
+          /* Content Grid - Stack vertical CRITIQUE */
+          main > section:nth-of-type(2) {
+            padding: 24px 20px !important;
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+
+          /* Main content */
+          main > section:nth-of-type(2) > div:first-child h2 {
+            font-size: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+          }
+
+          main > section:nth-of-type(2) > div:first-child > div {
+            font-size: 1rem !important;
+            line-height: 1.7 !important;
+          }
+
+          main > section:nth-of-type(2) > div:first-child > div > p {
+            margin-bottom: 1.25rem !important;
+          }
+
+          /* Informations pratiques - Plus compact */
+          main > section:nth-of-type(2) > div:first-child > div:last-child {
+            margin-top: 2rem !important;
+            padding: 1.5rem !important;
+          }
+
+          main > section:nth-of-type(2) > div:first-child > div:last-child h3 {
+            font-size: 1.25rem !important;
+            margin-bottom: 1.25rem !important;
+          }
+
+          main > section:nth-of-type(2) > div:first-child > div:last-child h4 {
+            font-size: 1rem !important;
+          }
+
+          main > section:nth-of-type(2) > div:first-child > div:last-child div {
+            font-size: 0.85rem !important;
+          }
+
+          /* Sidebar - Full width */
+          main > section:nth-of-type(2) > aside {
+            width: 100%;
+          }
+
+          main > section:nth-of-type(2) > aside > div:first-child {
+            padding: 20px !important;
+          }
+
+          main > section:nth-of-type(2) > aside > div:first-child h3 {
+            font-size: 1.1rem !important;
+            margin-bottom: 1.25rem !important;
+          }
+
+          main > section:nth-of-type(2) > aside > div:first-child h4 {
+            font-size: 1.15rem !important;
+          }
+
+          /* Call to action - Tactile */
+          main > section:nth-of-type(2) > aside > div:last-child {
+            padding: 20px !important;
+          }
+
+          main > section:nth-of-type(2) > aside > div:last-child h4 {
+            font-size: 1.1rem !important;
+          }
+
+          main > section:nth-of-type(2) > aside > div:last-child p {
+            font-size: 0.9rem !important;
+          }
+
+          main > section:nth-of-type(2) > aside > div:last-child a {
+            padding: 16px !important;
+            min-height: 48px;
+            font-size: 0.95rem !important;
+          }
+
+          /* Related Events - Stack + Safe Grid */
+          main > section:last-child {
+            padding: 40px 20px !important;
+          }
+
+          main > section:last-child h2 {
+            font-size: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+          }
+
+          main > section:last-child > div {
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important;
+            gap: 1.5rem !important;
+          }
+
+          main > section:last-child article > div:first-child {
+            height: 150px !important;
+          }
+
+          main > section:last-child article > div:last-child {
+            padding: 16px !important;
+          }
+
+          main > section:last-child article h4 {
+            font-size: 1rem !important;
+          }
+
+          main > section:last-child article p {
+            font-size: 0.85rem !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          /* Hero - Extra compact */
+          main > section:first-of-type {
+            margin: 16px auto !important;
+            padding: 0 16px !important;
+          }
+
+          main > section:first-of-type > div {
+            height: 280px !important;
+            border-radius: 12px !important;
+          }
+
+          main > section:first-of-type > div > div:last-child {
+            padding: 30px 16px 20px !important;
+          }
+
+          main > section:first-of-type h1 {
+            font-size: 1.5rem !important;
+          }
+
+          main > section:first-of-type > div > div:last-child > p:nth-of-type(2) {
+            font-size: 1rem !important;
+            margin-bottom: 1.25rem !important;
+          }
+
+          /* Content - Ultra compact */
+          main > section:nth-of-type(2) {
+            padding: 20px 16px !important;
+            gap: 32px !important;
+          }
+
+          main > section:nth-of-type(2) > div:first-child h2 {
+            font-size: 1.35rem !important;
+          }
+
+          main > section:nth-of-type(2) > div:first-child > div {
+            font-size: 0.95rem !important;
+            line-height: 1.6 !important;
+          }
+
+          main > section:nth-of-type(2) > div:first-child > div:last-child {
+            padding: 1.25rem !important;
+          }
+
+          /* Related Events - Compact */
+          main > section:last-child {
+            padding: 32px 16px !important;
+          }
+
+          main > section:last-child > div {
+            grid-template-columns: 1fr !important;
+            gap: 1.25rem !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }
