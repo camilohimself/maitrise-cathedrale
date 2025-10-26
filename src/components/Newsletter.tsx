@@ -219,9 +219,15 @@ const Newsletter: React.FC = () => {
             width: 100% !important;
           }
 
+          .newsletter-section input {
+            padding: 16px 18px !important;
+            font-size: 16px !important;
+          }
+
           .newsletter-section button {
             width: 100% !important;
-            padding: 12px 28px !important;
+            padding: 16px 28px !important;
+            min-height: 48px;
           }
         }
 

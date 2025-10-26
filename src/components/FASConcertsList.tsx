@@ -150,8 +150,13 @@ const FASConcertsList = () => {
             border-radius: 16px !important;
           }
 
-          /* Image - FIRST ORDER + SMALLER */
+          /* Image - ALWAYS FIRST ORDER (cohérence mobile) */
           .concert-card .concert-image {
+            order: 1 !important;
+          }
+
+          /* Force order 1 pour TOUTES les images (override inline styles) */
+          section > div:last-child > div:last-child > div .concert-image {
             order: 1 !important;
           }
 
@@ -160,8 +165,13 @@ const FASConcertsList = () => {
             border-radius: 12px !important;
           }
 
-          /* Contenu - SECOND ORDER */
+          /* Contenu - ALWAYS SECOND ORDER (cohérence mobile) */
           .concert-card .concert-content {
+            order: 2 !important;
+          }
+
+          /* Force order 2 pour TOUT le contenu (override inline styles) */
+          section > div:last-child > div:last-child > div .concert-content {
             order: 2 !important;
           }
 

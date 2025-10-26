@@ -12,7 +12,7 @@ export default function EnsembleSection() {
       <div className="container">
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
           gap: 'clamp(40px, 8vw, 80px)',
           alignItems: 'center'
         }}>

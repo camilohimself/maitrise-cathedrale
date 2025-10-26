@@ -137,6 +137,55 @@ export default function DirectionSection() {
           </div>
         </div>
       </div>
+
+      {/* Styles responsive mobile */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .section-white > div > div {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+
+          .section-white > div > div > div:first-child {
+            height: 350px !important;
+            max-width: 100%;
+          }
+
+          .section-white h2 {
+            font-size: 2.5rem !important;
+          }
+
+          .section-white h3 {
+            font-size: 1.75rem !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .section-white > div > div {
+            gap: 32px !important;
+          }
+
+          .section-white > div > div > div:first-child {
+            height: 300px !important;
+          }
+
+          .section-white h2 {
+            font-size: 2rem !important;
+          }
+
+          .section-white h3 {
+            font-size: 1.5rem !important;
+          }
+
+          .section-white h4 {
+            font-size: 0.9rem !important;
+          }
+
+          .section-white p {
+            font-size: 0.95rem !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

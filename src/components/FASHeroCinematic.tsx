@@ -454,11 +454,11 @@ const FASHeroCinematic = () => {
             height: auto !important;
           }
 
-          /* Boutons navigation réduits */
+          /* Boutons navigation réduits (48px → 40px) */
           button[style*="4rem"] {
-            width: 3rem !important;
-            height: 3rem !important;
-            font-size: 1.2rem !important;
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+            font-size: 1.1rem !important;
           }
 
           /* Dots navigation plus petits */
