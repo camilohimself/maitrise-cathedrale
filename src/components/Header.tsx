@@ -465,7 +465,7 @@ const Header = () => {
 
           :global(.header-logo) {
             height: 50px !important;
-            max-width: 65vw;
+            max-width: 70vw;
           }
 
           header > div {

@@ -409,6 +409,10 @@ const MaitriseAboutSection = () => {
             grid-template-columns: 1fr !important;
             gap: 2.5rem !important;
           }
+
+          :global(.maitrise-about-grid) > div:first-child > div {
+            height: 350px !important;
+          }
         }
 
         @media (max-width: 640px) {
@@ -418,6 +422,10 @@ const MaitriseAboutSection = () => {
 
           :global(.maitrise-about-grid) {
             gap: 2rem !important;
+          }
+
+          :global(.maitrise-about-grid) > div:first-child > div {
+            height: 280px !important;
           }
 
           :global(.stats-grid) {

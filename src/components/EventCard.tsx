@@ -270,7 +270,7 @@ const EventCard: React.FC<EventCardProps> = ({
             {category}
           </div>
 
-          {/* Titre - Taille réduite pour éviter débordement */}
+          {/* Titre - Taille réduite pour éviter débordement + Ellipsis 2 lignes */}
           <h3 style={{
             fontFamily: 'var(--font-spectral)',
             fontSize: '24px', // Réduit de 28px à 24px
@@ -279,6 +279,11 @@ const EventCard: React.FC<EventCardProps> = ({
             marginBottom: '6px',
             lineHeight: 1.1, // Plus serré
             margin: '0 0 6px 0',
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis'
           }}>
             {title}
           </h3>
