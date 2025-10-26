@@ -16,7 +16,10 @@ export async function POST(request: Request) {
 
     const data = await resend.emails.send({
       from: 'Maîtrise Cathédrale <noreply@maitrise-cathedrale.ch>',
-      to: process.env.CONTACT_EMAIL || 'info@maitrise-cathedrale.ch',
+      to: [
+        process.env.CONTACT_EMAIL || 'info@maitrise-cathedrale.ch',
+        'musiquesacree@cath-vs.org'
+      ],
       replyTo: email,
       subject: '🤝 Nouvelle demande adhésion - Amis de la Maîtrise',
       html: `
