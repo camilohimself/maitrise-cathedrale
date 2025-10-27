@@ -479,6 +479,33 @@ const EventCard: React.FC<EventCardProps> = ({
           background: 'linear-gradient(135deg, transparent 0%, rgba(0,0,0,0.1) 100%)',
         }} />
       </div>
+
+      {/* MOBILE RESPONSIVE - Billetterie CTA prominent (CORRIGÉ P0-8) */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          /* Billetterie button - Full-width + Prominent */
+          :global(.event-card .contentSection a[href]) {
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
+            text-align: center !important;
+            padding: 14px 20px !important;
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            min-height: 48px;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 12px rgba(227, 50, 65, 0.25) !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          :global(.event-card .contentSection a[href]) {
+            padding: 14px 18px !important;
+            font-size: 0.95rem !important;
+            min-height: 48px;
+          }
+        }
+      `}</style>
     </div>
   );
 };

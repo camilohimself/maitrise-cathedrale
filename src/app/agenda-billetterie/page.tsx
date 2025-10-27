@@ -559,9 +559,30 @@ export default function AgendaBilletterie() {
             font-size: 0.85rem !important;
           }
 
-          /* Section événements */
+          /* CTA Billetterie - PROMINENT (CORRIGÉ P2-14) */
+          section:first-of-type a[href*="booking-corner"] {
+            padding: 16px 40px !important;
+            font-size: 1.1rem !important;
+            min-height: 48px;
+            margin-top: 24px !important;
+            margin-bottom: 24px !important;
+            box-shadow: 0 12px 35px rgba(212, 165, 116, 0.5) !important;
+          }
+
+          /* Section événements - REDUCED PADDING (CORRIGÉ P1-10) */
           section:nth-of-type(2) {
-            padding: 40px 0 !important;
+            padding: 24px 0 !important;
+          }
+
+          /* Container événements - NO OVERFLOW (CORRIGÉ P1-9) */
+          section:nth-of-type(2) > div {
+            max-width: 100% !important;
+            padding: 0 16px !important;
+          }
+
+          /* Cards container - SAFE WIDTH */
+          section:nth-of-type(2) > div > div:nth-child(2) {
+            max-width: 100% !important;
           }
 
           /* Compteur résultats */
@@ -590,10 +611,12 @@ export default function AgendaBilletterie() {
             font-size: 0.85rem !important;
           }
 
-          /* CTA Billetterie */
+          /* CTA Billetterie - TACTILE 48px (CORRIGÉ P2-14) */
           section:first-of-type a[href*="booking-corner"] {
-            padding: 12px 28px !important;
-            font-size: 0.95rem !important;
+            padding: 14px 32px !important;
+            font-size: 1rem !important;
+            min-height: 48px;
+            box-shadow: 0 10px 30px rgba(212, 165, 116, 0.45) !important;
           }
 
           /* Selects */
@@ -602,9 +625,14 @@ export default function AgendaBilletterie() {
             font-size: 0.8rem !important;
           }
 
-          /* Section événements */
+          /* Section événements - MINIMAL PADDING (CORRIGÉ P1-10) */
           section:nth-of-type(2) {
-            padding: 32px 0 !important;
+            padding: 20px 0 !important;
+          }
+
+          /* Container - SAFE PADDING */
+          section:nth-of-type(2) > div {
+            padding: 0 12px !important;
           }
         }
       `}</style>
