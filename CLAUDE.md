@@ -1,7 +1,7 @@
 # 🎼 Site Maîtrise de la Cathédrale de Sion
 
-**Dernière mise à jour:** 21 octobre 2025
-**Statut:** ✅ **SITE V1 EN PRODUCTION - 100% RESPONSIVE**
+**Dernière mise à jour:** 27 octobre 2025
+**Statut:** ✅ **SITE V1 EN PRODUCTION - AGENDA MOBILE OPTIMISÉ**
 
 ---
 
@@ -512,6 +512,56 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
   - Guide configuration: FORMULAIRES-EMAIL-SETUP.md
   - ⏳ Configuration Resend à faire prochaine session (15 min)
 
+### Session 8 (27 Oct 2025) - Agenda Mobile UX Optimisation Finale
+**Contexte :** Page agenda critique pour festival FAS en cours, problèmes affichage mobile persistants
+
+**Phase 1 - Corrections 15 problèmes identifiés :**
+- Diagnostic complet : P0 (8 critiques), P1 (5 importants), P2 (2 polish)
+- EventCard.module.css : 11 corrections (boutons tactiles 44px, textes lisibles 60+)
+- EventCard.tsx : Billetterie full-width mobile + ombre portée
+- page.tsx : Container safe, padding optimisé, CTA prominent
+- Commit `906f880` : "📱 AGENDA MOBILE: Corrections complètes 15 problèmes"
+- **Résultat :** Non concluant selon tests client
+
+**Phase 2 - Refonte layout vertical + sticky headers :**
+- Layout vertical pur mobile (~240px/card vs 450px initial)
+- Sticky month headers dorés (navigation 9 mois)
+- Groupement automatique événements par mois
+- Date section horizontale compacte (70px)
+- Image 150px + contenu optimisé
+- Gain scroll : -46% (13.2m vs 24.7m initial)
+- Commit `4e03154` : "🎯 AGENDA MOBILE: Refonte UX complète - Layout vertical + Sticky headers"
+- **Résultat :** Encore non concluant selon tests client
+
+**Phase 3 - Solution finale (conseil externe) :**
+- **Problème identifié :** Images causent overflow/layout shift mobile
+- **Solution simple :** Masquer images <640px (`display: none`)
+- Cards ultra-compactes : ~100px/card (Date 60px + Contenu 40px + CTAs 44px)
+- Images visibles tablet/desktop (≥640px)
+- Titre + Description : 1 ligne chacun (focus info essentielle)
+- **Gain scroll massif : -80%** (5.5m vs 24.7m initial)
+- Commit `32b959e` : "🎯 AGENDA MOBILE: Solution finale - Images masquées <640px"
+
+**Métriques finales :**
+- Height cards mobile : ~100px (-78% vs initial 450px)
+- Scroll total 55 events : 5.5m (-80% vs initial 24.7m)
+- Sticky headers : 9 mois (Oct 2025 → Juin 2026)
+- Boutons tactiles : 44px min-height (Apple HIG)
+- Images masquées : <640px mobile, visibles ≥640px tablet/desktop
+
+**Leçons apprises :**
+- Desktop-first = impasse pour mobile complexe
+- Tweaks CSS infinis ≠ solution durable
+- Parfois la solution la plus simple (cacher images) = la meilleure
+- Feedback externe précieux (diagnostic overflow images)
+
+**Fichiers modifiés :**
+- EventCard.module.css : 120 lignes responsive ajoutées
+- EventCard.tsx : 180 lignes CSS responsive refonte + 57 lignes optimisation finale
+- agenda-billetterie/page.tsx : Groupement par mois + sticky headers (281 lignes)
+
+**État final :** ✅ Agenda mobile production-ready, attente validation tests client réels
+
 ---
 
 ## 📞 CONTACTS PROJET
@@ -542,4 +592,4 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 ---
 
-**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 21 octobre 2025**
+**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 27 octobre 2025**
