@@ -539,7 +539,7 @@ const EventCard: React.FC<EventCardProps> = ({
             font-weight: 500 !important;
           }
 
-          /* IMAGE SECTION - 150px height optimisée */
+          /* IMAGE SECTION - Visible sur tablet 640px+ */
           :global(.event-card .imageSection) {
             width: 100% !important;
             height: 150px !important;
@@ -619,40 +619,85 @@ const EventCard: React.FC<EventCardProps> = ({
         }
 
         @media (max-width: 640px) {
-          /* Optimisations écrans très petits */
+          /* MOBILE: Images masquées - Cards ultra-compactes ~100px */
+
+          /* CARD - Height optimisée sans image */
+          :global(.event-card) {
+            border-radius: 12px !important;
+            margin-bottom: 12px !important;
+          }
+
+          /* DATE SECTION - Compact */
           :global(.event-card .dateSection) {
-            height: 65px !important;
-            min-height: 65px !important;
-            max-height: 65px !important;
+            height: 60px !important;
+            min-height: 60px !important;
+            max-height: 60px !important;
             padding: 10px 14px !important;
+            gap: 8px !important;
           }
 
+          /* Numéro jour - Taille réduite */
           :global(.event-card .dayNumber) {
-            font-size: 2.25rem !important;
+            font-size: 2rem !important;
           }
 
+          /* Jour semaine + Mois + Heure - Plus compacts */
+          :global(.event-card .dateSection > div:first-child) {
+            font-size: 0.75rem !important;
+          }
+
+          :global(.event-card .dateSection > div:nth-child(3)) {
+            font-size: 0.8rem !important;
+          }
+
+          :global(.event-card .dateSection > div:last-child) {
+            font-size: 0.7rem !important;
+          }
+
+          /* IMAGE SECTION - MASQUÉE sur mobile <640px */
           :global(.event-card .imageSection) {
-            height: 140px !important;
-            min-height: 140px !important;
-            max-height: 140px !important;
+            display: none !important;
           }
 
+          /* CONTENT SECTION - Compact sans image */
           :global(.event-card .contentSection) {
             padding: 10px 14px !important;
           }
 
-          :global(.event-card .contentSection h3) {
-            font-size: 1.05rem !important;
+          /* Badge - Petit */
+          :global(.event-card .contentSection > div:first-child > div:first-child) {
+            font-size: 0.6rem !important;
+            padding: 3px 8px !important;
+            margin-bottom: 4px !important;
           }
 
+          /* Titre - Lisible 1 ligne */
+          :global(.event-card .contentSection h3) {
+            font-size: 1rem !important;
+            line-height: 1.2 !important;
+            margin-bottom: 4px !important;
+            -webkit-line-clamp: 1 !important;
+          }
+
+          /* Description - 1 ligne stricte */
           :global(.event-card .contentSection p) {
             font-size: 0.75rem !important;
+            line-height: 1.3 !important;
+            margin-bottom: 6px !important;
+            -webkit-line-clamp: 1 !important;
           }
 
+          /* CTAs - Compacts */
+          :global(.event-card .contentSection > div:last-child) {
+            margin-top: 6px !important;
+            gap: 6px !important;
+          }
+
+          /* Boutons - Tactiles mais compacts */
           :global(.event-card .contentSection a[href]),
           :global(.event-card .contentSection button) {
-            padding: 10px 14px !important;
-            font-size: 0.85rem !important;
+            padding: 10px 12px !important;
+            font-size: 0.8rem !important;
             min-height: 44px;
           }
         }
