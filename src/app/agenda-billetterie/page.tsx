@@ -19,7 +19,7 @@ export default function AgendaBilletterie() {
       const pastMonths = ['AOÛT', 'SEPT'];
       return !pastMonths.includes(event.date.month);
     });
-    
+
     let filtered = [...upcomingEvents];
 
     // Filtre par recherche
@@ -45,13 +45,13 @@ export default function AgendaBilletterie() {
     // Filtre par prix
     if (selectedPriceRange) {
       if (selectedPriceRange === 'free') {
-        filtered = filtered.filter(event => 
-          event.price.toLowerCase().includes('libre') || 
+        filtered = filtered.filter(event =>
+          event.price.toLowerCase().includes('libre') ||
           event.price.toLowerCase().includes('gratuit')
         );
       } else if (selectedPriceRange === 'paid') {
-        filtered = filtered.filter(event => 
-          !event.price.toLowerCase().includes('libre') && 
+        filtered = filtered.filter(event =>
+          !event.price.toLowerCase().includes('libre') &&
           !event.price.toLowerCase().includes('gratuit')
         );
       }
@@ -73,6 +73,32 @@ export default function AgendaBilletterie() {
 
     return sortedEvents;
   }, [searchTerm, selectedMonth, selectedType, selectedPriceRange]);
+
+  // Grouper les événements par mois pour sticky headers
+  const eventsByMonth = useMemo(() => {
+    const groups: { [key: string]: typeof filteredEvents } = {};
+    filteredEvents.forEach(event => {
+      const monthKey = event.date.month;
+      if (!groups[monthKey]) {
+        groups[monthKey] = [];
+      }
+      groups[monthKey].push(event);
+    });
+    return groups;
+  }, [filteredEvents]);
+
+  // Mapping mois → nom complet pour headers
+  const monthNames: { [key: string]: string } = {
+    'OCT': 'Octobre 2025',
+    'NOV': 'Novembre 2025',
+    'DÉC': 'Décembre 2025',
+    'JAN': 'Janvier 2026',
+    'FÉV': 'Février 2026',
+    'MAR': 'Mars 2026',
+    'AVR': 'Avril 2026',
+    'MAI': 'Mai 2026',
+    'JUIN': 'Juin 2026'
+  };
 
   return (
     <main style={{
@@ -382,34 +408,78 @@ export default function AgendaBilletterie() {
             </p>
           </div>
 
-          {/* Liste d'événements - Layout vertical pour cards horizontales */}
+          {/* Liste d'événements avec sticky month headers */}
           {filteredEvents.length > 0 ? (
             <div style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '0px', // Pas de gap car les cards ont déjà leur marginBottom
-              marginBottom: 'var(--spacing-3xl)',
-              maxWidth: '900px', // Largeur maximale pour les cards horizontales
+              maxWidth: '900px',
               margin: '0 auto var(--spacing-3xl) auto',
             }}>
-              {filteredEvents.map((event) => (
-                <EventCard
-                  key={event.id}
-                  date={{ day: event.date.day, month: event.date.month }}
-                  time={event.time}
-                  title={event.title}
-                  category={event.category}
-                  description={event.description}
-                  image={event.image}
-                  price={event.price}
-                  location={event.location}
-                  ctaText="Réserver"
-                  featured={event.featured}
-                  programme={event.programme}
-                  technicalInfo={event.technicalInfo}
-                  ticketUrl={event.ticketUrl}
-                />
-              ))}
+              {Object.keys(eventsByMonth)
+                .sort((a, b) => {
+                  const monthOrder: { [key: string]: number } = {
+                    'OCT': 10, 'NOV': 11, 'DÉC': 12,
+                    'JAN': 13, 'FÉV': 14, 'MAR': 15, 'AVR': 16, 'MAI': 17, 'JUIN': 18
+                  };
+                  return (monthOrder[a] || 99) - (monthOrder[b] || 99);
+                })
+                .map((monthKey) => (
+                  <div key={monthKey} style={{ marginBottom: '24px' }}>
+                    {/* Sticky Month Header */}
+                    <div
+                      className="month-header"
+                      style={{
+                        position: 'sticky',
+                        top: '80px', // Sous le header principal
+                        zIndex: 10,
+                        backgroundColor: 'var(--color-gold)',
+                        padding: '12px 20px',
+                        marginBottom: '16px',
+                        borderRadius: '8px',
+                        boxShadow: '0 2px 8px rgba(212, 165, 116, 0.25)',
+                      }}
+                    >
+                      <h3 style={{
+                        fontFamily: 'var(--font-spectral)',
+                        fontSize: '1.3rem',
+                        fontWeight: '600',
+                        color: 'var(--color-white)',
+                        margin: 0,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '12px',
+                      }}>
+                        <span style={{ fontSize: '1.5rem' }}>📅</span>
+                        {monthNames[monthKey] || monthKey}
+                      </h3>
+                    </div>
+
+                    {/* Events du mois */}
+                    <div style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '0px',
+                    }}>
+                      {eventsByMonth[monthKey].map((event) => (
+                        <EventCard
+                          key={event.id}
+                          date={{ day: event.date.day, month: event.date.month }}
+                          time={event.time}
+                          title={event.title}
+                          category={event.category}
+                          description={event.description}
+                          image={event.image}
+                          price={event.price}
+                          location={event.location}
+                          ctaText="Réserver"
+                          featured={event.featured}
+                          programme={event.programme}
+                          technicalInfo={event.technicalInfo}
+                          ticketUrl={event.ticketUrl}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))}
             </div>
           ) : (
             /* Message aucun résultat */
@@ -633,6 +703,23 @@ export default function AgendaBilletterie() {
           /* Container - SAFE PADDING */
           section:nth-of-type(2) > div {
             padding: 0 12px !important;
+          }
+
+          /* Month headers - Compact mobile */
+          :global(.month-header) {
+            top: 60px !important;
+            padding: 10px 16px !important;
+            margin-bottom: 12px !important;
+            border-radius: 6px !important;
+          }
+
+          :global(.month-header h3) {
+            font-size: 1.1rem !important;
+            gap: 8px !important;
+          }
+
+          :global(.month-header h3 span) {
+            font-size: 1.25rem !important;
           }
         }
       `}</style>

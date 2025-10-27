@@ -480,29 +480,180 @@ const EventCard: React.FC<EventCardProps> = ({
         }} />
       </div>
 
-      {/* MOBILE RESPONSIVE - Billetterie CTA prominent (CORRIGÉ P0-8) */}
+      {/* MOBILE RESPONSIVE - LAYOUT VERTICAL COMPACT OPTIMISÉ UX */}
       <style jsx>{`
         @media (max-width: 768px) {
-          /* Billetterie button - Full-width + Prominent */
-          :global(.event-card .contentSection a[href]) {
+          /* CARD - Stack vertical + height optimisée ~220-250px */
+          :global(.event-card) {
+            flex-direction: column !important;
+            height: auto !important;
+            min-height: auto !important;
+            border-radius: 16px !important;
+            margin-bottom: 16px !important;
+          }
+
+          /* DATE SECTION - Horizontal compact 70px */
+          :global(.event-card .dateSection) {
             width: 100% !important;
-            display: flex !important;
-            justify-content: center !important;
-            text-align: center !important;
-            padding: 14px 20px !important;
-            font-size: 1rem !important;
+            height: 70px !important;
+            min-height: 70px !important;
+            max-height: 70px !important;
+            padding: 12px 16px !important;
+            border-right: none !important;
+            border-bottom: 1px solid rgba(26, 19, 64, 0.1) !important;
+            flex-direction: row !important;
+            justify-content: space-around !important;
+            align-items: center !important;
+            gap: 12px !important;
+          }
+
+          /* Date elements - Inline horizontal */
+          :global(.event-card .dateSection > div) {
+            margin: 0 !important;
+          }
+
+          /* Jour semaine - Compact */
+          :global(.event-card .dateSection > div:first-child) {
+            font-size: 0.8rem !important;
+            font-weight: 600 !important;
+            text-transform: capitalize !important;
+          }
+
+          /* Numéro jour - Taille moyenne */
+          :global(.event-card .dayNumber) {
+            font-size: 2.5rem !important;
+            line-height: 1 !important;
             font-weight: 700 !important;
-            min-height: 48px;
-            margin-bottom: 8px;
-            box-shadow: 0 4px 12px rgba(227, 50, 65, 0.25) !important;
+          }
+
+          /* Mois - Compact */
+          :global(.event-card .dateSection > div:nth-child(3)) {
+            font-size: 0.85rem !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+          }
+
+          /* Heure - Compact */
+          :global(.event-card .dateSection > div:last-child) {
+            font-size: 0.75rem !important;
+            font-weight: 500 !important;
+          }
+
+          /* IMAGE SECTION - 150px height optimisée */
+          :global(.event-card .imageSection) {
+            width: 100% !important;
+            height: 150px !important;
+            min-height: 150px !important;
+            max-height: 150px !important;
+            border-radius: 0 !important;
+            order: 2;
+          }
+
+          /* CONTENT SECTION - Compact 110px */
+          :global(.event-card .contentSection) {
+            padding: 12px 16px !important;
+            min-height: auto !important;
+            order: 3;
+          }
+
+          /* Badge - Compact */
+          :global(.event-card .contentSection > div:first-child > div:first-child) {
+            font-size: 0.65rem !important;
+            padding: 3px 10px !important;
+            margin-bottom: 6px !important;
+          }
+
+          /* Titre - Lisible mais compact */
+          :global(.event-card .contentSection h3) {
+            font-size: 1.1rem !important;
+            line-height: 1.25 !important;
+            margin-bottom: 6px !important;
+            -webkit-line-clamp: 2 !important;
+          }
+
+          /* Description - 2 lignes strictes */
+          :global(.event-card .contentSection p) {
+            font-size: 0.8rem !important;
+            line-height: 1.35 !important;
+            margin-bottom: 8px !important;
+            -webkit-line-clamp: 2 !important;
+          }
+
+          /* Programme musical - MASQUER */
+          :global(.event-card .contentSection > div:first-child > div:last-child) {
+            display: none !important;
+          }
+
+          /* CTAs container - 2 boutons max, horizontal */
+          :global(.event-card .contentSection > div:last-child) {
+            margin-top: 8px !important;
+            gap: 8px !important;
+            flex-wrap: nowrap !important;
+          }
+
+          /* Bouton billetterie - Prominent mais pas full-width */
+          :global(.event-card .contentSection a[href]) {
+            flex: 1 !important;
+            padding: 11px 16px !important;
+            font-size: 0.9rem !important;
+            font-weight: 600 !important;
+            min-height: 44px;
+            text-align: center !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+          }
+
+          /* Bouton calendrier - Compact */
+          :global(.event-card .contentSection button:nth-of-type(1)) {
+            flex: 1 !important;
+            padding: 11px 16px !important;
+            font-size: 0.9rem !important;
+            min-height: 44px;
+          }
+
+          /* Bouton partager - MASQUER sur mobile */
+          :global(.event-card .contentSection button:last-child) {
+            display: none !important;
           }
         }
 
         @media (max-width: 640px) {
-          :global(.event-card .contentSection a[href]) {
-            padding: 14px 18px !important;
-            font-size: 0.95rem !important;
-            min-height: 48px;
+          /* Optimisations écrans très petits */
+          :global(.event-card .dateSection) {
+            height: 65px !important;
+            min-height: 65px !important;
+            max-height: 65px !important;
+            padding: 10px 14px !important;
+          }
+
+          :global(.event-card .dayNumber) {
+            font-size: 2.25rem !important;
+          }
+
+          :global(.event-card .imageSection) {
+            height: 140px !important;
+            min-height: 140px !important;
+            max-height: 140px !important;
+          }
+
+          :global(.event-card .contentSection) {
+            padding: 10px 14px !important;
+          }
+
+          :global(.event-card .contentSection h3) {
+            font-size: 1.05rem !important;
+          }
+
+          :global(.event-card .contentSection p) {
+            font-size: 0.75rem !important;
+          }
+
+          :global(.event-card .contentSection a[href]),
+          :global(.event-card .contentSection button) {
+            padding: 10px 14px !important;
+            font-size: 0.85rem !important;
+            min-height: 44px;
           }
         }
       `}</style>
