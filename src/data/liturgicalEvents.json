@@ -1,0 +1,57 @@
+{
+  "liturgical": {
+    "title": "Messes liturgiques",
+    "subtitle": "Célébrations musicales d'exception",
+    "description": "Messes célébrées durant le festival avec programmes musicaux d'exception.",
+    "dates": [
+      {
+        "id": "messe-1",
+        "date": "2025-12-07",
+        "day": "Dimanche",
+        "dayNumber": "7",
+        "month": "DÉC",
+        "time": "10h00",
+        "performers": "École Maîtrisienne",
+        "work": "Missa brevis Misericordiae - Dei",
+        "composer": "Nils Cajeux",
+        "occasion": "Messe dominicale"
+      },
+      {
+        "id": "messe-2",
+        "date": "2025-12-08",
+        "day": "Lundi",
+        "dayNumber": "8",
+        "month": "DÉC",
+        "time": "10h00",
+        "performers": "Chapelle musicale",
+        "work": "Motets de la Renaissance",
+        "composer": "",
+        "occasion": "Immaculée Conception"
+      },
+      {
+        "id": "messe-3",
+        "date": "2025-12-21",
+        "day": "Dimanche",
+        "dayNumber": "21",
+        "month": "DÉC",
+        "time": "10h00",
+        "performers": "Ensemble Vocal et Instrumental",
+        "work": "Cantate de Bach, Schwingt freudig euch empor BWV 36",
+        "composer": "Johann Sebastian Bach",
+        "occasion": "Messe dominicale"
+      },
+      {
+        "id": "messe-4",
+        "date": "2026-01-04",
+        "day": "Dimanche",
+        "dayNumber": "4",
+        "month": "JAN",
+        "time": "10h00",
+        "performers": "École Maîtrisienne",
+        "work": "Missa declina a malo",
+        "composer": "Valentin Rathgeber",
+        "occasion": "Messe dominicale"
+      }
+    ]
+  }
+}

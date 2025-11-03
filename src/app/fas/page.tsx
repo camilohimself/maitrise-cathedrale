@@ -3,6 +3,7 @@ import FASHeroCinematic from '@/components/FASHeroCinematic';
 import FASConcertsList from '@/components/FASConcertsList';
 import FASArtistesSection from '@/components/FASArtistesSection';
 import FASEventSection from '@/components/FASEventSection';
+import FASLiturgicalEvents from '@/components/FASLiturgicalEvents';
 import FASComplementaryEvents from '@/components/FASComplementaryEvents';
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function FAS() {
       <FASHeroCinematic />
       <FASConcertsList />
       <FASEventSection />
+      <FASLiturgicalEvents />
       <FASComplementaryEvents />
       <FASArtistesSection />
     </main>

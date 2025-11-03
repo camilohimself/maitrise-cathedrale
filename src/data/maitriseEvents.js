@@ -1,54 +1,10 @@
 // Calendrier complet Maîtrise Cathédrale 2025-2026
 // Données extraites du CSV "calendrier_maitrise_sion_2025-2026.csv"
-// Mise à jour : 21 octobre 2025
+// Mise à jour : 3 novembre 2025
 // Classification par types : Messe, Concert, FAS
 
 export const maitriseEvents = [
-  // === OCTOBRE 2025 ===
-  {
-    id: 'oct-26-messe-gregorien',
-    type: 'messe',
-    date: { day: '26', month: 'OCT' },
-    time: '10h00',
-    title: 'Messe en chant grégorien',
-    category: 'Messe',
-    ensemble: 'Chœur grégorien',
-    description: 'Messe dominicale en chant grégorien traditionnel',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
-    featured: false
-  },
-
   // === NOVEMBRE 2025 ===
-  {
-    id: 'nov-01-messe-toussaint',
-    type: 'messe',
-    date: { day: '01', month: 'NOV' },
-    time: '10h00',
-    title: 'Messe de la Toussaint',
-    category: 'Messe',
-    ensemble: 'Chœur Cath\'voix',
-    description: 'Célébration solennelle de la Toussaint',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
-    featured: true
-  },
-  {
-    id: 'nov-02-messe-defunts',
-    type: 'messe',
-    date: { day: '02', month: 'NOV' },
-    time: '10h00', 
-    title: 'Commémoration des fidèles défunts',
-    category: 'Messe',
-    ensemble: 'Chœur grégorien',
-    description: 'Messe de commémoration des fidèles défunts',
-    location: 'Cathédrale de Sion',
-    price: 'Entrée libre',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
-    featured: false
-  },
   {
     id: 'nov-07-messe-eveques-defunts',
     type: 'messe',
@@ -144,13 +100,13 @@ export const maitriseEvents = [
     date: { day: '07', month: 'DÉC' },
     time: '10h00',
     title: 'Messe École Maîtrisienne',
-    category: 'Messe',
+    category: 'Messe liturgique FAS',
     ensemble: 'École Maîtrisienne',
-    description: 'Messe du 2ème dimanche de l\'Avent',
+    description: 'Missa brevis Misericordiae - Dei de Nils Cajeux',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-group1-card.webp',
-    featured: false
+    featured: true
   },
   {
     id: 'dec-07-concert-fas-novantiqua',
@@ -173,10 +129,10 @@ export const maitriseEvents = [
     type: 'messe',
     date: { day: '08', month: 'DÉC' },
     time: '10h00',
-    title: 'Solennité de l\'Immaculée Conception',
-    category: 'Messe',
+    title: 'Messe de l\'Immaculée Conception',
+    category: 'Messe liturgique FAS',
     ensemble: 'Chapelle musicale',
-    description: 'Célébration de l\'Immaculée Conception de la Vierge Marie',
+    description: 'Motets de la Renaissance',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
@@ -201,15 +157,14 @@ export const maitriseEvents = [
     type: 'messe',
     date: { day: '21', month: 'DÉC' },
     time: '10h00',
-    title: 'Messe avec ensemble',
-    category: 'Messe',
+    title: 'Messe Ensemble Vocal et Instrumental',
+    category: 'Messe liturgique FAS',
     ensemble: 'Ensemble Vocal et Instrumental',
-    description: 'Messe du 4ème dimanche de l\'Avent',
+    description: 'Cantate de Bach, Schwingt freudig euch empor BWV 36',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
-    image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
-    programme: 'Bach, Schwingt freudig euch empor BWV 36',
-    featured: false
+    image: '/images/artistes/ensemble-vocal-instrumental/evi-2-card.webp',
+    featured: true
   },
   {
     id: 'dec-21-concert-fas-colleges',
@@ -306,10 +261,10 @@ export const maitriseEvents = [
     type: 'messe',
     date: { day: '04', month: 'JAN' },
     time: '10h00',
-    title: 'Clôture de l\'Année sainte',
-    category: 'Messe',
+    title: 'Messe École Maîtrisienne',
+    category: 'Messe liturgique FAS',
     ensemble: 'École Maîtrisienne',
-    description: 'Célébration de clôture de l\'Année sainte',
+    description: 'Missa declina a malo de Valentin Rathgeber',
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-group2-card.webp',
