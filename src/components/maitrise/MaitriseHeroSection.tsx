@@ -55,7 +55,7 @@ export default function MaitriseHeroSection() {
         {/* Stats Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))',
           gap: '24px',
           marginBottom: '80px'
         }}>
@@ -91,6 +91,59 @@ export default function MaitriseHeroSection() {
         </div>
 
       </div>
+
+      {/* MEDIA QUERIES RESPONSIVE */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .hero-section .container {
+            padding: 100px 16px 60px !important;
+          }
+
+          .hero-section h1 {
+            font-size: clamp(32px, 8vw, 48px) !important;
+          }
+
+          .hero-section p {
+            font-size: clamp(16px, 4vw, 18px) !important;
+            margin-bottom: 32px !important;
+          }
+
+          .hero-section > div > div:last-child {
+            margin-bottom: 40px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .hero-section .container {
+            padding: 80px 12px 40px !important;
+          }
+
+          .badge-gold {
+            font-size: 12px !important;
+            padding: 6px 16px !important;
+            margin-bottom: 16px !important;
+          }
+
+          .stat-card {
+            padding: 20px !important;
+          }
+
+          .stat-card > div:first-child {
+            font-size: 28px !important;
+          }
+
+          .stat-card > div:last-child {
+            font-size: 12px !important;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .hero-section > div > div:nth-child(2) {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

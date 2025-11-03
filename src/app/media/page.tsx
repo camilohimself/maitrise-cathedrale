@@ -167,7 +167,7 @@ export default function Media() {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
             gap: '32px'
           }}>
             {videos.map((video) => (
@@ -360,7 +360,7 @@ export default function Media() {
           {/* Tracks Grid */}
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 100%), 1fr))',
             gap: '24px'
           }}>
             {soundcloudCollections[activeTab as keyof typeof soundcloudCollections].tracks.map((track) => (
@@ -500,6 +500,92 @@ export default function Media() {
           </p>
         </div>
       </div>
+
+      {/* MEDIA QUERIES RESPONSIVE */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          main {
+            padding-top: 100px !important;
+            padding-bottom: 60px !important;
+          }
+
+          .container {
+            padding: 0 16px !important;
+          }
+
+          main h1 {
+            font-size: 2rem !important;
+          }
+
+          main h2 {
+            font-size: 1.5rem !important;
+            margin-bottom: 24px !important;
+          }
+
+          main > div > div:first-child {
+            margin-bottom: 40px !important;
+          }
+
+          section {
+            margin-bottom: 40px !important;
+          }
+
+          /* Videos grid */
+          section > div:first-child {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+
+          /* SoundCloud tabs */
+          section > div:first-child > div {
+            flex-wrap: wrap !important;
+            gap: 8px !important;
+          }
+
+          /* SoundCloud tracks grid */
+          section > div:nth-child(2) {
+            grid-template-columns: 1fr !important;
+            gap: 16px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          main {
+            padding-top: 80px !important;
+          }
+
+          .badge-gold {
+            font-size: 12px !important;
+            padding: 6px 16px !important;
+          }
+
+          main h1 {
+            font-size: 1.75rem !important;
+          }
+
+          main h2 {
+            font-size: 1.4rem !important;
+          }
+
+          main p {
+            font-size: 14px !important;
+          }
+
+          /* Tabs buttons */
+          button {
+            padding: 10px 16px !important;
+            font-size: 14px !important;
+            min-height: 44px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          /* Collection header text smaller */
+          section > div:last-child p {
+            font-size: 13px !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }

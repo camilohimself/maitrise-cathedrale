@@ -215,7 +215,7 @@ export default function Contact() {
               </h3>
 
               <form onSubmit={handleSubmit}>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '20px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))', gap: '20px', marginBottom: '20px' }}>
                   <div>
                     <label style={{
                       display: 'block',
@@ -423,6 +423,61 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
+      {/* MEDIA QUERIES RESPONSIVE */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          main > div {
+            padding: 100px 16px 60px !important;
+          }
+
+          main > div > div:nth-child(2) {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+
+          main > div > div:first-child h1 {
+            font-size: 2rem !important;
+          }
+
+          main > div > div:first-child p {
+            font-size: 16px !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          main > div {
+            padding: 80px 12px 40px !important;
+          }
+
+          main > div > div:first-child h1 {
+            font-size: 1.75rem !important;
+          }
+
+          /* Form grid 1 column */
+          form > div:first-child {
+            grid-template-columns: 1fr !important;
+          }
+
+          /* Inputs font-size 16px (évite zoom iOS) */
+          input, select, textarea {
+            font-size: 16px !important;
+            padding: 14px 16px !important;
+          }
+
+          /* Labels */
+          label {
+            font-size: 14px !important;
+          }
+
+          /* Submit button */
+          button[type="submit"] {
+            padding: 16px 32px !important;
+            font-size: 16px !important;
+            min-height: 48px;
+          }
+        }
+      `}</style>
     </main>
   );
 }

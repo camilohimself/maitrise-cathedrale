@@ -1,5 +1,6 @@
 'use client';
 
+import '@/components/maitrise/maitrise-responsive.css';
 import MaitriseHeroSection from '@/components/maitrise/MaitriseHeroSection';
 import DirectionSection from '@/components/maitrise/DirectionSection';
 import ConseilFondationSection from '@/components/maitrise/ConseilFondationSection';
