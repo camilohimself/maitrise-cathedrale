@@ -1,5 +1,6 @@
 import '@/components/fas-responsive.css';
 import FASHeroCinematic from '@/components/FASHeroCinematic';
+import FASDownloadButton from '@/components/FASDownloadButton';
 import FASConcertsList from '@/components/FASConcertsList';
 import FASArtistesSection from '@/components/FASArtistesSection';
 import FASEventSection from '@/components/FASEventSection';
@@ -19,6 +20,7 @@ export default function FAS() {
       position: 'relative'
     }}>
       <FASHeroCinematic />
+      <FASDownloadButton />
       <FASConcertsList />
       <FASEventSection />
       <FASLiturgicalEvents />
