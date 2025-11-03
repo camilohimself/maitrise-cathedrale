@@ -20,11 +20,11 @@ export default function FAS() {
       position: 'relative'
     }}>
       <FASHeroCinematic />
-      <FASDownloadButton />
       <FASConcertsList />
       <FASEventSection />
       <FASLiturgicalEvents />
       <FASComplementaryEvents />
+      <FASDownloadButton />
       <FASArtistesSection />
     </main>
   );
