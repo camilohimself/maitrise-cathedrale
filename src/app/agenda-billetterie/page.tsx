@@ -430,7 +430,7 @@ export default function AgendaBilletterie() {
                       style={{
                         position: 'sticky',
                         top: '80px', // Sous le header principal
-                        zIndex: 10,
+                        zIndex: 15,
                         backgroundColor: 'var(--color-gold)',
                         padding: '12px 20px',
                         marginBottom: '16px',

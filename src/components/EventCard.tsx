@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import styles from './EventCard.module.css';
 
 interface EventCardProps {
   date: {
@@ -539,21 +538,16 @@ const EventCard: React.FC<EventCardProps> = ({
             font-weight: 500 !important;
           }
 
-          /* IMAGE SECTION - Visible sur tablet 640px+ */
+          /* IMAGE SECTION - MASQUÉE sur tout mobile <768px */
           :global(.event-card .imageSection) {
-            width: 100% !important;
-            height: 150px !important;
-            min-height: 150px !important;
-            max-height: 150px !important;
-            border-radius: 0 !important;
-            order: 2;
+            display: none !important;
           }
 
-          /* CONTENT SECTION - Compact 110px */
+          /* CONTENT SECTION - Compact sans image */
           :global(.event-card .contentSection) {
             padding: 12px 16px !important;
             min-height: auto !important;
-            order: 3;
+            order: 2;
           }
 
           /* Badge - Compact */
@@ -591,9 +585,9 @@ const EventCard: React.FC<EventCardProps> = ({
             flex-wrap: nowrap !important;
           }
 
-          /* Bouton billetterie - Prominent mais pas full-width */
+          /* Bouton billetterie - PRIORITAIRE ratio 2:1 */
           :global(.event-card .contentSection a[href]) {
-            flex: 1 !important;
+            flex: 2 !important;
             padding: 11px 16px !important;
             font-size: 0.9rem !important;
             font-weight: 600 !important;
@@ -604,7 +598,7 @@ const EventCard: React.FC<EventCardProps> = ({
             justify-content: center !important;
           }
 
-          /* Bouton calendrier - Compact */
+          /* Bouton calendrier - Secondaire ratio 1:2 */
           :global(.event-card .contentSection button:nth-of-type(1)) {
             flex: 1 !important;
             padding: 11px 16px !important;
@@ -627,11 +621,10 @@ const EventCard: React.FC<EventCardProps> = ({
             margin-bottom: 12px !important;
           }
 
-          /* DATE SECTION - Compact */
+          /* DATE SECTION - Compact mais flexible */
           :global(.event-card .dateSection) {
-            height: 60px !important;
+            height: auto !important;
             min-height: 60px !important;
-            max-height: 60px !important;
             padding: 10px 14px !important;
             gap: 8px !important;
           }
@@ -671,20 +664,22 @@ const EventCard: React.FC<EventCardProps> = ({
             margin-bottom: 4px !important;
           }
 
-          /* Titre - Lisible 1 ligne */
+          /* Titre - Lisible 2 lignes pour seniors */
           :global(.event-card .contentSection h3) {
             font-size: 1rem !important;
-            line-height: 1.2 !important;
-            margin-bottom: 4px !important;
-            -webkit-line-clamp: 1 !important;
-          }
-
-          /* Description - 1 ligne stricte */
-          :global(.event-card .contentSection p) {
-            font-size: 0.75rem !important;
             line-height: 1.3 !important;
             margin-bottom: 6px !important;
-            -webkit-line-clamp: 1 !important;
+            -webkit-line-clamp: 2 !important;
+            max-height: 2.6em !important;
+          }
+
+          /* Description - 2 lignes pour contexte */
+          :global(.event-card .contentSection p) {
+            font-size: 0.85rem !important;
+            line-height: 1.4 !important;
+            margin-bottom: 8px !important;
+            -webkit-line-clamp: 2 !important;
+            max-height: 2.8em !important;
           }
 
           /* CTAs - Compacts */
@@ -693,11 +688,11 @@ const EventCard: React.FC<EventCardProps> = ({
             gap: 6px !important;
           }
 
-          /* Boutons - Tactiles mais compacts */
+          /* Boutons - Tactiles et lisibles seniors */
           :global(.event-card .contentSection a[href]),
           :global(.event-card .contentSection button) {
             padding: 10px 12px !important;
-            font-size: 0.8rem !important;
+            font-size: 0.9rem !important;
             min-height: 44px;
           }
         }
