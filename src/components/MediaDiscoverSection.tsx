@@ -257,7 +257,7 @@ const MediaDiscoverSection = memo(() => {
           /* Media grid */
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
             gap: '2rem',
             marginBottom: '4rem',
           }}>

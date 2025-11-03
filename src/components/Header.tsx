@@ -172,8 +172,11 @@ const Header = () => {
                     transition: 'all 0.3s ease',
                     fontFamily: 'var(--font-family)',
                     position: 'relative',
-                    padding: '8px 0',
-                    display: 'block'
+                    padding: '12px 0',
+                    display: 'block',
+                    minHeight: '44px',
+                    alignItems: 'center',
+                    display: 'flex'
                   }}
                   onMouseEnter={(e) => {
                     if (!link.isActive) {
@@ -337,7 +340,8 @@ const Header = () => {
                       fontFamily: 'var(--font-family)',
                       display: 'flex',
                       alignItems: 'center',
-                      padding: '10px 8px',
+                      padding: '14px 8px',
+                      minHeight: '44px',
                       borderBottom: link.isActive ? '2px solid var(--color-red)' : '1px solid rgba(0,0,0,0.1)',
                       transition: 'all 0.3s ease'
                     }}

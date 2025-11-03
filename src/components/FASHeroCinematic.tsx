@@ -454,10 +454,10 @@ const FASHeroCinematic = () => {
             height: auto !important;
           }
 
-          /* Boutons navigation réduits (48px → 40px) */
+          /* Boutons navigation réduits (48px → 44px min Apple HIG) */
           button[style*="4rem"] {
-            width: 2.5rem !important;
-            height: 2.5rem !important;
+            width: 2.75rem !important;
+            height: 2.75rem !important;
             font-size: 1.1rem !important;
           }
 
@@ -480,8 +480,8 @@ const FASHeroCinematic = () => {
           button[style*="top: 3rem"][style*="right: 3rem"] {
             top: 1rem !important;
             right: 1rem !important;
-            width: 2.5rem !important;
-            height: 2.5rem !important;
+            width: 2.75rem !important;
+            height: 2.75rem !important;
           }
         }
 
@@ -491,17 +491,17 @@ const FASHeroCinematic = () => {
             padding: 100px 1rem 60px !important;
           }
 
-          /* Boutons navigation encore plus petits */
+          /* Boutons navigation min 44px (Apple HIG) */
           button[style*="left"] {
-            width: 2.5rem !important;
-            height: 2.5rem !important;
+            width: 2.75rem !important;
+            height: 2.75rem !important;
             font-size: 1rem !important;
             left: 0.5rem !important;
           }
 
           button[style*="right"] {
-            width: 2.5rem !important;
-            height: 2.5rem !important;
+            width: 2.75rem !important;
+            height: 2.75rem !important;
             font-size: 1rem !important;
             right: 0.5rem !important;
           }

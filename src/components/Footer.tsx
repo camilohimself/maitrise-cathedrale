@@ -270,7 +270,9 @@ const Footer = () => {
                    transition: 'color 0.3s ease',
                    display: 'flex',
                    alignItems: 'center',
-                   gap: '12px'
+                   gap: '12px',
+                   minHeight: '44px',
+                   padding: '8px 0'
                  }}
                  onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
@@ -292,7 +294,9 @@ const Footer = () => {
                    transition: 'color 0.3s ease',
                    display: 'flex',
                    alignItems: 'center',
-                   gap: '12px'
+                   gap: '12px',
+                   minHeight: '44px',
+                   padding: '8px 0'
                  }}
                  onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
@@ -314,7 +318,9 @@ const Footer = () => {
                    transition: 'color 0.3s ease',
                    display: 'flex',
                    alignItems: 'center',
-                   gap: '12px'
+                   gap: '12px',
+                   minHeight: '44px',
+                   padding: '8px 0'
                  }}
                  onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
@@ -336,7 +342,9 @@ const Footer = () => {
                    transition: 'color 0.3s ease',
                    display: 'flex',
                    alignItems: 'center',
-                   gap: '12px'
+                   gap: '12px',
+                   minHeight: '44px',
+                   padding: '8px 0'
                  }}
                  onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
                  onMouseLeave={(e) => e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)'}
