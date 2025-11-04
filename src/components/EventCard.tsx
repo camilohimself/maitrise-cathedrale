@@ -153,8 +153,8 @@ const EventCard: React.FC<EventCardProps> = ({
     }
   };
   return (
-    <div 
-      className={`event-card ${styles.eventCard}`}
+    <div
+      className="event-card"
       style={{
         position: 'relative',
         backgroundColor: 'var(--color-white)',
@@ -178,7 +178,7 @@ const EventCard: React.FC<EventCardProps> = ({
       }}
     >
       {/* Section Date - Côté gauche */}
-      <div className={styles.dateSection} style={{
+      <div className="dateSection" style={{
         width: '140px', // Largeur fixe pour la section date
         padding: '20px',
         display: 'flex',
@@ -202,7 +202,7 @@ const EventCard: React.FC<EventCardProps> = ({
         </div>
         
         {/* Numéro du jour - TRÈS GRAND comme dans la maquette */}
-        <div className={styles.dayNumber} style={{
+        <div className="dayNumber" style={{
           fontFamily: 'var(--font-spectral)',
           fontSize: '72px', // Taille massive comme dans la maquette
           fontWeight: '700',
@@ -240,7 +240,7 @@ const EventCard: React.FC<EventCardProps> = ({
       </div>
 
       {/* Section Contenu - Centre */}
-      <div className={styles.contentSection} style={{
+      <div className="contentSection" style={{
         flex: 1,
         padding: '20px 20px 16px 20px', // Moins de padding vertical
         display: 'flex',
@@ -456,7 +456,7 @@ const EventCard: React.FC<EventCardProps> = ({
       </div>
 
       {/* Section Image - Côté droit avec forme arrondie */}
-      <div className={styles.imageSection} style={{
+      <div className="imageSection" style={{
         width: '280px', // Largeur fixe pour l'image
         position: 'relative',
         overflow: 'hidden',

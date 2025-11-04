@@ -173,7 +173,6 @@ const Header = () => {
                     fontFamily: 'var(--font-family)',
                     position: 'relative',
                     padding: '12px 0',
-                    display: 'block',
                     minHeight: '44px',
                     alignItems: 'center',
                     display: 'flex'

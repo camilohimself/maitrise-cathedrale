@@ -4,10 +4,13 @@ import { Download } from 'lucide-react';
 import { useGATracking } from '@/hooks/useGATracking';
 
 const FASDownloadButton = () => {
-  const { trackCTA } = useGATracking();
+  const { trackEvent } = useGATracking();
 
   const handleDownload = () => {
-    trackCTA('download_programme_pdf', 'FAS Programme PDF', '/downloads/programme-fas-2025-2026.pdf');
+    trackEvent('pdf_download', {
+      pdf_name: 'Programme FAS 2025-2026',
+      pdf_url: '/downloads/programme-fas-2025-2026.pdf'
+    });
   };
 
   return (
