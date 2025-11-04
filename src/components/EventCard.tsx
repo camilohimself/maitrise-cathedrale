@@ -557,20 +557,22 @@ const EventCard: React.FC<EventCardProps> = ({
             margin-bottom: 6px !important;
           }
 
-          /* Titre - Lisible mais compact */
+          /* Titre - 3 lignes pour événements longs (FAS) */
           :global(.event-card .contentSection h3) {
-            font-size: 1.1rem !important;
-            line-height: 1.25 !important;
+            font-size: 1.05rem !important;
+            line-height: 1.3 !important;
             margin-bottom: 6px !important;
-            -webkit-line-clamp: 2 !important;
+            -webkit-line-clamp: 3 !important;
+            max-height: 4.2em !important;
           }
 
           /* Description - 2 lignes strictes */
           :global(.event-card .contentSection p) {
-            font-size: 0.8rem !important;
-            line-height: 1.35 !important;
+            font-size: 0.85rem !important;
+            line-height: 1.4 !important;
             margin-bottom: 8px !important;
             -webkit-line-clamp: 2 !important;
+            max-height: 2.8em !important;
           }
 
           /* Programme musical - MASQUER */
@@ -585,25 +587,27 @@ const EventCard: React.FC<EventCardProps> = ({
             flex-wrap: nowrap !important;
           }
 
-          /* Bouton billetterie - PRIORITAIRE ratio 2:1 */
+          /* Bouton billetterie - PRIORITAIRE full width si seul */
           :global(.event-card .contentSection a[href]) {
             flex: 2 !important;
-            padding: 11px 16px !important;
-            font-size: 0.9rem !important;
+            padding: 12px 16px !important;
+            font-size: 0.95rem !important;
             font-weight: 600 !important;
             min-height: 44px;
             text-align: center !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
+            white-space: nowrap !important;
           }
 
           /* Bouton calendrier - Secondaire ratio 1:2 */
           :global(.event-card .contentSection button:nth-of-type(1)) {
             flex: 1 !important;
-            padding: 11px 16px !important;
-            font-size: 0.9rem !important;
+            padding: 12px 12px !important;
+            font-size: 0.85rem !important;
             min-height: 44px;
+            white-space: nowrap !important;
           }
 
           /* Bouton partager - MASQUER sur mobile */
