@@ -15,9 +15,9 @@ export default function Soutenir() {
     { name: 'Office du Tourisme Sion', image: '/images/partenaires-new/office-tourisme-sion-card.jpg' },
     { name: 'Ville de Sion', image: '/images/partenaires-new/ville-sion-card.jpg' },
     { name: 'AG Culturel', image: '/images/partenaires-new/ag-culturel-card.jpg' },
-    { name: 'Fondation LG', image: '/images/partenaires-new/fondation-lg-card.jpg' },
+    { name: 'Fondation Léonard Gianadda', image: '/images/partenaires-new/fondation-lg-card.jpg' },
     { name: 'Canton du Valais', image: '/images/partenaires-new/canton-valais-card.jpg' },
-    { name: 'RIDAG', image: '/images/partenaires-new/ridag-card.jpg' },
+    { name: 'FIDAG', image: '/images/partenaires-new/ridag-card.jpg' },
     { name: 'Loterie Romande', image: '/images/partenaires-new/loterie-romande-card.jpg' },
     { name: 'BCVS', image: '/images/partenaires-new/bcvs-card.jpg' }
   ];
