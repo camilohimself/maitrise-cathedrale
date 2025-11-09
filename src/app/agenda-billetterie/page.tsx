@@ -13,11 +13,27 @@ export default function AgendaBilletterie() {
 
   // Filtrage des événements
   const filteredEvents = useMemo(() => {
-    // Filtrer les événements à venir (depuis septembre 2025)
+    // Filtrer les événements à venir (dynamique basé sur date actuelle)
     const upcomingEvents = maitriseEvents.filter(event => {
-      // Exclure les événements passés (août et septembre 2025)
-      const pastMonths = ['AOÛT', 'SEPT'];
-      return !pastMonths.includes(event.date.month);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Reset à minuit pour comparaison juste par jour
+
+      // Convertir mois en numéro
+      const monthMap: { [key: string]: number } = {
+        'AOÛT': 8, 'SEPT': 9, 'OCT': 10, 'NOV': 11, 'DÉC': 12,
+        'JAN': 1, 'FÉV': 2, 'MAR': 3, 'AVR': 4, 'MAI': 5, 'JUIN': 6
+      };
+      const monthNumber = monthMap[event.date.month] || 1;
+
+      // Déterminer l'année (oct-déc = 2025, jan-juin = 2026)
+      const eventYear = monthNumber >= 10 ? 2025 : 2026;
+
+      // Créer date événement
+      const eventDate = new Date(eventYear, monthNumber - 1, parseInt(event.date.day));
+      eventDate.setHours(0, 0, 0, 0);
+
+      // Garder uniquement événements d'aujourd'hui et futurs
+      return eventDate >= today;
     });
 
     let filtered = [...upcomingEvents];

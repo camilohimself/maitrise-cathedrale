@@ -677,9 +677,9 @@ const EventCard: React.FC<EventCardProps> = ({
             max-height: 2.6em !important;
           }
 
-          /* Description - 2 lignes pour contexte */
+          /* Description - 2 lignes pour contexte - Optimisé seniors 60+ */
           :global(.event-card .contentSection p) {
-            font-size: 0.85rem !important;
+            font-size: 0.9rem !important;
             line-height: 1.4 !important;
             margin-bottom: 8px !important;
             -webkit-line-clamp: 2 !important;
