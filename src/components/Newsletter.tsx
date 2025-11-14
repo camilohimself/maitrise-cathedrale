@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useGATracking } from '@/hooks/useGATracking';
+import { useHoneypot } from '@/hooks/useHoneypot';
 
 const Newsletter: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -9,10 +10,19 @@ const Newsletter: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
   const { trackFormSubmit, trackEvent } = useGATracking();
+  const { honeypotProps, fieldName, isHuman, reset } = useHoneypot();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Anti-spam: Vérifier le honeypot
+    if (!isHuman()) {
+      console.warn('🤖 Bot détecté via honeypot');
+      setMessage('Une erreur est survenue. Veuillez réessayer.');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch('/api/newsletter', {
@@ -20,7 +30,10 @@ const Newsletter: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email,
+          [fieldName]: honeypotProps.value // Honeypot pour validation serveur
+        }),
       });
 
       if (response.ok) {
@@ -149,6 +162,21 @@ const Newsletter: React.FC = () => {
               }}
             />
           </div>
+
+          {/* Honeypot - Champ invisible pour bloquer les bots */}
+          <input
+            type="text"
+            name={fieldName}
+            {...honeypotProps}
+            style={{
+              position: 'absolute',
+              left: '-9999px',
+              width: '1px',
+              height: '1px',
+              opacity: 0,
+              pointerEvents: 'none'
+            }}
+          />
 
           <button
             type="submit"

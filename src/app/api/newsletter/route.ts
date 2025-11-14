@@ -5,7 +5,16 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { email } = await request.json();
+    const { email, website } = await request.json();
+
+    // Anti-spam: Honeypot - Si le champ "website" est rempli, c'est un bot
+    if (website) {
+      console.warn('🤖 Bot détecté via honeypot (newsletter)');
+      return NextResponse.json(
+        { error: 'Invalid request' },
+        { status: 400 }
+      );
+    }
 
     if (!email) {
       return NextResponse.json(

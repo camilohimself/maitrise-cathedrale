@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useGATracking } from '@/hooks/useGATracking';
+import { useHoneypot } from '@/hooks/useHoneypot';
 
 export default function AmisMaitrise() {
   const [formData, setFormData] = useState({
@@ -17,10 +18,19 @@ export default function AmisMaitrise() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
   const { trackFormSubmit, trackEvent } = useGATracking();
+  const { honeypotProps, fieldName, isHuman, reset } = useHoneypot();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Anti-spam: Vérifier le honeypot
+    if (!isHuman()) {
+      console.warn('🤖 Bot détecté via honeypot');
+      setMessage('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch('/api/amis-maitrise', {
@@ -28,7 +38,10 @@ export default function AmisMaitrise() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          [fieldName]: honeypotProps.value // Honeypot pour validation serveur
+        }),
       });
 
       if (response.ok) {
@@ -449,6 +462,21 @@ export default function AmisMaitrise() {
                     <option value="etudiant">Cotisation étudiant</option>
                   </select>
                 </div>
+
+                {/* Honeypot - Champ invisible pour bloquer les bots */}
+                <input
+                  type="text"
+                  name={fieldName}
+                  {...honeypotProps}
+                  style={{
+                    position: 'absolute',
+                    left: '-9999px',
+                    width: '1px',
+                    height: '1px',
+                    opacity: 0,
+                    pointerEvents: 'none'
+                  }}
+                />
 
                 <button
                   type="submit"

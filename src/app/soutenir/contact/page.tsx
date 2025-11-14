@@ -2,14 +2,24 @@
 
 import { useState } from 'react';
 import { useGATracking } from '@/hooks/useGATracking';
+import { useHoneypot } from '@/hooks/useHoneypot';
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { trackFormSubmit, trackEvent } = useGATracking();
+  const { honeypotProps, fieldName, isHuman, reset } = useHoneypot();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    // Anti-spam: Vérifier le honeypot
+    if (!isHuman()) {
+      console.warn('🤖 Bot détecté via honeypot');
+      alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+      setIsSubmitting(false);
+      return;
+    }
 
     const formData = new FormData(e.currentTarget);
     const data = {
@@ -19,6 +29,7 @@ export default function Contact() {
       telephone: formData.get('telephone'),
       sujet: formData.get('sujet'),
       message: formData.get('message'),
+      [fieldName]: honeypotProps.value // Honeypot pour validation serveur
     };
 
     try {
@@ -387,6 +398,21 @@ export default function Contact() {
                     placeholder="Votre message..."
                   />
                 </div>
+
+                {/* Honeypot - Champ invisible pour bloquer les bots */}
+                <input
+                  type="text"
+                  name={fieldName}
+                  {...honeypotProps}
+                  style={{
+                    position: 'absolute',
+                    left: '-9999px',
+                    width: '1px',
+                    height: '1px',
+                    opacity: 0,
+                    pointerEvents: 'none'
+                  }}
+                />
 
                 <button
                   type="submit"

@@ -47,7 +47,8 @@ const FASConcertsList = () => {
       cardImage: "/images/artistes/choeur-novantiqua/novantiqua-1-card.webp",
       color: "#8B7BB8",
       ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f2",
-      artistSlug: "choeur-novantiqua"
+      artistSlug: "choeur-novantiqua",
+      hasConference: true
     },
     {
       id: 3,
@@ -88,7 +89,8 @@ const FASConcertsList = () => {
       color: "#D4AF37",
       prestige: true,
       ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5",
-      artistSlug: "stile-antico"
+      artistSlug: "stile-antico",
+      hasConference: true
     }
   ];
 
@@ -542,6 +544,33 @@ Cinq rendez-vous d'exception
                     {concert.date} • {concert.time}
                   </div>
                 </div>
+
+                {/* Badge Conférence si applicable */}
+                {concert.hasConference && (
+                  <div style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    padding: '0.6rem 1.25rem',
+                    background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.15) 0%, rgba(212, 165, 116, 0.08) 100%)',
+                    border: '1.5px solid rgba(212, 165, 116, 0.4)',
+                    borderRadius: '20px',
+                    marginBottom: '1.5rem'
+                  }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--color-gold)">
+                      <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                      <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                    </svg>
+                    <span style={{
+                      fontSize: '0.95rem',
+                      fontWeight: '600',
+                      color: 'var(--color-gold)',
+                      fontFamily: 'var(--font-outfit)'
+                    }}>
+                      Conférence préparatoire 16h00
+                    </span>
+                  </div>
+                )}
 
                 {/* Description - Taille optimisée pour 60+ */}
                 <p style={{

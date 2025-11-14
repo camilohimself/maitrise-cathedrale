@@ -3,6 +3,7 @@
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import ConferenceSection from '@/components/fas/ConferenceSection';
 
 // Données artistes avec détails complets
 const artistesData: Record<string, any> = {
@@ -17,7 +18,11 @@ const artistesData: Record<string, any> = {
     conference: {
       speaker: 'Marie Favre',
       title: 'Musicologue et docteur en musicologie',
-      time: '16H00'
+      time: '16H00',
+      conferenceTitle: 'Palestrina : Le Prince de la Musique',
+      description: 'Palestrina, prince et seigneur de la musique tridentine, est de ces rares compositeurs dont l\'éclat semble n\'avoir jamais connu d\'éclipse. Sa musique a été chantée dans les églises européennes, de manière ininterrompue, de sa création à nos jours, traçant un fil fragile et émouvant entre les générations de croyants. Comment expliquer un tel succès ? Nous vous invitons à (re)découvrir ensemble l\'un des géants de notre patrimoine musical, et à nous interroger sur les raisons de sa toute-présence, en cette année où l\'on célèbre le 500e anniversaire de sa naissance.',
+      bio: 'Née à Sion, Marie Favre se passionne rapidement pour la littérature et la musique. Après des études gymnasiales classiques, elle intègre la Faculté des Lettres de l\'Université de Genève, où elle étudie la musicologie et le français. Directrice artistique des Riches Heures de Valère, elle enseigne à la Haute École de Musique de Lausanne et préside la commission de musique de la Fédération des Sociétés de Chant du Valais.',
+      photo: '/images/conferences/marie-favre-card.webp'
     },
     image: '/images/artistes/stile-antico/stile-antico-1-hero.webp',
     thumbnail: '/images/artistes/stile-antico/stile-antico-2-card.webp',
@@ -54,6 +59,15 @@ Stile Antico nous transportera dans l'univers spirituel et raffiné de la polyph
     date: 'Dimanche 7 décembre 2025',
     time: '17H00',
     altDate: null,
+    conference: {
+      speaker: 'Marie Favre',
+      title: 'Musicologue et docteur en musicologie',
+      time: '16H00',
+      conferenceTitle: 'Ex tenebris lux',
+      description: 'Gesualdo, Bruckner, Poulenc : trois astres étonnants de notre ciel musical. Profondément ancrés dans leurs époques respectives, ils possèdent pourtant des langages résolument singuliers. Chacun fait du chœur le lieu de l\'expérimentation, le lieu de la vérité, de l\'introspection. Ensemble, parcourons quelques pages de leurs partitions parfois déroutantes, toujours émouvantes.',
+      bio: 'Née à Sion, Marie Favre se passionne rapidement pour la littérature et la musique. Après des études gymnasiales classiques, elle intègre la Faculté des Lettres de l\'Université de Genève, où elle étudie la musicologie et le français. Directrice artistique des Riches Heures de Valère, elle enseigne à la Haute École de Musique de Lausanne et préside la commission de musique de la Fédération des Sociétés de Chant du Valais.',
+      photo: '/images/conferences/marie-favre-card.webp'
+    },
     image: '/images/artistes/choeur-novantiqua/novantiqua-1-hero.webp',
     thumbnail: '/images/artistes/choeur-novantiqua/novantiqua-1-card.webp',
     gallery: [
@@ -381,6 +395,11 @@ export default function ArtistePage() {
               </p>
             ))}
           </div>
+
+          {/* Section Conférence si applicable */}
+          {artiste.conference && (
+            <ConferenceSection conference={artiste.conference} />
+          )}
 
           {/* Informations pratiques Section */}
           <div style={{
