@@ -7,26 +7,21 @@
 
 ## 🚨 PROCHAINE SESSION PRIORITAIRE
 
-### ⏳ À FAIRE: Configuration Resend (15-20 min)
+### ✅ Formulaires 100% Opérationnels
 
-**OBJECTIF:** Activer l'envoi d'emails pour les 3 formulaires du site
+**STATUT:** Tous les formulaires sont fonctionnels et protégés
 
-**CE QUI EST PRÊT:**
+**CE QUI EST FAIT:**
+- ✅ Resend configuré et opérationnel (domaine vérifié)
 - ✅ Code API routes 100% fonctionnel (Newsletter, Contact, Amis Maîtrise)
 - ✅ Templates HTML professionnels avec branding
-- ✅ Integration Resend complète dans le code
-- ✅ Guide complet créé: `FORMULAIRES-EMAIL-SETUP.md`
+- ✅ Anti-spam Honeypot actif (double validation client + serveur)
+- ✅ Envois emails vers `info@maitrise-cathedrale.ch` + `musiquesacree@cath-vs.org`
 
-**CE QU'IL FAUT FAIRE (étapes détaillées dans le guide):**
-1. ⏳ Créer compte Resend (https://resend.com - gratuit 3000 emails/mois)
-2. ⏳ Vérifier domaine `maitrise-cathedrale.ch` (ajouter DNS chez hébergeur)
-3. ⏳ Copier clé API Resend
-4. ⏳ Ajouter `RESEND_API_KEY` dans Vercel → Environment Variables
-5. ⏳ Tester les 3 formulaires
-
-**GUIDE COMPLET:** Ouvrir `FORMULAIRES-EMAIL-SETUP.md` (toutes les étapes détaillées avec screenshots)
-
-**RÉSULTAT FINAL:** Tous les formulaires enverront des emails à `info@maitrise-cathedrale.ch` ✅
+**PROCHAINES PRIORITÉS:**
+1. YouTube contenus (remplacer placeholders vidéos)
+2. Multilingue FR/EN/DE (si client confirme besoin)
+3. Optimisations GA4 avancées (scroll tracking, etc.)
 
 ---
 
@@ -44,7 +39,7 @@
 - **Responsive:** ✅ 100% mobile optimisé (320px → 1920px+)
 - **SEO:** ✅ Google Search Console configuré + Sitemap soumis
 - **Analytics:** ✅ GA4 installé + 13 CTA trackés (billetterie, formulaires, social)
-- **Formulaires:** ✅ Anti-spam Honeypot actif (3 formulaires) - Configuration Resend à faire (15 min)
+- **Formulaires:** ✅ 100% fonctionnels - Resend configuré + Anti-spam Honeypot actif
 - **Contenu:** ✅ 98% intégré (Maîtrise, FAS, Agenda, Conférences Marie Favre)
 
 ### 🎯 Progression V1
@@ -645,12 +640,7 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 ## 🎯 PROCHAINE SESSION (À PLANIFIER)
 
-**PRIORITÉ 1: Configuration Resend (15-20 min)**
-- ⏳ Activer l'envoi d'emails pour les 3 formulaires
-- ⏳ Suivre le guide `FORMULAIRES-EMAIL-SETUP.md` étape par étape
-- ⏳ Tester Newsletter, Contact, Amis Maîtrise
-
-**Priorités suivantes:**
+**Priorités:**
 1. YouTube contenus (remplacer placeholders vidéos)
 2. Multilingue FR/EN/DE (si client confirme besoin)
 3. Optimisations GA4 avancées (scroll tracking, etc.)
