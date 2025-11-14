@@ -1,7 +1,7 @@
 # 🎼 Site Maîtrise de la Cathédrale de Sion
 
-**Dernière mise à jour:** 27 octobre 2025
-**Statut:** ✅ **SITE V1 EN PRODUCTION - AGENDA MOBILE OPTIMISÉ**
+**Dernière mise à jour:** 14 novembre 2025
+**Statut:** ✅ **SITE V1 EN PRODUCTION - ANTI-SPAM ACTIF**
 
 ---
 
@@ -44,8 +44,8 @@
 - **Responsive:** ✅ 100% mobile optimisé (320px → 1920px+)
 - **SEO:** ✅ Google Search Console configuré + Sitemap soumis
 - **Analytics:** ✅ GA4 installé + 13 CTA trackés (billetterie, formulaires, social)
-- **Formulaires:** ⏳ Code prêt - Configuration Resend à faire (15 min)
-- **Contenu:** ✅ 95% intégré (Maîtrise, FAS, Agenda 2025-2026)
+- **Formulaires:** ✅ Anti-spam Honeypot actif (3 formulaires) - Configuration Resend à faire (15 min)
+- **Contenu:** ✅ 98% intégré (Maîtrise, FAS, Agenda, Conférences Marie Favre)
 
 ### 🎯 Progression V1
 - ✅ Pages créées: 16/16 (Architecture stable)
@@ -562,6 +562,76 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 **État final :** ✅ Agenda mobile production-ready, attente validation tests client réels
 
+### Session 9 (14 Nov 2025) - Anti-spam Honeypot + Conférences Marie Favre
+**Contexte :** Soumissions spam robots sur formulaires + Intégration conférences FAS
+
+**Phase 1 - Corrections contenu FAS :**
+- Suppression pléonasme "liturgiques" dans "Messes liturgiques"
+- Intégration photo Catherine Gremaud-Babel (organiste adjointe)
+  - Optimisation WebP : 1.3MB → 14.8KB (95% compression)
+  - 3 formats : hero/card/thumb
+- Intégration photo École Maîtrisienne (ecole-stamm-hero.webp)
+  - Correction positionnement texte : bottom → top
+  - Inversion gradient (protection visages enfants)
+
+**Phase 2 - Conférences Marie Favre FAS :**
+- Photo optimisée : 284KB → 14.8KB (95% compression)
+- Composant réutilisable ConferenceSection.tsx
+  - Bio complète Marie Favre
+  - 2 conférences préparatoires distinctes
+  - Design cohérent (gradients dorés, bordures)
+- Enrichissement fasEvents.json (2 événements)
+  - Novantiqua : "Ex tenebris lux" (Gesualdo, Bruckner, Poulenc)
+  - Stile Antico : "Josquin et la polyphonie" (École franco-flamande)
+- Intégration pages artistes (/fas/artiste/[slug])
+- Badges conférences sur cards FAS (liste principale)
+- **Fix design :** Tous textes blanc sur fond sombre (contraste optimal)
+
+**Phase 3 - Protection anti-spam (robots bloqués) :**
+- **Problème :** Formulaires recevant soumissions gibberish ("sdgdsg", "ouefdsu")
+- **Solution Honeypot :**
+  - Hook réutilisable useHoneypot.ts (52 lignes)
+    - Champ invisible "website" (appât bots)
+    - Validation client-side avant soumission
+    - Props TypeScript typées
+
+  - Intégration client-side (3 composants) :
+    - Newsletter.tsx
+    - soutenir/contact/page.tsx
+    - soutenir/amis-maitrise/page.tsx
+    - Champs invisibles CSS (position absolute, left -9999px)
+
+  - Validation serveur (3 API routes) :
+    - /api/newsletter/route.ts
+    - /api/contact/route.ts
+    - /api/amis-maitrise/route.ts
+    - Log console : "🤖 Bot détecté via honeypot"
+    - Réponse 400 : "Invalid request"
+
+**Métriques finales :**
+- 17 fichiers modifiés (1247 insertions)
+- 6 nouveaux fichiers créés
+- Build production : ✅ 30 pages, 0 erreur TypeScript
+- Protection invisible pour utilisateurs (0 friction UX)
+- Optimisation images : 95% compression moyenne
+
+**Fichiers créés :**
+- src/hooks/useHoneypot.ts (hook anti-spam réutilisable)
+- src/components/fas/ConferenceSection.tsx (composant conférences)
+- public/images/conferences/marie-favre-{hero,card,thumb}.webp
+- scripts/send-changelog-email.ts
+
+**Fichiers modifiés :**
+- 3 API routes (validation honeypot serveur)
+- 3 composants formulaires (intégration honeypot client)
+- fasEvents.json (données conférences)
+- FASConcertsList.tsx (badges conférences)
+- fas/artiste/[slug]/page.tsx (affichage conférences)
+
+**Commit :** `5257ccc` - "🛡️ ANTI-SPAM: Système Honeypot complet + 🎤 CONFÉRENCES: Intégration Marie Favre"
+
+**Résultat :** Protection anti-spam opérationnelle + Conférences FAS enrichies ✅
+
 ---
 
 ## 📞 CONTACTS PROJET
@@ -592,4 +662,4 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 ---
 
-**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 27 octobre 2025**
+**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 14 novembre 2025**
