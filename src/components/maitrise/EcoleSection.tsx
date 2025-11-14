@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { maitriseContent } from '@/data/maitriseContent';
 
 export default function EcoleSection() {
@@ -135,44 +136,86 @@ export default function EcoleSection() {
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div style={{
-            background: 'rgba(212, 165, 116, 0.08)',
-            borderRadius: '24px',
-            padding: '48px',
-            backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            textAlign: 'center'
+          {/* Visual Element with Photo */}
+          <div className="card-glass" style={{
+            position: 'relative',
+            padding: '0',
+            overflow: 'hidden',
+            borderRadius: '24px'
           }}>
+            {/* Photo École Maîtrisienne */}
             <div style={{
-              fontSize: '120px',
-              marginBottom: '24px',
-              background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              position: 'relative',
+              width: '100%',
+              height: '400px',
+              overflow: 'hidden'
             }}>
-              ♫
+              <Image
+                src="/images/artistes/ecole-maitrisienne/ecole-stamm-hero.webp"
+                alt="École Maîtrisienne de la Cathédrale"
+                fill
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center'
+                }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              {/* Overlay gradient pour texte lisible */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to bottom, rgba(26,19,64,0.9) 0%, rgba(26,19,64,0.3) 50%, transparent 100%)'
+              }} />
             </div>
-            <h3 style={{
-              fontSize: '24px',
-              fontWeight: '700',
-              marginBottom: '16px',
-              color: '#ffffff'
+
+            {/* Texte overlay */}
+            <div style={{
+              position: 'absolute',
+              top: '0',
+              left: '0',
+              right: '0',
+              padding: '32px',
+              color: '#ffffff',
+              zIndex: 2
             }}>
-              Formation d'excellence
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              opacity: '0.9',
-              lineHeight: '1.6'
-            }}>
-              Une opportunité unique pour les jeunes talents de développer leur art vocal
-              au plus haut niveau, au cœur de la tradition musicale de la Cathédrale.
-            </p>
+              <h3 style={{
+                fontSize: '24px',
+                fontWeight: '700',
+                marginBottom: '12px',
+                color: '#ffffff'
+              }}>
+                Formation d'excellence
+              </h3>
+              <p style={{
+                fontSize: '16px',
+                opacity: '0.95',
+                lineHeight: '1.6'
+              }}>
+                Une opportunité unique pour les jeunes talents de développer leur art vocal
+                au plus haut niveau, au cœur de la tradition musicale de la Cathédrale.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .card-glass {
+            height: auto !important;
+          }
+          .card-glass > div:first-child {
+            height: 300px !important;
+          }
+          .card-glass h3 {
+            font-size: 20px !important;
+          }
+          .card-glass p {
+            font-size: 14px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

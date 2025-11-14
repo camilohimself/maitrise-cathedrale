@@ -256,7 +256,7 @@ const FASLiturgicalEvents = () => {
             lineHeight: '1.6',
             margin: 0
           }}>
-            Ces messes liturgiques enrichissent le Festival d'Art Sacré avec des programmes musicaux d'exception. <br />
+            Ces messes enrichissent le Festival d'Art Sacré avec des programmes musicaux d'exception. <br />
             <span style={{ color: '#D4A574', fontWeight: '600' }}>Accès libre</span>, bienvenue à tous.
           </p>
         </div>

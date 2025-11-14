@@ -95,18 +95,23 @@ export default function OrganistesSection() {
             cursor: 'pointer'
           }}>
             <div style={{
-              width: '100px',
-              height: '100px',
-              background: 'linear-gradient(45deg, var(--color-gold), #F0D074)',
+              width: '150px',
+              height: '150px',
               borderRadius: '50%',
               margin: '0 auto 24px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
+              overflow: 'hidden',
+              border: '4px solid var(--color-gold)',
+              boxShadow: '0 4px 20px rgba(212, 165, 116, 0.3)'
             }}>
-              <svg width="50" height="50" viewBox="0 0 24 24" fill="white">
-                <path d="M12 3v10.55A4 4 0 1014 17V7h4V3h-6z"/>
-              </svg>
+              <img
+                src="/images/organistes/catherine-gremaud-card.webp"
+                alt="Catherine Gremaud-Babel, Organiste adjointe"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover'
+                }}
+              />
             </div>
 
             <h3 style={{
