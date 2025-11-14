@@ -28,6 +28,13 @@ const spectral = Spectral({
   fallback: ['Georgia', 'Times New Roman', 'serif'],
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.maitrise-cathedrale.ch'),
   title: {
@@ -145,7 +152,7 @@ export default function RootLayout({
           id="main-content"
           role="main"
           aria-label="Contenu principal"
-          style={{ minHeight: 'calc(100vh - 80px)' }}
+          style={{ minHeight: 'calc(100vh - 64px)' }}
         >
           {children}
         </main>

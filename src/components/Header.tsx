@@ -119,7 +119,7 @@ const Header = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          height: '80px'
+          height: '64px'
         }}>
           {/* Logo */}
           <Link href="/" style={{
@@ -141,7 +141,7 @@ const Header = () => {
               width={345}
               height={92}
               style={{
-                height: '87px',
+                height: '60px',
                 width: 'auto',
                 objectFit: 'contain',
                 objectPosition: 'center'
@@ -302,7 +302,7 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="mobile-menu" style={{
             position: 'fixed',
-            top: '80px',
+            top: '64px',
             left: 0,
             right: 0,
             bottom: 0,
@@ -313,7 +313,7 @@ const Header = () => {
             borderTop: '2px solid var(--color-red)',
             height: '100dvh',
             minHeight: '100svh',
-            maxHeight: 'calc(100dvh - 80px)',
+            maxHeight: 'calc(100dvh - 64px)',
             overflowY: 'auto',
             overscrollBehavior: 'contain',
             WebkitOverflowScrolling: 'touch',
@@ -455,15 +455,15 @@ const Header = () => {
 
           .mobile-menu {
             animation: fadeIn 0.3s ease-out;
-            top: 60px !important;
+            top: 56px !important;
             height: 100dvh !important;
             min-height: 100svh !important;
-            max-height: calc(100dvh - 60px) !important;
+            max-height: calc(100dvh - 56px) !important;
             padding-bottom: calc(20px + env(safe-area-inset-bottom)) !important;
           }
 
           nav {
-            height: 60px !important;
+            height: 56px !important;
           }
 
           :global(.header-logo) {
