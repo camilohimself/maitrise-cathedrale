@@ -177,7 +177,22 @@
   }
 
   /* ==========================================================================
-     7. PRÉVENTION SCROLL HORIZONTAL
+     7. CARTES AGENDA - FIX DÉLÉGUÉ AU COMPOSANT
+     ========================================================================== */
+
+  /**
+   * NOTE: Les corrections pour les cartes d'agenda (.event-card) sont
+   * maintenant gérées directement dans EventCard.tsx (lignes 482-703)
+   * pour éviter les conflits CSS entre global et scoped styles.
+   *
+   * Correction appliquée dans le composant:
+   * - Dates visibles (height: auto, overflow: visible)
+   * - Layout compact horizontal
+   * - Image masquée sur mobile
+   */
+
+  /* ==========================================================================
+     8. PRÉVENTION SCROLL HORIZONTAL
      ========================================================================== */
 
   body,

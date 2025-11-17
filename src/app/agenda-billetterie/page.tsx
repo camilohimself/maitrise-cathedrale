@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import EventCard from '@/components/EventCard';
+import EventCardResponsive from '@/components/EventCardResponsive';
 import Newsletter from '@/components/Newsletter';
 import { maitriseEvents } from '@/data/maitriseEvents';
 
@@ -476,7 +476,7 @@ export default function AgendaBilletterie() {
                       gap: '0px',
                     }}>
                       {eventsByMonth[monthKey].map((event) => (
-                        <EventCard
+                        <EventCardResponsive
                           key={event.id}
                           date={{ day: event.date.day, month: event.date.month }}
                           time={event.time}
