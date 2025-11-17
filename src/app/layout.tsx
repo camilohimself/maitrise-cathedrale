@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Outfit, Spectral } from "next/font/google";
 import "./globals.css";
 import "@/styles/global-responsive.css";
+import "@/styles/mobile-fixes.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StructuredData from "@/components/StructuredData";
