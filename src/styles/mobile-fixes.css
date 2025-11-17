@@ -1,0 +1,510 @@
+/**
+ * MAITRISE-CATHEDRALE.CH - CORRECTIONS MOBILE UNIQUEMENT
+ * Date: 17 Novembre 2025
+ * Auditeur: OSOM Agency
+ *
+ * ⚠️ IMPORTANT: Ce fichier NE cible QUE les écrans mobiles (max-width: 768px)
+ * Le desktop reste INCHANGÉ - Condition impériale!
+ */
+
+/* ==========================================================================
+   CORRECTIONS MOBILE UNIQUEMENT - Desktop non affecté
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  /* ==========================================================================
+     1. CORRECTIONS CRITIQUES - TEXTES TRONQUÉS
+     ========================================================================== */
+
+  /* Correction pour la carte hero "PROJET UNIQUE" */
+  .hero-card h2,
+  .hero-card .title,
+  .hero-card h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
+    line-height: 1.3 !important;
+    padding: 0.5rem !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* Assurer que le conteneur hero s'adapte */
+  .hero-card {
+    padding: 1rem !important;
+    min-height: fit-content !important;
+    overflow: visible !important;
+  }
+
+  /* Correction pour les titres d'événements "a cappella", etc. */
+  .event-card .title,
+  .patronale-card .title,
+  .concert-card .title,
+  .event-card h2,
+  .event-card h3 {
+    font-size: clamp(1rem, 3vw, 1.5rem) !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    padding: 0.75rem !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  /* Assurer que les conteneurs de cartes ne coupent pas le contenu */
+  .event-card,
+  .patronale-card,
+  .concert-card {
+    padding: 1rem !important;
+    overflow: visible !important;
+    min-height: fit-content !important;
+  }
+
+  /* ==========================================================================
+     2. REPOSITIONNEMENT BOUTON SCROLL-TO-TOP
+     ========================================================================== */
+
+  /* Repositionner le bouton pour éviter le chevauchement */
+  .scroll-to-top,
+  .back-to-top,
+  button[class*="scroll"],
+  a[class*="scroll-top"] {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 1000 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Réduire l'opacité quand inactif pour moins d'obstruction */
+  .scroll-to-top:not(:hover):not(:focus),
+  .back-to-top:not(:hover):not(:focus) {
+    opacity: 0.8 !important;
+    transition: opacity 0.3s ease !important;
+  }
+
+  .scroll-to-top:hover,
+  .back-to-top:hover {
+    opacity: 1 !important;
+  }
+
+  /* Ajouter plus d'espace au bas du contenu pour éviter le chevauchement */
+  main,
+  .main-content,
+  body > main,
+  #main-content {
+    padding-bottom: 80px !important;
+  }
+
+  /* ==========================================================================
+     3. AMÉLIORATION ESPACEMENT DES CARTES
+     ========================================================================== */
+
+  /* Améliorer l'espacement interne des cartes */
+  .event-card,
+  .concert-card,
+  .patronale-card,
+  .card {
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    border-radius: 12px !important;
+  }
+
+  /* Espacement pour le contenu interne */
+  .event-card .title,
+  .concert-card .title {
+    margin-bottom: 1rem !important;
+  }
+
+  .event-card .description,
+  .concert-card .description {
+    margin-top: 0.75rem !important;
+    line-height: 1.6 !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  .event-card .date,
+  .event-card .time,
+  .concert-card .date,
+  .concert-card .time {
+    margin: 0.5rem 0 !important;
+  }
+
+  /* Boutons CTA - espacement et touch targets */
+  .event-card .cta-button,
+  .event-card button,
+  .concert-card button,
+  .cta-button,
+  button[class*="reserve"],
+  button[class*="reserver"] {
+    margin-top: 1rem !important;
+    padding: 12px 24px !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  /* ==========================================================================
+     4. AMÉLIORATION CONTRASTE SLIDER
+     ========================================================================== */
+
+  /* Améliorer le contraste des titres sur slider */
+  .slider-card .title,
+  .slider-card h2,
+  .slider-card h1,
+  .carousel-item .title,
+  .carousel-item h2 {
+    color: #FFFFFF !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5),
+                 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    font-weight: 600 !important;
+  }
+
+  /* Alternative: ajouter un overlay sombre sous le texte */
+  .slider-card,
+  .carousel-item {
+    position: relative !important;
+  }
+
+  .slider-card::before,
+  .carousel-item::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 60% !important;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      transparent 100%
+    ) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .slider-card .content,
+  .carousel-item .content,
+  .slider-card > *:not(::before),
+  .carousel-item > *:not(::before) {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* Améliorer aussi les sous-titres et descriptions */
+  .slider-card .subtitle,
+  .slider-card .description,
+  .slider-card p {
+    color: #FFFFFF !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* ==========================================================================
+     5. TOUCH TARGETS CONFORMES (44x44px MINIMUM)
+     ========================================================================== */
+
+  /* Navigation - assurer des touch targets conformes */
+  nav a,
+  .menu-link,
+  .navigation-link,
+  nav li a,
+  .nav-item a {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 12px 16px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Espacement entre les liens de navigation */
+  nav ul li,
+  .nav-item {
+    margin: 8px 0 !important;
+  }
+
+  /* Menu hamburger */
+  .menu-toggle,
+  .hamburger,
+  button[class*="menu"],
+  .mobile-menu-toggle {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 12px !important;
+  }
+
+  /* Tous les liens et boutons */
+  a,
+  button {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 8px 12px !important;
+  }
+
+  /* Exception pour les liens inline dans le texte */
+  p a,
+  span a,
+  .text-content a {
+    min-height: auto !important;
+    display: inline !important;
+    padding: 2px 0 !important;
+    text-decoration: underline !important;
+  }
+
+  /* ==========================================================================
+     6. AMÉLIORATION INDICATEURS SLIDER
+     ========================================================================== */
+
+  /* Améliorer les indicateurs de slider */
+  .slider-dots,
+  .carousel-indicators,
+  .slider-pagination,
+  .swiper-pagination {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    padding: 16px 0 !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .slider-dot,
+  .carousel-indicator,
+  .swiper-pagination-bullet {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 2px solid transparent !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+  }
+
+  .slider-dot.active,
+  .carousel-indicator.active,
+  .swiper-pagination-bullet-active {
+    background: rgba(161, 130, 98, 1) !important; /* Couleur dorée du site */
+    width: 32px !important;
+    border-radius: 6px !important;
+    border-color: white !important;
+  }
+
+  /* Touch target pour mobile - zone cliquable plus grande */
+  .slider-dot,
+  .carousel-indicator {
+    padding: 16px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+
+  /* ==========================================================================
+     7. OPTIMISATION HEADER RESPONSIVE
+     ========================================================================== */
+
+  /* Optimiser le header mobile */
+  header {
+    padding: 12px 16px !important;
+    min-height: 60px !important;
+    max-height: 60px !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+  }
+
+  .header-logo,
+  header img,
+  header .logo {
+    max-height: 40px !important;
+    width: auto !important;
+  }
+
+  /* ==========================================================================
+     8. RESPONSIVE GÉNÉRAL ET SÉCURITÉ
+     ========================================================================== */
+
+  /* Prévenir le scroll horizontal */
+  body,
+  html {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  /* Tous les conteneurs */
+  * {
+    box-sizing: border-box !important;
+  }
+
+  /* Images et médias responsive */
+  img,
+  video,
+  iframe {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Conteneurs principaux */
+  .container,
+  .wrapper,
+  main,
+  section {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* ==========================================================================
+     9. TYPOGRAPHIE RESPONSIVE GLOBALE
+     ========================================================================== */
+
+  /* Base de typographie responsive */
+  body {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
+    line-height: 1.3 !important;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3.5vw, 1.75rem) !important;
+    line-height: 1.4 !important;
+  }
+
+  h4 {
+    font-size: clamp(1.125rem, 3vw, 1.5rem) !important;
+  }
+
+  p,
+  li,
+  span {
+    font-size: clamp(0.875rem, 2.5vw, 1rem) !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Jamais de texte en dessous de 14px */
+  * {
+    min-font-size: 14px !important;
+  }
+
+  /* ==========================================================================
+     10. CORRECTIONS SPÉCIFIQUES AGENDA/CALENDRIER
+     ========================================================================== */
+
+  /* Cartes d'événements du calendrier */
+  .event-item,
+  .calendar-event,
+  .agenda-item {
+    padding: 1rem !important;
+    margin: 0.75rem 0 !important;
+    border-radius: 8px !important;
+    overflow: visible !important;
+  }
+
+  /* Date et heure dans l'agenda */
+  .event-date,
+  .event-time {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    margin: 0.5rem 0 !important;
+  }
+
+  /* Tags/badges (MESSE, FESTIVAL, etc.) */
+  .event-tag,
+  .event-badge,
+  .badge {
+    padding: 6px 12px !important;
+    font-size: 0.875rem !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+    margin: 0.25rem !important;
+  }
+
+  /* ==========================================================================
+     11. ACCESSIBILITÉ
+     ========================================================================== */
+
+  /* Focus visible pour navigation clavier */
+  a:focus,
+  button:focus,
+  input:focus,
+  select:focus {
+    outline: 2px solid #A18262 !important; /* Couleur dorée */
+    outline-offset: 2px !important;
+  }
+
+  /* Skip to content pour accessibilité */
+  .skip-to-content {
+    position: absolute !important;
+    top: -40px !important;
+    left: 0 !important;
+    background: #000 !important;
+    color: #fff !important;
+    padding: 8px 16px !important;
+    text-decoration: none !important;
+    z-index: 9999 !important;
+  }
+
+  .skip-to-content:focus {
+    top: 0 !important;
+  }
+
+} /* FIN @media (max-width: 768px) */
+
+/* ==========================================================================
+   CORRECTIONS POUR PETITS MOBILES (iPhone SE, etc.)
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+  /* Sur petits écrans, réduire la taille du bouton scroll */
+  .scroll-to-top,
+  .back-to-top {
+    width: 44px !important;
+    height: 44px !important;
+    bottom: 16px !important;
+    right: 16px !important;
+  }
+
+  /* Sur petits écrans (iPhone SE), réduire davantage le header */
+  header {
+    min-height: 56px !important;
+    max-height: 56px !important;
+    padding: 8px 16px !important;
+  }
+
+  .header-logo,
+  header img,
+  header .logo {
+    max-height: 36px !important;
+  }
+
+  /* Padding ultra-réduits pour petits écrans */
+  .event-card,
+  .concert-card,
+  .patronale-card {
+    padding: 1rem !important;
+  }
+
+  /* Boutons compacts */
+  a[style*="padding"],
+  button[style*="padding"] {
+    padding: 10px 20px !important;
+    font-size: 0.85rem !important;
+  }
+
+} /* FIN @media (max-width: 480px) */
+
+/* ==========================================================================
+   FIN DES CORRECTIONS MOBILE
+   ========================================================================== */
+
+/* ⚠️ RAPPEL: Desktop non affecté - Toutes les corrections sont dans @media queries */
