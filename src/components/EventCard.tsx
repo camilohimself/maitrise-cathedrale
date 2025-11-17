@@ -491,12 +491,12 @@ const EventCard: React.FC<EventCardProps> = ({
             margin-bottom: 16px !important;
           }
 
-          /* DATE SECTION - Horizontal compact 70px */
+          /* DATE SECTION - Horizontal compact AVEC dates visibles */
           :global(.event-card .dateSection) {
             width: 100% !important;
-            height: 70px !important;
+            height: auto !important;
             min-height: 70px !important;
-            max-height: 70px !important;
+            max-height: none !important;
             padding: 12px 16px !important;
             border-right: none !important;
             border-bottom: 1px solid rgba(26, 19, 64, 0.1) !important;
@@ -504,11 +504,15 @@ const EventCard: React.FC<EventCardProps> = ({
             justify-content: space-around !important;
             align-items: center !important;
             gap: 12px !important;
+            overflow: visible !important;
           }
 
-          /* Date elements - Inline horizontal */
+          /* Date elements - Inline horizontal VISIBLES */
           :global(.event-card .dateSection > div) {
             margin: 0 !important;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
           }
 
           /* Jour semaine - Compact */
@@ -518,11 +522,14 @@ const EventCard: React.FC<EventCardProps> = ({
             text-transform: capitalize !important;
           }
 
-          /* Numéro jour - Taille moyenne */
+          /* Numéro jour - Taille moyenne VISIBLE */
           :global(.event-card .dayNumber) {
             font-size: 2.5rem !important;
             line-height: 1 !important;
             font-weight: 700 !important;
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
           }
 
           /* Mois - Compact */
