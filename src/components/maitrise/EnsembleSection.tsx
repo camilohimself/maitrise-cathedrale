@@ -139,7 +139,7 @@ export default function EnsembleSection() {
                 color: '#1a1340',
                 marginBottom: '12px'
               }}>
-                L'Ensemble Vocal et Instrumental chante la messe de dix heures le troisième dimanche du mois.
+                L'Ensemble Vocal et Instrumental chante la messe de dix heures le <strong>troisième dimanche du mois</strong>.
               </p>
               <div style={{
                 display: 'flex',

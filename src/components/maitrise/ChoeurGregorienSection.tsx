@@ -71,7 +71,7 @@ export default function ChoeurGregorienSection() {
                 color: '#1a1340',
                 marginBottom: '12px'
               }}>
-                Le Chœur grégorien chante la messe de dix heures le quatrième dimanche du mois.
+                Le Chœur grégorien chante la messe de dix heures le <strong>quatrième dimanche du mois</strong>.
               </p>
               <div style={{
                 display: 'flex',

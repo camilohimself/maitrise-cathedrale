@@ -62,7 +62,7 @@ export default function EcoleSection() {
                 opacity: '0.9',
                 marginBottom: '12px'
               }}>
-                L'École Maîtrisienne chante la messe de dix heures le premier dimanche du mois.
+                L'École Maîtrisienne chante la messe de dix heures le <strong>premier dimanche du mois</strong>.
               </p>
               <div style={{
                 display: 'flex',
