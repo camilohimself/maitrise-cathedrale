@@ -190,7 +190,7 @@ const FASHeroCinematic = () => {
         }}>
           {/* Titre principal avec contraste renforcé */}
           <h1 style={{
-            fontSize: 'clamp(2.5rem, 8vw, 5rem)',
+            fontSize: 'clamp(1.5rem, 8vw, 5rem)',
             fontWeight: '300',
             marginBottom: '1rem',
             fontFamily: 'var(--font-spectral)',
@@ -206,7 +206,7 @@ const FASHeroCinematic = () => {
           {/* Collaboration - style générique de film */}
           {currentConcert.collaboration && (
             <p style={{
-              fontSize: '1rem',
+              fontSize: 'clamp(0.85rem, 2vw, 1rem)',
               fontWeight: '400',
               marginBottom: '0.8rem',
               color: 'rgba(255, 255, 255, 0.85)',
@@ -221,7 +221,7 @@ const FASHeroCinematic = () => {
 
           {/* Sous-titre élégant */}
           <h2 style={{
-            fontSize: 'clamp(1.2rem, 3vw, 2rem)',
+            fontSize: 'clamp(0.95rem, 3vw, 2rem)',
             fontWeight: '400',
             marginBottom: '1.8rem',
             color: 'var(--color-gold)',
@@ -467,13 +467,13 @@ const FASHeroCinematic = () => {
             gap: 0.5rem !important;
           }
 
-          /* Flèches repositionnées */
+          /* Flèches repositionnées - iOS safe-area */
           button[style*="left: 3rem"] {
-            left: 1rem !important;
+            left: max(0.5rem, env(safe-area-inset-left)) !important;
           }
 
           button[style*="right: 3rem"] {
-            right: 1rem !important;
+            right: max(0.5rem, env(safe-area-inset-right)) !important;
           }
 
           /* Play/pause repositionné */

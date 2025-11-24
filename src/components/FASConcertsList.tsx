@@ -146,7 +146,8 @@ const FASConcertsList = () => {
 
           /* Cards concerts - VERTICAL LAYOUT */
           .concert-card {
-            grid-template-columns: 1fr !important;
+            display: flex !important;
+            flex-direction: column !important;
             gap: 1rem !important;
             padding: 1.25rem !important;
             border-radius: 16px !important;
@@ -209,21 +210,26 @@ const FASConcertsList = () => {
             font-size: 1rem !important;
           }
 
-          /* Description - LIMIT 2 LINES */
+          /* Description - LIMIT 3 LINES (optimisé 60+) */
           .concert-card p:last-of-type {
             font-size: 0.95rem !important;
             line-height: 1.5 !important;
             margin-bottom: 1.25rem !important;
             display: -webkit-box !important;
-            -webkit-line-clamp: 2 !important;
+            -webkit-line-clamp: 3 !important;
             -webkit-box-orient: vertical !important;
             overflow: hidden !important;
+            text-overflow: ellipsis !important;
           }
 
-          /* Bouton billetterie */
+          /* Bouton billetterie - 44px min Apple HIG */
           .concert-card a {
-            padding: 0.8rem 2rem !important;
+            padding: 0.875rem 2rem !important;
             font-size: 0.95rem !important;
+            min-height: 44px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
           }
         }
 

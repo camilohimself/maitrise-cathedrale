@@ -71,8 +71,8 @@ export default function ConferenceSection({ conference }: ConferenceSectionProps
           textAlign: 'center'
         }}>
           <div style={{
-            width: '150px',
-            height: '150px',
+            width: 'clamp(100px, 25vw, 150px)',
+            height: 'clamp(100px, 25vw, 150px)',
             borderRadius: '50%',
             overflow: 'hidden',
             border: '4px solid var(--color-gold)',
