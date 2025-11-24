@@ -50,21 +50,6 @@ const Footer = () => {
             />
           </div>
 
-          {/* Titre épuré */}
-          <h1 style={{
-            fontFamily: 'var(--font-spectral)',
-            fontSize: 'clamp(1.75rem, 6vw, 3.5rem)',
-            fontWeight: '700',
-            color: '#1a1340',
-            textAlign: 'center',
-            marginBottom: '1.5rem',
-            letterSpacing: '-0.02em',
-            lineHeight: 1.2,
-            maxWidth: '90vw'
-          }} className="footer-title">
-            Maîtrise Cathédrale de Sion
-          </h1>
-
           {/* Baseline élégante */}
           <p style={{
             fontFamily: 'var(--font-outfit)',
@@ -431,11 +416,6 @@ const Footer = () => {
             object-fit: contain !important;
           }
 
-          :global(.footer-title) {
-            font-size: 32px !important;
-            margin-bottom: 16px !important;
-          }
-
           footer p {
             font-size: 18px !important;
           }
@@ -468,12 +448,6 @@ const Footer = () => {
 
           :global(.footer-logo) {
             object-fit: contain !important;
-          }
-
-          :global(.footer-title) {
-            font-size: 24px !important;
-            margin-bottom: 12px !important;
-            line-height: 1.3 !important;
           }
 
           /* Masquer tagline sur mobile */
@@ -540,11 +514,6 @@ const Footer = () => {
 
           :global(.footer-logo) {
             object-fit: contain !important;
-          }
-
-          :global(.footer-title) {
-            font-size: 20px !important;
-            margin-bottom: 10px !important;
           }
 
           footer > div > div:nth-child(2) {
