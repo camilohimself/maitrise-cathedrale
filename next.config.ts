@@ -18,9 +18,24 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Optimisations performance Dr Claude  
+  // Optimisations performance Dr Claude
   experimental: {
     webVitalsAttribution: ['CLS', 'LCP', 'FCP'],
+  },
+  // Redirections 301 permanentes (SEO cleanup)
+  async redirects() {
+    return [
+      {
+        source: '/actualite',
+        destination: '/fas',
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/actualite/',
+        destination: '/fas',
+        permanent: true, // 301 redirect
+      },
+    ]
   },
 };
 
