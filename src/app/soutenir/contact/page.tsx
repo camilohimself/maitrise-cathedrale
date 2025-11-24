@@ -174,7 +174,7 @@ export default function Contact() {
                   Email
                 </h4>
                 <a
-                  href="mailto:info@maitrise-cathedrale.ch"
+                  href="mailto:musiquesacree@cath-vs.ch"
                   style={{
                     color: 'var(--color-gold)',
                     fontSize: '1.1rem',
@@ -184,7 +184,7 @@ export default function Contact() {
                   onMouseEnter={(e) => e.currentTarget.style.color = '#c19660'}
                   onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-gold)'}
                 >
-                  info@maitrise-cathedrale.ch
+                  musiquesacree@cath-vs.ch
                 </a>
               </div>
 

@@ -213,7 +213,7 @@ const fondationContent = {
       ligne2: "1950 Sion"
     },
     telephone: "079 616 90 94",
-    email: "info@maitrise-cathedrale.ch",
+    email: "musiquesacree@cath-vs.ch",
     secretariat: {
       responsable: "Mme Sylvie Bernhard",
       telephone: "079 616 90 94"

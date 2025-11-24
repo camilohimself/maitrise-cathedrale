@@ -95,7 +95,7 @@ const EventCard: React.FC<EventCardProps> = ({
       'VERSION:2.0',
       'PRODID:-//Maîtrise Cathédrale Sion//Event//FR',
       'BEGIN:VEVENT',
-      `UID:${Date.now()}@maitrise-cathedrale.ch`,
+      `UID:${Date.now()}@cath-vs.ch`,
       `DTSTART:${formatDate(startDate)}`,
       `DTEND:${formatDate(endDate)}`,
       `SUMMARY:${title}`,
