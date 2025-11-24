@@ -28,7 +28,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+41-27-322-22-20",
-      "email": "musiquesacree@cath-vs.ch",
+      "email": "musiquesacree@cath-vs.org",
       "contactType": "customer service",
       "availableLanguage": ["French", "German"]
     },

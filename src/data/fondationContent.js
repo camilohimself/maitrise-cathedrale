@@ -198,7 +198,7 @@ const fondationContent = {
       texte: "Vous pouvez devenir membre Ami de notre Fondation en contactant notre secrétariat",
       contact: {
         telephone: "079 616 90 94",
-        email: "musiquesacree@cath-vs.ch"
+        email: "musiquesacree@cath-vs.org"
       }
     }
   },
@@ -213,7 +213,7 @@ const fondationContent = {
       ligne2: "1950 Sion"
     },
     telephone: "079 616 90 94",
-    email: "musiquesacree@cath-vs.ch",
+    email: "musiquesacree@cath-vs.org",
     secretariat: {
       responsable: "Mme Sylvie Bernhard",
       telephone: "079 616 90 94"

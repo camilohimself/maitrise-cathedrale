@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     const data = await resend.emails.send({
       from: 'Maîtrise Cathédrale <noreply@maitrise-cathedrale.ch>',
       to: [
-        process.env.CONTACT_EMAIL || 'musiquesacree@cath-vs.ch',
+        process.env.CONTACT_EMAIL || 'musiquesacree@cath-vs.org',
         'musiquesacree@cath-vs.org'
       ],
       subject: '📬 Nouvelle inscription Newsletter - Maîtrise Cathédrale',
@@ -72,7 +72,7 @@ export async function POST(request: Request) {
                 <div class="footer">
                   <p>Maîtrise de la Cathédrale de Sion<br>
                   Rue de la Cathédrale 13, 1950 Sion<br>
-                  <a href="mailto:musiquesacree@cath-vs.ch" style="color: #D4A574;">musiquesacree@cath-vs.ch</a></p>
+                  <a href="mailto:musiquesacree@cath-vs.org" style="color: #D4A574;">musiquesacree@cath-vs.org</a></p>
                 </div>
               </div>
             </div>
