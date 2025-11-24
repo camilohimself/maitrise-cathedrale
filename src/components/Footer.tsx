@@ -141,7 +141,8 @@ const Footer = () => {
               color: 'var(--color-gold)',
               marginBottom: '24px',
               textTransform: 'uppercase',
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              textAlign: 'center'
             }}>
               Navigation
             </h3>
@@ -180,7 +181,8 @@ const Footer = () => {
               color: 'var(--color-gold)',
               marginBottom: '24px',
               textTransform: 'uppercase',
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              textAlign: 'center'
             }}>
               Contact
             </h3>
@@ -235,7 +237,8 @@ const Footer = () => {
               color: 'var(--color-gold)',
               marginBottom: '24px',
               textTransform: 'uppercase',
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              textAlign: 'center'
             }}>
               Suivez-nous
             </h3>
