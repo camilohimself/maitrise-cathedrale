@@ -40,9 +40,9 @@ const Footer = () => {
             height: 'min(500px, 90vw)',
             marginBottom: '4rem',
             filter: 'drop-shadow(0 20px 60px rgba(0, 0, 0, 0.08))'
-          }}>
+          }} className="footer-logo-container">
             <Image
-              src="/images/logo-mc-couleur.png"
+              src="/images/logo-mc-negatif.png"
               alt="Maîtrise Cathédrale de Sion"
               fill
               style={{ objectFit: 'contain' }}
@@ -421,10 +421,14 @@ const Footer = () => {
             border-radius: 16px !important;
           }
 
+          :global(.footer-logo-container) {
+            width: 280px !important;
+            height: 280px !important;
+            margin-bottom: 2rem !important;
+          }
+
           :global(.footer-logo) {
-            height: 75px !important;
-            max-width: 100%;
-            margin-bottom: 24px !important;
+            object-fit: contain !important;
           }
 
           :global(.footer-title) {
@@ -456,9 +460,14 @@ const Footer = () => {
             border-radius: 12px !important;
           }
 
+          :global(.footer-logo-container) {
+            width: 220px !important;
+            height: 220px !important;
+            margin-bottom: 1.5rem !important;
+          }
+
           :global(.footer-logo) {
-            height: 60px !important;
-            margin-bottom: 20px !important;
+            object-fit: contain !important;
           }
 
           :global(.footer-title) {
@@ -523,9 +532,14 @@ const Footer = () => {
             margin-bottom: 24px !important;
           }
 
+          :global(.footer-logo-container) {
+            width: 180px !important;
+            height: 180px !important;
+            margin-bottom: 1rem !important;
+          }
+
           :global(.footer-logo) {
-            height: 50px !important;
-            margin-bottom: 16px !important;
+            object-fit: contain !important;
           }
 
           :global(.footer-title) {
