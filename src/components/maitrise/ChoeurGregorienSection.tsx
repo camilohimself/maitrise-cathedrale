@@ -97,18 +97,18 @@ export default function ChoeurGregorienSection() {
               Répertoire traditionnel
             </h3>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div className="repertoire-list" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
                 "Plain-chant authentique",
                 "Répertoire liturgique traditionnel",
                 "Interprétation selon les manuscrits anciens"
               ].map((item, idx) => (
-                <div key={idx} style={{
+                <div key={idx} className="repertoire-item" style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '16px'
                 }}>
-                  <div style={{
+                  <div className="bullet-icon" style={{
                     width: '32px',
                     height: '32px',
                     background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
@@ -122,8 +122,8 @@ export default function ChoeurGregorienSection() {
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                     </svg>
                   </div>
-                  <span style={{ 
-                    fontSize: '16px', 
+                  <span className="repertoire-text" style={{
+                    fontSize: '16px',
                     opacity: '0.9',
                     color: '#1a1340'
                   }}>{item}</span>
@@ -132,6 +132,43 @@ export default function ChoeurGregorienSection() {
             </div>
           </div>
       </div>
+
+      {/* RESPONSIVE MOBILE */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          /* Liste CSS pure mobile */
+          .repertoire-list {
+            display: block !important;
+            padding-left: 20px !important;
+            list-style-type: disc !important;
+            margin: 0 !important;
+          }
+
+          .repertoire-item {
+            display: list-item !important;
+            margin-bottom: 8px !important;
+            padding: 0 !important;
+            background: transparent !important;
+            border: none !important;
+          }
+
+          .bullet-icon {
+            display: none !important;
+          }
+
+          .repertoire-text {
+            display: inline !important;
+            font-size: 15px !important;
+            line-height: 1.76 !important;
+            opacity: 0.9 !important;
+            color: #1a1340 !important;
+          }
+
+          .repertoire-item::marker {
+            color: var(--color-gold);
+          }
+        }
+      `}</style>
     </div>
   );
 }

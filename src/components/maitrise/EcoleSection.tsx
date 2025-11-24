@@ -109,14 +109,14 @@ export default function EcoleSection() {
               Programme de formation
             </h3>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div className="programme-list" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {ecole.programme.map((item, idx) => (
-                <div key={idx} style={{
+                <div key={idx} className="programme-item" style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '16px'
                 }}>
-                  <div style={{
+                  <div className="bullet-icon" style={{
                     width: '32px',
                     height: '32px',
                     background: 'var(--color-gold)',
@@ -130,14 +130,14 @@ export default function EcoleSection() {
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                     </svg>
                   </div>
-                  <span style={{ fontSize: '16px', opacity: '0.95' }}>{item}</span>
+                  <span className="programme-text" style={{ fontSize: '16px', opacity: '0.95' }}>{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Visual Element with Photo */}
-          <div className="card-glass" style={{
+          <div className="card-glass desktop-only-block" style={{
             position: 'relative',
             padding: '0',
             overflow: 'hidden',
@@ -202,17 +202,46 @@ export default function EcoleSection() {
 
       <style jsx>{`
         @media (max-width: 768px) {
-          .card-glass {
-            height: auto !important;
+          /* Masquer bloc image en mobile */
+          .desktop-only-block {
+            display: none !important;
           }
-          .card-glass > div:first-child {
-            height: 300px !important;
+
+          /* Texte pleine largeur */
+          .container > div {
+            grid-template-columns: 1fr !important;
           }
-          .card-glass h3 {
-            font-size: 20px !important;
+
+          /* Programme de formation - Liste CSS pure mobile */
+          .programme-list {
+            display: block !important;
+            padding-left: 20px !important;
+            list-style-type: disc !important;
+            margin: 0 !important;
           }
-          .card-glass p {
-            font-size: 14px !important;
+
+          .programme-item {
+            display: list-item !important;
+            margin-bottom: 8px !important;
+            padding: 0 !important;
+            background: transparent !important;
+            border: none !important;
+          }
+
+          .bullet-icon {
+            display: none !important;
+          }
+
+          .programme-text {
+            display: inline !important;
+            font-size: 15px !important;
+            line-height: 1.76 !important;
+            opacity: 0.95 !important;
+            color: #ffffff !important;
+          }
+
+          .programme-item::marker {
+            color: var(--color-gold);
           }
         }
       `}</style>

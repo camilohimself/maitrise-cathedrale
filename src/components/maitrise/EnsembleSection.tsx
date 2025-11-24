@@ -17,12 +17,15 @@ export default function EnsembleSection() {
           alignItems: 'center'
         }}>
           {/* Visual Element with Photo */}
-          <div className="card-glass" style={{
+          <div className="card-glass photo-card" style={{
             position: 'relative',
             padding: '0',
             overflow: 'hidden',
-            borderRadius: '24px'
-          }}>
+            borderRadius: '24px',
+            cursor: 'pointer'
+          }}
+          onClick={() => window.open('/images/artistes/ensemble-vocal-instrumental/evi-1-hero.webp', '_blank')}
+          >
             {/* Photo EVI */}
             <div style={{
               position: 'relative',
@@ -41,16 +44,16 @@ export default function EnsembleSection() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
-              {/* Overlay gradient pour texte lisible */}
-              <div style={{
+              {/* Overlay gradient pour texte lisible - DESKTOP ONLY */}
+              <div className="overlay-desktop" style={{
                 position: 'absolute',
                 inset: 0,
                 background: 'linear-gradient(to top, rgba(26,19,64,0.9) 0%, rgba(26,19,64,0.3) 50%, transparent 100%)'
               }} />
             </div>
 
-            {/* Texte overlay */}
-            <div style={{
+            {/* Texte overlay - DESKTOP ONLY */}
+            <div className="text-overlay-desktop" style={{
               position: 'absolute',
               bottom: 0,
               left: 0,
@@ -78,8 +81,8 @@ export default function EnsembleSection() {
               </p>
             </div>
 
-            {/* Badge projet */}
-            <div className="tag-gold" style={{
+            {/* Badge projet - DESKTOP ONLY */}
+            <div className="tag-gold badge-desktop" style={{
               position: 'absolute',
               top: '20px',
               right: '20px',
@@ -91,7 +94,7 @@ export default function EnsembleSection() {
 
           {/* Content */}
           <div>
-            <div className="badge-gold" style={{ marginBottom: '24px' }}>
+            <div className="badge-gold desktop-only" style={{ marginBottom: '24px' }}>
               Ensemble Vocal et Instrumental
             </div>
 
@@ -176,6 +179,38 @@ export default function EnsembleSection() {
           </div>
         </div>
       </div>
+
+      {/* RESPONSIVE MOBILE */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          /* Masquer badge jaune sur mobile */
+          .desktop-only {
+            display: none !important;
+          }
+
+          /* Photo card - Pleine hauteur mobile, cliquable */
+          .photo-card {
+            height: 300px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.2s ease;
+          }
+
+          .photo-card:active {
+            transform: scale(0.98);
+          }
+
+          .photo-card > div {
+            height: 100% !important;
+          }
+
+          /* Masquer overlays texte en mobile */
+          .overlay-desktop,
+          .text-overlay-desktop,
+          .badge-desktop {
+            display: none !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

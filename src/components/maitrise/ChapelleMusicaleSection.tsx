@@ -149,19 +149,19 @@ export default function ChapelleMusicaleSection() {
               Caractéristiques musicales
             </h3>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div className="caracteristiques-list" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {[
                 "Ensemble de 10 chanteurs expérimentés",
                 "Répertoire Renaissance a cappella",
                 "Interprétation authentique historique",
                 "Fêtes liturgiques majeures"
               ].map((item, idx) => (
-                <div key={idx} style={{
+                <div key={idx} className="caracteristiques-item" style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '16px'
                 }}>
-                  <div style={{
+                  <div className="bullet-icon" style={{
                     width: '32px',
                     height: '32px',
                     background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
@@ -175,14 +175,14 @@ export default function ChapelleMusicaleSection() {
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
                     </svg>
                   </div>
-                  <span style={{ fontSize: '16px', opacity: '0.95' }}>{item}</span>
+                  <span className="caracteristiques-text" style={{ fontSize: '16px', opacity: '0.95' }}>{item}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Visual Element */}
-          <div style={{
+          <div className="desktop-only-block" style={{
             background: 'rgba(212, 165, 116, 0.08)',
             borderRadius: '24px',
             padding: '48px',
@@ -226,6 +226,53 @@ export default function ChapelleMusicaleSection() {
           </div>
         </div>
       </div>
+
+      {/* RESPONSIVE MOBILE */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          /* Masquer bloc visual en mobile */
+          .desktop-only-block {
+            display: none !important;
+          }
+
+          /* Texte pleine largeur */
+          .container > div {
+            grid-template-columns: 1fr !important;
+          }
+
+          /* Liste CSS pure mobile */
+          .caracteristiques-list {
+            display: block !important;
+            padding-left: 20px !important;
+            list-style-type: disc !important;
+            margin: 0 !important;
+          }
+
+          .caracteristiques-item {
+            display: list-item !important;
+            margin-bottom: 8px !important;
+            padding: 0 !important;
+            background: transparent !important;
+            border: none !important;
+          }
+
+          .bullet-icon {
+            display: none !important;
+          }
+
+          .caracteristiques-text {
+            display: inline !important;
+            font-size: 15px !important;
+            line-height: 1.6 !important;
+            opacity: 0.9 !important;
+            color: #ffffff !important;
+          }
+
+          .caracteristiques-item::marker {
+            color: var(--color-gold);
+          }
+        }
+      `}</style>
     </div>
   );
 }

@@ -42,7 +42,7 @@ export default function OrganistesSection() {
             <div style={{
               width: '100px',
               height: '100px',
-              background: 'linear-gradient(45deg, var(--color-gold), var(--color-gold))',
+              background: 'var(--color-gold)',
               borderRadius: '50%',
               margin: '0 auto 24px',
               display: 'flex',
