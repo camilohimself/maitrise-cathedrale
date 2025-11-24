@@ -233,35 +233,74 @@ const Newsletter: React.FC = () => {
         opacity: 0.05,
       }} />
 
-      {/* Styles mobiles responsive */}
+      {/* Styles mobiles responsive - ULTRA-SIMPLE */}
       <style jsx>{`
         @media (max-width: 768px) {
+          /* Container: Tout centré, vertical, épuré */
           .newsletter-section > div {
             flex-direction: column !important;
             gap: 1.5rem !important;
             text-align: center !important;
+            padding: 0 1rem !important;
+            align-items: center !important;
           }
 
+          /* Barre dorée: Masquer en mobile */
+          .newsletter-section > div > div:first-child {
+            display: none !important;
+          }
+
+          /* Texte: Centré, sans padding gauche */
+          .newsletter-section > div > div:nth-child(2) {
+            padding-left: 0 !important;
+            max-width: 100% !important;
+            flex: none !important;
+          }
+
+          /* Titre: Plus compact mobile */
+          .newsletter-section h2 {
+            font-size: 1.75rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+
+          /* Baseline: Plus lisible */
+          .newsletter-section p {
+            font-size: 1rem !important;
+            opacity: 0.85 !important;
+          }
+
+          /* Formulaire: Vertical pur, pleine largeur */
           .newsletter-section form {
             flex-direction: column !important;
             width: 100% !important;
+            max-width: 400px !important;
+            gap: 0.75rem !important;
+            flex: none !important;
           }
 
+          /* Input: Tactile optimisé */
           .newsletter-section input {
             padding: 16px 18px !important;
             font-size: 16px !important;
+            width: 100% !important;
           }
 
+          /* Bouton: Full-width, tactile */
           .newsletter-section button {
             width: 100% !important;
             padding: 16px 28px !important;
-            min-height: 48px;
+            min-height: 48px !important;
           }
         }
 
         @media (max-width: 640px) {
           .newsletter-section {
             padding: 2rem 0 !important;
+          }
+
+          /* Titre encore plus compact */
+          .newsletter-section h2 {
+            font-size: 1.5rem !important;
           }
         }
       `}</style>
