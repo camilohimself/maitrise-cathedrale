@@ -66,11 +66,11 @@ const Newsletter: React.FC = () => {
   };
 
   return (
-    <section 
+    <section
       className="newsletter-section"
       style={{
         backgroundColor: 'var(--color-cream)',
-        padding: 'var(--spacing-3xl) 0',
+        padding: 'var(--spacing-xl) 0',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -261,7 +261,7 @@ const Newsletter: React.FC = () => {
 
         @media (max-width: 640px) {
           .newsletter-section {
-            padding: 3rem 0 !important;
+            padding: 2rem 0 !important;
           }
         }
       `}</style>

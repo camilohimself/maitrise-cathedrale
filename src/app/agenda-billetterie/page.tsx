@@ -10,6 +10,7 @@ export default function AgendaBilletterie() {
   const [selectedMonth, setSelectedMonth] = useState('');
   const [selectedType, setSelectedType] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('');
+  const [showAll, setShowAll] = useState(false);
 
   // Filtrage des événements
   const filteredEvents = useMemo(() => {
@@ -90,10 +91,19 @@ export default function AgendaBilletterie() {
     return sortedEvents;
   }, [searchTerm, selectedMonth, selectedType, selectedPriceRange]);
 
-  // Grouper les événements par mois pour sticky headers
+  // Limiter l'affichage initial à 6 événements (sauf si filtres actifs)
+  const hasActiveFilters = searchTerm || selectedMonth || selectedType || selectedPriceRange;
+  const visibleEvents = useMemo(() => {
+    // Si filtres actifs, montrer tous les résultats
+    if (hasActiveFilters) return filteredEvents;
+    // Sinon, limiter à 6 si showAll === false
+    return showAll ? filteredEvents : filteredEvents.slice(0, 6);
+  }, [filteredEvents, showAll, hasActiveFilters]);
+
+  // Grouper les événements visibles par mois pour sticky headers
   const eventsByMonth = useMemo(() => {
-    const groups: { [key: string]: typeof filteredEvents } = {};
-    filteredEvents.forEach(event => {
+    const groups: { [key: string]: typeof visibleEvents } = {};
+    visibleEvents.forEach(event => {
       const monthKey = event.date.month;
       if (!groups[monthKey]) {
         groups[monthKey] = [];
@@ -101,7 +111,7 @@ export default function AgendaBilletterie() {
       groups[monthKey].push(event);
     });
     return groups;
-  }, [filteredEvents]);
+  }, [visibleEvents]);
 
   // Mapping mois → nom complet pour headers
   const monthNames: { [key: string]: string } = {
@@ -420,12 +430,17 @@ export default function AgendaBilletterie() {
               color: 'var(--color-navy)',
               opacity: 0.7,
             }}>
-              {filteredEvents.length} événement{filteredEvents.length !== 1 ? 's' : ''} trouvé{filteredEvents.length !== 1 ? 's' : ''}
+              {hasActiveFilters
+                ? `${filteredEvents.length} événement${filteredEvents.length !== 1 ? 's' : ''} trouvé${filteredEvents.length !== 1 ? 's' : ''}`
+                : showAll
+                ? `${filteredEvents.length} événement${filteredEvents.length !== 1 ? 's' : ''} à venir`
+                : `${visibleEvents.length} événements à venir (sur ${filteredEvents.length} au total)`
+              }
             </p>
           </div>
 
           {/* Liste d'événements avec sticky month headers */}
-          {filteredEvents.length > 0 ? (
+          {visibleEvents.length > 0 ? (
             <div style={{
               maxWidth: '900px',
               margin: '0 auto var(--spacing-3xl) auto',
@@ -497,8 +512,48 @@ export default function AgendaBilletterie() {
                   </div>
                 ))}
             </div>
-          ) : (
-            /* Message aucun résultat */
+          ) : null}
+
+          {/* Bouton Voir plus/moins (uniquement si pas de filtres actifs et plus de 6 événements) */}
+          {!hasActiveFilters && filteredEvents.length > 6 && visibleEvents.length > 0 && (
+            <div style={{
+              textAlign: 'center',
+              marginTop: '40px',
+              marginBottom: '40px',
+            }}>
+              <button
+                onClick={() => setShowAll(!showAll)}
+                style={{
+                  padding: '14px 36px',
+                  backgroundColor: 'transparent',
+                  color: 'var(--color-gold)',
+                  border: '2px solid var(--color-gold)',
+                  borderRadius: '8px',
+                  fontFamily: 'var(--font-outfit)',
+                  fontWeight: '600',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s ease',
+                  minHeight: '48px',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'var(--color-gold)';
+                  e.currentTarget.style.color = 'white';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = 'var(--color-gold)';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                {showAll ? '↑ Voir moins' : `↓ Voir tous les événements (${filteredEvents.length})`}
+              </button>
+            </div>
+          )}
+
+          {/* Message aucun résultat */}
+          {visibleEvents.length === 0 && (
             <div style={{
               textAlign: 'center',
               padding: 'var(--spacing-3xl) var(--spacing-lg)',
