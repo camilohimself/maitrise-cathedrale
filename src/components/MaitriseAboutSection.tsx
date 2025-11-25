@@ -103,7 +103,7 @@ const MaitriseAboutSection = () => {
             marginBottom: '1.5rem',
             lineHeight: 1.1,
           }}>
-            La Maîtrise Cathédrale
+            La Maitrise de la Cathedrale
           </h2>
 
           <p style={{

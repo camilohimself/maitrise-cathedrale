@@ -1,4 +1,4 @@
-import HeroOptionB_DegradueVitrail from '@/components/HeroOptionB_DegradueVitrail';
+import HeroFestivalCountdown from '@/components/HeroFestivalCountdown';
 import FASHighlightSection from '@/components/FASHighlightSection';
 import UpcomingEventsSection from '@/components/UpcomingEventsSection';
 import MaitriseAboutSection from '@/components/MaitriseAboutSection';
@@ -13,10 +13,10 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <HeroOptionB_DegradueVitrail />
-      <MaitriseAboutSection />
+      <HeroFestivalCountdown />
       <FASHighlightSection />
       <UpcomingEventsSection />
+      <MaitriseAboutSection />
       <Newsletter />
       <SupportSectionV2Museum />
     </>
