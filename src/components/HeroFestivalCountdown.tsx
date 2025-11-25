@@ -325,17 +325,6 @@ const HeroFestivalCountdown = () => {
         )`,
       }} />
 
-      {/* Ligne doree */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: '50%',
-        transform: 'translateX(-50%)',
-        width: '1px',
-        height: '100%',
-        background: 'linear-gradient(180deg, transparent 0%, rgba(212, 165, 116, 0.3) 30%, rgba(212, 165, 116, 0.3) 70%, transparent 100%)',
-        zIndex: 3,
-      }} />
 
       {/* Contenu */}
       <div style={{

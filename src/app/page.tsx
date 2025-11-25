@@ -1,9 +1,8 @@
 import HeroFestivalCountdown from '@/components/HeroFestivalCountdown';
 import FASHighlightSection from '@/components/FASHighlightSection';
-import UpcomingEventsSection from '@/components/UpcomingEventsSection';
-import MaitriseAboutSection from '@/components/MaitriseAboutSection';
-import SupportSectionV2Museum from '@/components/SupportSection_V2_Museum';
-import Newsletter from '@/components/Newsletter';
+import UpcomingEventsSectionOpera from '@/components/UpcomingEventsSectionOpera';
+import MaitriseAboutCondensed from '@/components/MaitriseAboutCondensed';
+import NewsletterSupportCombined from '@/components/NewsletterSupportCombined';
 
 export const metadata = {
   title: "Maîtrise de la Cathédrale de Sion | École de chant et Festival d'Art Sacré",
@@ -15,10 +14,9 @@ export default function Home() {
     <>
       <HeroFestivalCountdown />
       <FASHighlightSection />
-      <UpcomingEventsSection />
-      <MaitriseAboutSection />
-      <Newsletter />
-      <SupportSectionV2Museum />
+      <UpcomingEventsSectionOpera />
+      <MaitriseAboutCondensed />
+      <NewsletterSupportCombined />
     </>
   );
 }
