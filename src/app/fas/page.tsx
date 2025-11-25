@@ -3,7 +3,6 @@ import FASHeroCinematic from '@/components/FASHeroCinematic';
 import FASDownloadButton from '@/components/FASDownloadButton';
 import FASConcertsList from '@/components/FASConcertsList';
 import FASArtistesSection from '@/components/FASArtistesSection';
-import FASEventSection from '@/components/FASEventSection';
 import FASLiturgicalEvents from '@/components/FASLiturgicalEvents';
 import FASComplementaryEvents from '@/components/FASComplementaryEvents';
 
@@ -21,10 +20,9 @@ export default function FAS() {
     }}>
       <FASHeroCinematic />
       <FASConcertsList />
-      <FASEventSection />
+      <FASDownloadButton />
       <FASLiturgicalEvents />
       <FASComplementaryEvents />
-      <FASDownloadButton />
       <FASArtistesSection />
     </main>
   );

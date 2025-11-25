@@ -161,6 +161,22 @@ git push origin main
 
 ---
 
+---
+
+## NOUVELLE BANNIERE HERO
+
+**IMPORTANT**: Une nouvelle banniere a ete ajoutee pour le hero FAS:
+```
+/public/images/fas-banner-2025.png
+```
+
+Cette image doit etre integree dans le nouveau composant FASHeroOpera.tsx.
+- Format: PNG (optimise par Next.js)
+- Contenu: Logo 20eme Festival d'Art Sacre + photos artistes + dates
+- Utilisation: Hero principal de la page /fas
+
+---
+
 ## PROMPT REPRISE APRES COMPACT
 
 ```
@@ -170,12 +186,13 @@ Contexte:
 - Homepage terminee (commit a1f14eb)
 - Page /fas a refaire style Opera
 - Cible: 60+ ans
+- NOUVELLE BANNIERE: /public/images/fas-banner-2025.png (a integrer dans hero)
 
 Lire le fichier:
 /Users/camilorivera/WORKSPACE-OSOM/CLIENTS-ACTIFS/MAITRISE-CATHEDRALE/maitrise-cathedrale/REPRISE-FAS-REFONTE.md
 
 Taches:
-1. Creer FASHeroOpera.tsx (hero statique style Opera)
+1. Creer FASHeroOpera.tsx avec la nouvelle banniere fas-banner-2025.png
 2. Modifier FASConcertsList.tsx (cards uniformes, couleurs Navy/Or)
 3. Mettre a jour page.tsx (supprimer FASEventSection)
 4. Tester sur http://localhost:3000/fas
