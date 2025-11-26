@@ -1,6 +1,6 @@
 # 🎼 Site Maîtrise de la Cathédrale de Sion
 
-**Dernière mise à jour:** 14 novembre 2025
+**Dernière mise à jour:** 26 novembre 2025
 **Statut:** ✅ **SITE V1 EN PRODUCTION - ANTI-SPAM ACTIF**
 
 ---
@@ -47,7 +47,7 @@
 - ✅ Photos: 100% optimisées WebP (3 formats: Hero/Card/Thumb)
 - ✅ Menu mobile iOS: Corrigé (100dvh/100svh)
 - ✅ Grids responsive: 100% safe (minmax pattern)
-- ✅ Calendrier: 55 événements Oct 2025 → Juin 2026
+- ✅ Calendrier: 61 événements Oct 2025 → Juin 2026 (+ 6 Rorate/Vespérales)
 - ✅ Cookie Banner LPD: Conforme loi suisse
 
 ---
@@ -627,6 +627,66 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 **Résultat :** Protection anti-spam opérationnelle + Conférences FAS enrichies ✅
 
+### Session 10 (26 Nov 2025) - Agenda Hero Redesign + FAS Expansion
+**Contexte :** Anomalie événements FAS manquants sur agenda + améliorations UX
+
+**Phase 1 - Intégration événements manquants :**
+- Ajout 6 événements FAS dans maitriseEvents.js :
+  - 3 Rorate (3, 10, 17 déc 2025) - Entrée libre
+  - 3 Vespérales (11, 18 déc 2025 + 2 jan 2026) - Entrée libre
+- Type `fas` pour code couleur violet cohérent
+- Total calendrier : 61 événements (Oct 2025 → Juin 2026)
+
+**Phase 2 - Hero Section Redesign :**
+- Layout 2 colonnes desktop (texte gauche, filtres/CTA droite)
+- Background photo `solistes-orchestre` avec overlay navy
+- Images WebP optimisées :
+  - Desktop : 1920px (137KB)
+  - Mobile : 800px (55KB)
+- Responsive : single column <968px
+- Ornements dorés masqués sur mobile
+- Icône calendrier SVG (remplace emoji)
+
+**Phase 3 - FAS Events Expansion (click-to-expand) :**
+- **Desktop (EventCard.tsx) :**
+  - useState pour état expansion
+  - Détection isFASEvent (category includes 'festival' ou 'fas')
+  - handleCardClick toggle expansion
+  - Section expandée avec détails complets
+  - CTA Billetterie préservé (stopPropagation)
+
+- **Mobile (EventCardMobile.tsx) :**
+  - Même fonctionnalité adaptée mobile
+  - Indicateurs visuels "Voir les détails" / "Réduire"
+  - Section expandée : Programme, Informations, Lieu, Tarif
+  - Chevrons SVG up/down
+  - Layout vertical optimisé
+
+- **EventCardResponsive.tsx :**
+  - Ajout prop `subtitle` pour transmission aux composants
+
+**Fichiers modifiés :**
+- src/app/agenda-billetterie/page.tsx (324 lignes)
+- src/components/EventCard.tsx (+219 lignes)
+- src/components/EventCardMobile.tsx (+249 lignes)
+- src/components/EventCardResponsive.tsx (+1 ligne)
+- src/data/maitriseEvents.js (+90 lignes)
+
+**Fichiers créés :**
+- public/images/hero-agenda/solistes-orchestre-desktop.webp
+- public/images/hero-agenda/solistes-orchestre-mobile.webp
+- public/images/hero-agenda/concert-cathedrale-desktop.webp
+- public/images/hero-agenda/concert-cathedrale-mobile.webp
+
+**Métriques finales :**
+- 9 fichiers modifiés/créés
+- 717 insertions, 166 suppressions
+- Build : 32 pages, 0 erreur TypeScript
+
+**Commit :** `de032ad` - "feat(agenda): Hero redesign + FAS events expansion + Rorate/Vespérales"
+
+**Résultat :** Agenda enrichi + Hero premium + Événements FAS interactifs ✅
+
 ---
 
 ## 📞 CONTACTS PROJET
@@ -652,4 +712,4 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 ---
 
-**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 14 novembre 2025**
+**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 26 novembre 2025**
