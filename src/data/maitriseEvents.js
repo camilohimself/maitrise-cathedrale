@@ -95,6 +95,21 @@ export const maitriseEvents = [
 
   // === DÉCEMBRE 2025 ===
   {
+    id: 'dec-03-rorate-1',
+    type: 'fas',
+    date: { day: '03', month: 'DÉC' },
+    time: '18h00',
+    title: 'Messe Rorate',
+    subtitle: 'Dans une atmosphère privilégiant la douceur de la lumière',
+    category: 'Festival d\'art sacré',
+    ensemble: 'École Maîtrisienne',
+    description: 'Messe de l\'Avent célébrée dans la tradition séculaire. Éclairage réduit pour préserver l\'ambiance propre aux Rorate. Nos jeunes chanteurs s\'exercent à l\'art du quatuor vocal.',
+    location: 'Cathédrale de Sion',
+    price: 'Entrée libre',
+    image: '/images/complementary/rorate-card.webp',
+    featured: true
+  },
+  {
     id: 'dec-07-messe-ecole-maitrisienne',
     type: 'messe',
     date: { day: '07', month: 'DÉC' },
@@ -139,6 +154,36 @@ export const maitriseEvents = [
     featured: true
   },
   {
+    id: 'dec-10-rorate-2',
+    type: 'fas',
+    date: { day: '10', month: 'DÉC' },
+    time: '18h00',
+    title: 'Messe Rorate',
+    subtitle: 'Dans une atmosphère privilégiant la douceur de la lumière',
+    category: 'Festival d\'art sacré',
+    ensemble: 'École Maîtrisienne',
+    description: 'Messe de l\'Avent célébrée dans la tradition séculaire. Éclairage réduit pour préserver l\'ambiance propre aux Rorate. Nos jeunes chanteurs s\'exercent à l\'art du quatuor vocal.',
+    location: 'Cathédrale de Sion',
+    price: 'Entrée libre',
+    image: '/images/complementary/rorate-card.webp',
+    featured: true
+  },
+  {
+    id: 'dec-11-vesperale-1',
+    type: 'fas',
+    date: { day: '11', month: 'DÉC' },
+    time: '19h30',
+    title: 'Vespérale d\'orgue',
+    subtitle: 'Le roi des instruments',
+    category: 'Festival d\'art sacré',
+    ensemble: 'Jean-David Waeber, Maître de chapelle',
+    description: 'Moment de méditation hors du temps autour de l\'orgue historique du XVIIIe siècle. Une quarantaine de minutes pour dévoiler les couleurs sonores de cet instrument remarquable.',
+    location: 'Cathédrale de Sion',
+    price: 'Entrée libre',
+    image: '/images/complementary/vesperales-card.webp',
+    featured: true
+  },
+  {
     id: 'dec-14-messe-oracantat',
     type: 'messe',
     date: { day: '14', month: 'DÉC' },
@@ -151,6 +196,36 @@ export const maitriseEvents = [
     price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
     featured: false
+  },
+  {
+    id: 'dec-17-rorate-3',
+    type: 'fas',
+    date: { day: '17', month: 'DÉC' },
+    time: '18h00',
+    title: 'Messe Rorate',
+    subtitle: 'Dans une atmosphère privilégiant la douceur de la lumière',
+    category: 'Festival d\'art sacré',
+    ensemble: 'École Maîtrisienne',
+    description: 'Messe de l\'Avent célébrée dans la tradition séculaire. Éclairage réduit pour préserver l\'ambiance propre aux Rorate. Nos jeunes chanteurs s\'exercent à l\'art du quatuor vocal.',
+    location: 'Cathédrale de Sion',
+    price: 'Entrée libre',
+    image: '/images/complementary/rorate-card.webp',
+    featured: true
+  },
+  {
+    id: 'dec-18-vesperale-2',
+    type: 'fas',
+    date: { day: '18', month: 'DÉC' },
+    time: '19h30',
+    title: 'Vespérale d\'orgue',
+    subtitle: 'Le roi des instruments',
+    category: 'Festival d\'art sacré',
+    ensemble: 'Edmond Voeffray, Organiste de la cathédrale',
+    description: 'Moment de méditation hors du temps autour de l\'orgue historique du XVIIIe siècle. Une quarantaine de minutes pour dévoiler les couleurs sonores de cet instrument remarquable.',
+    location: 'Cathédrale de Sion',
+    price: 'Entrée libre',
+    image: '/images/complementary/vesperales-card.webp',
+    featured: true
   },
   {
     id: 'dec-21-messe-ensemble',
@@ -254,6 +329,21 @@ export const maitriseEvents = [
     location: 'Cathédrale de Sion',
     price: 'Entrée libre',
     image: '/images/artistes/ecole-maitrisienne/ecole-1-card.webp',
+    featured: true
+  },
+  {
+    id: 'jan-02-vesperale-3',
+    type: 'fas',
+    date: { day: '02', month: 'JAN' },
+    time: '19h30',
+    title: 'Vespérale d\'orgue',
+    subtitle: 'Le roi des instruments',
+    category: 'Festival d\'art sacré',
+    ensemble: 'Catherine Gremaud Babel, Organiste adjointe',
+    description: 'Moment de méditation hors du temps autour de l\'orgue historique du XVIIIe siècle. Une quarantaine de minutes pour dévoiler les couleurs sonores de cet instrument remarquable.',
+    location: 'Cathédrale de Sion',
+    price: 'Entrée libre',
+    image: '/images/complementary/vesperales-card.webp',
     featured: true
   },
   {

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 interface EventCardProps {
@@ -10,6 +10,7 @@ interface EventCardProps {
   };
   time: string;
   title: string;
+  subtitle?: string;
   category: string;
   description: string;
   image: string;
@@ -26,6 +27,7 @@ const EventCard: React.FC<EventCardProps> = ({
   date,
   time,
   title,
+  subtitle,
   category,
   description,
   image,
@@ -37,6 +39,12 @@ const EventCard: React.FC<EventCardProps> = ({
   technicalInfo,
   ticketUrl
 }) => {
+  // État pour l'expansion (FAS uniquement)
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Détecter si c'est un événement FAS
+  const isFASEvent = category.toLowerCase().includes('festival') || category.toLowerCase().includes('fas');
+
   // Variables marquées comme utilisées pour éviter les warnings lint
   const _ctaText = ctaText;
   const _featured = featured;
@@ -152,9 +160,16 @@ const EventCard: React.FC<EventCardProps> = ({
       alert('Lien copié dans le presse-papier!');
     }
   };
+  // Toggle expansion pour FAS
+  const handleCardClick = () => {
+    if (isFASEvent) {
+      setIsExpanded(!isExpanded);
+    }
+  };
+
   return (
     <div
-      className="event-card"
+      className={`event-card ${isExpanded ? 'expanded' : ''}`}
       style={{
         position: 'relative',
         backgroundColor: 'var(--color-white)',
@@ -163,11 +178,12 @@ const EventCard: React.FC<EventCardProps> = ({
         overflow: 'hidden',
         transition: 'all 0.3s ease',
         minHeight: '200px', // Hauteur minimale, s'adapte au contenu
-        cursor: 'pointer',
+        cursor: isFASEvent ? 'pointer' : 'default',
         display: 'flex', // Layout horizontal
         flexDirection: 'row',
         marginBottom: '24px',
       }}
+      onClick={handleCardClick}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = 'translateY(-4px)';
         e.currentTarget.style.boxShadow = '0 8px 32px rgba(227, 50, 65, 0.15)';
@@ -287,25 +303,191 @@ const EventCard: React.FC<EventCardProps> = ({
             {title}
           </h3>
 
-          {/* Description - Limitée à 2 lignes max */}
+          {/* Sous-titre FAS (si disponible) */}
+          {subtitle && isFASEvent && (
+            <p style={{
+              fontFamily: 'var(--font-spectral)',
+              fontSize: '14px',
+              fontWeight: '500',
+              fontStyle: 'italic',
+              color: eventColors.borderColor,
+              margin: '0 0 6px 0',
+              opacity: 0.9,
+            }}>
+              {subtitle}
+            </p>
+          )}
+
+          {/* Description - Limitée à 2 lignes max (expandable pour FAS) */}
           <p style={{
             fontFamily: 'var(--font-outfit)',
-            fontSize: '12px', // Réduit de 13px à 12px
+            fontSize: '12px',
             fontWeight: '400',
             color: 'var(--color-gray)',
             lineHeight: 1.3,
             margin: '0',
             display: '-webkit-box',
-            WebkitLineClamp: 2,
+            WebkitLineClamp: isExpanded ? 'unset' : 2,
             WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
+            overflow: isExpanded ? 'visible' : 'hidden',
             textOverflow: 'ellipsis'
           }}>
             {description}
           </p>
 
-          {/* Programme musical - Affichage conditionnel et discret */}
-          {programme && (
+          {/* Indicateur "Voir plus" pour FAS */}
+          {isFASEvent && !isExpanded && (
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              marginTop: '8px',
+              color: eventColors.borderColor,
+              fontFamily: 'var(--font-outfit)',
+              fontSize: '12px',
+              fontWeight: '600',
+            }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+              Cliquez pour voir les détails
+            </div>
+          )}
+
+          {/* Section expandée FAS - Détails complets */}
+          {isFASEvent && isExpanded && (
+            <div style={{
+              marginTop: '16px',
+              padding: '16px',
+              backgroundColor: `${eventColors.borderColor}08`,
+              borderRadius: '8px',
+              border: `1px solid ${eventColors.borderColor}20`,
+            }}>
+              {/* Programme musical */}
+              {programme && (
+                <div style={{ marginBottom: '12px' }}>
+                  <div style={{
+                    fontFamily: 'var(--font-outfit)',
+                    fontSize: '11px',
+                    fontWeight: '700',
+                    color: eventColors.borderColor,
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    marginBottom: '6px',
+                  }}>
+                    Programme
+                  </div>
+                  <div style={{
+                    fontFamily: 'var(--font-spectral)',
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    color: 'var(--color-navy)',
+                    lineHeight: 1.5,
+                    fontStyle: 'italic',
+                  }}>
+                    {programme}
+                  </div>
+                </div>
+              )}
+
+              {/* Infos techniques */}
+              {technicalInfo && (
+                <div style={{ marginBottom: '12px' }}>
+                  <div style={{
+                    fontFamily: 'var(--font-outfit)',
+                    fontSize: '11px',
+                    fontWeight: '700',
+                    color: eventColors.borderColor,
+                    textTransform: 'uppercase',
+                    letterSpacing: '1px',
+                    marginBottom: '6px',
+                  }}>
+                    Informations
+                  </div>
+                  <div style={{
+                    fontFamily: 'var(--font-outfit)',
+                    fontSize: '13px',
+                    color: 'var(--color-gray)',
+                    lineHeight: 1.4,
+                  }}>
+                    {technicalInfo}
+                  </div>
+                </div>
+              )}
+
+              {/* Lieu et prix */}
+              <div style={{
+                display: 'flex',
+                gap: '24px',
+                flexWrap: 'wrap',
+                paddingTop: '12px',
+                borderTop: `1px solid ${eventColors.borderColor}15`,
+              }}>
+                <div>
+                  <div style={{
+                    fontFamily: 'var(--font-outfit)',
+                    fontSize: '10px',
+                    fontWeight: '600',
+                    color: eventColors.borderColor,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                    marginBottom: '2px',
+                  }}>
+                    Lieu
+                  </div>
+                  <div style={{
+                    fontFamily: 'var(--font-outfit)',
+                    fontSize: '13px',
+                    color: 'var(--color-navy)',
+                  }}>
+                    {location}
+                  </div>
+                </div>
+                <div>
+                  <div style={{
+                    fontFamily: 'var(--font-outfit)',
+                    fontSize: '10px',
+                    fontWeight: '600',
+                    color: eventColors.borderColor,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px',
+                    marginBottom: '2px',
+                  }}>
+                    Tarif
+                  </div>
+                  <div style={{
+                    fontFamily: 'var(--font-outfit)',
+                    fontSize: '13px',
+                    fontWeight: '600',
+                    color: 'var(--color-navy)',
+                  }}>
+                    {price}
+                  </div>
+                </div>
+              </div>
+
+              {/* Indicateur "Réduire" */}
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '6px',
+                marginTop: '12px',
+                color: eventColors.borderColor,
+                fontFamily: 'var(--font-outfit)',
+                fontSize: '12px',
+                fontWeight: '600',
+              }}>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 15l-6-6-6 6"/>
+                </svg>
+                Réduire
+              </div>
+            </div>
+          )}
+
+          {/* Programme musical compact - SEULEMENT pour non-FAS */}
+          {programme && !isFASEvent && (
             <div style={{
               marginTop: '8px',
               padding: '6px 8px',
@@ -315,7 +497,7 @@ const EventCard: React.FC<EventCardProps> = ({
             }}>
               <div style={{
                 fontFamily: 'var(--font-outfit)',
-                fontSize: 'clamp(9px, 2.5vw, 10px)', // Responsive font size
+                fontSize: 'clamp(9px, 2.5vw, 10px)',
                 fontWeight: '600',
                 color: eventColors.borderColor,
                 textTransform: 'uppercase',
@@ -326,19 +508,19 @@ const EventCard: React.FC<EventCardProps> = ({
               </div>
               <div style={{
                 fontFamily: 'var(--font-spectral)',
-                fontSize: 'clamp(10px, 2.8vw, 11px)', // Responsive font size
+                fontSize: 'clamp(10px, 2.8vw, 11px)',
                 fontWeight: '500',
                 color: 'var(--color-navy)',
                 lineHeight: 1.2,
                 fontStyle: 'italic',
-                wordBreak: 'break-word', // Mobile-friendly text wrapping
+                wordBreak: 'break-word',
               }}>
                 {programme}
               </div>
               {technicalInfo && (
                 <div style={{
                   fontFamily: 'var(--font-outfit)',
-                  fontSize: 'clamp(8px, 2.2vw, 9px)', // Responsive font size
+                  fontSize: 'clamp(8px, 2.2vw, 9px)',
                   color: 'var(--color-gray)',
                   marginTop: '2px',
                 }}>
@@ -363,6 +545,7 @@ const EventCard: React.FC<EventCardProps> = ({
               href={ticketUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -392,10 +575,10 @@ const EventCard: React.FC<EventCardProps> = ({
               Billetterie
             </a>
           )}
-          
+
           {/* CTA Calendrier */}
-          <button 
-            onClick={generateICS}
+          <button
+            onClick={(e) => { e.stopPropagation(); generateICS(); }}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -424,8 +607,8 @@ const EventCard: React.FC<EventCardProps> = ({
           </button>
           
           {/* CTA Partage */}
-          <button 
-            onClick={shareEvent}
+          <button
+            onClick={(e) => { e.stopPropagation(); shareEvent(); }}
             style={{
               display: 'inline-flex',
               alignItems: 'center',

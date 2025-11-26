@@ -131,84 +131,101 @@ export default function AgendaBilletterie() {
       backgroundColor: 'var(--color-white)',
       minHeight: '100vh',
     }}>
-      {/* Hero prestige cathédral */}
-      <section style={{
-        background: 'linear-gradient(180deg, #fafbfc 0%, #ffffff 100%)',
-        padding: '100px 0 70px',
+      {/* Hero prestige cathédral - Layout 2 colonnes desktop avec photo background */}
+      <section className="hero-section" style={{
+        backgroundImage: 'url(/images/hero-agenda/solistes-orchestre-desktop.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        padding: '120px 0 80px',
         position: 'relative',
-        borderBottom: '1px solid rgba(212, 165, 116, 0.15)',
+        minHeight: '500px',
       }}>
+        {/* Overlay sombre pour lisibilité */}
         <div style={{
-          maxWidth: '1100px',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'linear-gradient(135deg, rgba(26, 19, 64, 0.85) 0%, rgba(26, 19, 64, 0.7) 50%, rgba(26, 19, 64, 0.8) 100%)',
+          zIndex: 1,
+        }}></div>
+        <div style={{
+          maxWidth: '1200px',
           margin: '0 auto',
           padding: '0 var(--spacing-lg)',
+          position: 'relative',
+          zIndex: 2,
         }}>
-          {/* Ornement supérieur */}
-          <div style={{
-            textAlign: 'center',
-            marginBottom: '24px',
+          {/* Container 2 colonnes */}
+          <div className="hero-grid" style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '60px',
+            alignItems: 'center',
           }}>
-            <div style={{
-              display: 'inline-block',
-              width: '60px',
-              height: '1px',
-              background: 'linear-gradient(90deg, transparent, var(--color-gold), transparent)',
-              marginBottom: '24px',
-            }}></div>
-            <div style={{
-              fontFamily: 'var(--font-outfit)',
-              fontSize: '0.8rem',
-              fontWeight: '500',
-              letterSpacing: '2.5px',
-              textTransform: 'uppercase',
-              color: 'var(--color-gold)',
-              marginBottom: '8px',
-            }}>
-              Saison 2025-2026
+            {/* Colonne gauche - Titre et texte */}
+            <div className="hero-left">
+              {/* Ornement supérieur */}
+              <div style={{ marginBottom: '20px' }}>
+                <div style={{
+                  width: '60px',
+                  height: '1px',
+                  background: 'linear-gradient(90deg, var(--color-gold), transparent)',
+                  marginBottom: '20px',
+                }}></div>
+                <div style={{
+                  fontFamily: 'var(--font-outfit)',
+                  fontSize: '0.8rem',
+                  fontWeight: '500',
+                  letterSpacing: '2.5px',
+                  textTransform: 'uppercase',
+                  color: 'var(--color-gold)',
+                }}>
+                  Saison 2025-2026
+                </div>
+              </div>
+
+              {/* Titre majestueux */}
+              <h1 style={{
+                fontFamily: 'var(--font-spectral)',
+                fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
+                fontWeight: '400',
+                color: '#ffffff',
+                marginBottom: '20px',
+                letterSpacing: '0.5px',
+                lineHeight: '1.2',
+                textShadow: '0 2px 4px rgba(0,0,0,0.2)',
+              }}>
+                Agenda et billetterie
+              </h1>
+              <div style={{
+                width: '40px',
+                height: '2px',
+                background: 'var(--color-gold)',
+                marginBottom: '24px',
+              }}></div>
+              <p style={{
+                fontFamily: 'var(--font-outfit)',
+                fontSize: '1.1rem',
+                fontWeight: '300',
+                color: 'rgba(255, 255, 255, 0.9)',
+                lineHeight: '1.8',
+                maxWidth: '400px',
+              }}>
+                Messes solennelles · Concerts exceptionnels · Festival d'Art Sacré
+              </p>
             </div>
-          </div>
 
-          {/* Titre majestueux */}
-          <div style={{
-            textAlign: 'center',
-            marginBottom: '50px',
-          }}>
-            <h1 style={{
-              fontFamily: 'var(--font-spectral)',
-              fontSize: 'clamp(2.75rem, 5vw, 3.75rem)',
-              fontWeight: '400',
-              color: 'var(--color-navy)',
-              marginBottom: '20px',
-              letterSpacing: '0.5px',
-              lineHeight: '1.25',
+            {/* Colonne droite - Recherche, CTA, Filtres */}
+            <div className="hero-right" style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              borderRadius: '12px',
+              padding: '32px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
+              border: '1px solid rgba(212, 165, 116, 0.3)',
+              backdropFilter: 'blur(10px)',
             }}>
-              Agenda et billetterie
-            </h1>
-            <div style={{
-              width: '40px',
-              height: '2px',
-              background: 'var(--color-gold)',
-              margin: '0 auto 24px',
-            }}></div>
-            <p style={{
-              fontFamily: 'var(--font-outfit)',
-              fontSize: '1.05rem',
-              fontWeight: '300',
-              color: 'var(--color-navy)',
-              opacity: 0.75,
-              lineHeight: '1.8',
-              maxWidth: '560px',
-              margin: '0 auto',
-            }}>
-              Messes solennelles · Concerts exceptionnels · Festival d'Art Sacré
-            </p>
-          </div>
-
-          {/* Recherche et filtres raffinés */}
-          <div style={{
-            maxWidth: '820px',
-            margin: '0 auto',
-          }}>
             {/* Barre de recherche noble */}
             <div style={{
               position: 'relative',
@@ -405,7 +422,8 @@ export default function AgendaBilletterie() {
                 <option value="paid">Payant</option>
               </select>
             </div>
-          </div>
+            </div>{/* Fin hero-right */}
+          </div>{/* Fin hero-grid */}
         </div>
       </section>
 
@@ -479,7 +497,22 @@ export default function AgendaBilletterie() {
                         alignItems: 'center',
                         gap: '12px',
                       }}>
-                        <span style={{ fontSize: '1.5rem' }}>📅</span>
+                        <svg
+                          width="22"
+                          height="22"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          style={{ opacity: 0.9 }}
+                        >
+                          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                          <line x1="16" y1="2" x2="16" y2="6"/>
+                          <line x1="8" y1="2" x2="8" y2="6"/>
+                          <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
                         {monthNames[monthKey] || monthKey}
                       </h3>
                     </div>
@@ -496,6 +529,7 @@ export default function AgendaBilletterie() {
                           date={{ day: event.date.day, month: event.date.month }}
                           time={event.time}
                           title={event.title}
+                          subtitle={event.subtitle}
                           category={event.category}
                           description={event.description}
                           image={event.image}
@@ -624,84 +658,95 @@ export default function AgendaBilletterie() {
 
       {/* Styles responsive mobile - LESS IS MORE */}
       <style jsx>{`
-        @media (max-width: 768px) {
-          /* Hero section - COMPACT */
-          section:first-of-type {
-            padding: 60px 0 40px !important;
+        /* Hero Grid - 2 colonnes desktop, 1 colonne mobile */
+        :global(.hero-grid) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 60px;
+          align-items: center;
+        }
+
+        :global(.hero-right) {
+          background-color: rgba(255, 255, 255, 0.95);
+          border-radius: 12px;
+          padding: 32px;
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+          border: 1px solid rgba(212, 165, 116, 0.3);
+          backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 968px) {
+          /* Image mobile optimisée */
+          :global(.hero-section) {
+            background-image: url(/images/hero-agenda/solistes-orchestre-mobile.webp) !important;
+            min-height: auto !important;
+            padding: 100px 0 50px !important;
           }
 
-          /* Ornements - MASQUER */
-          section:first-of-type > div > div:first-child > div:first-child {
+          /* Hero grid - 1 colonne sur tablet/mobile */
+          :global(.hero-grid) {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+          }
+
+          :global(.hero-left) {
+            text-align: center;
+          }
+
+          /* Masquer ornement supérieur (ligne dorée + Saison) sur mobile */
+          :global(.hero-left > div:first-child) {
             display: none !important;
           }
 
-          /* Surtitre "Saison 2025-2026" */
-          section:first-of-type > div > div:first-child > div:nth-child(2) {
-            font-size: 0.7rem !important;
-            letter-spacing: 1.5px !important;
-            margin-bottom: 6px !important;
+          /* Masquer la barre dorée sous le titre sur mobile */
+          :global(.hero-left h1 + div) {
+            display: none !important;
+          }
+
+          :global(.hero-left p) {
+            margin: 0 auto;
+          }
+
+          :global(.hero-right) {
+            padding: 24px !important;
+          }
+        }
+
+        @media (max-width: 768px) {
+          /* Hero section - COMPACT */
+          :global(.hero-section) {
+            padding: 70px 0 40px !important;
+          }
+
+          :global(.hero-grid) {
+            gap: 30px !important;
           }
 
           /* Titre principal H1 */
-          section:first-of-type h1 {
+          :global(.hero-left h1) {
             font-size: 2rem !important;
             margin-bottom: 16px !important;
           }
 
-          /* Ligne dorée sous titre */
-          section:first-of-type h1 + div {
-            width: 30px !important;
-            margin-bottom: 16px !important;
-          }
-
           /* Sous-titre */
-          section:first-of-type p {
+          :global(.hero-left p) {
             font-size: 0.95rem !important;
             line-height: 1.6 !important;
-            max-width: 100% !important;
           }
 
-          /* Container filtres */
-          section:first-of-type > div > div:last-child {
-            max-width: 100% !important;
+          :global(.hero-right) {
+            padding: 20px !important;
+            border-radius: 8px !important;
           }
 
           /* Barre recherche */
-          section:first-of-type input {
+          :global(.hero-right input) {
             padding: 12px 45px 12px 16px !important;
             font-size: 0.9rem !important;
           }
 
-          /* Icône recherche */
-          section:first-of-type input + div svg {
-            width: 16px !important;
-            height: 16px !important;
-          }
-
-          /* CTA Billetterie - COMPACT */
-          section:first-of-type a[href*="booking-corner"] {
-            padding: 14px 32px !important;
-            font-size: 1rem !important;
-            margin-top: 24px !important;
-            margin-bottom: 24px !important;
-          }
-
-          /* Filtres - VERTICAL STACK */
-          section:first-of-type > div > div:last-child > div:last-child {
-            flex-direction: column !important;
-            gap: 10px !important;
-            align-items: stretch !important;
-          }
-
-          /* Selects filtres */
-          section:first-of-type select {
-            min-width: 100% !important;
-            padding: 10px 14px !important;
-            font-size: 0.85rem !important;
-          }
-
-          /* CTA Billetterie - PROMINENT (CORRIGÉ P2-14) */
-          section:first-of-type a[href*="booking-corner"] {
+          /* CTA Billetterie - PROMINENT */
+          :global(.hero-right a[href*="booking-corner"]) {
             padding: 16px 40px !important;
             font-size: 1.1rem !important;
             min-height: 48px;
@@ -734,26 +779,34 @@ export default function AgendaBilletterie() {
 
         @media (max-width: 640px) {
           /* Hero ultra-compact */
-          section:first-of-type {
-            padding: 40px 0 30px !important;
+          :global(.hero-section) {
+            padding: 60px 0 30px !important;
           }
 
-          section:first-of-type h1 {
+          :global(.hero-grid) {
+            gap: 24px !important;
+          }
+
+          :global(.hero-left h1) {
             font-size: 1.75rem !important;
           }
 
-          section:first-of-type p {
+          :global(.hero-left p) {
             font-size: 0.9rem !important;
           }
 
+          :global(.hero-right) {
+            padding: 16px !important;
+          }
+
           /* Barre recherche */
-          section:first-of-type input {
+          :global(.hero-right input) {
             padding: 10px 40px 10px 14px !important;
             font-size: 0.85rem !important;
           }
 
-          /* CTA Billetterie - TACTILE 48px (CORRIGÉ P2-14) */
-          section:first-of-type a[href*="booking-corner"] {
+          /* CTA Billetterie - TACTILE 48px */
+          :global(.hero-right a[href*="booking-corner"]) {
             padding: 14px 32px !important;
             font-size: 1rem !important;
             min-height: 48px;
@@ -761,12 +814,12 @@ export default function AgendaBilletterie() {
           }
 
           /* Selects */
-          section:first-of-type select {
+          :global(.hero-right select) {
             padding: 9px 12px !important;
             font-size: 0.8rem !important;
           }
 
-          /* Section événements - MINIMAL PADDING (CORRIGÉ P1-10) */
+          /* Section événements - MINIMAL PADDING */
           section:nth-of-type(2) {
             padding: 20px 0 !important;
           }
@@ -789,8 +842,9 @@ export default function AgendaBilletterie() {
             gap: 8px !important;
           }
 
-          :global(.month-header h3 span) {
-            font-size: 1.25rem !important;
+          :global(.month-header h3 svg) {
+            width: 18px !important;
+            height: 18px !important;
           }
         }
       `}</style>
