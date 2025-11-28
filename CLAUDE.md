@@ -1,6 +1,6 @@
 # 🎼 Site Maîtrise de la Cathédrale de Sion
 
-**Dernière mise à jour:** 26 novembre 2025
+**Dernière mise à jour:** 28 novembre 2025
 **Statut:** ✅ **SITE V1 EN PRODUCTION - ANTI-SPAM ACTIF**
 
 ---
@@ -687,6 +687,56 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 **Résultat :** Agenda enrichi + Hero premium + Événements FAS interactifs ✅
 
+### Session 11 (28 Nov 2025) - PDFs Vespérales + UX Polish FAS
+**Contexte :** Ajout programmes organistes téléchargeables + nettoyage UI mobile
+
+**Phase 1 - PDFs Programmes Vespérales :**
+- Intégration 3 PDFs programmes organistes :
+  - `vesperale-jean-david-waeber.pdf` (932 KB)
+  - `vesperale-edmond-voeffray.pdf` (944 KB)
+  - `vesperale-catherine-gremaud-babel.pdf` (804 KB)
+- Stockage : `/public/documents/vesperales/`
+- Ajout `programmeUrl` dans `complementaryEvents.json`
+- Bouton CTA "Programme" avec icône Download (lucide-react)
+- Ouvre dans nouvel onglet (preview native navigateur)
+
+**Phase 2 - Nettoyage UI icônes décoratives :**
+- Suppression icône Flame (header Rorate)
+- Suppression icône Music (header Vespérales)
+- Suppression icône Church (header Messes)
+- Suppression navigation dots (5 cases Hero FAS)
+- Suppression ligne décorative violette (section Artistes)
+- Alignement visuel amélioré des cards
+
+**Phase 3 - Optimisation mobile Messes :**
+- Version mobile compacte avec `<style jsx>` pattern
+- Desktop : Grid cards complètes (inchangé)
+- Mobile (<640px) : Liste verticale compacte
+  - Layout horizontal : Date | Contenu | Heure
+  - Cards hauteur auto (pas d'espace vide)
+  - Footer "Entrée libre" compact
+
+**Phase 4 - Ajustement Hero mobile :**
+- Padding bottom augmenté (40px → 80px)
+- Suppression min-height fixe
+- Hauteur auto adaptative au contenu
+
+**Fichiers modifiés :**
+- src/components/FASComplementaryEvents.tsx (bouton Programme + suppression icônes)
+- src/components/FASLiturgicalEvents.tsx (version mobile + suppression icône)
+- src/components/FASHeroCinematic.tsx (suppression dots + padding mobile)
+- src/components/FASArtistesSection.tsx (suppression ligne décorative)
+- src/data/complementaryEvents.json (URLs PDFs)
+
+**Fichiers créés :**
+- public/documents/vesperales/vesperale-jean-david-waeber.pdf
+- public/documents/vesperales/vesperale-edmond-voeffray.pdf
+- public/documents/vesperales/vesperale-catherine-gremaud-babel.pdf
+
+**Commit :** `6396043` - "feat(fas): PDFs programmes Vespérales + UX mobile optimisations"
+
+**Résultat :** Programmes téléchargeables + UI épurée + Mobile optimisé ✅
+
 ---
 
 ## 📞 CONTACTS PROJET
@@ -712,4 +762,4 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 ---
 
-**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 26 novembre 2025**
+**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 28 novembre 2025**
