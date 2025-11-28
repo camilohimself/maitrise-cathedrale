@@ -104,8 +104,7 @@ const FASConcertsList = () => {
           }
 
           /* Background effects - HIDE sur mobile */
-          section > div:first-child,
-          section > div:nth-child(2) {
+          .bg-effect {
             display: none !important;
           }
 
@@ -148,6 +147,7 @@ const FASConcertsList = () => {
           .concert-card {
             display: flex !important;
             flex-direction: column !important;
+            grid-template-columns: none !important;
             gap: 1rem !important;
             padding: 1.25rem !important;
             border-radius: 16px !important;
@@ -156,15 +156,18 @@ const FASConcertsList = () => {
           /* Image - ALWAYS FIRST ORDER (cohérence mobile) */
           .concert-card .concert-image {
             order: 1 !important;
+            width: 100% !important;
           }
 
           /* Force order 1 pour TOUTES les images (override inline styles) */
           section > div:last-child > div:last-child > div .concert-image {
             order: 1 !important;
+            width: 100% !important;
           }
 
           .concert-card .concert-image > div {
             height: 160px !important;
+            width: 100% !important;
             border-radius: 12px !important;
           }
 
@@ -307,14 +310,14 @@ const FASConcertsList = () => {
         position: 'relative'
       }}>
         {/* Background effects - tons dorés subtils */}
-      <div style={{
+      <div className="bg-effect" style={{
         position: 'absolute',
         inset: 0,
         background: 'radial-gradient(circle at 20% 80%, rgba(212, 165, 116, 0.12) 0%, transparent 60%)',
         zIndex: 1
       }} />
 
-      <div style={{
+      <div className="bg-effect" style={{
         position: 'absolute',
         inset: 0,
         background: 'radial-gradient(circle at 80% 20%, rgba(26, 19, 64, 0.05) 0%, transparent 60%)',

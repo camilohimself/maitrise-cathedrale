@@ -371,8 +371,9 @@ const FASHeroCinematic = () => {
         ›
       </button>
 
-      {/* Contrôle play/pause */}
+      {/* Contrôle play/pause - Desktop only */}
       <button
+        className="play-pause-btn"
         onClick={() => setIsPlaying(!isPlaying)}
         style={{
           position: 'absolute',
@@ -422,17 +423,16 @@ const FASHeroCinematic = () => {
             height: auto !important;
           }
 
+          /* Masquer bouton play/pause sur mobile */
+          .play-pause-btn {
+            display: none !important;
+          }
+
           /* Boutons navigation réduits (48px → 44px min Apple HIG) */
           button[style*="4rem"] {
             width: 2.75rem !important;
             height: 2.75rem !important;
             font-size: 1.1rem !important;
-          }
-
-          /* Dots navigation plus petits */
-          div[style*="bottom"][style*="3rem"] {
-            bottom: 1.5rem !important;
-            gap: 0.5rem !important;
           }
 
           /* Flèches repositionnées - iOS safe-area */
@@ -442,14 +442,6 @@ const FASHeroCinematic = () => {
 
           button[style*="right: 3rem"] {
             right: max(0.5rem, env(safe-area-inset-right)) !important;
-          }
-
-          /* Play/pause repositionné */
-          button[style*="top: 3rem"][style*="right: 3rem"] {
-            top: 1rem !important;
-            right: 1rem !important;
-            width: 2.75rem !important;
-            height: 2.75rem !important;
           }
         }
 
