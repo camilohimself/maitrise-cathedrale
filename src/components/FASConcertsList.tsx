@@ -171,6 +171,14 @@ const FASConcertsList = () => {
             border-radius: 12px !important;
           }
 
+          /* Cadrage spécifique pour certaines images mobile */
+          .concert-img-stile-antico {
+            object-position: center 400% !important;
+          }
+          .concert-img-ecole-maitrisienne {
+            object-position: center 240% !important;
+          }
+
           /* Contenu - ALWAYS SECOND ORDER (cohérence mobile) */
           .concert-card .concert-content {
             order: 2 !important;
@@ -425,6 +433,7 @@ Cinq rendez-vous d'exception
                     src={concert.cardImage}
                     alt={concert.title}
                     fill
+                    className={`concert-img concert-img-${concert.artistSlug}`}
                     style={{
                       objectFit: 'cover',
                       transition: 'transform 0.4s ease',
