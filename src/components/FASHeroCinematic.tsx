@@ -302,38 +302,6 @@ const FASHeroCinematic = () => {
         </div>
       </div>
 
-      {/* Navigation élégante */}
-      <div style={{
-        position: 'absolute',
-        bottom: '3rem',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        display: 'flex',
-        gap: '0.75rem',
-        zIndex: 10
-      }}>
-        {concerts.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            style={{
-              width: index === currentSlide ? '3rem' : '1rem',
-              height: '1rem',
-              borderRadius: '0.5rem',
-              border: 'none',
-              background: index === currentSlide
-                ? 'var(--color-gold)'
-                : 'rgba(255, 255, 255, 0.4)',
-              cursor: 'pointer',
-              transition: 'all 0.4s ease',
-              boxShadow: index === currentSlide
-                ? '0 4px 15px rgba(212, 165, 116, 0.4)'
-                : '0 2px 8px rgba(0, 0, 0, 0.1)'
-            }}
-          />
-        ))}
-      </div>
-
       {/* Navigation flèches cinématiques */}
       <button
         onClick={prevSlide}
@@ -487,8 +455,9 @@ const FASHeroCinematic = () => {
 
         @media (max-width: 640px) {
           section {
-            min-height: 70vh !important;
-            padding: 100px 1rem 60px !important;
+            min-height: auto !important;
+            height: auto !important;
+            padding: 100px 1rem 80px !important;
           }
 
           /* Boutons navigation min 44px (Apple HIG) */

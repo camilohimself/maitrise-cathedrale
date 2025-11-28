@@ -1,6 +1,6 @@
 'use client';
 
-import { Flame, Music } from 'lucide-react';
+import { Download } from 'lucide-react';
 import complementaryEvents from '@/data/complementaryEvents.json';
 
 const FASComplementaryEvents = () => {
@@ -69,45 +69,26 @@ const FASComplementaryEvents = () => {
               pointerEvents: 'none'
             }} />
 
-            {/* Icon */}
+            {/* Header Rorate */}
             <div style={{
-              marginBottom: 'clamp(20px, 4vw, 32px)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 'clamp(12px, 2vw, 16px)',
-              flexWrap: 'wrap'
+              marginBottom: 'clamp(20px, 4vw, 32px)'
             }}>
-              <div style={{
-                width: 'clamp(48px, 10vw, 56px)',
-                height: 'clamp(48px, 10vw, 56px)',
-                borderRadius: '16px',
-                background: 'linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 140, 0, 0.1))',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '1px solid rgba(255, 193, 7, 0.3)',
-                flexShrink: 0
+              <h3 style={{
+                fontSize: 'clamp(1.4rem, 4vw, 1.8rem)',
+                fontWeight: '600',
+                color: 'white',
+                fontFamily: 'var(--font-spectral), Georgia, serif',
+                marginBottom: '4px'
               }}>
-                <Flame size={28} color="#FFC107" strokeWidth={2} />
-              </div>
-              <div style={{ flex: '1 1 auto', minWidth: '200px' }}>
-                <h3 style={{
-                  fontSize: 'clamp(1.4rem, 4vw, 1.8rem)',
-                  fontWeight: '600',
-                  color: 'white',
-                  fontFamily: 'var(--font-spectral), Georgia, serif',
-                  marginBottom: '4px'
-                }}>
-                  {rorate.title}
-                </h3>
-                <p style={{
-                  fontSize: 'clamp(0.9rem, 2vw, 1rem)',
-                  color: '#FFC107',
-                  fontStyle: 'italic'
-                }}>
-                  {rorate.subtitle}
-                </p>
-              </div>
+                {rorate.title}
+              </h3>
+              <p style={{
+                fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                color: '#FFC107',
+                fontStyle: 'italic'
+              }}>
+                {rorate.subtitle}
+              </p>
             </div>
 
             {/* Description */}
@@ -252,45 +233,26 @@ const FASComplementaryEvents = () => {
               pointerEvents: 'none'
             }} />
 
-            {/* Icon */}
+            {/* Header Vespérales */}
             <div style={{
-              marginBottom: 'clamp(20px, 4vw, 32px)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 'clamp(12px, 2vw, 16px)',
-              flexWrap: 'wrap'
+              marginBottom: 'clamp(20px, 4vw, 32px)'
             }}>
-              <div style={{
-                width: 'clamp(48px, 10vw, 56px)',
-                height: 'clamp(48px, 10vw, 56px)',
-                borderRadius: '16px',
-                background: 'linear-gradient(135deg, rgba(212, 165, 116, 0.2), rgba(212, 165, 116, 0.1))',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                border: '1px solid rgba(212, 165, 116, 0.3)',
-                flexShrink: 0
+              <h3 style={{
+                fontSize: 'clamp(1.4rem, 4vw, 1.8rem)',
+                fontWeight: '600',
+                color: 'white',
+                fontFamily: 'var(--font-spectral), Georgia, serif',
+                marginBottom: '4px'
               }}>
-                <Music size={28} color="#D4A574" strokeWidth={2} />
-              </div>
-              <div style={{ flex: '1 1 auto', minWidth: '200px' }}>
-                <h3 style={{
-                  fontSize: 'clamp(1.4rem, 4vw, 1.8rem)',
-                  fontWeight: '600',
-                  color: 'white',
-                  fontFamily: 'var(--font-spectral), Georgia, serif',
-                  marginBottom: '4px'
-                }}>
-                  {vesperales.title}
-                </h3>
-                <p style={{
-                  fontSize: 'clamp(0.9rem, 2vw, 1rem)',
-                  color: '#D4A574',
-                  fontStyle: 'italic'
-                }}>
-                  {vesperales.subtitle}
-                </p>
-              </div>
+                {vesperales.title}
+              </h3>
+              <p style={{
+                fontSize: 'clamp(0.9rem, 2vw, 1rem)',
+                color: '#D4A574',
+                fontStyle: 'italic'
+              }}>
+                {vesperales.subtitle}
+              </p>
             </div>
 
             {/* Description */}
@@ -406,14 +368,56 @@ const FASComplementaryEvents = () => {
                     </div>
                   </div>
 
-                  {/* Heure */}
+                  {/* Heure + Programme */}
                   <div style={{
-                    fontSize: 'clamp(0.95rem, 2vw, 1rem)',
-                    fontWeight: '600',
-                    color: '#D4A574',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-end',
+                    gap: '8px',
                     flexShrink: 0
                   }}>
-                    {date.time}
+                    <div style={{
+                      fontSize: 'clamp(0.95rem, 2vw, 1rem)',
+                      fontWeight: '600',
+                      color: '#D4A574'
+                    }}>
+                      {date.time}
+                    </div>
+                    {date.programmeUrl && (
+                      <a
+                        href={date.programmeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '6px',
+                          padding: '8px 12px',
+                          background: 'rgba(212, 165, 116, 0.15)',
+                          border: '1px solid rgba(212, 165, 116, 0.4)',
+                          borderRadius: '8px',
+                          color: '#D4A574',
+                          fontSize: 'clamp(0.75rem, 1.5vw, 0.85rem)',
+                          fontWeight: '500',
+                          textDecoration: 'none',
+                          transition: 'all 0.2s ease',
+                          minHeight: '44px',
+                          minWidth: '44px',
+                          justifyContent: 'center'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = 'rgba(212, 165, 116, 0.25)';
+                          e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.6)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'rgba(212, 165, 116, 0.15)';
+                          e.currentTarget.style.borderColor = 'rgba(212, 165, 116, 0.4)';
+                        }}
+                      >
+                        <Download size={16} />
+                        <span className="programme-text">Programme</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}

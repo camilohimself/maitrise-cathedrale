@@ -41,13 +41,6 @@ const FASArtistesSection = () => {
           }}>
             Les Artistes du FAS 2025
           </h2>
-          
-          <div style={{
-            width: '60px',
-            height: '2px',
-            background: 'linear-gradient(90deg, #A78BFA, rgba(167, 139, 250, 0.3))',
-            margin: '0 auto'
-          }}></div>
         </div>
         
         <div className="cards-grid" style={{
