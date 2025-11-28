@@ -737,6 +737,39 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 **Résultat :** Programmes téléchargeables + UI épurée + Mobile optimisé ✅
 
+### Session 12 (28 Nov 2025) - Bugfix Mobile FAS
+**Contexte :** Corrections bugs mobile page /fas (bouton play, images concerts, cadrage photos)
+
+**Phase 1 - Hero mobile :**
+- Masquer bouton play/pause sur mobile (<768px)
+- Classe `.play-pause-btn` ajoutée pour ciblage CSS
+
+**Phase 2 - Images concerts FASConcertsList :**
+- **Problème :** Images ne s'affichaient pas sur mobile
+- **Cause :** Sélecteur CSS trop générique (`section > div:first-child`) cachait les images
+- **Solution :**
+  - Classe spécifique `.bg-effect` pour effets de background
+  - `width: 100%` forcé sur conteneurs images mobile
+  - `grid-template-columns: none` pour override du grid desktop
+
+**Phase 3 - Cadrage photos artistes mobile :**
+- **Problème :** Photos Stile Antico et École Maîtrisienne mal cadrées (voûtes visibles, pas les musiciens)
+- **Solution :**
+  - Classes dynamiques sur images : `concert-img-{artistSlug}`
+  - `object-position` personnalisé par artiste :
+    - Stile Antico : `center 400%` (focus musiciens)
+    - École Maîtrisienne : `center 240%` (focus personnes)
+
+**Fichiers modifiés :**
+- src/components/FASHeroCinematic.tsx (bouton play masqué mobile)
+- src/components/FASConcertsList.tsx (images mobile + cadrage spécifique)
+
+**Commits :**
+- `ebeb22e` - "fix(mobile): Hero play button + Concert images display"
+- `efacbbe` - "fix(mobile): Image cropping for Stile Antico & École Maîtrisienne"
+
+**Résultat :** Page /fas 100% fonctionnelle mobile ✅
+
 ---
 
 ## 📞 CONTACTS PROJET
