@@ -21,21 +21,8 @@ const FASConcertsList = () => {
     return labels[category] || category;
   };
 
+  // Concerts réorganisés - Prochains en premier, concert passé (30 nov) en dernier
   const concerts = [
-    {
-      id: 1,
-      title: "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
-      subtitle: "Le baroque au féminin : Chiara Margarita Cozzolani",
-      date: "30 novembre 2025",
-      time: "17:00",
-      category: "OUVERTURE",
-      description: "Concert d'ouverture avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique.",
-      cardImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
-      color: "#D2374C",
-      featured: true,
-      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1",
-      artistSlug: "ensemble-vocal"
-    },
     {
       id: 2,
       title: "Chœur Novantiqua",
@@ -91,6 +78,21 @@ const FASConcertsList = () => {
       ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS25-26%2f5",
       artistSlug: "stile-antico",
       hasConference: true
+    },
+    {
+      id: 1,
+      title: "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
+      subtitle: "Le baroque au féminin : Chiara Margarita Cozzolani",
+      date: "30 novembre 2025",
+      time: "17:00",
+      category: "OUVERTURE",
+      description: "Concert d'ouverture avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine, un des meilleurs ensembles actuels pour ce style de musique.",
+      cardImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
+      color: "#D2374C",
+      featured: true,
+      ticketUrl: "https://www.booking-corner.com/cmsscripts/bookOnline.aspx?lang=fr&eco=cathedralesion&page=BookCathedraleSionFAS+2025-26%2f1",
+      artistSlug: "ensemble-vocal",
+      isPast: true  // Concert passé
     }
   ];
 
@@ -358,7 +360,7 @@ const FASConcertsList = () => {
             letterSpacing: '0.1em',
             boxShadow: '0 8px 25px rgba(107, 70, 193, 0.3)'
           }}>
-🎼 Programme complet
+            Festival en cours
           </div>
 
           <h2 style={{
@@ -369,7 +371,7 @@ const FASConcertsList = () => {
             color: 'var(--color-navy)',
             lineHeight: '1.2'
           }}>
-Cinq rendez-vous d'exception
+            Les concerts du Festival
           </h2>
 
           <p style={{
@@ -380,7 +382,7 @@ Cinq rendez-vous d'exception
             color: 'var(--color-gray)',
             fontFamily: 'var(--font-outfit)'
           }}>
-            Du 30 novembre au 4 janvier 2026, cinq concerts exceptionnels de musique sacrée à la cathédrale de Sion.
+            Jusqu'au 4 janvier 2026, cinq concerts exceptionnels de musique sacrée à la cathédrale de Sion.
           </p>
         </div>
 
@@ -461,7 +463,24 @@ Cinq rendez-vous d'exception
                       fontWeight: '700',
                       textTransform: 'capitalize'
                     }}>
-                      ⭐ Exceptionnel
+                      Exceptionnel
+                    </div>
+                  )}
+                  {concert.isPast && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '1rem',
+                      left: '1rem',
+                      padding: '0.5rem 1rem',
+                      background: 'rgba(100, 100, 100, 0.9)',
+                      color: 'white',
+                      borderRadius: '20px',
+                      fontSize: '0.75rem',
+                      fontWeight: '600',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px'
+                    }}>
+                      Concert passé
                     </div>
                   )}
                 </div>
