@@ -1,22 +1,22 @@
 # 🎼 Site Maîtrise de la Cathédrale de Sion
 
-**Dernière mise à jour:** 28 novembre 2025
-**Statut:** ✅ **SITE V1 EN PRODUCTION - ANTI-SPAM ACTIF**
+**Dernière mise à jour:** 2 décembre 2025
+**Statut:** ✅ **SITE V1 EN PRODUCTION - FESTIVAL EN COURS**
 
 ---
 
 ## 🚨 PROCHAINE SESSION PRIORITAIRE
 
-### ✅ Formulaires 100% Opérationnels
+### ✅ Festival d'Art Sacré 20e édition EN COURS
 
-**STATUT:** Tous les formulaires sont fonctionnels et protégés
+**STATUT:** Festival démarré le 30 novembre 2025 - Site adapté
 
-**CE QUI EST FAIT:**
-- ✅ Resend configuré et opérationnel (domaine vérifié)
-- ✅ Code API routes 100% fonctionnel (Newsletter, Contact, Amis Maîtrise)
-- ✅ Templates HTML professionnels avec branding
-- ✅ Anti-spam Honeypot actif (double validation client + serveur)
-- ✅ Envois emails vers `info@maitrise-cathedrale.ch` + `musiquesacree@cath-vs.org`
+**CE QUI EST FAIT (Session 13 - 2 déc 2025):**
+- ✅ Suppression countdown (remplacé par badge "Festival en cours")
+- ✅ Cookie Banner compact (2 boutons, design épuré)
+- ✅ Nouvelle section FASProgrammeSection avec filtres interactifs
+- ✅ Page /fas alignée (concerts réorganisés, badge "Concert passé" sur 30 nov)
+- ✅ Formulaires 100% fonctionnels (Resend + Anti-spam Honeypot)
 
 **PROCHAINES PRIORITÉS:**
 1. YouTube contenus (remplacer placeholders vidéos)
@@ -770,6 +770,47 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 **Résultat :** Page /fas 100% fonctionnelle mobile ✅
 
+### Session 13 (2 Déc 2025) - Festival en cours + Refonte Homepage
+**Contexte :** Festival d'Art Sacré démarré le 30 novembre - Adaptation du site
+
+**Phase 1 - Suppression countdown + Cookie Banner compact :**
+- Suppression compteur 4 colonnes (jours/heures/min/sec) sur Hero homepage
+- Remplacement par badge "Festival en cours" (doré)
+- Texte modifié : "Jusqu'au 4 janvier 2026"
+- Cookie Banner : Design compact (2 boutons sur une ligne, texte réduit)
+
+**Phase 2 - Nouvelle section FASProgrammeSection (homepage) :**
+- Remplacement de FASHighlightSection + UpcomingEventsSectionOpera
+- Suppression redondance (2 sections montraient quasi les mêmes événements)
+- Filtres interactifs : Tout voir / Concerts / Vespérales / Rorate / Messes
+- Desktop : Cards horizontales avec images et badge date
+- Mobile : Cards compactes sans images (gain scroll)
+- Événements filtrés dynamiquement par date (> aujourd'hui)
+
+**Phase 3 - Alignement page /fas :**
+- Réorganisation concerts : Novantiqua (7 déc) en premier
+- Concert 30 nov déplacé en dernier avec badge gris "Concert passé"
+- Header : "Festival en cours" + "Les concerts du Festival"
+- Texte : "Jusqu'au 4 janvier 2026"
+
+**Fichiers créés :**
+- src/components/FASProgrammeSection.tsx (577 lignes)
+
+**Fichiers modifiés :**
+- src/app/page.tsx (homepage - nouvelle section)
+- src/components/HeroFestivalCountdown.tsx (badge "Festival en cours")
+- src/components/FASConcertsList.tsx (réorganisation + badge "Concert passé")
+- src/components/FASHeroCinematic.tsx (ordre concerts)
+- src/components/FASHighlightSection.tsx (textes)
+- src/components/cookies/CookieBanner.tsx (design compact)
+
+**Commits :**
+- `ca5b45b` - "feat(fas): Festival en cours - Suppression countdown + Cookie Banner compact"
+- `003fc88` - "feat(home): Section FAS unifiée avec filtres interactifs"
+- `f57806e` - "fix(fas): Alignement page /fas avec homepage - Festival en cours"
+
+**Résultat :** Site adapté au festival en cours, UX améliorée ✅
+
 ---
 
 ## 📞 CONTACTS PROJET
@@ -795,4 +836,4 @@ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))'
 
 ---
 
-**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 28 novembre 2025**
+**🤖 Ce fichier est mis à jour à chaque session. Dernière révision : 2 décembre 2025**
