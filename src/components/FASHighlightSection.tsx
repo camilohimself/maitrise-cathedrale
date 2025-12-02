@@ -5,21 +5,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const FASHighlightSection = () => {
+  // Prochains concerts mis en avant (concert d'ouverture 30 nov passé)
   const highlightEvents = [
     {
       id: 1,
-      title: "Ouverture du FAS",
-      subtitle: "Ensemble Vocal & Ensemble Barberine",
-      date: "30 novembre 2025",
+      title: "Chœur Novantiqua",
+      subtitle: "Ex tenebris lux : Gesualdo, Bruckner, Poulenc",
+      date: "7 décembre 2025",
       time: "17h00",
-      category: "OUVERTURE",
-      description: "Concert d'ouverture avec l'Ensemble Barberine dans des œuvres de Chiara Margarita Cozzolani, compositrice baroque injustement méconnue.",
-      image: "/images/artistes/ensemble-vocal-instrumental/evi-1-card.webp",
-      slug: "ensemble-vocal",
+      category: "PROCHAIN",
+      description: "Programme a cappella raffiné autour de Gesualdo, Bruckner et Poulenc, explorant le passage des ténèbres à la lumière.",
+      image: "/images/artistes/choeur-novantiqua/novantiqua-1-card.webp",
+      slug: "choeur-novantiqua",
       featured: true
     },
     {
-      id: 4,
+      id: 2,
       title: "Vivaldi - Gloria et Magnificat",
       subtitle: "Ensemble Ad Astra & Collectif baroque 7 Sed Unum",
       date: "26 décembre 2025",
@@ -31,7 +32,7 @@ const FASHighlightSection = () => {
       featured: true
     },
     {
-      id: 5,
+      id: 3,
       title: "Stile Antico",
       collaboration: "En collaboration avec les Riches Heures de Valère",
       subtitle: "Palestrina - Le Prince de la Musique",
@@ -111,10 +112,21 @@ const FASHighlightSection = () => {
             margin: '0 auto',
             lineHeight: 1.6,
           }}>
-            Du 30 novembre 2025 au 4 janvier 2026
+            <span style={{
+              display: 'inline-block',
+              padding: '6px 16px',
+              backgroundColor: 'rgba(107, 70, 193, 0.1)',
+              borderRadius: '20px',
+              color: 'var(--color-purple)',
+              fontWeight: '600',
+              fontSize: '1rem',
+              marginBottom: '0.5rem'
+            }}>
+              Festival en cours
+            </span>
             <br />
             <span style={{ color: 'var(--color-gold)', fontWeight: '500' }}>
-              Deux décennies d'excellence artistique et de beauté
+              Jusqu'au 4 janvier 2026
             </span>
           </p>
         </div>

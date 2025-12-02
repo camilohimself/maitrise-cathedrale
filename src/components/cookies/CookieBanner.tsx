@@ -20,9 +20,10 @@ const CookieBanner = () => {
 
   return (
     <>
-      {/* Cookie Banner */}
+      {/* Cookie Banner - Compact */}
       {showBanner && (
         <div
+          className="cookie-banner"
           style={{
             position: 'fixed',
             bottom: 0,
@@ -38,126 +39,77 @@ const CookieBanner = () => {
           <div style={{
             maxWidth: '1200px',
             margin: '0 auto',
-            padding: '1.5rem 1.5rem',
+            padding: '1rem 1.25rem',
           }}>
-            <div style={{
+            <div className="cookie-content" style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              gap: '2rem',
+              gap: '1.5rem',
               flexWrap: 'wrap'
             }}>
-              <div style={{ flex: '1 1 300px' }}>
-                <p style={{
-                  color: 'white',
-                  fontSize: '0.95rem',
-                  lineHeight: '1.6',
-                  fontWeight: '300',
-                  margin: 0
-                }}>
-                  Nous utilisons des cookies pour vous offrir la meilleure expérience possible sur notre site Internet.
-                  <br />
-                  Vous pouvez en savoir plus sur les cookies que nous utilisons ou les désactiver dans{' '}
-                  <span
-                    onClick={handleInfoClick}
-                    style={{
-                      color: '#D4A574',
-                      textDecoration: 'underline',
-                      cursor: 'pointer',
-                      fontWeight: '400'
-                    }}
-                  >
-                    les réglages
-                  </span>.
-                </p>
-              </div>
+              <p className="cookie-text" style={{
+                color: 'white',
+                fontSize: '0.9rem',
+                lineHeight: '1.5',
+                fontWeight: '300',
+                margin: 0,
+                flex: '1 1 280px'
+              }}>
+                Nous utilisons des cookies pour ameliorer votre experience.{' '}
+                <span
+                  onClick={handleInfoClick}
+                  style={{
+                    color: '#D4A574',
+                    textDecoration: 'underline',
+                    cursor: 'pointer',
+                    fontWeight: '400'
+                  }}
+                >
+                  En savoir plus
+                </span>
+              </p>
 
-              <div style={{
+              <div className="cookie-buttons" style={{
                 display: 'flex',
-                gap: '0.75rem',
+                gap: '0.5rem',
                 alignItems: 'center',
-                flexWrap: 'wrap'
+                flexWrap: 'nowrap'
               }}>
                 <button
                   onClick={acceptAll}
                   style={{
-                    padding: '0.625rem 1.5rem',
+                    padding: '0.5rem 1.25rem',
                     background: '#D4A574',
                     color: '#1a1340',
-                    fontSize: '0.875rem',
+                    fontSize: '0.8rem',
                     fontWeight: '600',
                     borderRadius: '6px',
                     border: 'none',
                     cursor: 'pointer',
                     transition: 'all 0.2s ease',
-                    boxShadow: '0 2px 8px rgba(212, 165, 116, 0.3)'
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.background = '#e5b685'
-                    e.currentTarget.style.transform = 'translateY(-1px)'
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(212, 165, 116, 0.4)'
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.background = '#D4A574'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                    e.currentTarget.style.boxShadow = '0 2px 8px rgba(212, 165, 116, 0.3)'
+                    whiteSpace: 'nowrap'
                   }}
                 >
                   Accepter
                 </button>
 
                 <button
-                  onClick={handleInfoClick}
-                  style={{
-                    padding: '0.625rem 1.5rem',
-                    background: 'white',
-                    color: '#1a1340',
-                    fontSize: '0.875rem',
-                    fontWeight: '600',
-                    borderRadius: '6px',
-                    border: 'none',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s ease',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.5rem'
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.background = '#f5f5f5'
-                    e.currentTarget.style.transform = 'translateY(-1px)'
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.background = 'white'
-                    e.currentTarget.style.transform = 'translateY(0)'
-                  }}
-                >
-                  <span style={{ fontSize: '1.1rem' }}>🎼</span>
-                  En savoir plus
-                </button>
-
-                <button
                   onClick={acceptEssential}
                   style={{
-                    padding: '0.625rem 1.5rem',
+                    padding: '0.5rem 1rem',
                     background: 'transparent',
-                    color: '#D4A574',
-                    fontSize: '0.875rem',
-                    fontWeight: '600',
+                    color: 'rgba(255,255,255,0.7)',
+                    fontSize: '0.8rem',
+                    fontWeight: '500',
                     borderRadius: '6px',
-                    border: '1px solid #D4A574',
+                    border: '1px solid rgba(255,255,255,0.3)',
                     cursor: 'pointer',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.background = 'rgba(212, 165, 116, 0.1)'
-                    e.currentTarget.style.transform = 'translateY(-1px)'
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.background = 'transparent'
-                    e.currentTarget.style.transform = 'translateY(0)'
+                    transition: 'all 0.2s ease',
+                    whiteSpace: 'nowrap'
                   }}
                 >
-                  Essentiels uniquement
+                  Refuser
                 </button>
               </div>
             </div>
@@ -343,111 +295,46 @@ const CookieBanner = () => {
           }
         }
 
-        /* MOBILE RESPONSIVE - Banner principal */
-        @media (max-width: 768px) {
-          /* Banner principal - Compact */
-          div[style*="padding: 1.5rem"] {
-            padding: 1rem !important;
+        /* MOBILE RESPONSIVE - Banner compact */
+        @media (max-width: 640px) {
+          .cookie-banner {
+            padding-bottom: env(safe-area-inset-bottom) !important;
           }
 
-          div[style*="flex-wrap: wrap"] {
-            flex-direction: column !important;
-            align-items: stretch !important;
-            gap: 1rem !important;
-          }
-
-          /* Texte banner - Plus compact */
-          div[style*="flex: 1 1 300px"] p {
-            font-size: 0.85rem !important;
-            line-height: 1.5 !important;
-          }
-
-          /* Boutons banner - Stack vertical + tactiles */
-          div[style*="gap: 0.75rem"] {
+          .cookie-content {
             flex-direction: column !important;
             gap: 0.75rem !important;
+            align-items: stretch !important;
           }
 
-          div[style*="gap: 0.75rem"] button {
-            width: 100% !important;
-            padding: 0.875rem 1.5rem !important;
-            min-height: 48px;
-            font-size: 0.95rem !important;
-          }
-
-          /* POPUP INFO - Responsive critique */
-          div[style*="maxWidth: 500px"] {
-            max-width: calc(100vw - 2rem) !important;
-            padding: 1.5rem !important;
-            margin: 0 1rem;
-          }
-
-          /* Titre popup - Plus compact */
-          div[style*="maxWidth: 500px"] h2 {
-            font-size: 1.4rem !important;
-            flex-direction: column !important;
-            gap: 0.5rem !important;
-          }
-
-          div[style*="maxWidth: 500px"] h2 span {
-            font-size: 1.5rem !important;
-          }
-
-          /* Description popup - Plus compact */
-          div[style*="maxWidth: 500px"] p {
+          .cookie-text {
             font-size: 0.85rem !important;
+            text-align: center !important;
           }
 
-          /* Section cookies - Plus compact */
-          div[style*="padding: 1rem"] {
-            padding: 0.875rem !important;
+          .cookie-buttons {
+            justify-content: center !important;
+            width: 100% !important;
           }
 
-          div[style*="padding: 1rem"] h3 {
-            font-size: 1rem !important;
-            margin-bottom: 0.5rem !important;
-          }
-
-          div[style*="padding: 1rem"] ul {
-            font-size: 0.8rem !important;
-          }
-
-          div[style*="padding: 1rem"] ul li {
-            margin-bottom: 0.4rem !important;
-            padding-left: 1.25rem !important;
-          }
-
-          /* Section LPD - Plus compact */
-          div[style*="background: #f8f8f8"] {
-            padding: 0.875rem !important;
-          }
-
-          div[style*="background: #f8f8f8"] p {
-            font-size: 0.8rem !important;
-            line-height: 1.5 !important;
-          }
-
-          /* Bouton final popup - Tactile */
-          div[style*="maxWidth: 500px"] button {
-            padding: 1rem !important;
-            font-size: 0.95rem !important;
-            min-height: 48px;
+          .cookie-buttons button {
+            flex: 1 !important;
+            min-height: 44px !important;
+            font-size: 0.85rem !important;
           }
         }
 
-        /* EXTRA SMALL MOBILE */
-        @media (max-width: 375px) {
-          div[style*="padding: 1rem"] {
-            padding: 0.75rem !important;
+        /* POPUP INFO - Responsive */
+        @media (max-width: 640px) {
+          div[style*="maxWidth: '500px'"] {
+            max-width: calc(100vw - 2rem) !important;
+            padding: 1.5rem !important;
+            max-height: 85vh !important;
+            overflow-y: auto !important;
           }
 
-          div[style*="maxWidth: 500px"] {
-            padding: 1.25rem !important;
-            margin: 0 0.75rem;
-          }
-
-          div[style*="maxWidth: 500px"] h2 {
-            font-size: 1.25rem !important;
+          div[style*="maxWidth: '500px'"] h2 {
+            font-size: 1.3rem !important;
           }
         }
       `}</style>

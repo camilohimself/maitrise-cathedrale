@@ -20,34 +20,11 @@ const FASHeroCinematic = () => {
     return labels[category] || category;
   };
 
-  // Vrais concerts FAS avec style cinématique
+  // Concerts FAS - Ordre chronologique (prochains concerts en premier)
+  // Note: Concert d'ouverture (30 nov) passé - réorganisé pour mettre les prochains en avant
   const concerts = [
     {
       id: 1,
-      title: "Stile Antico",
-      collaboration: "En collaboration avec les Riches Heures de Valère",
-      subtitle: "Palestrina - Le Prince de la Musique",
-      date: "4 janvier 2026",
-      time: "17:00",
-      category: "PRESTIGE",
-      description: "Concert exceptionnel du prestigieux ensemble britannique dans un programme consacré à Giovanni Pierluigi da Palestrina.",
-      heroImage: "/images/artistes/stile-antico/stile-antico-1-hero.webp",
-      color: "#D4AF37",
-      prestige: true
-    },
-    {
-      id: 2,
-      title: "Ensemble Vocal de la Maîtrise & Ensemble Barberine",
-      subtitle: "Le baroque au féminin : Chiara Margarita Cozzolani",
-      date: "30 novembre 2025",
-      time: "17:00",
-      category: "OUVERTURE",
-      description: "Concert d'ouverture avec l'Ensemble Vocal de la Maîtrise et l'Ensemble Barberine.",
-      heroImage: "/images/artistes/ensemble-vocal-instrumental/evi-1-hero.webp",
-      color: "#D2374C"
-    },
-    {
-      id: 3,
       title: "Chœur Novantiqua",
       subtitle: "Ex tenebris lux : Gesualdo, Bruckner, Poulenc",
       date: "7 décembre 2025",
@@ -58,7 +35,7 @@ const FASHeroCinematic = () => {
       color: "#8B7BB8"
     },
     {
-      id: 4,
+      id: 2,
       title: "École Maîtrisienne & Chœur des collèges",
       subtitle: "Au ciel et sur la terre : les voix de la jeunesse",
       date: "21 décembre 2025",
@@ -69,7 +46,7 @@ const FASHeroCinematic = () => {
       color: "#FF6B9D"
     },
     {
-      id: 5,
+      id: 3,
       title: "Ensemble Ad Astra & Collectif 7 Sed Unum",
       subtitle: "Vivaldi ou Noël à Venise",
       date: "26 décembre 2025",
@@ -78,6 +55,19 @@ const FASHeroCinematic = () => {
       description: "Les célèbres Gloria et Magnificat de Vivaldi dans leurs versions originales.",
       heroImage: "/images/artistes/ensemble-ad-astra/ad-astra-1-hero.webp",
       color: "#D2374C"
+    },
+    {
+      id: 4,
+      title: "Stile Antico",
+      collaboration: "En collaboration avec les Riches Heures de Valère",
+      subtitle: "Palestrina - Le Prince de la Musique",
+      date: "4 janvier 2026",
+      time: "17:00",
+      category: "PRESTIGE",
+      description: "Concert exceptionnel du prestigieux ensemble britannique dans un programme consacré à Giovanni Pierluigi da Palestrina.",
+      heroImage: "/images/artistes/stile-antico/stile-antico-1-hero.webp",
+      color: "#D4AF37",
+      prestige: true
     }
   ];
 

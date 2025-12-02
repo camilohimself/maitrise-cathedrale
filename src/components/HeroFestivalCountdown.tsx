@@ -4,22 +4,14 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 /**
- * HERO FESTIVAL COUNTDOWN - Version Opéra Style
+ * HERO FESTIVAL EN COURS - Version Opéra Style
  * Desktop: Layout horizontal luxe
  * Mobile: Layout vertical native, pense mobile-first
+ *
+ * Mise à jour: Festival démarré le 30 nov 2025 - Plus de countdown
  */
 
-const FESTIVAL_START = new Date('2025-11-30T17:00:00');
-
-interface CountdownValues {
-  days: number;
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
 const HeroFestivalCountdown = () => {
-  const [countdown, setCountdown] = useState<CountdownValues>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -36,25 +28,6 @@ const HeroFestivalCountdown = () => {
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Countdown logic
-  useEffect(() => {
-    const updateCountdown = () => {
-      const now = new Date();
-      const diff = FESTIVAL_START.getTime() - now.getTime();
-      if (diff > 0) {
-        setCountdown({
-          days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((diff % (1000 * 60)) / 1000),
-        });
-      }
-    };
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-    return () => clearInterval(interval);
   }, []);
 
   // Image carousel
@@ -160,63 +133,36 @@ const HeroFestivalCountdown = () => {
             Cathedrale de Sion
           </p>
 
+          {/* Badge Festival en cours */}
+          <div style={{
+            display: 'inline-block',
+            padding: '8px 20px',
+            backgroundColor: 'rgba(212, 165, 116, 0.15)',
+            border: '1px solid rgba(212, 165, 116, 0.4)',
+            borderRadius: '25px',
+            marginBottom: '20px',
+          }}>
+            <span style={{
+              fontFamily: 'var(--font-outfit)',
+              fontSize: '0.75rem',
+              fontWeight: '600',
+              color: '#D4A574',
+              textTransform: 'uppercase',
+              letterSpacing: '1.5px',
+            }}>
+              Festival en cours
+            </span>
+          </div>
+
           {/* Dates */}
           <p style={{
             fontFamily: 'var(--font-outfit)',
-            fontSize: '0.8rem',
-            color: 'rgba(255,255,255,0.5)',
-            marginBottom: '20px',
-          }}>
-            30 novembre 2025 - 4 janvier 2026
-          </p>
-
-          {/* Countdown - 4 colonnes taille fixe */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 65px)',
-            gap: '10px',
+            fontSize: '0.85rem',
+            color: 'rgba(255,255,255,0.7)',
             marginBottom: '24px',
-            justifyContent: 'center',
           }}>
-            {[
-              { value: countdown.days, label: 'Jours' },
-              { value: countdown.hours, label: 'Heures' },
-              { value: countdown.minutes, label: 'Min' },
-              { value: countdown.seconds, label: 'Sec' },
-            ].map((item) => (
-              <div key={item.label} style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '65px',
-                height: '70px',
-                backgroundColor: 'rgba(255,255,255,0.05)',
-                borderRadius: '10px',
-                border: '1px solid rgba(255,255,255,0.08)',
-              }}>
-                <span style={{
-                  fontFamily: 'var(--font-spectral)',
-                  fontSize: '1.5rem',
-                  fontWeight: '600',
-                  color: '#FFFFFF',
-                  lineHeight: 1,
-                }}>
-                  {String(item.value).padStart(2, '0')}
-                </span>
-                <span style={{
-                  fontFamily: 'var(--font-outfit)',
-                  fontSize: '0.55rem',
-                  color: 'rgba(255,255,255,0.4)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.5px',
-                  marginTop: '6px',
-                }}>
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
+            Jusqu'au 4 janvier 2026
+          </p>
 
           {/* CTAs cote a cote comme Opera */}
           <div style={{
@@ -336,7 +282,7 @@ const HeroFestivalCountdown = () => {
         width: '100%',
       }}>
         {/* Logo */}
-        <div style={{ marginBottom: '0.5rem', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}>
           <Image
             src="/images/fas-logo-white.png"
             alt="20e Festival d'Art Sacre"
@@ -356,54 +302,31 @@ const HeroFestivalCountdown = () => {
           fontSize: 'clamp(1.5rem, 3vw, 2.2rem)',
           fontWeight: '400',
           color: '#D4A574',
-          marginBottom: '2.5rem',
+          marginBottom: '2rem',
           letterSpacing: '0.05em',
         }}>
           Cathedrale de Sion
         </p>
 
-        {/* Countdown */}
+        {/* Badge Festival en cours */}
         <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: 'clamp(1rem, 4vw, 3rem)',
-          marginBottom: '3rem',
+          display: 'inline-block',
+          padding: '12px 32px',
+          backgroundColor: 'rgba(212, 165, 116, 0.15)',
+          border: '2px solid rgba(212, 165, 116, 0.4)',
+          borderRadius: '50px',
+          marginBottom: '2rem',
         }}>
-          {[
-            { value: countdown.days, label: 'Jours' },
-            { value: countdown.hours, label: 'Heures' },
-            { value: countdown.minutes, label: 'Minutes' },
-            { value: countdown.seconds, label: 'Secondes' },
-          ].map((item) => (
-            <div key={item.label} style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}>
-              <div style={{
-                fontFamily: 'var(--font-spectral)',
-                fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
-                fontWeight: '700',
-                color: '#FFFFFF',
-                lineHeight: 1,
-                minWidth: '80px',
-                textShadow: '0 0 30px rgba(212, 165, 116, 0.3)',
-              }}>
-                {String(item.value).padStart(2, '0')}
-              </div>
-              <div style={{
-                fontFamily: 'var(--font-outfit)',
-                fontSize: 'clamp(0.7rem, 1.5vw, 0.9rem)',
-                fontWeight: '400',
-                color: 'rgba(255, 255, 255, 0.6)',
-                textTransform: 'uppercase',
-                letterSpacing: '2px',
-                marginTop: '8px',
-              }}>
-                {item.label}
-              </div>
-            </div>
-          ))}
+          <span style={{
+            fontFamily: 'var(--font-outfit)',
+            fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)',
+            fontWeight: '600',
+            color: '#D4A574',
+            textTransform: 'uppercase',
+            letterSpacing: '3px',
+          }}>
+            Festival en cours
+          </span>
         </div>
 
         <p style={{
@@ -414,7 +337,7 @@ const HeroFestivalCountdown = () => {
           marginBottom: '2.5rem',
           letterSpacing: '0.5px',
         }}>
-          30 novembre 2025 - 4 janvier 2026
+          Jusqu'au 4 janvier 2026
         </p>
 
         {/* CTAs */}
