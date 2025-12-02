@@ -1,6 +1,5 @@
 import HeroFestivalCountdown from '@/components/HeroFestivalCountdown';
-import FASHighlightSection from '@/components/FASHighlightSection';
-import UpcomingEventsSectionOpera from '@/components/UpcomingEventsSectionOpera';
+import FASProgrammeSection from '@/components/FASProgrammeSection';
 import MaitriseAboutCondensed from '@/components/MaitriseAboutCondensed';
 import NewsletterSupportCombined from '@/components/NewsletterSupportCombined';
 
@@ -13,8 +12,7 @@ export default function Home() {
   return (
     <>
       <HeroFestivalCountdown />
-      <FASHighlightSection />
-      <UpcomingEventsSectionOpera />
+      <FASProgrammeSection />
       <MaitriseAboutCondensed />
       <NewsletterSupportCombined />
     </>
