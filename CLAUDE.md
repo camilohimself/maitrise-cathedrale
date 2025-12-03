@@ -11,6 +11,14 @@
 
 **STATUT:** Festival démarré le 30 novembre 2025 - Site adapté
 
+**CE QUI EST FAIT (Session 14 - 2 déc 2025 soir):**
+- ✅ Publication Facebook Messe Rorate rédigée (texte poétique + FAS chapeau)
+- ✅ Journal publications mis à jour (TRACKING-PUBLICATIONS-FAS-2025.md → 10/50 posts)
+- ✅ Mastering audio concert FAS (EV-EB-FAS2025-MASTER.mp3)
+  - Source : WAV 24-bit 48kHz stéréo (1.4GB) → MP3 320kbps (189MB)
+  - Traitement : Highpass 60Hz + Lowpass 16kHz + EQ voix chorales + Compression + Loudnorm -16 LUFS
+  - Prêt pour validation chef de chœur puis upload SoundCloud
+
 **CE QUI EST FAIT (Session 13 - 2 déc 2025):**
 - ✅ Suppression countdown (remplacé par badge "Festival en cours")
 - ✅ Cookie Banner compact (2 boutons, design épuré)
@@ -19,9 +27,10 @@
 - ✅ Formulaires 100% fonctionnels (Resend + Anti-spam Honeypot)
 
 **PROCHAINES PRIORITÉS:**
-1. YouTube contenus (remplacer placeholders vidéos)
-2. Multilingue FR/EN/DE (si client confirme besoin)
-3. Optimisations GA4 avancées (scroll tracking, etc.)
+1. SoundCloud : Upload audio FAS après validation chef de chœur
+2. YouTube contenus (remplacer placeholders vidéos)
+3. Multilingue FR/EN/DE (si client confirme besoin)
+4. Optimisations GA4 avancées (scroll tracking, etc.)
 
 ---
 
