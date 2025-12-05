@@ -41,7 +41,7 @@ const FASProgrammeSection = () => {
     { key: 'tous', label: 'Tout voir', color: '#1a1340' },
     { key: 'concert', label: 'Concerts', color: '#6B46C1' },
     { key: 'vesperale', label: 'Vespérales', color: '#D4A574' },
-    { key: 'rorate', label: 'Rorate', color: '#E33241' },
+    { key: 'rorate', label: 'Rorate', color: '#722F37' },
     { key: 'messe', label: 'Messes', color: '#1a1340' },
   ];
 
@@ -107,7 +107,7 @@ const FASProgrammeSection = () => {
 
   // Obtenir le type d'événement pour le badge
   const getEventType = (event: EventType): { label: string; color: string } => {
-    if (event.title.includes('Rorate')) return { label: 'Rorate', color: '#E33241' };
+    if (event.title.includes('Rorate')) return { label: 'Rorate', color: '#722F37' };
     if (event.title.includes('Vespérale')) return { label: 'Vespérale', color: '#D4A574' };
     if (event.category?.includes('Messe')) return { label: 'Messe', color: '#1a1340' };
     return { label: 'Concert', color: '#6B46C1' };
