@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 /**
@@ -9,11 +9,14 @@ import Image from 'next/image';
  * Mobile: Layout vertical native, pense mobile-first
  *
  * Mise à jour: Festival démarré le 30 nov 2025 - Plus de countdown
+ * Performance: Debounced resize + prefers-reduced-motion support
  */
 
 const HeroFestivalCountdown = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isAutoplayEnabled, setIsAutoplayEnabled] = useState(true);
+  const resizeTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const heroImages = [
     '/images/artistes/stile-antico-1-hero.webp',
@@ -22,21 +25,45 @@ const HeroFestivalCountdown = () => {
     '/images/hero-photo.webp',
   ];
 
-  // Detect mobile
+  // Detect mobile with debounced resize
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+
+    const handleResize = () => {
+      if (resizeTimeout.current) clearTimeout(resizeTimeout.current);
+      resizeTimeout.current = setTimeout(checkMobile, 150);
+    };
+
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (resizeTimeout.current) clearTimeout(resizeTimeout.current);
+    };
   }, []);
 
-  // Image carousel
+  // Respect prefers-reduced-motion
   useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsAutoplayEnabled(!mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsAutoplayEnabled(!e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  // Image carousel (respects reduced motion preference)
+  useEffect(() => {
+    if (!isAutoplayEnabled) return;
+
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
     }, 6000);
     return () => clearInterval(interval);
-  }, [heroImages.length]);
+  }, [heroImages.length, isAutoplayEnabled]);
 
   // ============ VERSION MOBILE - Style Opera de Paris ============
   if (isMobile) {

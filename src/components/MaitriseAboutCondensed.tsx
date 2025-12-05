@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -8,16 +8,27 @@ import Link from 'next/link';
  * MAITRISE ABOUT CONDENSED - Style Opera de Paris
  * Layout: Image gauche | Contenu droite avec 2x2 grid highlights
  * Mobile: Simplifie - pas de stats, juste CTA
+ * Performance: Debounced resize listener
  */
 
 const MaitriseAboutCondensed = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const resizeTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+
+    const handleResize = () => {
+      if (resizeTimeout.current) clearTimeout(resizeTimeout.current);
+      resizeTimeout.current = setTimeout(checkMobile, 150);
+    };
+
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (resizeTimeout.current) clearTimeout(resizeTimeout.current);
+    };
   }, []);
 
   const highlights = [

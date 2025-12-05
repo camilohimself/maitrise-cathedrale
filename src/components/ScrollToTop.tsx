@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 /**
  * ScrollToTop - Variante "Souffle Ascendant"
@@ -9,25 +9,37 @@ import React, { useState, useEffect } from 'react';
  * - Animation de respiration douce (comme une bougie)
  * - Simple chevron doré sans pourcentage
  * - Design adapté à l'univers musique sacrée
+ * - RAF throttle pour performance optimale
  *
  * Design adapté à l'univers Maîtrise de la Cathédrale de Sion
  */
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const rafId = useRef<number>(0);
+  const lastVisible = useRef(false);
 
   useEffect(() => {
     // Active le smooth scroll global
     document.documentElement.style.scrollBehavior = 'smooth';
 
     const handleScroll = () => {
-      setIsVisible(window.pageYOffset > 300);
+      cancelAnimationFrame(rafId.current);
+      rafId.current = requestAnimationFrame(() => {
+        const visible = window.pageYOffset > 300;
+        // Only update state if value changed
+        if (visible !== lastVisible.current) {
+          lastVisible.current = visible;
+          setIsVisible(visible);
+        }
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      cancelAnimationFrame(rafId.current);
     };
   }, []);
 

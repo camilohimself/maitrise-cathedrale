@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -12,12 +12,28 @@ const Header = () => {
   const [shineCount, setShineCount] = useState(0);
   const pathname = usePathname();
 
+  // RAF throttle for smooth scroll detection
+  const rafId = useRef<number>(0);
+  const lastScrolled = useRef(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      cancelAnimationFrame(rafId.current);
+      rafId.current = requestAnimationFrame(() => {
+        const scrolled = window.scrollY > 20;
+        // Only update state if value changed (prevents unnecessary re-renders)
+        if (scrolled !== lastScrolled.current) {
+          lastScrolled.current = scrolled;
+          setIsScrolled(scrolled);
+        }
+      });
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      cancelAnimationFrame(rafId.current);
+    };
   }, []);
 
   // Close mobile menu when route changes
@@ -96,7 +112,7 @@ const Header = () => {
   ];
 
   return (
-    <header 
+    <header
       style={{
         position: 'fixed',
         top: 0,
@@ -105,8 +121,10 @@ const Header = () => {
         zIndex: 1000,
         backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.95)',
         backdropFilter: 'blur(10px)',
+        WebkitBackdropFilter: 'blur(10px)',
         boxShadow: isScrolled ? '0 2px 20px rgba(0, 0, 0, 0.1)' : 'none',
-        transition: 'all 0.3s ease'
+        transition: 'background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+        willChange: 'background-color, box-shadow',
       }}
     >
       <div style={{

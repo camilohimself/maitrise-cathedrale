@@ -203,8 +203,8 @@
     border-radius: 50% !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
 
-    /* Transition smooth */
-    transition: all 0.2s ease !important;
+    /* Transition smooth - cubic-bezier for premium feel */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
   /* Hover/Active states pour carousels */
@@ -353,9 +353,9 @@
     display: flex !important;
     align-items: center !important;
 
-    /* Transition smooth */
-    transition: background-color 0.2s ease,
-                color 0.2s ease !important;
+    /* Transition smooth - cubic-bezier for premium feel */
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
   /* Active state liens menu */
